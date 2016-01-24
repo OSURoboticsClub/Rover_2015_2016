@@ -1,0 +1,198 @@
+author:			Stefan Reindel
+collaborators:	
+date:			1-24
+last update:	1-24
+
+----------------------------------------------------
+I am creating this file so that we all have some sort 
+coding standard to base our code on.  
+Anything here is negotiable at software team
+meetings.  
+
+----------------------------------------------------
+Directories and Files:
+
+Eech component or functionality of the rover should have
+its own directory.  
+Example:
+You are in the Navigation team.  Within a directory in 
+the python code folder, you can put your navigation py
+files and other subdirectories you need.
+
+Rover2016/python_code/navigation
+	Nav.py
+	Nav_Constants.py
+	Slam/Slam.py
+
+Each file should have a main author, collaborators, 
+creation date, and last update as a comment at the top of 
+the file.
+----------------------------------------------------
+Print Statements and debugging
+There will be a formatted logger that should be used
+to print anything you need to the console.
+
+Please dont leave print statements in any code you 
+push to GITHUB.  
+
+----------------------------------------------------
+Imports:
+
+I suggest importing classes by name instead of using *.
+This will prevent dependancy loops.
+Example: inside a python file
+
+'''
+author:			Stefan Reindel
+collaborators:	
+date:			1-24
+last update:	1-24
+'''
+# Python libray imports
+import os, sys, time
+
+# ROS imports
+
+# Rover Lib Imports
+sys.path.append('Rover2016/Python_Code/Navigation')
+sys.path.append('Rover2016/Python_Code/Logger')
+from Nav_Constants.py import Nav_Const
+from Logger import Logger as log
+----------------------------------------------------
+Constants:
+
+create a constants class in a seperate file within your 
+directory.  
+Example:
+You are on the arm team.  You create a file arm.py in 
+the arm directory.
+Any constants should be put into a file called "Arm_Constants.py"
+under a class. 
+So we know they are constants, please make the name all caps.
+
+Example:
+in Arm_Constants.py:
+'''
+author:			Stefan Reindel
+collaborators:	
+date:			1-24
+last update:	1-24
+'''
+class Arm_Const():
+	MY_ARM_CONST = 0
+
+----------------------------------------------------
+Variables:
+
+Variables should be all lower case with underscores 
+between words.  Please try to put all variables at the
+top of the class or function declaration.  
+Make the variable name as descriptive as possible within
+4 words.  For loops, use i,j,k as counters.
+
+Examples:
+my_int_var = 4
+my_string_var = "Hello World!"
+my_obj_dict = {'Some Value': None}
+
+----------------------------------------------------
+Functions:
+
+Function names should be lower case and seperated by underscores
+as variables are.  
+at the top of the function, above the local variables,
+please make a comment about the function purpose and its
+parameter meanings.  
+If you have parameters in your functions, please give them default
+values that make sense or return false or something if they are None
+
+Ex:
+def my_descriptive_function(param1=None, param2=0):
+	"""
+	my_descriptive_function: This function has this purpose.
+	param1: This parameter means this and should be defaulted to that.
+			This function depends on param1 and it should not be None.
+			If param1 is None, return False
+	param2: This parameter means this and should be defaulted to that.
+			If param2 is 0, that means this.
+
+	"""
+	if param1 is None: 
+		return False
+	var1 = 1
+	var2 = 2
+	...
+	rest of function code
+	...
+
+----------------------------------------------------
+Classes:
+
+Classes should have the first letter of each word capitalized.
+Each word in a class name should be seperated with an underscore.
+E.g.: My_Class_Name()
+
+If you make a __init__ function with more then 6 variables, please
+put the values in a dictionary and pass that in instead.  
+
+If class instantiation relies on some values give them an appropreate
+default value that will allow the class to still function.
+
+Please put all class variables in the __init__ function
+
+Format the class this way:
+
+class My_Class_Name():
+	"""
+	This is a basic description on what the class is and what it does.
+	"""
+	def __init__(self, param1, param2):
+		self.name = param1
+		self.var1 = param2
+		...
+		class variables
+		...
+	# Setters
+	...
+	code
+	...
+	# Getters
+	...
+	code
+	...
+	# Methods
+	...
+	code
+	...
+	# Subcategory 1
+	...
+	code
+	...
+	# Subcategory 2
+	...
+	code
+	...
+	# Subcategory 3
+	...
+	code
+	...
+
+----------------------------------------------------
+Error Handling:
+
+If there is even a small possibility of a value being 
+not what it should be, a variable is not set, or a key 
+is missing from a dictionary, enclose the code block within a 
+try block and handle the error in a except block.
+
+def function(dict_param={}, bad_param=None):
+	try:
+		if dict_param[bad_param] is 5:
+			return True
+		return False
+	except KeyError:
+		return False
+	except Exception: # This is a general exception
+		return False
+
+
