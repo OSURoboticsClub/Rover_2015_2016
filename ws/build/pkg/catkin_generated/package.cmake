@@ -1,0 +1,7 @@
+set(_CATKIN_CURRENT_PACKAGE "pkg")
+set(pkg_MAINTAINER "TimRice1994 <timrice1994@gmail.com>")
+set(pkg_DEPRECATED "")
+set(pkg_VERSION "0.0.0")
+set(pkg_BUILD_DEPENDS "roscpp" "rospy" "std_msgs")
+set(pkg_RUN_DEPENDS "roscpp" "rospy" "std_msgs")
+set(pkg_BUILDTOOL_DEPENDS "catkin")
