@@ -7,4 +7,6 @@
 # new environment variables
 
 # modified environment variables
+export LD_LIBRARY_PATH="/home/tim/project/Rover2016/ws/devel/lib/x86_64-linux-gnu:/opt/ros/indigo/lib/x86_64-linux-gnu:/home/tim/project/Rover2016/ws/devel/lib:/opt/ros/indigo/lib"
+export PKG_CONFIG_PATH="/home/tim/project/Rover2016/ws/devel/lib/x86_64-linux-gnu/pkgconfig:/opt/ros/indigo/lib/x86_64-linux-gnu/pkgconfig:/home/tim/project/Rover2016/ws/devel/lib/pkgconfig:/opt/ros/indigo/lib/pkgconfig"
 export PWD="/home/tim/project/Rover2016/ws/build"

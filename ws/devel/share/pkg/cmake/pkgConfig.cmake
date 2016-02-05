@@ -91,9 +91,9 @@ endif()
 # flag project as catkin-based to distinguish if a find_package()-ed project is a catkin project
 set(pkg_FOUND_CATKIN_PROJECT TRUE)
 
-if(NOT " " STREQUAL " ")
+if(NOT "/home/tim/project/Rover2016/ws/devel/include " STREQUAL " ")
   set(pkg_INCLUDE_DIRS "")
-  set(_include_dirs "")
+  set(_include_dirs "/home/tim/project/Rover2016/ws/devel/include")
   foreach(idir ${_include_dirs})
     if(IS_ABSOLUTE ${idir} AND IS_DIRECTORY ${idir})
       set(include ${idir})
@@ -145,7 +145,7 @@ foreach(library ${libraries})
   endif()
 endforeach()
 
-set(pkg_EXPORTED_TARGETS "")
+set(pkg_EXPORTED_TARGETS "pkg_generate_messages_cpp;pkg_generate_messages_lisp;pkg_generate_messages_py")
 # create dummy targets for exported code generation targets to make life of users easier
 foreach(t ${pkg_EXPORTED_TARGETS})
   if(NOT TARGET ${t})
@@ -153,7 +153,7 @@ foreach(t ${pkg_EXPORTED_TARGETS})
   endif()
 endforeach()
 
-set(depends "")
+set(depends "message_runtime;roscpp;rospy;std_msgs")
 foreach(depend ${depends})
   string(REPLACE " " ";" depend_list ${depend})
   # the package name of the dependency must be kept in a unique variable so that it is not overwritten in recursive calls
@@ -182,7 +182,7 @@ foreach(depend ${depends})
   list(APPEND pkg_EXPORTED_TARGETS ${${pkg_dep}_EXPORTED_TARGETS})
 endforeach()
 
-set(pkg_cfg_extras "")
+set(pkg_cfg_extras "pkg-msg-extras.cmake")
 foreach(extra ${pkg_cfg_extras})
   if(NOT IS_ABSOLUTE ${extra})
     set(extra ${pkg_DIR}/${extra})

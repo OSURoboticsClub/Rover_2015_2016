@@ -254,6 +254,110 @@ gtest_main/fast:
 .PHONY : gtest_main/fast
 
 #=============================================================================
+# Target rules for targets named _pkg_generate_messages_check_deps_Coords3D
+
+# Build rule for target.
+_pkg_generate_messages_check_deps_Coords3D: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _pkg_generate_messages_check_deps_Coords3D
+.PHONY : _pkg_generate_messages_check_deps_Coords3D
+
+# fast build rule for target.
+_pkg_generate_messages_check_deps_Coords3D/fast:
+	$(MAKE) -f pkg/CMakeFiles/_pkg_generate_messages_check_deps_Coords3D.dir/build.make pkg/CMakeFiles/_pkg_generate_messages_check_deps_Coords3D.dir/build
+.PHONY : _pkg_generate_messages_check_deps_Coords3D/fast
+
+#=============================================================================
+# Target rules for targets named pkg_gencpp
+
+# Build rule for target.
+pkg_gencpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 pkg_gencpp
+.PHONY : pkg_gencpp
+
+# fast build rule for target.
+pkg_gencpp/fast:
+	$(MAKE) -f pkg/CMakeFiles/pkg_gencpp.dir/build.make pkg/CMakeFiles/pkg_gencpp.dir/build
+.PHONY : pkg_gencpp/fast
+
+#=============================================================================
+# Target rules for targets named pkg_generate_messages
+
+# Build rule for target.
+pkg_generate_messages: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 pkg_generate_messages
+.PHONY : pkg_generate_messages
+
+# fast build rule for target.
+pkg_generate_messages/fast:
+	$(MAKE) -f pkg/CMakeFiles/pkg_generate_messages.dir/build.make pkg/CMakeFiles/pkg_generate_messages.dir/build
+.PHONY : pkg_generate_messages/fast
+
+#=============================================================================
+# Target rules for targets named pkg_generate_messages_cpp
+
+# Build rule for target.
+pkg_generate_messages_cpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 pkg_generate_messages_cpp
+.PHONY : pkg_generate_messages_cpp
+
+# fast build rule for target.
+pkg_generate_messages_cpp/fast:
+	$(MAKE) -f pkg/CMakeFiles/pkg_generate_messages_cpp.dir/build.make pkg/CMakeFiles/pkg_generate_messages_cpp.dir/build
+.PHONY : pkg_generate_messages_cpp/fast
+
+#=============================================================================
+# Target rules for targets named pkg_generate_messages_lisp
+
+# Build rule for target.
+pkg_generate_messages_lisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 pkg_generate_messages_lisp
+.PHONY : pkg_generate_messages_lisp
+
+# fast build rule for target.
+pkg_generate_messages_lisp/fast:
+	$(MAKE) -f pkg/CMakeFiles/pkg_generate_messages_lisp.dir/build.make pkg/CMakeFiles/pkg_generate_messages_lisp.dir/build
+.PHONY : pkg_generate_messages_lisp/fast
+
+#=============================================================================
+# Target rules for targets named pkg_generate_messages_py
+
+# Build rule for target.
+pkg_generate_messages_py: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 pkg_generate_messages_py
+.PHONY : pkg_generate_messages_py
+
+# fast build rule for target.
+pkg_generate_messages_py/fast:
+	$(MAKE) -f pkg/CMakeFiles/pkg_generate_messages_py.dir/build.make pkg/CMakeFiles/pkg_generate_messages_py.dir/build
+.PHONY : pkg_generate_messages_py/fast
+
+#=============================================================================
+# Target rules for targets named pkg_genlisp
+
+# Build rule for target.
+pkg_genlisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 pkg_genlisp
+.PHONY : pkg_genlisp
+
+# fast build rule for target.
+pkg_genlisp/fast:
+	$(MAKE) -f pkg/CMakeFiles/pkg_genlisp.dir/build.make pkg/CMakeFiles/pkg_genlisp.dir/build
+.PHONY : pkg_genlisp/fast
+
+#=============================================================================
+# Target rules for targets named pkg_genpy
+
+# Build rule for target.
+pkg_genpy: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 pkg_genpy
+.PHONY : pkg_genpy
+
+# fast build rule for target.
+pkg_genpy/fast:
+	$(MAKE) -f pkg/CMakeFiles/pkg_genpy.dir/build.make pkg/CMakeFiles/pkg_genpy.dir/build
+.PHONY : pkg_genpy/fast
+
+#=============================================================================
 # Target rules for targets named roscpp_generate_messages_cpp
 
 # Build rule for target.
@@ -391,6 +495,14 @@ help:
 	@echo "... tests"
 	@echo "... gtest"
 	@echo "... gtest_main"
+	@echo "... _pkg_generate_messages_check_deps_Coords3D"
+	@echo "... pkg_gencpp"
+	@echo "... pkg_generate_messages"
+	@echo "... pkg_generate_messages_cpp"
+	@echo "... pkg_generate_messages_lisp"
+	@echo "... pkg_generate_messages_py"
+	@echo "... pkg_genlisp"
+	@echo "... pkg_genpy"
 	@echo "... roscpp_generate_messages_cpp"
 	@echo "... roscpp_generate_messages_lisp"
 	@echo "... roscpp_generate_messages_py"
