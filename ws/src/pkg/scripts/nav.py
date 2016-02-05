@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 import rospy
 from pkg.msg import Coords3D
+from std_msgs.msg import Bool
 
 halt_nav = False
 ready_to_grab = False
@@ -30,8 +31,17 @@ def handle_sample_coords(coords):
     else:
         halt_nav = False
 
+def grab_handle(grab_succ):
+    rospy.loginfo(rospy.get_caller_id() +
+                  " grab was successful" if grab_succ else "grab failed")
+    global halt_nav
+    halt_nav = False
 
 def nav():
+
+    # create publisher that publishes Bools to the grab_signal topic
+    # consumed by grab
+    pub = rospy.Publisher('grab_signal', Bool, queue_size=10)
 
     # initialize node and name it nav
     rospy.init_node('nav', anonymous=False)
@@ -39,6 +49,9 @@ def nav():
 
     # nav subscribes to the sample_coords topic (published by scan)
     rospy.Subscriber('sample_coords', Coords3D, handle_sample_coords)
+
+    # nav subscribes to the grab_success topic (published by grab)
+    rospy.Subscriber('grab_success', Bool, grab_handle)
 
     rate = rospy.Rate(10) # 10hz (processing time won't exceed 1/10 second)
 
@@ -49,14 +62,14 @@ def nav():
                 # wait for move_to_sample to finish
                 rate.sleep()
 
-            # publish to grab_signal
+            if halt_nav:
+                # publish to grab_signal
+                rospy.loginfo("ready to grab - publishing grab signal")
+                pub.publish(True)
 
-            #while halt_nav:
-            #    # wait for grab to finish
-            #    try: 
-            #        pass
-            #    except rospy.ROSInterruptException: # so that we can force stop
-            #        break
+            while halt_nav:
+                # wait for grab to finish
+                rate.sleep() 
 
             rospy.loginfo("navigation has been resumed")
         
