@@ -24,8 +24,7 @@ def song(x):   #main function that can be used to call different songs to play
     pyglet.clock.schedule_once(exit_callback , sound.duration) #will enact exit_callback when the sound is over    
     pyglet.app.run() #runs song
 
-#code cannot progress until the song is finished playing because the app is running 
-#need to thread
+#Will create ROS Node for this 
 
 
 
