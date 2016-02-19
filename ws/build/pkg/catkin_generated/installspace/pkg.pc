@@ -1,8 +1,0 @@
-prefix=/home/tim/project/Rover2016/ws/install
-
-Name: pkg
-Description: Description of pkg
-Version: 0.0.0
-Cflags: -I/home/tim/project/Rover2016/ws/install/include
-Libs: -L/home/tim/project/Rover2016/ws/install/lib 
-Requires: message_runtime roscpp rospy std_msgs
