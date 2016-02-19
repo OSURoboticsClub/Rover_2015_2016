@@ -1,0 +1,15 @@
+# Request data for uniboard_communication service
+# String with the requested function
+string function
+# Integer with priority of task, lower numbers are higher priority
+int8 priority 
+# A timestamp for debugging purposes and it never hurts to timestamp messages
+time timestamp
+---
+# Response data for uniboard_communcation service
+# Returns true for success false for failure
+bool status
+# Any response string from called function
+string response
+# Any response data from called function
+int32 data
