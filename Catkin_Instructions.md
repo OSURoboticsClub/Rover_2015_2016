@@ -1,4 +1,5 @@
-Build using catkin tools,
+# Catkin Instructions
+Build using [catkin tools](https://catkin-tools.readthedocs.org/en/latest/),
 
 * To install on Ubuntu use 
     - `sudo apt-get install python-catkin-tools`
