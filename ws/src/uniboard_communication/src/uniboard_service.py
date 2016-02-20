@@ -1,22 +1,26 @@
 #!/usr/bin/env python
-# import communication.srv as communication
 
 import rospy
 import Queue
 from uniboard_communication.srv import *
 
-class UniboardCommunication(object):
+class UniboardCommunication(Queue.PriorityQueue):
     """
     Handles all communciation with the uniboard for 2016 mars rover
     access functions through ros services never call directly.
     """
-    def __init__(self):
-        s = rospy.Service('uniboard_communication', 
+    def __init__(self, maxsize=10):
+        self.s = rospy.Service('uniboard_service', 
                             communication, 
-                            self.addToQueue)
+                            self.put)
 
     def addToQueue(self, req):
-        pass
+        if self.full():
+            pass
+            #Queue is full return failed attempt
+        else:
+            pass
+
 
 
 if __name__ == '__main__':
