@@ -3,8 +3,14 @@
 string function
 # Integer with priority of task, lower numbers are higher priority
 int8 priority 
+# The axis to be operated on
+string axis
+# Key word for passing args
+string key_word
+string arg
 # A timestamp for debugging purposes and it never hurts to timestamp messages
 time timestamp
+
 ---
 # Response data for uniboard_communcation service
 # Returns true for success false for failure
@@ -12,4 +18,4 @@ bool status
 # Any response string from called function
 string response
 # Any response data from called function
-int32 data
+string data

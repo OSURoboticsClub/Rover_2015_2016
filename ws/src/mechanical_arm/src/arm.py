@@ -17,18 +17,48 @@ class MechanicalArm(object):
         self.publish_status()
 
     def move_arm(self, req):
-        pass
+        # Set up the arm
+        
+        try:
+            for a in ['x','y','z']:
+                self.uniboard_service('arm_en', 1, a, 'state', str(True), rospy.Time.now())
+                self.uniboard_service('arm_go', 2, a, 'state', str(True), rospy.Time.now())
+        except Exception as ex:
+            return [False, 'Set up falied with ex: {}'.format(str(ex))]
+
+        try:
+            self.uniboard_service('arm_home', 1, None, None, None, rospy.Time.now())
+        except Exception as ex:
+            return [False, 'Homing failed with exception: {}'.format(str(ex))]
+        try:
+            self.uniboard_service('arm_target', 1, 'x', 'target', str(req.x), rospy.Time.now())
+            self.uniboard_service('arm_target', 1, 'y', 'target', str(req.y), rospy.Time.now())
+            self.uniboard_service('arm_target', 1, 'z', 'target', str(req.z), rospy.Time.now())
+        except Exception as ex:
+            return [False, 'Movement failed with exception: {}'.format(str(ex))]
+
+        return [True, 'It Worked!']
 
     def publish_status(self):
         rate = rospy.Rate(10)
         while not rospy.is_shutdown():
-            status = arm_status()
-            status.status = 'Test'
-            status.x = 0
-            status.y = 0
-            status.z = 0
-            self.pub.publish(status)
-            rate.sleep()
+            try:
+                x = self.uniboard_service('arm_current', 10, 'x', None, None, rospy.Time.now())
+                y = self.uniboard_service('arm_current', 10, 'y', None, None, rospy.Time.now())
+                z = self.uniboard_service('arm_current', 10, 'z', None, None, rospy.Time.now())
+                status = arm_status()
+                status.status = 'Active'
+                status.x = int(x.data)
+                status.y = int(y.data)
+                status.z = int(z.data)
+                self.pub.publish(status)
+                rate.sleep()
+            except Exception as ex:
+                status = arm_status()
+                status.status = str(ex)
+                
+                self.pub.publish(status)
+                rate.sleep()
             
         
 
