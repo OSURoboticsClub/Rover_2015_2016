@@ -123,6 +123,15 @@ def display_images(frame=None, masks = None, edge=None, results = None, medians 
             cv2.imshow('Edges', edge)
     return True
 
+def contour_color(frame=None, show_images=False):
+    if frame is None:
+        return False
+    gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
+    edges = cv2.Canny(gray, 80, 200)
+    if show_images:
+        cv2.imshow('Base Frame', frame)
+        cv2.imshow('Edge Frame', edges)
+
 def main():
     camera = 0
     cap =cv2.VideoCapture(camera)
@@ -130,7 +139,10 @@ def main():
 
     while not finished:
         _, frame = cap.read()
-        filter_colors(frame=frame, show_images=True, verbose=False)
+        images = filter_colors(frame=frame, show_images=False, verbose=False)
+        #all_images = {"Frame": frame, "Masks": masks, "Results": results, "Colors": color_filters, "Edges": edges, "Median Blur": medians, "Smooth Blur": smoothed }
+        #contour_color(frame=images["Smooth Blur"][images["Colors"][0]], show_images=True)
+        contour_color(frame=images["Median Blur"][images["Colors"][0]], show_images=True)
 
         k = cv2.waitKey(5) & 0xFF
         if k == 27:
