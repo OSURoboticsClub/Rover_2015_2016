@@ -1,0 +1,26 @@
+<launch>
+  <node name="left" pkg="usb_cam" type="usb_cam_node" output="screen" ns="stereo">    
+    <param name="video_device" value="/dev/video1" />
+    <param name="image_width" value="640" />
+    <param name="image_height" value="480" />
+    <param name="pixel_format" value="yuyv" />
+    <param name="camera_frame_id" value="usb_cam" />
+    <param name="io_method" value="mmap"/>
+  </node>
+  <node name="right" pkg="usb_cam" type="usb_cam_node" output="screen" ns="stereo">
+    <param name="video_device" value="/dev/video2" />
+    <param name="image_width" value="640" />
+    <param name="image_height" value="480" />
+    <param name="pixel_format" value="yuyv" />
+    <param name="camera_frame_id" value="usb_cam" />
+    <param name="io_method" value="mmap"/>
+  </node>
+  <node name="stereo_image_proc" pkg="stereo_image_proc" type="stereo_image_proc" ns="stereo">
+    <param name="approximate_sync" value="true" />
+  </node>
+  <node name="image_view" pkg="image_view" type="stereo_view">
+    <remap from="stereo" to="/stereo"/>
+    <remap from="image" to="image_rect_color"/>
+    <param name="approximate_sync" value="true"/>
+  </node>
+</launch>
