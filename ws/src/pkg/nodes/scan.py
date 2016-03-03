@@ -5,6 +5,10 @@ from pkg.msg import Coords3D
 from sensor_msgs.msg import Image
 from cv_bridge import CvBridge, CvBridgeError
 import cv2
+import sys
+sys.path.insert(0, 'scripts')
+from Color_Filter import filter_colors
+import numpy
 
 halt_scan = False
 new_left_img = 0
@@ -29,16 +33,16 @@ def left_scan(img):
         new_left_img = bridge.imgmsg_to_cv2(img, "bgr8")
     except CvBridgeError as e:
         rospy.logerror(e)
-    cv2.imshow('LEFT', new_left_img) # temporary display for testing
+    #cv2.imshow('LEFT', new_left_img) # temporary display for testing
 
 def right_scan(img):
     global new_right_img
     # convert ROS image message to IplImage for OpenCV
     try:
-        new_right_img = bridge.imgmsg_to_cv2(img, "bgr8")
+        new_right_img = bridge.imgmsg_to_cv2(img, desired_encoding="bgr8")
     except CvBridgeError as e:
         rospy.logerror(e)
-    cv2.imshow('RIGHT', new_right_img) # temporary display for testing
+    #cv2.imshow('RIGHT', new_right_img) # temporary display for testing
 
 def scan_for_samples():
 
@@ -48,7 +52,14 @@ def scan_for_samples():
     # if there is a sample, it will calculate the distance from the 
     # base of the rover in the form (x,y,z) [meters?]
 
-    
+    curr_left_img = new_left_img
+    curr_right_img = new_right_img
+    #cv2.imshow('LEFT', curr_left_img)
+    if type(curr_left_img) is not int and type(curr_right_img) is not int:
+       filter_left = filter_colors(frame=curr_left_img, show_images=False, verbose=False)
+       filter_right = filter_colors(frame=curr_right_img, show_images=False, verbose=False)
+       cv2.imshow('LEFT', filter_left["Median Blur"][filter_left["Colors"][0]])
+       cv2.imshow('RIGHT', filter_right["Median Blur"][filter_right["Colors"][0]])
 
     # returns a tuple (x,y,z), or None if no sample is detected
     return (1.,1.,1.) # temporary value, for testing
