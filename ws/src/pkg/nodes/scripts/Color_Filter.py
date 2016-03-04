@@ -131,6 +131,7 @@ def contour_color(frame=None, show_images=False):
     if show_images:
         cv2.imshow('Base Frame', frame)
         cv2.imshow('Edge Frame', edges)
+    return edges
 
 def main():
     camera = 2
