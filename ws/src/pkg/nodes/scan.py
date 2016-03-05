@@ -9,10 +9,11 @@ import sys
 sys.path.insert(0, 'scripts')
 import Color_Filter
 import numpy
+import math
 
 halt_scan = False
-new_left_img = 0
-new_right_img = 0
+new_left_img = None
+new_right_img = None
 bridge = CvBridge()
 
 # temporary, for testing
@@ -42,21 +43,19 @@ def right_scan(img):
     except CvBridgeError as e:
         rospy.logerror(e)
 
-def scan_for_samples():
+def check_precached(left, right):
 
-    # TODO: 
-    # this function uses the sample cam to process images and determine 
-    # whether or not there is a sample in the rover's view
-    # if there is a sample, it will calculate the distance from the 
-    # base of the rover in the form (x,y,z) [meters?]
+    # TODO:
+    # check if precached sample is in the view of the left and right images
+    # and return its coordinates if it is
 
-    curr_left_img = new_left_img
-    curr_right_img = new_right_img
-    if type(curr_left_img) is not int and type(curr_right_img) is not int:
-       
+    return None
+
+def check_easy_sample(left, right):
+
        # filter image so that only purple objects show up in each image
-       filter_left = Color_Filter.filter_colors(frame=curr_left_img, show_images=False, verbose=False)
-       filter_right = Color_Filter.filter_colors(frame=curr_right_img, show_images=False, verbose=False)
+       filter_left = Color_Filter.filter_colors(frame=left, show_images=False, verbose=False)
+       filter_right = Color_Filter.filter_colors(frame=right, show_images=False, verbose=False)
 
        # detect edges of the purple objects in each image
        edges_left = Color_Filter.contour_color(frame=filter_left["Median Blur"][filter_left["Colors"][0]], show_images=False)
@@ -78,26 +77,68 @@ def scan_for_samples():
            right_moments = cv2.moments(right_cont)
            left_centx = int(left_moments['m10']/left_moments['m00'])
            right_centx = int(right_moments['m10']/right_moments['m00'])
+           left_centy = int(left_moments['m01']/left_moments['m00'])
+           right_centy = int(right_moments['m01']/right_moments['m00'])
 
-           # equation to calulcate distance from camera:
+           # equation to calulcate distance from camera (in mm):
            # D = (B*x0)/(2*tan(a0/2)*(xl-xd))
            # B -> distance between cameras
            # x0 -> number of horizontal pixels in image (640 right now)
            # a0 -> field of view (60 degrees for webcams)
            # (xl-xd) -> horizontal difference between the same object on both images (diff)
-           diff = left_centx-right_centx
-           dist = (119*640)/(1.1547*diff)
-           #rospy.loginfo("lcx: " + str(left_centx) + "  rcx: " + str(right_centx))
-           rospy.loginfo("dist: " + str(dist))
+           # This will have to be changed once the cameras are calibrated for the rover
+           # Assumes distance between cameras is 119mm and resolution 640x480
+           diff = abs(left_centx-right_centx)
+           dist = (119*640)/(2*math.tan(math.radians(60)/2)*diff)
+
+           # calculate x-value in mm using basic trigonometry and ratios
+           # dx0 -> distance from center of field of view (left camera) to horizontal edge of FOV in mm
+           # dx1 -> distance from center of FOV (left camera) to centroid of purple
+           # x -> distance from center of stereo cameras to purple centroid in mm
+           dx0 = dist * math.tan(math.radians(30))
+           dx1 = (dx0 * (left_centx - 320)) / (320)
+           x = dx1 + 59.5
+
+           # calculate y-value in mm
+           # dy0 -> distance from center of FOV (left camera) to vertical edge of FOV in mm
+           # y -> distance from center of stereo cameras to purple centroid in mm
+           dy0 = (dx0 * 240) / (320)
+           y = ((dy0 * (left_centy - 240)) / (240)) * -1
+           rospy.loginfo("(x,y,z): (" + str(x) + ", " + str(y) + ", " + str(dist) + ")")
            
        else:
            rospy.loginfo("NO PURPLE")
+           return None
 
+       # print for testing only
        cv2.imshow('LEFT', blurred_left)
        cv2.imshow('RIGHT', blurred_right)
 
+       # returns a tuple (x,y,z), or None if no sample is detected
+       return (x,y,dist)
+
+def scan_for_samples():
+
+    # TODO: 
+    # this function uses the sample cam to process images and determine 
+    # whether or not there is a sample in the rover's view
+    # if there is a sample, it will calculate the distance from the 
+    # base of the rover in the form (x,y,z) [meters?]
+
+    coords = None
+    curr_left_img = new_left_img
+    curr_right_img = new_right_img
+    if curr_left_img is not None and curr_right_img is not None:
+       
+       coords = check_precached(curr_left_img, curr_right_img)
+       if coords is None:
+           coords = check_easy_sample(curr_left_img, curr_right_img)
+
     # returns a tuple (x,y,z), or None if no sample is detected
-    return (1.,1.,1.) # temporary value, for testing
+    if coords is not None:
+        return coords
+    else:
+        return None
 
 def scan():
 
