@@ -89,7 +89,7 @@ def check_easy_sample(left, right):
            # This will have to be changed once the cameras are calibrated for the rover
            # Assumes distance between cameras is 119mm and resolution 640x480
            diff = abs(left_centx-right_centx)
-           dist = (119*640)/(2*math.tan(math.radians(60)/2)*diff)
+           dist = ((119*640)/(2*math.tan(math.radians(60)/2)*diff)) * 1.75
 
            # calculate x-value in mm using basic trigonometry and ratios
            # dx0 -> distance from center of field of view (left camera) to horizontal edge of FOV in mm
@@ -97,15 +97,27 @@ def check_easy_sample(left, right):
            # x -> distance from center of stereo cameras to purple centroid in mm
            dx0 = dist * math.tan(math.radians(30))
            dx1 = (dx0 * (left_centx - 320)) / (320)
-           x = dx1 + 59.5
+           #x = dx1 + 59.5
+           x = (dx1 - 100) / 1.75
 
            # calculate y-value in mm
            # dy0 -> distance from center of FOV (left camera) to vertical edge of FOV in mm
            # y -> distance from center of stereo cameras to purple centroid in mm
            dy0 = (dx0 * 240) / (320)
-           y = ((dy0 * (left_centy - 240)) / (240)) * -1
-           rospy.loginfo("(x,y,z): (" + str(x) + ", " + str(y) + ", " + str(dist) + ")")
-           
+           y = (((dy0 * (left_centy - 240)) / (240)) * -1) / 1.75
+
+           # calculate distance from base of rover
+           # h -> height of cameras from ground in mm
+           # assumes sample is detected at same level as the rover...
+           h = 228.6
+           try:
+               z = math.sqrt(math.pow(dist, 2) - math.pow(h, 2))
+           except ValueError:
+               rospy.loginfo("too close")
+               return None
+ 
+           rospy.loginfo("(x,y,z): (" + str(x) + ", " + str(y) + ", " + str(z) + ")")
+          
        else:
            rospy.loginfo("NO PURPLE")
            return None
@@ -115,7 +127,7 @@ def check_easy_sample(left, right):
        cv2.imshow('RIGHT', blurred_right)
 
        # returns a tuple (x,y,z), or None if no sample is detected
-       return (x,y,dist)
+       return (x,y,z)
 
 def scan_for_samples():
 
