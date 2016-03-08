@@ -3,7 +3,7 @@
 import numpy as np
 import cv2
 
-cascade = cv2.CascadeClassifier("__data/cascade.xml")
+cascade = cv2.CascadeClassifier("data/cascade.xml")
 
 win = cv2.namedWindow("window", cv2.WINDOW_AUTOSIZE)
 cap = cv2.VideoCapture(0)
