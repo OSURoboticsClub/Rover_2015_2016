@@ -247,6 +247,8 @@ void loop()
   motion_read.squal = (int)md.squal;
   motion_read.shutter = (int)md.shutter;
   motion_read.max_pix = (int)md.max_pix;
+  motion_read.header.stamp = nh.now();
+  motion_read.header.frame_id = "/odom";
   pub_range.publish(&motion_read);
 
  // for(int i=0; i<md.squal/4; i++)
