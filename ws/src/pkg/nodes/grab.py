@@ -9,6 +9,7 @@ import Color_Filter
 import detector
 import math
 import cv2
+from mechanical_arm.srv import *
 
 MAX_TRIES = 10
 ready = False
@@ -67,7 +68,6 @@ def identify_easy_sample(img):
 
 def identify_sample():
     
-    # TODO: 
     # this function uses the crotch cam and recognition algorithms to 
     # determine if the object under the rover is indeed a sample
     # if it is a sample, it will determine the (x,y) coordinates
@@ -85,14 +85,21 @@ def identify_sample():
 
 def pick_up(xy):
     
-    # TODO:
     # this function uses the (x,y) coordinates from the crotch cam to 
-    # adjust the rover's and/or arm's position if necessary, and then 
+    # adjust the arm's position if necessary, and then 
     # pick up the sample
 
-    # returns True if grab was successful, False otherwise
+    rospy.wait_for_service('move_arm')
+    move_arm = rospy.ServiceProxy('move_arm', arm_position)
+    #TODO: test and determine max arm params and account for them
+    resp = move_arm(x,y,1)
 
-    return True # temporary value for testing
+    # determine if grab was successful
+    curr_crotch_img = new_crotch_img
+    if identify_sample(new_crotch_img) is not None:
+        return False
+
+    return True
 
 def handle_grab_signal(grab_signal):
     rospy.loginfo("grab signal received")
