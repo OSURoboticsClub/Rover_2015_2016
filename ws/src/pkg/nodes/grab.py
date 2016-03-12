@@ -6,6 +6,7 @@ from cv_bridge import CvBridge, CvBridgeError
 import sys
 sys.path.insert(0,'scripts')
 import Color_Filter
+import detector
 import math
 import cv2
 
@@ -19,9 +20,8 @@ cv2.startWindowThread()
 cv2.namedWindow('image')
 
 def identify_precached(img):
-
-    # TODO
-    return None
+    
+    return detector.detect_precached(img)
 
 def identify_easy_sample(img):
     
