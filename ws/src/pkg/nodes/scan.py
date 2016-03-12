@@ -8,6 +8,7 @@ import cv2
 import sys
 sys.path.insert(0, 'scripts')
 import Color_Filter
+import detector
 import numpy
 import math
 
@@ -43,13 +44,56 @@ def right_scan(img):
     except CvBridgeError as e:
         rospy.logerror(e)
 
+def calculate_distance(left_centx, right_centx, left_centy, right_centy):
+    
+    # equation to calulcate distance from camera (in mm):
+    # D = (B*x0)/(2*tan(a0/2)*(xl-xd))
+    # B -> distance between cameras
+    # x0 -> number of horizontal pixels in image (640 right now)
+    # a0 -> field of view (60 degrees for webcams)
+    # (xl-xd) -> horizontal difference between the same object on both images (diff)
+    # This will have to be changed once the cameras are calibrated for the rover
+    # Assumes distance between cameras is 119mm and resolution 640x480
+    diff = abs(left_centx-right_centx)
+    dist = ((119*640)/(2*math.tan(math.radians(60)/2)*diff)) * 1.75
+
+    # calculate x-value in mm using basic trigonometry and ratios
+    # dx0 -> distance from center of field of view (left camera) to horizontal edge of FOV in mm
+    # dx1 -> distance from center of FOV (left camera) to centroid of purple
+    # x -> distance from center of stereo cameras to purple centroid in mm
+    dx0 = dist * math.tan(math.radians(30))
+    dx1 = (dx0 * (left_centx - 320)) / (320)
+    #x = dx1 + 59.5
+    x = (dx1 - 100) / 1.75
+
+    # calculate y-value in mm
+    # dy0 -> distance from center of FOV (left camera) to vertical edge of FOV in mm
+    # y -> distance from center of stereo cameras to purple centroid in mm
+    dy0 = (dx0 * 240) / (320)
+    y = (((dy0 * (left_centy - 240)) / (240)) * -1) / 1.75
+
+    # calculate distance from base of rover
+    # h -> height of cameras from ground in mm
+    # assumes sample is detected at same level as the rover...
+    h = 228.6
+    try:
+        z = math.sqrt(math.pow(dist, 2) - math.pow(h, 2))
+        return (x,y,z)
+    except ValueError:
+        rospy.loginfo("too close")
+        return None
+
 def check_precached(left, right):
 
-    # TODO:
     # check if precached sample is in the view of the left and right images
     # and return its coordinates if it is
-
-    return None
+    
+    xyz = None
+    left_detect = detector.detect_precached(left)
+    right_detect = detector.detect_precached(right)
+    if left_detect is not None and right_detect is not None:
+        xyz = calculate_distance(left_detect[0], right_detect[0], left_detect[1], right_detect[1])
+    return xyz
 
 def check_easy_sample(left, right):
 
@@ -80,43 +124,9 @@ def check_easy_sample(left, right):
            left_centy = int(left_moments['m01']/left_moments['m00'])
            right_centy = int(right_moments['m01']/right_moments['m00'])
 
-           # equation to calulcate distance from camera (in mm):
-           # D = (B*x0)/(2*tan(a0/2)*(xl-xd))
-           # B -> distance between cameras
-           # x0 -> number of horizontal pixels in image (640 right now)
-           # a0 -> field of view (60 degrees for webcams)
-           # (xl-xd) -> horizontal difference between the same object on both images (diff)
-           # This will have to be changed once the cameras are calibrated for the rover
-           # Assumes distance between cameras is 119mm and resolution 640x480
-           diff = abs(left_centx-right_centx)
-           dist = ((119*640)/(2*math.tan(math.radians(60)/2)*diff)) * 1.75
-
-           # calculate x-value in mm using basic trigonometry and ratios
-           # dx0 -> distance from center of field of view (left camera) to horizontal edge of FOV in mm
-           # dx1 -> distance from center of FOV (left camera) to centroid of purple
-           # x -> distance from center of stereo cameras to purple centroid in mm
-           dx0 = dist * math.tan(math.radians(30))
-           dx1 = (dx0 * (left_centx - 320)) / (320)
-           #x = dx1 + 59.5
-           x = (dx1 - 100) / 1.75
-
-           # calculate y-value in mm
-           # dy0 -> distance from center of FOV (left camera) to vertical edge of FOV in mm
-           # y -> distance from center of stereo cameras to purple centroid in mm
-           dy0 = (dx0 * 240) / (320)
-           y = (((dy0 * (left_centy - 240)) / (240)) * -1) / 1.75
-
-           # calculate distance from base of rover
-           # h -> height of cameras from ground in mm
-           # assumes sample is detected at same level as the rover...
-           h = 228.6
-           try:
-               z = math.sqrt(math.pow(dist, 2) - math.pow(h, 2))
-           except ValueError:
-               rospy.loginfo("too close")
-               return None
- 
-           rospy.loginfo("(x,y,z): (" + str(x) + ", " + str(y) + ", " + str(z) + ")")
+           # calulcate distance from camera (in mm):
+	   xyz = calculate_distance(left_centx, right_centx, left_centy, right_centy)
+           rospy.loginfo("(x,y,z): {0}".format(xyz))
           
        else:
            rospy.loginfo("NO PURPLE")
@@ -127,7 +137,7 @@ def check_easy_sample(left, right):
        cv2.imshow('RIGHT', blurred_right)
 
        # returns a tuple (x,y,z), or None if no sample is detected
-       return (x,y,z)
+       return xyz
 
 def scan_for_samples():
 
