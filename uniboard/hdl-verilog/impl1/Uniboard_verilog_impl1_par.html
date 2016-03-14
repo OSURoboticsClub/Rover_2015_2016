@@ -1,0 +1,407 @@
+<HTML>
+<HEAD><TITLE>Place & Route Report</TITLE>
+<STYLE TYPE="text/css">
+<!--
+ body,pre{    font-family:'Courier New', monospace;    color: #000000;    font-size:88%;    background-color: #ffffff;}h1 {    font-weight: bold;    margin-top: 24px;    margin-bottom: 10px;    border-bottom: 3px solid #000;    font-size: 1em;}h2 {    font-weight: bold;    margin-top: 18px;    margin-bottom: 5px;    font-size: 0.90em;}h3 {    font-weight: bold;    margin-top: 12px;    margin-bottom: 5px;    font-size: 0.80em;}p {    font-size:78%;}P.Table {    margin-top: 4px;    margin-bottom: 4px;    margin-right: 4px;    margin-left: 4px;}table{    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    border-collapse: collapse;}th {    font-weight:bold;    padding: 4px;    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    vertical-align:top;    text-align:left;    font-size:78%;}td {    padding: 4px;    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    vertical-align:top;    font-size:78%;}a {    color:#013C9A;    text-decoration:none;}a:visited {    color:#013C9A;}a:hover, a:active {    text-decoration:underline;    color:#5BAFD4;}.pass{background-color: #00ff00;}.fail{background-color: #ff0000;}.comment{    font-size: 90%;    font-style: italic;}
+-->
+</STYLE>
+</HEAD>
+<PRE><A name="Par"></A>PAR: Place And Route Diamond (64-bit) 3.4.1.213.
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&amp;T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2014 Lattice Semiconductor Corporation,  All rights reserved.
+Mon Jan 18 19:34:22 2016
+
+/usr/local/diamond/3.4_x64/ispfpga/bin/lin64/par -f Uniboard_verilog_impl1.p2t
+Uniboard_verilog_impl1_map.ncd Uniboard_verilog_impl1.dir
+Uniboard_verilog_impl1.prf -gui
+
+
+Preference file: Uniboard_verilog_impl1.prf.
+
+<A name="par_cts"></A><B><U><big>Cost Table Summary</big></U></B>
+Level/      Number      Worst       Timing      Worst       Timing      Run         NCD
+Cost [ncd]  Unrouted    Slack       Score       Slack(hold) Score(hold) Time        Status
+----------  --------    -----       ------      ----------- ----------- -----       ------
+5_1   *     0           61.555      0           -0.444      5392        01:04       Complete        
+
+
+* : Design saved.
+
+Total (real) run time for 1-seed: 1 mins 4 secs 
+
+par done!
+
+Lattice Place and Route Report for Design &quot;Uniboard_verilog_impl1_map.ncd&quot;
+Mon Jan 18 19:34:22 2016
+
+
+<A name="par_best"></A><B><U><big>Best Par Run</big></U></B>
+PAR: Place And Route Diamond (64-bit) 3.4.1.213.
+Command Line: par -w -l 5 -i 6 -t 1 -c 0 -e 0 -gui -exp parUseNBR=1:parCDP=0:parCDR=0:parPathBased=OFF Uniboard_verilog_impl1_map.ncd Uniboard_verilog_impl1.dir/5_1.ncd Uniboard_verilog_impl1.prf
+Preference file: Uniboard_verilog_impl1.prf.
+Placement level-cost: 5-1.
+Routing Iterations: 6
+
+Loading design for application par from file Uniboard_verilog_impl1_map.ncd.
+Design name: UniboardTop
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LCMXO2-7000HC
+Package:     TQFP144
+Performance: 4
+Loading device for application par from file &apos;xo2c7000.nph&apos; in environment: /usr/local/diamond/3.4_x64/ispfpga.
+Package Status:                     Final          Version 1.39.
+Performance Hardware Data Status:   Final          Version 30.4.
+License checked out.
+
+
+Ignore Preference Error(s):  True
+
+<A name="par_dus"></A><B><U><big>Device utilization summary:</big></U></B>
+
+   PIO (prelim)   62+4(JTAG)/336     20% used
+                  62+4(JTAG)/115     57% bonded
+   IOLOGIC           11/336           3% used
+
+   SLICE           1495/3432         43% used
+
+
+
+Number of Signals: 4226
+Number of Connections: 10975
+
+Pin Constraint Summary:
+   62 out of 62 pins locked (100% locked).
+
+The following 1 signal is selected to use the primary clock routing resources:
+    debug_c_c (driver: clk_12MHz, clk load #: 818)
+
+
+The following 8 signals are selected to use the secondary clock routing resources:
+    n32375 (driver: SLICE_1335, clk load #: 0, sr load #: 0, ce load #: 82)
+    n11981 (driver: SLICE_1607, clk load #: 0, sr load #: 0, ce load #: 34)
+    n12620 (driver: SLICE_1607, clk load #: 0, sr load #: 0, ce load #: 34)
+    arm_y/n12954 (driver: SLICE_1684, clk load #: 0, sr load #: 0, ce load #: 34)
+    n11966 (driver: SLICE_1383, clk load #: 0, sr load #: 0, ce load #: 33)
+    arm_z/step_clk_gen/n32372 (driver: arm_z/SLICE_1613, clk load #: 0, sr load #: 17, ce load #: 16)
+    arm_a/step_clk_gen/n32373 (driver: arm_a/SLICE_1614, clk load #: 0, sr load #: 17, ce load #: 16)
+    arm_y/step_clk_gen/n32371 (driver: arm_y/SLICE_1615, clk load #: 0, sr load #: 17, ce load #: 16)
+
+No signal is selected as Global Set/Reset.
+Starting Placer Phase 0.
+...........
+Finished Placer Phase 0.  REAL time: 6 secs 
+
+Starting Placer Phase 1.
+.......................
+Placer score = 785282.
+Finished Placer Phase 1.  REAL time: 27 secs 
+
+Starting Placer Phase 2.
+.
+Placer score =  767873
+Finished Placer Phase 2.  REAL time: 29 secs 
+
+
+
+<A name="par_clk"></A><B><U><big>Clock Report</big></U></B>
+
+Global Clock Resources:
+  CLK_PIN    : 1 out of 8 (12%)
+  PLL        : 0 out of 2 (0%)
+  DCM        : 0 out of 2 (0%)
+  DCC        : 0 out of 8 (0%)
+
+Quadrants All (TL, TR, BL, BR) - Global Clocks:
+  PRIMARY &quot;debug_c_c&quot; from comp &quot;clk_12MHz&quot; on CLK_PIN site &quot;128 (PT18A)&quot;, clk load = 818
+  SECONDARY &quot;n32375&quot; from F1 on comp &quot;SLICE_1335&quot; on site &quot;R14C20C&quot;, clk load = 0, ce load = 82, sr load = 0
+  SECONDARY &quot;n11981&quot; from F0 on comp &quot;SLICE_1607&quot; on site &quot;R21C18D&quot;, clk load = 0, ce load = 34, sr load = 0
+  SECONDARY &quot;n12620&quot; from F1 on comp &quot;SLICE_1607&quot; on site &quot;R21C18D&quot;, clk load = 0, ce load = 34, sr load = 0
+  SECONDARY &quot;arm_y/n12954&quot; from F0 on comp &quot;SLICE_1684&quot; on site &quot;R14C18C&quot;, clk load = 0, ce load = 34, sr load = 0
+  SECONDARY &quot;n11966&quot; from F0 on comp &quot;SLICE_1383&quot; on site &quot;R21C18B&quot;, clk load = 0, ce load = 33, sr load = 0
+  SECONDARY &quot;arm_z/step_clk_gen/n32372&quot; from F0 on comp &quot;arm_z/SLICE_1613&quot; on site &quot;R21C18A&quot;, clk load = 0, ce load = 16, sr load = 17
+  SECONDARY &quot;arm_a/step_clk_gen/n32373&quot; from F0 on comp &quot;arm_a/SLICE_1614&quot; on site &quot;R14C20A&quot;, clk load = 0, ce load = 16, sr load = 17
+  SECONDARY &quot;arm_y/step_clk_gen/n32371&quot; from F1 on comp &quot;arm_y/SLICE_1615&quot; on site &quot;R21C20A&quot;, clk load = 0, ce load = 16, sr load = 17
+
+  PRIMARY  : 1 out of 8 (12%)
+  SECONDARY: 8 out of 8 (100%)
+
+Edge Clocks:
+  No edge clock selected.
+
+
+
+
+I/O Usage Summary (final):
+   62 + 4(JTAG) out of 336 (19.6%) PIO sites used.
+   62 + 4(JTAG) out of 115 (57.4%) bonded PIO sites used.
+   Number of PIO comps: 62; differential: 0.
+   Number of Vref pins used: 0.
+
+I/O Bank Usage Summary:
++----------+----------------+------------+-----------+
+| I/O Bank | Usage          | Bank Vccio | Bank Vref |
++----------+----------------+------------+-----------+
+| 0        | 14 / 28 ( 50%) | 2.5V       | -         |
+| 1        | 26 / 29 ( 89%) | 2.5V       | -         |
+| 2        | 19 / 29 ( 65%) | 2.5V       | -         |
+| 3        | 0 / 9 (  0%)   | -          | -         |
+| 4        | 0 / 10 (  0%)  | -          | -         |
+| 5        | 3 / 10 ( 30%)  | 2.5V       | -         |
++----------+----------------+------------+-----------+
+
+Total placer CPU time: 29 secs 
+
+Dumping design to file Uniboard_verilog_impl1.dir/5_1.ncd.
+
+0 connections routed; 10975 unrouted.
+Starting router resource preassignment
+
+WARNING - par: The following clock signals will be routed by using generic routing resource and may suffer from excessive delay and/or skew.
+   Signal=select[7] loads=18 clock_loads=9
+   Signal=\protocol_interface/uart_output/bclk loads=9 clock_loads=9
+
+Completed router resource preassignment. Real time: 35 secs 
+
+Start NBR router at Mon Jan 18 19:34:57 PST 2016
+
+*****************************************************************
+Info: NBR allows conflicts(one node used by more than one signal)
+      in the earlier iterations. In each iteration, it tries to  
+      solve the conflicts while keeping the critical connections 
+      routed as short as possible. The routing process is said to
+      be completed when no conflicts exist and all connections   
+      are routed.                                                
+Note: NBR uses a different method to calculate timing slacks. The
+      worst slack and total negative slack may not be the same as
+      that in TRCE report. You should always run TRCE to verify  
+      your design. Thanks.                                       
+*****************************************************************
+
+Start NBR special constraint process at Mon Jan 18 19:34:58 PST 2016
+
+Start NBR section for initial routing at Mon Jan 18 19:34:59 PST 2016
+Level 4, iteration 1
+442(0.12%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack&lt;setup&gt;: 61.532ns/0.000ns; real time: 40 secs 
+
+Info: Initial congestion level at 75% usage is 0
+Info: Initial congestion area  at 75% usage is 0 (0.00%)
+
+Start NBR section for normal routing at Mon Jan 18 19:35:02 PST 2016
+Level 4, iteration 1
+203(0.05%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack&lt;setup&gt;: 61.513ns/0.000ns; real time: 41 secs 
+Level 4, iteration 2
+67(0.02%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack&lt;setup&gt;: 61.555ns/0.000ns; real time: 42 secs 
+Level 4, iteration 3
+25(0.01%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack&lt;setup&gt;: 61.555ns/0.000ns; real time: 42 secs 
+Level 4, iteration 4
+6(0.00%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack&lt;setup&gt;: 61.555ns/0.000ns; real time: 42 secs 
+Level 4, iteration 5
+3(0.00%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack&lt;setup&gt;: 61.555ns/0.000ns; real time: 42 secs 
+Level 4, iteration 6
+3(0.00%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack&lt;setup&gt;: 61.555ns/0.000ns; real time: 42 secs 
+Level 4, iteration 7
+0(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack&lt;setup&gt;: 61.555ns/0.000ns; real time: 43 secs 
+
+Start NBR section for setup/hold timing optimization with effort level 3 at Mon Jan 18 19:35:05 PST 2016
+WARNING - par: Cannot fix hold timing violation(-0.789ns with flag 0/1/1) at conn (rc_receiver/i25054/SLICE_1313:OFX0 -&gt; rc_receiver/SLICE_1095:FXA) in signal rc_receiver/n31807.
+WARNING - par: Cannot fix hold timing violation(-0.762ns with flag 0/1/1) at conn (rc_receiver/SLICE_1095:OFX0 -&gt; rc_receiver/SLICE_1095:FXB) in signal rc_receiver/n31804.
+WARNING - par: Cannot fix hold timing violation(-0.789ns with flag 0/1/1) at conn (rc_receiver/SLICE_1095:OFX1 -&gt; rc_receiver/SLICE_1095:DI1) in signal rc_receiver/n31808.
+WARNING - par: Cannot fix hold timing violation(-0.483ns with flag 0/1/1) at conn (SLICE_1087:F0 -&gt; SLICE_1087:DI0) in signal rc_receiver/n176.
+WARNING - par: Cannot fix hold timing violation(-0.333ns with flag 0/1/1) at conn (rc_receiver/SLICE_1088:OFX0 -&gt; rc_receiver/SLICE_1088:FXB) in signal rc_receiver/n31527.
+WARNING - par: Cannot fix hold timing violation(-0.322ns with flag 0/1/1) at conn (rc_receiver/i25029/SLICE_1315:OFX0 -&gt; rc_receiver/SLICE_1091:FXA) in signal rc_receiver/n31774.
+WARNING - par: Cannot fix hold timing violation(-0.322ns with flag 0/1/1) at conn (rc_receiver/SLICE_1091:OFX0 -&gt; rc_receiver/SLICE_1091:FXB) in signal rc_receiver/n31771.
+WARNING - par: Cannot fix hold timing violation(-0.474ns with flag 0/1/1) at conn (rc_receiver/SLICE_1091:OFX1 -&gt; rc_receiver/SLICE_1091:DI1) in signal rc_receiver/n31775.
+WARNING - par: Cannot fix hold timing violation(-0.333ns with flag 0/1/1) at conn (rc_receiver/SLICE_1088:OFX1 -&gt; rc_receiver/SLICE_1088:DI1) in signal rc_receiver/n31531.
+WARNING - par: Cannot fix hold timing violation(-0.578ns with flag 0/1/1) at conn (rc_receiver/SLICE_1094:OFX1 -&gt; rc_receiver/SLICE_1094:DI1) in signal rc_receiver/n32233.
+WARNING - par: Cannot fix hold timing violation(-0.246ns with flag 0/1/1) at conn (rc_receiver/SLICE_1093:OFX1 -&gt; rc_receiver/SLICE_1093:DI1) in signal rc_receiver/n32319.
+WARNING - par: Cannot fix hold timing violation(-0.375ns with flag 0/1/1) at conn (rc_receiver/SLICE_1092:OFX1 -&gt; rc_receiver/SLICE_1092:DI1) in signal rc_receiver/n32289.
+WARNING - par: Cannot fix hold timing violation(-0.664ns with flag 0/1/1) at conn (rc_receiver/SLICE_1090:OFX1 -&gt; rc_receiver/SLICE_1090:DI1) in signal rc_receiver/n32272.
+WARNING - par: Cannot fix hold timing violation(-0.357ns with flag 0/1/1) at conn (rc_receiver/SLICE_1089:OFX1 -&gt; rc_receiver/SLICE_1089:DI1) in signal rc_receiver/n32359.
+WARNING - par: Cannot fix hold timing violation(-0.165ns with flag 0/1/1) at conn (rc_receiver/i25273/SLICE_1317:OFX0 -&gt; rc_receiver/SLICE_1089:FXA) in signal rc_receiver/n32358.
+WARNING - par: Cannot fix hold timing violation(-0.221ns with flag 0/1/1) at conn (rc_receiver/SLICE_1089:OFX0 -&gt; rc_receiver/SLICE_1089:FXB) in signal rc_receiver/n32355.
+WARNING - par: Cannot fix hold timing violation(-0.165ns with flag 0/1/1) at conn (rc_receiver/i25240/SLICE_1318:OFX0 -&gt; rc_receiver/SLICE_1093:FXA) in signal rc_receiver/n32318.
+WARNING - par: Cannot fix hold timing violation(-0.115ns with flag 0/1/1) at conn (rc_receiver/SLICE_1093:OFX0 -&gt; rc_receiver/SLICE_1093:FXB) in signal rc_receiver/n32315.
+WARNING - par: Cannot fix hold timing violation(-0.375ns with flag 0/1/1) at conn (rc_receiver/i25219/SLICE_1319:OFX0 -&gt; rc_receiver/SLICE_1092:FXA) in signal rc_receiver/n32288.
+WARNING - par: Cannot fix hold timing violation(-0.322ns with flag 0/1/1) at conn (rc_receiver/SLICE_1092:OFX0 -&gt; rc_receiver/SLICE_1092:FXB) in signal rc_receiver/n32285.
+WARNING - par: Cannot fix hold timing violation(-0.421ns with flag 0/1/1) at conn (rc_receiver/i25209/SLICE_1320:OFX0 -&gt; rc_receiver/SLICE_1090:FXA) in signal rc_receiver/n32271.
+. . .
+----------------------------------
+Info: Total 28 connections where the hold timing errors associated cannot be fixed.
+
+Level 4, iteration 0
+Level 4, iteration 1
+5(0.00%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack&lt;hold &gt;: 0.033ns/0.000ns; real time: 56 secs 
+Level 4, iteration 2
+0(0.00%) conflict; 8(0.07%) untouched conns; 0 (nbr) score; 
+Estimated worst slack/total negative slack&lt;hold &gt;: 0.117ns/0.000ns; real time: 56 secs 
+Level 4, iteration 0
+0(0.00%) conflict; 8(0.07%) untouched conns; 0 (nbr) score; 
+Estimated worst slack/total negative slack&lt;setup&gt;: 61.535ns/0.000ns; real time: 57 secs 
+Level 4, iteration 1
+0(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack&lt;setup&gt;: 61.535ns/0.000ns; real time: 57 secs 
+WARNING - par: Cannot fix hold timing violation(-0.421ns with flag 0/1/1) at conn (rc_receiver/SLICE_1088:OFX0 -&gt; rc_receiver/SLICE_1088:FXB) in signal rc_receiver/n31527.
+WARNING - par: Cannot fix hold timing violation(-0.449ns with flag 0/1/1) at conn (rc_receiver/SLICE_1088:OFX1 -&gt; rc_receiver/SLICE_1088:DI1) in signal rc_receiver/n31531.
+WARNING - par: Cannot fix hold timing violation(-0.449ns with flag 0/1/1) at conn (rc_receiver/i24943/SLICE_1322:OFX0 -&gt; rc_receiver/SLICE_1088:FXA) in signal rc_receiver/n31530.
+----------------------------------
+Info: Total 3 connections where the hold timing errors associated cannot be fixed.
+
+Level 4, iteration 0
+0(0.00%) conflict; 0(0.00%) untouched conn; 6780 (nbr) score; 
+Estimated worst slack/total negative slack&lt;hold &gt;: -0.449ns/-6.781ns; real time: 57 secs 
+Level 4, iteration 1
+0(0.00%) conflict; 0(0.00%) untouched conn; 6780 (nbr) score; 
+Estimated worst slack/total negative slack&lt;hold &gt;: -0.449ns/-6.781ns; real time: 57 secs 
+Level 4, iteration 0
+0(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack&lt;setup&gt;: 61.535ns/0.000ns; real time: 58 secs 
+Level 4, iteration 1
+0(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack&lt;setup&gt;: 61.535ns/0.000ns; real time: 58 secs 
+WARNING - par: Cannot fix hold timing violation(-0.421ns with flag 0/1/1) at conn (rc_receiver/SLICE_1088:OFX0 -&gt; rc_receiver/SLICE_1088:FXB) in signal rc_receiver/n31527.
+WARNING - par: Cannot fix hold timing violation(-0.449ns with flag 0/1/1) at conn (rc_receiver/SLICE_1088:OFX1 -&gt; rc_receiver/SLICE_1088:DI1) in signal rc_receiver/n31531.
+WARNING - par: Cannot fix hold timing violation(-0.449ns with flag 0/1/1) at conn (rc_receiver/i24943/SLICE_1322:OFX0 -&gt; rc_receiver/SLICE_1088:FXA) in signal rc_receiver/n31530.
+----------------------------------
+Info: Total 3 connections where the hold timing errors associated cannot be fixed.
+
+Level 4, iteration 0
+0(0.00%) conflict; 0(0.00%) untouched conn; 6780 (nbr) score; 
+Estimated worst slack/total negative slack&lt;hold &gt;: -0.449ns/-6.781ns; real time: 58 secs 
+Level 4, iteration 1
+0(0.00%) conflict; 0(0.00%) untouched conn; 6780 (nbr) score; 
+Estimated worst slack/total negative slack&lt;hold &gt;: -0.449ns/-6.781ns; real time: 58 secs 
+Level 4, iteration 0
+0(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack&lt;setup&gt;: 61.535ns/0.000ns; real time: 59 secs 
+Level 4, iteration 1
+0(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack&lt;setup&gt;: 61.535ns/0.000ns; real time: 59 secs 
+
+Start NBR section for re-routing at Mon Jan 18 19:35:22 PST 2016
+Level 4, iteration 1
+0(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack&lt;setup&gt;: 61.555ns/0.000ns; real time: 1 mins 
+
+Start NBR section for post-routing at Mon Jan 18 19:35:22 PST 2016
+
+End NBR router with 0 unrouted connection
+
+NBR Summary
+-----------
+  Number of unrouted connections : 0 (0.00%)
+  Number of connections with timing violations : 0 (0.00%)
+  Estimated worst slack&lt;setup&gt; : 61.555ns
+  Timing score&lt;setup&gt; : 0
+-----------
+Notes: The timing info is calculated for SETUP only and all PAR_ADJs are ignored.
+
+
+
+WARNING - par: The following clock signals will be routed by using generic routing resource and may suffer from excessive delay and/or skew.
+   Signal=select[7] loads=18 clock_loads=9
+   Signal=\protocol_interface/uart_output/bclk loads=9 clock_loads=9
+
+Total CPU time 1 mins 3 secs 
+Total REAL time: 1 mins 3 secs 
+Completely routed.
+End of route.  10975 routed (100.00%); 0 unrouted.
+Checking DRC ... 
+No errors found.
+
+Hold time timing score: 5, hold timing errors: 14
+
+Timing score: 0 
+
+Dumping design to file Uniboard_verilog_impl1.dir/5_1.ncd.
+
+
+All signals are completely routed.
+
+
+PAR_SUMMARY::Run status = completed
+PAR_SUMMARY::Number of unrouted conns = 0
+PAR_SUMMARY::Worst  slack&lt;setup/&lt;ns&gt;&gt; = 61.555
+PAR_SUMMARY::Timing score&lt;setup/&lt;ns&gt;&gt; = 0.000
+PAR_SUMMARY::Worst  slack&lt;hold /&lt;ns&gt;&gt; = -0.444
+PAR_SUMMARY::Timing score&lt;hold /&lt;ns&gt;&gt; = 5.392
+PAR_SUMMARY::Number of errors = 0
+
+Total CPU  time to completion: 1 mins 4 secs 
+Total REAL time to completion: 1 mins 4 secs 
+
+par done!
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&amp;T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2014 Lattice Semiconductor Corporation,  All rights reserved.
+
+
+
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+</PRE></FONT>
+</BODY>
+</HTML>

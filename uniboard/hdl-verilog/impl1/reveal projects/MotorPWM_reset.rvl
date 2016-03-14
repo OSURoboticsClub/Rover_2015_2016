@@ -1,0 +1,41 @@
+<Project ModBy="Inserter" SigType="0" Name="/home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/impl1/reveal projects/MotorPWM_reset.rvl" Date="2016-01-10">
+    <IP Version="1_5_062609"/>
+    <Design DesignEntry="Schematic/Verilog HDL" Synthesis="lse" DeviceFamily="MachXO2" DesignName="Uniboard_verilog"/>
+    <Core InsertDataset="0" Insert="1" Reveal_sig="5505574" Name="UniboardTop_LA0" ID="0">
+        <Setting>
+            <Clock SampleClk="clk_12MHz" SampleEnable="0" EnableClk="" EnableClk_Pri="0"/>
+            <TraceBuffer Implementation="0" BitTimeStamp="0" hasTimeStamp="0" IncTrigSig="0" BufferDepth="256"/>
+            <Capture Mode="0" MinSamplesPerTrig="8"/>
+            <Event CntEnable="0" MaxEventCnt="8"/>
+            <TrigOut Polarity="0" MinPulseWidth="0" TrigOutNetType="1" EnableTrigOut="0" TrigOutNet="reveal_debug_UniboardTop_LA0_net"/>
+            <DistRAM Disable="0"/>
+        </Setting>
+        <Dataset Name="Base">
+            <Trace>
+                <Sig Type="SIG" Name="motor_pwm/reset"/>
+                <Bus Name="motor_pwm/register[1:0]">
+                    <Sig Type="SIG" Name="motor_pwm/register:0:0"/>
+                    <Sig Type="SIG" Name="motor_pwm/register:0:1"/>
+                    <Sig Type="SIG" Name="motor_pwm/register:0:2"/>
+                    <Sig Type="SIG" Name="motor_pwm/register:0:3"/>
+                    <Sig Type="SIG" Name="motor_pwm/register:0:4"/>
+                    <Sig Type="SIG" Name="motor_pwm/register:0:5"/>
+                    <Sig Type="SIG" Name="motor_pwm/register:0:6"/>
+                    <Sig Type="SIG" Name="motor_pwm/register:0:7"/>
+                    <Sig Type="SIG" Name="motor_pwm/register:1:0"/>
+                    <Sig Type="SIG" Name="motor_pwm/register:1:1"/>
+                    <Sig Type="SIG" Name="motor_pwm/register:1:2"/>
+                    <Sig Type="SIG" Name="motor_pwm/register:1:3"/>
+                    <Sig Type="SIG" Name="motor_pwm/register:1:4"/>
+                    <Sig Type="SIG" Name="motor_pwm/register:1:5"/>
+                    <Sig Type="SIG" Name="motor_pwm/register:1:6"/>
+                    <Sig Type="SIG" Name="motor_pwm/register:1:7"/>
+                </Bus>
+            </Trace>
+            <Trigger>
+                <TU Serialbits="0" Type="0" ID="1" Sig="reset,"/>
+                <TE MaxSequence="1" MaxEvnCnt="1" ID="1" Resource="1"/>
+            </Trigger>
+        </Dataset>
+    </Core>
+</Project>

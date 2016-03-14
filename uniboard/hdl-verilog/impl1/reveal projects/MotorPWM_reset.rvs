@@ -1,0 +1,36 @@
+<Project ModBy="Analyzer" Name="/home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/impl1/reveal projects/MotorPWM_reset.rvs" Date="2016-01-10">
+ <Core Name="UniboardTop_LA0">
+  <Setting>
+   <Capture SamplesPerTrig="256" NumTrigsCap="1"/>
+   <Event EventCnt="0" CntEnableRun="0"/>
+   <TrigSetting PreTrgSamples="" AND_ALL="0" PostTrgSamples="" TURadix="0"/>
+  </Setting>
+  <Dataset Name="Base">
+   <Trace>
+    <Sig Name="motor_pwm/reset"/>
+    <Bus Name="motor_pwm/register[1:0]" Radix="0">
+     <Sig Name="motor_pwm/register:0:0"/>
+     <Sig Name="motor_pwm/register:0:1"/>
+     <Sig Name="motor_pwm/register:0:2"/>
+     <Sig Name="motor_pwm/register:0:3"/>
+     <Sig Name="motor_pwm/register:0:4"/>
+     <Sig Name="motor_pwm/register:0:5"/>
+     <Sig Name="motor_pwm/register:0:6"/>
+     <Sig Name="motor_pwm/register:0:7"/>
+     <Sig Name="motor_pwm/register:1:0"/>
+     <Sig Name="motor_pwm/register:1:1"/>
+     <Sig Name="motor_pwm/register:1:2"/>
+     <Sig Name="motor_pwm/register:1:3"/>
+     <Sig Name="motor_pwm/register:1:4"/>
+     <Sig Name="motor_pwm/register:1:5"/>
+     <Sig Name="motor_pwm/register:1:6"/>
+     <Sig Name="motor_pwm/register:1:7"/>
+    </Bus>
+   </Trace>
+   <Trigger>
+    <TU Operator="0" Name="TU1" ID="1" Value="0" Radix="0"/>
+    <TE Enable="1" Expression="TU1" Name="TE1" ID="1"/>
+   </Trigger>
+  </Dataset>
+ </Core>
+</Project>

@@ -1,0 +1,7 @@
+#Start recording tcl command: 1/13/2016 06:11:16
+#Project Location: /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog; Project name: Uniboard_verilog
+prj_project open "/home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/Uniboard_verilog.ldf"
+prj_project save
+pgr_project open "/home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/impl1/impl1.xcf"
+pgr_project close
+#Stop recording: 1/13/2016 06:11:30

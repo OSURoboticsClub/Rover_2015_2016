@@ -1,0 +1,311 @@
+<HTML>
+<HEAD><TITLE>Lattice Synthesis Timing Report</TITLE>
+<STYLE TYPE="text/css">
+<!--
+ body,pre{    font-family:'Courier New', monospace;    color: #000000;    font-size:88%;    background-color: #ffffff;}h1 {    font-weight: bold;    margin-top: 24px;    margin-bottom: 10px;    border-bottom: 3px solid #000;    font-size: 1em;}h2 {    font-weight: bold;    margin-top: 18px;    margin-bottom: 5px;    font-size: 0.90em;}h3 {    font-weight: bold;    margin-top: 12px;    margin-bottom: 5px;    font-size: 0.80em;}p {    font-size:78%;}P.Table {    margin-top: 4px;    margin-bottom: 4px;    margin-right: 4px;    margin-left: 4px;}table{    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    border-collapse: collapse;}th {    font-weight:bold;    padding: 4px;    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    vertical-align:top;    text-align:left;    font-size:78%;}td {    padding: 4px;    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    vertical-align:top;    font-size:78%;}a {    color:#013C9A;    text-decoration:none;}a:visited {    color:#013C9A;}a:hover, a:active {    text-decoration:underline;    color:#5BAFD4;}.pass{background-color: #00ff00;}.fail{background-color: #ff0000;}.comment{    font-size: 90%;    font-style: italic;}
+-->
+</STYLE>
+</HEAD>
+<PRE><A name="Map_Twr"></A><B><U><big>Lattice Synthesis Timing Report</big></U></B>
+--------------------------------------------------------------------------------
+Lattice Synthesis Timing Report, Version  
+Sat Jan  9 21:51:52 2016
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2014 Lattice Semiconductor Corporation,  All rights reserved.
+
+<A name="mtw1_ri"></A><B><U><big>Report Information</big></U></B>
+------------------
+Design:     RCPeripheral
+Constraint file:  
+Report level:    verbose report, limited to 3 items per constraint
+--------------------------------------------------------------------------------
+
+
+
+================================================================================
+Constraint: create_clock -period 5.000000 -name clk1 [get_nets select_c]
+            0 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+================================================================================
+Constraint: create_clock -period 5.000000 -name clk0 [get_nets clk_255kHz_c]
+            153 items scored, 107 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Error:  The following path violates requirements by 0.567ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1P3IX    CK             \recv_ch7/count_i0  (from clk_255kHz_c +)
+   Destination:    FD1P3IX    D              \recv_ch7/count_i14  (to clk_255kHz_c +)
+
+   Delay:                   5.407ns  (52.0% logic, 48.0% route), 9 logic levels.
+
+ Constraint Details:
+
+      5.407ns data_path \recv_ch7/count_i0 to \recv_ch7/count_i14 violates
+      5.000ns delay constraint less
+      0.160ns L_S requirement (totaling 4.840ns) by 0.567ns
+
+ Path Details: \recv_ch7/count_i0 to \recv_ch7/count_i14
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.444             CK to Q              \recv_ch7/count_i0 (from clk_255kHz_c)
+Route         2   e 1.515                                  \recv_ch7/count[0]
+A1_TO_FCO   ---     0.827           A[2] to COUT           \recv_ch7/add_30_1
+Route         1   e 0.020                                  \recv_ch7/n6562
+FCI_TO_FCO  ---     0.157            CIN to COUT           \recv_ch7/add_30_3
+Route         1   e 0.020                                  \recv_ch7/n6563
+FCI_TO_FCO  ---     0.157            CIN to COUT           \recv_ch7/add_30_5
+Route         1   e 0.020                                  \recv_ch7/n6564
+FCI_TO_FCO  ---     0.157            CIN to COUT           \recv_ch7/add_30_7
+Route         1   e 0.020                                  \recv_ch7/n6565
+FCI_TO_FCO  ---     0.157            CIN to COUT           \recv_ch7/add_30_9
+Route         1   e 0.020                                  \recv_ch7/n6566
+FCI_TO_FCO  ---     0.157            CIN to COUT           \recv_ch7/add_30_11
+Route         1   e 0.020                                  \recv_ch7/n6567
+FCI_TO_FCO  ---     0.157            CIN to COUT           \recv_ch7/add_30_13
+Route         1   e 0.020                                  \recv_ch7/n6568
+FCI_TO_F    ---     0.598            CIN to S[2]           \recv_ch7/add_30_15
+Route         1   e 0.941                                  \recv_ch7/n83
+                  --------
+                    5.407  (52.0% logic, 48.0% route), 9 logic levels.
+
+
+Error:  The following path violates requirements by 0.514ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1P3IX    CK             \recv_ch8/count_i0  (from clk_255kHz_c +)
+   Destination:    FD1P3IX    D              \recv_ch8/count_i14  (to clk_255kHz_c +)
+
+   Delay:                   5.354ns  (52.5% logic, 47.5% route), 9 logic levels.
+
+ Constraint Details:
+
+      5.354ns data_path \recv_ch8/count_i0 to \recv_ch8/count_i14 violates
+      5.000ns delay constraint less
+      0.160ns L_S requirement (totaling 4.840ns) by 0.514ns
+
+ Path Details: \recv_ch8/count_i0 to \recv_ch8/count_i14
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.444             CK to Q              \recv_ch8/count_i0 (from clk_255kHz_c)
+Route         2   e 1.462                                  \recv_ch8/count[0]
+A1_TO_FCO   ---     0.827           A[2] to COUT           \recv_ch8/add_30_1
+Route         1   e 0.020                                  \recv_ch8/n6570
+FCI_TO_FCO  ---     0.157            CIN to COUT           \recv_ch8/add_30_3
+Route         1   e 0.020                                  \recv_ch8/n6571
+FCI_TO_FCO  ---     0.157            CIN to COUT           \recv_ch8/add_30_5
+Route         1   e 0.020                                  \recv_ch8/n6572
+FCI_TO_FCO  ---     0.157            CIN to COUT           \recv_ch8/add_30_7
+Route         1   e 0.020                                  \recv_ch8/n6573
+FCI_TO_FCO  ---     0.157            CIN to COUT           \recv_ch8/add_30_9
+Route         1   e 0.020                                  \recv_ch8/n6574
+FCI_TO_FCO  ---     0.157            CIN to COUT           \recv_ch8/add_30_11
+Route         1   e 0.020                                  \recv_ch8/n6575
+FCI_TO_FCO  ---     0.157            CIN to COUT           \recv_ch8/add_30_13
+Route         1   e 0.020                                  \recv_ch8/n6576
+FCI_TO_F    ---     0.598            CIN to S[2]           \recv_ch8/add_30_15
+Route         1   e 0.941                                  \recv_ch8/n83
+                  --------
+                    5.354  (52.5% logic, 47.5% route), 9 logic levels.
+
+
+Error:  The following path violates requirements by 0.514ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1P3IX    CK             \recv_ch4/count_i0  (from clk_255kHz_c +)
+   Destination:    FD1P3IX    D              \recv_ch4/count_i14  (to clk_255kHz_c +)
+
+   Delay:                   5.354ns  (52.5% logic, 47.5% route), 9 logic levels.
+
+ Constraint Details:
+
+      5.354ns data_path \recv_ch4/count_i0 to \recv_ch4/count_i14 violates
+      5.000ns delay constraint less
+      0.160ns L_S requirement (totaling 4.840ns) by 0.514ns
+
+ Path Details: \recv_ch4/count_i0 to \recv_ch4/count_i14
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.444             CK to Q              \recv_ch4/count_i0 (from clk_255kHz_c)
+Route         2   e 1.462                                  \recv_ch4/count[0]
+A1_TO_FCO   ---     0.827           A[2] to COUT           \recv_ch4/add_30_1
+Route         1   e 0.020                                  \recv_ch4/n6554
+FCI_TO_FCO  ---     0.157            CIN to COUT           \recv_ch4/add_30_3
+Route         1   e 0.020                                  \recv_ch4/n6555
+FCI_TO_FCO  ---     0.157            CIN to COUT           \recv_ch4/add_30_5
+Route         1   e 0.020                                  \recv_ch4/n6556
+FCI_TO_FCO  ---     0.157            CIN to COUT           \recv_ch4/add_30_7
+Route         1   e 0.020                                  \recv_ch4/n6557
+FCI_TO_FCO  ---     0.157            CIN to COUT           \recv_ch4/add_30_9
+Route         1   e 0.020                                  \recv_ch4/n6558
+FCI_TO_FCO  ---     0.157            CIN to COUT           \recv_ch4/add_30_11
+Route         1   e 0.020                                  \recv_ch4/n6559
+FCI_TO_FCO  ---     0.157            CIN to COUT           \recv_ch4/add_30_13
+Route         1   e 0.020                                  \recv_ch4/n6560
+FCI_TO_F    ---     0.598            CIN to S[2]           \recv_ch4/add_30_15
+Route         1   e 0.941                                  \recv_ch4/n101
+                  --------
+                    5.354  (52.5% logic, 47.5% route), 9 logic levels.
+
+Warning: 5.567 ns is the maximum delay for this constraint.
+
+
+<A name="mtw1_rs"></A><B><U><big>Timing Report Summary</big></U></B>
+--------------
+--------------------------------------------------------------------------------
+Constraint                              |   Constraint|       Actual|Levels
+--------------------------------------------------------------------------------
+                                        |             |             |
+create_clock -period 5.000000 -name     |             |             |
+clk1 [get_nets select_c]                |            -|            -|     0  
+                                        |             |             |
+create_clock -period 5.000000 -name     |             |             |
+clk0 [get_nets clk_255kHz_c]            |     5.000 ns|     5.567 ns|     9 *
+                                        |             |             |
+--------------------------------------------------------------------------------
+
+
+1 constraints not met.
+
+--------------------------------------------------------------------------------
+Critical Nets                           |   Loads|  Errors| % of total
+--------------------------------------------------------------------------------
+\recv_ch1/n6534                         |       1|      19|     17.76%
+                                        |        |        |
+\recv_ch4/n6557                         |       1|      18|     16.82%
+                                        |        |        |
+\recv_ch4/n6558                         |       1|      18|     16.82%
+                                        |        |        |
+\recv_ch7/n6565                         |       1|      18|     16.82%
+                                        |        |        |
+\recv_ch7/n6566                         |       1|      18|     16.82%
+                                        |        |        |
+\recv_ch8/n6573                         |       1|      18|     16.82%
+                                        |        |        |
+\recv_ch8/n6574                         |       1|      18|     16.82%
+                                        |        |        |
+\recv_ch1/n6533                         |       1|      17|     15.89%
+                                        |        |        |
+\recv_ch2/n6541                         |       1|      17|     15.89%
+                                        |        |        |
+\recv_ch2/n6542                         |       1|      17|     15.89%
+                                        |        |        |
+\recv_ch3/n6549                         |       1|      17|     15.89%
+                                        |        |        |
+\recv_ch3/n6550                         |       1|      17|     15.89%
+                                        |        |        |
+\recv_ch1/n6532                         |       1|      16|     14.95%
+                                        |        |        |
+\recv_ch2/n6540                         |       1|      16|     14.95%
+                                        |        |        |
+\recv_ch3/n6548                         |       1|      16|     14.95%
+                                        |        |        |
+\recv_ch4/n6556                         |       1|      16|     14.95%
+                                        |        |        |
+\recv_ch7/n6564                         |       1|      16|     14.95%
+                                        |        |        |
+\recv_ch8/n6572                         |       1|      16|     14.95%
+                                        |        |        |
+\recv_ch1/n6535                         |       1|      13|     12.15%
+                                        |        |        |
+\recv_ch1/n6531                         |       1|      12|     11.21%
+                                        |        |        |
+\recv_ch2/n6539                         |       1|      12|     11.21%
+                                        |        |        |
+\recv_ch3/n6547                         |       1|      12|     11.21%
+                                        |        |        |
+\recv_ch4/n6555                         |       1|      12|     11.21%
+                                        |        |        |
+\recv_ch4/n6559                         |       1|      12|     11.21%
+                                        |        |        |
+\recv_ch7/n6563                         |       1|      12|     11.21%
+                                        |        |        |
+\recv_ch7/n6567                         |       1|      12|     11.21%
+                                        |        |        |
+\recv_ch8/n6571                         |       1|      12|     11.21%
+                                        |        |        |
+\recv_ch8/n6575                         |       1|      12|     11.21%
+                                        |        |        |
+\recv_ch2/n6543                         |       1|      11|     10.28%
+                                        |        |        |
+\recv_ch3/n6551                         |       1|      11|     10.28%
+                                        |        |        |
+--------------------------------------------------------------------------------
+
+
+<A name="mtw1_ts"></A><B><U><big>Timing summary:</big></U></B>
+---------------
+
+Timing errors: 107  Score: 21305
+
+Constraints cover  384 paths, 181 nets, and 351 connections (63.6% coverage)
+
+
+Peak memory: 198696960 bytes, TRCE: 856064 bytes, DLYMAN: 163840 bytes
+CPU_TIME_REPORT: 0 secs 
+
+
+
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+</PRE></FONT>
+</BODY>
+</HTML>

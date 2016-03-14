@@ -1,0 +1,70 @@
+NOTE Copyright (C), 1992-2010, Lattice Semiconductor Corporation *
+NOTE All Rights Reserved *
+NOTE DATE CREATED: Mon Jan 18 19:35:33 2016 *
+NOTE DESIGN NAME: UniboardTop *
+NOTE DEVICE NAME: LCMXO2-7000HC-4TQFP144 *
+NOTE PIN ASSIGNMENTS *
+NOTE PINS xbee_pause : 4 : in *
+NOTE PINS rc_ch8 : 41 : in *
+NOTE PINS rc_ch7 : 42 : in *
+NOTE PINS rc_ch4 : 43 : in *
+NOTE PINS rc_ch3 : 44 : in *
+NOTE PINS rc_ch2 : 45 : in *
+NOTE PINS rc_ch1 : 47 : in *
+NOTE PINS limit[0] : 68 : in *
+NOTE PINS limit[1] : 65 : in *
+NOTE PINS limit[2] : 67 : in *
+NOTE PINS limit[3] : 63 : in *
+NOTE PINS Stepper_A_nFault : 76 : in *
+NOTE PINS Stepper_Z_nFault : 85 : in *
+NOTE PINS Stepper_Y_nFault : 97 : in *
+NOTE PINS Stepper_X_nFault : 106 : in *
+NOTE PINS clk_12MHz : 128 : in *
+NOTE PINS uart_rx : 133 : in *
+NOTE PINS debug[0] : 111 : out *
+NOTE PINS debug[1] : 112 : out *
+NOTE PINS debug[2] : 113 : out *
+NOTE PINS debug[3] : 114 : out *
+NOTE PINS debug[4] : 115 : out *
+NOTE PINS debug[5] : 117 : out *
+NOTE PINS debug[6] : 119 : out *
+NOTE PINS debug[7] : 121 : out *
+NOTE PINS debug[8] : 122 : out *
+NOTE PINS motor_pwm_r : 6 : out *
+NOTE PINS motor_pwm_l : 5 : out *
+NOTE PINS signal_light : 57 : out *
+NOTE PINS expansion5 : 62 : out *
+NOTE PINS expansion4 : 61 : out *
+NOTE PINS expansion3 : 60 : out *
+NOTE PINS expansion2 : 59 : out *
+NOTE PINS expansion1 : 58 : out *
+NOTE PINS Stepper_A_En : 69 : out *
+NOTE PINS Stepper_A_M2 : 73 : out *
+NOTE PINS Stepper_A_M1 : 71 : out *
+NOTE PINS Stepper_A_M0 : 70 : out *
+NOTE PINS Stepper_A_Dir : 75 : out *
+NOTE PINS Stepper_A_Step : 74 : out *
+NOTE PINS Stepper_Z_En : 77 : out *
+NOTE PINS Stepper_Z_M2 : 82 : out *
+NOTE PINS Stepper_Z_M1 : 81 : out *
+NOTE PINS Stepper_Z_M0 : 78 : out *
+NOTE PINS Stepper_Z_Dir : 84 : out *
+NOTE PINS Stepper_Z_Step : 83 : out *
+NOTE PINS Stepper_Y_En : 96 : out *
+NOTE PINS Stepper_Y_M2 : 93 : out *
+NOTE PINS Stepper_Y_M1 : 94 : out *
+NOTE PINS Stepper_Y_M0 : 95 : out *
+NOTE PINS Stepper_Y_Dir : 86 : out *
+NOTE PINS Stepper_Y_Step : 87 : out *
+NOTE PINS Stepper_X_En : 105 : out *
+NOTE PINS Stepper_X_M2 : 100 : out *
+NOTE PINS Stepper_X_M1 : 103 : out *
+NOTE PINS Stepper_X_M0 : 104 : out *
+NOTE PINS Stepper_X_Dir : 98 : out *
+NOTE PINS Stepper_X_Step : 99 : out *
+NOTE PINS status_led[0] : 110 : out *
+NOTE PINS status_led[1] : 109 : out *
+NOTE PINS status_led[2] : 107 : out *
+NOTE PINS uart_tx : 132 : out *
+NOTE CONFIGURATION MODE: NONE *
+NOTE COMPRESSION: on *
