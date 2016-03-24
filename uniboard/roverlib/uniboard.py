@@ -249,6 +249,7 @@ class Uniboard:
 		   0 meaning stop, and 1 meaning full forward."""
 		if not isinstance(speed_f, float):
 			speed_f = 0.0
+		speed_f = -speed_f
 		intvalue = int((speed_f + 1) * 127)
 		self._write_reg(2, 0, intvalue)
 	
@@ -257,6 +258,7 @@ class Uniboard:
 		   0 meaning stop, and 1 meaning full forward."""
 		if not isinstance(speed_f, float):
 			speed_f = 0.0
+		speed_f = -speed_f
 		intvalue = int((speed_f + 1) * 127)
 		self._write_reg(2, 1, intvalue)
 	
