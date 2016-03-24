@@ -19,7 +19,7 @@ Target Vendor:  LATTICE
 Target Device:  LCMXO2-7000HCTQFP144
 Target Performance:   4
 Mapper:  xo2c00,  version:  Diamond (64-bit) 3.4.1.213
-Mapped on:  01/18/16  19:34:19
+Mapped on:  03/24/16  13:09:23
 
 Design Summary
 --------------
@@ -66,7 +66,7 @@ Design Summary
 
 
 
-Design:  UniboardTop                                   Date:  01/18/16  19:34:19
+Design:  UniboardTop                                   Date:  03/24/16  13:09:23
 
 Design Summary (cont)
 ---------------------
@@ -132,7 +132,7 @@ Design Summary (cont)
 
 
 
-Design:  UniboardTop                                   Date:  01/18/16  19:34:19
+Design:  UniboardTop                                   Date:  03/24/16  13:09:23
 
 Design Summary (cont)
 ---------------------
@@ -198,7 +198,7 @@ Design Summary (cont)
 
 
 
-Design:  UniboardTop                                   Date:  01/18/16  19:34:19
+Design:  UniboardTop                                   Date:  03/24/16  13:09:23
 
 Design Summary (cont)
 ---------------------
@@ -264,7 +264,7 @@ IO (PIO) Attributes
 
 
 
-Design:  UniboardTop                                   Date:  01/18/16  19:34:19
+Design:  UniboardTop                                   Date:  03/24/16  13:09:23
 
 IO (PIO) Attributes (cont)
 --------------------------
@@ -330,7 +330,7 @@ IO (PIO) Attributes (cont)
 
 
 
-Design:  UniboardTop                                   Date:  01/18/16  19:34:19
+Design:  UniboardTop                                   Date:  03/24/16  13:09:23
 
 IO (PIO) Attributes (cont)
 --------------------------
@@ -396,7 +396,7 @@ IO (PIO) Attributes (cont)
 
 
 
-Design:  UniboardTop                                   Date:  01/18/16  19:34:19
+Design:  UniboardTop                                   Date:  03/24/16  13:09:23
 
 IO (PIO) Attributes (cont)
 --------------------------
@@ -462,7 +462,7 @@ Signal pwm_clk_div/sub_1709_add_2_14/S1 undriven or does not drive anything -
 
 
 
-Design:  UniboardTop                                   Date:  01/18/16  19:34:19
+Design:  UniboardTop                                   Date:  03/24/16  13:09:23
 
 Removed logic (cont)
 --------------------
@@ -528,7 +528,7 @@ Signal pwm_clk_div/add_21614_6/S0 undriven or does not drive anything - clipped.
 
 
 
-Design:  UniboardTop                                   Date:  01/18/16  19:34:19
+Design:  UniboardTop                                   Date:  03/24/16  13:09:23
 
 Removed logic (cont)
 --------------------
@@ -594,7 +594,7 @@ Signal reset_count_2172_2173_add_4_1/CI undriven or does not drive anything -
 
 
 
-Design:  UniboardTop                                   Date:  01/18/16  19:34:19
+Design:  UniboardTop                                   Date:  03/24/16  13:09:23
 
 Removed logic (cont)
 --------------------
@@ -660,7 +660,7 @@ Signal arm_x/step_clk_gen/sub_1717_add_2_21/S0 undriven or does not drive
 
 
 
-Design:  UniboardTop                                   Date:  01/18/16  19:34:19
+Design:  UniboardTop                                   Date:  03/24/16  13:09:23
 
 Removed logic (cont)
 --------------------
@@ -726,7 +726,7 @@ Signal arm_x/step_clk_gen/sub_1716_add_2_15/S1 undriven or does not drive
 
 
 
-Design:  UniboardTop                                   Date:  01/18/16  19:34:19
+Design:  UniboardTop                                   Date:  03/24/16  13:09:23
 
 Removed logic (cont)
 --------------------
@@ -792,7 +792,7 @@ Signal arm_x/step_clk_gen/sub_1714_add_2_7/S0 undriven or does not drive
 
 
 
-Design:  UniboardTop                                   Date:  01/18/16  19:34:19
+Design:  UniboardTop                                   Date:  03/24/16  13:09:23
 
 Removed logic (cont)
 --------------------
@@ -858,7 +858,7 @@ Signal arm_x/step_clk_gen/sub_1714_add_2_33/CO undriven or does not drive
 
 
 
-Design:  UniboardTop                                   Date:  01/18/16  19:34:19
+Design:  UniboardTop                                   Date:  03/24/16  13:09:23
 
 Removed logic (cont)
 --------------------
@@ -924,7 +924,7 @@ Signal protocol_interface/uart_input/baud_gen/sub_1734_add_2_20/S1 undriven or
 
 
 
-Design:  UniboardTop                                   Date:  01/18/16  19:34:19
+Design:  UniboardTop                                   Date:  03/24/16  13:09:23
 
 Removed logic (cont)
 --------------------
@@ -990,7 +990,7 @@ Signal protocol_interface/uart_output/baud_gen/sub_1736_add_2_18/S1 undriven or
 
 
 
-Design:  UniboardTop                                   Date:  01/18/16  19:34:19
+Design:  UniboardTop                                   Date:  03/24/16  13:09:23
 
 Removed logic (cont)
 --------------------
@@ -1056,7 +1056,7 @@ Signal rc_receiver/recv_ch1/sub_56_add_2_1/CI undriven or does not drive
 
 
 
-Design:  UniboardTop                                   Date:  01/18/16  19:34:19
+Design:  UniboardTop                                   Date:  03/24/16  13:09:23
 
 Removed logic (cont)
 --------------------
@@ -1122,7 +1122,7 @@ Signal rc_receiver/recv_ch4/add_1485_1/CI undriven or does not drive anything -
 
 
 
-Design:  UniboardTop                                   Date:  01/18/16  19:34:19
+Design:  UniboardTop                                   Date:  03/24/16  13:09:23
 
 Removed logic (cont)
 --------------------
@@ -1188,7 +1188,7 @@ Signal arm_y/step_clk_gen/sub_1722_add_2_5/S1 undriven or does not drive
 
 
 
-Design:  UniboardTop                                   Date:  01/18/16  19:34:19
+Design:  UniboardTop                                   Date:  03/24/16  13:09:23
 
 Removed logic (cont)
 --------------------
@@ -1254,7 +1254,7 @@ Signal arm_y/step_clk_gen/sub_1722_add_2_33/S0 undriven or does not drive
 
 
 
-Design:  UniboardTop                                   Date:  01/18/16  19:34:19
+Design:  UniboardTop                                   Date:  03/24/16  13:09:23
 
 Removed logic (cont)
 --------------------
@@ -1320,7 +1320,7 @@ Signal arm_y/step_clk_gen/sub_1721_add_2_25/S0 undriven or does not drive
 
 
 
-Design:  UniboardTop                                   Date:  01/18/16  19:34:19
+Design:  UniboardTop                                   Date:  03/24/16  13:09:23
 
 Removed logic (cont)
 --------------------
@@ -1386,7 +1386,7 @@ Signal arm_y/step_clk_gen/sub_1719_add_2_19/S1 undriven or does not drive
 
 
 
-Design:  UniboardTop                                   Date:  01/18/16  19:34:19
+Design:  UniboardTop                                   Date:  03/24/16  13:09:23
 
 Removed logic (cont)
 --------------------
@@ -1452,7 +1452,7 @@ Signal arm_a/step_clk_gen/sub_1732_add_2_1/CI undriven or does not drive
 
 
 
-Design:  UniboardTop                                   Date:  01/18/16  19:34:19
+Design:  UniboardTop                                   Date:  03/24/16  13:09:23
 
 Removed logic (cont)
 --------------------
@@ -1518,7 +1518,7 @@ Signal arm_a/step_clk_gen/sub_1732_add_2_29/S0 undriven or does not drive
 
 
 
-Design:  UniboardTop                                   Date:  01/18/16  19:34:19
+Design:  UniboardTop                                   Date:  03/24/16  13:09:23
 
 Removed logic (cont)
 --------------------
@@ -1584,7 +1584,7 @@ Signal arm_a/step_clk_gen/sub_1731_add_2_23/S1 undriven or does not drive
 
 
 
-Design:  UniboardTop                                   Date:  01/18/16  19:34:19
+Design:  UniboardTop                                   Date:  03/24/16  13:09:23
 
 Removed logic (cont)
 --------------------
@@ -1650,7 +1650,7 @@ Signal arm_a/step_clk_gen/sub_1729_add_2_33/S0 undriven or does not drive
 
 
 
-Design:  UniboardTop                                   Date:  01/18/16  19:34:19
+Design:  UniboardTop                                   Date:  03/24/16  13:09:23
 
 Removed logic (cont)
 --------------------
@@ -1716,7 +1716,7 @@ Signal arm_z/step_clk_gen/count_2178_add_4_33/CO undriven or does not drive
 
 
 
-Design:  UniboardTop                                   Date:  01/18/16  19:34:19
+Design:  UniboardTop                                   Date:  03/24/16  13:09:23
 
 Removed logic (cont)
 --------------------
@@ -1782,7 +1782,7 @@ Signal arm_z/step_clk_gen/sub_1724_add_2_25/S1 undriven or does not drive
 
 
 
-Design:  UniboardTop                                   Date:  01/18/16  19:34:19
+Design:  UniboardTop                                   Date:  03/24/16  13:09:23
 
 Removed logic (cont)
 --------------------
@@ -1848,7 +1848,7 @@ Signal arm_z/step_clk_gen/sub_1727_add_2_15/S0 undriven or does not drive
 
 
 
-Design:  UniboardTop                                   Date:  01/18/16  19:34:19
+Design:  UniboardTop                                   Date:  03/24/16  13:09:23
 
 Removed logic (cont)
 --------------------
@@ -1914,7 +1914,7 @@ Signal arm_z/step_clk_gen/sub_1726_add_2_7/S1 undriven or does not drive
 
 
 
-Design:  UniboardTop                                   Date:  01/18/16  19:34:19
+Design:  UniboardTop                                   Date:  03/24/16  13:09:23
 
 Removed logic (cont)
 --------------------
@@ -1980,7 +1980,7 @@ Signal global_control/uptime_div/count_2175_add_4_1/S0 undriven or does not
 
 
 
-Design:  UniboardTop                                   Date:  01/18/16  19:34:19
+Design:  UniboardTop                                   Date:  03/24/16  13:09:23
 
 Removed logic (cont)
 --------------------
@@ -2046,7 +2046,7 @@ Signal global_control/uptime_div/add_21615_24/S0 undriven or does not drive
 
 
 
-Design:  UniboardTop                                   Date:  01/18/16  19:34:19
+Design:  UniboardTop                                   Date:  03/24/16  13:09:23
 
 Removed logic (cont)
 --------------------

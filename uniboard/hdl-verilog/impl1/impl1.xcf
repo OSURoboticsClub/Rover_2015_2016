@@ -20,8 +20,8 @@
 				<BScanVal>0</BScanVal>
 			</Bypass>
 			<File>/home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/impl1/Uniboard_verilog_impl1.jed</File>
-			<FileTime>01/09/16 23:23:49</FileTime>
-			<JedecChecksum>0x5A94</JedecChecksum>
+			<FileTime>03/24/16 13:10:21</FileTime>
+			<JedecChecksum>0x262B</JedecChecksum>
 			<Operation>FLASH Erase,Program,Verify</Operation>
 			<Option>
 				<SVFVendor>JTAG STANDARD</SVFVendor>

@@ -1,5 +1,5 @@
 // Verilog netlist produced by program LSE :  version Diamond (64-bit) 3.4.1.213
-// Netlist written on Mon Jan 18 19:32:23 2016
+// Netlist written on Thu Mar 24 13:09:12 2016
 //
 // Verilog Description of module UniboardTop
 //
@@ -1195,76 +1195,76 @@ module PWMPeripheral (n32478, n32488, rw, n34347, \read_size[0] ,
     LUT4 i2_3_lut_3_lut_4_lut (.A(n32478), .B(n32488), .C(n32537), .D(n34347), 
          .Z(n8052)) /* synthesis lut_function=(!(A ((D)+!C)+!A (((D)+!C)+!B))) */ ;
     defparam i2_3_lut_3_lut_4_lut.init = 16'h00e0;
-    FD1P3AX read_size__i1 (.D(n30743), .SP(n12099), .CK(debug_c_c), .Q(\read_size[0] )) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=16, LSE_RCOL=40, LSE_LLINE=512, LSE_RLINE=522 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/pwm.v(73[9] 111[6])
+    FD1P3AX read_size__i1 (.D(n30743), .SP(n12099), .CK(debug_c_c), .Q(\read_size[0] )) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=16, LSE_RCOL=40, LSE_LLINE=512, LSE_RLINE=522 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/pwm.v(73[9] 111[6])
     defparam read_size__i1.GSR = "ENABLED";
     FD1P3JX register_0__i1 (.D(\databus[0] ), .SP(n32423), .PD(n34349), 
-            .CK(debug_c_c), .Q(\register[0] [0])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=16, LSE_RCOL=40, LSE_LLINE=512, LSE_RLINE=522 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/pwm.v(73[9] 111[6])
+            .CK(debug_c_c), .Q(\register[0] [0])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=16, LSE_RCOL=40, LSE_LLINE=512, LSE_RLINE=522 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/pwm.v(73[9] 111[6])
     defparam register_0__i1.GSR = "ENABLED";
-    FD1S3AX prev_select_138 (.D(\select[2] ), .CK(debug_c_c), .Q(prev_select)) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=16, LSE_RCOL=40, LSE_LLINE=512, LSE_RLINE=522 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/pwm.v(73[9] 111[6])
+    FD1S3AX prev_select_138 (.D(\select[2] ), .CK(debug_c_c), .Q(prev_select)) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=16, LSE_RCOL=40, LSE_LLINE=512, LSE_RLINE=522 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/pwm.v(73[9] 111[6])
     defparam prev_select_138.GSR = "ENABLED";
     FD1P3IX read_value__i1 (.D(n4894[1]), .SP(n12099), .CD(n8052), .CK(debug_c_c), 
-            .Q(read_value[1])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=16, LSE_RCOL=40, LSE_LLINE=512, LSE_RLINE=522 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/pwm.v(73[9] 111[6])
+            .Q(read_value[1])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=16, LSE_RCOL=40, LSE_LLINE=512, LSE_RLINE=522 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/pwm.v(73[9] 111[6])
     defparam read_value__i1.GSR = "ENABLED";
     FD1P3IX read_value__i2 (.D(n4894[2]), .SP(n12099), .CD(n8052), .CK(debug_c_c), 
-            .Q(read_value[2])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=16, LSE_RCOL=40, LSE_LLINE=512, LSE_RLINE=522 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/pwm.v(73[9] 111[6])
+            .Q(read_value[2])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=16, LSE_RCOL=40, LSE_LLINE=512, LSE_RLINE=522 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/pwm.v(73[9] 111[6])
     defparam read_value__i2.GSR = "ENABLED";
     FD1P3IX read_value__i3 (.D(n4894[3]), .SP(n12099), .CD(n8052), .CK(debug_c_c), 
-            .Q(read_value[3])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=16, LSE_RCOL=40, LSE_LLINE=512, LSE_RLINE=522 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/pwm.v(73[9] 111[6])
+            .Q(read_value[3])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=16, LSE_RCOL=40, LSE_LLINE=512, LSE_RLINE=522 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/pwm.v(73[9] 111[6])
     defparam read_value__i3.GSR = "ENABLED";
     FD1P3IX read_value__i4 (.D(n4894[4]), .SP(n12099), .CD(n8052), .CK(debug_c_c), 
-            .Q(read_value[4])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=16, LSE_RCOL=40, LSE_LLINE=512, LSE_RLINE=522 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/pwm.v(73[9] 111[6])
+            .Q(read_value[4])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=16, LSE_RCOL=40, LSE_LLINE=512, LSE_RLINE=522 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/pwm.v(73[9] 111[6])
     defparam read_value__i4.GSR = "ENABLED";
     FD1P3IX read_value__i5 (.D(n4894[5]), .SP(n12099), .CD(n8052), .CK(debug_c_c), 
-            .Q(read_value[5])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=16, LSE_RCOL=40, LSE_LLINE=512, LSE_RLINE=522 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/pwm.v(73[9] 111[6])
+            .Q(read_value[5])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=16, LSE_RCOL=40, LSE_LLINE=512, LSE_RLINE=522 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/pwm.v(73[9] 111[6])
     defparam read_value__i5.GSR = "ENABLED";
-    FD1P3AX register_0__i16 (.D(n282), .SP(n12566), .CK(debug_c_c), .Q(\register[1] [7])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=16, LSE_RCOL=40, LSE_LLINE=512, LSE_RLINE=522 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/pwm.v(73[9] 111[6])
+    FD1P3AX register_0__i16 (.D(n282), .SP(n12566), .CK(debug_c_c), .Q(\register[1] [7])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=16, LSE_RCOL=40, LSE_LLINE=512, LSE_RLINE=522 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/pwm.v(73[9] 111[6])
     defparam register_0__i16.GSR = "ENABLED";
     FD1P3JX register_0__i15 (.D(\databus[6] ), .SP(n32424), .PD(n34353), 
-            .CK(debug_c_c), .Q(\register[1] [6])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=16, LSE_RCOL=40, LSE_LLINE=512, LSE_RLINE=522 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/pwm.v(73[9] 111[6])
+            .CK(debug_c_c), .Q(\register[1] [6])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=16, LSE_RCOL=40, LSE_LLINE=512, LSE_RLINE=522 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/pwm.v(73[9] 111[6])
     defparam register_0__i15.GSR = "ENABLED";
     FD1P3JX register_0__i14 (.D(\databus[5] ), .SP(n32424), .PD(n34353), 
-            .CK(debug_c_c), .Q(\register[1] [5])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=16, LSE_RCOL=40, LSE_LLINE=512, LSE_RLINE=522 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/pwm.v(73[9] 111[6])
+            .CK(debug_c_c), .Q(\register[1] [5])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=16, LSE_RCOL=40, LSE_LLINE=512, LSE_RLINE=522 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/pwm.v(73[9] 111[6])
     defparam register_0__i14.GSR = "ENABLED";
     FD1P3JX register_0__i13 (.D(\databus[4] ), .SP(n32424), .PD(n34353), 
-            .CK(debug_c_c), .Q(\register[1] [4])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=16, LSE_RCOL=40, LSE_LLINE=512, LSE_RLINE=522 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/pwm.v(73[9] 111[6])
+            .CK(debug_c_c), .Q(\register[1] [4])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=16, LSE_RCOL=40, LSE_LLINE=512, LSE_RLINE=522 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/pwm.v(73[9] 111[6])
     defparam register_0__i13.GSR = "ENABLED";
     FD1P3JX register_0__i12 (.D(\databus[3] ), .SP(n32424), .PD(n34353), 
-            .CK(debug_c_c), .Q(\register[1] [3])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=16, LSE_RCOL=40, LSE_LLINE=512, LSE_RLINE=522 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/pwm.v(73[9] 111[6])
+            .CK(debug_c_c), .Q(\register[1] [3])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=16, LSE_RCOL=40, LSE_LLINE=512, LSE_RLINE=522 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/pwm.v(73[9] 111[6])
     defparam register_0__i12.GSR = "ENABLED";
     FD1P3JX register_0__i11 (.D(\databus[2] ), .SP(n32424), .PD(n34353), 
-            .CK(debug_c_c), .Q(\register[1] [2])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=16, LSE_RCOL=40, LSE_LLINE=512, LSE_RLINE=522 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/pwm.v(73[9] 111[6])
+            .CK(debug_c_c), .Q(\register[1] [2])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=16, LSE_RCOL=40, LSE_LLINE=512, LSE_RLINE=522 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/pwm.v(73[9] 111[6])
     defparam register_0__i11.GSR = "ENABLED";
     FD1P3JX register_0__i10 (.D(\databus[1] ), .SP(n32424), .PD(n34353), 
-            .CK(debug_c_c), .Q(\register[1] [1])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=16, LSE_RCOL=40, LSE_LLINE=512, LSE_RLINE=522 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/pwm.v(73[9] 111[6])
+            .CK(debug_c_c), .Q(\register[1] [1])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=16, LSE_RCOL=40, LSE_LLINE=512, LSE_RLINE=522 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/pwm.v(73[9] 111[6])
     defparam register_0__i10.GSR = "ENABLED";
     FD1P3JX register_0__i9 (.D(\databus[0] ), .SP(n32424), .PD(n34353), 
-            .CK(debug_c_c), .Q(\register[1] [0])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=16, LSE_RCOL=40, LSE_LLINE=512, LSE_RLINE=522 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/pwm.v(73[9] 111[6])
+            .CK(debug_c_c), .Q(\register[1] [0])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=16, LSE_RCOL=40, LSE_LLINE=512, LSE_RLINE=522 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/pwm.v(73[9] 111[6])
     defparam register_0__i9.GSR = "ENABLED";
-    FD1P3AX register_0__i8 (.D(n282), .SP(n20512), .CK(debug_c_c), .Q(\register[0] [7])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=16, LSE_RCOL=40, LSE_LLINE=512, LSE_RLINE=522 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/pwm.v(73[9] 111[6])
+    FD1P3AX register_0__i8 (.D(n282), .SP(n20512), .CK(debug_c_c), .Q(\register[0] [7])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=16, LSE_RCOL=40, LSE_LLINE=512, LSE_RLINE=522 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/pwm.v(73[9] 111[6])
     defparam register_0__i8.GSR = "ENABLED";
     FD1P3JX register_0__i7 (.D(\databus[6] ), .SP(n32423), .PD(n34353), 
-            .CK(debug_c_c), .Q(\register[0] [6])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=16, LSE_RCOL=40, LSE_LLINE=512, LSE_RLINE=522 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/pwm.v(73[9] 111[6])
+            .CK(debug_c_c), .Q(\register[0] [6])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=16, LSE_RCOL=40, LSE_LLINE=512, LSE_RLINE=522 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/pwm.v(73[9] 111[6])
     defparam register_0__i7.GSR = "ENABLED";
     FD1P3JX register_0__i6 (.D(\databus[5] ), .SP(n32423), .PD(n34353), 
-            .CK(debug_c_c), .Q(\register[0] [5])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=16, LSE_RCOL=40, LSE_LLINE=512, LSE_RLINE=522 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/pwm.v(73[9] 111[6])
+            .CK(debug_c_c), .Q(\register[0] [5])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=16, LSE_RCOL=40, LSE_LLINE=512, LSE_RLINE=522 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/pwm.v(73[9] 111[6])
     defparam register_0__i6.GSR = "ENABLED";
     FD1P3JX register_0__i5 (.D(\databus[4] ), .SP(n32423), .PD(n34353), 
-            .CK(debug_c_c), .Q(\register[0] [4])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=16, LSE_RCOL=40, LSE_LLINE=512, LSE_RLINE=522 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/pwm.v(73[9] 111[6])
+            .CK(debug_c_c), .Q(\register[0] [4])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=16, LSE_RCOL=40, LSE_LLINE=512, LSE_RLINE=522 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/pwm.v(73[9] 111[6])
     defparam register_0__i5.GSR = "ENABLED";
     FD1P3JX register_0__i4 (.D(\databus[3] ), .SP(n32423), .PD(n34353), 
-            .CK(debug_c_c), .Q(\register[0] [3])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=16, LSE_RCOL=40, LSE_LLINE=512, LSE_RLINE=522 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/pwm.v(73[9] 111[6])
+            .CK(debug_c_c), .Q(\register[0] [3])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=16, LSE_RCOL=40, LSE_LLINE=512, LSE_RLINE=522 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/pwm.v(73[9] 111[6])
     defparam register_0__i4.GSR = "ENABLED";
     FD1P3JX register_0__i3 (.D(\databus[2] ), .SP(n32423), .PD(n34353), 
-            .CK(debug_c_c), .Q(\register[0] [2])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=16, LSE_RCOL=40, LSE_LLINE=512, LSE_RLINE=522 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/pwm.v(73[9] 111[6])
+            .CK(debug_c_c), .Q(\register[0] [2])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=16, LSE_RCOL=40, LSE_LLINE=512, LSE_RLINE=522 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/pwm.v(73[9] 111[6])
     defparam register_0__i3.GSR = "ENABLED";
     FD1P3JX register_0__i2 (.D(\databus[1] ), .SP(n32423), .PD(n34353), 
-            .CK(debug_c_c), .Q(\register[0] [1])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=16, LSE_RCOL=40, LSE_LLINE=512, LSE_RLINE=522 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/pwm.v(73[9] 111[6])
+            .CK(debug_c_c), .Q(\register[0] [1])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=16, LSE_RCOL=40, LSE_LLINE=512, LSE_RLINE=522 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/pwm.v(73[9] 111[6])
     defparam register_0__i2.GSR = "ENABLED";
     FD1P3IX read_value__i6 (.D(n4894[6]), .SP(n12099), .CD(n8052), .CK(debug_c_c), 
-            .Q(read_value[6])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=16, LSE_RCOL=40, LSE_LLINE=512, LSE_RLINE=522 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/pwm.v(73[9] 111[6])
+            .Q(read_value[6])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=16, LSE_RCOL=40, LSE_LLINE=512, LSE_RLINE=522 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/pwm.v(73[9] 111[6])
     defparam read_value__i6.GSR = "ENABLED";
     FD1P3IX read_value__i7 (.D(n4894[7]), .SP(n12099), .CD(n8052), .CK(debug_c_c), 
-            .Q(read_value[7])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=16, LSE_RCOL=40, LSE_LLINE=512, LSE_RLINE=522 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/pwm.v(73[9] 111[6])
+            .Q(read_value[7])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=16, LSE_RCOL=40, LSE_LLINE=512, LSE_RLINE=522 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/pwm.v(73[9] 111[6])
     defparam read_value__i7.GSR = "ENABLED";
     LUT4 i24738_2_lut_rep_298_4_lut (.A(rw), .B(n32537), .C(n32471), .D(\register_addr[0] ), 
          .Z(n32423)) /* synthesis lut_function=(!(A+((C+(D))+!B))) */ ;
@@ -1305,7 +1305,7 @@ module PWMPeripheral (n32478, n32488, rw, n34347, \read_size[0] ,
          .Z(n12566)) /* synthesis lut_function=(A (B+(C))+!A (C)) */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/pwm.v(103[9] 108[16])
     defparam i1_2_lut_3_lut.init = 16'hf8f8;
     FD1P3IX read_value__i0 (.D(n4894[0]), .SP(n12099), .CD(n8052), .CK(debug_c_c), 
-            .Q(read_value[0])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=16, LSE_RCOL=40, LSE_LLINE=512, LSE_RLINE=522 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/pwm.v(73[9] 111[6])
+            .Q(read_value[0])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=16, LSE_RCOL=40, LSE_LLINE=512, LSE_RLINE=522 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/pwm.v(73[9] 111[6])
     defparam read_value__i0.GSR = "ENABLED";
     LUT4 mux_1586_Mux_0_i1_3_lut (.A(\register[0] [0]), .B(\register[1] [0]), 
          .C(\register_addr[0] ), .Z(n4894[0])) /* synthesis lut_function=(A (B+!(C))+!A (B (C))) */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/pwm.v(84[7] 100[14])
@@ -1915,116 +1915,116 @@ module GlobalControlPeripheral (read_value, debug_c_c, n32413, register_addr,
         n27595, n27594, n27593, n27592, n27591, n27590, n27589, 
         n27588, n27587, n27586, n27585, n27584, n27583;
     
-    FD1P3AX read_value__i0 (.D(n30445), .SP(n32413), .CK(debug_c_c), .Q(read_value[0])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=45, LSE_RCOL=74, LSE_LLINE=495, LSE_RLINE=505 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/global.v(50[9] 105[6])
+    FD1P3AX read_value__i0 (.D(n30445), .SP(n32413), .CK(debug_c_c), .Q(read_value[0])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=45, LSE_RCOL=74, LSE_LLINE=495, LSE_RLINE=505 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/global.v(50[9] 105[6])
     defparam read_value__i0.GSR = "ENABLED";
     LUT4 i1_2_lut_rep_361_3_lut_4_lut (.A(register_addr[7]), .B(register_addr[6]), 
          .C(register_addr[5]), .D(register_addr[4]), .Z(n32486)) /* synthesis lut_function=(A+(B+(C+(D)))) */ ;
     defparam i1_2_lut_rep_361_3_lut_4_lut.init = 16'hfffe;
     FD1P3IX read_value__i31 (.D(n29676), .SP(n32413), .CD(n8048), .CK(debug_c_c), 
-            .Q(read_value[31])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=45, LSE_RCOL=74, LSE_LLINE=495, LSE_RLINE=505 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/global.v(50[9] 105[6])
+            .Q(read_value[31])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=45, LSE_RCOL=74, LSE_LLINE=495, LSE_RLINE=505 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/global.v(50[9] 105[6])
     defparam read_value__i31.GSR = "ENABLED";
     FD1P3IX read_value__i30 (.D(n29675), .SP(n32413), .CD(n8048), .CK(debug_c_c), 
-            .Q(read_value[30])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=45, LSE_RCOL=74, LSE_LLINE=495, LSE_RLINE=505 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/global.v(50[9] 105[6])
+            .Q(read_value[30])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=45, LSE_RCOL=74, LSE_LLINE=495, LSE_RLINE=505 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/global.v(50[9] 105[6])
     defparam read_value__i30.GSR = "ENABLED";
     FD1P3IX read_value__i29 (.D(n29682), .SP(n32413), .CD(n8048), .CK(debug_c_c), 
-            .Q(read_value[29])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=45, LSE_RCOL=74, LSE_LLINE=495, LSE_RLINE=505 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/global.v(50[9] 105[6])
+            .Q(read_value[29])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=45, LSE_RCOL=74, LSE_LLINE=495, LSE_RLINE=505 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/global.v(50[9] 105[6])
     defparam read_value__i29.GSR = "ENABLED";
     FD1P3IX read_value__i28 (.D(n29672), .SP(n32413), .CD(n8048), .CK(debug_c_c), 
-            .Q(read_value[28])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=45, LSE_RCOL=74, LSE_LLINE=495, LSE_RLINE=505 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/global.v(50[9] 105[6])
+            .Q(read_value[28])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=45, LSE_RCOL=74, LSE_LLINE=495, LSE_RLINE=505 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/global.v(50[9] 105[6])
     defparam read_value__i28.GSR = "ENABLED";
     FD1P3IX read_value__i27 (.D(n29664), .SP(n32413), .CD(n8048), .CK(debug_c_c), 
-            .Q(read_value[27])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=45, LSE_RCOL=74, LSE_LLINE=495, LSE_RLINE=505 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/global.v(50[9] 105[6])
+            .Q(read_value[27])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=45, LSE_RCOL=74, LSE_LLINE=495, LSE_RLINE=505 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/global.v(50[9] 105[6])
     defparam read_value__i27.GSR = "ENABLED";
     FD1P3IX read_value__i26 (.D(n29659), .SP(n32413), .CD(n8048), .CK(debug_c_c), 
-            .Q(read_value[26])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=45, LSE_RCOL=74, LSE_LLINE=495, LSE_RLINE=505 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/global.v(50[9] 105[6])
+            .Q(read_value[26])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=45, LSE_RCOL=74, LSE_LLINE=495, LSE_RLINE=505 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/global.v(50[9] 105[6])
     defparam read_value__i26.GSR = "ENABLED";
     FD1P3IX read_value__i25 (.D(n29680), .SP(n32413), .CD(n8048), .CK(debug_c_c), 
-            .Q(read_value[25])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=45, LSE_RCOL=74, LSE_LLINE=495, LSE_RLINE=505 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/global.v(50[9] 105[6])
+            .Q(read_value[25])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=45, LSE_RCOL=74, LSE_LLINE=495, LSE_RLINE=505 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/global.v(50[9] 105[6])
     defparam read_value__i25.GSR = "ENABLED";
     FD1P3IX read_value__i24 (.D(n29685), .SP(n32413), .CD(n8048), .CK(debug_c_c), 
-            .Q(read_value[24])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=45, LSE_RCOL=74, LSE_LLINE=495, LSE_RLINE=505 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/global.v(50[9] 105[6])
+            .Q(read_value[24])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=45, LSE_RCOL=74, LSE_LLINE=495, LSE_RLINE=505 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/global.v(50[9] 105[6])
     defparam read_value__i24.GSR = "ENABLED";
     FD1P3IX read_value__i23 (.D(n29658), .SP(n32413), .CD(n8048), .CK(debug_c_c), 
-            .Q(read_value[23])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=45, LSE_RCOL=74, LSE_LLINE=495, LSE_RLINE=505 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/global.v(50[9] 105[6])
+            .Q(read_value[23])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=45, LSE_RCOL=74, LSE_LLINE=495, LSE_RLINE=505 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/global.v(50[9] 105[6])
     defparam read_value__i23.GSR = "ENABLED";
     FD1P3IX read_value__i22 (.D(n29679), .SP(n32413), .CD(n8048), .CK(debug_c_c), 
-            .Q(read_value[22])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=45, LSE_RCOL=74, LSE_LLINE=495, LSE_RLINE=505 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/global.v(50[9] 105[6])
+            .Q(read_value[22])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=45, LSE_RCOL=74, LSE_LLINE=495, LSE_RLINE=505 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/global.v(50[9] 105[6])
     defparam read_value__i22.GSR = "ENABLED";
     FD1P3IX read_value__i21 (.D(n29677), .SP(n32413), .CD(n8048), .CK(debug_c_c), 
-            .Q(read_value[21])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=45, LSE_RCOL=74, LSE_LLINE=495, LSE_RLINE=505 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/global.v(50[9] 105[6])
+            .Q(read_value[21])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=45, LSE_RCOL=74, LSE_LLINE=495, LSE_RLINE=505 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/global.v(50[9] 105[6])
     defparam read_value__i21.GSR = "ENABLED";
     FD1P3IX read_value__i20 (.D(n29684), .SP(n32413), .CD(n8048), .CK(debug_c_c), 
-            .Q(read_value[20])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=45, LSE_RCOL=74, LSE_LLINE=495, LSE_RLINE=505 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/global.v(50[9] 105[6])
+            .Q(read_value[20])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=45, LSE_RCOL=74, LSE_LLINE=495, LSE_RLINE=505 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/global.v(50[9] 105[6])
     defparam read_value__i20.GSR = "ENABLED";
     FD1P3IX read_value__i19 (.D(n29667), .SP(n32413), .CD(n8048), .CK(debug_c_c), 
-            .Q(read_value[19])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=45, LSE_RCOL=74, LSE_LLINE=495, LSE_RLINE=505 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/global.v(50[9] 105[6])
+            .Q(read_value[19])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=45, LSE_RCOL=74, LSE_LLINE=495, LSE_RLINE=505 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/global.v(50[9] 105[6])
     defparam read_value__i19.GSR = "ENABLED";
     FD1P3IX read_value__i18 (.D(n29666), .SP(n32413), .CD(n8048), .CK(debug_c_c), 
-            .Q(read_value[18])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=45, LSE_RCOL=74, LSE_LLINE=495, LSE_RLINE=505 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/global.v(50[9] 105[6])
+            .Q(read_value[18])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=45, LSE_RCOL=74, LSE_LLINE=495, LSE_RLINE=505 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/global.v(50[9] 105[6])
     defparam read_value__i18.GSR = "ENABLED";
     FD1P3IX read_value__i17 (.D(n29660), .SP(n32413), .CD(n8048), .CK(debug_c_c), 
-            .Q(read_value[17])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=45, LSE_RCOL=74, LSE_LLINE=495, LSE_RLINE=505 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/global.v(50[9] 105[6])
+            .Q(read_value[17])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=45, LSE_RCOL=74, LSE_LLINE=495, LSE_RLINE=505 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/global.v(50[9] 105[6])
     defparam read_value__i17.GSR = "ENABLED";
     FD1P3IX read_value__i16 (.D(n29662), .SP(n32413), .CD(n8048), .CK(debug_c_c), 
-            .Q(read_value[16])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=45, LSE_RCOL=74, LSE_LLINE=495, LSE_RLINE=505 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/global.v(50[9] 105[6])
+            .Q(read_value[16])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=45, LSE_RCOL=74, LSE_LLINE=495, LSE_RLINE=505 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/global.v(50[9] 105[6])
     defparam read_value__i16.GSR = "ENABLED";
     LUT4 i1_2_lut (.A(n11753), .B(register_addr[3]), .Z(n30418)) /* synthesis lut_function=(!((B)+!A)) */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/global.v(50[9] 105[6])
     defparam i1_2_lut.init = 16'h2222;
     FD1P3IX read_value__i15 (.D(n29674), .SP(n32413), .CD(n8048), .CK(debug_c_c), 
-            .Q(read_value[15])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=45, LSE_RCOL=74, LSE_LLINE=495, LSE_RLINE=505 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/global.v(50[9] 105[6])
+            .Q(read_value[15])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=45, LSE_RCOL=74, LSE_LLINE=495, LSE_RLINE=505 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/global.v(50[9] 105[6])
     defparam read_value__i15.GSR = "ENABLED";
     FD1P3IX read_value__i14 (.D(n29673), .SP(n32413), .CD(n8048), .CK(debug_c_c), 
-            .Q(read_value[14])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=45, LSE_RCOL=74, LSE_LLINE=495, LSE_RLINE=505 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/global.v(50[9] 105[6])
+            .Q(read_value[14])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=45, LSE_RCOL=74, LSE_LLINE=495, LSE_RLINE=505 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/global.v(50[9] 105[6])
     defparam read_value__i14.GSR = "ENABLED";
     FD1P3IX read_value__i13 (.D(n29663), .SP(n32413), .CD(n8048), .CK(debug_c_c), 
-            .Q(read_value[13])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=45, LSE_RCOL=74, LSE_LLINE=495, LSE_RLINE=505 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/global.v(50[9] 105[6])
+            .Q(read_value[13])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=45, LSE_RCOL=74, LSE_LLINE=495, LSE_RLINE=505 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/global.v(50[9] 105[6])
     defparam read_value__i13.GSR = "ENABLED";
     FD1P3IX read_value__i12 (.D(n29671), .SP(n32413), .CD(n8048), .CK(debug_c_c), 
-            .Q(read_value[12])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=45, LSE_RCOL=74, LSE_LLINE=495, LSE_RLINE=505 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/global.v(50[9] 105[6])
+            .Q(read_value[12])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=45, LSE_RCOL=74, LSE_LLINE=495, LSE_RLINE=505 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/global.v(50[9] 105[6])
     defparam read_value__i12.GSR = "ENABLED";
     FD1P3IX read_value__i11 (.D(n29668), .SP(n32413), .CD(n8048), .CK(debug_c_c), 
-            .Q(read_value[11])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=45, LSE_RCOL=74, LSE_LLINE=495, LSE_RLINE=505 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/global.v(50[9] 105[6])
+            .Q(read_value[11])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=45, LSE_RCOL=74, LSE_LLINE=495, LSE_RLINE=505 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/global.v(50[9] 105[6])
     defparam read_value__i11.GSR = "ENABLED";
     FD1P3IX read_value__i10 (.D(n29681), .SP(n32413), .CD(n8048), .CK(debug_c_c), 
-            .Q(read_value[10])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=45, LSE_RCOL=74, LSE_LLINE=495, LSE_RLINE=505 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/global.v(50[9] 105[6])
+            .Q(read_value[10])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=45, LSE_RCOL=74, LSE_LLINE=495, LSE_RLINE=505 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/global.v(50[9] 105[6])
     defparam read_value__i10.GSR = "ENABLED";
     FD1P3IX read_value__i9 (.D(n29683), .SP(n32413), .CD(n8048), .CK(debug_c_c), 
-            .Q(read_value[9])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=45, LSE_RCOL=74, LSE_LLINE=495, LSE_RLINE=505 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/global.v(50[9] 105[6])
+            .Q(read_value[9])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=45, LSE_RCOL=74, LSE_LLINE=495, LSE_RLINE=505 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/global.v(50[9] 105[6])
     defparam read_value__i9.GSR = "ENABLED";
     FD1P3IX read_value__i8 (.D(n29661), .SP(n32413), .CD(n8048), .CK(debug_c_c), 
-            .Q(read_value[8])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=45, LSE_RCOL=74, LSE_LLINE=495, LSE_RLINE=505 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/global.v(50[9] 105[6])
+            .Q(read_value[8])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=45, LSE_RCOL=74, LSE_LLINE=495, LSE_RLINE=505 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/global.v(50[9] 105[6])
     defparam read_value__i8.GSR = "ENABLED";
     FD1P3IX read_value__i7 (.D(n29670), .SP(n32413), .CD(n8048), .CK(debug_c_c), 
-            .Q(read_value[7])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=45, LSE_RCOL=74, LSE_LLINE=495, LSE_RLINE=505 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/global.v(50[9] 105[6])
+            .Q(read_value[7])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=45, LSE_RCOL=74, LSE_LLINE=495, LSE_RLINE=505 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/global.v(50[9] 105[6])
     defparam read_value__i7.GSR = "ENABLED";
     FD1P3IX read_value__i6 (.D(n29678), .SP(n32413), .CD(n8048), .CK(debug_c_c), 
-            .Q(read_value[6])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=45, LSE_RCOL=74, LSE_LLINE=495, LSE_RLINE=505 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/global.v(50[9] 105[6])
+            .Q(read_value[6])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=45, LSE_RCOL=74, LSE_LLINE=495, LSE_RLINE=505 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/global.v(50[9] 105[6])
     defparam read_value__i6.GSR = "ENABLED";
     FD1P3IX read_value__i5 (.D(n29669), .SP(n32413), .CD(n8048), .CK(debug_c_c), 
-            .Q(read_value[5])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=45, LSE_RCOL=74, LSE_LLINE=495, LSE_RLINE=505 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/global.v(50[9] 105[6])
+            .Q(read_value[5])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=45, LSE_RCOL=74, LSE_LLINE=495, LSE_RLINE=505 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/global.v(50[9] 105[6])
     defparam read_value__i5.GSR = "ENABLED";
     FD1P3IX read_value__i4 (.D(n29665), .SP(n32413), .CD(n8048), .CK(debug_c_c), 
-            .Q(read_value[4])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=45, LSE_RCOL=74, LSE_LLINE=495, LSE_RLINE=505 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/global.v(50[9] 105[6])
+            .Q(read_value[4])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=45, LSE_RCOL=74, LSE_LLINE=495, LSE_RLINE=505 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/global.v(50[9] 105[6])
     defparam read_value__i4.GSR = "ENABLED";
     FD1P3IX read_value__i3 (.D(n30444), .SP(n32413), .CD(n8048), .CK(debug_c_c), 
-            .Q(read_value[3])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=45, LSE_RCOL=74, LSE_LLINE=495, LSE_RLINE=505 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/global.v(50[9] 105[6])
+            .Q(read_value[3])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=45, LSE_RCOL=74, LSE_LLINE=495, LSE_RLINE=505 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/global.v(50[9] 105[6])
     defparam read_value__i3.GSR = "ENABLED";
     FD1P3IX read_value__i2 (.D(n32367), .SP(n32413), .CD(n8048), .CK(debug_c_c), 
-            .Q(read_value[2])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=45, LSE_RCOL=74, LSE_LLINE=495, LSE_RLINE=505 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/global.v(50[9] 105[6])
+            .Q(read_value[2])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=45, LSE_RCOL=74, LSE_LLINE=495, LSE_RLINE=505 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/global.v(50[9] 105[6])
     defparam read_value__i2.GSR = "ENABLED";
     FD1P3IX read_value__i1 (.D(n32368), .SP(n32413), .CD(n8048), .CK(debug_c_c), 
-            .Q(read_value_c[1])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=45, LSE_RCOL=74, LSE_LLINE=495, LSE_RLINE=505 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/global.v(50[9] 105[6])
+            .Q(read_value_c[1])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=45, LSE_RCOL=74, LSE_LLINE=495, LSE_RLINE=505 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/global.v(50[9] 105[6])
     defparam read_value__i1.GSR = "ENABLED";
-    FD1P3AX read_size_i0_i0 (.D(n302), .SP(n32413), .CK(debug_c_c), .Q(read_size[0])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=45, LSE_RCOL=74, LSE_LLINE=495, LSE_RLINE=505 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/global.v(50[9] 105[6])
+    FD1P3AX read_size_i0_i0 (.D(n302), .SP(n32413), .CK(debug_c_c), .Q(read_size[0])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=45, LSE_RCOL=74, LSE_LLINE=495, LSE_RLINE=505 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/global.v(50[9] 105[6])
     defparam read_size_i0_i0.GSR = "ENABLED";
     FD1P3IX uptime_count__i0 (.D(n100[0]), .SP(n7999), .CD(n34348), .CK(debug_c_c), 
-            .Q(\register[2] [0])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=45, LSE_RCOL=74, LSE_LLINE=495, LSE_RLINE=505 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/global.v(50[9] 105[6])
+            .Q(\register[2] [0])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=45, LSE_RCOL=74, LSE_LLINE=495, LSE_RLINE=505 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/global.v(50[9] 105[6])
     defparam uptime_count__i0.GSR = "ENABLED";
-    FD1S3AX prev_clk_1Hz_149 (.D(clk_1Hz), .CK(debug_c_c), .Q(prev_clk_1Hz)) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=45, LSE_RCOL=74, LSE_LLINE=495, LSE_RLINE=505 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/global.v(50[9] 105[6])
+    FD1S3AX prev_clk_1Hz_149 (.D(clk_1Hz), .CK(debug_c_c), .Q(prev_clk_1Hz)) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=45, LSE_RCOL=74, LSE_LLINE=495, LSE_RLINE=505 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/global.v(50[9] 105[6])
     defparam prev_clk_1Hz_149.GSR = "ENABLED";
-    FD1S3AX xbee_pause_latched_150 (.D(n178), .CK(debug_c_c), .Q(\register[0] [2])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=45, LSE_RCOL=74, LSE_LLINE=495, LSE_RLINE=505 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/global.v(50[9] 105[6])
+    FD1S3AX xbee_pause_latched_150 (.D(n178), .CK(debug_c_c), .Q(\register[0] [2])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=45, LSE_RCOL=74, LSE_LLINE=495, LSE_RLINE=505 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/global.v(50[9] 105[6])
     defparam xbee_pause_latched_150.GSR = "ENABLED";
-    FD1S3AX prev_select_148 (.D(\select[1] ), .CK(debug_c_c), .Q(prev_select)) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=45, LSE_RCOL=74, LSE_LLINE=495, LSE_RLINE=505 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/global.v(50[9] 105[6])
+    FD1S3AX prev_select_148 (.D(\select[1] ), .CK(debug_c_c), .Q(prev_select)) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=45, LSE_RCOL=74, LSE_LLINE=495, LSE_RLINE=505 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/global.v(50[9] 105[6])
     defparam prev_select_148.GSR = "ENABLED";
     LUT4 i1_2_lut_rep_344_3_lut_4_lut (.A(register_addr[7]), .B(register_addr[6]), 
          .C(\select[4] ), .D(n32527), .Z(n32469)) /* synthesis lut_function=(!(A+(B+((D)+!C)))) */ ;
@@ -2033,106 +2033,106 @@ module GlobalControlPeripheral (read_value, debug_c_c, n32413, register_addr,
          .Z(n32368)) /* synthesis lut_function=(!(A (B (D)+!B (C+(D)))+!A (((D)+!C)+!B))) */ ;
     defparam n27_bdd_4_lut.init = 16'h00ca;
     FD1P3IX uptime_count__i31 (.D(n100[31]), .SP(n7999), .CD(n34350), 
-            .CK(debug_c_c), .Q(\register[2]_c [31])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=45, LSE_RCOL=74, LSE_LLINE=495, LSE_RLINE=505 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/global.v(50[9] 105[6])
+            .CK(debug_c_c), .Q(\register[2]_c [31])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=45, LSE_RCOL=74, LSE_LLINE=495, LSE_RLINE=505 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/global.v(50[9] 105[6])
     defparam uptime_count__i31.GSR = "ENABLED";
     FD1P3IX uptime_count__i30 (.D(n100[30]), .SP(n7999), .CD(n34348), 
-            .CK(debug_c_c), .Q(\register[2]_c [30])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=45, LSE_RCOL=74, LSE_LLINE=495, LSE_RLINE=505 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/global.v(50[9] 105[6])
+            .CK(debug_c_c), .Q(\register[2]_c [30])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=45, LSE_RCOL=74, LSE_LLINE=495, LSE_RLINE=505 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/global.v(50[9] 105[6])
     defparam uptime_count__i30.GSR = "ENABLED";
     FD1P3IX uptime_count__i29 (.D(n100[29]), .SP(n7999), .CD(n34348), 
-            .CK(debug_c_c), .Q(\register[2]_c [29])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=45, LSE_RCOL=74, LSE_LLINE=495, LSE_RLINE=505 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/global.v(50[9] 105[6])
+            .CK(debug_c_c), .Q(\register[2]_c [29])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=45, LSE_RCOL=74, LSE_LLINE=495, LSE_RLINE=505 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/global.v(50[9] 105[6])
     defparam uptime_count__i29.GSR = "ENABLED";
     FD1P3IX uptime_count__i28 (.D(n100[28]), .SP(n7999), .CD(n34349), 
-            .CK(debug_c_c), .Q(\register[2]_c [28])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=45, LSE_RCOL=74, LSE_LLINE=495, LSE_RLINE=505 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/global.v(50[9] 105[6])
+            .CK(debug_c_c), .Q(\register[2]_c [28])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=45, LSE_RCOL=74, LSE_LLINE=495, LSE_RLINE=505 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/global.v(50[9] 105[6])
     defparam uptime_count__i28.GSR = "ENABLED";
     FD1P3IX uptime_count__i27 (.D(n100[27]), .SP(n7999), .CD(n34349), 
-            .CK(debug_c_c), .Q(\register[2]_c [27])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=45, LSE_RCOL=74, LSE_LLINE=495, LSE_RLINE=505 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/global.v(50[9] 105[6])
+            .CK(debug_c_c), .Q(\register[2]_c [27])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=45, LSE_RCOL=74, LSE_LLINE=495, LSE_RLINE=505 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/global.v(50[9] 105[6])
     defparam uptime_count__i27.GSR = "ENABLED";
     FD1P3IX uptime_count__i26 (.D(n100[26]), .SP(n7999), .CD(n34349), 
-            .CK(debug_c_c), .Q(\register[2]_c [26])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=45, LSE_RCOL=74, LSE_LLINE=495, LSE_RLINE=505 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/global.v(50[9] 105[6])
+            .CK(debug_c_c), .Q(\register[2]_c [26])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=45, LSE_RCOL=74, LSE_LLINE=495, LSE_RLINE=505 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/global.v(50[9] 105[6])
     defparam uptime_count__i26.GSR = "ENABLED";
     FD1P3IX uptime_count__i25 (.D(n100[25]), .SP(n7999), .CD(n34349), 
-            .CK(debug_c_c), .Q(\register[2]_c [25])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=45, LSE_RCOL=74, LSE_LLINE=495, LSE_RLINE=505 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/global.v(50[9] 105[6])
+            .CK(debug_c_c), .Q(\register[2]_c [25])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=45, LSE_RCOL=74, LSE_LLINE=495, LSE_RLINE=505 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/global.v(50[9] 105[6])
     defparam uptime_count__i25.GSR = "ENABLED";
     FD1P3IX uptime_count__i24 (.D(n100[24]), .SP(n7999), .CD(n34349), 
-            .CK(debug_c_c), .Q(\register[2]_c [24])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=45, LSE_RCOL=74, LSE_LLINE=495, LSE_RLINE=505 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/global.v(50[9] 105[6])
+            .CK(debug_c_c), .Q(\register[2]_c [24])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=45, LSE_RCOL=74, LSE_LLINE=495, LSE_RLINE=505 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/global.v(50[9] 105[6])
     defparam uptime_count__i24.GSR = "ENABLED";
     FD1P3IX uptime_count__i23 (.D(n100[23]), .SP(n7999), .CD(n34349), 
-            .CK(debug_c_c), .Q(\register[2]_c [23])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=45, LSE_RCOL=74, LSE_LLINE=495, LSE_RLINE=505 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/global.v(50[9] 105[6])
+            .CK(debug_c_c), .Q(\register[2]_c [23])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=45, LSE_RCOL=74, LSE_LLINE=495, LSE_RLINE=505 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/global.v(50[9] 105[6])
     defparam uptime_count__i23.GSR = "ENABLED";
     FD1P3IX uptime_count__i22 (.D(n100[22]), .SP(n7999), .CD(n34349), 
-            .CK(debug_c_c), .Q(\register[2]_c [22])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=45, LSE_RCOL=74, LSE_LLINE=495, LSE_RLINE=505 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/global.v(50[9] 105[6])
+            .CK(debug_c_c), .Q(\register[2]_c [22])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=45, LSE_RCOL=74, LSE_LLINE=495, LSE_RLINE=505 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/global.v(50[9] 105[6])
     defparam uptime_count__i22.GSR = "ENABLED";
     FD1P3IX uptime_count__i21 (.D(n100[21]), .SP(n7999), .CD(n34349), 
-            .CK(debug_c_c), .Q(\register[2]_c [21])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=45, LSE_RCOL=74, LSE_LLINE=495, LSE_RLINE=505 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/global.v(50[9] 105[6])
+            .CK(debug_c_c), .Q(\register[2]_c [21])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=45, LSE_RCOL=74, LSE_LLINE=495, LSE_RLINE=505 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/global.v(50[9] 105[6])
     defparam uptime_count__i21.GSR = "ENABLED";
     FD1P3IX uptime_count__i20 (.D(n100[20]), .SP(n7999), .CD(n34349), 
-            .CK(debug_c_c), .Q(\register[2]_c [20])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=45, LSE_RCOL=74, LSE_LLINE=495, LSE_RLINE=505 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/global.v(50[9] 105[6])
+            .CK(debug_c_c), .Q(\register[2]_c [20])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=45, LSE_RCOL=74, LSE_LLINE=495, LSE_RLINE=505 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/global.v(50[9] 105[6])
     defparam uptime_count__i20.GSR = "ENABLED";
     FD1P3IX uptime_count__i19 (.D(n100[19]), .SP(n7999), .CD(n34349), 
-            .CK(debug_c_c), .Q(\register[2]_c [19])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=45, LSE_RCOL=74, LSE_LLINE=495, LSE_RLINE=505 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/global.v(50[9] 105[6])
+            .CK(debug_c_c), .Q(\register[2]_c [19])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=45, LSE_RCOL=74, LSE_LLINE=495, LSE_RLINE=505 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/global.v(50[9] 105[6])
     defparam uptime_count__i19.GSR = "ENABLED";
     FD1P3IX uptime_count__i18 (.D(n100[18]), .SP(n7999), .CD(n34349), 
-            .CK(debug_c_c), .Q(\register[2]_c [18])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=45, LSE_RCOL=74, LSE_LLINE=495, LSE_RLINE=505 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/global.v(50[9] 105[6])
+            .CK(debug_c_c), .Q(\register[2]_c [18])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=45, LSE_RCOL=74, LSE_LLINE=495, LSE_RLINE=505 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/global.v(50[9] 105[6])
     defparam uptime_count__i18.GSR = "ENABLED";
     FD1P3IX uptime_count__i17 (.D(n100[17]), .SP(n7999), .CD(n34349), 
-            .CK(debug_c_c), .Q(\register[2]_c [17])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=45, LSE_RCOL=74, LSE_LLINE=495, LSE_RLINE=505 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/global.v(50[9] 105[6])
+            .CK(debug_c_c), .Q(\register[2]_c [17])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=45, LSE_RCOL=74, LSE_LLINE=495, LSE_RLINE=505 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/global.v(50[9] 105[6])
     defparam uptime_count__i17.GSR = "ENABLED";
     FD1P3IX uptime_count__i16 (.D(n100[16]), .SP(n7999), .CD(n34349), 
-            .CK(debug_c_c), .Q(\register[2]_c [16])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=45, LSE_RCOL=74, LSE_LLINE=495, LSE_RLINE=505 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/global.v(50[9] 105[6])
+            .CK(debug_c_c), .Q(\register[2]_c [16])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=45, LSE_RCOL=74, LSE_LLINE=495, LSE_RLINE=505 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/global.v(50[9] 105[6])
     defparam uptime_count__i16.GSR = "ENABLED";
     FD1P3IX uptime_count__i15 (.D(n100[15]), .SP(n7999), .CD(n34348), 
-            .CK(debug_c_c), .Q(\register[2]_c [15])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=45, LSE_RCOL=74, LSE_LLINE=495, LSE_RLINE=505 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/global.v(50[9] 105[6])
+            .CK(debug_c_c), .Q(\register[2]_c [15])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=45, LSE_RCOL=74, LSE_LLINE=495, LSE_RLINE=505 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/global.v(50[9] 105[6])
     defparam uptime_count__i15.GSR = "ENABLED";
     FD1P3IX uptime_count__i14 (.D(n100[14]), .SP(n7999), .CD(n34349), 
-            .CK(debug_c_c), .Q(\register[2]_c [14])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=45, LSE_RCOL=74, LSE_LLINE=495, LSE_RLINE=505 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/global.v(50[9] 105[6])
+            .CK(debug_c_c), .Q(\register[2]_c [14])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=45, LSE_RCOL=74, LSE_LLINE=495, LSE_RLINE=505 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/global.v(50[9] 105[6])
     defparam uptime_count__i14.GSR = "ENABLED";
     FD1P3IX uptime_count__i13 (.D(n100[13]), .SP(n7999), .CD(n34348), 
-            .CK(debug_c_c), .Q(\register[2]_c [13])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=45, LSE_RCOL=74, LSE_LLINE=495, LSE_RLINE=505 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/global.v(50[9] 105[6])
+            .CK(debug_c_c), .Q(\register[2]_c [13])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=45, LSE_RCOL=74, LSE_LLINE=495, LSE_RLINE=505 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/global.v(50[9] 105[6])
     defparam uptime_count__i13.GSR = "ENABLED";
     FD1P3IX uptime_count__i12 (.D(n100[12]), .SP(n32538), .CD(n34349), 
-            .CK(debug_c_c), .Q(\register[2]_c [12])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=45, LSE_RCOL=74, LSE_LLINE=495, LSE_RLINE=505 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/global.v(50[9] 105[6])
+            .CK(debug_c_c), .Q(\register[2]_c [12])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=45, LSE_RCOL=74, LSE_LLINE=495, LSE_RLINE=505 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/global.v(50[9] 105[6])
     defparam uptime_count__i12.GSR = "ENABLED";
     FD1P3IX uptime_count__i11 (.D(n100[11]), .SP(n7999), .CD(n34349), 
-            .CK(debug_c_c), .Q(\register[2]_c [11])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=45, LSE_RCOL=74, LSE_LLINE=495, LSE_RLINE=505 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/global.v(50[9] 105[6])
+            .CK(debug_c_c), .Q(\register[2]_c [11])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=45, LSE_RCOL=74, LSE_LLINE=495, LSE_RLINE=505 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/global.v(50[9] 105[6])
     defparam uptime_count__i11.GSR = "ENABLED";
     FD1P3IX uptime_count__i10 (.D(n100[10]), .SP(n7999), .CD(n34348), 
-            .CK(debug_c_c), .Q(\register[2]_c [10])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=45, LSE_RCOL=74, LSE_LLINE=495, LSE_RLINE=505 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/global.v(50[9] 105[6])
+            .CK(debug_c_c), .Q(\register[2]_c [10])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=45, LSE_RCOL=74, LSE_LLINE=495, LSE_RLINE=505 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/global.v(50[9] 105[6])
     defparam uptime_count__i10.GSR = "ENABLED";
     FD1P3IX uptime_count__i9 (.D(n100[9]), .SP(n7999), .CD(n34349), .CK(debug_c_c), 
-            .Q(\register[2]_c [9])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=45, LSE_RCOL=74, LSE_LLINE=495, LSE_RLINE=505 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/global.v(50[9] 105[6])
+            .Q(\register[2]_c [9])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=45, LSE_RCOL=74, LSE_LLINE=495, LSE_RLINE=505 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/global.v(50[9] 105[6])
     defparam uptime_count__i9.GSR = "ENABLED";
     FD1P3IX uptime_count__i8 (.D(n100[8]), .SP(n7999), .CD(n34348), .CK(debug_c_c), 
-            .Q(\register[2]_c [8])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=45, LSE_RCOL=74, LSE_LLINE=495, LSE_RLINE=505 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/global.v(50[9] 105[6])
+            .Q(\register[2]_c [8])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=45, LSE_RCOL=74, LSE_LLINE=495, LSE_RLINE=505 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/global.v(50[9] 105[6])
     defparam uptime_count__i8.GSR = "ENABLED";
     FD1P3IX uptime_count__i7 (.D(n100[7]), .SP(n7999), .CD(n34349), .CK(debug_c_c), 
-            .Q(\register[2]_c [7])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=45, LSE_RCOL=74, LSE_LLINE=495, LSE_RLINE=505 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/global.v(50[9] 105[6])
+            .Q(\register[2]_c [7])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=45, LSE_RCOL=74, LSE_LLINE=495, LSE_RLINE=505 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/global.v(50[9] 105[6])
     defparam uptime_count__i7.GSR = "ENABLED";
     FD1P3IX uptime_count__i6 (.D(n100[6]), .SP(n7999), .CD(n34349), .CK(debug_c_c), 
-            .Q(\register[2]_c [6])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=45, LSE_RCOL=74, LSE_LLINE=495, LSE_RLINE=505 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/global.v(50[9] 105[6])
+            .Q(\register[2]_c [6])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=45, LSE_RCOL=74, LSE_LLINE=495, LSE_RLINE=505 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/global.v(50[9] 105[6])
     defparam uptime_count__i6.GSR = "ENABLED";
     FD1P3IX uptime_count__i5 (.D(n100[5]), .SP(n7999), .CD(n34349), .CK(debug_c_c), 
-            .Q(\register[2]_c [5])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=45, LSE_RCOL=74, LSE_LLINE=495, LSE_RLINE=505 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/global.v(50[9] 105[6])
+            .Q(\register[2]_c [5])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=45, LSE_RCOL=74, LSE_LLINE=495, LSE_RLINE=505 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/global.v(50[9] 105[6])
     defparam uptime_count__i5.GSR = "ENABLED";
     FD1P3IX uptime_count__i4 (.D(n100[4]), .SP(n7999), .CD(n34349), .CK(debug_c_c), 
-            .Q(\register[2]_c [4])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=45, LSE_RCOL=74, LSE_LLINE=495, LSE_RLINE=505 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/global.v(50[9] 105[6])
+            .Q(\register[2]_c [4])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=45, LSE_RCOL=74, LSE_LLINE=495, LSE_RLINE=505 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/global.v(50[9] 105[6])
     defparam uptime_count__i4.GSR = "ENABLED";
     FD1P3IX uptime_count__i3 (.D(n100[3]), .SP(n7999), .CD(n34348), .CK(debug_c_c), 
-            .Q(\register[2][3] )) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=45, LSE_RCOL=74, LSE_LLINE=495, LSE_RLINE=505 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/global.v(50[9] 105[6])
+            .Q(\register[2][3] )) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=45, LSE_RCOL=74, LSE_LLINE=495, LSE_RLINE=505 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/global.v(50[9] 105[6])
     defparam uptime_count__i3.GSR = "ENABLED";
     LUT4 i1_3_lut_4_lut_4_lut (.A(\register[0] [2]), .B(force_pause), .C(register_addr[2]), 
          .D(register_addr[3]), .Z(n21)) /* synthesis lut_function=(!(A (D)+!A (B (D)+!B ((D)+!C)))) */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/global.v(38[24:56])
     defparam i1_3_lut_4_lut_4_lut.init = 16'h00fe;
     FD1P3IX read_size_i0_i1 (.D(n28386), .SP(n32413), .CD(n14414), .CK(debug_c_c), 
-            .Q(read_size[1])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=45, LSE_RCOL=74, LSE_LLINE=495, LSE_RLINE=505 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/global.v(50[9] 105[6])
+            .Q(read_size[1])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=45, LSE_RCOL=74, LSE_LLINE=495, LSE_RLINE=505 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/global.v(50[9] 105[6])
     defparam read_size_i0_i1.GSR = "ENABLED";
     FD1P3IX read_size_i0_i2 (.D(n32453), .SP(n32413), .CD(n14413), .CK(debug_c_c), 
-            .Q(read_size[2])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=45, LSE_RCOL=74, LSE_LLINE=495, LSE_RLINE=505 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/global.v(50[9] 105[6])
+            .Q(read_size[2])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=45, LSE_RCOL=74, LSE_LLINE=495, LSE_RLINE=505 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/global.v(50[9] 105[6])
     defparam read_size_i0_i2.GSR = "ENABLED";
     FD1P3IX uptime_count__i2 (.D(n100[2]), .SP(n7999), .CD(n32463), .CK(debug_c_c), 
-            .Q(\register[2]_c [2])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=45, LSE_RCOL=74, LSE_LLINE=495, LSE_RLINE=505 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/global.v(50[9] 105[6])
+            .Q(\register[2]_c [2])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=45, LSE_RCOL=74, LSE_LLINE=495, LSE_RLINE=505 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/global.v(50[9] 105[6])
     defparam uptime_count__i2.GSR = "ENABLED";
     FD1P3IX uptime_count__i1 (.D(n100[1]), .SP(n7999), .CD(n32463), .CK(debug_c_c), 
-            .Q(\register[2]_c [1])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=45, LSE_RCOL=74, LSE_LLINE=495, LSE_RLINE=505 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/global.v(50[9] 105[6])
+            .Q(\register[2]_c [1])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=45, LSE_RCOL=74, LSE_LLINE=495, LSE_RLINE=505 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/global.v(50[9] 105[6])
     defparam uptime_count__i1.GSR = "ENABLED";
     PFUMX i33 (.BLUT(n21), .ALUT(n15), .C0(register_addr[1]), .Z(n24));
     LUT4 i1_4_lut (.A(n11), .B(n32462), .C(n4), .D(register_addr[1]), 
@@ -2902,30 +2902,30 @@ module \ArmPeripheral(axis_haddr=8'b0100000)  (n34344, n32422, \register_addr[5]
          .D(n30431), .Z(n3276)) /* synthesis lut_function=(!(A+!(B (C (D))))) */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(82[9:30])
     defparam i2_3_lut_4_lut.init = 16'h4000;
     FD1P3IX read_value__i0 (.D(n30843), .SP(n11981), .CD(n32400), .CK(debug_c_c), 
-            .Q(read_value[0])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=589, LSE_RLINE=602 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(read_value[0])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=589, LSE_RLINE=602 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam read_value__i0.GSR = "ENABLED";
     PFUMX i24530 (.BLUT(n30886), .ALUT(n30887), .C0(\register_addr[1] ), 
           .Z(n30888));
     IFS1P3DX fault_latched_178 (.D(Stepper_Z_nFault_c), .SP(VCC_net), .SCLK(debug_c_c), 
-            .CD(GND_net), .Q(fault_latched)) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=589, LSE_RLINE=602 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .CD(GND_net), .Q(fault_latched)) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=589, LSE_RLINE=602 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam fault_latched_178.GSR = "ENABLED";
     FD1S3IX steps_reg__i0 (.D(n3277[0]), .CK(debug_c_c), .CD(n34349), 
-            .Q(steps_reg[0])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=589, LSE_RLINE=602 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(steps_reg[0])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=589, LSE_RLINE=602 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam steps_reg__i0.GSR = "ENABLED";
-    FD1P3AX read_size__i1 (.D(n30658), .SP(n11981), .CK(debug_c_c), .Q(\read_size[0] )) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=589, LSE_RLINE=602 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+    FD1P3AX read_size__i1 (.D(n30658), .SP(n11981), .CK(debug_c_c), .Q(\read_size[0] )) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=589, LSE_RLINE=602 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam read_size__i1.GSR = "ENABLED";
-    FD1P3AX control_reg_i1 (.D(n579), .SP(n12372), .CK(debug_c_c), .Q(Stepper_Z_M0_c_0)) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=589, LSE_RLINE=602 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+    FD1P3AX control_reg_i1 (.D(n579), .SP(n12372), .CK(debug_c_c), .Q(Stepper_Z_M0_c_0)) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=589, LSE_RLINE=602 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam control_reg_i1.GSR = "ENABLED";
-    FD1S3AX prev_step_clk_175 (.D(step_clk), .CK(debug_c_c), .Q(prev_step_clk)) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=589, LSE_RLINE=602 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+    FD1S3AX prev_step_clk_175 (.D(step_clk), .CK(debug_c_c), .Q(prev_step_clk)) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=589, LSE_RLINE=602 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam prev_step_clk_175.GSR = "ENABLED";
-    FD1S3AX limit_latched_176 (.D(n182), .CK(debug_c_c), .Q(limit_latched)) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=589, LSE_RLINE=602 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+    FD1S3AX limit_latched_176 (.D(n182), .CK(debug_c_c), .Q(limit_latched)) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=589, LSE_RLINE=602 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam limit_latched_176.GSR = "ENABLED";
-    FD1S3AX prev_limit_latched_177 (.D(limit_latched), .CK(debug_c_c), .Q(prev_limit_latched)) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=589, LSE_RLINE=602 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+    FD1S3AX prev_limit_latched_177 (.D(limit_latched), .CK(debug_c_c), .Q(prev_limit_latched)) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=589, LSE_RLINE=602 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam prev_limit_latched_177.GSR = "ENABLED";
     FD1P3AX div_factor_reg_i0 (.D(n579), .SP(n12358), .CK(debug_c_c), 
-            .Q(div_factor_reg[0])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=589, LSE_RLINE=602 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(div_factor_reg[0])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=589, LSE_RLINE=602 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam div_factor_reg_i0.GSR = "ENABLED";
-    FD1S3AX prev_select_174 (.D(n32449), .CK(debug_c_c), .Q(prev_select)) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=589, LSE_RLINE=602 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+    FD1S3AX prev_select_174 (.D(n32449), .CK(debug_c_c), .Q(prev_select)) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=589, LSE_RLINE=602 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam prev_select_174.GSR = "ENABLED";
     LUT4 i24748_3_lut_rep_256_4_lut_4_lut (.A(n32534), .B(n32442), .C(n32422), 
          .D(rw), .Z(n32381)) /* synthesis lut_function=(!(A+(B+((D)+!C)))) */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(118[11:28])
@@ -2934,151 +2934,151 @@ module \ArmPeripheral(axis_haddr=8'b0100000)  (n34344, n32422, \register_addr[5]
          .D(n32442), .Z(n12372)) /* synthesis lut_function=(A (B)+!A (B+!((D)+!C))) */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(118[11:28])
     defparam i24776_2_lut_4_lut_4_lut.init = 16'hccdc;
     FD1P3JX div_factor_reg_i13 (.D(databus[13]), .SP(n7852), .PD(n34350), 
-            .CK(debug_c_c), .Q(div_factor_reg[13])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=589, LSE_RLINE=602 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .CK(debug_c_c), .Q(div_factor_reg[13])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=589, LSE_RLINE=602 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam div_factor_reg_i13.GSR = "ENABLED";
     FD1P3JX div_factor_reg_i11 (.D(databus[11]), .SP(n7852), .PD(n34350), 
-            .CK(debug_c_c), .Q(div_factor_reg[11])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=589, LSE_RLINE=602 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .CK(debug_c_c), .Q(div_factor_reg[11])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=589, LSE_RLINE=602 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam div_factor_reg_i11.GSR = "ENABLED";
     FD1P3JX div_factor_reg_i10 (.D(databus[10]), .SP(n7852), .PD(n34350), 
-            .CK(debug_c_c), .Q(div_factor_reg[10])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=589, LSE_RLINE=602 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .CK(debug_c_c), .Q(div_factor_reg[10])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=589, LSE_RLINE=602 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam div_factor_reg_i10.GSR = "ENABLED";
     FD1P3JX div_factor_reg_i9 (.D(databus[9]), .SP(n7852), .PD(n34350), 
-            .CK(debug_c_c), .Q(div_factor_reg[9])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=589, LSE_RLINE=602 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .CK(debug_c_c), .Q(div_factor_reg[9])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=589, LSE_RLINE=602 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam div_factor_reg_i9.GSR = "ENABLED";
     FD1P3JX div_factor_reg_i7 (.D(databus[7]), .SP(n7852), .PD(n34350), 
-            .CK(debug_c_c), .Q(div_factor_reg[7])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=589, LSE_RLINE=602 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .CK(debug_c_c), .Q(div_factor_reg[7])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=589, LSE_RLINE=602 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam div_factor_reg_i7.GSR = "ENABLED";
     FD1P3JX div_factor_reg_i6 (.D(databus[6]), .SP(n7852), .PD(n34350), 
-            .CK(debug_c_c), .Q(div_factor_reg[6])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=589, LSE_RLINE=602 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .CK(debug_c_c), .Q(div_factor_reg[6])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=589, LSE_RLINE=602 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam div_factor_reg_i6.GSR = "ENABLED";
     FD1P3JX div_factor_reg_i5 (.D(databus[5]), .SP(n7852), .PD(n34350), 
-            .CK(debug_c_c), .Q(div_factor_reg[5])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=589, LSE_RLINE=602 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .CK(debug_c_c), .Q(div_factor_reg[5])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=589, LSE_RLINE=602 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam div_factor_reg_i5.GSR = "ENABLED";
     FD1P3AX div_factor_reg_i4 (.D(n608), .SP(n12358), .CK(debug_c_c), 
-            .Q(div_factor_reg[4])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=589, LSE_RLINE=602 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(div_factor_reg[4])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=589, LSE_RLINE=602 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam div_factor_reg_i4.GSR = "ENABLED";
     FD1P3AX div_factor_reg_i2 (.D(n610), .SP(n12358), .CK(debug_c_c), 
-            .Q(div_factor_reg[2])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=589, LSE_RLINE=602 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(div_factor_reg[2])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=589, LSE_RLINE=602 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam div_factor_reg_i2.GSR = "ENABLED";
     FD1P3IX control_reg_i8 (.D(databus[7]), .SP(n32381), .CD(n9610), .CK(debug_c_c), 
-            .Q(\control_reg[7] )) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=589, LSE_RLINE=602 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(\control_reg[7] )) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=589, LSE_RLINE=602 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam control_reg_i8.GSR = "ENABLED";
     FD1P3JX control_reg_i7 (.D(databus[6]), .SP(n32381), .PD(n34351), 
-            .CK(debug_c_c), .Q(Stepper_Z_En_c)) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=589, LSE_RLINE=602 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .CK(debug_c_c), .Q(Stepper_Z_En_c)) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=589, LSE_RLINE=602 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam control_reg_i7.GSR = "ENABLED";
     FD1P3JX control_reg_i6 (.D(databus[5]), .SP(n32381), .PD(n34351), 
-            .CK(debug_c_c), .Q(Stepper_Z_Dir_c)) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=589, LSE_RLINE=602 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .CK(debug_c_c), .Q(Stepper_Z_Dir_c)) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=589, LSE_RLINE=602 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam control_reg_i6.GSR = "ENABLED";
-    FD1P3AX control_reg_i5 (.D(n608), .SP(n12372), .CK(debug_c_c), .Q(control_reg[4])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=589, LSE_RLINE=602 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+    FD1P3AX control_reg_i5 (.D(n608), .SP(n12372), .CK(debug_c_c), .Q(control_reg[4])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=589, LSE_RLINE=602 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam control_reg_i5.GSR = "ENABLED";
     FD1P3JX control_reg_i4 (.D(databus[3]), .SP(n32381), .PD(n34351), 
-            .CK(debug_c_c), .Q(control_reg[3])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=589, LSE_RLINE=602 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .CK(debug_c_c), .Q(control_reg[3])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=589, LSE_RLINE=602 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam control_reg_i4.GSR = "ENABLED";
-    FD1P3AX control_reg_i3 (.D(n610), .SP(n12372), .CK(debug_c_c), .Q(Stepper_Z_M2_c_2)) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=589, LSE_RLINE=602 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+    FD1P3AX control_reg_i3 (.D(n610), .SP(n12372), .CK(debug_c_c), .Q(Stepper_Z_M2_c_2)) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=589, LSE_RLINE=602 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam control_reg_i3.GSR = "ENABLED";
     FD1P3JX control_reg_i2 (.D(databus[1]), .SP(n32381), .PD(n34351), 
-            .CK(debug_c_c), .Q(Stepper_Z_M1_c_1)) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=589, LSE_RLINE=602 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .CK(debug_c_c), .Q(Stepper_Z_M1_c_1)) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=589, LSE_RLINE=602 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam control_reg_i2.GSR = "ENABLED";
-    FD1P3AX read_size__i2 (.D(n29690), .SP(n11981), .CK(debug_c_c), .Q(\read_size[2] )) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=589, LSE_RLINE=602 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+    FD1P3AX read_size__i2 (.D(n29690), .SP(n11981), .CK(debug_c_c), .Q(\read_size[2] )) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=589, LSE_RLINE=602 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam read_size__i2.GSR = "ENABLED";
     FD1S3IX steps_reg__i31 (.D(n3277[31]), .CK(debug_c_c), .CD(n34351), 
-            .Q(steps_reg[31])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=589, LSE_RLINE=602 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(steps_reg[31])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=589, LSE_RLINE=602 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam steps_reg__i31.GSR = "ENABLED";
     FD1S3IX steps_reg__i30 (.D(n3277[30]), .CK(debug_c_c), .CD(n34349), 
-            .Q(steps_reg[30])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=589, LSE_RLINE=602 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(steps_reg[30])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=589, LSE_RLINE=602 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam steps_reg__i30.GSR = "ENABLED";
     FD1S3IX steps_reg__i29 (.D(n3277[29]), .CK(debug_c_c), .CD(n34351), 
-            .Q(steps_reg[29])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=589, LSE_RLINE=602 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(steps_reg[29])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=589, LSE_RLINE=602 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam steps_reg__i29.GSR = "ENABLED";
     FD1S3IX steps_reg__i28 (.D(n3277[28]), .CK(debug_c_c), .CD(n34351), 
-            .Q(steps_reg[28])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=589, LSE_RLINE=602 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(steps_reg[28])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=589, LSE_RLINE=602 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam steps_reg__i28.GSR = "ENABLED";
     FD1S3IX steps_reg__i27 (.D(n3277[27]), .CK(debug_c_c), .CD(n34351), 
-            .Q(steps_reg[27])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=589, LSE_RLINE=602 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(steps_reg[27])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=589, LSE_RLINE=602 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam steps_reg__i27.GSR = "ENABLED";
     FD1S3IX steps_reg__i26 (.D(n3277[26]), .CK(debug_c_c), .CD(n34351), 
-            .Q(steps_reg[26])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=589, LSE_RLINE=602 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(steps_reg[26])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=589, LSE_RLINE=602 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam steps_reg__i26.GSR = "ENABLED";
     FD1S3IX steps_reg__i25 (.D(n3277[25]), .CK(debug_c_c), .CD(n34351), 
-            .Q(steps_reg[25])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=589, LSE_RLINE=602 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(steps_reg[25])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=589, LSE_RLINE=602 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam steps_reg__i25.GSR = "ENABLED";
     FD1S3IX steps_reg__i24 (.D(n3277[24]), .CK(debug_c_c), .CD(n34351), 
-            .Q(steps_reg[24])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=589, LSE_RLINE=602 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(steps_reg[24])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=589, LSE_RLINE=602 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam steps_reg__i24.GSR = "ENABLED";
     FD1S3IX steps_reg__i23 (.D(n3277[23]), .CK(debug_c_c), .CD(n34351), 
-            .Q(steps_reg[23])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=589, LSE_RLINE=602 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(steps_reg[23])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=589, LSE_RLINE=602 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam steps_reg__i23.GSR = "ENABLED";
     FD1S3IX steps_reg__i22 (.D(n3277[22]), .CK(debug_c_c), .CD(n34351), 
-            .Q(steps_reg[22])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=589, LSE_RLINE=602 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(steps_reg[22])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=589, LSE_RLINE=602 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam steps_reg__i22.GSR = "ENABLED";
     FD1S3IX steps_reg__i21 (.D(n3277[21]), .CK(debug_c_c), .CD(n34351), 
-            .Q(steps_reg[21])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=589, LSE_RLINE=602 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(steps_reg[21])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=589, LSE_RLINE=602 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam steps_reg__i21.GSR = "ENABLED";
     FD1S3IX steps_reg__i20 (.D(n3277[20]), .CK(debug_c_c), .CD(n34351), 
-            .Q(steps_reg[20])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=589, LSE_RLINE=602 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(steps_reg[20])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=589, LSE_RLINE=602 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam steps_reg__i20.GSR = "ENABLED";
     FD1S3IX steps_reg__i19 (.D(n3277[19]), .CK(debug_c_c), .CD(n34351), 
-            .Q(steps_reg[19])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=589, LSE_RLINE=602 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(steps_reg[19])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=589, LSE_RLINE=602 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam steps_reg__i19.GSR = "ENABLED";
     FD1S3IX steps_reg__i18 (.D(n3277[18]), .CK(debug_c_c), .CD(n34351), 
-            .Q(steps_reg[18])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=589, LSE_RLINE=602 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(steps_reg[18])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=589, LSE_RLINE=602 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam steps_reg__i18.GSR = "ENABLED";
     FD1S3IX steps_reg__i17 (.D(n3277[17]), .CK(debug_c_c), .CD(n34351), 
-            .Q(steps_reg[17])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=589, LSE_RLINE=602 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(steps_reg[17])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=589, LSE_RLINE=602 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam steps_reg__i17.GSR = "ENABLED";
     FD1S3IX steps_reg__i16 (.D(n3277[16]), .CK(debug_c_c), .CD(n34351), 
-            .Q(steps_reg[16])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=589, LSE_RLINE=602 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(steps_reg[16])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=589, LSE_RLINE=602 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam steps_reg__i16.GSR = "ENABLED";
     FD1S3IX steps_reg__i15 (.D(n3277[15]), .CK(debug_c_c), .CD(n34351), 
-            .Q(steps_reg[15])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=589, LSE_RLINE=602 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(steps_reg[15])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=589, LSE_RLINE=602 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam steps_reg__i15.GSR = "ENABLED";
     FD1S3IX steps_reg__i14 (.D(n3277[14]), .CK(debug_c_c), .CD(n34351), 
-            .Q(steps_reg[14])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=589, LSE_RLINE=602 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(steps_reg[14])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=589, LSE_RLINE=602 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam steps_reg__i14.GSR = "ENABLED";
     FD1S3IX steps_reg__i13 (.D(n3277[13]), .CK(debug_c_c), .CD(n34351), 
-            .Q(steps_reg[13])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=589, LSE_RLINE=602 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(steps_reg[13])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=589, LSE_RLINE=602 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam steps_reg__i13.GSR = "ENABLED";
     FD1S3IX steps_reg__i12 (.D(n3277[12]), .CK(debug_c_c), .CD(n34351), 
-            .Q(steps_reg[12])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=589, LSE_RLINE=602 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(steps_reg[12])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=589, LSE_RLINE=602 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam steps_reg__i12.GSR = "ENABLED";
     FD1S3IX steps_reg__i11 (.D(n3277[11]), .CK(debug_c_c), .CD(n34351), 
-            .Q(steps_reg[11])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=589, LSE_RLINE=602 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(steps_reg[11])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=589, LSE_RLINE=602 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam steps_reg__i11.GSR = "ENABLED";
     FD1S3IX steps_reg__i10 (.D(n3277[10]), .CK(debug_c_c), .CD(n34351), 
-            .Q(steps_reg[10])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=589, LSE_RLINE=602 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(steps_reg[10])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=589, LSE_RLINE=602 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam steps_reg__i10.GSR = "ENABLED";
     FD1S3IX steps_reg__i9 (.D(n3277[9]), .CK(debug_c_c), .CD(n34351), 
-            .Q(steps_reg[9])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=589, LSE_RLINE=602 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(steps_reg[9])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=589, LSE_RLINE=602 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam steps_reg__i9.GSR = "ENABLED";
     FD1S3IX steps_reg__i8 (.D(n3277[8]), .CK(debug_c_c), .CD(n34351), 
-            .Q(steps_reg[8])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=589, LSE_RLINE=602 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(steps_reg[8])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=589, LSE_RLINE=602 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam steps_reg__i8.GSR = "ENABLED";
     FD1S3IX steps_reg__i7 (.D(n3277[7]), .CK(debug_c_c), .CD(n34351), 
-            .Q(steps_reg[7])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=589, LSE_RLINE=602 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(steps_reg[7])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=589, LSE_RLINE=602 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam steps_reg__i7.GSR = "ENABLED";
     FD1S3IX steps_reg__i6 (.D(n3277[6]), .CK(debug_c_c), .CD(n34351), 
-            .Q(steps_reg[6])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=589, LSE_RLINE=602 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(steps_reg[6])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=589, LSE_RLINE=602 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam steps_reg__i6.GSR = "ENABLED";
     FD1S3IX steps_reg__i5 (.D(n3277[5]), .CK(debug_c_c), .CD(n34351), 
-            .Q(\steps_reg[5] )) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=589, LSE_RLINE=602 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(\steps_reg[5] )) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=589, LSE_RLINE=602 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam steps_reg__i5.GSR = "ENABLED";
     FD1S3IX steps_reg__i4 (.D(n3277[4]), .CK(debug_c_c), .CD(n34351), 
-            .Q(steps_reg[4])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=589, LSE_RLINE=602 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(steps_reg[4])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=589, LSE_RLINE=602 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam steps_reg__i4.GSR = "ENABLED";
     FD1S3IX steps_reg__i3 (.D(n3277[3]), .CK(debug_c_c), .CD(n34352), 
-            .Q(\steps_reg[3] )) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=589, LSE_RLINE=602 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(\steps_reg[3] )) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=589, LSE_RLINE=602 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam steps_reg__i3.GSR = "ENABLED";
     FD1S3IX steps_reg__i2 (.D(n3277[2]), .CK(debug_c_c), .CD(n34351), 
-            .Q(steps_reg[2])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=589, LSE_RLINE=602 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(steps_reg[2])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=589, LSE_RLINE=602 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam steps_reg__i2.GSR = "ENABLED";
     FD1S3IX steps_reg__i1 (.D(n3277[1]), .CK(debug_c_c), .CD(n34351), 
-            .Q(steps_reg[1])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=589, LSE_RLINE=602 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(steps_reg[1])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=589, LSE_RLINE=602 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam steps_reg__i1.GSR = "ENABLED";
     LUT4 mux_1338_i32_3_lut (.A(n224[31]), .B(databus[31]), .C(n3276), 
          .Z(n3277[31])) /* synthesis lut_function=(A (B+!(C))+!A (B (C))) */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(73[5] 127[8])
     defparam mux_1338_i32_3_lut.init = 16'hcaca;
     FD1P3IX read_value__i1 (.D(n30924), .SP(n11981), .CD(n32400), .CK(debug_c_c), 
-            .Q(read_value[1])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=589, LSE_RLINE=602 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(read_value[1])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=589, LSE_RLINE=602 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam read_value__i1.GSR = "ENABLED";
     LUT4 mux_1338_i31_3_lut (.A(n224[30]), .B(databus[30]), .C(n3276), 
          .Z(n3277[30])) /* synthesis lut_function=(A (B+!(C))+!A (B (C))) */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(73[5] 127[8])
@@ -3120,19 +3120,19 @@ module \ArmPeripheral(axis_haddr=8'b0100000)  (n34344, n32422, \register_addr[5]
          .Z(n3277[18])) /* synthesis lut_function=(A (B+!(C))+!A (B (C))) */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(73[5] 127[8])
     defparam mux_1338_i19_3_lut.init = 16'hcaca;
     FD1P3IX read_value__i2 (.D(n30888), .SP(n11981), .CD(n32400), .CK(debug_c_c), 
-            .Q(read_value[2])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=589, LSE_RLINE=602 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(read_value[2])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=589, LSE_RLINE=602 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam read_value__i2.GSR = "ENABLED";
     FD1P3IX read_value__i3 (.D(n5782[3]), .SP(n11981), .CD(n32400), .CK(debug_c_c), 
-            .Q(read_value[3])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=589, LSE_RLINE=602 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(read_value[3])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=589, LSE_RLINE=602 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam read_value__i3.GSR = "ENABLED";
     FD1P3IX read_value__i4 (.D(n5782[4]), .SP(n11981), .CD(n32400), .CK(debug_c_c), 
-            .Q(read_value[4])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=589, LSE_RLINE=602 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(read_value[4])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=589, LSE_RLINE=602 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam read_value__i4.GSR = "ENABLED";
     FD1P3IX read_value__i5 (.D(n18868), .SP(n11981), .CD(n32400), .CK(debug_c_c), 
-            .Q(read_value[5])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=589, LSE_RLINE=602 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(read_value[5])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=589, LSE_RLINE=602 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam read_value__i5.GSR = "ENABLED";
     FD1P3IX read_value__i6 (.D(n6), .SP(n11981), .CD(n32400), .CK(debug_c_c), 
-            .Q(read_value[6])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=589, LSE_RLINE=602 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(read_value[6])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=589, LSE_RLINE=602 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam read_value__i6.GSR = "ENABLED";
     LUT4 mux_1338_i18_3_lut (.A(n224[17]), .B(databus[17]), .C(n3276), 
          .Z(n3277[17])) /* synthesis lut_function=(A (B+!(C))+!A (B (C))) */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(73[5] 127[8])
@@ -3142,62 +3142,62 @@ module \ArmPeripheral(axis_haddr=8'b0100000)  (n34344, n32422, \register_addr[5]
     PFUMX mux_1650_i8 (.BLUT(n7333[7]), .ALUT(n5746[7]), .C0(\register_addr[1] ), 
           .Z(n5782[7]));
     FD1P3IX read_value__i7 (.D(n5782[7]), .SP(n11981), .CD(n32400), .CK(debug_c_c), 
-            .Q(read_value[7])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=589, LSE_RLINE=602 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(read_value[7])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=589, LSE_RLINE=602 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam read_value__i7.GSR = "ENABLED";
-    FD1P3AX read_value__i8 (.D(n30322), .SP(n11981), .CK(debug_c_c), .Q(read_value[8])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=589, LSE_RLINE=602 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+    FD1P3AX read_value__i8 (.D(n30322), .SP(n11981), .CK(debug_c_c), .Q(read_value[8])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=589, LSE_RLINE=602 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam read_value__i8.GSR = "ENABLED";
-    FD1P3AX read_value__i9 (.D(n30319), .SP(n11981), .CK(debug_c_c), .Q(read_value[9])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=589, LSE_RLINE=602 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+    FD1P3AX read_value__i9 (.D(n30319), .SP(n11981), .CK(debug_c_c), .Q(read_value[9])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=589, LSE_RLINE=602 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam read_value__i9.GSR = "ENABLED";
     LUT4 mux_1338_i17_3_lut (.A(n224[16]), .B(databus[16]), .C(n3276), 
          .Z(n3277[16])) /* synthesis lut_function=(A (B+!(C))+!A (B (C))) */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(73[5] 127[8])
     defparam mux_1338_i17_3_lut.init = 16'hcaca;
     FD1P3AX read_value__i10 (.D(n30323), .SP(n11981), .CK(debug_c_c), 
-            .Q(read_value[10])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=589, LSE_RLINE=602 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(read_value[10])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=589, LSE_RLINE=602 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam read_value__i10.GSR = "ENABLED";
     LUT4 mux_1338_i16_3_lut (.A(n224[15]), .B(databus[15]), .C(n3276), 
          .Z(n3277[15])) /* synthesis lut_function=(A (B+!(C))+!A (B (C))) */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(73[5] 127[8])
     defparam mux_1338_i16_3_lut.init = 16'hcaca;
     FD1P3AX read_value__i11 (.D(n30324), .SP(n11981), .CK(debug_c_c), 
-            .Q(read_value[11])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=589, LSE_RLINE=602 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(read_value[11])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=589, LSE_RLINE=602 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam read_value__i11.GSR = "ENABLED";
     FD1P3AX read_value__i12 (.D(n30325), .SP(n11981), .CK(debug_c_c), 
-            .Q(read_value[12])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=589, LSE_RLINE=602 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(read_value[12])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=589, LSE_RLINE=602 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam read_value__i12.GSR = "ENABLED";
     FD1P3AX read_value__i13 (.D(n30326), .SP(n11981), .CK(debug_c_c), 
-            .Q(read_value[13])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=589, LSE_RLINE=602 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(read_value[13])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=589, LSE_RLINE=602 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam read_value__i13.GSR = "ENABLED";
     FD1P3AX read_value__i14 (.D(n30327), .SP(n11981), .CK(debug_c_c), 
-            .Q(read_value[14])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=589, LSE_RLINE=602 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(read_value[14])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=589, LSE_RLINE=602 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam read_value__i14.GSR = "ENABLED";
     FD1P3AX read_value__i15 (.D(n30328), .SP(n11981), .CK(debug_c_c), 
-            .Q(read_value[15])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=589, LSE_RLINE=602 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(read_value[15])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=589, LSE_RLINE=602 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam read_value__i15.GSR = "ENABLED";
     FD1P3AX read_value__i16 (.D(n30329), .SP(n11981), .CK(debug_c_c), 
-            .Q(read_value[16])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=589, LSE_RLINE=602 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(read_value[16])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=589, LSE_RLINE=602 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam read_value__i16.GSR = "ENABLED";
     FD1P3AX read_value__i17 (.D(n30330), .SP(n11981), .CK(debug_c_c), 
-            .Q(read_value[17])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=589, LSE_RLINE=602 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(read_value[17])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=589, LSE_RLINE=602 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam read_value__i17.GSR = "ENABLED";
     FD1P3AX read_value__i18 (.D(n30331), .SP(n11981), .CK(debug_c_c), 
-            .Q(read_value[18])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=589, LSE_RLINE=602 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(read_value[18])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=589, LSE_RLINE=602 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam read_value__i18.GSR = "ENABLED";
     FD1P3AX read_value__i19 (.D(n30320), .SP(n11981), .CK(debug_c_c), 
-            .Q(read_value[19])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=589, LSE_RLINE=602 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(read_value[19])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=589, LSE_RLINE=602 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam read_value__i19.GSR = "ENABLED";
     FD1P3AX read_value__i20 (.D(n30332), .SP(n11981), .CK(debug_c_c), 
-            .Q(read_value[20])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=589, LSE_RLINE=602 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(read_value[20])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=589, LSE_RLINE=602 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam read_value__i20.GSR = "ENABLED";
     FD1P3AX read_value__i21 (.D(n30333), .SP(n11981), .CK(debug_c_c), 
-            .Q(read_value[21])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=589, LSE_RLINE=602 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(read_value[21])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=589, LSE_RLINE=602 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam read_value__i21.GSR = "ENABLED";
     FD1P3AX read_value__i22 (.D(n30334), .SP(n11981), .CK(debug_c_c), 
-            .Q(read_value[22])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=589, LSE_RLINE=602 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(read_value[22])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=589, LSE_RLINE=602 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam read_value__i22.GSR = "ENABLED";
     FD1P3AX read_value__i23 (.D(n30335), .SP(n11981), .CK(debug_c_c), 
-            .Q(read_value[23])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=589, LSE_RLINE=602 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(read_value[23])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=589, LSE_RLINE=602 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam read_value__i23.GSR = "ENABLED";
     FD1P3AX read_value__i24 (.D(n30321), .SP(n11981), .CK(debug_c_c), 
-            .Q(read_value[24])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=589, LSE_RLINE=602 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(read_value[24])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=589, LSE_RLINE=602 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam read_value__i24.GSR = "ENABLED";
     LUT4 mux_1338_i15_3_lut (.A(n224[14]), .B(databus[14]), .C(n3276), 
          .Z(n3277[14])) /* synthesis lut_function=(A (B+!(C))+!A (B (C))) */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(73[5] 127[8])
@@ -3223,25 +3223,25 @@ module \ArmPeripheral(axis_haddr=8'b0100000)  (n34344, n32422, \register_addr[5]
     LUT4 mux_1338_i7_3_lut (.A(n224[6]), .B(databus[6]), .C(n3276), .Z(n3277[6])) /* synthesis lut_function=(A (B+!(C))+!A (B (C))) */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(73[5] 127[8])
     defparam mux_1338_i7_3_lut.init = 16'hcaca;
     FD1P3AX read_value__i25 (.D(n30336), .SP(n11981), .CK(debug_c_c), 
-            .Q(read_value[25])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=589, LSE_RLINE=602 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(read_value[25])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=589, LSE_RLINE=602 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam read_value__i25.GSR = "ENABLED";
     FD1P3AX read_value__i26 (.D(n30337), .SP(n11981), .CK(debug_c_c), 
-            .Q(read_value[26])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=589, LSE_RLINE=602 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(read_value[26])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=589, LSE_RLINE=602 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam read_value__i26.GSR = "ENABLED";
     FD1P3AX read_value__i27 (.D(n30338), .SP(n11981), .CK(debug_c_c), 
-            .Q(read_value[27])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=589, LSE_RLINE=602 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(read_value[27])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=589, LSE_RLINE=602 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam read_value__i27.GSR = "ENABLED";
     FD1P3AX read_value__i28 (.D(n30339), .SP(n11981), .CK(debug_c_c), 
-            .Q(read_value[28])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=589, LSE_RLINE=602 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(read_value[28])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=589, LSE_RLINE=602 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam read_value__i28.GSR = "ENABLED";
     FD1P3AX read_value__i29 (.D(n30340), .SP(n11981), .CK(debug_c_c), 
-            .Q(read_value[29])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=589, LSE_RLINE=602 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(read_value[29])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=589, LSE_RLINE=602 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam read_value__i29.GSR = "ENABLED";
     FD1P3AX read_value__i30 (.D(n30317), .SP(n11981), .CK(debug_c_c), 
-            .Q(read_value[30])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=589, LSE_RLINE=602 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(read_value[30])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=589, LSE_RLINE=602 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam read_value__i30.GSR = "ENABLED";
     FD1P3AX read_value__i31 (.D(n30318), .SP(n11981), .CK(debug_c_c), 
-            .Q(read_value[31])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=589, LSE_RLINE=602 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(read_value[31])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=589, LSE_RLINE=602 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam read_value__i31.GSR = "ENABLED";
     FD1P3AX int_step_182 (.D(n32394), .SP(n20522), .CK(debug_c_c), .Q(int_step));   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam int_step_182.GSR = "ENABLED";
@@ -3495,70 +3495,70 @@ module \ArmPeripheral(axis_haddr=8'b0100000)  (n34344, n32422, \register_addr[5]
          .D(\register_addr[0] ), .Z(n30318)) /* synthesis lut_function=(A (B (C+!(D)))+!A (B (C (D)))) */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam i1_4_lut_adj_430.init = 16'hc088;
     FD1P3IX div_factor_reg_i1 (.D(databus[1]), .SP(n12358), .CD(n34350), 
-            .CK(debug_c_c), .Q(div_factor_reg[1])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=589, LSE_RLINE=602 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .CK(debug_c_c), .Q(div_factor_reg[1])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=589, LSE_RLINE=602 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam div_factor_reg_i1.GSR = "ENABLED";
     FD1P3IX div_factor_reg_i3 (.D(databus[3]), .SP(n12358), .CD(n34350), 
-            .CK(debug_c_c), .Q(div_factor_reg[3])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=589, LSE_RLINE=602 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .CK(debug_c_c), .Q(div_factor_reg[3])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=589, LSE_RLINE=602 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam div_factor_reg_i3.GSR = "ENABLED";
     FD1P3IX div_factor_reg_i8 (.D(databus[8]), .SP(n12358), .CD(n34350), 
-            .CK(debug_c_c), .Q(div_factor_reg[8])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=589, LSE_RLINE=602 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .CK(debug_c_c), .Q(div_factor_reg[8])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=589, LSE_RLINE=602 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam div_factor_reg_i8.GSR = "ENABLED";
     FD1P3IX div_factor_reg_i12 (.D(databus[12]), .SP(n12358), .CD(n34350), 
-            .CK(debug_c_c), .Q(div_factor_reg[12])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=589, LSE_RLINE=602 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .CK(debug_c_c), .Q(div_factor_reg[12])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=589, LSE_RLINE=602 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam div_factor_reg_i12.GSR = "ENABLED";
     FD1P3IX div_factor_reg_i14 (.D(databus[14]), .SP(n12358), .CD(n34350), 
-            .CK(debug_c_c), .Q(div_factor_reg[14])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=589, LSE_RLINE=602 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .CK(debug_c_c), .Q(div_factor_reg[14])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=589, LSE_RLINE=602 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam div_factor_reg_i14.GSR = "ENABLED";
     FD1P3IX div_factor_reg_i15 (.D(databus[15]), .SP(n12358), .CD(n34350), 
-            .CK(debug_c_c), .Q(div_factor_reg[15])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=589, LSE_RLINE=602 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .CK(debug_c_c), .Q(div_factor_reg[15])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=589, LSE_RLINE=602 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam div_factor_reg_i15.GSR = "ENABLED";
     FD1P3IX div_factor_reg_i16 (.D(databus[16]), .SP(n12358), .CD(n34350), 
-            .CK(debug_c_c), .Q(div_factor_reg[16])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=589, LSE_RLINE=602 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .CK(debug_c_c), .Q(div_factor_reg[16])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=589, LSE_RLINE=602 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam div_factor_reg_i16.GSR = "ENABLED";
     FD1P3IX div_factor_reg_i17 (.D(databus[17]), .SP(n12358), .CD(n34350), 
-            .CK(debug_c_c), .Q(div_factor_reg[17])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=589, LSE_RLINE=602 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .CK(debug_c_c), .Q(div_factor_reg[17])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=589, LSE_RLINE=602 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam div_factor_reg_i17.GSR = "ENABLED";
     FD1P3IX div_factor_reg_i18 (.D(databus[18]), .SP(n12358), .CD(n34350), 
-            .CK(debug_c_c), .Q(div_factor_reg[18])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=589, LSE_RLINE=602 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .CK(debug_c_c), .Q(div_factor_reg[18])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=589, LSE_RLINE=602 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam div_factor_reg_i18.GSR = "ENABLED";
     FD1P3IX div_factor_reg_i19 (.D(databus[19]), .SP(n12358), .CD(n34350), 
-            .CK(debug_c_c), .Q(div_factor_reg[19])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=589, LSE_RLINE=602 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .CK(debug_c_c), .Q(div_factor_reg[19])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=589, LSE_RLINE=602 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam div_factor_reg_i19.GSR = "ENABLED";
     FD1P3IX div_factor_reg_i20 (.D(databus[20]), .SP(n12358), .CD(n34350), 
-            .CK(debug_c_c), .Q(div_factor_reg[20])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=589, LSE_RLINE=602 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .CK(debug_c_c), .Q(div_factor_reg[20])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=589, LSE_RLINE=602 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam div_factor_reg_i20.GSR = "ENABLED";
     FD1P3IX div_factor_reg_i21 (.D(databus[21]), .SP(n12358), .CD(n34350), 
-            .CK(debug_c_c), .Q(div_factor_reg[21])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=589, LSE_RLINE=602 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .CK(debug_c_c), .Q(div_factor_reg[21])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=589, LSE_RLINE=602 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam div_factor_reg_i21.GSR = "ENABLED";
     FD1P3IX div_factor_reg_i22 (.D(databus[22]), .SP(n12358), .CD(n34350), 
-            .CK(debug_c_c), .Q(div_factor_reg[22])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=589, LSE_RLINE=602 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .CK(debug_c_c), .Q(div_factor_reg[22])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=589, LSE_RLINE=602 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam div_factor_reg_i22.GSR = "ENABLED";
     FD1P3IX div_factor_reg_i23 (.D(databus[23]), .SP(n12358), .CD(n34350), 
-            .CK(debug_c_c), .Q(div_factor_reg[23])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=589, LSE_RLINE=602 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .CK(debug_c_c), .Q(div_factor_reg[23])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=589, LSE_RLINE=602 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam div_factor_reg_i23.GSR = "ENABLED";
     FD1P3IX div_factor_reg_i24 (.D(databus[24]), .SP(n12358), .CD(n34350), 
-            .CK(debug_c_c), .Q(div_factor_reg[24])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=589, LSE_RLINE=602 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .CK(debug_c_c), .Q(div_factor_reg[24])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=589, LSE_RLINE=602 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam div_factor_reg_i24.GSR = "ENABLED";
     FD1P3IX div_factor_reg_i25 (.D(databus[25]), .SP(n12358), .CD(n34350), 
-            .CK(debug_c_c), .Q(div_factor_reg[25])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=589, LSE_RLINE=602 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .CK(debug_c_c), .Q(div_factor_reg[25])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=589, LSE_RLINE=602 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam div_factor_reg_i25.GSR = "ENABLED";
     FD1P3IX div_factor_reg_i26 (.D(databus[26]), .SP(n12358), .CD(n34350), 
-            .CK(debug_c_c), .Q(div_factor_reg[26])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=589, LSE_RLINE=602 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .CK(debug_c_c), .Q(div_factor_reg[26])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=589, LSE_RLINE=602 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam div_factor_reg_i26.GSR = "ENABLED";
     FD1P3IX div_factor_reg_i27 (.D(databus[27]), .SP(n12358), .CD(n34350), 
-            .CK(debug_c_c), .Q(div_factor_reg[27])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=589, LSE_RLINE=602 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .CK(debug_c_c), .Q(div_factor_reg[27])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=589, LSE_RLINE=602 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam div_factor_reg_i27.GSR = "ENABLED";
     FD1P3IX div_factor_reg_i28 (.D(databus[28]), .SP(n12358), .CD(n34350), 
-            .CK(debug_c_c), .Q(div_factor_reg[28])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=589, LSE_RLINE=602 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .CK(debug_c_c), .Q(div_factor_reg[28])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=589, LSE_RLINE=602 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam div_factor_reg_i28.GSR = "ENABLED";
     FD1P3IX div_factor_reg_i29 (.D(databus[29]), .SP(n12358), .CD(n34350), 
-            .CK(debug_c_c), .Q(div_factor_reg[29])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=589, LSE_RLINE=602 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .CK(debug_c_c), .Q(div_factor_reg[29])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=589, LSE_RLINE=602 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam div_factor_reg_i29.GSR = "ENABLED";
     FD1P3IX div_factor_reg_i30 (.D(databus[30]), .SP(n12358), .CD(n34350), 
-            .CK(debug_c_c), .Q(div_factor_reg[30])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=589, LSE_RLINE=602 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .CK(debug_c_c), .Q(div_factor_reg[30])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=589, LSE_RLINE=602 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam div_factor_reg_i30.GSR = "ENABLED";
     FD1P3IX div_factor_reg_i31 (.D(databus[31]), .SP(n12358), .CD(n34350), 
-            .CK(debug_c_c), .Q(div_factor_reg[31])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=589, LSE_RLINE=602 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .CK(debug_c_c), .Q(div_factor_reg[31])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=589, LSE_RLINE=602 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam div_factor_reg_i31.GSR = "ENABLED";
     LUT4 i13125_3_lut (.A(Stepper_Z_Dir_c), .B(div_factor_reg[5]), .C(\register_addr[1] ), 
          .Z(n18866)) /* synthesis lut_function=(A (B+!(C))+!A (B (C))) */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(460[13:26])
@@ -3664,7 +3664,7 @@ module ClockDivider (debug_c_c, div_factor_reg, n34347, step_clk, n32463,
         n27796, n27795;
     
     FD1P3IX int_factor_i0_i0 (.D(div_factor_reg[0]), .SP(n32372), .CD(n14407), 
-            .CK(debug_c_c), .Q(int_factor[0])) /* synthesis LSE_LINE_FILE_ID=8, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
+            .CK(debug_c_c), .Q(int_factor[0])) /* synthesis LSE_LINE_FILE_ID=5, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
     defparam int_factor_i0_i0.GSR = "ENABLED";
     LUT4 i962_2_lut_rep_247 (.A(n7056), .B(n34347), .Z(n32372)) /* synthesis lut_function=(A+(B)) */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(59[5] 75[8])
     defparam i962_2_lut_rep_247.init = 16'heeee;
@@ -3769,61 +3769,61 @@ module ClockDivider (debug_c_c, div_factor_reg, n34347, step_clk, n32463,
             .Q(count[31]));   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(74[16:25])
     defparam count_2178__i31.GSR = "ENABLED";
     FD1P3IX int_factor_i0_i31 (.D(div_factor_reg[31]), .SP(n32372), .CD(n14407), 
-            .CK(debug_c_c), .Q(int_factor[31])) /* synthesis LSE_LINE_FILE_ID=8, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
+            .CK(debug_c_c), .Q(int_factor[31])) /* synthesis LSE_LINE_FILE_ID=5, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
     defparam int_factor_i0_i31.GSR = "ENABLED";
     FD1P3IX int_factor_i0_i30 (.D(div_factor_reg[30]), .SP(n32372), .CD(n14407), 
-            .CK(debug_c_c), .Q(int_factor[30])) /* synthesis LSE_LINE_FILE_ID=8, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
+            .CK(debug_c_c), .Q(int_factor[30])) /* synthesis LSE_LINE_FILE_ID=5, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
     defparam int_factor_i0_i30.GSR = "ENABLED";
     FD1P3IX int_factor_i0_i29 (.D(div_factor_reg[29]), .SP(n32372), .CD(n14407), 
-            .CK(debug_c_c), .Q(int_factor[29])) /* synthesis LSE_LINE_FILE_ID=8, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
+            .CK(debug_c_c), .Q(int_factor[29])) /* synthesis LSE_LINE_FILE_ID=5, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
     defparam int_factor_i0_i29.GSR = "ENABLED";
     FD1P3IX int_factor_i0_i28 (.D(div_factor_reg[28]), .SP(n32372), .CD(n14407), 
-            .CK(debug_c_c), .Q(int_factor[28])) /* synthesis LSE_LINE_FILE_ID=8, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
+            .CK(debug_c_c), .Q(int_factor[28])) /* synthesis LSE_LINE_FILE_ID=5, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
     defparam int_factor_i0_i28.GSR = "ENABLED";
     FD1P3IX int_factor_i0_i27 (.D(div_factor_reg[27]), .SP(n32372), .CD(n14407), 
-            .CK(debug_c_c), .Q(int_factor[27])) /* synthesis LSE_LINE_FILE_ID=8, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
+            .CK(debug_c_c), .Q(int_factor[27])) /* synthesis LSE_LINE_FILE_ID=5, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
     defparam int_factor_i0_i27.GSR = "ENABLED";
     FD1P3IX int_factor_i0_i26 (.D(div_factor_reg[26]), .SP(n32372), .CD(n14407), 
-            .CK(debug_c_c), .Q(int_factor[26])) /* synthesis LSE_LINE_FILE_ID=8, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
+            .CK(debug_c_c), .Q(int_factor[26])) /* synthesis LSE_LINE_FILE_ID=5, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
     defparam int_factor_i0_i26.GSR = "ENABLED";
     FD1P3IX int_factor_i0_i25 (.D(div_factor_reg[25]), .SP(n32372), .CD(n14407), 
-            .CK(debug_c_c), .Q(int_factor[25])) /* synthesis LSE_LINE_FILE_ID=8, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
+            .CK(debug_c_c), .Q(int_factor[25])) /* synthesis LSE_LINE_FILE_ID=5, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
     defparam int_factor_i0_i25.GSR = "ENABLED";
     FD1P3IX int_factor_i0_i24 (.D(div_factor_reg[24]), .SP(n32372), .CD(n14407), 
-            .CK(debug_c_c), .Q(int_factor[24])) /* synthesis LSE_LINE_FILE_ID=8, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
+            .CK(debug_c_c), .Q(int_factor[24])) /* synthesis LSE_LINE_FILE_ID=5, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
     defparam int_factor_i0_i24.GSR = "ENABLED";
     FD1P3IX int_factor_i0_i23 (.D(div_factor_reg[23]), .SP(n32372), .CD(n14407), 
-            .CK(debug_c_c), .Q(int_factor[23])) /* synthesis LSE_LINE_FILE_ID=8, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
+            .CK(debug_c_c), .Q(int_factor[23])) /* synthesis LSE_LINE_FILE_ID=5, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
     defparam int_factor_i0_i23.GSR = "ENABLED";
     FD1P3IX int_factor_i0_i22 (.D(div_factor_reg[22]), .SP(n32372), .CD(n14407), 
-            .CK(debug_c_c), .Q(int_factor[22])) /* synthesis LSE_LINE_FILE_ID=8, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
+            .CK(debug_c_c), .Q(int_factor[22])) /* synthesis LSE_LINE_FILE_ID=5, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
     defparam int_factor_i0_i22.GSR = "ENABLED";
     FD1P3IX int_factor_i0_i21 (.D(div_factor_reg[21]), .SP(n32372), .CD(n14407), 
-            .CK(debug_c_c), .Q(int_factor[21])) /* synthesis LSE_LINE_FILE_ID=8, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
+            .CK(debug_c_c), .Q(int_factor[21])) /* synthesis LSE_LINE_FILE_ID=5, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
     defparam int_factor_i0_i21.GSR = "ENABLED";
     FD1P3IX int_factor_i0_i20 (.D(div_factor_reg[20]), .SP(n32372), .CD(n14407), 
-            .CK(debug_c_c), .Q(int_factor[20])) /* synthesis LSE_LINE_FILE_ID=8, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
+            .CK(debug_c_c), .Q(int_factor[20])) /* synthesis LSE_LINE_FILE_ID=5, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
     defparam int_factor_i0_i20.GSR = "ENABLED";
     FD1P3IX int_factor_i0_i19 (.D(div_factor_reg[19]), .SP(n32372), .CD(n14407), 
-            .CK(debug_c_c), .Q(int_factor[19])) /* synthesis LSE_LINE_FILE_ID=8, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
+            .CK(debug_c_c), .Q(int_factor[19])) /* synthesis LSE_LINE_FILE_ID=5, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
     defparam int_factor_i0_i19.GSR = "ENABLED";
     FD1P3IX int_factor_i0_i18 (.D(div_factor_reg[18]), .SP(n32372), .CD(n14407), 
-            .CK(debug_c_c), .Q(int_factor[18])) /* synthesis LSE_LINE_FILE_ID=8, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
+            .CK(debug_c_c), .Q(int_factor[18])) /* synthesis LSE_LINE_FILE_ID=5, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
     defparam int_factor_i0_i18.GSR = "ENABLED";
     FD1P3IX int_factor_i0_i17 (.D(div_factor_reg[17]), .SP(n32372), .CD(n14407), 
-            .CK(debug_c_c), .Q(int_factor[17])) /* synthesis LSE_LINE_FILE_ID=8, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
+            .CK(debug_c_c), .Q(int_factor[17])) /* synthesis LSE_LINE_FILE_ID=5, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
     defparam int_factor_i0_i17.GSR = "ENABLED";
     FD1P3IX int_factor_i0_i16 (.D(div_factor_reg[16]), .SP(n32372), .CD(n14407), 
-            .CK(debug_c_c), .Q(int_factor[16])) /* synthesis LSE_LINE_FILE_ID=8, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
+            .CK(debug_c_c), .Q(int_factor[16])) /* synthesis LSE_LINE_FILE_ID=5, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
     defparam int_factor_i0_i16.GSR = "ENABLED";
     FD1P3IX int_factor_i0_i15 (.D(div_factor_reg[15]), .SP(n32372), .CD(n14407), 
-            .CK(debug_c_c), .Q(int_factor[15])) /* synthesis LSE_LINE_FILE_ID=8, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
+            .CK(debug_c_c), .Q(int_factor[15])) /* synthesis LSE_LINE_FILE_ID=5, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
     defparam int_factor_i0_i15.GSR = "ENABLED";
     FD1P3IX int_factor_i0_i14 (.D(div_factor_reg[14]), .SP(n32372), .CD(n14407), 
-            .CK(debug_c_c), .Q(int_factor[14])) /* synthesis LSE_LINE_FILE_ID=8, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
+            .CK(debug_c_c), .Q(int_factor[14])) /* synthesis LSE_LINE_FILE_ID=5, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
     defparam int_factor_i0_i14.GSR = "ENABLED";
     FD1P3IX int_factor_i0_i13 (.D(div_factor_reg[13]), .SP(n32372), .CD(n14407), 
-            .CK(debug_c_c), .Q(int_factor[13])) /* synthesis LSE_LINE_FILE_ID=8, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
+            .CK(debug_c_c), .Q(int_factor[13])) /* synthesis LSE_LINE_FILE_ID=5, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
     defparam int_factor_i0_i13.GSR = "ENABLED";
     CCU2D sub_1726_add_2_31 (.A0(count[29]), .B0(n40[29]), .C0(GND_net), 
           .D0(GND_net), .A1(count[30]), .B1(n40[30]), .C1(GND_net), 
@@ -3875,16 +3875,16 @@ module ClockDivider (debug_c_c, div_factor_reg, n34347, step_clk, n32463,
     defparam sub_1726_add_2_19.INJECT1_0 = "NO";
     defparam sub_1726_add_2_19.INJECT1_1 = "NO";
     FD1P3IX int_factor_i0_i12 (.D(div_factor_reg[12]), .SP(n32372), .CD(n14407), 
-            .CK(debug_c_c), .Q(int_factor[12])) /* synthesis LSE_LINE_FILE_ID=8, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
+            .CK(debug_c_c), .Q(int_factor[12])) /* synthesis LSE_LINE_FILE_ID=5, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
     defparam int_factor_i0_i12.GSR = "ENABLED";
     FD1P3IX int_factor_i0_i11 (.D(div_factor_reg[11]), .SP(n32372), .CD(n14407), 
-            .CK(debug_c_c), .Q(int_factor[11])) /* synthesis LSE_LINE_FILE_ID=8, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
+            .CK(debug_c_c), .Q(int_factor[11])) /* synthesis LSE_LINE_FILE_ID=5, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
     defparam int_factor_i0_i11.GSR = "ENABLED";
     FD1P3IX int_factor_i0_i10 (.D(div_factor_reg[10]), .SP(n32372), .CD(n14407), 
-            .CK(debug_c_c), .Q(int_factor[10])) /* synthesis LSE_LINE_FILE_ID=8, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
+            .CK(debug_c_c), .Q(int_factor[10])) /* synthesis LSE_LINE_FILE_ID=5, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
     defparam int_factor_i0_i10.GSR = "ENABLED";
     FD1P3IX int_factor_i0_i9 (.D(div_factor_reg[9]), .SP(n32372), .CD(n14407), 
-            .CK(debug_c_c), .Q(int_factor[9])) /* synthesis LSE_LINE_FILE_ID=8, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
+            .CK(debug_c_c), .Q(int_factor[9])) /* synthesis LSE_LINE_FILE_ID=5, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
     defparam int_factor_i0_i9.GSR = "ENABLED";
     CCU2D sub_1726_add_2_17 (.A0(count[15]), .B0(n40[15]), .C0(GND_net), 
           .D0(GND_net), .A1(count[16]), .B1(n40[16]), .C1(GND_net), 
@@ -3915,16 +3915,16 @@ module ClockDivider (debug_c_c, div_factor_reg, n34347, step_clk, n32463,
     defparam sub_1726_add_2_11.INJECT1_0 = "NO";
     defparam sub_1726_add_2_11.INJECT1_1 = "NO";
     FD1P3IX int_factor_i0_i8 (.D(div_factor_reg[8]), .SP(n32372), .CD(n14407), 
-            .CK(debug_c_c), .Q(int_factor[8])) /* synthesis LSE_LINE_FILE_ID=8, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
+            .CK(debug_c_c), .Q(int_factor[8])) /* synthesis LSE_LINE_FILE_ID=5, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
     defparam int_factor_i0_i8.GSR = "ENABLED";
     FD1P3IX int_factor_i0_i7 (.D(div_factor_reg[7]), .SP(n32372), .CD(n14407), 
-            .CK(debug_c_c), .Q(int_factor[7])) /* synthesis LSE_LINE_FILE_ID=8, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
+            .CK(debug_c_c), .Q(int_factor[7])) /* synthesis LSE_LINE_FILE_ID=5, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
     defparam int_factor_i0_i7.GSR = "ENABLED";
     FD1P3IX int_factor_i0_i6 (.D(div_factor_reg[6]), .SP(n32372), .CD(n14407), 
-            .CK(debug_c_c), .Q(int_factor[6])) /* synthesis LSE_LINE_FILE_ID=8, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
+            .CK(debug_c_c), .Q(int_factor[6])) /* synthesis LSE_LINE_FILE_ID=5, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
     defparam int_factor_i0_i6.GSR = "ENABLED";
     FD1P3IX int_factor_i0_i5 (.D(div_factor_reg[5]), .SP(n32372), .CD(n14407), 
-            .CK(debug_c_c), .Q(int_factor[5])) /* synthesis LSE_LINE_FILE_ID=8, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
+            .CK(debug_c_c), .Q(int_factor[5])) /* synthesis LSE_LINE_FILE_ID=5, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
     defparam int_factor_i0_i5.GSR = "ENABLED";
     CCU2D sub_1726_add_2_9 (.A0(count[7]), .B0(n40[7]), .C0(GND_net), 
           .D0(GND_net), .A1(count[8]), .B1(n40[8]), .C1(GND_net), .D1(GND_net), 
@@ -3969,13 +3969,13 @@ module ClockDivider (debug_c_c, div_factor_reg, n34347, step_clk, n32463,
     defparam sub_1726_add_2_3.INJECT1_0 = "NO";
     defparam sub_1726_add_2_3.INJECT1_1 = "NO";
     FD1P3IX int_factor_i0_i4 (.D(div_factor_reg[4]), .SP(n32372), .CD(n14407), 
-            .CK(debug_c_c), .Q(int_factor[4])) /* synthesis LSE_LINE_FILE_ID=8, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
+            .CK(debug_c_c), .Q(int_factor[4])) /* synthesis LSE_LINE_FILE_ID=5, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
     defparam int_factor_i0_i4.GSR = "ENABLED";
     FD1P3IX int_factor_i0_i3 (.D(div_factor_reg[3]), .SP(n32372), .CD(n14407), 
-            .CK(debug_c_c), .Q(int_factor[3])) /* synthesis LSE_LINE_FILE_ID=8, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
+            .CK(debug_c_c), .Q(int_factor[3])) /* synthesis LSE_LINE_FILE_ID=5, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
     defparam int_factor_i0_i3.GSR = "ENABLED";
     FD1P3IX int_factor_i0_i2 (.D(div_factor_reg[2]), .SP(n32372), .CD(n14407), 
-            .CK(debug_c_c), .Q(int_factor[2])) /* synthesis LSE_LINE_FILE_ID=8, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
+            .CK(debug_c_c), .Q(int_factor[2])) /* synthesis LSE_LINE_FILE_ID=5, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
     defparam int_factor_i0_i2.GSR = "ENABLED";
     CCU2D sub_7_add_2_29 (.A0(int_factor[27]), .B0(GND_net), .C0(GND_net), 
           .D0(GND_net), .A1(int_factor[28]), .B1(GND_net), .C1(GND_net), 
@@ -3999,7 +3999,7 @@ module ClockDivider (debug_c_c, div_factor_reg, n34347, step_clk, n32463,
     defparam sub_7_add_2_27.INJECT1_0 = "NO";
     defparam sub_7_add_2_27.INJECT1_1 = "NO";
     FD1P3JX int_factor_i0_i1 (.D(div_factor_reg[1]), .SP(n32372), .PD(n14407), 
-            .CK(debug_c_c), .Q(int_factor[1])) /* synthesis LSE_LINE_FILE_ID=8, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
+            .CK(debug_c_c), .Q(int_factor[1])) /* synthesis LSE_LINE_FILE_ID=5, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
     defparam int_factor_i0_i1.GSR = "ENABLED";
     CCU2D sub_1727_add_2_33 (.A0(div_factor_reg[31]), .B0(GND_net), .C0(GND_net), 
           .D0(GND_net), .A1(GND_net), .B1(GND_net), .C1(GND_net), .D1(GND_net), 
@@ -4612,18 +4612,18 @@ module \ArmPeripheral(axis_haddr=8'b0110000)  (register_addr, read_value,
     PFUMX i24536 (.BLUT(n30892), .ALUT(n30893), .C0(register_addr[1]), 
           .Z(n30894));
     FD1P3IX read_value__i0 (.D(n30846), .SP(n12620), .CD(GND_net), .CK(debug_c_c), 
-            .Q(read_value[0])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=604, LSE_RLINE=617 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(read_value[0])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=604, LSE_RLINE=617 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam read_value__i0.GSR = "ENABLED";
     LUT4 i28_4_lut (.A(steps_reg[20]), .B(n56), .C(n46), .D(steps_reg[15]), 
          .Z(n60)) /* synthesis lut_function=(A+(B+(C+(D)))) */ ;
     defparam i28_4_lut.init = 16'hfffe;
     FD1S3IX steps_reg__i0 (.D(n3181[0]), .CK(debug_c_c), .CD(n34350), 
-            .Q(steps_reg[0])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=604, LSE_RLINE=617 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(steps_reg[0])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=604, LSE_RLINE=617 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam steps_reg__i0.GSR = "ENABLED";
     IFS1P3DX fault_latched_178 (.D(Stepper_A_nFault_c), .SP(VCC_net), .SCLK(debug_c_c), 
-            .CD(GND_net), .Q(fault_latched)) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=604, LSE_RLINE=617 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .CD(GND_net), .Q(fault_latched)) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=604, LSE_RLINE=617 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam fault_latched_178.GSR = "ENABLED";
-    FD1P3AX read_size__i1 (.D(n30435), .SP(n12620), .CK(debug_c_c), .Q(\read_size[0] )) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=604, LSE_RLINE=617 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+    FD1P3AX read_size__i1 (.D(n30435), .SP(n12620), .CK(debug_c_c), .Q(\read_size[0] )) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=604, LSE_RLINE=617 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam read_size__i1.GSR = "ENABLED";
     LUT4 i2_4_lut (.A(register_addr[5]), .B(register_addr[4]), .C(n32527), 
          .D(n32525), .Z(n30311)) /* synthesis lut_function=(!((B+(C+(D)))+!A)) */ ;
@@ -4631,166 +4631,166 @@ module \ArmPeripheral(axis_haddr=8'b0110000)  (register_addr, read_value,
     LUT4 equal_1407_i11_2_lut_rep_402 (.A(register_addr[2]), .B(register_addr[3]), 
          .Z(n32527)) /* synthesis lut_function=(A+(B)) */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(114[11:28])
     defparam equal_1407_i11_2_lut_rep_402.init = 16'heeee;
-    FD1P3AX control_reg_i1 (.D(n579), .SP(n20528), .CK(debug_c_c), .Q(Stepper_A_M0_c_0)) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=604, LSE_RLINE=617 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+    FD1P3AX control_reg_i1 (.D(n579), .SP(n20528), .CK(debug_c_c), .Q(Stepper_A_M0_c_0)) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=604, LSE_RLINE=617 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam control_reg_i1.GSR = "ENABLED";
-    FD1S3AX prev_step_clk_175 (.D(step_clk), .CK(debug_c_c), .Q(prev_step_clk)) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=604, LSE_RLINE=617 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+    FD1S3AX prev_step_clk_175 (.D(step_clk), .CK(debug_c_c), .Q(prev_step_clk)) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=604, LSE_RLINE=617 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam prev_step_clk_175.GSR = "ENABLED";
-    FD1S3AX limit_latched_176 (.D(n182), .CK(debug_c_c), .Q(limit_latched)) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=604, LSE_RLINE=617 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+    FD1S3AX limit_latched_176 (.D(n182), .CK(debug_c_c), .Q(limit_latched)) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=604, LSE_RLINE=617 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam limit_latched_176.GSR = "ENABLED";
-    FD1S3AX prev_limit_latched_177 (.D(limit_latched), .CK(debug_c_c), .Q(prev_limit_latched)) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=604, LSE_RLINE=617 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+    FD1S3AX prev_limit_latched_177 (.D(limit_latched), .CK(debug_c_c), .Q(prev_limit_latched)) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=604, LSE_RLINE=617 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam prev_limit_latched_177.GSR = "ENABLED";
     FD1P3AX div_factor_reg_i0 (.D(n579), .SP(n12224), .CK(debug_c_c), 
-            .Q(div_factor_reg[0])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=604, LSE_RLINE=617 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(div_factor_reg[0])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=604, LSE_RLINE=617 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam div_factor_reg_i0.GSR = "ENABLED";
-    FD1S3AX prev_select_174 (.D(n32441), .CK(debug_c_c), .Q(prev_select)) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=604, LSE_RLINE=617 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+    FD1S3AX prev_select_174 (.D(n32441), .CK(debug_c_c), .Q(prev_select)) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=604, LSE_RLINE=617 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam prev_select_174.GSR = "ENABLED";
     FD1P3IX div_factor_reg_i31 (.D(\databus[31] ), .SP(n32379), .CD(n34348), 
-            .CK(debug_c_c), .Q(div_factor_reg[31])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=604, LSE_RLINE=617 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .CK(debug_c_c), .Q(div_factor_reg[31])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=604, LSE_RLINE=617 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam div_factor_reg_i31.GSR = "ENABLED";
     FD1P3IX div_factor_reg_i28 (.D(\databus[28] ), .SP(n32379), .CD(n34348), 
-            .CK(debug_c_c), .Q(div_factor_reg[28])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=604, LSE_RLINE=617 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .CK(debug_c_c), .Q(div_factor_reg[28])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=604, LSE_RLINE=617 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam div_factor_reg_i28.GSR = "ENABLED";
     FD1P3JX div_factor_reg_i13 (.D(\databus[13] ), .SP(n32379), .PD(n34349), 
-            .CK(debug_c_c), .Q(div_factor_reg[13])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=604, LSE_RLINE=617 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .CK(debug_c_c), .Q(div_factor_reg[13])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=604, LSE_RLINE=617 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam div_factor_reg_i13.GSR = "ENABLED";
     FD1P3JX div_factor_reg_i11 (.D(\databus[11] ), .SP(n32379), .PD(n34348), 
-            .CK(debug_c_c), .Q(div_factor_reg[11])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=604, LSE_RLINE=617 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .CK(debug_c_c), .Q(div_factor_reg[11])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=604, LSE_RLINE=617 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam div_factor_reg_i11.GSR = "ENABLED";
     FD1P3JX div_factor_reg_i10 (.D(\databus[10] ), .SP(n32379), .PD(n34348), 
-            .CK(debug_c_c), .Q(div_factor_reg[10])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=604, LSE_RLINE=617 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .CK(debug_c_c), .Q(div_factor_reg[10])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=604, LSE_RLINE=617 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam div_factor_reg_i10.GSR = "ENABLED";
     FD1P3JX div_factor_reg_i9 (.D(\databus[9] ), .SP(n32379), .PD(n34349), 
-            .CK(debug_c_c), .Q(div_factor_reg[9])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=604, LSE_RLINE=617 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .CK(debug_c_c), .Q(div_factor_reg[9])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=604, LSE_RLINE=617 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam div_factor_reg_i9.GSR = "ENABLED";
     FD1P3JX div_factor_reg_i7 (.D(\databus[7] ), .SP(n32379), .PD(n34349), 
-            .CK(debug_c_c), .Q(div_factor_reg[7])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=604, LSE_RLINE=617 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .CK(debug_c_c), .Q(div_factor_reg[7])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=604, LSE_RLINE=617 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam div_factor_reg_i7.GSR = "ENABLED";
     FD1P3JX div_factor_reg_i6 (.D(\databus[6] ), .SP(n32379), .PD(n34349), 
-            .CK(debug_c_c), .Q(div_factor_reg[6])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=604, LSE_RLINE=617 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .CK(debug_c_c), .Q(div_factor_reg[6])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=604, LSE_RLINE=617 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam div_factor_reg_i6.GSR = "ENABLED";
     FD1P3JX div_factor_reg_i5 (.D(\databus[5] ), .SP(n32379), .PD(n34349), 
-            .CK(debug_c_c), .Q(div_factor_reg[5])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=604, LSE_RLINE=617 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .CK(debug_c_c), .Q(div_factor_reg[5])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=604, LSE_RLINE=617 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam div_factor_reg_i5.GSR = "ENABLED";
     FD1P3AX div_factor_reg_i2 (.D(n610), .SP(n12224), .CK(debug_c_c), 
-            .Q(div_factor_reg[2])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=604, LSE_RLINE=617 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(div_factor_reg[2])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=604, LSE_RLINE=617 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam div_factor_reg_i2.GSR = "ENABLED";
     FD1P3IX control_reg_i8 (.D(\databus[7] ), .SP(n32380), .CD(n9608), 
-            .CK(debug_c_c), .Q(\control_reg[7] )) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=604, LSE_RLINE=617 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .CK(debug_c_c), .Q(\control_reg[7] )) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=604, LSE_RLINE=617 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam control_reg_i8.GSR = "ENABLED";
     FD1P3JX control_reg_i7 (.D(\databus[6] ), .SP(n32380), .PD(n34350), 
-            .CK(debug_c_c), .Q(Stepper_A_En_c)) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=604, LSE_RLINE=617 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .CK(debug_c_c), .Q(Stepper_A_En_c)) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=604, LSE_RLINE=617 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam control_reg_i7.GSR = "ENABLED";
     FD1P3JX control_reg_i6 (.D(\databus[5] ), .SP(n32380), .PD(n34350), 
-            .CK(debug_c_c), .Q(Stepper_A_Dir_c)) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=604, LSE_RLINE=617 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .CK(debug_c_c), .Q(Stepper_A_Dir_c)) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=604, LSE_RLINE=617 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam control_reg_i6.GSR = "ENABLED";
     FD1P3IX control_reg_i5 (.D(\databus[4] ), .SP(n32380), .CD(n34350), 
-            .CK(debug_c_c), .Q(control_reg[4])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=604, LSE_RLINE=617 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .CK(debug_c_c), .Q(control_reg[4])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=604, LSE_RLINE=617 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam control_reg_i5.GSR = "ENABLED";
     FD1P3JX control_reg_i4 (.D(\databus[3] ), .SP(n32380), .PD(n34350), 
-            .CK(debug_c_c), .Q(control_reg[3])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=604, LSE_RLINE=617 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .CK(debug_c_c), .Q(control_reg[3])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=604, LSE_RLINE=617 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam control_reg_i4.GSR = "ENABLED";
-    FD1P3AX control_reg_i3 (.D(n610), .SP(n20528), .CK(debug_c_c), .Q(Stepper_A_M2_c_2)) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=604, LSE_RLINE=617 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+    FD1P3AX control_reg_i3 (.D(n610), .SP(n20528), .CK(debug_c_c), .Q(Stepper_A_M2_c_2)) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=604, LSE_RLINE=617 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam control_reg_i3.GSR = "ENABLED";
     FD1P3JX control_reg_i2 (.D(\databus[1] ), .SP(n32380), .PD(n34350), 
-            .CK(debug_c_c), .Q(Stepper_A_M1_c_1)) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=604, LSE_RLINE=617 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .CK(debug_c_c), .Q(Stepper_A_M1_c_1)) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=604, LSE_RLINE=617 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam control_reg_i2.GSR = "ENABLED";
-    FD1P3AX read_size__i2 (.D(n30363), .SP(n12620), .CK(debug_c_c), .Q(\read_size[2] )) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=604, LSE_RLINE=617 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+    FD1P3AX read_size__i2 (.D(n30363), .SP(n12620), .CK(debug_c_c), .Q(\read_size[2] )) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=604, LSE_RLINE=617 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam read_size__i2.GSR = "ENABLED";
     LUT4 i3_4_lut_4_lut (.A(register_addr[1]), .B(register_addr[0]), .C(n32396), 
          .D(n30311), .Z(n7852)) /* synthesis lut_function=(!((B+!(C (D)))+!A)) */ ;
     defparam i3_4_lut_4_lut.init = 16'h2000;
     FD1S3IX steps_reg__i31 (.D(n3181[31]), .CK(debug_c_c), .CD(n34351), 
-            .Q(steps_reg[31])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=604, LSE_RLINE=617 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(steps_reg[31])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=604, LSE_RLINE=617 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam steps_reg__i31.GSR = "ENABLED";
     FD1S3IX steps_reg__i30 (.D(n3181[30]), .CK(debug_c_c), .CD(n34351), 
-            .Q(steps_reg[30])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=604, LSE_RLINE=617 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(steps_reg[30])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=604, LSE_RLINE=617 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam steps_reg__i30.GSR = "ENABLED";
     FD1S3IX steps_reg__i29 (.D(n3181[29]), .CK(debug_c_c), .CD(n34351), 
-            .Q(steps_reg[29])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=604, LSE_RLINE=617 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(steps_reg[29])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=604, LSE_RLINE=617 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam steps_reg__i29.GSR = "ENABLED";
     FD1S3IX steps_reg__i28 (.D(n3181[28]), .CK(debug_c_c), .CD(n34348), 
-            .Q(steps_reg[28])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=604, LSE_RLINE=617 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(steps_reg[28])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=604, LSE_RLINE=617 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam steps_reg__i28.GSR = "ENABLED";
     FD1S3IX steps_reg__i27 (.D(n3181[27]), .CK(debug_c_c), .CD(n34348), 
-            .Q(steps_reg[27])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=604, LSE_RLINE=617 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(steps_reg[27])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=604, LSE_RLINE=617 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam steps_reg__i27.GSR = "ENABLED";
     FD1S3IX steps_reg__i26 (.D(n3181[26]), .CK(debug_c_c), .CD(n34348), 
-            .Q(steps_reg[26])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=604, LSE_RLINE=617 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(steps_reg[26])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=604, LSE_RLINE=617 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam steps_reg__i26.GSR = "ENABLED";
     FD1S3IX steps_reg__i25 (.D(n3181[25]), .CK(debug_c_c), .CD(n34348), 
-            .Q(steps_reg[25])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=604, LSE_RLINE=617 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(steps_reg[25])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=604, LSE_RLINE=617 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam steps_reg__i25.GSR = "ENABLED";
     FD1S3IX steps_reg__i24 (.D(n3181[24]), .CK(debug_c_c), .CD(n34351), 
-            .Q(steps_reg[24])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=604, LSE_RLINE=617 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(steps_reg[24])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=604, LSE_RLINE=617 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam steps_reg__i24.GSR = "ENABLED";
     FD1S3IX steps_reg__i23 (.D(n3181[23]), .CK(debug_c_c), .CD(n34351), 
-            .Q(steps_reg[23])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=604, LSE_RLINE=617 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(steps_reg[23])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=604, LSE_RLINE=617 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam steps_reg__i23.GSR = "ENABLED";
     FD1S3IX steps_reg__i22 (.D(n3181[22]), .CK(debug_c_c), .CD(n34351), 
-            .Q(steps_reg[22])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=604, LSE_RLINE=617 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(steps_reg[22])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=604, LSE_RLINE=617 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam steps_reg__i22.GSR = "ENABLED";
     FD1S3IX steps_reg__i21 (.D(n3181[21]), .CK(debug_c_c), .CD(n34352), 
-            .Q(steps_reg[21])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=604, LSE_RLINE=617 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(steps_reg[21])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=604, LSE_RLINE=617 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam steps_reg__i21.GSR = "ENABLED";
     FD1S3IX steps_reg__i20 (.D(n3181[20]), .CK(debug_c_c), .CD(n34351), 
-            .Q(steps_reg[20])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=604, LSE_RLINE=617 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(steps_reg[20])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=604, LSE_RLINE=617 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam steps_reg__i20.GSR = "ENABLED";
     FD1S3IX steps_reg__i19 (.D(n3181[19]), .CK(debug_c_c), .CD(n34351), 
-            .Q(steps_reg[19])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=604, LSE_RLINE=617 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(steps_reg[19])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=604, LSE_RLINE=617 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam steps_reg__i19.GSR = "ENABLED";
     FD1S3IX steps_reg__i18 (.D(n3181[18]), .CK(debug_c_c), .CD(n34352), 
-            .Q(steps_reg[18])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=604, LSE_RLINE=617 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(steps_reg[18])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=604, LSE_RLINE=617 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam steps_reg__i18.GSR = "ENABLED";
     FD1S3IX steps_reg__i17 (.D(n3181[17]), .CK(debug_c_c), .CD(n34352), 
-            .Q(steps_reg[17])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=604, LSE_RLINE=617 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(steps_reg[17])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=604, LSE_RLINE=617 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam steps_reg__i17.GSR = "ENABLED";
     FD1S3IX steps_reg__i16 (.D(n3181[16]), .CK(debug_c_c), .CD(n34352), 
-            .Q(steps_reg[16])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=604, LSE_RLINE=617 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(steps_reg[16])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=604, LSE_RLINE=617 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam steps_reg__i16.GSR = "ENABLED";
     FD1S3IX steps_reg__i15 (.D(n3181[15]), .CK(debug_c_c), .CD(n34352), 
-            .Q(steps_reg[15])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=604, LSE_RLINE=617 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(steps_reg[15])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=604, LSE_RLINE=617 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam steps_reg__i15.GSR = "ENABLED";
     FD1S3IX steps_reg__i14 (.D(n3181[14]), .CK(debug_c_c), .CD(n34352), 
-            .Q(steps_reg[14])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=604, LSE_RLINE=617 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(steps_reg[14])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=604, LSE_RLINE=617 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam steps_reg__i14.GSR = "ENABLED";
     FD1S3IX steps_reg__i13 (.D(n3181[13]), .CK(debug_c_c), .CD(n34352), 
-            .Q(steps_reg[13])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=604, LSE_RLINE=617 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(steps_reg[13])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=604, LSE_RLINE=617 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam steps_reg__i13.GSR = "ENABLED";
     FD1S3IX steps_reg__i12 (.D(n3181[12]), .CK(debug_c_c), .CD(n34352), 
-            .Q(steps_reg[12])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=604, LSE_RLINE=617 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(steps_reg[12])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=604, LSE_RLINE=617 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam steps_reg__i12.GSR = "ENABLED";
     FD1S3IX steps_reg__i11 (.D(n3181[11]), .CK(debug_c_c), .CD(n34352), 
-            .Q(steps_reg[11])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=604, LSE_RLINE=617 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(steps_reg[11])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=604, LSE_RLINE=617 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam steps_reg__i11.GSR = "ENABLED";
     FD1S3IX steps_reg__i10 (.D(n3181[10]), .CK(debug_c_c), .CD(n34352), 
-            .Q(steps_reg[10])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=604, LSE_RLINE=617 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(steps_reg[10])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=604, LSE_RLINE=617 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam steps_reg__i10.GSR = "ENABLED";
     FD1S3IX steps_reg__i9 (.D(n3181[9]), .CK(debug_c_c), .CD(n34352), 
-            .Q(steps_reg[9])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=604, LSE_RLINE=617 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(steps_reg[9])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=604, LSE_RLINE=617 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam steps_reg__i9.GSR = "ENABLED";
     FD1S3IX steps_reg__i8 (.D(n3181[8]), .CK(debug_c_c), .CD(n34352), 
-            .Q(steps_reg[8])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=604, LSE_RLINE=617 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(steps_reg[8])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=604, LSE_RLINE=617 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam steps_reg__i8.GSR = "ENABLED";
     FD1S3IX steps_reg__i7 (.D(n3181[7]), .CK(debug_c_c), .CD(n34352), 
-            .Q(steps_reg[7])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=604, LSE_RLINE=617 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(steps_reg[7])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=604, LSE_RLINE=617 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam steps_reg__i7.GSR = "ENABLED";
     FD1S3IX steps_reg__i6 (.D(n3181[6]), .CK(debug_c_c), .CD(n34352), 
-            .Q(steps_reg[6])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=604, LSE_RLINE=617 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(steps_reg[6])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=604, LSE_RLINE=617 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam steps_reg__i6.GSR = "ENABLED";
     FD1S3IX steps_reg__i5 (.D(n3181[5]), .CK(debug_c_c), .CD(n34352), 
-            .Q(\steps_reg[5] )) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=604, LSE_RLINE=617 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(\steps_reg[5] )) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=604, LSE_RLINE=617 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam steps_reg__i5.GSR = "ENABLED";
     FD1S3IX steps_reg__i4 (.D(n3181[4]), .CK(debug_c_c), .CD(n34352), 
-            .Q(steps_reg[4])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=604, LSE_RLINE=617 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(steps_reg[4])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=604, LSE_RLINE=617 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam steps_reg__i4.GSR = "ENABLED";
     FD1S3IX steps_reg__i3 (.D(n3181[3]), .CK(debug_c_c), .CD(n34352), 
-            .Q(\steps_reg[3] )) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=604, LSE_RLINE=617 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(\steps_reg[3] )) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=604, LSE_RLINE=617 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam steps_reg__i3.GSR = "ENABLED";
     FD1S3IX steps_reg__i2 (.D(n3181[2]), .CK(debug_c_c), .CD(n34352), 
-            .Q(steps_reg[2])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=604, LSE_RLINE=617 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(steps_reg[2])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=604, LSE_RLINE=617 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam steps_reg__i2.GSR = "ENABLED";
     FD1S3IX steps_reg__i1 (.D(n3181[1]), .CK(debug_c_c), .CD(n34352), 
-            .Q(steps_reg[1])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=604, LSE_RLINE=617 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(steps_reg[1])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=604, LSE_RLINE=617 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam steps_reg__i1.GSR = "ENABLED";
     LUT4 i1_2_lut_rep_317_3_lut_4_lut (.A(register_addr[1]), .B(n32527), 
          .C(n32525), .D(register_addr[0]), .Z(n32442)) /* synthesis lut_function=(A+(B+(C+(D)))) */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/global.v(85[9:13])
@@ -4806,97 +4806,97 @@ module \ArmPeripheral(axis_haddr=8'b0110000)  (register_addr, read_value,
     FD1P3AX int_step_182 (.D(n32392), .SP(n20536), .CK(debug_c_c), .Q(int_step));   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam int_step_182.GSR = "ENABLED";
     FD1P3IX read_value__i1 (.D(n30855), .SP(n12620), .CD(GND_net), .CK(debug_c_c), 
-            .Q(read_value[1])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=604, LSE_RLINE=617 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(read_value[1])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=604, LSE_RLINE=617 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam read_value__i1.GSR = "ENABLED";
     FD1P3IX read_value__i2 (.D(n30894), .SP(n12620), .CD(GND_net), .CK(debug_c_c), 
-            .Q(read_value[2])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=604, LSE_RLINE=617 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(read_value[2])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=604, LSE_RLINE=617 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam read_value__i2.GSR = "ENABLED";
     FD1P3IX read_value__i3 (.D(n6096[3]), .SP(n12620), .CD(GND_net), .CK(debug_c_c), 
-            .Q(read_value[3])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=604, LSE_RLINE=617 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(read_value[3])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=604, LSE_RLINE=617 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam read_value__i3.GSR = "ENABLED";
     FD1P3IX read_value__i4 (.D(n6096[4]), .SP(n12620), .CD(GND_net), .CK(debug_c_c), 
-            .Q(read_value[4])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=604, LSE_RLINE=617 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(read_value[4])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=604, LSE_RLINE=617 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam read_value__i4.GSR = "ENABLED";
     FD1P3IX read_value__i5 (.D(n18830), .SP(n12620), .CD(GND_net), .CK(debug_c_c), 
-            .Q(read_value[5])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=604, LSE_RLINE=617 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(read_value[5])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=604, LSE_RLINE=617 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam read_value__i5.GSR = "ENABLED";
     FD1P3IX read_value__i6 (.D(n6), .SP(n12620), .CD(GND_net), .CK(debug_c_c), 
-            .Q(read_value[6])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=604, LSE_RLINE=617 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(read_value[6])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=604, LSE_RLINE=617 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam read_value__i6.GSR = "ENABLED";
     FD1P3IX read_value__i7 (.D(n6096[7]), .SP(n12620), .CD(GND_net), .CK(debug_c_c), 
-            .Q(read_value[7])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=604, LSE_RLINE=617 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(read_value[7])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=604, LSE_RLINE=617 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam read_value__i7.GSR = "ENABLED";
-    FD1P3AX read_value__i8 (.D(n30401), .SP(n12620), .CK(debug_c_c), .Q(read_value[8])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=604, LSE_RLINE=617 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+    FD1P3AX read_value__i8 (.D(n30401), .SP(n12620), .CK(debug_c_c), .Q(read_value[8])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=604, LSE_RLINE=617 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam read_value__i8.GSR = "ENABLED";
-    FD1P3AX read_value__i9 (.D(n30398), .SP(n12620), .CK(debug_c_c), .Q(read_value[9])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=604, LSE_RLINE=617 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+    FD1P3AX read_value__i9 (.D(n30398), .SP(n12620), .CK(debug_c_c), .Q(read_value[9])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=604, LSE_RLINE=617 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam read_value__i9.GSR = "ENABLED";
     FD1P3AX read_value__i10 (.D(n30399), .SP(n12620), .CK(debug_c_c), 
-            .Q(read_value[10])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=604, LSE_RLINE=617 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(read_value[10])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=604, LSE_RLINE=617 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam read_value__i10.GSR = "ENABLED";
     FD1P3AX read_value__i11 (.D(n30400), .SP(n12620), .CK(debug_c_c), 
-            .Q(read_value[11])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=604, LSE_RLINE=617 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(read_value[11])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=604, LSE_RLINE=617 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam read_value__i11.GSR = "ENABLED";
     FD1P3AX read_value__i12 (.D(n30396), .SP(n12620), .CK(debug_c_c), 
-            .Q(read_value[12])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=604, LSE_RLINE=617 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(read_value[12])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=604, LSE_RLINE=617 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam read_value__i12.GSR = "ENABLED";
     FD1P3IX read_value__i18 (.D(n100[18]), .SP(n12620), .CD(GND_net), 
-            .CK(debug_c_c), .Q(read_value[18])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=604, LSE_RLINE=617 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .CK(debug_c_c), .Q(read_value[18])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=604, LSE_RLINE=617 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam read_value__i18.GSR = "ENABLED";
     FD1P3IX read_value__i17 (.D(n100[17]), .SP(n12620), .CD(GND_net), 
-            .CK(debug_c_c), .Q(read_value[17])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=604, LSE_RLINE=617 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .CK(debug_c_c), .Q(read_value[17])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=604, LSE_RLINE=617 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam read_value__i17.GSR = "ENABLED";
     FD1P3IX read_value__i16 (.D(n100[16]), .SP(n12620), .CD(GND_net), 
-            .CK(debug_c_c), .Q(read_value[16])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=604, LSE_RLINE=617 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .CK(debug_c_c), .Q(read_value[16])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=604, LSE_RLINE=617 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam read_value__i16.GSR = "ENABLED";
     FD1P3IX read_value__i15 (.D(n100[15]), .SP(n12620), .CD(GND_net), 
-            .CK(debug_c_c), .Q(read_value[15])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=604, LSE_RLINE=617 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .CK(debug_c_c), .Q(read_value[15])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=604, LSE_RLINE=617 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam read_value__i15.GSR = "ENABLED";
     FD1P3AX read_value__i13 (.D(n30395), .SP(n12620), .CK(debug_c_c), 
-            .Q(read_value[13])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=604, LSE_RLINE=617 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(read_value[13])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=604, LSE_RLINE=617 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam read_value__i13.GSR = "ENABLED";
     FD1P3AX read_value__i14 (.D(n30397), .SP(n12620), .CK(debug_c_c), 
-            .Q(read_value[14])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=604, LSE_RLINE=617 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(read_value[14])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=604, LSE_RLINE=617 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam read_value__i14.GSR = "ENABLED";
     FD1P3AX read_value__i19 (.D(n30394), .SP(n12620), .CK(debug_c_c), 
-            .Q(read_value[19])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=604, LSE_RLINE=617 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(read_value[19])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=604, LSE_RLINE=617 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam read_value__i19.GSR = "ENABLED";
     FD1P3AX read_value__i20 (.D(n30402), .SP(n12620), .CK(debug_c_c), 
-            .Q(read_value[20])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=604, LSE_RLINE=617 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(read_value[20])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=604, LSE_RLINE=617 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam read_value__i20.GSR = "ENABLED";
     FD1P3AX read_value__i21 (.D(n30403), .SP(n12620), .CK(debug_c_c), 
-            .Q(read_value[21])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=604, LSE_RLINE=617 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(read_value[21])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=604, LSE_RLINE=617 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam read_value__i21.GSR = "ENABLED";
     FD1P3AX read_value__i22 (.D(n30404), .SP(n12620), .CK(debug_c_c), 
-            .Q(read_value[22])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=604, LSE_RLINE=617 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(read_value[22])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=604, LSE_RLINE=617 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam read_value__i22.GSR = "ENABLED";
     FD1P3AX read_value__i23 (.D(n30405), .SP(n12620), .CK(debug_c_c), 
-            .Q(read_value[23])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=604, LSE_RLINE=617 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(read_value[23])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=604, LSE_RLINE=617 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam read_value__i23.GSR = "ENABLED";
     FD1P3AX read_value__i24 (.D(n30406), .SP(n12620), .CK(debug_c_c), 
-            .Q(read_value[24])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=604, LSE_RLINE=617 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(read_value[24])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=604, LSE_RLINE=617 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam read_value__i24.GSR = "ENABLED";
     FD1P3AX read_value__i25 (.D(n30407), .SP(n12620), .CK(debug_c_c), 
-            .Q(read_value[25])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=604, LSE_RLINE=617 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(read_value[25])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=604, LSE_RLINE=617 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam read_value__i25.GSR = "ENABLED";
     FD1P3AX read_value__i26 (.D(n30408), .SP(n12620), .CK(debug_c_c), 
-            .Q(read_value[26])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=604, LSE_RLINE=617 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(read_value[26])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=604, LSE_RLINE=617 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam read_value__i26.GSR = "ENABLED";
     FD1P3AX read_value__i27 (.D(n30409), .SP(n12620), .CK(debug_c_c), 
-            .Q(read_value[27])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=604, LSE_RLINE=617 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(read_value[27])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=604, LSE_RLINE=617 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam read_value__i27.GSR = "ENABLED";
     FD1P3AX read_value__i28 (.D(n30410), .SP(n12620), .CK(debug_c_c), 
-            .Q(read_value[28])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=604, LSE_RLINE=617 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(read_value[28])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=604, LSE_RLINE=617 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam read_value__i28.GSR = "ENABLED";
     FD1P3AX read_value__i29 (.D(n30411), .SP(n12620), .CK(debug_c_c), 
-            .Q(read_value[29])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=604, LSE_RLINE=617 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(read_value[29])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=604, LSE_RLINE=617 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam read_value__i29.GSR = "ENABLED";
     FD1P3AX read_value__i30 (.D(n30412), .SP(n12620), .CK(debug_c_c), 
-            .Q(read_value[30])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=604, LSE_RLINE=617 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(read_value[30])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=604, LSE_RLINE=617 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam read_value__i30.GSR = "ENABLED";
     PFUMX i24497 (.BLUT(n30853), .ALUT(n30854), .C0(register_addr[1]), 
           .Z(n30855));
     FD1P3AX read_value__i31 (.D(n30393), .SP(n12620), .CK(debug_c_c), 
-            .Q(read_value[31])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=604, LSE_RLINE=617 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(read_value[31])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=604, LSE_RLINE=617 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam read_value__i31.GSR = "ENABLED";
     PFUMX i13088 (.BLUT(n18828), .ALUT(n14), .C0(register_addr[0]), .Z(n18830));
     PFUMX i13091 (.BLUT(n18831), .ALUT(n15), .C0(register_addr[0]), .Z(n6096[3]));
@@ -5135,67 +5135,67 @@ module \ArmPeripheral(axis_haddr=8'b0110000)  (register_addr, read_value,
          .C(steps_reg[25]), .D(register_addr[0]), .Z(n30407)) /* synthesis lut_function=(A (B (C+!(D)))+!A (B (C (D)))) */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam i1_4_lut_adj_401.init = 16'hc088;
     FD1P3IX div_factor_reg_i1 (.D(\databus[1] ), .SP(n12224), .CD(n34350), 
-            .CK(debug_c_c), .Q(div_factor_reg[1])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=604, LSE_RLINE=617 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .CK(debug_c_c), .Q(div_factor_reg[1])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=604, LSE_RLINE=617 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam div_factor_reg_i1.GSR = "ENABLED";
     FD1P3IX div_factor_reg_i3 (.D(\databus[3] ), .SP(n12224), .CD(n34350), 
-            .CK(debug_c_c), .Q(div_factor_reg[3])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=604, LSE_RLINE=617 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .CK(debug_c_c), .Q(div_factor_reg[3])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=604, LSE_RLINE=617 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam div_factor_reg_i3.GSR = "ENABLED";
     FD1P3IX div_factor_reg_i4 (.D(\databus[4] ), .SP(n12224), .CD(n34349), 
-            .CK(debug_c_c), .Q(div_factor_reg[4])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=604, LSE_RLINE=617 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .CK(debug_c_c), .Q(div_factor_reg[4])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=604, LSE_RLINE=617 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam div_factor_reg_i4.GSR = "ENABLED";
     FD1P3IX div_factor_reg_i8 (.D(\databus[8] ), .SP(n12224), .CD(n34349), 
-            .CK(debug_c_c), .Q(div_factor_reg[8])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=604, LSE_RLINE=617 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .CK(debug_c_c), .Q(div_factor_reg[8])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=604, LSE_RLINE=617 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam div_factor_reg_i8.GSR = "ENABLED";
     FD1P3IX div_factor_reg_i12 (.D(\databus[12] ), .SP(n12224), .CD(n34349), 
-            .CK(debug_c_c), .Q(div_factor_reg[12])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=604, LSE_RLINE=617 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .CK(debug_c_c), .Q(div_factor_reg[12])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=604, LSE_RLINE=617 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam div_factor_reg_i12.GSR = "ENABLED";
     FD1P3IX div_factor_reg_i14 (.D(\databus[14] ), .SP(n12224), .CD(n34348), 
-            .CK(debug_c_c), .Q(div_factor_reg[14])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=604, LSE_RLINE=617 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .CK(debug_c_c), .Q(div_factor_reg[14])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=604, LSE_RLINE=617 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam div_factor_reg_i14.GSR = "ENABLED";
     FD1P3IX div_factor_reg_i15 (.D(\databus[15] ), .SP(n12224), .CD(n34348), 
-            .CK(debug_c_c), .Q(div_factor_reg[15])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=604, LSE_RLINE=617 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .CK(debug_c_c), .Q(div_factor_reg[15])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=604, LSE_RLINE=617 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam div_factor_reg_i15.GSR = "ENABLED";
     FD1P3IX div_factor_reg_i16 (.D(\databus[16] ), .SP(n12224), .CD(n34348), 
-            .CK(debug_c_c), .Q(div_factor_reg[16])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=604, LSE_RLINE=617 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .CK(debug_c_c), .Q(div_factor_reg[16])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=604, LSE_RLINE=617 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam div_factor_reg_i16.GSR = "ENABLED";
     FD1P3IX div_factor_reg_i17 (.D(\databus[17] ), .SP(n12224), .CD(n34348), 
-            .CK(debug_c_c), .Q(div_factor_reg[17])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=604, LSE_RLINE=617 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .CK(debug_c_c), .Q(div_factor_reg[17])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=604, LSE_RLINE=617 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam div_factor_reg_i17.GSR = "ENABLED";
     FD1P3IX div_factor_reg_i18 (.D(\databus[18] ), .SP(n12224), .CD(n34348), 
-            .CK(debug_c_c), .Q(div_factor_reg[18])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=604, LSE_RLINE=617 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .CK(debug_c_c), .Q(div_factor_reg[18])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=604, LSE_RLINE=617 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam div_factor_reg_i18.GSR = "ENABLED";
     FD1P3IX div_factor_reg_i19 (.D(\databus[19] ), .SP(n12224), .CD(n34348), 
-            .CK(debug_c_c), .Q(div_factor_reg[19])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=604, LSE_RLINE=617 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .CK(debug_c_c), .Q(div_factor_reg[19])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=604, LSE_RLINE=617 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam div_factor_reg_i19.GSR = "ENABLED";
     FD1P3IX div_factor_reg_i20 (.D(\databus[20] ), .SP(n12224), .CD(n34348), 
-            .CK(debug_c_c), .Q(div_factor_reg[20])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=604, LSE_RLINE=617 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .CK(debug_c_c), .Q(div_factor_reg[20])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=604, LSE_RLINE=617 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam div_factor_reg_i20.GSR = "ENABLED";
     FD1P3IX div_factor_reg_i21 (.D(\databus[21] ), .SP(n12224), .CD(n34348), 
-            .CK(debug_c_c), .Q(div_factor_reg[21])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=604, LSE_RLINE=617 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .CK(debug_c_c), .Q(div_factor_reg[21])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=604, LSE_RLINE=617 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam div_factor_reg_i21.GSR = "ENABLED";
     FD1P3IX div_factor_reg_i22 (.D(\databus[22] ), .SP(n12224), .CD(n34348), 
-            .CK(debug_c_c), .Q(div_factor_reg[22])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=604, LSE_RLINE=617 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .CK(debug_c_c), .Q(div_factor_reg[22])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=604, LSE_RLINE=617 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam div_factor_reg_i22.GSR = "ENABLED";
     FD1P3IX div_factor_reg_i23 (.D(\databus[23] ), .SP(n12224), .CD(n34348), 
-            .CK(debug_c_c), .Q(div_factor_reg[23])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=604, LSE_RLINE=617 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .CK(debug_c_c), .Q(div_factor_reg[23])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=604, LSE_RLINE=617 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam div_factor_reg_i23.GSR = "ENABLED";
     FD1P3IX div_factor_reg_i24 (.D(\databus[24] ), .SP(n12224), .CD(n34348), 
-            .CK(debug_c_c), .Q(div_factor_reg[24])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=604, LSE_RLINE=617 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .CK(debug_c_c), .Q(div_factor_reg[24])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=604, LSE_RLINE=617 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam div_factor_reg_i24.GSR = "ENABLED";
     FD1P3IX div_factor_reg_i25 (.D(\databus[25] ), .SP(n12224), .CD(n34348), 
-            .CK(debug_c_c), .Q(div_factor_reg[25])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=604, LSE_RLINE=617 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .CK(debug_c_c), .Q(div_factor_reg[25])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=604, LSE_RLINE=617 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam div_factor_reg_i25.GSR = "ENABLED";
     FD1P3IX div_factor_reg_i26 (.D(\databus[26] ), .SP(n12224), .CD(n34348), 
-            .CK(debug_c_c), .Q(div_factor_reg[26])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=604, LSE_RLINE=617 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .CK(debug_c_c), .Q(div_factor_reg[26])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=604, LSE_RLINE=617 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam div_factor_reg_i26.GSR = "ENABLED";
     FD1P3IX div_factor_reg_i27 (.D(\databus[27] ), .SP(n12224), .CD(n34348), 
-            .CK(debug_c_c), .Q(div_factor_reg[27])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=604, LSE_RLINE=617 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .CK(debug_c_c), .Q(div_factor_reg[27])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=604, LSE_RLINE=617 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam div_factor_reg_i27.GSR = "ENABLED";
     FD1P3IX div_factor_reg_i29 (.D(\databus[29] ), .SP(n12224), .CD(n34348), 
-            .CK(debug_c_c), .Q(div_factor_reg[29])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=604, LSE_RLINE=617 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .CK(debug_c_c), .Q(div_factor_reg[29])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=604, LSE_RLINE=617 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam div_factor_reg_i29.GSR = "ENABLED";
     FD1P3IX div_factor_reg_i30 (.D(\databus[30] ), .SP(n12224), .CD(n34348), 
-            .CK(debug_c_c), .Q(div_factor_reg[30])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=604, LSE_RLINE=617 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .CK(debug_c_c), .Q(div_factor_reg[30])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=604, LSE_RLINE=617 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam div_factor_reg_i30.GSR = "ENABLED";
     LUT4 i118_1_lut (.A(limit_c_3), .Z(n182)) /* synthesis lut_function=(!(A)) */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(62[21:28])
     defparam i118_1_lut.init = 16'h5555;
@@ -5323,7 +5323,7 @@ module ClockDivider_U9 (GND_net, debug_c_c, div_factor_reg, n34347,
     defparam sub_1729_add_2_3.INJECT1_0 = "NO";
     defparam sub_1729_add_2_3.INJECT1_1 = "NO";
     FD1P3IX int_factor_i0_i0 (.D(div_factor_reg[0]), .SP(n32373), .CD(n14422), 
-            .CK(debug_c_c), .Q(int_factor[0])) /* synthesis LSE_LINE_FILE_ID=8, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
+            .CK(debug_c_c), .Q(int_factor[0])) /* synthesis LSE_LINE_FILE_ID=5, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
     defparam int_factor_i0_i0.GSR = "ENABLED";
     LUT4 i966_2_lut_rep_248 (.A(n7160), .B(n34347), .Z(n32373)) /* synthesis lut_function=(A+(B)) */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(59[5] 75[8])
     defparam i966_2_lut_rep_248.init = 16'heeee;
@@ -5342,64 +5342,64 @@ module ClockDivider_U9 (GND_net, debug_c_c, div_factor_reg, n34347,
             .Q(count[0]));   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(74[16:25])
     defparam count_2179__i0.GSR = "ENABLED";
     FD1P3IX int_factor_i0_i31 (.D(div_factor_reg[31]), .SP(n32373), .CD(n14422), 
-            .CK(debug_c_c), .Q(int_factor[31])) /* synthesis LSE_LINE_FILE_ID=8, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
+            .CK(debug_c_c), .Q(int_factor[31])) /* synthesis LSE_LINE_FILE_ID=5, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
     defparam int_factor_i0_i31.GSR = "ENABLED";
     FD1P3IX int_factor_i0_i30 (.D(div_factor_reg[30]), .SP(n32373), .CD(n14422), 
-            .CK(debug_c_c), .Q(int_factor[30])) /* synthesis LSE_LINE_FILE_ID=8, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
+            .CK(debug_c_c), .Q(int_factor[30])) /* synthesis LSE_LINE_FILE_ID=5, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
     defparam int_factor_i0_i30.GSR = "ENABLED";
     FD1P3IX int_factor_i0_i29 (.D(div_factor_reg[29]), .SP(n32373), .CD(n14422), 
-            .CK(debug_c_c), .Q(int_factor[29])) /* synthesis LSE_LINE_FILE_ID=8, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
+            .CK(debug_c_c), .Q(int_factor[29])) /* synthesis LSE_LINE_FILE_ID=5, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
     defparam int_factor_i0_i29.GSR = "ENABLED";
     FD1P3IX int_factor_i0_i28 (.D(div_factor_reg[28]), .SP(n32373), .CD(n14422), 
-            .CK(debug_c_c), .Q(int_factor[28])) /* synthesis LSE_LINE_FILE_ID=8, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
+            .CK(debug_c_c), .Q(int_factor[28])) /* synthesis LSE_LINE_FILE_ID=5, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
     defparam int_factor_i0_i28.GSR = "ENABLED";
     FD1P3IX int_factor_i0_i27 (.D(div_factor_reg[27]), .SP(n32373), .CD(n14422), 
-            .CK(debug_c_c), .Q(int_factor[27])) /* synthesis LSE_LINE_FILE_ID=8, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
+            .CK(debug_c_c), .Q(int_factor[27])) /* synthesis LSE_LINE_FILE_ID=5, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
     defparam int_factor_i0_i27.GSR = "ENABLED";
     FD1P3IX int_factor_i0_i26 (.D(div_factor_reg[26]), .SP(n32373), .CD(n14422), 
-            .CK(debug_c_c), .Q(int_factor[26])) /* synthesis LSE_LINE_FILE_ID=8, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
+            .CK(debug_c_c), .Q(int_factor[26])) /* synthesis LSE_LINE_FILE_ID=5, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
     defparam int_factor_i0_i26.GSR = "ENABLED";
     FD1P3IX int_factor_i0_i25 (.D(div_factor_reg[25]), .SP(n32373), .CD(n14422), 
-            .CK(debug_c_c), .Q(int_factor[25])) /* synthesis LSE_LINE_FILE_ID=8, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
+            .CK(debug_c_c), .Q(int_factor[25])) /* synthesis LSE_LINE_FILE_ID=5, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
     defparam int_factor_i0_i25.GSR = "ENABLED";
     FD1P3IX int_factor_i0_i24 (.D(div_factor_reg[24]), .SP(n32373), .CD(n14422), 
-            .CK(debug_c_c), .Q(int_factor[24])) /* synthesis LSE_LINE_FILE_ID=8, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
+            .CK(debug_c_c), .Q(int_factor[24])) /* synthesis LSE_LINE_FILE_ID=5, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
     defparam int_factor_i0_i24.GSR = "ENABLED";
     FD1P3IX int_factor_i0_i23 (.D(div_factor_reg[23]), .SP(n32373), .CD(n14422), 
-            .CK(debug_c_c), .Q(int_factor[23])) /* synthesis LSE_LINE_FILE_ID=8, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
+            .CK(debug_c_c), .Q(int_factor[23])) /* synthesis LSE_LINE_FILE_ID=5, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
     defparam int_factor_i0_i23.GSR = "ENABLED";
     FD1P3IX int_factor_i0_i22 (.D(div_factor_reg[22]), .SP(n32373), .CD(n14422), 
-            .CK(debug_c_c), .Q(int_factor[22])) /* synthesis LSE_LINE_FILE_ID=8, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
+            .CK(debug_c_c), .Q(int_factor[22])) /* synthesis LSE_LINE_FILE_ID=5, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
     defparam int_factor_i0_i22.GSR = "ENABLED";
     FD1P3IX int_factor_i0_i21 (.D(div_factor_reg[21]), .SP(n32373), .CD(n14422), 
-            .CK(debug_c_c), .Q(int_factor[21])) /* synthesis LSE_LINE_FILE_ID=8, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
+            .CK(debug_c_c), .Q(int_factor[21])) /* synthesis LSE_LINE_FILE_ID=5, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
     defparam int_factor_i0_i21.GSR = "ENABLED";
     FD1P3IX int_factor_i0_i20 (.D(div_factor_reg[20]), .SP(n32373), .CD(n14422), 
-            .CK(debug_c_c), .Q(int_factor[20])) /* synthesis LSE_LINE_FILE_ID=8, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
+            .CK(debug_c_c), .Q(int_factor[20])) /* synthesis LSE_LINE_FILE_ID=5, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
     defparam int_factor_i0_i20.GSR = "ENABLED";
     FD1P3IX int_factor_i0_i19 (.D(div_factor_reg[19]), .SP(n32373), .CD(n14422), 
-            .CK(debug_c_c), .Q(int_factor[19])) /* synthesis LSE_LINE_FILE_ID=8, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
+            .CK(debug_c_c), .Q(int_factor[19])) /* synthesis LSE_LINE_FILE_ID=5, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
     defparam int_factor_i0_i19.GSR = "ENABLED";
     FD1P3IX int_factor_i0_i18 (.D(div_factor_reg[18]), .SP(n32373), .CD(n14422), 
-            .CK(debug_c_c), .Q(int_factor[18])) /* synthesis LSE_LINE_FILE_ID=8, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
+            .CK(debug_c_c), .Q(int_factor[18])) /* synthesis LSE_LINE_FILE_ID=5, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
     defparam int_factor_i0_i18.GSR = "ENABLED";
     FD1P3IX int_factor_i0_i17 (.D(div_factor_reg[17]), .SP(n32373), .CD(n14422), 
-            .CK(debug_c_c), .Q(int_factor[17])) /* synthesis LSE_LINE_FILE_ID=8, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
+            .CK(debug_c_c), .Q(int_factor[17])) /* synthesis LSE_LINE_FILE_ID=5, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
     defparam int_factor_i0_i17.GSR = "ENABLED";
     FD1P3IX int_factor_i0_i16 (.D(div_factor_reg[16]), .SP(n32373), .CD(n14422), 
-            .CK(debug_c_c), .Q(int_factor[16])) /* synthesis LSE_LINE_FILE_ID=8, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
+            .CK(debug_c_c), .Q(int_factor[16])) /* synthesis LSE_LINE_FILE_ID=5, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
     defparam int_factor_i0_i16.GSR = "ENABLED";
     FD1P3IX int_factor_i0_i15 (.D(div_factor_reg[15]), .SP(n32373), .CD(n14422), 
-            .CK(debug_c_c), .Q(int_factor[15])) /* synthesis LSE_LINE_FILE_ID=8, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
+            .CK(debug_c_c), .Q(int_factor[15])) /* synthesis LSE_LINE_FILE_ID=5, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
     defparam int_factor_i0_i15.GSR = "ENABLED";
     FD1P3IX int_factor_i0_i14 (.D(div_factor_reg[14]), .SP(n32373), .CD(n14422), 
-            .CK(debug_c_c), .Q(int_factor[14])) /* synthesis LSE_LINE_FILE_ID=8, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
+            .CK(debug_c_c), .Q(int_factor[14])) /* synthesis LSE_LINE_FILE_ID=5, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
     defparam int_factor_i0_i14.GSR = "ENABLED";
     FD1P3IX int_factor_i0_i13 (.D(div_factor_reg[13]), .SP(n32373), .CD(n14422), 
-            .CK(debug_c_c), .Q(int_factor[13])) /* synthesis LSE_LINE_FILE_ID=8, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
+            .CK(debug_c_c), .Q(int_factor[13])) /* synthesis LSE_LINE_FILE_ID=5, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
     defparam int_factor_i0_i13.GSR = "ENABLED";
     FD1P3IX int_factor_i0_i12 (.D(div_factor_reg[12]), .SP(n32373), .CD(n14422), 
-            .CK(debug_c_c), .Q(int_factor[12])) /* synthesis LSE_LINE_FILE_ID=8, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
+            .CK(debug_c_c), .Q(int_factor[12])) /* synthesis LSE_LINE_FILE_ID=5, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
     defparam int_factor_i0_i12.GSR = "ENABLED";
     FD1S3IX count_2179__i1 (.D(n134[1]), .CK(debug_c_c), .CD(n32373), 
             .Q(count[1]));   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(74[16:25])
@@ -5495,37 +5495,37 @@ module ClockDivider_U9 (GND_net, debug_c_c, div_factor_reg, n34347,
             .Q(count[31]));   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(74[16:25])
     defparam count_2179__i31.GSR = "ENABLED";
     FD1P3IX int_factor_i0_i11 (.D(div_factor_reg[11]), .SP(n32373), .CD(n14422), 
-            .CK(debug_c_c), .Q(int_factor[11])) /* synthesis LSE_LINE_FILE_ID=8, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
+            .CK(debug_c_c), .Q(int_factor[11])) /* synthesis LSE_LINE_FILE_ID=5, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
     defparam int_factor_i0_i11.GSR = "ENABLED";
     FD1P3IX int_factor_i0_i10 (.D(div_factor_reg[10]), .SP(n32373), .CD(n14422), 
-            .CK(debug_c_c), .Q(int_factor[10])) /* synthesis LSE_LINE_FILE_ID=8, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
+            .CK(debug_c_c), .Q(int_factor[10])) /* synthesis LSE_LINE_FILE_ID=5, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
     defparam int_factor_i0_i10.GSR = "ENABLED";
     FD1P3IX int_factor_i0_i9 (.D(div_factor_reg[9]), .SP(n32373), .CD(n14422), 
-            .CK(debug_c_c), .Q(int_factor[9])) /* synthesis LSE_LINE_FILE_ID=8, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
+            .CK(debug_c_c), .Q(int_factor[9])) /* synthesis LSE_LINE_FILE_ID=5, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
     defparam int_factor_i0_i9.GSR = "ENABLED";
     FD1P3IX int_factor_i0_i8 (.D(div_factor_reg[8]), .SP(n32373), .CD(n14422), 
-            .CK(debug_c_c), .Q(int_factor[8])) /* synthesis LSE_LINE_FILE_ID=8, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
+            .CK(debug_c_c), .Q(int_factor[8])) /* synthesis LSE_LINE_FILE_ID=5, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
     defparam int_factor_i0_i8.GSR = "ENABLED";
     FD1P3IX int_factor_i0_i7 (.D(div_factor_reg[7]), .SP(n32373), .CD(n14422), 
-            .CK(debug_c_c), .Q(int_factor[7])) /* synthesis LSE_LINE_FILE_ID=8, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
+            .CK(debug_c_c), .Q(int_factor[7])) /* synthesis LSE_LINE_FILE_ID=5, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
     defparam int_factor_i0_i7.GSR = "ENABLED";
     FD1P3IX int_factor_i0_i6 (.D(div_factor_reg[6]), .SP(n32373), .CD(n14422), 
-            .CK(debug_c_c), .Q(int_factor[6])) /* synthesis LSE_LINE_FILE_ID=8, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
+            .CK(debug_c_c), .Q(int_factor[6])) /* synthesis LSE_LINE_FILE_ID=5, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
     defparam int_factor_i0_i6.GSR = "ENABLED";
     FD1P3IX int_factor_i0_i5 (.D(div_factor_reg[5]), .SP(n32373), .CD(n14422), 
-            .CK(debug_c_c), .Q(int_factor[5])) /* synthesis LSE_LINE_FILE_ID=8, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
+            .CK(debug_c_c), .Q(int_factor[5])) /* synthesis LSE_LINE_FILE_ID=5, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
     defparam int_factor_i0_i5.GSR = "ENABLED";
     FD1P3IX int_factor_i0_i4 (.D(div_factor_reg[4]), .SP(n32373), .CD(n14422), 
-            .CK(debug_c_c), .Q(int_factor[4])) /* synthesis LSE_LINE_FILE_ID=8, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
+            .CK(debug_c_c), .Q(int_factor[4])) /* synthesis LSE_LINE_FILE_ID=5, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
     defparam int_factor_i0_i4.GSR = "ENABLED";
     FD1P3IX int_factor_i0_i3 (.D(div_factor_reg[3]), .SP(n32373), .CD(n14422), 
-            .CK(debug_c_c), .Q(int_factor[3])) /* synthesis LSE_LINE_FILE_ID=8, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
+            .CK(debug_c_c), .Q(int_factor[3])) /* synthesis LSE_LINE_FILE_ID=5, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
     defparam int_factor_i0_i3.GSR = "ENABLED";
     FD1P3IX int_factor_i0_i2 (.D(div_factor_reg[2]), .SP(n32373), .CD(n14422), 
-            .CK(debug_c_c), .Q(int_factor[2])) /* synthesis LSE_LINE_FILE_ID=8, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
+            .CK(debug_c_c), .Q(int_factor[2])) /* synthesis LSE_LINE_FILE_ID=5, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
     defparam int_factor_i0_i2.GSR = "ENABLED";
     FD1P3JX int_factor_i0_i1 (.D(div_factor_reg[1]), .SP(n32373), .PD(n14422), 
-            .CK(debug_c_c), .Q(int_factor[1])) /* synthesis LSE_LINE_FILE_ID=8, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
+            .CK(debug_c_c), .Q(int_factor[1])) /* synthesis LSE_LINE_FILE_ID=5, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
     defparam int_factor_i0_i1.GSR = "ENABLED";
     CCU2D sub_7_add_2_33 (.A0(int_factor[31]), .B0(GND_net), .C0(GND_net), 
           .D0(GND_net), .A1(GND_net), .B1(GND_net), .C1(GND_net), .D1(GND_net), 
@@ -6220,28 +6220,28 @@ module \ArmPeripheral(axis_haddr=8'b010000)  (\register_addr[1] , databus,
     LUT4 mux_1361_i1_3_lut (.A(n224[0]), .B(databus[0]), .C(n3363), .Z(n3364[0])) /* synthesis lut_function=(A (B+!(C))+!A (B (C))) */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(73[5] 127[8])
     defparam mux_1361_i1_3_lut.init = 16'hcaca;
     FD1S3IX steps_reg__i0 (.D(n3364[0]), .CK(debug_c_c), .CD(n34349), 
-            .Q(steps_reg[0])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=574, LSE_RLINE=587 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(steps_reg[0])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=574, LSE_RLINE=587 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam steps_reg__i0.GSR = "ENABLED";
     IFS1P3DX fault_latched_178 (.D(Stepper_Y_nFault_c), .SP(VCC_net), .SCLK(debug_c_c), 
-            .CD(GND_net), .Q(fault_latched)) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=574, LSE_RLINE=587 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .CD(GND_net), .Q(fault_latched)) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=574, LSE_RLINE=587 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam fault_latched_178.GSR = "ENABLED";
-    FD1P3AX read_size__i1 (.D(n30777), .SP(n12954), .CK(debug_c_c), .Q(\read_size[0] )) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=574, LSE_RLINE=587 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+    FD1P3AX read_size__i1 (.D(n30777), .SP(n12954), .CK(debug_c_c), .Q(\read_size[0] )) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=574, LSE_RLINE=587 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam read_size__i1.GSR = "ENABLED";
-    FD1P3AX control_reg_i1 (.D(n579), .SP(n20514), .CK(debug_c_c), .Q(Stepper_Y_M0_c_0)) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=574, LSE_RLINE=587 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+    FD1P3AX control_reg_i1 (.D(n579), .SP(n20514), .CK(debug_c_c), .Q(Stepper_Y_M0_c_0)) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=574, LSE_RLINE=587 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam control_reg_i1.GSR = "ENABLED";
     LUT4 i1_4_lut (.A(div_factor_reg[23]), .B(\register_addr[1] ), .C(steps_reg[23]), 
          .D(\register_addr[0] ), .Z(n30264)) /* synthesis lut_function=(A (B (C+!(D)))+!A (B (C (D)))) */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam i1_4_lut.init = 16'hc088;
-    FD1S3AX prev_step_clk_175 (.D(step_clk), .CK(debug_c_c), .Q(prev_step_clk)) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=574, LSE_RLINE=587 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+    FD1S3AX prev_step_clk_175 (.D(step_clk), .CK(debug_c_c), .Q(prev_step_clk)) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=574, LSE_RLINE=587 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam prev_step_clk_175.GSR = "ENABLED";
-    FD1S3AX limit_latched_176 (.D(n182), .CK(debug_c_c), .Q(limit_latched)) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=574, LSE_RLINE=587 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+    FD1S3AX limit_latched_176 (.D(n182), .CK(debug_c_c), .Q(limit_latched)) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=574, LSE_RLINE=587 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam limit_latched_176.GSR = "ENABLED";
-    FD1S3AX prev_limit_latched_177 (.D(limit_latched), .CK(debug_c_c), .Q(prev_limit_latched)) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=574, LSE_RLINE=587 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+    FD1S3AX prev_limit_latched_177 (.D(limit_latched), .CK(debug_c_c), .Q(prev_limit_latched)) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=574, LSE_RLINE=587 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam prev_limit_latched_177.GSR = "ENABLED";
     FD1P3AX div_factor_reg_i0 (.D(n579), .SP(n12434), .CK(debug_c_c), 
-            .Q(div_factor_reg[0])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=574, LSE_RLINE=587 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(div_factor_reg[0])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=574, LSE_RLINE=587 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam div_factor_reg_i0.GSR = "ENABLED";
-    FD1S3AX prev_select_174 (.D(n32459), .CK(debug_c_c), .Q(prev_select)) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=574, LSE_RLINE=587 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+    FD1S3AX prev_select_174 (.D(n32459), .CK(debug_c_c), .Q(prev_select)) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=574, LSE_RLINE=587 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam prev_select_174.GSR = "ENABLED";
     LUT4 i24762_2_lut_3_lut_4_lut_4_lut (.A(n32523), .B(\register_addr[1] ), 
          .C(n32509), .D(n32527), .Z(n30777)) /* synthesis lut_function=(!(A+(B+(C+(D))))) */ ;
@@ -6265,7 +6265,7 @@ module \ArmPeripheral(axis_haddr=8'b010000)  (\register_addr[1] , databus,
          .D(\select[4] ), .Z(n32449)) /* synthesis lut_function=(!(A+(B+(C+!(D))))) */ ;
     defparam i1_2_lut_rep_324_3_lut_4_lut.init = 16'h0100;
     FD1P3IX read_value__i0 (.D(n30927), .SP(n12954), .CD(GND_net), .CK(debug_c_c), 
-            .Q(read_value[0])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=574, LSE_RLINE=587 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(read_value[0])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=574, LSE_RLINE=587 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam read_value__i0.GSR = "ENABLED";
     LUT4 i1_4_lut_adj_367 (.A(div_factor_reg[10]), .B(\register_addr[1] ), 
          .C(steps_reg[10]), .D(\register_addr[0] ), .Z(n30278)) /* synthesis lut_function=(A (B (C+!(D)))+!A (B (C (D)))) */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
@@ -6274,159 +6274,159 @@ module \ArmPeripheral(axis_haddr=8'b010000)  (\register_addr[1] , databus,
          .C(steps_reg[9]), .D(\register_addr[0] ), .Z(n30270)) /* synthesis lut_function=(A (B (C+!(D)))+!A (B (C (D)))) */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(460[13:26])
     defparam i1_4_lut_adj_368.init = 16'hc088;
     FD1P3JX div_factor_reg_i13 (.D(databus[13]), .SP(n32397), .PD(n34348), 
-            .CK(debug_c_c), .Q(div_factor_reg[13])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=574, LSE_RLINE=587 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .CK(debug_c_c), .Q(div_factor_reg[13])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=574, LSE_RLINE=587 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam div_factor_reg_i13.GSR = "ENABLED";
     FD1P3JX div_factor_reg_i11 (.D(databus[11]), .SP(n32397), .PD(n34351), 
-            .CK(debug_c_c), .Q(div_factor_reg[11])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=574, LSE_RLINE=587 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .CK(debug_c_c), .Q(div_factor_reg[11])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=574, LSE_RLINE=587 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam div_factor_reg_i11.GSR = "ENABLED";
     FD1P3JX div_factor_reg_i10 (.D(databus[10]), .SP(n32397), .PD(n34349), 
-            .CK(debug_c_c), .Q(div_factor_reg[10])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=574, LSE_RLINE=587 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .CK(debug_c_c), .Q(div_factor_reg[10])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=574, LSE_RLINE=587 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam div_factor_reg_i10.GSR = "ENABLED";
     FD1P3JX div_factor_reg_i9 (.D(databus[9]), .SP(n32397), .PD(n34349), 
-            .CK(debug_c_c), .Q(div_factor_reg[9])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=574, LSE_RLINE=587 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .CK(debug_c_c), .Q(div_factor_reg[9])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=574, LSE_RLINE=587 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam div_factor_reg_i9.GSR = "ENABLED";
     FD1P3IX div_factor_reg_i8 (.D(databus[8]), .SP(n32397), .CD(n34349), 
-            .CK(debug_c_c), .Q(div_factor_reg[8])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=574, LSE_RLINE=587 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .CK(debug_c_c), .Q(div_factor_reg[8])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=574, LSE_RLINE=587 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam div_factor_reg_i8.GSR = "ENABLED";
     FD1P3JX div_factor_reg_i7 (.D(databus[7]), .SP(n32397), .PD(n34349), 
-            .CK(debug_c_c), .Q(div_factor_reg[7])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=574, LSE_RLINE=587 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .CK(debug_c_c), .Q(div_factor_reg[7])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=574, LSE_RLINE=587 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam div_factor_reg_i7.GSR = "ENABLED";
     FD1P3JX div_factor_reg_i6 (.D(databus[6]), .SP(n32397), .PD(n34350), 
-            .CK(debug_c_c), .Q(div_factor_reg[6])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=574, LSE_RLINE=587 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .CK(debug_c_c), .Q(div_factor_reg[6])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=574, LSE_RLINE=587 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam div_factor_reg_i6.GSR = "ENABLED";
     FD1P3JX div_factor_reg_i5 (.D(databus[5]), .SP(n32397), .PD(n34350), 
-            .CK(debug_c_c), .Q(div_factor_reg[5])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=574, LSE_RLINE=587 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .CK(debug_c_c), .Q(div_factor_reg[5])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=574, LSE_RLINE=587 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam div_factor_reg_i5.GSR = "ENABLED";
     FD1P3IX div_factor_reg_i4 (.D(databus[4]), .SP(n32397), .CD(n34350), 
-            .CK(debug_c_c), .Q(div_factor_reg[4])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=574, LSE_RLINE=587 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .CK(debug_c_c), .Q(div_factor_reg[4])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=574, LSE_RLINE=587 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam div_factor_reg_i4.GSR = "ENABLED";
     FD1P3IX div_factor_reg_i3 (.D(databus[3]), .SP(n32397), .CD(n34350), 
-            .CK(debug_c_c), .Q(div_factor_reg[3])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=574, LSE_RLINE=587 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .CK(debug_c_c), .Q(div_factor_reg[3])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=574, LSE_RLINE=587 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam div_factor_reg_i3.GSR = "ENABLED";
     FD1P3IX div_factor_reg_i2 (.D(databus[2]), .SP(n32397), .CD(n34352), 
-            .CK(debug_c_c), .Q(div_factor_reg[2])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=574, LSE_RLINE=587 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .CK(debug_c_c), .Q(div_factor_reg[2])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=574, LSE_RLINE=587 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam div_factor_reg_i2.GSR = "ENABLED";
     FD1P3IX div_factor_reg_i1 (.D(databus[1]), .SP(n32397), .CD(n34352), 
-            .CK(debug_c_c), .Q(div_factor_reg[1])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=574, LSE_RLINE=587 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .CK(debug_c_c), .Q(div_factor_reg[1])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=574, LSE_RLINE=587 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam div_factor_reg_i1.GSR = "ENABLED";
     FD1P3IX control_reg_i8 (.D(databus[7]), .SP(n32398), .CD(n9612), .CK(debug_c_c), 
-            .Q(\control_reg[7] )) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=574, LSE_RLINE=587 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(\control_reg[7] )) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=574, LSE_RLINE=587 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam control_reg_i8.GSR = "ENABLED";
     FD1P3JX control_reg_i7 (.D(databus[6]), .SP(n32398), .PD(n34352), 
-            .CK(debug_c_c), .Q(Stepper_Y_En_c)) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=574, LSE_RLINE=587 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .CK(debug_c_c), .Q(Stepper_Y_En_c)) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=574, LSE_RLINE=587 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam control_reg_i7.GSR = "ENABLED";
     FD1P3JX control_reg_i6 (.D(databus[5]), .SP(n32398), .PD(n34352), 
-            .CK(debug_c_c), .Q(Stepper_Y_Dir_c)) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=574, LSE_RLINE=587 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .CK(debug_c_c), .Q(Stepper_Y_Dir_c)) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=574, LSE_RLINE=587 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam control_reg_i6.GSR = "ENABLED";
     FD1P3IX control_reg_i5 (.D(databus[4]), .SP(n32398), .CD(n34348), 
-            .CK(debug_c_c), .Q(control_reg[4])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=574, LSE_RLINE=587 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .CK(debug_c_c), .Q(control_reg[4])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=574, LSE_RLINE=587 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam control_reg_i5.GSR = "ENABLED";
     FD1P3JX control_reg_i4 (.D(databus[3]), .SP(n32398), .PD(n34352), 
-            .CK(debug_c_c), .Q(control_reg[3])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=574, LSE_RLINE=587 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .CK(debug_c_c), .Q(control_reg[3])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=574, LSE_RLINE=587 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam control_reg_i4.GSR = "ENABLED";
     FD1P3IX control_reg_i3 (.D(databus[2]), .SP(n32398), .CD(n34352), 
-            .CK(debug_c_c), .Q(Stepper_Y_M2_c_2)) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=574, LSE_RLINE=587 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .CK(debug_c_c), .Q(Stepper_Y_M2_c_2)) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=574, LSE_RLINE=587 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam control_reg_i3.GSR = "ENABLED";
     FD1P3JX control_reg_i2 (.D(databus[1]), .SP(n32398), .PD(n34352), 
-            .CK(debug_c_c), .Q(Stepper_Y_M1_c_1)) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=574, LSE_RLINE=587 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .CK(debug_c_c), .Q(Stepper_Y_M1_c_1)) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=574, LSE_RLINE=587 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam control_reg_i2.GSR = "ENABLED";
     LUT4 i1_4_lut_adj_369 (.A(div_factor_reg[8]), .B(\register_addr[1] ), 
          .C(steps_reg[8]), .D(\register_addr[0] ), .Z(n30276)) /* synthesis lut_function=(A (B (C+!(D)))+!A (B (C (D)))) */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam i1_4_lut_adj_369.init = 16'hc088;
-    FD1P3AX read_size__i2 (.D(n30474), .SP(n12954), .CK(debug_c_c), .Q(\read_size[2] )) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=574, LSE_RLINE=587 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+    FD1P3AX read_size__i2 (.D(n30474), .SP(n12954), .CK(debug_c_c), .Q(\read_size[2] )) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=574, LSE_RLINE=587 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam read_size__i2.GSR = "ENABLED";
     FD1S3IX steps_reg__i31 (.D(n3364[31]), .CK(debug_c_c), .CD(n34353), 
-            .Q(steps_reg[31])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=574, LSE_RLINE=587 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(steps_reg[31])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=574, LSE_RLINE=587 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam steps_reg__i31.GSR = "ENABLED";
     FD1S3IX steps_reg__i30 (.D(n3364[30]), .CK(debug_c_c), .CD(n34353), 
-            .Q(steps_reg[30])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=574, LSE_RLINE=587 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(steps_reg[30])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=574, LSE_RLINE=587 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam steps_reg__i30.GSR = "ENABLED";
     FD1S3IX steps_reg__i29 (.D(n3364[29]), .CK(debug_c_c), .CD(n34353), 
-            .Q(steps_reg[29])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=574, LSE_RLINE=587 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(steps_reg[29])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=574, LSE_RLINE=587 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam steps_reg__i29.GSR = "ENABLED";
     FD1S3IX steps_reg__i28 (.D(n3364[28]), .CK(debug_c_c), .CD(n34353), 
-            .Q(steps_reg[28])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=574, LSE_RLINE=587 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(steps_reg[28])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=574, LSE_RLINE=587 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam steps_reg__i28.GSR = "ENABLED";
     FD1S3IX steps_reg__i27 (.D(n3364[27]), .CK(debug_c_c), .CD(n34353), 
-            .Q(steps_reg[27])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=574, LSE_RLINE=587 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(steps_reg[27])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=574, LSE_RLINE=587 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam steps_reg__i27.GSR = "ENABLED";
     FD1S3IX steps_reg__i26 (.D(n3364[26]), .CK(debug_c_c), .CD(n34353), 
-            .Q(steps_reg[26])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=574, LSE_RLINE=587 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(steps_reg[26])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=574, LSE_RLINE=587 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam steps_reg__i26.GSR = "ENABLED";
     FD1S3IX steps_reg__i25 (.D(n3364[25]), .CK(debug_c_c), .CD(n34353), 
-            .Q(steps_reg[25])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=574, LSE_RLINE=587 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(steps_reg[25])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=574, LSE_RLINE=587 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam steps_reg__i25.GSR = "ENABLED";
     FD1S3IX steps_reg__i24 (.D(n3364[24]), .CK(debug_c_c), .CD(n34353), 
-            .Q(steps_reg[24])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=574, LSE_RLINE=587 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(steps_reg[24])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=574, LSE_RLINE=587 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam steps_reg__i24.GSR = "ENABLED";
     FD1S3IX steps_reg__i23 (.D(n3364[23]), .CK(debug_c_c), .CD(n34353), 
-            .Q(steps_reg[23])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=574, LSE_RLINE=587 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(steps_reg[23])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=574, LSE_RLINE=587 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam steps_reg__i23.GSR = "ENABLED";
     FD1S3IX steps_reg__i22 (.D(n3364[22]), .CK(debug_c_c), .CD(n34353), 
-            .Q(steps_reg[22])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=574, LSE_RLINE=587 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(steps_reg[22])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=574, LSE_RLINE=587 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam steps_reg__i22.GSR = "ENABLED";
     FD1S3IX steps_reg__i21 (.D(n3364[21]), .CK(debug_c_c), .CD(n34353), 
-            .Q(steps_reg[21])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=574, LSE_RLINE=587 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(steps_reg[21])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=574, LSE_RLINE=587 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam steps_reg__i21.GSR = "ENABLED";
     FD1S3IX steps_reg__i20 (.D(n3364[20]), .CK(debug_c_c), .CD(n34353), 
-            .Q(steps_reg[20])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=574, LSE_RLINE=587 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(steps_reg[20])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=574, LSE_RLINE=587 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam steps_reg__i20.GSR = "ENABLED";
     FD1S3IX steps_reg__i19 (.D(n3364[19]), .CK(debug_c_c), .CD(n34353), 
-            .Q(steps_reg[19])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=574, LSE_RLINE=587 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(steps_reg[19])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=574, LSE_RLINE=587 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam steps_reg__i19.GSR = "ENABLED";
     FD1S3IX steps_reg__i18 (.D(n3364[18]), .CK(debug_c_c), .CD(n34353), 
-            .Q(steps_reg[18])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=574, LSE_RLINE=587 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(steps_reg[18])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=574, LSE_RLINE=587 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam steps_reg__i18.GSR = "ENABLED";
     FD1S3IX steps_reg__i17 (.D(n3364[17]), .CK(debug_c_c), .CD(n34353), 
-            .Q(steps_reg[17])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=574, LSE_RLINE=587 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(steps_reg[17])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=574, LSE_RLINE=587 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam steps_reg__i17.GSR = "ENABLED";
     FD1S3IX steps_reg__i16 (.D(n3364[16]), .CK(debug_c_c), .CD(n34353), 
-            .Q(steps_reg[16])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=574, LSE_RLINE=587 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(steps_reg[16])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=574, LSE_RLINE=587 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam steps_reg__i16.GSR = "ENABLED";
     FD1S3IX steps_reg__i15 (.D(n3364[15]), .CK(debug_c_c), .CD(n34353), 
-            .Q(steps_reg[15])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=574, LSE_RLINE=587 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(steps_reg[15])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=574, LSE_RLINE=587 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam steps_reg__i15.GSR = "ENABLED";
     FD1S3IX steps_reg__i14 (.D(n3364[14]), .CK(debug_c_c), .CD(n34353), 
-            .Q(steps_reg[14])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=574, LSE_RLINE=587 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(steps_reg[14])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=574, LSE_RLINE=587 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam steps_reg__i14.GSR = "ENABLED";
     FD1S3IX steps_reg__i13 (.D(n3364[13]), .CK(debug_c_c), .CD(n34353), 
-            .Q(steps_reg[13])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=574, LSE_RLINE=587 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(steps_reg[13])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=574, LSE_RLINE=587 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam steps_reg__i13.GSR = "ENABLED";
     FD1S3IX steps_reg__i12 (.D(n3364[12]), .CK(debug_c_c), .CD(n34353), 
-            .Q(steps_reg[12])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=574, LSE_RLINE=587 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(steps_reg[12])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=574, LSE_RLINE=587 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam steps_reg__i12.GSR = "ENABLED";
     FD1S3IX steps_reg__i11 (.D(n3364[11]), .CK(debug_c_c), .CD(n34353), 
-            .Q(steps_reg[11])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=574, LSE_RLINE=587 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(steps_reg[11])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=574, LSE_RLINE=587 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam steps_reg__i11.GSR = "ENABLED";
     FD1S3IX steps_reg__i10 (.D(n3364[10]), .CK(debug_c_c), .CD(n34353), 
-            .Q(steps_reg[10])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=574, LSE_RLINE=587 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(steps_reg[10])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=574, LSE_RLINE=587 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam steps_reg__i10.GSR = "ENABLED";
     FD1S3IX steps_reg__i9 (.D(n3364[9]), .CK(debug_c_c), .CD(n34353), 
-            .Q(steps_reg[9])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=574, LSE_RLINE=587 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(steps_reg[9])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=574, LSE_RLINE=587 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam steps_reg__i9.GSR = "ENABLED";
     FD1S3IX steps_reg__i8 (.D(n3364[8]), .CK(debug_c_c), .CD(n34353), 
-            .Q(steps_reg[8])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=574, LSE_RLINE=587 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(steps_reg[8])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=574, LSE_RLINE=587 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam steps_reg__i8.GSR = "ENABLED";
     FD1S3IX steps_reg__i7 (.D(n3364[7]), .CK(debug_c_c), .CD(n34353), 
-            .Q(steps_reg[7])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=574, LSE_RLINE=587 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(steps_reg[7])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=574, LSE_RLINE=587 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam steps_reg__i7.GSR = "ENABLED";
     FD1S3IX steps_reg__i6 (.D(n3364[6]), .CK(debug_c_c), .CD(n34353), 
-            .Q(steps_reg[6])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=574, LSE_RLINE=587 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(steps_reg[6])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=574, LSE_RLINE=587 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam steps_reg__i6.GSR = "ENABLED";
     FD1S3IX steps_reg__i5 (.D(n3364[5]), .CK(debug_c_c), .CD(n34353), 
-            .Q(\steps_reg[5] )) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=574, LSE_RLINE=587 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(\steps_reg[5] )) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=574, LSE_RLINE=587 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam steps_reg__i5.GSR = "ENABLED";
     FD1S3IX steps_reg__i4 (.D(n3364[4]), .CK(debug_c_c), .CD(n34353), 
-            .Q(steps_reg[4])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=574, LSE_RLINE=587 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(steps_reg[4])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=574, LSE_RLINE=587 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam steps_reg__i4.GSR = "ENABLED";
     FD1S3IX steps_reg__i3 (.D(n3364[3]), .CK(debug_c_c), .CD(n34353), 
-            .Q(\steps_reg[3] )) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=574, LSE_RLINE=587 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(\steps_reg[3] )) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=574, LSE_RLINE=587 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam steps_reg__i3.GSR = "ENABLED";
     FD1S3IX steps_reg__i2 (.D(n3364[2]), .CK(debug_c_c), .CD(n34353), 
-            .Q(steps_reg[2])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=574, LSE_RLINE=587 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(steps_reg[2])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=574, LSE_RLINE=587 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam steps_reg__i2.GSR = "ENABLED";
     FD1S3IX steps_reg__i1 (.D(n3364[1]), .CK(debug_c_c), .CD(n34353), 
-            .Q(steps_reg[1])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=574, LSE_RLINE=587 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(steps_reg[1])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=574, LSE_RLINE=587 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam steps_reg__i1.GSR = "ENABLED";
     LUT4 i1_2_lut_rep_295_3_lut (.A(n32459), .B(prev_select), .C(n34344), 
          .Z(n32420)) /* synthesis lut_function=(!((B+(C))+!A)) */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(82[9:30])
@@ -6703,25 +6703,25 @@ module \ArmPeripheral(axis_haddr=8'b010000)  (\register_addr[1] , databus,
          .D(n32442), .Z(n32398)) /* synthesis lut_function=(!(A+((C+(D))+!B))) */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(82[9:30])
     defparam i24742_3_lut_rep_273_3_lut_4_lut.init = 16'h0004;
     FD1P3IX div_factor_reg_i12 (.D(databus[12]), .SP(n12434), .CD(n34348), 
-            .CK(debug_c_c), .Q(div_factor_reg[12])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=574, LSE_RLINE=587 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .CK(debug_c_c), .Q(div_factor_reg[12])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=574, LSE_RLINE=587 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam div_factor_reg_i12.GSR = "ENABLED";
     FD1P3IX div_factor_reg_i14 (.D(databus[14]), .SP(n12434), .CD(n34348), 
-            .CK(debug_c_c), .Q(div_factor_reg[14])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=574, LSE_RLINE=587 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .CK(debug_c_c), .Q(div_factor_reg[14])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=574, LSE_RLINE=587 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam div_factor_reg_i14.GSR = "ENABLED";
     FD1P3IX div_factor_reg_i15 (.D(databus[15]), .SP(n12434), .CD(n34348), 
-            .CK(debug_c_c), .Q(div_factor_reg[15])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=574, LSE_RLINE=587 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .CK(debug_c_c), .Q(div_factor_reg[15])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=574, LSE_RLINE=587 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam div_factor_reg_i15.GSR = "ENABLED";
     FD1P3IX div_factor_reg_i16 (.D(databus[16]), .SP(n12434), .CD(n34351), 
-            .CK(debug_c_c), .Q(div_factor_reg[16])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=574, LSE_RLINE=587 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .CK(debug_c_c), .Q(div_factor_reg[16])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=574, LSE_RLINE=587 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam div_factor_reg_i16.GSR = "ENABLED";
     FD1P3IX div_factor_reg_i17 (.D(databus[17]), .SP(n12434), .CD(n34351), 
-            .CK(debug_c_c), .Q(div_factor_reg[17])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=574, LSE_RLINE=587 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .CK(debug_c_c), .Q(div_factor_reg[17])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=574, LSE_RLINE=587 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam div_factor_reg_i17.GSR = "ENABLED";
     FD1P3IX div_factor_reg_i18 (.D(databus[18]), .SP(n12434), .CD(n34349), 
-            .CK(debug_c_c), .Q(div_factor_reg[18])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=574, LSE_RLINE=587 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .CK(debug_c_c), .Q(div_factor_reg[18])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=574, LSE_RLINE=587 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam div_factor_reg_i18.GSR = "ENABLED";
     FD1P3IX div_factor_reg_i19 (.D(databus[19]), .SP(n12434), .CD(n34349), 
-            .CK(debug_c_c), .Q(div_factor_reg[19])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=574, LSE_RLINE=587 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .CK(debug_c_c), .Q(div_factor_reg[19])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=574, LSE_RLINE=587 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam div_factor_reg_i19.GSR = "ENABLED";
     LUT4 i1_4_lut_adj_371 (.A(div_factor_reg[21]), .B(\register_addr[1] ), 
          .C(steps_reg[21]), .D(\register_addr[0] ), .Z(n30258)) /* synthesis lut_function=(A (B (C+!(D)))+!A (B (C (D)))) */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
@@ -6735,10 +6735,10 @@ module \ArmPeripheral(axis_haddr=8'b010000)  (\register_addr[1] , databus,
          .Z(n58)) /* synthesis lut_function=(A+(B+(C+(D)))) */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam i26_4_lut.init = 16'hfffe;
     FD1P3IX div_factor_reg_i20 (.D(databus[20]), .SP(n12434), .CD(n34349), 
-            .CK(debug_c_c), .Q(div_factor_reg[20])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=574, LSE_RLINE=587 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .CK(debug_c_c), .Q(div_factor_reg[20])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=574, LSE_RLINE=587 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam div_factor_reg_i20.GSR = "ENABLED";
     FD1P3IX div_factor_reg_i21 (.D(databus[21]), .SP(n12434), .CD(n34349), 
-            .CK(debug_c_c), .Q(div_factor_reg[21])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=574, LSE_RLINE=587 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .CK(debug_c_c), .Q(div_factor_reg[21])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=574, LSE_RLINE=587 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam div_factor_reg_i21.GSR = "ENABLED";
     LUT4 i18_4_lut (.A(steps_reg[0]), .B(steps_reg[10]), .C(steps_reg[28]), 
          .D(\steps_reg[3] ), .Z(n50)) /* synthesis lut_function=(A+(B+(C+(D)))) */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
@@ -6746,31 +6746,31 @@ module \ArmPeripheral(axis_haddr=8'b010000)  (\register_addr[1] , databus,
     LUT4 i9_2_lut (.A(steps_reg[12]), .B(steps_reg[18]), .Z(n41)) /* synthesis lut_function=(A+(B)) */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam i9_2_lut.init = 16'heeee;
     FD1P3IX div_factor_reg_i22 (.D(databus[22]), .SP(n12434), .CD(n34351), 
-            .CK(debug_c_c), .Q(div_factor_reg[22])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=574, LSE_RLINE=587 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .CK(debug_c_c), .Q(div_factor_reg[22])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=574, LSE_RLINE=587 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam div_factor_reg_i22.GSR = "ENABLED";
     FD1P3IX div_factor_reg_i23 (.D(databus[23]), .SP(n12434), .CD(n34351), 
-            .CK(debug_c_c), .Q(div_factor_reg[23])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=574, LSE_RLINE=587 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .CK(debug_c_c), .Q(div_factor_reg[23])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=574, LSE_RLINE=587 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam div_factor_reg_i23.GSR = "ENABLED";
     FD1P3IX div_factor_reg_i24 (.D(databus[24]), .SP(n12434), .CD(n34349), 
-            .CK(debug_c_c), .Q(div_factor_reg[24])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=574, LSE_RLINE=587 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .CK(debug_c_c), .Q(div_factor_reg[24])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=574, LSE_RLINE=587 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam div_factor_reg_i24.GSR = "ENABLED";
     FD1P3IX div_factor_reg_i25 (.D(databus[25]), .SP(n12434), .CD(n34349), 
-            .CK(debug_c_c), .Q(div_factor_reg[25])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=574, LSE_RLINE=587 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .CK(debug_c_c), .Q(div_factor_reg[25])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=574, LSE_RLINE=587 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam div_factor_reg_i25.GSR = "ENABLED";
     FD1P3IX div_factor_reg_i26 (.D(databus[26]), .SP(n12434), .CD(n34349), 
-            .CK(debug_c_c), .Q(div_factor_reg[26])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=574, LSE_RLINE=587 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .CK(debug_c_c), .Q(div_factor_reg[26])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=574, LSE_RLINE=587 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam div_factor_reg_i26.GSR = "ENABLED";
     FD1P3IX div_factor_reg_i27 (.D(databus[27]), .SP(n12434), .CD(n34349), 
-            .CK(debug_c_c), .Q(div_factor_reg[27])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=574, LSE_RLINE=587 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .CK(debug_c_c), .Q(div_factor_reg[27])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=574, LSE_RLINE=587 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam div_factor_reg_i27.GSR = "ENABLED";
     FD1P3IX div_factor_reg_i28 (.D(databus[28]), .SP(n12434), .CD(n34348), 
-            .CK(debug_c_c), .Q(div_factor_reg[28])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=574, LSE_RLINE=587 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .CK(debug_c_c), .Q(div_factor_reg[28])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=574, LSE_RLINE=587 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam div_factor_reg_i28.GSR = "ENABLED";
     FD1P3IX div_factor_reg_i29 (.D(databus[29]), .SP(n12434), .CD(n34348), 
-            .CK(debug_c_c), .Q(div_factor_reg[29])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=574, LSE_RLINE=587 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .CK(debug_c_c), .Q(div_factor_reg[29])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=574, LSE_RLINE=587 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam div_factor_reg_i29.GSR = "ENABLED";
     FD1P3IX div_factor_reg_i30 (.D(databus[30]), .SP(n12434), .CD(n34348), 
-            .CK(debug_c_c), .Q(div_factor_reg[30])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=574, LSE_RLINE=587 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .CK(debug_c_c), .Q(div_factor_reg[30])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=574, LSE_RLINE=587 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam div_factor_reg_i30.GSR = "ENABLED";
     LUT4 i28_4_lut (.A(steps_reg[22]), .B(n56), .C(n46), .D(\steps_reg[5] ), 
          .Z(n60)) /* synthesis lut_function=(A+(B+(C+(D)))) */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
@@ -6784,7 +6784,7 @@ module \ArmPeripheral(axis_haddr=8'b010000)  (\register_addr[1] , databus,
     LUT4 i10_2_lut (.A(steps_reg[16]), .B(steps_reg[27]), .Z(n42)) /* synthesis lut_function=(A+(B)) */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam i10_2_lut.init = 16'heeee;
     FD1P3IX div_factor_reg_i31 (.D(databus[31]), .SP(n12434), .CD(n34348), 
-            .CK(debug_c_c), .Q(div_factor_reg[31])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=574, LSE_RLINE=587 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .CK(debug_c_c), .Q(div_factor_reg[31])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=574, LSE_RLINE=587 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam div_factor_reg_i31.GSR = "ENABLED";
     LUT4 i24_4_lut (.A(steps_reg[23]), .B(steps_reg[13]), .C(steps_reg[29]), 
          .D(steps_reg[31]), .Z(n56)) /* synthesis lut_function=(A+(B+(C+(D)))) */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
@@ -6815,95 +6815,95 @@ module \ArmPeripheral(axis_haddr=8'b010000)  (\register_addr[1] , databus,
          .C(steps_reg[16]), .D(\register_addr[0] ), .Z(n30272)) /* synthesis lut_function=(A (B (C+!(D)))+!A (B (C (D)))) */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam i1_4_lut_adj_376.init = 16'hc088;
     FD1P3AX read_value__i31 (.D(n30257), .SP(n12954), .CK(debug_c_c), 
-            .Q(read_value[31])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=574, LSE_RLINE=587 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(read_value[31])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=574, LSE_RLINE=587 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam read_value__i31.GSR = "ENABLED";
     FD1P3AX read_value__i30 (.D(n30265), .SP(n12954), .CK(debug_c_c), 
-            .Q(read_value[30])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=574, LSE_RLINE=587 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(read_value[30])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=574, LSE_RLINE=587 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam read_value__i30.GSR = "ENABLED";
     FD1P3AX read_value__i29 (.D(n30266), .SP(n12954), .CK(debug_c_c), 
-            .Q(read_value[29])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=574, LSE_RLINE=587 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(read_value[29])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=574, LSE_RLINE=587 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam read_value__i29.GSR = "ENABLED";
     FD1P3AX read_value__i28 (.D(n30267), .SP(n12954), .CK(debug_c_c), 
-            .Q(read_value[28])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=574, LSE_RLINE=587 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(read_value[28])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=574, LSE_RLINE=587 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam read_value__i28.GSR = "ENABLED";
     FD1P3AX read_value__i27 (.D(n30268), .SP(n12954), .CK(debug_c_c), 
-            .Q(read_value[27])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=574, LSE_RLINE=587 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(read_value[27])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=574, LSE_RLINE=587 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam read_value__i27.GSR = "ENABLED";
     FD1P3AX read_value__i26 (.D(n30259), .SP(n12954), .CK(debug_c_c), 
-            .Q(read_value[26])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=574, LSE_RLINE=587 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(read_value[26])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=574, LSE_RLINE=587 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam read_value__i26.GSR = "ENABLED";
     FD1P3AX read_value__i25 (.D(n30256), .SP(n12954), .CK(debug_c_c), 
-            .Q(read_value[25])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=574, LSE_RLINE=587 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(read_value[25])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=574, LSE_RLINE=587 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam read_value__i25.GSR = "ENABLED";
     FD1P3AX read_value__i24 (.D(n30279), .SP(n12954), .CK(debug_c_c), 
-            .Q(read_value[24])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=574, LSE_RLINE=587 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(read_value[24])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=574, LSE_RLINE=587 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam read_value__i24.GSR = "ENABLED";
     FD1P3AX read_value__i23 (.D(n30264), .SP(n12954), .CK(debug_c_c), 
-            .Q(read_value[23])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=574, LSE_RLINE=587 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(read_value[23])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=574, LSE_RLINE=587 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam read_value__i23.GSR = "ENABLED";
     FD1P3AX read_value__i22 (.D(n30269), .SP(n12954), .CK(debug_c_c), 
-            .Q(read_value[22])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=574, LSE_RLINE=587 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(read_value[22])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=574, LSE_RLINE=587 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam read_value__i22.GSR = "ENABLED";
     FD1P3AX read_value__i21 (.D(n30258), .SP(n12954), .CK(debug_c_c), 
-            .Q(read_value[21])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=574, LSE_RLINE=587 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(read_value[21])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=574, LSE_RLINE=587 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam read_value__i21.GSR = "ENABLED";
     FD1P3AX read_value__i20 (.D(n30274), .SP(n12954), .CK(debug_c_c), 
-            .Q(read_value[20])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=574, LSE_RLINE=587 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(read_value[20])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=574, LSE_RLINE=587 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam read_value__i20.GSR = "ENABLED";
     FD1P3AX read_value__i19 (.D(n30271), .SP(n12954), .CK(debug_c_c), 
-            .Q(read_value[19])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=574, LSE_RLINE=587 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(read_value[19])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=574, LSE_RLINE=587 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam read_value__i19.GSR = "ENABLED";
     FD1P3AX read_value__i18 (.D(n30277), .SP(n12954), .CK(debug_c_c), 
-            .Q(read_value[18])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=574, LSE_RLINE=587 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(read_value[18])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=574, LSE_RLINE=587 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam read_value__i18.GSR = "ENABLED";
     FD1P3AX read_value__i17 (.D(n30263), .SP(n12954), .CK(debug_c_c), 
-            .Q(read_value[17])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=574, LSE_RLINE=587 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(read_value[17])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=574, LSE_RLINE=587 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam read_value__i17.GSR = "ENABLED";
     FD1P3AX read_value__i16 (.D(n30272), .SP(n12954), .CK(debug_c_c), 
-            .Q(read_value[16])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=574, LSE_RLINE=587 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(read_value[16])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=574, LSE_RLINE=587 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam read_value__i16.GSR = "ENABLED";
     FD1P3AX read_value__i15 (.D(n30261), .SP(n12954), .CK(debug_c_c), 
-            .Q(read_value[15])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=574, LSE_RLINE=587 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(read_value[15])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=574, LSE_RLINE=587 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam read_value__i15.GSR = "ENABLED";
     FD1P3AX read_value__i14 (.D(n30262), .SP(n12954), .CK(debug_c_c), 
-            .Q(read_value[14])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=574, LSE_RLINE=587 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(read_value[14])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=574, LSE_RLINE=587 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam read_value__i14.GSR = "ENABLED";
     FD1P3AX read_value__i13 (.D(n30273), .SP(n12954), .CK(debug_c_c), 
-            .Q(read_value[13])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=574, LSE_RLINE=587 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(read_value[13])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=574, LSE_RLINE=587 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam read_value__i13.GSR = "ENABLED";
     FD1P3AX read_value__i12 (.D(n30260), .SP(n12954), .CK(debug_c_c), 
-            .Q(read_value[12])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=574, LSE_RLINE=587 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(read_value[12])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=574, LSE_RLINE=587 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam read_value__i12.GSR = "ENABLED";
     FD1P3AX read_value__i11 (.D(n30275), .SP(n12954), .CK(debug_c_c), 
-            .Q(read_value[11])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=574, LSE_RLINE=587 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(read_value[11])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=574, LSE_RLINE=587 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam read_value__i11.GSR = "ENABLED";
     FD1P3AX read_value__i10 (.D(n30278), .SP(n12954), .CK(debug_c_c), 
-            .Q(read_value[10])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=574, LSE_RLINE=587 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(read_value[10])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=574, LSE_RLINE=587 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam read_value__i10.GSR = "ENABLED";
-    FD1P3AX read_value__i9 (.D(n30270), .SP(n12954), .CK(debug_c_c), .Q(read_value[9])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=574, LSE_RLINE=587 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+    FD1P3AX read_value__i9 (.D(n30270), .SP(n12954), .CK(debug_c_c), .Q(read_value[9])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=574, LSE_RLINE=587 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam read_value__i9.GSR = "ENABLED";
-    FD1P3AX read_value__i8 (.D(n30276), .SP(n12954), .CK(debug_c_c), .Q(read_value[8])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=574, LSE_RLINE=587 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+    FD1P3AX read_value__i8 (.D(n30276), .SP(n12954), .CK(debug_c_c), .Q(read_value[8])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=574, LSE_RLINE=587 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam read_value__i8.GSR = "ENABLED";
     FD1P3IX read_value__i7 (.D(n5468[7]), .SP(n12954), .CD(GND_net), .CK(debug_c_c), 
-            .Q(read_value[7])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=574, LSE_RLINE=587 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(read_value[7])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=574, LSE_RLINE=587 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam read_value__i7.GSR = "ENABLED";
     FD1P3IX read_value__i6 (.D(n6), .SP(n12954), .CD(GND_net), .CK(debug_c_c), 
-            .Q(read_value[6])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=574, LSE_RLINE=587 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(read_value[6])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=574, LSE_RLINE=587 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam read_value__i6.GSR = "ENABLED";
     FD1P3IX read_value__i5 (.D(n18906), .SP(n12954), .CD(GND_net), .CK(debug_c_c), 
-            .Q(read_value[5])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=574, LSE_RLINE=587 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(read_value[5])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=574, LSE_RLINE=587 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam read_value__i5.GSR = "ENABLED";
     FD1P3IX read_value__i4 (.D(n5468[4]), .SP(n12954), .CD(GND_net), .CK(debug_c_c), 
-            .Q(read_value[4])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=574, LSE_RLINE=587 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(read_value[4])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=574, LSE_RLINE=587 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam read_value__i4.GSR = "ENABLED";
     FD1P3IX read_value__i3 (.D(n5468[3]), .SP(n12954), .CD(GND_net), .CK(debug_c_c), 
-            .Q(read_value[3])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=574, LSE_RLINE=587 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(read_value[3])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=574, LSE_RLINE=587 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam read_value__i3.GSR = "ENABLED";
     FD1P3IX read_value__i2 (.D(n30891), .SP(n12954), .CD(GND_net), .CK(debug_c_c), 
-            .Q(read_value[2])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=574, LSE_RLINE=587 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(read_value[2])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=574, LSE_RLINE=587 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam read_value__i2.GSR = "ENABLED";
     FD1P3IX read_value__i1 (.D(n30885), .SP(n12954), .CD(GND_net), .CK(debug_c_c), 
-            .Q(read_value[1])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=574, LSE_RLINE=587 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(read_value[1])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=574, LSE_RLINE=587 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam read_value__i1.GSR = "ENABLED";
     LUT4 i14010_2_lut (.A(Stepper_Y_En_c), .B(\register_addr[0] ), .Z(n7324[6])) /* synthesis lut_function=(!((B)+!A)) */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(84[8] 110[15])
     defparam i14010_2_lut.init = 16'h2222;
@@ -7007,7 +7007,7 @@ module ClockDivider_U7 (n34347, debug_c_c, div_factor_reg, step_clk,
     LUT4 i8630_2_lut_3_lut (.A(n6952), .B(n34347), .C(n6986), .Z(n14396)) /* synthesis lut_function=(A (C)+!A (B (C))) */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(59[5] 75[8])
     defparam i8630_2_lut_3_lut.init = 16'he0e0;
     FD1P3IX int_factor_i0_i0 (.D(div_factor_reg[0]), .SP(n32371), .CD(n14396), 
-            .CK(debug_c_c), .Q(int_factor[0])) /* synthesis LSE_LINE_FILE_ID=8, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
+            .CK(debug_c_c), .Q(int_factor[0])) /* synthesis LSE_LINE_FILE_ID=5, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
     defparam int_factor_i0_i0.GSR = "ENABLED";
     LUT4 i958_2_lut_rep_246 (.A(n6952), .B(n34347), .Z(n32371)) /* synthesis lut_function=(A+(B)) */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(59[5] 75[8])
     defparam i958_2_lut_rep_246.init = 16'heeee;
@@ -7229,85 +7229,85 @@ module ClockDivider_U7 (n34347, debug_c_c, div_factor_reg, step_clk,
     defparam sub_7_add_2_1.INJECT1_0 = "NO";
     defparam sub_7_add_2_1.INJECT1_1 = "NO";
     FD1P3IX int_factor_i0_i31 (.D(div_factor_reg[31]), .SP(n32371), .CD(n14396), 
-            .CK(debug_c_c), .Q(int_factor[31])) /* synthesis LSE_LINE_FILE_ID=8, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
+            .CK(debug_c_c), .Q(int_factor[31])) /* synthesis LSE_LINE_FILE_ID=5, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
     defparam int_factor_i0_i31.GSR = "ENABLED";
     FD1P3IX int_factor_i0_i30 (.D(div_factor_reg[30]), .SP(n32371), .CD(n14396), 
-            .CK(debug_c_c), .Q(int_factor[30])) /* synthesis LSE_LINE_FILE_ID=8, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
+            .CK(debug_c_c), .Q(int_factor[30])) /* synthesis LSE_LINE_FILE_ID=5, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
     defparam int_factor_i0_i30.GSR = "ENABLED";
     FD1P3IX int_factor_i0_i29 (.D(div_factor_reg[29]), .SP(n32371), .CD(n14396), 
-            .CK(debug_c_c), .Q(int_factor[29])) /* synthesis LSE_LINE_FILE_ID=8, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
+            .CK(debug_c_c), .Q(int_factor[29])) /* synthesis LSE_LINE_FILE_ID=5, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
     defparam int_factor_i0_i29.GSR = "ENABLED";
     FD1P3IX int_factor_i0_i28 (.D(div_factor_reg[28]), .SP(n32371), .CD(n14396), 
-            .CK(debug_c_c), .Q(int_factor[28])) /* synthesis LSE_LINE_FILE_ID=8, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
+            .CK(debug_c_c), .Q(int_factor[28])) /* synthesis LSE_LINE_FILE_ID=5, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
     defparam int_factor_i0_i28.GSR = "ENABLED";
     FD1P3IX int_factor_i0_i27 (.D(div_factor_reg[27]), .SP(n32371), .CD(n14396), 
-            .CK(debug_c_c), .Q(int_factor[27])) /* synthesis LSE_LINE_FILE_ID=8, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
+            .CK(debug_c_c), .Q(int_factor[27])) /* synthesis LSE_LINE_FILE_ID=5, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
     defparam int_factor_i0_i27.GSR = "ENABLED";
     FD1P3IX int_factor_i0_i26 (.D(div_factor_reg[26]), .SP(n32371), .CD(n14396), 
-            .CK(debug_c_c), .Q(int_factor[26])) /* synthesis LSE_LINE_FILE_ID=8, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
+            .CK(debug_c_c), .Q(int_factor[26])) /* synthesis LSE_LINE_FILE_ID=5, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
     defparam int_factor_i0_i26.GSR = "ENABLED";
     FD1P3IX int_factor_i0_i25 (.D(div_factor_reg[25]), .SP(n32371), .CD(n14396), 
-            .CK(debug_c_c), .Q(int_factor[25])) /* synthesis LSE_LINE_FILE_ID=8, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
+            .CK(debug_c_c), .Q(int_factor[25])) /* synthesis LSE_LINE_FILE_ID=5, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
     defparam int_factor_i0_i25.GSR = "ENABLED";
     FD1P3IX int_factor_i0_i24 (.D(div_factor_reg[24]), .SP(n32371), .CD(n14396), 
-            .CK(debug_c_c), .Q(int_factor[24])) /* synthesis LSE_LINE_FILE_ID=8, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
+            .CK(debug_c_c), .Q(int_factor[24])) /* synthesis LSE_LINE_FILE_ID=5, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
     defparam int_factor_i0_i24.GSR = "ENABLED";
     FD1P3IX int_factor_i0_i23 (.D(div_factor_reg[23]), .SP(n32371), .CD(n14396), 
-            .CK(debug_c_c), .Q(int_factor[23])) /* synthesis LSE_LINE_FILE_ID=8, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
+            .CK(debug_c_c), .Q(int_factor[23])) /* synthesis LSE_LINE_FILE_ID=5, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
     defparam int_factor_i0_i23.GSR = "ENABLED";
     FD1P3IX int_factor_i0_i22 (.D(div_factor_reg[22]), .SP(n32371), .CD(n14396), 
-            .CK(debug_c_c), .Q(int_factor[22])) /* synthesis LSE_LINE_FILE_ID=8, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
+            .CK(debug_c_c), .Q(int_factor[22])) /* synthesis LSE_LINE_FILE_ID=5, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
     defparam int_factor_i0_i22.GSR = "ENABLED";
     FD1P3IX int_factor_i0_i21 (.D(div_factor_reg[21]), .SP(n32371), .CD(n14396), 
-            .CK(debug_c_c), .Q(int_factor[21])) /* synthesis LSE_LINE_FILE_ID=8, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
+            .CK(debug_c_c), .Q(int_factor[21])) /* synthesis LSE_LINE_FILE_ID=5, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
     defparam int_factor_i0_i21.GSR = "ENABLED";
     FD1P3IX int_factor_i0_i20 (.D(div_factor_reg[20]), .SP(n32371), .CD(n14396), 
-            .CK(debug_c_c), .Q(int_factor[20])) /* synthesis LSE_LINE_FILE_ID=8, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
+            .CK(debug_c_c), .Q(int_factor[20])) /* synthesis LSE_LINE_FILE_ID=5, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
     defparam int_factor_i0_i20.GSR = "ENABLED";
     FD1P3IX int_factor_i0_i19 (.D(div_factor_reg[19]), .SP(n32371), .CD(n14396), 
-            .CK(debug_c_c), .Q(int_factor[19])) /* synthesis LSE_LINE_FILE_ID=8, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
+            .CK(debug_c_c), .Q(int_factor[19])) /* synthesis LSE_LINE_FILE_ID=5, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
     defparam int_factor_i0_i19.GSR = "ENABLED";
     FD1P3IX int_factor_i0_i18 (.D(div_factor_reg[18]), .SP(n32371), .CD(n14396), 
-            .CK(debug_c_c), .Q(int_factor[18])) /* synthesis LSE_LINE_FILE_ID=8, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
+            .CK(debug_c_c), .Q(int_factor[18])) /* synthesis LSE_LINE_FILE_ID=5, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
     defparam int_factor_i0_i18.GSR = "ENABLED";
     FD1P3IX int_factor_i0_i17 (.D(div_factor_reg[17]), .SP(n32371), .CD(n14396), 
-            .CK(debug_c_c), .Q(int_factor[17])) /* synthesis LSE_LINE_FILE_ID=8, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
+            .CK(debug_c_c), .Q(int_factor[17])) /* synthesis LSE_LINE_FILE_ID=5, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
     defparam int_factor_i0_i17.GSR = "ENABLED";
     FD1P3IX int_factor_i0_i16 (.D(div_factor_reg[16]), .SP(n32371), .CD(n14396), 
-            .CK(debug_c_c), .Q(int_factor[16])) /* synthesis LSE_LINE_FILE_ID=8, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
+            .CK(debug_c_c), .Q(int_factor[16])) /* synthesis LSE_LINE_FILE_ID=5, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
     defparam int_factor_i0_i16.GSR = "ENABLED";
     FD1P3IX int_factor_i0_i15 (.D(div_factor_reg[15]), .SP(n32371), .CD(n14396), 
-            .CK(debug_c_c), .Q(int_factor[15])) /* synthesis LSE_LINE_FILE_ID=8, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
+            .CK(debug_c_c), .Q(int_factor[15])) /* synthesis LSE_LINE_FILE_ID=5, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
     defparam int_factor_i0_i15.GSR = "ENABLED";
     FD1P3IX int_factor_i0_i14 (.D(div_factor_reg[14]), .SP(n32371), .CD(n14396), 
-            .CK(debug_c_c), .Q(int_factor[14])) /* synthesis LSE_LINE_FILE_ID=8, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
+            .CK(debug_c_c), .Q(int_factor[14])) /* synthesis LSE_LINE_FILE_ID=5, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
     defparam int_factor_i0_i14.GSR = "ENABLED";
     FD1P3IX int_factor_i0_i13 (.D(div_factor_reg[13]), .SP(n32371), .CD(n14396), 
-            .CK(debug_c_c), .Q(int_factor[13])) /* synthesis LSE_LINE_FILE_ID=8, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
+            .CK(debug_c_c), .Q(int_factor[13])) /* synthesis LSE_LINE_FILE_ID=5, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
     defparam int_factor_i0_i13.GSR = "ENABLED";
     FD1P3IX int_factor_i0_i12 (.D(div_factor_reg[12]), .SP(n32371), .CD(n14396), 
-            .CK(debug_c_c), .Q(int_factor[12])) /* synthesis LSE_LINE_FILE_ID=8, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
+            .CK(debug_c_c), .Q(int_factor[12])) /* synthesis LSE_LINE_FILE_ID=5, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
     defparam int_factor_i0_i12.GSR = "ENABLED";
     FD1P3IX int_factor_i0_i11 (.D(div_factor_reg[11]), .SP(n32371), .CD(n14396), 
-            .CK(debug_c_c), .Q(int_factor[11])) /* synthesis LSE_LINE_FILE_ID=8, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
+            .CK(debug_c_c), .Q(int_factor[11])) /* synthesis LSE_LINE_FILE_ID=5, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
     defparam int_factor_i0_i11.GSR = "ENABLED";
     FD1P3IX int_factor_i0_i10 (.D(div_factor_reg[10]), .SP(n32371), .CD(n14396), 
-            .CK(debug_c_c), .Q(int_factor[10])) /* synthesis LSE_LINE_FILE_ID=8, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
+            .CK(debug_c_c), .Q(int_factor[10])) /* synthesis LSE_LINE_FILE_ID=5, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
     defparam int_factor_i0_i10.GSR = "ENABLED";
     FD1P3IX int_factor_i0_i9 (.D(div_factor_reg[9]), .SP(n32371), .CD(n14396), 
-            .CK(debug_c_c), .Q(int_factor[9])) /* synthesis LSE_LINE_FILE_ID=8, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
+            .CK(debug_c_c), .Q(int_factor[9])) /* synthesis LSE_LINE_FILE_ID=5, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
     defparam int_factor_i0_i9.GSR = "ENABLED";
     FD1P3IX int_factor_i0_i8 (.D(div_factor_reg[8]), .SP(n32371), .CD(n14396), 
-            .CK(debug_c_c), .Q(int_factor[8])) /* synthesis LSE_LINE_FILE_ID=8, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
+            .CK(debug_c_c), .Q(int_factor[8])) /* synthesis LSE_LINE_FILE_ID=5, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
     defparam int_factor_i0_i8.GSR = "ENABLED";
     FD1P3IX int_factor_i0_i7 (.D(div_factor_reg[7]), .SP(n32371), .CD(n14396), 
-            .CK(debug_c_c), .Q(int_factor[7])) /* synthesis LSE_LINE_FILE_ID=8, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
+            .CK(debug_c_c), .Q(int_factor[7])) /* synthesis LSE_LINE_FILE_ID=5, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
     defparam int_factor_i0_i7.GSR = "ENABLED";
     FD1P3IX int_factor_i0_i6 (.D(div_factor_reg[6]), .SP(n32371), .CD(n14396), 
-            .CK(debug_c_c), .Q(int_factor[6])) /* synthesis LSE_LINE_FILE_ID=8, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
+            .CK(debug_c_c), .Q(int_factor[6])) /* synthesis LSE_LINE_FILE_ID=5, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
     defparam int_factor_i0_i6.GSR = "ENABLED";
     FD1P3IX int_factor_i0_i5 (.D(div_factor_reg[5]), .SP(n32371), .CD(n14396), 
-            .CK(debug_c_c), .Q(int_factor[5])) /* synthesis LSE_LINE_FILE_ID=8, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
+            .CK(debug_c_c), .Q(int_factor[5])) /* synthesis LSE_LINE_FILE_ID=5, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
     defparam int_factor_i0_i5.GSR = "ENABLED";
     CCU2D sub_1719_add_2_33 (.A0(count[31]), .B0(GND_net), .C0(GND_net), 
           .D0(GND_net), .A1(GND_net), .B1(GND_net), .C1(GND_net), .D1(GND_net), 
@@ -7324,7 +7324,7 @@ module ClockDivider_U7 (n34347, debug_c_c, div_factor_reg, step_clk,
     defparam sub_1719_add_2_31.INJECT1_0 = "NO";
     defparam sub_1719_add_2_31.INJECT1_1 = "NO";
     FD1P3IX int_factor_i0_i4 (.D(div_factor_reg[4]), .SP(n32371), .CD(n14396), 
-            .CK(debug_c_c), .Q(int_factor[4])) /* synthesis LSE_LINE_FILE_ID=8, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
+            .CK(debug_c_c), .Q(int_factor[4])) /* synthesis LSE_LINE_FILE_ID=5, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
     defparam int_factor_i0_i4.GSR = "ENABLED";
     CCU2D sub_1719_add_2_29 (.A0(count[27]), .B0(int_factor[28]), .C0(GND_net), 
           .D0(GND_net), .A1(count[28]), .B1(int_factor[29]), .C1(GND_net), 
@@ -7348,7 +7348,7 @@ module ClockDivider_U7 (n34347, debug_c_c, div_factor_reg, step_clk,
     defparam sub_1719_add_2_25.INJECT1_0 = "NO";
     defparam sub_1719_add_2_25.INJECT1_1 = "NO";
     FD1P3IX int_factor_i0_i3 (.D(div_factor_reg[3]), .SP(n32371), .CD(n14396), 
-            .CK(debug_c_c), .Q(int_factor[3])) /* synthesis LSE_LINE_FILE_ID=8, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
+            .CK(debug_c_c), .Q(int_factor[3])) /* synthesis LSE_LINE_FILE_ID=5, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
     defparam int_factor_i0_i3.GSR = "ENABLED";
     CCU2D sub_1719_add_2_23 (.A0(count[21]), .B0(int_factor[22]), .C0(GND_net), 
           .D0(GND_net), .A1(count[22]), .B1(int_factor[23]), .C1(GND_net), 
@@ -7372,7 +7372,7 @@ module ClockDivider_U7 (n34347, debug_c_c, div_factor_reg, step_clk,
     defparam sub_1719_add_2_19.INJECT1_0 = "NO";
     defparam sub_1719_add_2_19.INJECT1_1 = "NO";
     FD1P3IX int_factor_i0_i2 (.D(div_factor_reg[2]), .SP(n32371), .CD(n14396), 
-            .CK(debug_c_c), .Q(int_factor[2])) /* synthesis LSE_LINE_FILE_ID=8, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
+            .CK(debug_c_c), .Q(int_factor[2])) /* synthesis LSE_LINE_FILE_ID=5, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
     defparam int_factor_i0_i2.GSR = "ENABLED";
     CCU2D sub_1719_add_2_17 (.A0(count[15]), .B0(int_factor[16]), .C0(GND_net), 
           .D0(GND_net), .A1(count[16]), .B1(int_factor[17]), .C1(GND_net), 
@@ -7389,7 +7389,7 @@ module ClockDivider_U7 (n34347, debug_c_c, div_factor_reg, step_clk,
     defparam sub_1719_add_2_15.INJECT1_0 = "NO";
     defparam sub_1719_add_2_15.INJECT1_1 = "NO";
     FD1P3JX int_factor_i0_i1 (.D(div_factor_reg[1]), .SP(n32371), .PD(n14396), 
-            .CK(debug_c_c), .Q(int_factor[1])) /* synthesis LSE_LINE_FILE_ID=8, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
+            .CK(debug_c_c), .Q(int_factor[1])) /* synthesis LSE_LINE_FILE_ID=5, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
     defparam int_factor_i0_i1.GSR = "ENABLED";
     CCU2D sub_1719_add_2_13 (.A0(count[11]), .B0(int_factor[12]), .C0(GND_net), 
           .D0(GND_net), .A1(count[12]), .B1(int_factor[13]), .C1(GND_net), 
@@ -8194,7 +8194,7 @@ module RCPeripheral (\register_addr[0] , databus_out, n2, rw, databus,
     LUT4 \register_1[[4__bdd_2_lut_25985  (.A(\register[1] [4]), .B(\register_addr[0] ), 
          .Z(n32287)) /* synthesis lut_function=(A (B)) */ ;
     defparam \register_1[[4__bdd_2_lut_25985 .init = 16'h8888;
-    FD1S3AX read_size_i1 (.D(n176), .CK(\select[7] ), .Q(read_size_c[0])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=15, LSE_RCOL=41, LSE_LLINE=622, LSE_RLINE=634 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/pwm.v(219[9] 231[6])
+    FD1S3AX read_size_i1 (.D(n176), .CK(\select[7] ), .Q(read_size_c[0])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=15, LSE_RCOL=41, LSE_LLINE=622, LSE_RLINE=634 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/pwm.v(219[9] 231[6])
     defparam read_size_i1.GSR = "ENABLED";
     LUT4 i1_2_lut_3_lut_4_lut (.A(n32527), .B(n32509), .C(n30454), .D(\register_addr[1] ), 
          .Z(n30363)) /* synthesis lut_function=(!(A+(B+!(C (D))))) */ ;
@@ -8362,7 +8362,7 @@ module RCPeripheral (\register_addr[0] , databus_out, n2, rw, databus,
          .C(n32407), .D(n52), .Z(n8_adj_199)) /* synthesis lut_function=(A (B (C+(D))+!B (C))+!A (B (D))) */ ;
     defparam i2_4_lut_adj_291.init = 16'heca0;
     FD1S3IX read_value__i0 (.D(n31531), .CK(\select[7] ), .CD(n32460), 
-            .Q(read_value_adj_368[0])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=15, LSE_RCOL=41, LSE_LLINE=622, LSE_RLINE=634 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/pwm.v(219[9] 231[6])
+            .Q(read_value_adj_368[0])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=15, LSE_RCOL=41, LSE_LLINE=622, LSE_RLINE=634 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/pwm.v(219[9] 231[6])
     defparam read_value__i0.GSR = "ENABLED";
     LUT4 i2_4_lut_adj_292 (.A(\read_value[25]_adj_87 ), .B(read_value[25]), 
          .C(n32407), .D(n52), .Z(n8_adj_181)) /* synthesis lut_function=(A (B (C+(D))+!B (C))+!A (B (D))) */ ;
@@ -8416,27 +8416,27 @@ module RCPeripheral (\register_addr[0] , databus_out, n2, rw, databus,
          .C(n32407), .D(n52), .Z(n8_adj_213)) /* synthesis lut_function=(A (B (C+(D))+!B (C))+!A (B (D))) */ ;
     defparam i2_4_lut_adj_303.init = 16'heca0;
     FD1S3IX read_value__i7 (.D(n31808), .CK(\select[7] ), .CD(n32460), 
-            .Q(read_value_adj_368[7])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=15, LSE_RCOL=41, LSE_LLINE=622, LSE_RLINE=634 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/pwm.v(219[9] 231[6])
+            .Q(read_value_adj_368[7])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=15, LSE_RCOL=41, LSE_LLINE=622, LSE_RLINE=634 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/pwm.v(219[9] 231[6])
     defparam read_value__i7.GSR = "ENABLED";
     LUT4 i1_2_lut (.A(\register_addr[4] ), .B(\register_addr[5] ), .Z(n30454)) /* synthesis lut_function=(A (B)) */ ;
     defparam i1_2_lut.init = 16'h8888;
     FD1S3IX read_value__i6 (.D(n32233), .CK(\select[7] ), .CD(n32460), 
-            .Q(read_value_adj_368[6])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=15, LSE_RCOL=41, LSE_LLINE=622, LSE_RLINE=634 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/pwm.v(219[9] 231[6])
+            .Q(read_value_adj_368[6])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=15, LSE_RCOL=41, LSE_LLINE=622, LSE_RLINE=634 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/pwm.v(219[9] 231[6])
     defparam read_value__i6.GSR = "ENABLED";
     FD1S3IX read_value__i5 (.D(n32319), .CK(\select[7] ), .CD(n32460), 
-            .Q(read_value_adj_368[5])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=15, LSE_RCOL=41, LSE_LLINE=622, LSE_RLINE=634 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/pwm.v(219[9] 231[6])
+            .Q(read_value_adj_368[5])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=15, LSE_RCOL=41, LSE_LLINE=622, LSE_RLINE=634 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/pwm.v(219[9] 231[6])
     defparam read_value__i5.GSR = "ENABLED";
     FD1S3IX read_value__i4 (.D(n32289), .CK(\select[7] ), .CD(n32460), 
-            .Q(read_value_adj_368[4])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=15, LSE_RCOL=41, LSE_LLINE=622, LSE_RLINE=634 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/pwm.v(219[9] 231[6])
+            .Q(read_value_adj_368[4])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=15, LSE_RCOL=41, LSE_LLINE=622, LSE_RLINE=634 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/pwm.v(219[9] 231[6])
     defparam read_value__i4.GSR = "ENABLED";
     FD1S3IX read_value__i3 (.D(n31775), .CK(\select[7] ), .CD(n32460), 
-            .Q(read_value_adj_368[3])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=15, LSE_RCOL=41, LSE_LLINE=622, LSE_RLINE=634 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/pwm.v(219[9] 231[6])
+            .Q(read_value_adj_368[3])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=15, LSE_RCOL=41, LSE_LLINE=622, LSE_RLINE=634 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/pwm.v(219[9] 231[6])
     defparam read_value__i3.GSR = "ENABLED";
     FD1S3IX read_value__i2 (.D(n32272), .CK(\select[7] ), .CD(n32460), 
-            .Q(read_value_adj_368[2])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=15, LSE_RCOL=41, LSE_LLINE=622, LSE_RLINE=634 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/pwm.v(219[9] 231[6])
+            .Q(read_value_adj_368[2])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=15, LSE_RCOL=41, LSE_LLINE=622, LSE_RLINE=634 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/pwm.v(219[9] 231[6])
     defparam read_value__i2.GSR = "ENABLED";
     FD1S3IX read_value__i1 (.D(n32359), .CK(\select[7] ), .CD(n32460), 
-            .Q(read_value_adj_368[1])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=15, LSE_RCOL=41, LSE_LLINE=622, LSE_RLINE=634 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/pwm.v(219[9] 231[6])
+            .Q(read_value_adj_368[1])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=15, LSE_RCOL=41, LSE_LLINE=622, LSE_RLINE=634 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/pwm.v(219[9] 231[6])
     defparam read_value__i1.GSR = "ENABLED";
     LUT4 i5_4_lut_adj_304 (.A(databus_out[24]), .B(n10_adj_227), .C(n2_adj_103), 
          .D(rw), .Z(databus[24])) /* synthesis lut_function=(A (B+(C+!(D)))+!A (B+(C))) */ ;
@@ -10921,26 +10921,26 @@ module \ProtocolInterface(baud_div=12)  (n32378, n30431, databus, n224,
     LUT4 i3_4_lut (.A(esc_data[2]), .B(n32535), .C(n30), .D(n30682), 
          .Z(n8)) /* synthesis lut_function=(!(A (B+!(C))+!A (B+!(C+!(D))))) */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(89[6] 326[13])
     defparam i3_4_lut.init = 16'h3031;
-    FD1S3IX bufcount__i3 (.D(n32578), .CK(debug_c_c), .CD(n32452), .Q(bufcount[3])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=26, LSE_RCOL=57, LSE_LLINE=475, LSE_RLINE=485 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
+    FD1S3IX bufcount__i3 (.D(n32578), .CK(debug_c_c), .CD(n32452), .Q(bufcount[3])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=26, LSE_RCOL=57, LSE_LLINE=475, LSE_RLINE=485 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
     defparam bufcount__i3.GSR = "ENABLED";
     LUT4 i1_4_lut_adj_51 (.A(esc_data[1]), .B(esc_data[2]), .C(esc_data[4]), 
          .D(esc_data[3]), .Z(n30)) /* synthesis lut_function=(!((B ((D)+!C)+!B !(C (D)))+!A)) */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(89[6] 326[13])
     defparam i1_4_lut_adj_51.init = 16'h2080;
-    FD1S3IX bufcount__i2 (.D(n33942), .CK(debug_c_c), .CD(n32452), .Q(bufcount[2])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=26, LSE_RCOL=57, LSE_LLINE=475, LSE_RLINE=485 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
+    FD1S3IX bufcount__i2 (.D(n33942), .CK(debug_c_c), .CD(n32452), .Q(bufcount[2])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=26, LSE_RCOL=57, LSE_LLINE=475, LSE_RLINE=485 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
     defparam bufcount__i2.GSR = "ENABLED";
-    FD1S3IX bufcount__i1 (.D(n14083), .CK(debug_c_c), .CD(n32452), .Q(bufcount[1])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=26, LSE_RCOL=57, LSE_LLINE=475, LSE_RLINE=485 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
+    FD1S3IX bufcount__i1 (.D(n14083), .CK(debug_c_c), .CD(n32452), .Q(bufcount[1])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=26, LSE_RCOL=57, LSE_LLINE=475, LSE_RLINE=485 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
     defparam bufcount__i1.GSR = "ENABLED";
     FD1P3AX tx_data_i0_i4 (.D(n2028[4]), .SP(n32450), .CK(debug_c_c), 
-            .Q(tx_data[4])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=26, LSE_RCOL=57, LSE_LLINE=475, LSE_RLINE=485 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
+            .Q(tx_data[4])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=26, LSE_RCOL=57, LSE_LLINE=475, LSE_RLINE=485 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
     defparam tx_data_i0_i4.GSR = "ENABLED";
     FD1P3AX tx_data_i0_i3 (.D(n2028[3]), .SP(n32450), .CK(debug_c_c), 
-            .Q(tx_data[3])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=26, LSE_RCOL=57, LSE_LLINE=475, LSE_RLINE=485 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
+            .Q(tx_data[3])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=26, LSE_RCOL=57, LSE_LLINE=475, LSE_RLINE=485 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
     defparam tx_data_i0_i3.GSR = "ENABLED";
     FD1P3AX tx_data_i0_i1 (.D(n2028[1]), .SP(n32450), .CK(debug_c_c), 
-            .Q(tx_data[1])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=26, LSE_RCOL=57, LSE_LLINE=475, LSE_RLINE=485 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
+            .Q(tx_data[1])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=26, LSE_RCOL=57, LSE_LLINE=475, LSE_RLINE=485 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
     defparam tx_data_i0_i1.GSR = "ENABLED";
     FD1P3AX reg_addr_i0_i7 (.D(\buffer[1] [7]), .SP(n2539), .CK(debug_c_c), 
-            .Q(register_addr[7])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=26, LSE_RCOL=57, LSE_LLINE=475, LSE_RLINE=485 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
+            .Q(register_addr[7])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=26, LSE_RCOL=57, LSE_LLINE=475, LSE_RLINE=485 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
     defparam reg_addr_i0_i7.GSR = "ENABLED";
     LUT4 i24326_3_lut (.A(esc_data[1]), .B(esc_data[4]), .C(esc_data[3]), 
          .Z(n30682)) /* synthesis lut_function=(A+(B+(C))) */ ;
@@ -10957,22 +10957,22 @@ module \ProtocolInterface(baud_div=12)  (n32378, n30431, databus, n224,
          .Z(n2028[1])) /* synthesis lut_function=(A (B+!(C))+!A (B (C))) */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(89[6] 326[13])
     defparam mux_512_i2_3_lut.init = 16'hcaca;
     FD1P3AX reg_addr_i0_i6 (.D(\buffer[1] [6]), .SP(n2539), .CK(debug_c_c), 
-            .Q(register_addr[6])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=26, LSE_RCOL=57, LSE_LLINE=475, LSE_RLINE=485 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
+            .Q(register_addr[6])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=26, LSE_RCOL=57, LSE_LLINE=475, LSE_RLINE=485 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
     defparam reg_addr_i0_i6.GSR = "ENABLED";
     FD1P3AX reg_addr_i0_i5 (.D(\buffer[1] [5]), .SP(n2539), .CK(debug_c_c), 
-            .Q(register_addr[5])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=26, LSE_RCOL=57, LSE_LLINE=475, LSE_RLINE=485 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
+            .Q(register_addr[5])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=26, LSE_RCOL=57, LSE_LLINE=475, LSE_RLINE=485 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
     defparam reg_addr_i0_i5.GSR = "ENABLED";
     FD1P3AX reg_addr_i0_i4 (.D(\buffer[1] [4]), .SP(n2539), .CK(debug_c_c), 
-            .Q(register_addr[4])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=26, LSE_RCOL=57, LSE_LLINE=475, LSE_RLINE=485 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
+            .Q(register_addr[4])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=26, LSE_RCOL=57, LSE_LLINE=475, LSE_RLINE=485 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
     defparam reg_addr_i0_i4.GSR = "ENABLED";
     FD1P3AX reg_addr_i0_i3 (.D(\buffer[1] [3]), .SP(n2539), .CK(debug_c_c), 
-            .Q(register_addr[3])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=26, LSE_RCOL=57, LSE_LLINE=475, LSE_RLINE=485 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
+            .Q(register_addr[3])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=26, LSE_RCOL=57, LSE_LLINE=475, LSE_RLINE=485 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
     defparam reg_addr_i0_i3.GSR = "ENABLED";
     FD1P3AX reg_addr_i0_i2 (.D(\buffer[1] [2]), .SP(n2539), .CK(debug_c_c), 
-            .Q(register_addr[2])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=26, LSE_RCOL=57, LSE_LLINE=475, LSE_RLINE=485 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
+            .Q(register_addr[2])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=26, LSE_RCOL=57, LSE_LLINE=475, LSE_RLINE=485 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
     defparam reg_addr_i0_i2.GSR = "ENABLED";
     FD1P3AX reg_addr_i0_i1 (.D(\buffer[1] [1]), .SP(n2539), .CK(debug_c_c), 
-            .Q(register_addr[1])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=26, LSE_RCOL=57, LSE_LLINE=475, LSE_RLINE=485 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
+            .Q(register_addr[1])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=26, LSE_RCOL=57, LSE_LLINE=475, LSE_RLINE=485 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
     defparam reg_addr_i0_i1.GSR = "ENABLED";
     LUT4 mux_1384_i27_3_lut_4_lut (.A(n32378), .B(n30431), .C(databus[26]), 
          .D(n224[26]), .Z(n3451[26])) /* synthesis lut_function=(A (B (C)+!B (D))+!A (D)) */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
@@ -10987,7 +10987,7 @@ module \ProtocolInterface(baud_div=12)  (n32378, n30431, databus, n224,
          .D(\buffer[0] [2]), .Z(n29814)) /* synthesis lut_function=(!(A+((C+!(D))+!B))) */ ;
     defparam i2_3_lut_4_lut_adj_52.init = 16'h0400;
     FD1P3IX sendcount__i0 (.D(n20305), .SP(n32440), .CD(n32415), .CK(debug_c_c), 
-            .Q(sendcount[0])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=26, LSE_RCOL=57, LSE_LLINE=475, LSE_RLINE=485 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
+            .Q(sendcount[0])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=26, LSE_RCOL=57, LSE_LLINE=475, LSE_RLINE=485 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
     defparam sendcount__i0.GSR = "ENABLED";
     LUT4 i2_4_lut_adj_53 (.A(register_addr[4]), .B(register_addr[5]), .C(n30418), 
          .D(n32420), .Z(n3363)) /* synthesis lut_function=(!((B+!(C (D)))+!A)) */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
@@ -11010,64 +11010,64 @@ module \ProtocolInterface(baud_div=12)  (n32378, n30431, databus, n224,
     FD1S3JX state_FSM_i1 (.D(n11936), .CK(debug_c_c), .PD(n32452), .Q(n1318));   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(89[6] 326[13])
     defparam state_FSM_i1.GSR = "ENABLED";
     FD1P3IX buffer_0___i21 (.D(n28273), .SP(n12022), .CD(n32452), .CK(debug_c_c), 
-            .Q(\buffer[2] [4])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=26, LSE_RCOL=57, LSE_LLINE=475, LSE_RLINE=485 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
+            .Q(\buffer[2] [4])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=26, LSE_RCOL=57, LSE_LLINE=475, LSE_RLINE=485 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
     defparam buffer_0___i21.GSR = "ENABLED";
     FD1P3IX buffer_0___i20 (.D(n28268), .SP(n12022), .CD(n34346), .CK(debug_c_c), 
-            .Q(\buffer[2] [3])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=26, LSE_RCOL=57, LSE_LLINE=475, LSE_RLINE=485 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
+            .Q(\buffer[2] [3])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=26, LSE_RCOL=57, LSE_LLINE=475, LSE_RLINE=485 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
     defparam buffer_0___i20.GSR = "ENABLED";
     FD1P3IX buffer_0___i19 (.D(n28280), .SP(n12022), .CD(n34346), .CK(debug_c_c), 
-            .Q(\buffer[2] [2])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=26, LSE_RCOL=57, LSE_LLINE=475, LSE_RLINE=485 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
+            .Q(\buffer[2] [2])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=26, LSE_RCOL=57, LSE_LLINE=475, LSE_RLINE=485 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
     defparam buffer_0___i19.GSR = "ENABLED";
     FD1P3IX buffer_0___i18 (.D(n28265), .SP(n12022), .CD(n34346), .CK(debug_c_c), 
-            .Q(\buffer[2] [1])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=26, LSE_RCOL=57, LSE_LLINE=475, LSE_RLINE=485 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
+            .Q(\buffer[2] [1])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=26, LSE_RCOL=57, LSE_LLINE=475, LSE_RLINE=485 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
     defparam buffer_0___i18.GSR = "ENABLED";
     FD1P3IX buffer_0___i17 (.D(n28283), .SP(n12022), .CD(n34346), .CK(debug_c_c), 
-            .Q(\buffer[2] [0])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=26, LSE_RCOL=57, LSE_LLINE=475, LSE_RLINE=485 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
+            .Q(\buffer[2] [0])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=26, LSE_RCOL=57, LSE_LLINE=475, LSE_RLINE=485 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
     defparam buffer_0___i17.GSR = "ENABLED";
     FD1P3IX buffer_0___i16 (.D(n29223), .SP(n12022), .CD(n34346), .CK(debug_c_c), 
-            .Q(\buffer[1] [7])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=26, LSE_RCOL=57, LSE_LLINE=475, LSE_RLINE=485 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
+            .Q(\buffer[1] [7])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=26, LSE_RCOL=57, LSE_LLINE=475, LSE_RLINE=485 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
     defparam buffer_0___i16.GSR = "ENABLED";
     FD1P3IX buffer_0___i15 (.D(n29213), .SP(n12022), .CD(n34346), .CK(debug_c_c), 
-            .Q(\buffer[1] [6])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=26, LSE_RCOL=57, LSE_LLINE=475, LSE_RLINE=485 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
+            .Q(\buffer[1] [6])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=26, LSE_RCOL=57, LSE_LLINE=475, LSE_RLINE=485 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
     defparam buffer_0___i15.GSR = "ENABLED";
     FD1P3IX buffer_0___i14 (.D(n29197), .SP(n12022), .CD(n34346), .CK(debug_c_c), 
-            .Q(\buffer[1] [5])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=26, LSE_RCOL=57, LSE_LLINE=475, LSE_RLINE=485 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
+            .Q(\buffer[1] [5])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=26, LSE_RCOL=57, LSE_LLINE=475, LSE_RLINE=485 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
     defparam buffer_0___i14.GSR = "ENABLED";
     FD1P3IX buffer_0___i13 (.D(n29181), .SP(n12022), .CD(n34346), .CK(debug_c_c), 
-            .Q(\buffer[1] [4])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=26, LSE_RCOL=57, LSE_LLINE=475, LSE_RLINE=485 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
+            .Q(\buffer[1] [4])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=26, LSE_RCOL=57, LSE_LLINE=475, LSE_RLINE=485 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
     defparam buffer_0___i13.GSR = "ENABLED";
     FD1P3IX buffer_0___i12 (.D(n29301), .SP(n12022), .CD(n34346), .CK(debug_c_c), 
-            .Q(\buffer[1] [3])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=26, LSE_RCOL=57, LSE_LLINE=475, LSE_RLINE=485 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
+            .Q(\buffer[1] [3])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=26, LSE_RCOL=57, LSE_LLINE=475, LSE_RLINE=485 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
     defparam buffer_0___i12.GSR = "ENABLED";
     FD1P3IX buffer_0___i11 (.D(n29177), .SP(n12022), .CD(n34346), .CK(debug_c_c), 
-            .Q(\buffer[1] [2])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=26, LSE_RCOL=57, LSE_LLINE=475, LSE_RLINE=485 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
+            .Q(\buffer[1] [2])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=26, LSE_RCOL=57, LSE_LLINE=475, LSE_RLINE=485 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
     defparam buffer_0___i11.GSR = "ENABLED";
     FD1P3IX buffer_0___i10 (.D(n29229), .SP(n12022), .CD(n34346), .CK(debug_c_c), 
-            .Q(\buffer[1] [1])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=26, LSE_RCOL=57, LSE_LLINE=475, LSE_RLINE=485 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
+            .Q(\buffer[1] [1])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=26, LSE_RCOL=57, LSE_LLINE=475, LSE_RLINE=485 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
     defparam buffer_0___i10.GSR = "ENABLED";
     FD1P3IX buffer_0___i9 (.D(n29231), .SP(n12022), .CD(n34346), .CK(debug_c_c), 
-            .Q(\buffer[1] [0])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=26, LSE_RCOL=57, LSE_LLINE=475, LSE_RLINE=485 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
+            .Q(\buffer[1] [0])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=26, LSE_RCOL=57, LSE_LLINE=475, LSE_RLINE=485 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
     defparam buffer_0___i9.GSR = "ENABLED";
     FD1P3IX buffer_0___i8 (.D(n29179), .SP(n12022), .CD(n34346), .CK(debug_c_c), 
-            .Q(\buffer[0] [7])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=26, LSE_RCOL=57, LSE_LLINE=475, LSE_RLINE=485 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
+            .Q(\buffer[0] [7])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=26, LSE_RCOL=57, LSE_LLINE=475, LSE_RLINE=485 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
     defparam buffer_0___i8.GSR = "ENABLED";
     FD1P3IX buffer_0___i7 (.D(n29297), .SP(n12022), .CD(n34346), .CK(debug_c_c), 
-            .Q(\buffer[0] [6])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=26, LSE_RCOL=57, LSE_LLINE=475, LSE_RLINE=485 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
+            .Q(\buffer[0] [6])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=26, LSE_RCOL=57, LSE_LLINE=475, LSE_RLINE=485 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
     defparam buffer_0___i7.GSR = "ENABLED";
     FD1P3IX buffer_0___i6 (.D(n29299), .SP(n12022), .CD(n34346), .CK(debug_c_c), 
-            .Q(\buffer[0] [5])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=26, LSE_RCOL=57, LSE_LLINE=475, LSE_RLINE=485 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
+            .Q(\buffer[0] [5])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=26, LSE_RCOL=57, LSE_LLINE=475, LSE_RLINE=485 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
     defparam buffer_0___i6.GSR = "ENABLED";
     FD1P3IX buffer_0___i5 (.D(n29303), .SP(n12022), .CD(n34346), .CK(debug_c_c), 
-            .Q(\buffer[0] [4])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=26, LSE_RCOL=57, LSE_LLINE=475, LSE_RLINE=485 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
+            .Q(\buffer[0] [4])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=26, LSE_RCOL=57, LSE_LLINE=475, LSE_RLINE=485 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
     defparam buffer_0___i5.GSR = "ENABLED";
     FD1P3IX buffer_0___i4 (.D(n29355), .SP(n12022), .CD(n34346), .CK(debug_c_c), 
-            .Q(\buffer[0] [3])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=26, LSE_RCOL=57, LSE_LLINE=475, LSE_RLINE=485 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
+            .Q(\buffer[0] [3])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=26, LSE_RCOL=57, LSE_LLINE=475, LSE_RLINE=485 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
     defparam buffer_0___i4.GSR = "ENABLED";
     FD1P3IX buffer_0___i3 (.D(n29225), .SP(n12022), .CD(n34346), .CK(debug_c_c), 
-            .Q(\buffer[0] [2])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=26, LSE_RCOL=57, LSE_LLINE=475, LSE_RLINE=485 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
+            .Q(\buffer[0] [2])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=26, LSE_RCOL=57, LSE_LLINE=475, LSE_RLINE=485 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
     defparam buffer_0___i3.GSR = "ENABLED";
     FD1P3IX buffer_0___i2 (.D(n29209), .SP(n12022), .CD(n34346), .CK(debug_c_c), 
-            .Q(\buffer[0] [1])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=26, LSE_RCOL=57, LSE_LLINE=475, LSE_RLINE=485 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
+            .Q(\buffer[0] [1])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=26, LSE_RCOL=57, LSE_LLINE=475, LSE_RLINE=485 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
     defparam buffer_0___i2.GSR = "ENABLED";
     LUT4 i1_2_lut_3_lut (.A(n1286[3]), .B(n30789), .C(\buffer[2] [1]), 
          .Z(n30196)) /* synthesis lut_function=(A (B (C))) */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(89[6] 326[13])
@@ -11141,23 +11141,23 @@ module \ProtocolInterface(baud_div=12)  (n32378, n30431, databus, n224,
     FD1S3IX state_FSM_i2 (.D(n29501), .CK(debug_c_c), .CD(n32452), .Q(n1286[1]));   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(89[6] 326[13])
     defparam state_FSM_i2.GSR = "ENABLED";
     FD1P3AX reg_addr_i0_i0 (.D(\buffer[1] [0]), .SP(n2539), .CK(debug_c_c), 
-            .Q(register_addr[0])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=26, LSE_RCOL=57, LSE_LLINE=475, LSE_RLINE=485 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
+            .Q(register_addr[0])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=26, LSE_RCOL=57, LSE_LLINE=475, LSE_RLINE=485 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
     defparam reg_addr_i0_i0.GSR = "ENABLED";
     LUT4 i24_3_lut_4_lut_adj_65 (.A(bufcount[0]), .B(n32498), .C(rx_data[3]), 
          .D(\buffer[1] [3]), .Z(n11_adj_21)) /* synthesis lut_function=(A (B (D)+!B (C))+!A (D)) */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(176[12:28])
     defparam i24_3_lut_4_lut_adj_65.init = 16'hfd20;
     FD1P3AX tx_data_i0_i0 (.D(n2028[0]), .SP(n32450), .CK(debug_c_c), 
-            .Q(tx_data[0])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=26, LSE_RCOL=57, LSE_LLINE=475, LSE_RLINE=485 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
+            .Q(tx_data[0])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=26, LSE_RCOL=57, LSE_LLINE=475, LSE_RLINE=485 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
     defparam tx_data_i0_i0.GSR = "ENABLED";
-    FD1S3IX bufcount__i0 (.D(n13424), .CK(debug_c_c), .CD(n32452), .Q(bufcount[0])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=26, LSE_RCOL=57, LSE_LLINE=475, LSE_RLINE=485 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
+    FD1S3IX bufcount__i0 (.D(n13424), .CK(debug_c_c), .CD(n32452), .Q(bufcount[0])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=26, LSE_RCOL=57, LSE_LLINE=475, LSE_RLINE=485 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
     defparam bufcount__i0.GSR = "ENABLED";
     LUT4 i24_3_lut_4_lut_adj_66 (.A(bufcount[0]), .B(n32498), .C(\buffer[1] [2]), 
          .D(rx_data[2]), .Z(n11_adj_22)) /* synthesis lut_function=(A (B (C)+!B (D))+!A (C)) */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(176[12:28])
     defparam i24_3_lut_4_lut_adj_66.init = 16'hf2d0;
-    FD1P3AX esc_data_i0_i0 (.D(n32330), .SP(n12098), .CK(debug_c_c), .Q(esc_data[0])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=26, LSE_RCOL=57, LSE_LLINE=475, LSE_RLINE=485 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
+    FD1P3AX esc_data_i0_i0 (.D(n32330), .SP(n12098), .CK(debug_c_c), .Q(esc_data[0])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=26, LSE_RCOL=57, LSE_LLINE=475, LSE_RLINE=485 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
     defparam esc_data_i0_i0.GSR = "ENABLED";
     FD1P3AX databus_out_i0_i0 (.D(\buffer[2] [0]), .SP(n2541), .CK(debug_c_c), 
-            .Q(databus_out[0])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=26, LSE_RCOL=57, LSE_LLINE=475, LSE_RLINE=485 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
+            .Q(databus_out[0])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=26, LSE_RCOL=57, LSE_LLINE=475, LSE_RLINE=485 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
     defparam databus_out_i0_i0.GSR = "ENABLED";
     LUT4 i24_3_lut_4_lut_adj_67 (.A(bufcount[0]), .B(n32498), .C(rx_data[1]), 
          .D(\buffer[1] [1]), .Z(n11_adj_23)) /* synthesis lut_function=(A (B (D)+!B (C))+!A (D)) */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(176[12:28])
@@ -11184,30 +11184,30 @@ module \ProtocolInterface(baud_div=12)  (n32378, n30431, databus, n224,
          .Z(n28369)) /* synthesis lut_function=(A (B+(C+(D)))+!A (B+(D))) */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(89[6] 326[13])
     defparam i2_4_lut_adj_69.init = 16'hffec;
     FD1P3IX buffer_0___i1 (.D(n29211), .SP(n12022), .CD(n32452), .CK(debug_c_c), 
-            .Q(\buffer[0] [0])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=26, LSE_RCOL=57, LSE_LLINE=475, LSE_RLINE=485 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
+            .Q(\buffer[0] [0])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=26, LSE_RCOL=57, LSE_LLINE=475, LSE_RLINE=485 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
     defparam buffer_0___i1.GSR = "ENABLED";
     LUT4 i24506_then_3_lut (.A(\buffer[0] [7]), .B(\buffer[2] [7]), .C(\sendcount[1] ), 
          .Z(n32552)) /* synthesis lut_function=(A (B+!(C))+!A (B (C))) */ ;
     defparam i24506_then_3_lut.init = 16'hcaca;
     FD1P3IX esc_data_i0_i3 (.D(n9241[3]), .SP(n12098), .CD(n14425), .CK(debug_c_c), 
-            .Q(esc_data[3])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=26, LSE_RCOL=57, LSE_LLINE=475, LSE_RLINE=485 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
+            .Q(esc_data[3])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=26, LSE_RCOL=57, LSE_LLINE=475, LSE_RLINE=485 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
     defparam esc_data_i0_i3.GSR = "ENABLED";
     LUT4 i24506_else_3_lut (.A(\buffer[3] [7]), .B(\buffer[1] [7]), .C(\sendcount[1] ), 
          .Z(n32551)) /* synthesis lut_function=(A (B+!(C))+!A (B (C))) */ ;
     defparam i24506_else_3_lut.init = 16'hcaca;
     FD1P3IX esc_data_i0_i5 (.D(n9241[5]), .SP(n12098), .CD(n14425), .CK(debug_c_c), 
-            .Q(esc_data[5])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=26, LSE_RCOL=57, LSE_LLINE=475, LSE_RLINE=485 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
+            .Q(esc_data[5])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=26, LSE_RCOL=57, LSE_LLINE=475, LSE_RLINE=485 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
     defparam esc_data_i0_i5.GSR = "ENABLED";
     FD1P3IX esc_data_i0_i6 (.D(n9241[6]), .SP(n12098), .CD(n14425), .CK(debug_c_c), 
-            .Q(esc_data[6])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=26, LSE_RCOL=57, LSE_LLINE=475, LSE_RLINE=485 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
+            .Q(esc_data[6])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=26, LSE_RCOL=57, LSE_LLINE=475, LSE_RLINE=485 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
     defparam esc_data_i0_i6.GSR = "ENABLED";
     FD1P3IX esc_data_i0_i7 (.D(n9241[7]), .SP(n12098), .CD(n14425), .CK(debug_c_c), 
-            .Q(esc_data[7])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=26, LSE_RCOL=57, LSE_LLINE=475, LSE_RLINE=485 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
+            .Q(esc_data[7])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=26, LSE_RCOL=57, LSE_LLINE=475, LSE_RLINE=485 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
     defparam esc_data_i0_i7.GSR = "ENABLED";
     LUT4 i24509_then_3_lut (.A(\buffer[0] [6]), .B(\buffer[2] [6]), .C(\sendcount[1] ), 
          .Z(n32555)) /* synthesis lut_function=(A (B+!(C))+!A (B (C))) */ ;
     defparam i24509_then_3_lut.init = 16'hcaca;
-    FD1P3AX select__i1 (.D(n29818), .SP(n12788), .CK(debug_c_c), .Q(\select[1] )) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=26, LSE_RCOL=57, LSE_LLINE=475, LSE_RLINE=485 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
+    FD1P3AX select__i1 (.D(n29818), .SP(n12788), .CK(debug_c_c), .Q(\select[1] )) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=26, LSE_RCOL=57, LSE_LLINE=475, LSE_RLINE=485 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
     defparam select__i1.GSR = "ENABLED";
     LUT4 i24509_else_3_lut (.A(\buffer[3] [6]), .B(\buffer[1] [6]), .C(\sendcount[1] ), 
          .Z(n32554)) /* synthesis lut_function=(A (B+!(C))+!A (B (C))) */ ;
@@ -11262,11 +11262,11 @@ module \ProtocolInterface(baud_div=12)  (n32378, n30431, databus, n224,
     LUT4 mux_1314_i28_3_lut_4_lut (.A(n32395), .B(n30418), .C(databus[27]), 
          .D(n224_adj_42[27]), .Z(n3181[27])) /* synthesis lut_function=(A (B (C)+!B (D))+!A (D)) */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
     defparam mux_1314_i28_3_lut_4_lut.init = 16'hf780;
-    FD1P3AX select__i2 (.D(n29815), .SP(n12788), .CK(debug_c_c), .Q(\select[2] )) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=26, LSE_RCOL=57, LSE_LLINE=475, LSE_RLINE=485 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
+    FD1P3AX select__i2 (.D(n29815), .SP(n12788), .CK(debug_c_c), .Q(\select[2] )) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=26, LSE_RCOL=57, LSE_LLINE=475, LSE_RLINE=485 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
     defparam select__i2.GSR = "ENABLED";
-    FD1P3AX select__i4 (.D(n29814), .SP(n12788), .CK(debug_c_c), .Q(\select[4] )) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=26, LSE_RCOL=57, LSE_LLINE=475, LSE_RLINE=485 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
+    FD1P3AX select__i4 (.D(n29814), .SP(n12788), .CK(debug_c_c), .Q(\select[4] )) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=26, LSE_RCOL=57, LSE_LLINE=475, LSE_RLINE=485 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
     defparam select__i4.GSR = "ENABLED";
-    FD1P3AX select__i7 (.D(n30303), .SP(n12788), .CK(debug_c_c), .Q(\select[7] )) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=26, LSE_RCOL=57, LSE_LLINE=475, LSE_RLINE=485 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
+    FD1P3AX select__i7 (.D(n30303), .SP(n12788), .CK(debug_c_c), .Q(\select[7] )) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=26, LSE_RCOL=57, LSE_LLINE=475, LSE_RLINE=485 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
     defparam select__i7.GSR = "ENABLED";
     LUT4 i24524_then_3_lut (.A(\buffer[0] [1]), .B(\buffer[2] [1]), .C(\sendcount[1] ), 
          .Z(n32574)) /* synthesis lut_function=(A (B+!(C))+!A (B (C))) */ ;
@@ -11277,10 +11277,10 @@ module \ProtocolInterface(baud_div=12)  (n32378, n30431, databus, n224,
     LUT4 mux_1314_i27_3_lut_4_lut (.A(n32395), .B(n30418), .C(databus[26]), 
          .D(n224_adj_42[26]), .Z(n3181[26])) /* synthesis lut_function=(A (B (C)+!B (D))+!A (D)) */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
     defparam mux_1314_i27_3_lut_4_lut.init = 16'hf780;
-    FD1P3AX sendcount__i2 (.D(n18[2]), .SP(n32440), .CK(debug_c_c), .Q(sendcount[2])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=26, LSE_RCOL=57, LSE_LLINE=475, LSE_RLINE=485 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
+    FD1P3AX sendcount__i2 (.D(n18[2]), .SP(n32440), .CK(debug_c_c), .Q(sendcount[2])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=26, LSE_RCOL=57, LSE_LLINE=475, LSE_RLINE=485 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
     defparam sendcount__i2.GSR = "ENABLED";
     FD1P3IX sendcount__i1 (.D(n19[1]), .SP(n32440), .CD(n32415), .CK(debug_c_c), 
-            .Q(\sendcount[1] )) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=26, LSE_RCOL=57, LSE_LLINE=475, LSE_RLINE=485 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
+            .Q(\sendcount[1] )) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=26, LSE_RCOL=57, LSE_LLINE=475, LSE_RLINE=485 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
     defparam sendcount__i1.GSR = "ENABLED";
     LUT4 mux_1314_i26_3_lut_4_lut (.A(n32395), .B(n30418), .C(databus[25]), 
          .D(n224_adj_42[25]), .Z(n3181[25])) /* synthesis lut_function=(A (B (C)+!B (D))+!A (D)) */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
@@ -11496,9 +11496,9 @@ module \ProtocolInterface(baud_div=12)  (n32378, n30431, databus, n224,
     defparam i1_2_lut_3_lut_adj_76.init = 16'hbfbf;
     LUT4 i1_2_lut_rep_381 (.A(n1304), .B(sendcount[4]), .Z(n32506)) /* synthesis lut_function=(!((B)+!A)) */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(89[6] 326[13])
     defparam i1_2_lut_rep_381.init = 16'h2222;
-    FD1P3AX sendcount__i3 (.D(n28182), .SP(n32440), .CK(debug_c_c), .Q(sendcount[3])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=26, LSE_RCOL=57, LSE_LLINE=475, LSE_RLINE=485 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
+    FD1P3AX sendcount__i3 (.D(n28182), .SP(n32440), .CK(debug_c_c), .Q(sendcount[3])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=26, LSE_RCOL=57, LSE_LLINE=475, LSE_RLINE=485 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
     defparam sendcount__i3.GSR = "ENABLED";
-    FD1P3AX sendcount__i4 (.D(n17), .SP(n32440), .CK(debug_c_c), .Q(sendcount[4])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=26, LSE_RCOL=57, LSE_LLINE=475, LSE_RLINE=485 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
+    FD1P3AX sendcount__i4 (.D(n17), .SP(n32440), .CK(debug_c_c), .Q(sendcount[4])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=26, LSE_RCOL=57, LSE_LLINE=475, LSE_RLINE=485 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
     defparam sendcount__i4.GSR = "ENABLED";
     LUT4 i14458_4_lut (.A(sendcount[2]), .B(n32415), .C(n9_adj_46), .D(n32494), 
          .Z(n18[2])) /* synthesis lut_function=(!(A (B+(C (D)))+!A (B+!((D)+!C)))) */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
@@ -11581,22 +11581,22 @@ module \ProtocolInterface(baud_div=12)  (n32378, n30431, databus, n224,
          .D(n224[31]), .Z(n3451[31])) /* synthesis lut_function=(A (B (C)+!B (D))+!A (D)) */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
     defparam mux_1384_i32_3_lut_4_lut.init = 16'hf780;
     FD1P3IX tx_data_i0_i2 (.D(esc_data[2]), .SP(n32450), .CD(n14122), 
-            .CK(debug_c_c), .Q(tx_data[2])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=26, LSE_RCOL=57, LSE_LLINE=475, LSE_RLINE=485 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
+            .CK(debug_c_c), .Q(tx_data[2])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=26, LSE_RCOL=57, LSE_LLINE=475, LSE_RLINE=485 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
     defparam tx_data_i0_i2.GSR = "ENABLED";
     LUT4 i1_2_lut_3_lut_adj_80 (.A(n1286[3]), .B(n30789), .C(n1286[13]), 
          .Z(n14_c)) /* synthesis lut_function=(A (B+(C))+!A (C)) */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(89[6] 326[13])
     defparam i1_2_lut_3_lut_adj_80.init = 16'hf8f8;
     FD1P3IX tx_data_i0_i5 (.D(esc_data[5]), .SP(n32450), .CD(n14122), 
-            .CK(debug_c_c), .Q(tx_data[5])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=26, LSE_RCOL=57, LSE_LLINE=475, LSE_RLINE=485 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
+            .CK(debug_c_c), .Q(tx_data[5])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=26, LSE_RCOL=57, LSE_LLINE=475, LSE_RLINE=485 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
     defparam tx_data_i0_i5.GSR = "ENABLED";
     FD1P3IX tx_data_i0_i6 (.D(esc_data[6]), .SP(n32450), .CD(n14122), 
-            .CK(debug_c_c), .Q(tx_data[6])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=26, LSE_RCOL=57, LSE_LLINE=475, LSE_RLINE=485 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
+            .CK(debug_c_c), .Q(tx_data[6])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=26, LSE_RCOL=57, LSE_LLINE=475, LSE_RLINE=485 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
     defparam tx_data_i0_i6.GSR = "ENABLED";
     LUT4 i2_4_lut_adj_81 (.A(n38), .B(busy), .C(n31556), .D(n1286[17]), 
          .Z(n29391)) /* synthesis lut_function=(A+(B (C)+!B (C+(D)))) */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(89[6] 326[13])
     defparam i2_4_lut_adj_81.init = 16'hfbfa;
     FD1P3IX tx_data_i0_i7 (.D(esc_data[7]), .SP(n32450), .CD(n14122), 
-            .CK(debug_c_c), .Q(tx_data[7])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=26, LSE_RCOL=57, LSE_LLINE=475, LSE_RLINE=485 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
+            .CK(debug_c_c), .Q(tx_data[7])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=26, LSE_RCOL=57, LSE_LLINE=475, LSE_RLINE=485 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
     defparam tx_data_i0_i7.GSR = "ENABLED";
     LUT4 select_1742_Select_38_i5_4_lut (.A(\buffer[4] [6]), .B(n1286[4]), 
          .C(rx_data[6]), .D(n30492), .Z(n5_adj_56)) /* synthesis lut_function=(A (B (C+(D)))+!A !(((D)+!C)+!B)) */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(89[6] 326[13])
@@ -11647,106 +11647,106 @@ module \ProtocolInterface(baud_div=12)  (n32378, n30431, databus, n224,
          .C(rx_data[7]), .D(n30492), .Z(n5_adj_62)) /* synthesis lut_function=(A (B (C+(D)))+!A !(((D)+!C)+!B)) */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(89[6] 326[13])
     defparam select_1742_Select_39_i5_4_lut.init = 16'h88c0;
     FD1P3AX databus_out_i0_i31 (.D(\buffer[5] [7]), .SP(n2541), .CK(debug_c_c), 
-            .Q(databus_out[31])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=26, LSE_RCOL=57, LSE_LLINE=475, LSE_RLINE=485 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
+            .Q(databus_out[31])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=26, LSE_RCOL=57, LSE_LLINE=475, LSE_RLINE=485 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
     defparam databus_out_i0_i31.GSR = "ENABLED";
     FD1P3AX databus_out_i0_i30 (.D(\buffer[5] [6]), .SP(n2541), .CK(debug_c_c), 
-            .Q(databus_out[30])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=26, LSE_RCOL=57, LSE_LLINE=475, LSE_RLINE=485 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
+            .Q(databus_out[30])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=26, LSE_RCOL=57, LSE_LLINE=475, LSE_RLINE=485 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
     defparam databus_out_i0_i30.GSR = "ENABLED";
     FD1P3AX databus_out_i0_i29 (.D(\buffer[5] [5]), .SP(n2541), .CK(debug_c_c), 
-            .Q(databus_out[29])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=26, LSE_RCOL=57, LSE_LLINE=475, LSE_RLINE=485 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
+            .Q(databus_out[29])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=26, LSE_RCOL=57, LSE_LLINE=475, LSE_RLINE=485 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
     defparam databus_out_i0_i29.GSR = "ENABLED";
     FD1P3AX databus_out_i0_i28 (.D(\buffer[5] [4]), .SP(n2541), .CK(debug_c_c), 
-            .Q(databus_out[28])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=26, LSE_RCOL=57, LSE_LLINE=475, LSE_RLINE=485 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
+            .Q(databus_out[28])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=26, LSE_RCOL=57, LSE_LLINE=475, LSE_RLINE=485 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
     defparam databus_out_i0_i28.GSR = "ENABLED";
     FD1P3AX databus_out_i0_i27 (.D(\buffer[5] [3]), .SP(n2541), .CK(debug_c_c), 
-            .Q(databus_out[27])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=26, LSE_RCOL=57, LSE_LLINE=475, LSE_RLINE=485 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
+            .Q(databus_out[27])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=26, LSE_RCOL=57, LSE_LLINE=475, LSE_RLINE=485 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
     defparam databus_out_i0_i27.GSR = "ENABLED";
     FD1P3AX databus_out_i0_i26 (.D(\buffer[5] [2]), .SP(n2541), .CK(debug_c_c), 
-            .Q(databus_out[26])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=26, LSE_RCOL=57, LSE_LLINE=475, LSE_RLINE=485 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
+            .Q(databus_out[26])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=26, LSE_RCOL=57, LSE_LLINE=475, LSE_RLINE=485 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
     defparam databus_out_i0_i26.GSR = "ENABLED";
     FD1P3AX databus_out_i0_i25 (.D(\buffer[5] [1]), .SP(n2541), .CK(debug_c_c), 
-            .Q(databus_out[25])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=26, LSE_RCOL=57, LSE_LLINE=475, LSE_RLINE=485 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
+            .Q(databus_out[25])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=26, LSE_RCOL=57, LSE_LLINE=475, LSE_RLINE=485 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
     defparam databus_out_i0_i25.GSR = "ENABLED";
     FD1P3AX databus_out_i0_i24 (.D(\buffer[5] [0]), .SP(n2541), .CK(debug_c_c), 
-            .Q(databus_out[24])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=26, LSE_RCOL=57, LSE_LLINE=475, LSE_RLINE=485 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
+            .Q(databus_out[24])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=26, LSE_RCOL=57, LSE_LLINE=475, LSE_RLINE=485 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
     defparam databus_out_i0_i24.GSR = "ENABLED";
     FD1P3AX databus_out_i0_i23 (.D(\buffer[4] [7]), .SP(n2541), .CK(debug_c_c), 
-            .Q(databus_out[23])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=26, LSE_RCOL=57, LSE_LLINE=475, LSE_RLINE=485 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
+            .Q(databus_out[23])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=26, LSE_RCOL=57, LSE_LLINE=475, LSE_RLINE=485 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
     defparam databus_out_i0_i23.GSR = "ENABLED";
     FD1P3AX databus_out_i0_i22 (.D(\buffer[4] [6]), .SP(n2541), .CK(debug_c_c), 
-            .Q(databus_out[22])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=26, LSE_RCOL=57, LSE_LLINE=475, LSE_RLINE=485 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
+            .Q(databus_out[22])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=26, LSE_RCOL=57, LSE_LLINE=475, LSE_RLINE=485 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
     defparam databus_out_i0_i22.GSR = "ENABLED";
     FD1P3AX databus_out_i0_i21 (.D(\buffer[4] [5]), .SP(n2541), .CK(debug_c_c), 
-            .Q(databus_out[21])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=26, LSE_RCOL=57, LSE_LLINE=475, LSE_RLINE=485 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
+            .Q(databus_out[21])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=26, LSE_RCOL=57, LSE_LLINE=475, LSE_RLINE=485 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
     defparam databus_out_i0_i21.GSR = "ENABLED";
     FD1P3AX databus_out_i0_i20 (.D(\buffer[4] [4]), .SP(n2541), .CK(debug_c_c), 
-            .Q(databus_out[20])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=26, LSE_RCOL=57, LSE_LLINE=475, LSE_RLINE=485 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
+            .Q(databus_out[20])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=26, LSE_RCOL=57, LSE_LLINE=475, LSE_RLINE=485 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
     defparam databus_out_i0_i20.GSR = "ENABLED";
     FD1P3AX databus_out_i0_i19 (.D(\buffer[4] [3]), .SP(n2541), .CK(debug_c_c), 
-            .Q(databus_out[19])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=26, LSE_RCOL=57, LSE_LLINE=475, LSE_RLINE=485 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
+            .Q(databus_out[19])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=26, LSE_RCOL=57, LSE_LLINE=475, LSE_RLINE=485 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
     defparam databus_out_i0_i19.GSR = "ENABLED";
     FD1P3AX databus_out_i0_i18 (.D(\buffer[4] [2]), .SP(n2541), .CK(debug_c_c), 
-            .Q(databus_out[18])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=26, LSE_RCOL=57, LSE_LLINE=475, LSE_RLINE=485 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
+            .Q(databus_out[18])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=26, LSE_RCOL=57, LSE_LLINE=475, LSE_RLINE=485 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
     defparam databus_out_i0_i18.GSR = "ENABLED";
     FD1P3AX databus_out_i0_i17 (.D(\buffer[4] [1]), .SP(n2541), .CK(debug_c_c), 
-            .Q(databus_out[17])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=26, LSE_RCOL=57, LSE_LLINE=475, LSE_RLINE=485 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
+            .Q(databus_out[17])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=26, LSE_RCOL=57, LSE_LLINE=475, LSE_RLINE=485 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
     defparam databus_out_i0_i17.GSR = "ENABLED";
     FD1P3AX databus_out_i0_i16 (.D(\buffer[4] [0]), .SP(n2541), .CK(debug_c_c), 
-            .Q(databus_out[16])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=26, LSE_RCOL=57, LSE_LLINE=475, LSE_RLINE=485 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
+            .Q(databus_out[16])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=26, LSE_RCOL=57, LSE_LLINE=475, LSE_RLINE=485 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
     defparam databus_out_i0_i16.GSR = "ENABLED";
     FD1P3AX databus_out_i0_i15 (.D(\buffer[3] [7]), .SP(n2541), .CK(debug_c_c), 
-            .Q(databus_out[15])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=26, LSE_RCOL=57, LSE_LLINE=475, LSE_RLINE=485 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
+            .Q(databus_out[15])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=26, LSE_RCOL=57, LSE_LLINE=475, LSE_RLINE=485 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
     defparam databus_out_i0_i15.GSR = "ENABLED";
     FD1P3AX databus_out_i0_i14 (.D(\buffer[3] [6]), .SP(n2541), .CK(debug_c_c), 
-            .Q(databus_out[14])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=26, LSE_RCOL=57, LSE_LLINE=475, LSE_RLINE=485 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
+            .Q(databus_out[14])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=26, LSE_RCOL=57, LSE_LLINE=475, LSE_RLINE=485 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
     defparam databus_out_i0_i14.GSR = "ENABLED";
     FD1P3AX databus_out_i0_i13 (.D(\buffer[3] [5]), .SP(n2541), .CK(debug_c_c), 
-            .Q(databus_out[13])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=26, LSE_RCOL=57, LSE_LLINE=475, LSE_RLINE=485 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
+            .Q(databus_out[13])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=26, LSE_RCOL=57, LSE_LLINE=475, LSE_RLINE=485 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
     defparam databus_out_i0_i13.GSR = "ENABLED";
     FD1P3AX databus_out_i0_i12 (.D(\buffer[3] [4]), .SP(n2541), .CK(debug_c_c), 
-            .Q(databus_out[12])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=26, LSE_RCOL=57, LSE_LLINE=475, LSE_RLINE=485 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
+            .Q(databus_out[12])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=26, LSE_RCOL=57, LSE_LLINE=475, LSE_RLINE=485 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
     defparam databus_out_i0_i12.GSR = "ENABLED";
     FD1P3AX databus_out_i0_i11 (.D(\buffer[3] [3]), .SP(n2541), .CK(debug_c_c), 
-            .Q(databus_out[11])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=26, LSE_RCOL=57, LSE_LLINE=475, LSE_RLINE=485 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
+            .Q(databus_out[11])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=26, LSE_RCOL=57, LSE_LLINE=475, LSE_RLINE=485 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
     defparam databus_out_i0_i11.GSR = "ENABLED";
     FD1P3AX databus_out_i0_i10 (.D(\buffer[3] [2]), .SP(n2541), .CK(debug_c_c), 
-            .Q(databus_out[10])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=26, LSE_RCOL=57, LSE_LLINE=475, LSE_RLINE=485 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
+            .Q(databus_out[10])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=26, LSE_RCOL=57, LSE_LLINE=475, LSE_RLINE=485 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
     defparam databus_out_i0_i10.GSR = "ENABLED";
     FD1P3AX databus_out_i0_i9 (.D(\buffer[3] [1]), .SP(n2541), .CK(debug_c_c), 
-            .Q(databus_out[9])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=26, LSE_RCOL=57, LSE_LLINE=475, LSE_RLINE=485 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
+            .Q(databus_out[9])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=26, LSE_RCOL=57, LSE_LLINE=475, LSE_RLINE=485 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
     defparam databus_out_i0_i9.GSR = "ENABLED";
     FD1P3AX databus_out_i0_i8 (.D(\buffer[3] [0]), .SP(n2541), .CK(debug_c_c), 
-            .Q(databus_out[8])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=26, LSE_RCOL=57, LSE_LLINE=475, LSE_RLINE=485 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
+            .Q(databus_out[8])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=26, LSE_RCOL=57, LSE_LLINE=475, LSE_RLINE=485 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
     defparam databus_out_i0_i8.GSR = "ENABLED";
     FD1P3AX databus_out_i0_i7 (.D(\buffer[2] [7]), .SP(n2541), .CK(debug_c_c), 
-            .Q(databus_out[7])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=26, LSE_RCOL=57, LSE_LLINE=475, LSE_RLINE=485 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
+            .Q(databus_out[7])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=26, LSE_RCOL=57, LSE_LLINE=475, LSE_RLINE=485 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
     defparam databus_out_i0_i7.GSR = "ENABLED";
     FD1P3AX databus_out_i0_i6 (.D(\buffer[2] [6]), .SP(n2541), .CK(debug_c_c), 
-            .Q(databus_out[6])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=26, LSE_RCOL=57, LSE_LLINE=475, LSE_RLINE=485 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
+            .Q(databus_out[6])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=26, LSE_RCOL=57, LSE_LLINE=475, LSE_RLINE=485 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
     defparam databus_out_i0_i6.GSR = "ENABLED";
     FD1P3AX databus_out_i0_i5 (.D(\buffer[2] [5]), .SP(n2541), .CK(debug_c_c), 
-            .Q(databus_out[5])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=26, LSE_RCOL=57, LSE_LLINE=475, LSE_RLINE=485 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
+            .Q(databus_out[5])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=26, LSE_RCOL=57, LSE_LLINE=475, LSE_RLINE=485 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
     defparam databus_out_i0_i5.GSR = "ENABLED";
     FD1P3AX databus_out_i0_i4 (.D(\buffer[2] [4]), .SP(n2541), .CK(debug_c_c), 
-            .Q(databus_out[4])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=26, LSE_RCOL=57, LSE_LLINE=475, LSE_RLINE=485 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
+            .Q(databus_out[4])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=26, LSE_RCOL=57, LSE_LLINE=475, LSE_RLINE=485 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
     defparam databus_out_i0_i4.GSR = "ENABLED";
     FD1P3AX databus_out_i0_i3 (.D(\buffer[2] [3]), .SP(n2541), .CK(debug_c_c), 
-            .Q(databus_out[3])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=26, LSE_RCOL=57, LSE_LLINE=475, LSE_RLINE=485 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
+            .Q(databus_out[3])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=26, LSE_RCOL=57, LSE_LLINE=475, LSE_RLINE=485 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
     defparam databus_out_i0_i3.GSR = "ENABLED";
     FD1P3AX databus_out_i0_i2 (.D(\buffer[2] [2]), .SP(n2541), .CK(debug_c_c), 
-            .Q(databus_out[2])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=26, LSE_RCOL=57, LSE_LLINE=475, LSE_RLINE=485 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
+            .Q(databus_out[2])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=26, LSE_RCOL=57, LSE_LLINE=475, LSE_RLINE=485 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
     defparam databus_out_i0_i2.GSR = "ENABLED";
     FD1P3AX databus_out_i0_i1 (.D(\buffer[2] [1]), .SP(n2541), .CK(debug_c_c), 
-            .Q(databus_out[1])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=26, LSE_RCOL=57, LSE_LLINE=475, LSE_RLINE=485 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
+            .Q(databus_out[1])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=26, LSE_RCOL=57, LSE_LLINE=475, LSE_RLINE=485 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
     defparam databus_out_i0_i1.GSR = "ENABLED";
     FD1P3AX esc_data_i0_i4 (.D(n4846[4]), .SP(n12098), .CK(debug_c_c), 
-            .Q(esc_data[4])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=26, LSE_RCOL=57, LSE_LLINE=475, LSE_RLINE=485 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
+            .Q(esc_data[4])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=26, LSE_RCOL=57, LSE_LLINE=475, LSE_RLINE=485 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
     defparam esc_data_i0_i4.GSR = "ENABLED";
     FD1P3AX esc_data_i0_i2 (.D(n4846[2]), .SP(n12098), .CK(debug_c_c), 
-            .Q(esc_data[2])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=26, LSE_RCOL=57, LSE_LLINE=475, LSE_RLINE=485 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
+            .Q(esc_data[2])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=26, LSE_RCOL=57, LSE_LLINE=475, LSE_RLINE=485 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
     defparam esc_data_i0_i2.GSR = "ENABLED";
     FD1P3AX esc_data_i0_i1 (.D(n4846[1]), .SP(n12098), .CK(debug_c_c), 
-            .Q(esc_data[1])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=26, LSE_RCOL=57, LSE_LLINE=475, LSE_RLINE=485 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
+            .Q(esc_data[1])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=26, LSE_RCOL=57, LSE_LLINE=475, LSE_RLINE=485 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
     defparam esc_data_i0_i1.GSR = "ENABLED";
     LUT4 i1_2_lut_rep_411 (.A(n1286[6]), .B(n1286[11]), .Z(n32536)) /* synthesis lut_function=(A+(B)) */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(89[6] 326[13])
     defparam i1_2_lut_rep_411.init = 16'heeee;
@@ -11773,7 +11773,7 @@ module \ProtocolInterface(baud_div=12)  (n32378, n30431, databus, n224,
          .D(n30219), .Z(n28385)) /* synthesis lut_function=(A (B+(C+(D)))+!A (B+(D))) */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(89[6] 326[13])
     defparam i2_4_lut_adj_92.init = 16'hffec;
     FD1P3IX buffer_0___i22 (.D(n28270), .SP(n7986), .CD(n32452), .CK(debug_c_c), 
-            .Q(\buffer[2] [5])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=26, LSE_RCOL=57, LSE_LLINE=475, LSE_RLINE=485 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
+            .Q(\buffer[2] [5])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=26, LSE_RCOL=57, LSE_LLINE=475, LSE_RLINE=485 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
     defparam buffer_0___i22.GSR = "ENABLED";
     LUT4 select_1742_Select_40_i5_4_lut (.A(\buffer[5] [0]), .B(n1286[4]), 
          .C(rx_data[0]), .D(n30493), .Z(n5_adj_65)) /* synthesis lut_function=(A (B (C+(D)))+!A !(((D)+!C)+!B)) */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(89[6] 326[13])
@@ -11783,82 +11783,82 @@ module \ProtocolInterface(baud_div=12)  (n32378, n30431, databus, n224,
     LUT4 i24686_2_lut (.A(sendcount[0]), .B(n9_adj_46), .Z(n20305)) /* synthesis lut_function=(!(A (B))) */ ;
     defparam i24686_2_lut.init = 16'h7777;
     FD1P3IX buffer_0___i23 (.D(n28279), .SP(n7986), .CD(n32452), .CK(debug_c_c), 
-            .Q(\buffer[2] [6])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=26, LSE_RCOL=57, LSE_LLINE=475, LSE_RLINE=485 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
+            .Q(\buffer[2] [6])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=26, LSE_RCOL=57, LSE_LLINE=475, LSE_RLINE=485 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
     defparam buffer_0___i23.GSR = "ENABLED";
     FD1P3IX buffer_0___i24 (.D(n28258), .SP(n7986), .CD(n32452), .CK(debug_c_c), 
-            .Q(\buffer[2] [7])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=26, LSE_RCOL=57, LSE_LLINE=475, LSE_RLINE=485 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
+            .Q(\buffer[2] [7])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=26, LSE_RCOL=57, LSE_LLINE=475, LSE_RLINE=485 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
     defparam buffer_0___i24.GSR = "ENABLED";
     FD1P3IX buffer_0___i25 (.D(n28351), .SP(n7986), .CD(n34346), .CK(debug_c_c), 
-            .Q(\buffer[3] [0])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=26, LSE_RCOL=57, LSE_LLINE=475, LSE_RLINE=485 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
+            .Q(\buffer[3] [0])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=26, LSE_RCOL=57, LSE_LLINE=475, LSE_RLINE=485 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
     defparam buffer_0___i25.GSR = "ENABLED";
     FD1P3IX buffer_0___i26 (.D(n28333), .SP(n7986), .CD(n34346), .CK(debug_c_c), 
-            .Q(\buffer[3] [1])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=26, LSE_RCOL=57, LSE_LLINE=475, LSE_RLINE=485 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
+            .Q(\buffer[3] [1])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=26, LSE_RCOL=57, LSE_LLINE=475, LSE_RLINE=485 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
     defparam buffer_0___i26.GSR = "ENABLED";
     FD1P3IX buffer_0___i27 (.D(n28227), .SP(n7986), .CD(n34346), .CK(debug_c_c), 
-            .Q(\buffer[3] [2])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=26, LSE_RCOL=57, LSE_LLINE=475, LSE_RLINE=485 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
+            .Q(\buffer[3] [2])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=26, LSE_RCOL=57, LSE_LLINE=475, LSE_RLINE=485 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
     defparam buffer_0___i27.GSR = "ENABLED";
     FD1P3IX buffer_0___i28 (.D(n28253), .SP(n7986), .CD(n34346), .CK(debug_c_c), 
-            .Q(\buffer[3] [3])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=26, LSE_RCOL=57, LSE_LLINE=475, LSE_RLINE=485 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
+            .Q(\buffer[3] [3])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=26, LSE_RCOL=57, LSE_LLINE=475, LSE_RLINE=485 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
     defparam buffer_0___i28.GSR = "ENABLED";
     FD1P3IX buffer_0___i29 (.D(n28324), .SP(n7986), .CD(n34346), .CK(debug_c_c), 
-            .Q(\buffer[3] [4])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=26, LSE_RCOL=57, LSE_LLINE=475, LSE_RLINE=485 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
+            .Q(\buffer[3] [4])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=26, LSE_RCOL=57, LSE_LLINE=475, LSE_RLINE=485 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
     defparam buffer_0___i29.GSR = "ENABLED";
     FD1P3IX buffer_0___i30 (.D(n28230), .SP(n7986), .CD(n34346), .CK(debug_c_c), 
-            .Q(\buffer[3] [5])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=26, LSE_RCOL=57, LSE_LLINE=475, LSE_RLINE=485 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
+            .Q(\buffer[3] [5])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=26, LSE_RCOL=57, LSE_LLINE=475, LSE_RLINE=485 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
     defparam buffer_0___i30.GSR = "ENABLED";
     FD1P3IX buffer_0___i31 (.D(n28236), .SP(n7986), .CD(n34346), .CK(debug_c_c), 
-            .Q(\buffer[3] [6])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=26, LSE_RCOL=57, LSE_LLINE=475, LSE_RLINE=485 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
+            .Q(\buffer[3] [6])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=26, LSE_RCOL=57, LSE_LLINE=475, LSE_RLINE=485 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
     defparam buffer_0___i31.GSR = "ENABLED";
     FD1P3IX buffer_0___i32 (.D(n28231), .SP(n7986), .CD(n34346), .CK(debug_c_c), 
-            .Q(\buffer[3] [7])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=26, LSE_RCOL=57, LSE_LLINE=475, LSE_RLINE=485 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
+            .Q(\buffer[3] [7])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=26, LSE_RCOL=57, LSE_LLINE=475, LSE_RLINE=485 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
     defparam buffer_0___i32.GSR = "ENABLED";
     FD1P3IX buffer_0___i33 (.D(n28233), .SP(n7986), .CD(n34346), .CK(debug_c_c), 
-            .Q(\buffer[4] [0])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=26, LSE_RCOL=57, LSE_LLINE=475, LSE_RLINE=485 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
+            .Q(\buffer[4] [0])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=26, LSE_RCOL=57, LSE_LLINE=475, LSE_RLINE=485 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
     defparam buffer_0___i33.GSR = "ENABLED";
     FD1P3IX buffer_0___i34 (.D(n28220), .SP(n7986), .CD(n34346), .CK(debug_c_c), 
-            .Q(\buffer[4] [1])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=26, LSE_RCOL=57, LSE_LLINE=475, LSE_RLINE=485 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
+            .Q(\buffer[4] [1])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=26, LSE_RCOL=57, LSE_LLINE=475, LSE_RLINE=485 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
     defparam buffer_0___i34.GSR = "ENABLED";
     FD1P3IX buffer_0___i35 (.D(n28372), .SP(n7986), .CD(n34346), .CK(debug_c_c), 
-            .Q(\buffer[4] [2])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=26, LSE_RCOL=57, LSE_LLINE=475, LSE_RLINE=485 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
+            .Q(\buffer[4] [2])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=26, LSE_RCOL=57, LSE_LLINE=475, LSE_RLINE=485 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
     defparam buffer_0___i35.GSR = "ENABLED";
     FD1P3IX buffer_0___i36 (.D(n28364), .SP(n7986), .CD(n34346), .CK(debug_c_c), 
-            .Q(\buffer[4] [3])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=26, LSE_RCOL=57, LSE_LLINE=475, LSE_RLINE=485 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
+            .Q(\buffer[4] [3])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=26, LSE_RCOL=57, LSE_LLINE=475, LSE_RLINE=485 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
     defparam buffer_0___i36.GSR = "ENABLED";
     FD1P3IX buffer_0___i37 (.D(n28371), .SP(n7986), .CD(n34346), .CK(debug_c_c), 
-            .Q(\buffer[4] [4])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=26, LSE_RCOL=57, LSE_LLINE=475, LSE_RLINE=485 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
+            .Q(\buffer[4] [4])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=26, LSE_RCOL=57, LSE_LLINE=475, LSE_RLINE=485 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
     defparam buffer_0___i37.GSR = "ENABLED";
     FD1P3IX buffer_0___i38 (.D(n28369), .SP(n7986), .CD(n34346), .CK(debug_c_c), 
-            .Q(\buffer[4] [5])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=26, LSE_RCOL=57, LSE_LLINE=475, LSE_RLINE=485 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
+            .Q(\buffer[4] [5])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=26, LSE_RCOL=57, LSE_LLINE=475, LSE_RLINE=485 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
     defparam buffer_0___i38.GSR = "ENABLED";
     FD1P3IX buffer_0___i39 (.D(n28366), .SP(n7986), .CD(n34346), .CK(debug_c_c), 
-            .Q(\buffer[4] [6])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=26, LSE_RCOL=57, LSE_LLINE=475, LSE_RLINE=485 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
+            .Q(\buffer[4] [6])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=26, LSE_RCOL=57, LSE_LLINE=475, LSE_RLINE=485 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
     defparam buffer_0___i39.GSR = "ENABLED";
     FD1P3IX buffer_0___i40 (.D(n28332), .SP(n7986), .CD(n34346), .CK(debug_c_c), 
-            .Q(\buffer[4] [7])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=26, LSE_RCOL=57, LSE_LLINE=475, LSE_RLINE=485 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
+            .Q(\buffer[4] [7])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=26, LSE_RCOL=57, LSE_LLINE=475, LSE_RLINE=485 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
     defparam buffer_0___i40.GSR = "ENABLED";
     FD1P3IX buffer_0___i41 (.D(n28385), .SP(n7986), .CD(n34346), .CK(debug_c_c), 
-            .Q(\buffer[5] [0])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=26, LSE_RCOL=57, LSE_LLINE=475, LSE_RLINE=485 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
+            .Q(\buffer[5] [0])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=26, LSE_RCOL=57, LSE_LLINE=475, LSE_RLINE=485 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
     defparam buffer_0___i41.GSR = "ENABLED";
     FD1P3IX buffer_0___i42 (.D(n28398), .SP(n7986), .CD(n34346), .CK(debug_c_c), 
-            .Q(\buffer[5] [1])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=26, LSE_RCOL=57, LSE_LLINE=475, LSE_RLINE=485 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
+            .Q(\buffer[5] [1])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=26, LSE_RCOL=57, LSE_LLINE=475, LSE_RLINE=485 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
     defparam buffer_0___i42.GSR = "ENABLED";
     FD1P3IX buffer_0___i43 (.D(n28213), .SP(n7986), .CD(n34346), .CK(debug_c_c), 
-            .Q(\buffer[5] [2])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=26, LSE_RCOL=57, LSE_LLINE=475, LSE_RLINE=485 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
+            .Q(\buffer[5] [2])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=26, LSE_RCOL=57, LSE_LLINE=475, LSE_RLINE=485 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
     defparam buffer_0___i43.GSR = "ENABLED";
     FD1P3IX buffer_0___i44 (.D(n28342), .SP(n7986), .CD(n34346), .CK(debug_c_c), 
-            .Q(\buffer[5] [3])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=26, LSE_RCOL=57, LSE_LLINE=475, LSE_RLINE=485 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
+            .Q(\buffer[5] [3])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=26, LSE_RCOL=57, LSE_LLINE=475, LSE_RLINE=485 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
     defparam buffer_0___i44.GSR = "ENABLED";
     FD1P3IX buffer_0___i45 (.D(n28313), .SP(n7986), .CD(n34346), .CK(debug_c_c), 
-            .Q(\buffer[5] [4])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=26, LSE_RCOL=57, LSE_LLINE=475, LSE_RLINE=485 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
+            .Q(\buffer[5] [4])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=26, LSE_RCOL=57, LSE_LLINE=475, LSE_RLINE=485 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
     defparam buffer_0___i45.GSR = "ENABLED";
     FD1P3IX buffer_0___i46 (.D(n28367), .SP(n7986), .CD(n34346), .CK(debug_c_c), 
-            .Q(\buffer[5] [5])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=26, LSE_RCOL=57, LSE_LLINE=475, LSE_RLINE=485 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
+            .Q(\buffer[5] [5])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=26, LSE_RCOL=57, LSE_LLINE=475, LSE_RLINE=485 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
     defparam buffer_0___i46.GSR = "ENABLED";
     FD1P3IX buffer_0___i47 (.D(n28330), .SP(n7986), .CD(n34346), .CK(debug_c_c), 
-            .Q(\buffer[5] [6])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=26, LSE_RCOL=57, LSE_LLINE=475, LSE_RLINE=485 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
+            .Q(\buffer[5] [6])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=26, LSE_RCOL=57, LSE_LLINE=475, LSE_RLINE=485 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
     defparam buffer_0___i47.GSR = "ENABLED";
     FD1P3IX buffer_0___i48 (.D(n28329), .SP(n7986), .CD(n34346), .CK(debug_c_c), 
-            .Q(\buffer[5] [7])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=26, LSE_RCOL=57, LSE_LLINE=475, LSE_RLINE=485 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
+            .Q(\buffer[5] [7])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=26, LSE_RCOL=57, LSE_LLINE=475, LSE_RLINE=485 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(72[9] 328[6])
     defparam buffer_0___i48.GSR = "ENABLED";
     LUT4 i1_4_lut_adj_93 (.A(sendcount[4]), .B(n1), .C(n6_adj_66), .D(n11271), 
          .Z(n9_adj_46)) /* synthesis lut_function=(A+(B+(C+!(D)))) */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(268[12:39])
@@ -12416,25 +12416,25 @@ module \UARTTransmitter(baud_div=12)  (\reset_count[14] , \reset_count[12] ,
     LUT4 i14769_1_lut_rep_327_4_lut (.A(\reset_count[14] ), .B(\reset_count[12] ), 
          .C(\reset_count[13] ), .D(n30429), .Z(n32452)) /* synthesis lut_function=(!(A+(B (C)+!B (C (D))))) */ ;
     defparam i14769_1_lut_rep_327_4_lut.init = 16'h0515;
-    FD1S3IX state__i0 (.D(n31581), .CK(bclk), .CD(n32452), .Q(state[0])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=30, LSE_RCOL=52, LSE_LLINE=65, LSE_RLINE=70 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uart.v(107[9] 190[6])
+    FD1S3IX state__i0 (.D(n31581), .CK(bclk), .CD(n32452), .Q(state[0])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=30, LSE_RCOL=52, LSE_LLINE=65, LSE_RLINE=70 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uart.v(107[9] 190[6])
     defparam state__i0.GSR = "ENABLED";
-    FD1P3AX tdata_i0_i0 (.D(tx_data[0]), .SP(n7984), .CK(bclk), .Q(tdata[0])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=30, LSE_RCOL=52, LSE_LLINE=65, LSE_RLINE=70 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uart.v(107[9] 190[6])
+    FD1P3AX tdata_i0_i0 (.D(tx_data[0]), .SP(n7984), .CK(bclk), .Q(tdata[0])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=30, LSE_RCOL=52, LSE_LLINE=65, LSE_RLINE=70 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uart.v(107[9] 190[6])
     defparam tdata_i0_i0.GSR = "ENABLED";
-    FD1P3AX tdata_i0_i7 (.D(tx_data[7]), .SP(n7984), .CK(bclk), .Q(tdata[7])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=30, LSE_RCOL=52, LSE_LLINE=65, LSE_RLINE=70 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uart.v(107[9] 190[6])
+    FD1P3AX tdata_i0_i7 (.D(tx_data[7]), .SP(n7984), .CK(bclk), .Q(tdata[7])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=30, LSE_RCOL=52, LSE_LLINE=65, LSE_RLINE=70 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uart.v(107[9] 190[6])
     defparam tdata_i0_i7.GSR = "ENABLED";
-    FD1P3AX tdata_i0_i6 (.D(tx_data[6]), .SP(n7984), .CK(bclk), .Q(tdata[6])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=30, LSE_RCOL=52, LSE_LLINE=65, LSE_RLINE=70 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uart.v(107[9] 190[6])
+    FD1P3AX tdata_i0_i6 (.D(tx_data[6]), .SP(n7984), .CK(bclk), .Q(tdata[6])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=30, LSE_RCOL=52, LSE_LLINE=65, LSE_RLINE=70 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uart.v(107[9] 190[6])
     defparam tdata_i0_i6.GSR = "ENABLED";
-    FD1P3AX tdata_i0_i5 (.D(tx_data[5]), .SP(n7984), .CK(bclk), .Q(tdata[5])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=30, LSE_RCOL=52, LSE_LLINE=65, LSE_RLINE=70 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uart.v(107[9] 190[6])
+    FD1P3AX tdata_i0_i5 (.D(tx_data[5]), .SP(n7984), .CK(bclk), .Q(tdata[5])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=30, LSE_RCOL=52, LSE_LLINE=65, LSE_RLINE=70 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uart.v(107[9] 190[6])
     defparam tdata_i0_i5.GSR = "ENABLED";
-    FD1P3AX tdata_i0_i4 (.D(tx_data[4]), .SP(n7984), .CK(bclk), .Q(tdata[4])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=30, LSE_RCOL=52, LSE_LLINE=65, LSE_RLINE=70 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uart.v(107[9] 190[6])
+    FD1P3AX tdata_i0_i4 (.D(tx_data[4]), .SP(n7984), .CK(bclk), .Q(tdata[4])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=30, LSE_RCOL=52, LSE_LLINE=65, LSE_RLINE=70 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uart.v(107[9] 190[6])
     defparam tdata_i0_i4.GSR = "ENABLED";
-    FD1P3AX tdata_i0_i3 (.D(tx_data[3]), .SP(n7984), .CK(bclk), .Q(tdata[3])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=30, LSE_RCOL=52, LSE_LLINE=65, LSE_RLINE=70 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uart.v(107[9] 190[6])
+    FD1P3AX tdata_i0_i3 (.D(tx_data[3]), .SP(n7984), .CK(bclk), .Q(tdata[3])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=30, LSE_RCOL=52, LSE_LLINE=65, LSE_RLINE=70 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uart.v(107[9] 190[6])
     defparam tdata_i0_i3.GSR = "ENABLED";
-    FD1P3AX tdata_i0_i2 (.D(tx_data[2]), .SP(n7984), .CK(bclk), .Q(tdata[2])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=30, LSE_RCOL=52, LSE_LLINE=65, LSE_RLINE=70 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uart.v(107[9] 190[6])
+    FD1P3AX tdata_i0_i2 (.D(tx_data[2]), .SP(n7984), .CK(bclk), .Q(tdata[2])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=30, LSE_RCOL=52, LSE_LLINE=65, LSE_RLINE=70 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uart.v(107[9] 190[6])
     defparam tdata_i0_i2.GSR = "ENABLED";
-    FD1P3AX tdata_i0_i1 (.D(tx_data[1]), .SP(n7984), .CK(bclk), .Q(tdata[1])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=30, LSE_RCOL=52, LSE_LLINE=65, LSE_RLINE=70 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uart.v(107[9] 190[6])
+    FD1P3AX tdata_i0_i1 (.D(tx_data[1]), .SP(n7984), .CK(bclk), .Q(tdata[1])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=30, LSE_RCOL=52, LSE_LLINE=65, LSE_RLINE=70 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uart.v(107[9] 190[6])
     defparam tdata_i0_i1.GSR = "ENABLED";
-    FD1P3AX state__i3 (.D(n29073), .SP(n12208), .CK(bclk), .Q(state[3])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=30, LSE_RCOL=52, LSE_LLINE=65, LSE_RLINE=70 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uart.v(107[9] 190[6])
+    FD1P3AX state__i3 (.D(n29073), .SP(n12208), .CK(bclk), .Q(state[3])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=30, LSE_RCOL=52, LSE_LLINE=65, LSE_RLINE=70 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uart.v(107[9] 190[6])
     defparam state__i3.GSR = "ENABLED";
     LUT4 i27_4_lut_4_lut (.A(state[2]), .B(state[0]), .C(state[1]), .D(state[3]), 
          .Z(n17)) /* synthesis lut_function=(!(A (D)+!A (B (C (D))+!B !(C+(D))))) */ ;
@@ -12442,7 +12442,7 @@ module \UARTTransmitter(baud_div=12)  (\reset_count[14] , \reset_count[12] ,
     LUT4 i24_4_lut_4_lut (.A(state[3]), .B(state[0]), .C(state[1]), .D(send), 
          .Z(n17_adj_9)) /* synthesis lut_function=(A (B (C (D)))+!A !(B+(C+(D)))) */ ;
     defparam i24_4_lut_4_lut.init = 16'h8001;
-    PFUMX Mux_22_i15 (.BLUT(n7), .ALUT(n10), .C0(state[3]), .Z(n104)) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=30, LSE_RCOL=52, LSE_LLINE=65, LSE_RLINE=70 */ ;
+    PFUMX Mux_22_i15 (.BLUT(n7), .ALUT(n10), .C0(state[3]), .Z(n104)) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=30, LSE_RCOL=52, LSE_LLINE=65, LSE_RLINE=70 */ ;
     LUT4 state_1__bdd_2_lut (.A(state[3]), .B(state[0]), .Z(n31579)) /* synthesis lut_function=(!(A+(B))) */ ;
     defparam state_1__bdd_2_lut.init = 16'h1111;
     LUT4 i14769_1_lut_rep_422 (.A(\reset_count[14] ), .B(\reset_count[12] ), 
@@ -12464,11 +12464,11 @@ module \UARTTransmitter(baud_div=12)  (\reset_count[14] , \reset_count[12] ,
     defparam i1_2_lut.init = 16'h8888;
     LUT4 i1_2_lut_adj_49 (.A(\reset_count[10] ), .B(\reset_count[9] ), .Z(n19896)) /* synthesis lut_function=(A (B)) */ ;
     defparam i1_2_lut_adj_49.init = 16'h8888;
-    FD1P3AX state__i1 (.D(n30391), .SP(n12208), .CK(bclk), .Q(state[1])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=30, LSE_RCOL=52, LSE_LLINE=65, LSE_RLINE=70 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uart.v(107[9] 190[6])
+    FD1P3AX state__i1 (.D(n30391), .SP(n12208), .CK(bclk), .Q(state[1])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=30, LSE_RCOL=52, LSE_LLINE=65, LSE_RLINE=70 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uart.v(107[9] 190[6])
     defparam state__i1.GSR = "ENABLED";
-    FD1P3AX state__i2 (.D(n30390), .SP(n12208), .CK(bclk), .Q(state[2])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=30, LSE_RCOL=52, LSE_LLINE=65, LSE_RLINE=70 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uart.v(107[9] 190[6])
+    FD1P3AX state__i2 (.D(n30390), .SP(n12208), .CK(bclk), .Q(state[2])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=30, LSE_RCOL=52, LSE_LLINE=65, LSE_RLINE=70 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uart.v(107[9] 190[6])
     defparam state__i2.GSR = "ENABLED";
-    FD1P3JX tx_35 (.D(n104), .SP(n17), .PD(n32452), .CK(bclk), .Q(n9395)) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=30, LSE_RCOL=52, LSE_LLINE=65, LSE_RLINE=70 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uart.v(107[9] 190[6])
+    FD1P3JX tx_35 (.D(n104), .SP(n17), .PD(n32452), .CK(bclk), .Q(n9395)) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=30, LSE_RCOL=52, LSE_LLINE=65, LSE_RLINE=70 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uart.v(107[9] 190[6])
     defparam tx_35.GSR = "ENABLED";
     LUT4 i2_4_lut (.A(n30246), .B(state[2]), .C(n19773), .D(n32472), 
          .Z(n7984)) /* synthesis lut_function=(!((B+(C+!(D)))+!A)) */ ;
@@ -12560,7 +12560,7 @@ module \ClockDividerP(factor=12)  (debug_c_c, bclk, GND_net) /* synthesis syn_mo
     FD1S3IX count_2181__i0 (.D(n102[0]), .CK(debug_c_c), .CD(n14394), 
             .Q(count[0]));   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(32[16:25])
     defparam count_2181__i0.GSR = "ENABLED";
-    FD1S3AX clk_o_14 (.D(n7264), .CK(debug_c_c), .Q(bclk)) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=28, LSE_RCOL=50, LSE_LLINE=104, LSE_RLINE=106 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(15[9] 34[6])
+    FD1S3AX clk_o_14 (.D(n7264), .CK(debug_c_c), .Q(bclk)) /* synthesis LSE_LINE_FILE_ID=8, LSE_LCOL=28, LSE_RCOL=50, LSE_LLINE=104, LSE_RLINE=106 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(15[9] 34[6])
     defparam clk_o_14.GSR = "ENABLED";
     CCU2D sub_1736_add_2_4 (.A0(count[2]), .B0(GND_net), .C0(GND_net), 
           .D0(GND_net), .A1(count[3]), .B1(GND_net), .C1(GND_net), .D1(GND_net), 
@@ -12955,51 +12955,51 @@ module \UARTReceiver(baud_div=12)  (state, rdata, debug_c_c, n32472,
     PFUMX i8219 (.BLUT(n29), .ALUT(n13984), .C0(state[0]), .Z(n13985));
     PFUMX i32 (.BLUT(n21), .ALUT(n17), .C0(state[0]), .Z(n29123));
     PFUMX i36 (.BLUT(n21_adj_7), .ALUT(n23), .C0(state[5]), .Z(n28845));
-    FD1P3AX rdata_i0_i0 (.D(n7934), .SP(n32472), .CK(debug_c_c), .Q(rdata[0])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=27, LSE_RCOL=39, LSE_LLINE=60, LSE_RLINE=64 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uart.v(29[9] 84[6])
+    FD1P3AX rdata_i0_i0 (.D(n7934), .SP(n32472), .CK(debug_c_c), .Q(rdata[0])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=27, LSE_RCOL=39, LSE_LLINE=60, LSE_RLINE=64 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uart.v(29[9] 84[6])
     defparam rdata_i0_i0.GSR = "ENABLED";
-    FD1P3AX data_i0_i0 (.D(n7936), .SP(n32472), .CK(debug_c_c), .Q(rx_data[0])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=27, LSE_RCOL=39, LSE_LLINE=60, LSE_RLINE=64 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uart.v(29[9] 84[6])
+    FD1P3AX data_i0_i0 (.D(n7936), .SP(n32472), .CK(debug_c_c), .Q(rx_data[0])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=27, LSE_RCOL=39, LSE_LLINE=60, LSE_RLINE=64 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uart.v(29[9] 84[6])
     defparam data_i0_i0.GSR = "ENABLED";
-    FD1S3IX state__i0 (.D(n29265), .CK(debug_c_c), .CD(n32452), .Q(state[0])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=27, LSE_RCOL=39, LSE_LLINE=60, LSE_RLINE=64 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uart.v(29[9] 84[6])
+    FD1S3IX state__i0 (.D(n29265), .CK(debug_c_c), .CD(n32452), .Q(state[0])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=27, LSE_RCOL=39, LSE_LLINE=60, LSE_RLINE=64 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uart.v(29[9] 84[6])
     defparam state__i0.GSR = "ENABLED";
-    FD1S3JX baud_reset_52 (.D(n29427), .CK(debug_c_c), .PD(n32452), .Q(baud_reset)) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=27, LSE_RCOL=39, LSE_LLINE=60, LSE_RLINE=64 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uart.v(29[9] 84[6])
+    FD1S3JX baud_reset_52 (.D(n29427), .CK(debug_c_c), .PD(n32452), .Q(baud_reset)) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=27, LSE_RCOL=39, LSE_LLINE=60, LSE_RLINE=64 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uart.v(29[9] 84[6])
     defparam baud_reset_52.GSR = "ENABLED";
-    FD1S3IX state__i5 (.D(n28845), .CK(debug_c_c), .CD(n32452), .Q(state[5])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=27, LSE_RCOL=39, LSE_LLINE=60, LSE_RLINE=64 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uart.v(29[9] 84[6])
+    FD1S3IX state__i5 (.D(n28845), .CK(debug_c_c), .CD(n32452), .Q(state[5])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=27, LSE_RCOL=39, LSE_LLINE=60, LSE_RLINE=64 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uart.v(29[9] 84[6])
     defparam state__i5.GSR = "ENABLED";
-    FD1S3IX state__i4 (.D(n31576), .CK(debug_c_c), .CD(n32452), .Q(state[4])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=27, LSE_RCOL=39, LSE_LLINE=60, LSE_RLINE=64 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uart.v(29[9] 84[6])
+    FD1S3IX state__i4 (.D(n31576), .CK(debug_c_c), .CD(n32452), .Q(state[4])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=27, LSE_RCOL=39, LSE_LLINE=60, LSE_RLINE=64 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uart.v(29[9] 84[6])
     defparam state__i4.GSR = "ENABLED";
-    FD1S3IX state__i3 (.D(n13985), .CK(debug_c_c), .CD(n34346), .Q(state[3])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=27, LSE_RCOL=39, LSE_LLINE=60, LSE_RLINE=64 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uart.v(29[9] 84[6])
+    FD1S3IX state__i3 (.D(n13985), .CK(debug_c_c), .CD(n34346), .Q(state[3])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=27, LSE_RCOL=39, LSE_LLINE=60, LSE_RLINE=64 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uart.v(29[9] 84[6])
     defparam state__i3.GSR = "ENABLED";
-    FD1S3IX state__i2 (.D(n29123), .CK(debug_c_c), .CD(n34346), .Q(state[2])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=27, LSE_RCOL=39, LSE_LLINE=60, LSE_RLINE=64 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uart.v(29[9] 84[6])
+    FD1S3IX state__i2 (.D(n29123), .CK(debug_c_c), .CD(n34346), .Q(state[2])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=27, LSE_RCOL=39, LSE_LLINE=60, LSE_RLINE=64 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uart.v(29[9] 84[6])
     defparam state__i2.GSR = "ENABLED";
-    FD1S3IX state__i1 (.D(n29195), .CK(debug_c_c), .CD(n34346), .Q(state[1])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=27, LSE_RCOL=39, LSE_LLINE=60, LSE_RLINE=64 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uart.v(29[9] 84[6])
+    FD1S3IX state__i1 (.D(n29195), .CK(debug_c_c), .CD(n34346), .Q(state[1])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=27, LSE_RCOL=39, LSE_LLINE=60, LSE_RLINE=64 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uart.v(29[9] 84[6])
     defparam state__i1.GSR = "ENABLED";
-    FD1P3AX data_i0_i7 (.D(n7976), .SP(n32472), .CK(debug_c_c), .Q(rx_data[7])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=27, LSE_RCOL=39, LSE_LLINE=60, LSE_RLINE=64 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uart.v(29[9] 84[6])
+    FD1P3AX data_i0_i7 (.D(n7976), .SP(n32472), .CK(debug_c_c), .Q(rx_data[7])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=27, LSE_RCOL=39, LSE_LLINE=60, LSE_RLINE=64 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uart.v(29[9] 84[6])
     defparam data_i0_i7.GSR = "ENABLED";
-    FD1P3AX data_i0_i6 (.D(n7974), .SP(n32472), .CK(debug_c_c), .Q(rx_data[6])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=27, LSE_RCOL=39, LSE_LLINE=60, LSE_RLINE=64 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uart.v(29[9] 84[6])
+    FD1P3AX data_i0_i6 (.D(n7974), .SP(n32472), .CK(debug_c_c), .Q(rx_data[6])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=27, LSE_RCOL=39, LSE_LLINE=60, LSE_RLINE=64 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uart.v(29[9] 84[6])
     defparam data_i0_i6.GSR = "ENABLED";
-    FD1P3AX data_i0_i5 (.D(n7972), .SP(n32472), .CK(debug_c_c), .Q(rx_data[5])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=27, LSE_RCOL=39, LSE_LLINE=60, LSE_RLINE=64 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uart.v(29[9] 84[6])
+    FD1P3AX data_i0_i5 (.D(n7972), .SP(n32472), .CK(debug_c_c), .Q(rx_data[5])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=27, LSE_RCOL=39, LSE_LLINE=60, LSE_RLINE=64 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uart.v(29[9] 84[6])
     defparam data_i0_i5.GSR = "ENABLED";
-    FD1P3AX data_i0_i4 (.D(n7970), .SP(n32472), .CK(debug_c_c), .Q(rx_data[4])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=27, LSE_RCOL=39, LSE_LLINE=60, LSE_RLINE=64 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uart.v(29[9] 84[6])
+    FD1P3AX data_i0_i4 (.D(n7970), .SP(n32472), .CK(debug_c_c), .Q(rx_data[4])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=27, LSE_RCOL=39, LSE_LLINE=60, LSE_RLINE=64 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uart.v(29[9] 84[6])
     defparam data_i0_i4.GSR = "ENABLED";
-    FD1P3AX data_i0_i3 (.D(n7968), .SP(n32472), .CK(debug_c_c), .Q(rx_data[3])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=27, LSE_RCOL=39, LSE_LLINE=60, LSE_RLINE=64 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uart.v(29[9] 84[6])
+    FD1P3AX data_i0_i3 (.D(n7968), .SP(n32472), .CK(debug_c_c), .Q(rx_data[3])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=27, LSE_RCOL=39, LSE_LLINE=60, LSE_RLINE=64 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uart.v(29[9] 84[6])
     defparam data_i0_i3.GSR = "ENABLED";
-    FD1P3AX data_i0_i2 (.D(n7966), .SP(n32472), .CK(debug_c_c), .Q(rx_data[2])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=27, LSE_RCOL=39, LSE_LLINE=60, LSE_RLINE=64 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uart.v(29[9] 84[6])
+    FD1P3AX data_i0_i2 (.D(n7966), .SP(n32472), .CK(debug_c_c), .Q(rx_data[2])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=27, LSE_RCOL=39, LSE_LLINE=60, LSE_RLINE=64 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uart.v(29[9] 84[6])
     defparam data_i0_i2.GSR = "ENABLED";
-    FD1P3AX data_i0_i1 (.D(n7964), .SP(n32472), .CK(debug_c_c), .Q(rx_data[1])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=27, LSE_RCOL=39, LSE_LLINE=60, LSE_RLINE=64 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uart.v(29[9] 84[6])
+    FD1P3AX data_i0_i1 (.D(n7964), .SP(n32472), .CK(debug_c_c), .Q(rx_data[1])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=27, LSE_RCOL=39, LSE_LLINE=60, LSE_RLINE=64 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uart.v(29[9] 84[6])
     defparam data_i0_i1.GSR = "ENABLED";
-    FD1P3AX rdata_i0_i7 (.D(n7962), .SP(n32472), .CK(debug_c_c), .Q(rdata_c[7])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=27, LSE_RCOL=39, LSE_LLINE=60, LSE_RLINE=64 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uart.v(29[9] 84[6])
+    FD1P3AX rdata_i0_i7 (.D(n7962), .SP(n32472), .CK(debug_c_c), .Q(rdata_c[7])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=27, LSE_RCOL=39, LSE_LLINE=60, LSE_RLINE=64 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uart.v(29[9] 84[6])
     defparam rdata_i0_i7.GSR = "ENABLED";
-    FD1P3AX rdata_i0_i6 (.D(n7960), .SP(n32472), .CK(debug_c_c), .Q(rdata_c[6])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=27, LSE_RCOL=39, LSE_LLINE=60, LSE_RLINE=64 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uart.v(29[9] 84[6])
+    FD1P3AX rdata_i0_i6 (.D(n7960), .SP(n32472), .CK(debug_c_c), .Q(rdata_c[6])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=27, LSE_RCOL=39, LSE_LLINE=60, LSE_RLINE=64 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uart.v(29[9] 84[6])
     defparam rdata_i0_i6.GSR = "ENABLED";
-    FD1P3AX rdata_i0_i5 (.D(n7958), .SP(n32472), .CK(debug_c_c), .Q(rdata_c[5])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=27, LSE_RCOL=39, LSE_LLINE=60, LSE_RLINE=64 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uart.v(29[9] 84[6])
+    FD1P3AX rdata_i0_i5 (.D(n7958), .SP(n32472), .CK(debug_c_c), .Q(rdata_c[5])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=27, LSE_RCOL=39, LSE_LLINE=60, LSE_RLINE=64 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uart.v(29[9] 84[6])
     defparam rdata_i0_i5.GSR = "ENABLED";
-    FD1P3AX rdata_i0_i4 (.D(n7956), .SP(n32472), .CK(debug_c_c), .Q(rdata_c[4])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=27, LSE_RCOL=39, LSE_LLINE=60, LSE_RLINE=64 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uart.v(29[9] 84[6])
+    FD1P3AX rdata_i0_i4 (.D(n7956), .SP(n32472), .CK(debug_c_c), .Q(rdata_c[4])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=27, LSE_RCOL=39, LSE_LLINE=60, LSE_RLINE=64 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uart.v(29[9] 84[6])
     defparam rdata_i0_i4.GSR = "ENABLED";
-    FD1P3AX rdata_i0_i3 (.D(n7954), .SP(n32472), .CK(debug_c_c), .Q(rdata_c[3])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=27, LSE_RCOL=39, LSE_LLINE=60, LSE_RLINE=64 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uart.v(29[9] 84[6])
+    FD1P3AX rdata_i0_i3 (.D(n7954), .SP(n32472), .CK(debug_c_c), .Q(rdata_c[3])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=27, LSE_RCOL=39, LSE_LLINE=60, LSE_RLINE=64 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uart.v(29[9] 84[6])
     defparam rdata_i0_i3.GSR = "ENABLED";
-    FD1P3AX rdata_i0_i2 (.D(n7952), .SP(n32472), .CK(debug_c_c), .Q(rdata_c[2])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=27, LSE_RCOL=39, LSE_LLINE=60, LSE_RLINE=64 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uart.v(29[9] 84[6])
+    FD1P3AX rdata_i0_i2 (.D(n7952), .SP(n32472), .CK(debug_c_c), .Q(rdata_c[2])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=27, LSE_RCOL=39, LSE_LLINE=60, LSE_RLINE=64 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uart.v(29[9] 84[6])
     defparam rdata_i0_i2.GSR = "ENABLED";
-    FD1P3AX rdata_i0_i1 (.D(n7950), .SP(n32472), .CK(debug_c_c), .Q(\rdata[1] )) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=27, LSE_RCOL=39, LSE_LLINE=60, LSE_RLINE=64 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uart.v(29[9] 84[6])
+    FD1P3AX rdata_i0_i1 (.D(n7950), .SP(n32472), .CK(debug_c_c), .Q(\rdata[1] )) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=27, LSE_RCOL=39, LSE_LLINE=60, LSE_RLINE=64 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uart.v(29[9] 84[6])
     defparam rdata_i0_i1.GSR = "ENABLED";
     LUT4 i21620_4_lut (.A(n183), .B(state[5]), .C(n1[3]), .D(n32), .Z(n29)) /* synthesis lut_function=(!(A (B+!(C (D)))+!A (B))) */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uart.v(39[6] 82[13])
     defparam i21620_4_lut.init = 16'h3111;
@@ -13709,70 +13709,70 @@ module \ArmPeripheral(axis_haddr=8'b0)  (GND_net, n224, n32486, n34347,
     PFUMX i24539 (.BLUT(n30895), .ALUT(n30896), .C0(\register_addr[0] ), 
           .Z(n30897));
     FD1S3IX steps_reg__i19 (.D(n3451[19]), .CK(debug_c_c), .CD(n34351), 
-            .Q(steps_reg[19])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=559, LSE_RLINE=572 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(steps_reg[19])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=559, LSE_RLINE=572 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam steps_reg__i19.GSR = "ENABLED";
     LUT4 i28_4_lut (.A(steps_reg[2]), .B(n56), .C(n46), .D(steps_reg[16]), 
          .Z(n60)) /* synthesis lut_function=(A+(B+(C+(D)))) */ ;
     defparam i28_4_lut.init = 16'hfffe;
     FD1S3IX steps_reg__i18 (.D(n3451[18]), .CK(debug_c_c), .CD(n34348), 
-            .Q(steps_reg[18])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=559, LSE_RLINE=572 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(steps_reg[18])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=559, LSE_RLINE=572 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam steps_reg__i18.GSR = "ENABLED";
     FD1S3IX steps_reg__i17 (.D(n3451[17]), .CK(debug_c_c), .CD(n34348), 
-            .Q(steps_reg[17])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=559, LSE_RLINE=572 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(steps_reg[17])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=559, LSE_RLINE=572 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam steps_reg__i17.GSR = "ENABLED";
     FD1S3IX steps_reg__i16 (.D(n3451[16]), .CK(debug_c_c), .CD(n34348), 
-            .Q(steps_reg[16])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=559, LSE_RLINE=572 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(steps_reg[16])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=559, LSE_RLINE=572 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam steps_reg__i16.GSR = "ENABLED";
     FD1S3IX steps_reg__i0 (.D(n3451[0]), .CK(debug_c_c), .CD(n34348), 
-            .Q(steps_reg[0])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=559, LSE_RLINE=572 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(steps_reg[0])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=559, LSE_RLINE=572 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam steps_reg__i0.GSR = "ENABLED";
     FD1S3IX steps_reg__i15 (.D(n3451[15]), .CK(debug_c_c), .CD(n34348), 
-            .Q(steps_reg[15])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=559, LSE_RLINE=572 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(steps_reg[15])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=559, LSE_RLINE=572 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam steps_reg__i15.GSR = "ENABLED";
     FD1S3IX steps_reg__i14 (.D(n3451[14]), .CK(debug_c_c), .CD(n34348), 
-            .Q(steps_reg[14])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=559, LSE_RLINE=572 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(steps_reg[14])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=559, LSE_RLINE=572 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam steps_reg__i14.GSR = "ENABLED";
-    FD1P3AX read_size__i1 (.D(n30743), .SP(n11966), .CK(debug_c_c), .Q(\read_size[0] )) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=559, LSE_RLINE=572 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+    FD1P3AX read_size__i1 (.D(n30743), .SP(n11966), .CK(debug_c_c), .Q(\read_size[0] )) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=559, LSE_RLINE=572 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam read_size__i1.GSR = "ENABLED";
     FD1S3IX steps_reg__i13 (.D(n3451[13]), .CK(debug_c_c), .CD(n34349), 
-            .Q(steps_reg[13])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=559, LSE_RLINE=572 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(steps_reg[13])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=559, LSE_RLINE=572 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam steps_reg__i13.GSR = "ENABLED";
     FD1S3IX steps_reg__i12 (.D(n3451[12]), .CK(debug_c_c), .CD(n34349), 
-            .Q(steps_reg[12])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=559, LSE_RLINE=572 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(steps_reg[12])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=559, LSE_RLINE=572 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam steps_reg__i12.GSR = "ENABLED";
-    FD1P3AX control_reg_i1 (.D(n579), .SP(n12540), .CK(debug_c_c), .Q(Stepper_X_M0_c_0)) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=559, LSE_RLINE=572 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+    FD1P3AX control_reg_i1 (.D(n579), .SP(n12540), .CK(debug_c_c), .Q(Stepper_X_M0_c_0)) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=559, LSE_RLINE=572 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam control_reg_i1.GSR = "ENABLED";
-    FD1S3AX prev_step_clk_175 (.D(step_clk), .CK(debug_c_c), .Q(prev_step_clk)) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=559, LSE_RLINE=572 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+    FD1S3AX prev_step_clk_175 (.D(step_clk), .CK(debug_c_c), .Q(prev_step_clk)) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=559, LSE_RLINE=572 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam prev_step_clk_175.GSR = "ENABLED";
-    FD1S3AX limit_latched_176 (.D(n182), .CK(debug_c_c), .Q(limit_latched)) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=559, LSE_RLINE=572 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+    FD1S3AX limit_latched_176 (.D(n182), .CK(debug_c_c), .Q(limit_latched)) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=559, LSE_RLINE=572 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam limit_latched_176.GSR = "ENABLED";
-    FD1S3AX prev_limit_latched_177 (.D(limit_latched), .CK(debug_c_c), .Q(prev_limit_latched)) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=559, LSE_RLINE=572 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+    FD1S3AX prev_limit_latched_177 (.D(limit_latched), .CK(debug_c_c), .Q(prev_limit_latched)) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=559, LSE_RLINE=572 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam prev_limit_latched_177.GSR = "ENABLED";
     FD1P3AX div_factor_reg_i0 (.D(n579), .SP(n12480), .CK(debug_c_c), 
-            .Q(div_factor_reg[0])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=559, LSE_RLINE=572 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(div_factor_reg[0])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=559, LSE_RLINE=572 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam div_factor_reg_i0.GSR = "ENABLED";
     FD1S3IX steps_reg__i11 (.D(n3451[11]), .CK(debug_c_c), .CD(n34349), 
-            .Q(steps_reg[11])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=559, LSE_RLINE=572 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(steps_reg[11])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=559, LSE_RLINE=572 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam steps_reg__i11.GSR = "ENABLED";
-    FD1S3AX prev_select_174 (.D(n32435), .CK(debug_c_c), .Q(prev_select)) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=559, LSE_RLINE=572 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+    FD1S3AX prev_select_174 (.D(n32435), .CK(debug_c_c), .Q(prev_select)) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=559, LSE_RLINE=572 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam prev_select_174.GSR = "ENABLED";
     FD1S3IX steps_reg__i10 (.D(n3451[10]), .CK(debug_c_c), .CD(n34349), 
-            .Q(steps_reg[10])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=559, LSE_RLINE=572 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(steps_reg[10])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=559, LSE_RLINE=572 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam steps_reg__i10.GSR = "ENABLED";
     FD1S3IX steps_reg__i9 (.D(n3451[9]), .CK(debug_c_c), .CD(n34349), 
-            .Q(steps_reg[9])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=559, LSE_RLINE=572 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(steps_reg[9])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=559, LSE_RLINE=572 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam steps_reg__i9.GSR = "ENABLED";
     FD1S3IX steps_reg__i8 (.D(n3451[8]), .CK(debug_c_c), .CD(n34350), 
-            .Q(steps_reg[8])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=559, LSE_RLINE=572 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(steps_reg[8])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=559, LSE_RLINE=572 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam steps_reg__i8.GSR = "ENABLED";
     LUT4 i1_2_lut_rep_253_3_lut_4_lut (.A(n32435), .B(prev_select), .C(\register_addr[5] ), 
          .D(n34344), .Z(n32378)) /* synthesis lut_function=(!((B+(C+(D)))+!A)) */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(82[9:30])
     defparam i1_2_lut_rep_253_3_lut_4_lut.init = 16'h0002;
     FD1S3IX steps_reg__i7 (.D(n3451[7]), .CK(debug_c_c), .CD(n34350), 
-            .Q(\steps_reg[7] )) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=559, LSE_RLINE=572 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(\steps_reg[7] )) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=559, LSE_RLINE=572 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam steps_reg__i7.GSR = "ENABLED";
     FD1S3IX steps_reg__i6 (.D(n3451[6]), .CK(debug_c_c), .CD(n34350), 
-            .Q(steps_reg[6])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=559, LSE_RLINE=572 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(steps_reg[6])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=559, LSE_RLINE=572 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam steps_reg__i6.GSR = "ENABLED";
     LUT4 i1_4_lut (.A(div_factor_reg[18]), .B(n30364), .C(steps_reg[18]), 
          .D(\register_addr[0] ), .Z(n30367)) /* synthesis lut_function=(A (B (C+!(D)))+!A (B (C (D)))) */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
@@ -13786,13 +13786,13 @@ module \ArmPeripheral(axis_haddr=8'b0)  (GND_net, n224, n32486, n34347,
          .D(n32527), .Z(n30233)) /* synthesis lut_function=(!(A+(B+((D)+!C)))) */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(114[11:28])
     defparam i1_2_lut_3_lut_4_lut.init = 16'h0010;
     FD1S3IX steps_reg__i5 (.D(n3451[5]), .CK(debug_c_c), .CD(n34350), 
-            .Q(steps_reg[5])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=559, LSE_RLINE=572 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(steps_reg[5])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=559, LSE_RLINE=572 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam steps_reg__i5.GSR = "ENABLED";
     FD1S3IX steps_reg__i4 (.D(n3451[4]), .CK(debug_c_c), .CD(n34350), 
-            .Q(steps_reg[4])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=559, LSE_RLINE=572 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(steps_reg[4])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=559, LSE_RLINE=572 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam steps_reg__i4.GSR = "ENABLED";
     FD1S3IX steps_reg__i3 (.D(n3451[3]), .CK(debug_c_c), .CD(n34350), 
-            .Q(steps_reg[3])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=559, LSE_RLINE=572 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(steps_reg[3])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=559, LSE_RLINE=572 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam steps_reg__i3.GSR = "ENABLED";
     LUT4 i24833_2_lut_3_lut_4_lut (.A(n32509), .B(n32508), .C(\register_addr[1] ), 
          .D(n32527), .Z(n30743)) /* synthesis lut_function=(!(A+(B+(C+(D))))) */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(114[11:28])
@@ -13801,157 +13801,157 @@ module \ArmPeripheral(axis_haddr=8'b0)  (GND_net, n224, n32486, n34347,
          .C(n32488), .D(\register_addr[0] ), .Z(n32453)) /* synthesis lut_function=(A+(B+(C+(D)))) */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(114[11:28])
     defparam equal_138_i15_2_lut_rep_328_3_lut_4_lut.init = 16'hfffe;
     FD1S3IX steps_reg__i2 (.D(n3451[2]), .CK(debug_c_c), .CD(n34350), 
-            .Q(steps_reg[2])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=559, LSE_RLINE=572 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(steps_reg[2])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=559, LSE_RLINE=572 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam steps_reg__i2.GSR = "ENABLED";
     FD1S3IX steps_reg__i1 (.D(n3451[1]), .CK(debug_c_c), .CD(n34350), 
-            .Q(steps_reg[1])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=559, LSE_RLINE=572 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(steps_reg[1])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=559, LSE_RLINE=572 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam steps_reg__i1.GSR = "ENABLED";
     FD1P3AX read_value__i16 (.D(n30371), .SP(n11966), .CK(debug_c_c), 
-            .Q(read_value[16])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=559, LSE_RLINE=572 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(read_value[16])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=559, LSE_RLINE=572 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam read_value__i16.GSR = "ENABLED";
     FD1P3AX read_value__i17 (.D(n30369), .SP(n11966), .CK(debug_c_c), 
-            .Q(read_value[17])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=559, LSE_RLINE=572 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(read_value[17])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=559, LSE_RLINE=572 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam read_value__i17.GSR = "ENABLED";
     FD1P3AX read_value__i18 (.D(n30367), .SP(n11966), .CK(debug_c_c), 
-            .Q(read_value[18])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=559, LSE_RLINE=572 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(read_value[18])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=559, LSE_RLINE=572 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam read_value__i18.GSR = "ENABLED";
     FD1P3AX read_value__i19 (.D(n30368), .SP(n11966), .CK(debug_c_c), 
-            .Q(read_value[19])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=559, LSE_RLINE=572 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(read_value[19])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=559, LSE_RLINE=572 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam read_value__i19.GSR = "ENABLED";
     FD1P3AX read_value__i20 (.D(n30366), .SP(n11966), .CK(debug_c_c), 
-            .Q(read_value[20])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=559, LSE_RLINE=572 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(read_value[20])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=559, LSE_RLINE=572 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam read_value__i20.GSR = "ENABLED";
     FD1P3AX read_value__i21 (.D(n30370), .SP(n11966), .CK(debug_c_c), 
-            .Q(read_value[21])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=559, LSE_RLINE=572 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(read_value[21])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=559, LSE_RLINE=572 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam read_value__i21.GSR = "ENABLED";
     FD1P3AX read_value__i22 (.D(n30381), .SP(n11966), .CK(debug_c_c), 
-            .Q(read_value[22])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=559, LSE_RLINE=572 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(read_value[22])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=559, LSE_RLINE=572 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam read_value__i22.GSR = "ENABLED";
     FD1P3AX read_value__i23 (.D(n30380), .SP(n11966), .CK(debug_c_c), 
-            .Q(read_value[23])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=559, LSE_RLINE=572 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(read_value[23])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=559, LSE_RLINE=572 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam read_value__i23.GSR = "ENABLED";
     FD1P3AX read_value__i24 (.D(n30382), .SP(n11966), .CK(debug_c_c), 
-            .Q(read_value[24])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=559, LSE_RLINE=572 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(read_value[24])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=559, LSE_RLINE=572 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam read_value__i24.GSR = "ENABLED";
     FD1P3AX read_value__i25 (.D(n30383), .SP(n11966), .CK(debug_c_c), 
-            .Q(read_value[25])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=559, LSE_RLINE=572 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(read_value[25])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=559, LSE_RLINE=572 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam read_value__i25.GSR = "ENABLED";
     FD1P3AX read_value__i26 (.D(n30384), .SP(n11966), .CK(debug_c_c), 
-            .Q(read_value[26])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=559, LSE_RLINE=572 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(read_value[26])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=559, LSE_RLINE=572 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam read_value__i26.GSR = "ENABLED";
     FD1P3AX read_value__i27 (.D(n30385), .SP(n11966), .CK(debug_c_c), 
-            .Q(read_value[27])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=559, LSE_RLINE=572 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(read_value[27])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=559, LSE_RLINE=572 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam read_value__i27.GSR = "ENABLED";
     FD1P3AX read_value__i28 (.D(n30386), .SP(n11966), .CK(debug_c_c), 
-            .Q(read_value[28])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=559, LSE_RLINE=572 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(read_value[28])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=559, LSE_RLINE=572 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam read_value__i28.GSR = "ENABLED";
     FD1P3AX read_value__i29 (.D(n30387), .SP(n11966), .CK(debug_c_c), 
-            .Q(read_value[29])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=559, LSE_RLINE=572 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(read_value[29])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=559, LSE_RLINE=572 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam read_value__i29.GSR = "ENABLED";
     FD1P3AX read_value__i30 (.D(n30365), .SP(n11966), .CK(debug_c_c), 
-            .Q(read_value[30])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=559, LSE_RLINE=572 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(read_value[30])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=559, LSE_RLINE=572 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam read_value__i30.GSR = "ENABLED";
     FD1P3AX read_value__i31 (.D(n30388), .SP(n11966), .CK(debug_c_c), 
-            .Q(read_value[31])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=559, LSE_RLINE=572 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(read_value[31])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=559, LSE_RLINE=572 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam read_value__i31.GSR = "ENABLED";
     LUT4 i1_4_lut_adj_1 (.A(div_factor_reg[15]), .B(n30364), .C(steps_reg[15]), 
          .D(\register_addr[0] ), .Z(n30372)) /* synthesis lut_function=(A (B (C+!(D)))+!A (B (C (D)))) */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam i1_4_lut_adj_1.init = 16'hc088;
     FD1P3IX div_factor_reg_i31 (.D(\databus[31] ), .SP(n32376), .CD(n34348), 
-            .CK(debug_c_c), .Q(div_factor_reg[31])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=559, LSE_RLINE=572 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .CK(debug_c_c), .Q(div_factor_reg[31])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=559, LSE_RLINE=572 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam div_factor_reg_i31.GSR = "ENABLED";
     FD1P3IX div_factor_reg_i30 (.D(\databus[30] ), .SP(n32376), .CD(n34352), 
-            .CK(debug_c_c), .Q(div_factor_reg[30])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=559, LSE_RLINE=572 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .CK(debug_c_c), .Q(div_factor_reg[30])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=559, LSE_RLINE=572 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam div_factor_reg_i30.GSR = "ENABLED";
     FD1P3IX div_factor_reg_i29 (.D(\databus[29] ), .SP(n32376), .CD(n34352), 
-            .CK(debug_c_c), .Q(div_factor_reg[29])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=559, LSE_RLINE=572 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .CK(debug_c_c), .Q(div_factor_reg[29])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=559, LSE_RLINE=572 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam div_factor_reg_i29.GSR = "ENABLED";
     FD1P3IX div_factor_reg_i26 (.D(\databus[26] ), .SP(n32376), .CD(n34348), 
-            .CK(debug_c_c), .Q(div_factor_reg[26])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=559, LSE_RLINE=572 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .CK(debug_c_c), .Q(div_factor_reg[26])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=559, LSE_RLINE=572 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam div_factor_reg_i26.GSR = "ENABLED";
     FD1P3JX div_factor_reg_i13 (.D(\databus[13] ), .SP(n32376), .PD(n34352), 
-            .CK(debug_c_c), .Q(div_factor_reg[13])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=559, LSE_RLINE=572 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .CK(debug_c_c), .Q(div_factor_reg[13])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=559, LSE_RLINE=572 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam div_factor_reg_i13.GSR = "ENABLED";
     FD1P3JX div_factor_reg_i11 (.D(\databus[11] ), .SP(n32376), .PD(n34351), 
-            .CK(debug_c_c), .Q(div_factor_reg[11])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=559, LSE_RLINE=572 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .CK(debug_c_c), .Q(div_factor_reg[11])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=559, LSE_RLINE=572 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam div_factor_reg_i11.GSR = "ENABLED";
     FD1P3JX div_factor_reg_i10 (.D(\databus[10] ), .SP(n32376), .PD(n34352), 
-            .CK(debug_c_c), .Q(div_factor_reg[10])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=559, LSE_RLINE=572 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .CK(debug_c_c), .Q(div_factor_reg[10])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=559, LSE_RLINE=572 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam div_factor_reg_i10.GSR = "ENABLED";
     FD1P3JX div_factor_reg_i9 (.D(\databus[9] ), .SP(n32376), .PD(n34352), 
-            .CK(debug_c_c), .Q(div_factor_reg[9])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=559, LSE_RLINE=572 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .CK(debug_c_c), .Q(div_factor_reg[9])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=559, LSE_RLINE=572 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam div_factor_reg_i9.GSR = "ENABLED";
     FD1P3JX div_factor_reg_i7 (.D(\databus[7] ), .SP(n32376), .PD(n34352), 
-            .CK(debug_c_c), .Q(div_factor_reg[7])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=559, LSE_RLINE=572 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .CK(debug_c_c), .Q(div_factor_reg[7])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=559, LSE_RLINE=572 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam div_factor_reg_i7.GSR = "ENABLED";
     FD1P3JX div_factor_reg_i6 (.D(\databus[6] ), .SP(n32376), .PD(n34352), 
-            .CK(debug_c_c), .Q(div_factor_reg[6])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=559, LSE_RLINE=572 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .CK(debug_c_c), .Q(div_factor_reg[6])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=559, LSE_RLINE=572 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam div_factor_reg_i6.GSR = "ENABLED";
     FD1P3JX div_factor_reg_i5 (.D(\databus[5] ), .SP(n32376), .PD(n34352), 
-            .CK(debug_c_c), .Q(div_factor_reg[5])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=559, LSE_RLINE=572 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .CK(debug_c_c), .Q(div_factor_reg[5])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=559, LSE_RLINE=572 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam div_factor_reg_i5.GSR = "ENABLED";
     FD1P3AX div_factor_reg_i4 (.D(n608), .SP(n12480), .CK(debug_c_c), 
-            .Q(div_factor_reg[4])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=559, LSE_RLINE=572 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(div_factor_reg[4])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=559, LSE_RLINE=572 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam div_factor_reg_i4.GSR = "ENABLED";
     FD1P3AX div_factor_reg_i2 (.D(n610), .SP(n12480), .CK(debug_c_c), 
-            .Q(div_factor_reg[2])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=559, LSE_RLINE=572 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(div_factor_reg[2])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=559, LSE_RLINE=572 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam div_factor_reg_i2.GSR = "ENABLED";
     FD1P3IX control_reg_i8 (.D(\databus[7] ), .SP(n32382), .CD(n9614), 
-            .CK(debug_c_c), .Q(\control_reg[7] )) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=559, LSE_RLINE=572 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .CK(debug_c_c), .Q(\control_reg[7] )) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=559, LSE_RLINE=572 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam control_reg_i8.GSR = "ENABLED";
     FD1P3JX control_reg_i7 (.D(\databus[6] ), .SP(n32382), .PD(n34353), 
-            .CK(debug_c_c), .Q(Stepper_X_En_c)) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=559, LSE_RLINE=572 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .CK(debug_c_c), .Q(Stepper_X_En_c)) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=559, LSE_RLINE=572 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam control_reg_i7.GSR = "ENABLED";
     FD1P3JX control_reg_i6 (.D(\databus[5] ), .SP(n32382), .PD(n34353), 
-            .CK(debug_c_c), .Q(Stepper_X_Dir_c)) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=559, LSE_RLINE=572 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .CK(debug_c_c), .Q(Stepper_X_Dir_c)) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=559, LSE_RLINE=572 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam control_reg_i6.GSR = "ENABLED";
-    FD1P3AX control_reg_i5 (.D(n608), .SP(n12540), .CK(debug_c_c), .Q(control_reg[4])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=559, LSE_RLINE=572 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+    FD1P3AX control_reg_i5 (.D(n608), .SP(n12540), .CK(debug_c_c), .Q(control_reg[4])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=559, LSE_RLINE=572 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam control_reg_i5.GSR = "ENABLED";
     FD1P3JX control_reg_i4 (.D(\databus[3] ), .SP(n32382), .PD(n34353), 
-            .CK(debug_c_c), .Q(control_reg[3])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=559, LSE_RLINE=572 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .CK(debug_c_c), .Q(control_reg[3])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=559, LSE_RLINE=572 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam control_reg_i4.GSR = "ENABLED";
-    FD1P3AX control_reg_i3 (.D(n610), .SP(n12540), .CK(debug_c_c), .Q(Stepper_X_M2_c_2)) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=559, LSE_RLINE=572 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+    FD1P3AX control_reg_i3 (.D(n610), .SP(n12540), .CK(debug_c_c), .Q(Stepper_X_M2_c_2)) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=559, LSE_RLINE=572 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam control_reg_i3.GSR = "ENABLED";
     FD1P3JX control_reg_i2 (.D(\databus[1] ), .SP(n32382), .PD(n34353), 
-            .CK(debug_c_c), .Q(Stepper_X_M1_c_1)) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=559, LSE_RLINE=572 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .CK(debug_c_c), .Q(Stepper_X_M1_c_1)) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=559, LSE_RLINE=572 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam control_reg_i2.GSR = "ENABLED";
-    FD1P3AX read_size__i2 (.D(n30233), .SP(n11966), .CK(debug_c_c), .Q(\read_size[2] )) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=559, LSE_RLINE=572 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+    FD1P3AX read_size__i2 (.D(n30233), .SP(n11966), .CK(debug_c_c), .Q(\read_size[2] )) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=559, LSE_RLINE=572 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam read_size__i2.GSR = "ENABLED";
     FD1S3IX steps_reg__i31 (.D(n3451[31]), .CK(debug_c_c), .CD(n34353), 
-            .Q(steps_reg[31])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=559, LSE_RLINE=572 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(steps_reg[31])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=559, LSE_RLINE=572 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam steps_reg__i31.GSR = "ENABLED";
     FD1S3IX steps_reg__i30 (.D(n3451[30]), .CK(debug_c_c), .CD(n34353), 
-            .Q(steps_reg[30])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=559, LSE_RLINE=572 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(steps_reg[30])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=559, LSE_RLINE=572 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam steps_reg__i30.GSR = "ENABLED";
     FD1S3IX steps_reg__i29 (.D(n3451[29]), .CK(debug_c_c), .CD(n32463), 
-            .Q(steps_reg[29])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=559, LSE_RLINE=572 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(steps_reg[29])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=559, LSE_RLINE=572 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam steps_reg__i29.GSR = "ENABLED";
     FD1S3IX steps_reg__i28 (.D(n3451[28]), .CK(debug_c_c), .CD(n32463), 
-            .Q(steps_reg[28])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=559, LSE_RLINE=572 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(steps_reg[28])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=559, LSE_RLINE=572 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam steps_reg__i28.GSR = "ENABLED";
     FD1S3IX steps_reg__i27 (.D(n3451[27]), .CK(debug_c_c), .CD(n32463), 
-            .Q(steps_reg[27])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=559, LSE_RLINE=572 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(steps_reg[27])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=559, LSE_RLINE=572 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam steps_reg__i27.GSR = "ENABLED";
     FD1S3IX steps_reg__i26 (.D(n3451[26]), .CK(debug_c_c), .CD(n32463), 
-            .Q(steps_reg[26])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=559, LSE_RLINE=572 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(steps_reg[26])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=559, LSE_RLINE=572 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam steps_reg__i26.GSR = "ENABLED";
     FD1S3IX steps_reg__i25 (.D(n3451[25]), .CK(debug_c_c), .CD(n32463), 
-            .Q(steps_reg[25])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=559, LSE_RLINE=572 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(steps_reg[25])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=559, LSE_RLINE=572 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam steps_reg__i25.GSR = "ENABLED";
     FD1S3IX steps_reg__i24 (.D(n3451[24]), .CK(debug_c_c), .CD(n32463), 
-            .Q(steps_reg[24])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=559, LSE_RLINE=572 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(steps_reg[24])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=559, LSE_RLINE=572 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam steps_reg__i24.GSR = "ENABLED";
     FD1S3IX steps_reg__i23 (.D(n3451[23]), .CK(debug_c_c), .CD(n32463), 
-            .Q(steps_reg[23])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=559, LSE_RLINE=572 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(steps_reg[23])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=559, LSE_RLINE=572 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam steps_reg__i23.GSR = "ENABLED";
     FD1S3IX steps_reg__i22 (.D(n3451[22]), .CK(debug_c_c), .CD(n32463), 
-            .Q(steps_reg[22])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=559, LSE_RLINE=572 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(steps_reg[22])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=559, LSE_RLINE=572 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam steps_reg__i22.GSR = "ENABLED";
     FD1S3IX steps_reg__i21 (.D(n3451[21]), .CK(debug_c_c), .CD(n32463), 
-            .Q(steps_reg[21])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=559, LSE_RLINE=572 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(steps_reg[21])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=559, LSE_RLINE=572 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam steps_reg__i21.GSR = "ENABLED";
     FD1S3IX steps_reg__i20 (.D(n3451[20]), .CK(debug_c_c), .CD(n32463), 
-            .Q(steps_reg[20])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=559, LSE_RLINE=572 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(steps_reg[20])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=559, LSE_RLINE=572 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam steps_reg__i20.GSR = "ENABLED";
     LUT4 i24489_3_lut (.A(Stepper_X_M1_c_1), .B(fault_latched), .C(\register_addr[0] ), 
          .Z(n30847)) /* synthesis lut_function=(A (B+!(C))+!A (B (C))) */ ;
@@ -14064,10 +14064,10 @@ module \ArmPeripheral(axis_haddr=8'b0)  (GND_net, n224, n32486, n34347,
     PFUMX i24500 (.BLUT(n30856), .ALUT(n30857), .C0(\register_addr[1] ), 
           .Z(n30858));
     FD1P3IX div_factor_reg_i1 (.D(\databus[1] ), .SP(n12480), .CD(n34352), 
-            .CK(debug_c_c), .Q(div_factor_reg[1])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=559, LSE_RLINE=572 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .CK(debug_c_c), .Q(div_factor_reg[1])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=559, LSE_RLINE=572 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam div_factor_reg_i1.GSR = "ENABLED";
     FD1P3IX div_factor_reg_i3 (.D(\databus[3] ), .SP(n12480), .CD(n34352), 
-            .CK(debug_c_c), .Q(div_factor_reg[3])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=559, LSE_RLINE=572 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .CK(debug_c_c), .Q(div_factor_reg[3])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=559, LSE_RLINE=572 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam div_factor_reg_i3.GSR = "ENABLED";
     LUT4 i9_2_lut (.A(steps_reg[30]), .B(\steps_reg[7] ), .Z(n41)) /* synthesis lut_function=(A+(B)) */ ;
     defparam i9_2_lut.init = 16'heeee;
@@ -14083,13 +14083,13 @@ module \ArmPeripheral(axis_haddr=8'b0)  (GND_net, n224, n32486, n34347,
     LUT4 i10_2_lut (.A(steps_reg[14]), .B(steps_reg[19]), .Z(n42)) /* synthesis lut_function=(A+(B)) */ ;
     defparam i10_2_lut.init = 16'heeee;
     FD1P3IX div_factor_reg_i8 (.D(\databus[8] ), .SP(n12480), .CD(n34352), 
-            .CK(debug_c_c), .Q(div_factor_reg[8])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=559, LSE_RLINE=572 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .CK(debug_c_c), .Q(div_factor_reg[8])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=559, LSE_RLINE=572 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam div_factor_reg_i8.GSR = "ENABLED";
     FD1P3IX div_factor_reg_i12 (.D(\databus[12] ), .SP(n12480), .CD(n34351), 
-            .CK(debug_c_c), .Q(div_factor_reg[12])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=559, LSE_RLINE=572 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .CK(debug_c_c), .Q(div_factor_reg[12])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=559, LSE_RLINE=572 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam div_factor_reg_i12.GSR = "ENABLED";
     FD1P3IX div_factor_reg_i14 (.D(\databus[14] ), .SP(n12480), .CD(n34352), 
-            .CK(debug_c_c), .Q(div_factor_reg[14])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=559, LSE_RLINE=572 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .CK(debug_c_c), .Q(div_factor_reg[14])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=559, LSE_RLINE=572 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam div_factor_reg_i14.GSR = "ENABLED";
     LUT4 i1_4_lut_adj_12 (.A(div_factor_reg[21]), .B(n30364), .C(steps_reg[21]), 
          .D(\register_addr[0] ), .Z(n30370)) /* synthesis lut_function=(A (B (C+!(D)))+!A (B (C (D)))) */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
@@ -14098,48 +14098,48 @@ module \ArmPeripheral(axis_haddr=8'b0)  (GND_net, n224, n32486, n34347,
          .D(\register_addr[0] ), .Z(n30381)) /* synthesis lut_function=(A (B (C+!(D)))+!A (B (C (D)))) */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam i1_4_lut_adj_13.init = 16'hc088;
     FD1P3IX div_factor_reg_i15 (.D(\databus[15] ), .SP(n12480), .CD(n34352), 
-            .CK(debug_c_c), .Q(div_factor_reg[15])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=559, LSE_RLINE=572 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .CK(debug_c_c), .Q(div_factor_reg[15])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=559, LSE_RLINE=572 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam div_factor_reg_i15.GSR = "ENABLED";
     LUT4 i24_4_lut (.A(steps_reg[29]), .B(steps_reg[3]), .C(steps_reg[13]), 
          .D(steps_reg[31]), .Z(n56)) /* synthesis lut_function=(A+(B+(C+(D)))) */ ;
     defparam i24_4_lut.init = 16'hfffe;
     FD1P3IX div_factor_reg_i16 (.D(\databus[16] ), .SP(n12480), .CD(n34351), 
-            .CK(debug_c_c), .Q(div_factor_reg[16])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=559, LSE_RLINE=572 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .CK(debug_c_c), .Q(div_factor_reg[16])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=559, LSE_RLINE=572 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam div_factor_reg_i16.GSR = "ENABLED";
     LUT4 i1_4_lut_adj_14 (.A(div_factor_reg[23]), .B(n30364), .C(steps_reg[23]), 
          .D(\register_addr[0] ), .Z(n30380)) /* synthesis lut_function=(A (B (C+!(D)))+!A (B (C (D)))) */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam i1_4_lut_adj_14.init = 16'hc088;
     FD1P3IX div_factor_reg_i17 (.D(\databus[17] ), .SP(n12480), .CD(n34352), 
-            .CK(debug_c_c), .Q(div_factor_reg[17])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=559, LSE_RLINE=572 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .CK(debug_c_c), .Q(div_factor_reg[17])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=559, LSE_RLINE=572 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam div_factor_reg_i17.GSR = "ENABLED";
     FD1P3IX div_factor_reg_i18 (.D(\databus[18] ), .SP(n12480), .CD(n34352), 
-            .CK(debug_c_c), .Q(div_factor_reg[18])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=559, LSE_RLINE=572 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .CK(debug_c_c), .Q(div_factor_reg[18])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=559, LSE_RLINE=572 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam div_factor_reg_i18.GSR = "ENABLED";
     FD1P3IX div_factor_reg_i19 (.D(\databus[19] ), .SP(n12480), .CD(n34352), 
-            .CK(debug_c_c), .Q(div_factor_reg[19])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=559, LSE_RLINE=572 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .CK(debug_c_c), .Q(div_factor_reg[19])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=559, LSE_RLINE=572 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam div_factor_reg_i19.GSR = "ENABLED";
     FD1P3IX div_factor_reg_i20 (.D(\databus[20] ), .SP(n12480), .CD(n34352), 
-            .CK(debug_c_c), .Q(div_factor_reg[20])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=559, LSE_RLINE=572 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .CK(debug_c_c), .Q(div_factor_reg[20])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=559, LSE_RLINE=572 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam div_factor_reg_i20.GSR = "ENABLED";
     FD1P3IX div_factor_reg_i21 (.D(\databus[21] ), .SP(n12480), .CD(n34352), 
-            .CK(debug_c_c), .Q(div_factor_reg[21])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=559, LSE_RLINE=572 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .CK(debug_c_c), .Q(div_factor_reg[21])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=559, LSE_RLINE=572 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam div_factor_reg_i21.GSR = "ENABLED";
     FD1P3IX div_factor_reg_i22 (.D(\databus[22] ), .SP(n12480), .CD(n34352), 
-            .CK(debug_c_c), .Q(div_factor_reg[22])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=559, LSE_RLINE=572 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .CK(debug_c_c), .Q(div_factor_reg[22])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=559, LSE_RLINE=572 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam div_factor_reg_i22.GSR = "ENABLED";
     LUT4 i14_2_lut (.A(steps_reg[15]), .B(steps_reg[23]), .Z(n46)) /* synthesis lut_function=(A+(B)) */ ;
     defparam i14_2_lut.init = 16'heeee;
     FD1P3IX div_factor_reg_i23 (.D(\databus[23] ), .SP(n12480), .CD(n34352), 
-            .CK(debug_c_c), .Q(div_factor_reg[23])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=559, LSE_RLINE=572 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .CK(debug_c_c), .Q(div_factor_reg[23])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=559, LSE_RLINE=572 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam div_factor_reg_i23.GSR = "ENABLED";
     FD1P3IX read_value__i1 (.D(n30849), .SP(n11966), .CD(n32388), .CK(debug_c_c), 
-            .Q(read_value[1])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=559, LSE_RLINE=572 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(read_value[1])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=559, LSE_RLINE=572 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam read_value__i1.GSR = "ENABLED";
     LUT4 i20_4_lut (.A(steps_reg[1]), .B(steps_reg[4]), .C(steps_reg[0]), 
          .D(steps_reg[27]), .Z(n52)) /* synthesis lut_function=(A+(B+(C+(D)))) */ ;
     defparam i20_4_lut.init = 16'hfffe;
     FD1P3IX read_value__i2 (.D(n30897), .SP(n11966), .CD(n32388), .CK(debug_c_c), 
-            .Q(read_value[2])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=559, LSE_RLINE=572 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(read_value[2])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=559, LSE_RLINE=572 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam read_value__i2.GSR = "ENABLED";
     LUT4 i24782_4_lut (.A(n32525), .B(n20291), .C(\register_addr[5] ), 
          .D(n32495), .Z(n28386)) /* synthesis lut_function=(!(A+(B+(C+(D))))) */ ;
@@ -14147,38 +14147,38 @@ module \ArmPeripheral(axis_haddr=8'b0)  (GND_net, n224, n32486, n34347,
     LUT4 i6_2_lut (.A(steps_reg[12]), .B(steps_reg[17]), .Z(n38)) /* synthesis lut_function=(A+(B)) */ ;
     defparam i6_2_lut.init = 16'heeee;
     FD1P3IX read_value__i3 (.D(n5188[3]), .SP(n11966), .CD(n32388), .CK(debug_c_c), 
-            .Q(read_value[3])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=559, LSE_RLINE=572 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(read_value[3])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=559, LSE_RLINE=572 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam read_value__i3.GSR = "ENABLED";
     FD1P3IX div_factor_reg_i24 (.D(\databus[24] ), .SP(n12480), .CD(n34352), 
-            .CK(debug_c_c), .Q(div_factor_reg[24])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=559, LSE_RLINE=572 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .CK(debug_c_c), .Q(div_factor_reg[24])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=559, LSE_RLINE=572 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam div_factor_reg_i24.GSR = "ENABLED";
     FD1P3IX read_value__i4 (.D(n5188[4]), .SP(n11966), .CD(n32388), .CK(debug_c_c), 
-            .Q(read_value[4])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=559, LSE_RLINE=572 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(read_value[4])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=559, LSE_RLINE=572 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam read_value__i4.GSR = "ENABLED";
     FD1P3IX div_factor_reg_i25 (.D(\databus[25] ), .SP(n12480), .CD(n34352), 
-            .CK(debug_c_c), .Q(div_factor_reg[25])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=559, LSE_RLINE=572 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .CK(debug_c_c), .Q(div_factor_reg[25])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=559, LSE_RLINE=572 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam div_factor_reg_i25.GSR = "ENABLED";
     FD1P3IX read_value__i5 (.D(n5188[5]), .SP(n11966), .CD(n32388), .CK(debug_c_c), 
-            .Q(read_value[5])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=559, LSE_RLINE=572 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(read_value[5])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=559, LSE_RLINE=572 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam read_value__i5.GSR = "ENABLED";
     FD1P3IX div_factor_reg_i27 (.D(\databus[27] ), .SP(n12480), .CD(n34348), 
-            .CK(debug_c_c), .Q(div_factor_reg[27])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=559, LSE_RLINE=572 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .CK(debug_c_c), .Q(div_factor_reg[27])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=559, LSE_RLINE=572 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam div_factor_reg_i27.GSR = "ENABLED";
     FD1P3IX read_value__i6 (.D(n5188[6]), .SP(n11966), .CD(n32388), .CK(debug_c_c), 
-            .Q(read_value[6])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=559, LSE_RLINE=572 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(read_value[6])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=559, LSE_RLINE=572 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam read_value__i6.GSR = "ENABLED";
     FD1P3IX div_factor_reg_i28 (.D(\databus[28] ), .SP(n12480), .CD(n34352), 
-            .CK(debug_c_c), .Q(div_factor_reg[28])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=559, LSE_RLINE=572 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .CK(debug_c_c), .Q(div_factor_reg[28])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=559, LSE_RLINE=572 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam div_factor_reg_i28.GSR = "ENABLED";
     FD1P3IX read_value__i7 (.D(n5188[7]), .SP(n11966), .CD(n32388), .CK(debug_c_c), 
-            .Q(read_value[7])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=559, LSE_RLINE=572 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(read_value[7])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=559, LSE_RLINE=572 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam read_value__i7.GSR = "ENABLED";
-    FD1P3AX read_value__i8 (.D(n30379), .SP(n11966), .CK(debug_c_c), .Q(read_value[8])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=559, LSE_RLINE=572 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+    FD1P3AX read_value__i8 (.D(n30379), .SP(n11966), .CK(debug_c_c), .Q(read_value[8])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=559, LSE_RLINE=572 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam read_value__i8.GSR = "ENABLED";
-    FD1P3AX read_value__i9 (.D(n30378), .SP(n11966), .CK(debug_c_c), .Q(read_value[9])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=559, LSE_RLINE=572 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+    FD1P3AX read_value__i9 (.D(n30378), .SP(n11966), .CK(debug_c_c), .Q(read_value[9])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=559, LSE_RLINE=572 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam read_value__i9.GSR = "ENABLED";
     FD1P3AX read_value__i10 (.D(n30377), .SP(n11966), .CK(debug_c_c), 
-            .Q(read_value[10])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=559, LSE_RLINE=572 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(read_value[10])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=559, LSE_RLINE=572 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam read_value__i10.GSR = "ENABLED";
     LUT4 i1_2_lut (.A(\register_addr[1] ), .B(\register_addr[0] ), .Z(n11645)) /* synthesis lut_function=(!((B)+!A)) */ ;
     defparam i1_2_lut.init = 16'h2222;
@@ -14190,28 +14190,28 @@ module \ArmPeripheral(axis_haddr=8'b0)  (GND_net, n224, n32486, n34347,
          .D(n34347), .Z(n12480)) /* synthesis lut_function=(A (B (D)+!B (C+(D)))+!A (D)) */ ;
     defparam i1_2_lut_4_lut_adj_15.init = 16'hff20;
     FD1P3AX read_value__i11 (.D(n30376), .SP(n11966), .CK(debug_c_c), 
-            .Q(read_value[11])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=559, LSE_RLINE=572 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(read_value[11])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=559, LSE_RLINE=572 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam read_value__i11.GSR = "ENABLED";
     FD1P3AX read_value__i12 (.D(n30375), .SP(n11966), .CK(debug_c_c), 
-            .Q(read_value[12])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=559, LSE_RLINE=572 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(read_value[12])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=559, LSE_RLINE=572 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam read_value__i12.GSR = "ENABLED";
     FD1P3AX read_value__i13 (.D(n30374), .SP(n11966), .CK(debug_c_c), 
-            .Q(read_value[13])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=559, LSE_RLINE=572 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(read_value[13])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=559, LSE_RLINE=572 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam read_value__i13.GSR = "ENABLED";
     FD1P3AX read_value__i14 (.D(n30373), .SP(n11966), .CK(debug_c_c), 
-            .Q(read_value[14])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=559, LSE_RLINE=572 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(read_value[14])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=559, LSE_RLINE=572 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam read_value__i14.GSR = "ENABLED";
     LUT4 i2_3_lut_rep_251_4_lut (.A(\register_addr[5] ), .B(n32387), .C(\register_addr[4] ), 
          .D(n30450), .Z(n32376)) /* synthesis lut_function=(!(A+((C+!(D))+!B))) */ ;
     defparam i2_3_lut_rep_251_4_lut.init = 16'h0400;
     FD1P3IX read_value__i0 (.D(n30858), .SP(n11966), .CD(n32388), .CK(debug_c_c), 
-            .Q(read_value[0])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=559, LSE_RLINE=572 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(read_value[0])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=559, LSE_RLINE=572 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam read_value__i0.GSR = "ENABLED";
     FD1P3AX read_value__i15 (.D(n30372), .SP(n11966), .CK(debug_c_c), 
-            .Q(read_value[15])) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=559, LSE_RLINE=572 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .Q(read_value[15])) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=559, LSE_RLINE=572 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam read_value__i15.GSR = "ENABLED";
     IFS1P3DX fault_latched_178 (.D(Stepper_X_nFault_c), .SP(VCC_net), .SCLK(debug_c_c), 
-            .CD(GND_net), .Q(fault_latched)) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=559, LSE_RLINE=572 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
+            .CD(GND_net), .Q(fault_latched)) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=25, LSE_RCOL=45, LSE_LLINE=559, LSE_RLINE=572 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(58[9] 128[6])
     defparam fault_latched_178.GSR = "ENABLED";
     LUT4 i30_4_lut (.A(n41), .B(n60), .C(n54), .D(n42), .Z(n62)) /* synthesis lut_function=(A+(B+(C+(D)))) */ ;
     defparam i30_4_lut.init = 16'hfffe;
@@ -14493,67 +14493,67 @@ module ClockDivider_U8 (n34347, step_clk, debug_c_c, n32463, prev_step_clk,
     defparam sub_7_add_2_15.INJECT1_0 = "NO";
     defparam sub_7_add_2_15.INJECT1_1 = "NO";
     FD1P3JX int_factor_i0_i1 (.D(div_factor_reg[1]), .SP(n32370), .PD(n14150), 
-            .CK(debug_c_c), .Q(int_factor[1])) /* synthesis LSE_LINE_FILE_ID=8, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
+            .CK(debug_c_c), .Q(int_factor[1])) /* synthesis LSE_LINE_FILE_ID=5, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
     defparam int_factor_i0_i1.GSR = "ENABLED";
     FD1P3IX int_factor_i0_i2 (.D(div_factor_reg[2]), .SP(n32370), .CD(n14150), 
-            .CK(debug_c_c), .Q(int_factor[2])) /* synthesis LSE_LINE_FILE_ID=8, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
+            .CK(debug_c_c), .Q(int_factor[2])) /* synthesis LSE_LINE_FILE_ID=5, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
     defparam int_factor_i0_i2.GSR = "ENABLED";
     FD1P3IX int_factor_i0_i3 (.D(div_factor_reg[3]), .SP(n32370), .CD(n14150), 
-            .CK(debug_c_c), .Q(int_factor[3])) /* synthesis LSE_LINE_FILE_ID=8, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
+            .CK(debug_c_c), .Q(int_factor[3])) /* synthesis LSE_LINE_FILE_ID=5, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
     defparam int_factor_i0_i3.GSR = "ENABLED";
     FD1P3IX int_factor_i0_i4 (.D(div_factor_reg[4]), .SP(n32370), .CD(n14150), 
-            .CK(debug_c_c), .Q(int_factor[4])) /* synthesis LSE_LINE_FILE_ID=8, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
+            .CK(debug_c_c), .Q(int_factor[4])) /* synthesis LSE_LINE_FILE_ID=5, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
     defparam int_factor_i0_i4.GSR = "ENABLED";
     FD1P3IX int_factor_i0_i5 (.D(div_factor_reg[5]), .SP(n32370), .CD(n14150), 
-            .CK(debug_c_c), .Q(int_factor[5])) /* synthesis LSE_LINE_FILE_ID=8, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
+            .CK(debug_c_c), .Q(int_factor[5])) /* synthesis LSE_LINE_FILE_ID=5, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
     defparam int_factor_i0_i5.GSR = "ENABLED";
     FD1P3IX int_factor_i0_i6 (.D(div_factor_reg[6]), .SP(n32370), .CD(n14150), 
-            .CK(debug_c_c), .Q(int_factor[6])) /* synthesis LSE_LINE_FILE_ID=8, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
+            .CK(debug_c_c), .Q(int_factor[6])) /* synthesis LSE_LINE_FILE_ID=5, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
     defparam int_factor_i0_i6.GSR = "ENABLED";
     FD1P3IX int_factor_i0_i7 (.D(div_factor_reg[7]), .SP(n32370), .CD(n14150), 
-            .CK(debug_c_c), .Q(int_factor[7])) /* synthesis LSE_LINE_FILE_ID=8, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
+            .CK(debug_c_c), .Q(int_factor[7])) /* synthesis LSE_LINE_FILE_ID=5, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
     defparam int_factor_i0_i7.GSR = "ENABLED";
     FD1P3IX int_factor_i0_i8 (.D(div_factor_reg[8]), .SP(n32370), .CD(n14150), 
-            .CK(debug_c_c), .Q(int_factor[8])) /* synthesis LSE_LINE_FILE_ID=8, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
+            .CK(debug_c_c), .Q(int_factor[8])) /* synthesis LSE_LINE_FILE_ID=5, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
     defparam int_factor_i0_i8.GSR = "ENABLED";
     FD1P3IX int_factor_i0_i9 (.D(div_factor_reg[9]), .SP(n32370), .CD(n14150), 
-            .CK(debug_c_c), .Q(int_factor[9])) /* synthesis LSE_LINE_FILE_ID=8, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
+            .CK(debug_c_c), .Q(int_factor[9])) /* synthesis LSE_LINE_FILE_ID=5, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
     defparam int_factor_i0_i9.GSR = "ENABLED";
     FD1P3IX int_factor_i0_i10 (.D(div_factor_reg[10]), .SP(n32370), .CD(n14150), 
-            .CK(debug_c_c), .Q(int_factor[10])) /* synthesis LSE_LINE_FILE_ID=8, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
+            .CK(debug_c_c), .Q(int_factor[10])) /* synthesis LSE_LINE_FILE_ID=5, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
     defparam int_factor_i0_i10.GSR = "ENABLED";
     FD1P3IX int_factor_i0_i11 (.D(div_factor_reg[11]), .SP(n32370), .CD(n14150), 
-            .CK(debug_c_c), .Q(int_factor[11])) /* synthesis LSE_LINE_FILE_ID=8, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
+            .CK(debug_c_c), .Q(int_factor[11])) /* synthesis LSE_LINE_FILE_ID=5, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
     defparam int_factor_i0_i11.GSR = "ENABLED";
     FD1P3IX int_factor_i0_i12 (.D(div_factor_reg[12]), .SP(n32370), .CD(n14150), 
-            .CK(debug_c_c), .Q(int_factor[12])) /* synthesis LSE_LINE_FILE_ID=8, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
+            .CK(debug_c_c), .Q(int_factor[12])) /* synthesis LSE_LINE_FILE_ID=5, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
     defparam int_factor_i0_i12.GSR = "ENABLED";
     FD1P3IX int_factor_i0_i13 (.D(div_factor_reg[13]), .SP(n32370), .CD(n14150), 
-            .CK(debug_c_c), .Q(int_factor[13])) /* synthesis LSE_LINE_FILE_ID=8, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
+            .CK(debug_c_c), .Q(int_factor[13])) /* synthesis LSE_LINE_FILE_ID=5, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
     defparam int_factor_i0_i13.GSR = "ENABLED";
     FD1P3IX int_factor_i0_i14 (.D(div_factor_reg[14]), .SP(n32370), .CD(n14150), 
-            .CK(debug_c_c), .Q(int_factor[14])) /* synthesis LSE_LINE_FILE_ID=8, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
+            .CK(debug_c_c), .Q(int_factor[14])) /* synthesis LSE_LINE_FILE_ID=5, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
     defparam int_factor_i0_i14.GSR = "ENABLED";
     FD1P3IX int_factor_i0_i15 (.D(div_factor_reg[15]), .SP(n32370), .CD(n14150), 
-            .CK(debug_c_c), .Q(int_factor[15])) /* synthesis LSE_LINE_FILE_ID=8, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
+            .CK(debug_c_c), .Q(int_factor[15])) /* synthesis LSE_LINE_FILE_ID=5, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
     defparam int_factor_i0_i15.GSR = "ENABLED";
     FD1P3IX int_factor_i0_i16 (.D(div_factor_reg[16]), .SP(n32370), .CD(n14150), 
-            .CK(debug_c_c), .Q(int_factor[16])) /* synthesis LSE_LINE_FILE_ID=8, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
+            .CK(debug_c_c), .Q(int_factor[16])) /* synthesis LSE_LINE_FILE_ID=5, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
     defparam int_factor_i0_i16.GSR = "ENABLED";
     FD1P3IX int_factor_i0_i17 (.D(div_factor_reg[17]), .SP(n32370), .CD(n14150), 
-            .CK(debug_c_c), .Q(int_factor[17])) /* synthesis LSE_LINE_FILE_ID=8, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
+            .CK(debug_c_c), .Q(int_factor[17])) /* synthesis LSE_LINE_FILE_ID=5, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
     defparam int_factor_i0_i17.GSR = "ENABLED";
     FD1P3IX int_factor_i0_i18 (.D(div_factor_reg[18]), .SP(n32370), .CD(n14150), 
-            .CK(debug_c_c), .Q(int_factor[18])) /* synthesis LSE_LINE_FILE_ID=8, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
+            .CK(debug_c_c), .Q(int_factor[18])) /* synthesis LSE_LINE_FILE_ID=5, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
     defparam int_factor_i0_i18.GSR = "ENABLED";
     FD1P3IX int_factor_i0_i19 (.D(div_factor_reg[19]), .SP(n32370), .CD(n14150), 
-            .CK(debug_c_c), .Q(int_factor[19])) /* synthesis LSE_LINE_FILE_ID=8, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
+            .CK(debug_c_c), .Q(int_factor[19])) /* synthesis LSE_LINE_FILE_ID=5, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
     defparam int_factor_i0_i19.GSR = "ENABLED";
     FD1P3IX int_factor_i0_i0 (.D(div_factor_reg[0]), .SP(n32370), .CD(n14150), 
-            .CK(debug_c_c), .Q(int_factor[0])) /* synthesis LSE_LINE_FILE_ID=8, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
+            .CK(debug_c_c), .Q(int_factor[0])) /* synthesis LSE_LINE_FILE_ID=5, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
     defparam int_factor_i0_i0.GSR = "ENABLED";
     FD1P3IX int_factor_i0_i20 (.D(div_factor_reg[20]), .SP(n32370), .CD(n14150), 
-            .CK(debug_c_c), .Q(int_factor[20])) /* synthesis LSE_LINE_FILE_ID=8, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
+            .CK(debug_c_c), .Q(int_factor[20])) /* synthesis LSE_LINE_FILE_ID=5, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
     defparam int_factor_i0_i20.GSR = "ENABLED";
     CCU2D sub_7_add_2_13 (.A0(int_factor[11]), .B0(GND_net), .C0(GND_net), 
           .D0(GND_net), .A1(int_factor[12]), .B1(GND_net), .C1(GND_net), 
@@ -14670,16 +14670,16 @@ module ClockDivider_U8 (n34347, step_clk, debug_c_c, n32463, prev_step_clk,
             .Q(count[31]));   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(74[16:25])
     defparam count_2176__i31.GSR = "ENABLED";
     FD1P3IX int_factor_i0_i21 (.D(div_factor_reg[21]), .SP(n32370), .CD(n14150), 
-            .CK(debug_c_c), .Q(int_factor[21])) /* synthesis LSE_LINE_FILE_ID=8, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
+            .CK(debug_c_c), .Q(int_factor[21])) /* synthesis LSE_LINE_FILE_ID=5, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
     defparam int_factor_i0_i21.GSR = "ENABLED";
     FD1P3IX int_factor_i0_i22 (.D(div_factor_reg[22]), .SP(n32370), .CD(n14150), 
-            .CK(debug_c_c), .Q(int_factor[22])) /* synthesis LSE_LINE_FILE_ID=8, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
+            .CK(debug_c_c), .Q(int_factor[22])) /* synthesis LSE_LINE_FILE_ID=5, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
     defparam int_factor_i0_i22.GSR = "ENABLED";
     FD1P3IX int_factor_i0_i23 (.D(div_factor_reg[23]), .SP(n32370), .CD(n14150), 
-            .CK(debug_c_c), .Q(int_factor[23])) /* synthesis LSE_LINE_FILE_ID=8, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
+            .CK(debug_c_c), .Q(int_factor[23])) /* synthesis LSE_LINE_FILE_ID=5, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
     defparam int_factor_i0_i23.GSR = "ENABLED";
     FD1P3IX int_factor_i0_i24 (.D(div_factor_reg[24]), .SP(n32370), .CD(n14150), 
-            .CK(debug_c_c), .Q(int_factor[24])) /* synthesis LSE_LINE_FILE_ID=8, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
+            .CK(debug_c_c), .Q(int_factor[24])) /* synthesis LSE_LINE_FILE_ID=5, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
     defparam int_factor_i0_i24.GSR = "ENABLED";
     CCU2D sub_7_add_2_7 (.A0(int_factor[5]), .B0(GND_net), .C0(GND_net), 
           .D0(GND_net), .A1(int_factor[6]), .B1(GND_net), .C1(GND_net), 
@@ -14843,7 +14843,7 @@ module ClockDivider_U8 (n34347, step_clk, debug_c_c, n32463, prev_step_clk,
     defparam sub_1716_add_2_31.INJECT1_0 = "NO";
     defparam sub_1716_add_2_31.INJECT1_1 = "NO";
     FD1P3IX int_factor_i0_i25 (.D(div_factor_reg[25]), .SP(n32370), .CD(n14150), 
-            .CK(debug_c_c), .Q(int_factor[25])) /* synthesis LSE_LINE_FILE_ID=8, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
+            .CK(debug_c_c), .Q(int_factor[25])) /* synthesis LSE_LINE_FILE_ID=5, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
     defparam int_factor_i0_i25.GSR = "ENABLED";
     CCU2D sub_1716_add_2_29 (.A0(count[27]), .B0(n40[27]), .C0(GND_net), 
           .D0(GND_net), .A1(count[28]), .B1(n40[28]), .C1(GND_net), 
@@ -14944,7 +14944,7 @@ module ClockDivider_U8 (n34347, step_clk, debug_c_c, n32463, prev_step_clk,
     defparam sub_1716_add_2_3.INJECT1_0 = "NO";
     defparam sub_1716_add_2_3.INJECT1_1 = "NO";
     FD1P3IX int_factor_i0_i26 (.D(div_factor_reg[26]), .SP(n32370), .CD(n14150), 
-            .CK(debug_c_c), .Q(int_factor[26])) /* synthesis LSE_LINE_FILE_ID=8, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
+            .CK(debug_c_c), .Q(int_factor[26])) /* synthesis LSE_LINE_FILE_ID=5, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
     defparam int_factor_i0_i26.GSR = "ENABLED";
     CCU2D sub_1716_add_2_1 (.A0(GND_net), .B0(GND_net), .C0(GND_net), 
           .D0(GND_net), .A1(count[0]), .B1(n40[0]), .C1(GND_net), .D1(GND_net), 
@@ -15017,7 +15017,7 @@ module ClockDivider_U8 (n34347, step_clk, debug_c_c, n32463, prev_step_clk,
     defparam sub_1717_add_2_17.INJECT1_0 = "NO";
     defparam sub_1717_add_2_17.INJECT1_1 = "NO";
     FD1P3IX int_factor_i0_i27 (.D(div_factor_reg[27]), .SP(n32370), .CD(n14150), 
-            .CK(debug_c_c), .Q(int_factor[27])) /* synthesis LSE_LINE_FILE_ID=8, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
+            .CK(debug_c_c), .Q(int_factor[27])) /* synthesis LSE_LINE_FILE_ID=5, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
     defparam int_factor_i0_i27.GSR = "ENABLED";
     CCU2D sub_1717_add_2_15 (.A0(div_factor_reg[13]), .B0(GND_net), .C0(GND_net), 
           .D0(GND_net), .A1(div_factor_reg[14]), .B1(GND_net), .C1(GND_net), 
@@ -15076,16 +15076,16 @@ module ClockDivider_U8 (n34347, step_clk, debug_c_c, n32463, prev_step_clk,
     defparam sub_1717_add_2_1.INJECT1_0 = "NO";
     defparam sub_1717_add_2_1.INJECT1_1 = "NO";
     FD1P3IX int_factor_i0_i28 (.D(div_factor_reg[28]), .SP(n32370), .CD(n14150), 
-            .CK(debug_c_c), .Q(int_factor[28])) /* synthesis LSE_LINE_FILE_ID=8, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
+            .CK(debug_c_c), .Q(int_factor[28])) /* synthesis LSE_LINE_FILE_ID=5, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
     defparam int_factor_i0_i28.GSR = "ENABLED";
     FD1P3IX int_factor_i0_i29 (.D(div_factor_reg[29]), .SP(n32370), .CD(n14150), 
-            .CK(debug_c_c), .Q(int_factor[29])) /* synthesis LSE_LINE_FILE_ID=8, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
+            .CK(debug_c_c), .Q(int_factor[29])) /* synthesis LSE_LINE_FILE_ID=5, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
     defparam int_factor_i0_i29.GSR = "ENABLED";
     FD1P3IX int_factor_i0_i30 (.D(div_factor_reg[30]), .SP(n32370), .CD(n14150), 
-            .CK(debug_c_c), .Q(int_factor[30])) /* synthesis LSE_LINE_FILE_ID=8, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
+            .CK(debug_c_c), .Q(int_factor[30])) /* synthesis LSE_LINE_FILE_ID=5, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
     defparam int_factor_i0_i30.GSR = "ENABLED";
     FD1P3IX int_factor_i0_i31 (.D(div_factor_reg[31]), .SP(n32370), .CD(n14150), 
-            .CK(debug_c_c), .Q(int_factor[31])) /* synthesis LSE_LINE_FILE_ID=8, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
+            .CK(debug_c_c), .Q(int_factor[31])) /* synthesis LSE_LINE_FILE_ID=5, LSE_LCOL=15, LSE_RCOL=42, LSE_LLINE=129, LSE_RLINE=132 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
     defparam int_factor_i0_i31.GSR = "ENABLED";
     CCU2D count_2176_add_4_33 (.A0(count[31]), .B0(GND_net), .C0(GND_net), 
           .D0(GND_net), .A1(GND_net), .B1(GND_net), .C1(GND_net), .D1(GND_net), 
@@ -15272,7 +15272,7 @@ module ClockDivider_U10 (debug_c_c, n241, n34347, n6674, n32375, n31079,
         n27823, n27822, n27821, n27820, n27819, n27818, n27817, 
         n27816, n27815, n27814, n27813, n27812, n27811;
     
-    FD1S3AX clk_o_22 (.D(n241), .CK(debug_c_c), .Q(clk_255kHz)) /* synthesis LSE_LINE_FILE_ID=6, LSE_LCOL=15, LSE_RCOL=41, LSE_LLINE=508, LSE_RLINE=511 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
+    FD1S3AX clk_o_22 (.D(n241), .CK(debug_c_c), .Q(clk_255kHz)) /* synthesis LSE_LINE_FILE_ID=3, LSE_LCOL=15, LSE_RCOL=41, LSE_LLINE=508, LSE_RLINE=511 */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(47[9] 76[6])
     defparam clk_o_22.GSR = "ENABLED";
     LUT4 i2_3_lut_rep_250 (.A(n34347), .B(clk_255kHz), .C(n6674), .Z(n32375)) /* synthesis lut_function=(!(A+(B+!(C)))) */ ;   // /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(59[5] 75[8])
     defparam i2_3_lut_rep_250.init = 16'h1010;

@@ -1,6 +1,6 @@
 --------------------------------------------------------------------------------
 Lattice Synthesis Timing Report, Version  
-Mon Jan 18 19:32:23 2016
+Thu Mar 24 13:09:12 2016
 
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
 Copyright (c) 1995 AT&T Corp.   All rights reserved.
@@ -19,7 +19,7 @@ Report level:    verbose report, limited to 3 items per constraint
 
 ================================================================================
 Constraint: create_clock -period 83.000000 -waveform { 0.000000 41.500000 } -name clk_12MHz [ get_ports { clk_12MHz } ]
-            129 items scored, 0 timing errors detected.
+            127 items scored, 0 timing errors detected.
 --------------------------------------------------------------------------------
 
 
@@ -224,5 +224,5 @@ Timing errors: 0  Score: 0
 Constraints cover  6884 paths, 1603 nets, and 3227 connections (73.8% coverage)
 
 
-Peak memory: 237010944 bytes, TRCE: 8192 bytes, DLYMAN: 0 bytes
+Peak memory: 237113344 bytes, TRCE: 8192 bytes, DLYMAN: 0 bytes
 CPU_TIME_REPORT: 0 secs 
