@@ -3,7 +3,11 @@
 import rospy
 import Queue
 from uniboard_communication.srv import *
-from fake_uniboard import uniboard
+# Fake uniboard
+from fake_uniboard import Uniboard
+# Real uniboard
+# from uniboard_software.roverlib.uniboard import Uniboard
+
 
 class UniboardCommunication(Queue.PriorityQueue):
     """
@@ -12,7 +16,7 @@ class UniboardCommunication(Queue.PriorityQueue):
     """
     def __init__(self, maxsize=10):
         Queue.PriorityQueue.__init__(self)
-        self.board = uniboard()
+        self.board = Uniboard("/dev/ttyUSB1")
         self.s = rospy.Service('uniboard_service', 
                             communication, 
                             self.addToQueue)

@@ -1,7 +1,7 @@
 import time
 
-class uniboard(object):
-    def __init__(self):
+class Uniboard(object):
+    def __init__(self, arg):
         self.x = dict(pos=0, en=False, go=False)
         self.y = dict(pos=0, en=False, go=False)
         self.z = dict(pos=0, en=False, go=False)
