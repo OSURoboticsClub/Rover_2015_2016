@@ -15,7 +15,7 @@ import sys
 import time
 import struct
 
-class Uniboard:
+class Uniboard(object):
 	"""OSURC 2016 Rover Uniboard interface class. Create an object of this class
 	   and use it to talk to the Uniboard."""
 	def __init__(self, tty_path):
