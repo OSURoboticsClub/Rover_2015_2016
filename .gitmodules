@@ -1,3 +1,0 @@
-[submodule "ws/src/uniboard_communication/src/uniboard_software"]
-	path = ws/src/uniboard_communication/src/uniboard_software
-	url = ../../NickAmes/uniboard-software

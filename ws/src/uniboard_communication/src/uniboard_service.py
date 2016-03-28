@@ -4,9 +4,9 @@ import rospy
 import Queue
 from uniboard_communication.srv import *
 # Fake uniboard
-from fake_uniboard import Uniboard
+# from fake_uniboard import Uniboard
 # Real uniboard
-# from uniboard_software.roverlib.uniboard import Uniboard
+from uniboard_software.roverlib.uniboard import Uniboard
 
 
 class UniboardCommunication(Queue.PriorityQueue):
@@ -16,7 +16,7 @@ class UniboardCommunication(Queue.PriorityQueue):
     """
     def __init__(self, maxsize=10):
         Queue.PriorityQueue.__init__(self)
-        self.board = Uniboard("/dev/ttyUSB1")
+        self.board = Uniboard("/dev/ttyUSB2")
         self.s = rospy.Service('uniboard_service', 
                             communication, 
                             self.addToQueue)
@@ -32,12 +32,12 @@ class UniboardCommunication(Queue.PriorityQueue):
             resp = [False, '', '']
             if req.key_word is not '':
                 try:
-                    arg = int(req.arg)
+                    arg = float(req.arg)
                 except:
                     try:
                         arg = bool(req.arg)
                     except:
-                        return [False, 'Arg must be int or bool', None]
+                        return [False, 'Arg must be float or bool', None]
             else:
                 arg = None
 
@@ -56,9 +56,11 @@ class UniboardCommunication(Queue.PriorityQueue):
                     if item[2] is not '':
                         kwargs[item[2]]=item[3]
                     if len(kwargs) > 0:
-                        resp = item[1](**kwargs)
+                        resp = item[1](self.board, **kwargs)
+                    elif item[3] is not None:
+                        resp = item[1](self.board, item[3])
                     else:
-                        resp = item[1]()
+                        resp = item[1](self.board)
                     item[5][0] = True
                     item[5][1] = 'Returned in {} nano seconds'.format(rospy.Time.now().nsecs-item[4].nsecs)
                     item[5][2] = str(resp)
