@@ -35,3 +35,9 @@ class Uniboard(object):
     def arm_current(self, axis):
         print 'calling current'
         return self.__dict__[axis]['pos']
+
+    def motor_left(self, power):
+        self.power_left = power
+
+    def motor_right(self, power):
+        self.power_right = power

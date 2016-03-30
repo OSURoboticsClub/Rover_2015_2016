@@ -1,0 +1,4 @@
+<launch>
+  <node pkg="uniboard_communication" type="uniboard_service.py" name="uniboard_communication" />
+  <test test-name="test_uniboard_service" pkg="uniboard_communication" type="test_uniboard_service.py" />
+</launch>

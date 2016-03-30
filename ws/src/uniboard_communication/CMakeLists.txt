@@ -9,6 +9,20 @@ find_package(catkin REQUIRED COMPONENTS
     std_msgs
     message_generation
 )
+if(CATKIN_ENABLE_TESTING)
+  find_package(rostest REQUIRED)
+  add_rostest(test/test_uniboard_communication.test)
+endif()
+
+
+
+##  catkin_download_test_data(
+##    ${PROJECT_NAME}_saloon.bag
+##    http://downloads.foo.com/bags/saloon.bag
+##    DESTINATION ${CATKIN_DEVEL_PREFIX}/${CATKIN_PACKAGE_SHARE_DESTINATION}/test
+##    MD5 01603ce158575da859b8afff5b676bf9)
+##  add_rostest(test/my_second_test.test DEPENDENCIES ${PROJECT_NAME}_saloon.bag)
+
 
 ## System dependencies are found with CMake's conventions
 # find_package(Boost REQUIRED COMPONENTS system)

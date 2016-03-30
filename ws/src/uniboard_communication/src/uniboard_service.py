@@ -2,12 +2,15 @@
 
 import rospy
 import Queue
+import imp
+# Importing the uniboard api
+#uniboard = imp.load_source('uniboard', 
+ #   '/home/loren/dev/Rover2016/uniboard/roverlib/uniboard.py')
 from uniboard_communication.srv import *
-# Fake uniboard
-# from fake_uniboard import Uniboard
-# Real uniboard
-from uniboard_software.roverlib.uniboard import Uniboard
+#Fake uniboard
+import fake_uniboard as uniboard
 
+BOARD = "/dev/ttyUSB1"
 
 class UniboardCommunication(Queue.PriorityQueue):
     """
@@ -16,65 +19,65 @@ class UniboardCommunication(Queue.PriorityQueue):
     """
     def __init__(self, maxsize=10):
         Queue.PriorityQueue.__init__(self)
-        self.board = Uniboard("/dev/ttyUSB2")
+        self.functions = dict(
+                        motor_left = self.motor_left,
+                        motor_right = self.motor_right)
+    
+
+    def setup_board(self, board):
+        self.board = uniboard.Uniboard(board)
+
+
+    def setup_ros(self):
         self.s = rospy.Service('uniboard_service', 
                             communication, 
                             self.addToQueue)
+
+
+    def motor_left(self, power):
+        p = float(power)
+        self.board.motor_left(p)
+        return [True, 'Success', '']
+
+    def motor_right(self, power):
+        p = float(power)
+        self.board.motor_right(p)
+        return [True, 'Success', '']
+
 
     def addToQueue(self, req):
         if self.full():
             return [False, 'queue_full', None]
         else:
-            try:
-                fun = self.board.__getattribute__(req.function)
-            except:
-                return [False, 'No Function', None]
-            resp = [False, '', '']
-            if req.key_word is not '':
-                try:
-                    arg = float(req.arg)
-                except:
-                    try:
-                        arg = bool(req.arg)
-                    except:
-                        return [False, 'Arg must be float or bool', None]
+            if req.function not in self.functions.keys():
+                return [False, 'Function not implemented', '']
             else:
-                arg = None
-
-            self.put((req.priority, fun, req.key_word, arg, req.timestamp, resp, req.axis))
-            self.join()
-            return resp
+                resp = []
+                self.put((req.priority, 
+                        self.functions[req.function],
+                        req.data, 
+                        req.timestamp, 
+                        resp))
+                self.join()
+                return resp
+                
+                
 
     def worker(self):
         while not rospy.is_shutdown():
             if not self.empty():
-                kwargs = dict()
                 item = self.get()
-                try:
-                    if item[6] is not '':
-                        kwargs = dict(axis=item[6])
-                    if item[2] is not '':
-                        kwargs[item[2]]=item[3]
-                    if len(kwargs) > 0:
-                        resp = item[1](self.board, **kwargs)
-                    elif item[3] is not None:
-                        resp = item[1](self.board, item[3])
-                    else:
-                        resp = item[1](self.board)
-                    item[5][0] = True
-                    item[5][1] = 'Returned in {} nano seconds'.format(rospy.Time.now().nsecs-item[4].nsecs)
-                    item[5][2] = str(resp)
-                    self.task_done()
-                except Exception as ex:
-                    item[5][0] = False
-                    item[5][1] = str(ex)
-                    item[5][2] = None
-                    self.task_done()
+                print item
+                resp = item[1](item[2])
+                item[4].extend(resp)
+                self.task_done()
                 
 
 if __name__ == '__main__':
     # Initialize the node
     rospy.init_node('uniboard_communication')
     controller = UniboardCommunication()
+    controller.setup_board(BOARD)
+    controller.setup_ros()
     controller.worker()
     rospy.spin()
