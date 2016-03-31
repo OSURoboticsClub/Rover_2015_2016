@@ -4,19 +4,24 @@ import time
 import imp
 from scipy.integrate import quad
 
-#from uniboard_communication.srv import *
+from uniboard_communication.srv import *
 from nav_msgs.msg import Odometry
+from vel_pid.msg import vel_pid_status
+from vel_pid.srv import set_target
 
-uniboard = imp.load_source('uniboard', '/home/loren/dev/Rover2016/uniboard/roverlib/uniboard.py')
+STEP_LIMIT = 0.1
+
 
 
 class PID(object):
     def __init__(self):
-        self.board = uniboard.Uniboard('/dev/ttyUSB2')
-        #rospy.wait_for_service('uniboard_service')
-        #self.uniboard_service = rospy.ServiceProxy('uniboard_service', communication)
-        #self.pub = rospy.Publisher('pid_status', arm_status, queue_size=10)
+        rospy.wait_for_service('uniboard_service')
+        self.uniboard_service = rospy.ServiceProxy('uniboard_service', communication)
+        self.pub = rospy.Publisher('pid_status', vel_pid_status, queue_size=10)
         self.sub = rospy.Subscriber('/odom', Odometry, self.update)
+        self.s = rospy.Service('set_vel_pid_target', 
+                            set_target, 
+                            self.set_target)
         self.target = 0
         self.err = ([], [])
         self.MAXVEL = 2
@@ -24,8 +29,9 @@ class PID(object):
         self.MAXOUT = 1
         self.MINOUT = -1
         self.kP = 1
-        self.kD = 0
-        self.kI = 0
+        self.kD = 0.2
+        self.kI = 0.5
+        self.out = 0
 
 
     def update(self, odom):
@@ -51,13 +57,21 @@ class PID(object):
             out = 1
         elif out < -1:
             out = -1
-        # left = self.uniboard_service('motor_left', 1, '', '', str(out), rospy.Time.now())
-        # right = self.uniboard_service('motor_right', 1, '', '', str(out), rospy.Time.now())
-        self.board.motor_left(out)
-        self.board.motor_right(out)
+        if out-self.out > STEP_LIMIT:
+            self.out += STEP_LIMIT
+        elif out-self.out < -STEP_LIMIT:
+            self.out -= STEP_LIMIT
+        else:
+            self.out = out  
 
-
-
+        left = self.uniboard_service('motor_left', 3, str(self.out), rospy.Time.now())
+        left = self.uniboard_service('motor_right', 3, str(self.out), rospy.Time.now())
+        status = vel_pid_status()
+        status.status = "Running"
+        status.out = self.out
+        status.target = self.target
+        status.vel = vel
+        self.pub.publish(status)
 
 
     def integrate(self, f, x):
@@ -70,7 +84,9 @@ class PID(object):
 
 
     def set_target(self, target):
-        self.target = target
+        self.target = target.target
+        self.err = ([],[])
+        return True
 
 
     def tune(self):
@@ -79,8 +95,6 @@ class PID(object):
 if __name__ == '__main__':
     rospy.init_node('vel_pid')
     pid = PID()
-    pid.set_target(0.25)
-    time.sleep(2)
-    pid.set_target(0)
-    import IPython; IPython.embed()
+    rospy.spin()
+
     

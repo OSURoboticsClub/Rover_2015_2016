@@ -1,0 +1,5 @@
+<launch>
+  <node pkg="uniboard_communication" type="uniboard_service.py" name="uniboard_communication" />
+  <node pkg="vel_pid" type="pid.py" name="vel_pid" />
+  <test test-name="test_vel_pid" pkg="vel_pid" type="test_vel_pid.py" />
+</launch>
