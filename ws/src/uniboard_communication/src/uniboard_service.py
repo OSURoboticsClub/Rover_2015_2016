@@ -8,7 +8,7 @@ uniboard = imp.load_source('uniboard',
     '/home/loren/dev/Rover2016/uniboard/roverlib/uniboard.py')
 from uniboard_communication.srv import *
 #Fake uniboard
-#import fake_uniboard as uniboard
+import fake_uniboard
 
 BOARD = "/dev/ttyUSB2"
 
@@ -25,7 +25,12 @@ class UniboardCommunication(Queue.PriorityQueue):
     
 
     def setup_board(self, board):
-        self.board = uniboard.Uniboard(board)
+        try:
+            self.board = uniboard.Uniboard(board)
+            rospy.loginfo('Using real uniboard')
+        except:
+            self.board = fake_uniboard.Uniboard(board)
+            rospy.logwarn('Using Fake Uniboard')
 
 
     def setup_ros(self):
