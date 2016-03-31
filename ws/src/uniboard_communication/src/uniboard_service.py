@@ -4,13 +4,13 @@ import rospy
 import Queue
 import imp
 # Importing the uniboard api
-#uniboard = imp.load_source('uniboard', 
- #   '/home/loren/dev/Rover2016/uniboard/roverlib/uniboard.py')
+uniboard = imp.load_source('uniboard', 
+    '/home/loren/dev/Rover2016/uniboard/roverlib/uniboard.py')
 from uniboard_communication.srv import *
 #Fake uniboard
-import fake_uniboard as uniboard
+#import fake_uniboard as uniboard
 
-BOARD = "/dev/ttyUSB1"
+BOARD = "/dev/ttyUSB2"
 
 class UniboardCommunication(Queue.PriorityQueue):
     """
@@ -67,7 +67,6 @@ class UniboardCommunication(Queue.PriorityQueue):
         while not rospy.is_shutdown():
             if not self.empty():
                 item = self.get()
-                print item
                 resp = item[1](item[2])
                 item[4].extend(resp)
                 self.task_done()
