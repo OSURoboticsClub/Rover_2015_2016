@@ -9,7 +9,7 @@ from nav_msgs.msg import Odometry
 from vel_pid.msg import vel_pid_status
 from vel_pid.srv import set_target
 
-STEP_LIMIT = 0.1
+STEP_LIMIT = 0.01
 
 
 
@@ -28,9 +28,9 @@ class PID(object):
         self.MINVEL = -2
         self.MAXOUT = 1
         self.MINOUT = -1
-        self.kP = 1
-        self.kD = 0.2
-        self.kI = 0.5
+        self.kP = 0.0
+        self.kD = 0.0
+        self.kI = 0.0
         self.out = 0
 
 
@@ -84,9 +84,12 @@ class PID(object):
 
 
     def set_target(self, target):
-        self.target = target.target
-        self.err = ([],[])
-        return True
+        if target.target <= self.MAXVEL and target.target >= self.MINVEL:
+            self.target = target.target
+            self.err = ([],[])
+            return True
+        else:
+            return False
 
 
     def tune(self):
