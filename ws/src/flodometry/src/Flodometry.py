@@ -67,6 +67,7 @@ class Flodometry(object):
         # Sensor was mounted so it only moved in the x direction during testing. 
         dt = float(motion.shutter)/CLOCK
         vel = (motion.dx/dt)
+        # Variance
         var = abs(vel - motion.dx/(dt-1.0/16.0))
         # Set measurment accuaracy to 0.1 speed per 
         # file:///home/loren/Downloads/CTS12-37%20(1).pdf

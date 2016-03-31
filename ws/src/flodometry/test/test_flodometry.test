@@ -1,0 +1,6 @@
+<launch>
+  <node pkg="uniboard_communication" type="uniboard_service.py" name="uniboard_communication"/>
+  <node pkg="rosserial_python" type="serial_node.py" name="rosserial_python" args="/dev/ttyUSB0 baud:=14400"/>
+  <node pkg="flodometry" type="Flodometry.py" name="flodometry"/>
+  <test test-name="test_real_roving" pkg="flodometry" type="test_real_roving.py" />
+</launch>

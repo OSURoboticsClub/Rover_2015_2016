@@ -9,6 +9,10 @@ find_package(catkin REQUIRED
     std_msgs
     message_generation
 )
+if(CATKIN_ENABLE_TESTING)
+  find_package(rostest REQUIRED)
+  add_rostest(test/test_flodometry.test)
+endif()
 
 ## System dependencies are found with CMake's conventions
 find_package(catkin REQUIRED COMPONENTS roscpp rospy std_msgs message_generation)
