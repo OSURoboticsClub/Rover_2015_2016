@@ -55,22 +55,22 @@ def calculate_distance(left_centx, right_centx, left_centy, right_centy):
     # This will have to be changed once the cameras are calibrated for the rover
     # Assumes distance between cameras is 119mm and resolution 640x480
     diff = abs(left_centx-right_centx)
-    dist = ((119*640)/(2*math.tan(math.radians(60)/2)*diff)) * 1.75
+    dist = ((119*1280)/(2*math.tan(math.radians(60)/2)*diff))# * 1.75
 
     # calculate x-value in mm using basic trigonometry and ratios
     # dx0 -> distance from center of field of view (left camera) to horizontal edge of FOV in mm
     # dx1 -> distance from center of FOV (left camera) to centroid of purple
     # x -> distance from center of stereo cameras to purple centroid in mm
     dx0 = dist * math.tan(math.radians(30))
-    dx1 = (dx0 * (left_centx - 320)) / (320)
+    dx1 = (dx0 * (left_centx - 640)) / (640)
     #x = dx1 + 59.5
-    x = (dx1 - 100) / 1.75
+    x = (dx1 - 100) #/ 1.75
 
     # calculate y-value in mm
     # dy0 -> distance from center of FOV (left camera) to vertical edge of FOV in mm
     # y -> distance from center of stereo cameras to purple centroid in mm
-    dy0 = (dx0 * 240) / (320)
-    y = (((dy0 * (left_centy - 240)) / (240)) * -1) / 1.75
+    dy0 = (dx0 * 360) / (640)
+    y = (((dy0 * (left_centy - 360)) / (360)) * -1)# / 1.75
 
     # calculate distance from base of rover
     # h -> height of cameras from ground in mm
@@ -106,8 +106,8 @@ def check_easy_sample(left, right):
        edges_right = Color_Filter.contour_color(frame=filter_right["Median Blur"][filter_right["Colors"][0]], show_images=False)
 
        # blur to create consistency
-       blurred_left = cv2.GaussianBlur(edges_left, (5,5), 0)
-       blurred_right = cv2.GaussianBlur(edges_right, (5,5), 0)
+       #blurred_left = cv2.GaussianBlur(edges_left, (5,5), 0)
+       #blurred_right = cv2.GaussianBlur(edges_right, (5,5), 0)
        
        # find image contours
        (cnts_left, _) = cv2.findContours(blurred_left.copy(), cv2.RETR_LIST, cv2.CHAIN_APPROX_SIMPLE)
