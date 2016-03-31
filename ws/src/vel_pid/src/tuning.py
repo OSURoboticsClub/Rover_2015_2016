@@ -14,7 +14,7 @@ class TunePID(object):
         self.out = []
         self.target = []
         for topic, msg, t in bag.read_messages(topics=['/pid_status']):
-            self.time.append(t.secs)
+            self.time.append(t.to_time())
             self.vel.append(msg.vel)
             self.out.append(msg.out)
             self.target.append(msg.target)
