@@ -26,6 +26,6 @@ rosun rsserial_arduino make_libraries.py
 5. For testing run roscore and in a new terminal, this only sets the serial node to run and to set the baud for it (their is a default baud 
 if you do not specifiy, which will not be correct). The usb port will also need to be set. 
 
-rosrun rosserial_python serial_node.py {port} _baud:= 14400
+rosrun rosserial_python serial_node.py {port} _baud:=14400
 
 6. Use echo to display results
