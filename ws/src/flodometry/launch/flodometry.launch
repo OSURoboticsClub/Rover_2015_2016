@@ -1,0 +1,11 @@
+<!-- This launch file only launches the flodometry node, it will not run tests! -->
+<!-- This will automatically launch the adns but will not warn you if it does 
+not create the publisher, this will cause flodometry to not do anything 
+when debugging try running in seperate terminals to ensure each part is working
+properly-->
+
+<launch>
+  <node pkg="uniboard_communication" type="uniboard_service.py" name="uniboard_communication"/>
+  <node pkg="rosserial_python" type="serial_node.py" name="rosserial_python" args="/dev/ttyUSB0 _baud:=14400"/>
+  <node pkg="flodometry" type="Flodometry.py" name="flodometry"/>
+</launch>

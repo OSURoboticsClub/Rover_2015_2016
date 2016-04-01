@@ -1,44 +1,39 @@
 #!/usr/bin/env python
-
+"""
+Flodometry node for OSU Rover 2016
+Currently subscribes to /optical_flow
+and publishes filtered values to /odm
+Attributes:
+    CLOCK (Int): ADNS Clock rate
+"""
 
 import math
 import numpy as np
 from bunch import Bunch
+from test_real_roving import TestRealRoving
+import rospy
+from flodometry.msg import motion_read
+from nav_msgs.msg import Odometry
+
 CLOCK = 4*10**6
 
-# Bypass imports when runnning from test suite.
-if __name__ == '__main__':
-    import rospy
-    from flodometry.msg import motion_read
-    from nav_msgs.msg import Odometry
-else:
-    motion_read = object()
-    odom = Bunch()
-    odom.header = Bunch()
-    odom.pose = Bunch()
-    odom.pose.pose = Bunch()
-    Odometry = lambda: odom
-    class Rospy(object):
-        def __init__(self):
-            self.Time = Bunch()
-            self.Time.now = lambda: 1234
-
-        def Subscriber(self, *args, **kwargs):
-            return Bunch()
-        def Publisher(self, *args, **kwargs):
-            pub = Bunch()
-            pub.publish = lambda arg: True
-            return pub
-
-    rospy = Rospy()
-
-    
 from filterpy.kalman import KalmanFilter
 from filterpy.common import Q_discrete_white_noise
 
 
 class Flodometry(object):
+    """Main class of Node flodometry
+    
+    Attributes:
+        kf (KalmanFilter): A kalman filter to filter sensor values and estimate 
+        odometry
+        pub (rospy.Publisher): Publisher to push to odom
+    """
     def __init__(self):
+        """Initialize the node set up the Kalman filter and set up subscriber 
+        and publisher.
+        """
+        rospy.init_node('flodometry')
         self.setup_kalman()
         # Subscribe to the adns topic 
         rospy.Subscriber("/optical_flow", motion_read, self.update)
@@ -47,6 +42,11 @@ class Flodometry(object):
 
 
     def setup_kalman(self):
+        """Sets all of the kalman filter constants
+        
+        Returns:
+            None
+        """
         # Initialize Kalman filter with 2 state variables and one measurement
         self.kf = KalmanFilter(dim_x=2, dim_z=1)
         # Set initial position and velocity at 0
@@ -64,6 +64,15 @@ class Flodometry(object):
         
 
     def update(self, motion):
+        """Call back to subscriber on /optical flow
+        updates the Kalman filter with the velocity value then calls publish_updates
+        
+        Args:
+            motion (motion_read): Message published to /optical_flow
+        
+        Returns:
+            None
+        """
         # Sensor was mounted so it only moved in the x direction during testing. 
         dt = float(motion.shutter)/CLOCK
         vel = (motion.dx/dt)
@@ -77,6 +86,15 @@ class Flodometry(object):
         self.publish_updates(self.kf.x, self.kf.P)
 
     def publish_updates(self, x, p):
+        """Publishes kalman filter data to odometry
+        
+        Args:
+            x (List): List containing current state estimates
+            p (List): List containing current variance estimates
+        
+        Returns:
+            None
+        """
         if __name__ == '__main__':
             odom = Odometry()
             odom.header.stamp = rospy.Time.now()
@@ -90,7 +108,5 @@ class Flodometry(object):
             pass
 
 if __name__ == '__main__':
-    rospy.init_node('flodometry')
     f = Flodometry()
-    rospy.spin()
 
