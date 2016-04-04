@@ -9,9 +9,13 @@ Attributes:
 import rospy
 import Queue
 import imp
+import os, sys
 # Importing the uniboard api
+uniboard_path = os.path.abspath(__file__)
+for i in range(5):
+    uniboard_path = os.path.dirname(uniboard_path)
 uniboard = imp.load_source('uniboard', 
-    '/home/loren/dev/Rover2016/uniboard/roverlib/uniboard.py')
+    (uniboard_path+'/uniboard/roverlib/uniboard.py'))
 from uniboard_communication.srv import *
 #Fake uniboard
 import fake_uniboard
