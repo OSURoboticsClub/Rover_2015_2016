@@ -15,12 +15,12 @@ dt = 1/100
 # Length of state array
 dim_x = 2
 # Initial state [pos, vel]
-x = np.array([0.0, 0.01])
+x = np.array([0.0, 0.0])
 # State transfrom matrix such that x(t) = F*x(t-1)
 F = np.array([[1, dt],[0,  1]]) 
 # State transfrom noise the variance needs to be tuned when we know how fast we 
 # can accelerate or decelerate.
-Q = np.array([[0,0],[0,0.5]])
+Q = np.array([[0,0],[0,1E-6]])
 # Initial variance for position set at 0 since we know our starting location
 P = np.array([[0, 0], [0, 0]])
 # Size of measurement array
