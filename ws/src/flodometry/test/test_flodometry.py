@@ -38,8 +38,10 @@ class TestFlodometry(unittest.TestCase):
         vel = [val[1] for val in x]
         pos = [val[0] for val in x]
         x_time = [val[0] for val in data]
+
         self.plot(x_time, motion_x, 'Motion')
         self.plot(x_time, vel, 'Velocity')
+        self.plot(x_time, pos, 'Position')
 
     def plot(self, x, y, title):
         """Plots and saves data compiled in test
