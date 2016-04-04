@@ -15,10 +15,10 @@ import rospy
 from flodometry.msg import motion_read
 from nav_msgs.msg import Odometry
 
-CLOCK = 4*10**6
-
 from filterpy.kalman import KalmanFilter
-from filterpy.common import Q_discrete_white_noise
+
+# Import config file
+import config.kalman_config as cfg
 
 
 class Flodometry(object):
@@ -42,25 +42,19 @@ class Flodometry(object):
 
 
     def setup_kalman(self):
-        """Sets all of the kalman filter constants
+        """Sets all of the kalman filter constants see config.kalman_config for 
+            more details on each variable
         
         Returns:
             None
         """
-        # Initialize Kalman filter with 2 state variables and one measurement
-        self.kf = KalmanFilter(dim_x=2, dim_z=1)
-        # Set initial position and velocity at 0
-        self.kf.x = np.array([0.0, 0.0])
-        # Set state transition with average dt of 0.1
-        self.kf.F = np.array([[1, 0.1],
-                        [0,  1]])  
-        # Initialize the measurment transform with beta value from
-        # file:///home/loren/Downloads/CTS12-37%20(1).pdf
-        self.kf.H = np.array([[0.0, 12188.48]])
-        # Set initial variance to 0 since state is known
-        self.kf.P *= 0
-        # Initialize process noise with variance of max vel and white noise and dt of 0.1
-        self.kf.Q = Q_discrete_white_noise(dim=2, dt=0.1, var=2)
+        self.kf = KalmanFilter(dim_x=cfg.dim_x, dim_z=cfg.dim_z)
+        self.kf.x = cfg.x
+        self.kf.F = cfg.F
+        self.kf.H = cfg.H
+        self.kf.P = cfg.P
+        self.kf.Q = cfg.Q
+        self.kf.R = cfg.R
         
 
     def update(self, motion):
@@ -74,16 +68,11 @@ class Flodometry(object):
             None
         """
         # Sensor was mounted so it only moved in the x direction during testing. 
-        dt = float(motion.shutter)/CLOCK
-        vel = (motion.dx/dt)
-        # Variance
-        var = abs(vel - motion.dx/(dt-1.0/16.0))
-        # Set measurment accuaracy to 0.1 speed per 
-        # file:///home/loren/Downloads/CTS12-37%20(1).pdf
-        self.kf.R = np.array([[var]])
+        vel = motion.dx
         self.kf.predict()
         self.kf.update(vel)
         self.publish_updates(self.kf.x, self.kf.P)
+
 
     def publish_updates(self, x, p):
         """Publishes kalman filter data to odometry
@@ -106,6 +95,7 @@ class Flodometry(object):
             self.pub.publish(odom)
         else:
             pass
+
 
 if __name__ == '__main__':
     f = Flodometry()

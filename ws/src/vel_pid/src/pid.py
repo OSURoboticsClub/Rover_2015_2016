@@ -28,9 +28,9 @@ class PID(object):
         self.MINVEL = -2
         self.MAXOUT = 1
         self.MINOUT = -1
-        self.kP = 0.0
-        self.kD = 0.0
-        self.kI = 0.0
+        self.kP = 0.5 # propotional constant
+        self.kD = 0.1 # derivitive
+        self.kI = 0.7 # integral
         self.out = 0
 
 
@@ -39,7 +39,7 @@ class PID(object):
         vel = odom.twist.twist.linear.x
         err = float(self.target) - vel
         self.err[0].append(float(err))
-        self.err[1].append(float(time.nsecs)/(10**9))
+        self.err[1].append(float(time.to_time()))
         P = err*self.kP
         x = len(self.err[0])
         if x > 1:
@@ -53,16 +53,40 @@ class PID(object):
         D = self.kD*d
         u = P+I+D
         out = u*(float(self.MAXOUT)/self.MAXVEL)
-        if out > 1:
-            out = 1
-        elif out < -1:
-            out = -1
+        if out > self.MAXOUT:
+            out = self.MAXOUT
+        elif out < self.MINOUT:
+            out = self.MINOUT
+   
         if out-self.out > STEP_LIMIT:
             self.out += STEP_LIMIT
         elif out-self.out < -STEP_LIMIT:
             self.out -= STEP_LIMIT
         else:
             self.out = out  
+        # if out < 0 and self.out <= 0:
+        #     if out < self.out-STEP_LIMIT:
+        #         self.out -= STEP_LIMIT
+        #     else:
+        #         self.out = out
+        # elif out > 0 and self.out >= 0:
+        #     if out > self.out+STEP_LIMIT:
+        #         self.out += STEP_LIMIT
+        #     else:
+        #         self.out = out
+        # elif out < 0 and self.out >= 0:
+        #     if out < self.out-STEP_LIMIT:
+        #         self.out = -STEP_LIMIT
+        #     else:
+        #         self.out = out
+        # elif out > 0 and self.out <= 0:
+        #     if out > self.out + STEP_LIMIT:
+        #         self.out = STEP_LIMIT
+        #     else:
+        #         self.out = out
+        # elif out == 0:
+        #     self.out = out
+
 
         left = self.uniboard_service('motor_left', 3, str(self.out), rospy.Time.now())
         left = self.uniboard_service('motor_right', 3, str(self.out), rospy.Time.now())
