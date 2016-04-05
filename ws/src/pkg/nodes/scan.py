@@ -106,8 +106,8 @@ def check_easy_sample(left, right):
        edges_right = Color_Filter.contour_color(frame=filter_right["Median Blur"][filter_right["Colors"][0]], show_images=False)
 
        # blur to create consistency
-       #blurred_left = cv2.GaussianBlur(edges_left, (5,5), 0)
-       #blurred_right = cv2.GaussianBlur(edges_right, (5,5), 0)
+       blurred_left = cv2.GaussianBlur(edges_left, (5,5), 0)
+       blurred_right = cv2.GaussianBlur(edges_right, (5,5), 0)
        
        # find image contours
        (cnts_left, _) = cv2.findContours(blurred_left.copy(), cv2.RETR_LIST, cv2.CHAIN_APPROX_SIMPLE)
