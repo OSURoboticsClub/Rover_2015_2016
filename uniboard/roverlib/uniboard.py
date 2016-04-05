@@ -159,7 +159,7 @@ class Uniboard(object):
 			},
 			"Y":{
 					"target":0,       #target and max are in (full, non-microstepped) steps away from the limit.
-					"max":800,
+					"max":900,
 					"scale":0.0003095625,	 #Multiplier to convert steps to meters (scale = meters/steps)
 					"dirpol":0,       #Value of DIR line when traveling away from limit
 					"frequency":100,  #Full step frequency, in Hz
@@ -171,22 +171,22 @@ class Uniboard(object):
 			},
 			"Z":{
 					"target":0,       #target and max are in (full, non-microstepped) steps away from the limit.
-					"max":400,
-					"scale":.0025,    #Multiplier to convert steps to meters (scale = meters/steps)
+					"max":4100,
+					"scale":0.000243,    #Multiplier to convert steps to meters (scale = meters/steps)
 					"dirpol":1,       #Value of DIR line when traveling away from limit
-					"frequency":100,  #Full step frequency, in Hz
+					"frequency":400,  #Full step frequency, in Hz
 					"steppol":1,      #Value of STEPPOL bit
-					"enpol":0,        #State of EN line when driver is enabled
+					"enpol":1,        #State of EN line when driver is enabled
 					"faultpol":0,     #State of fault line that indicated a problem
-					"microsteps":32,  #Number of microsteps. Should be 1, 2, 4, 8, 16, or 32
+					"microsteps":8,  #Number of microsteps. Should be 1, 2, 4, 8, 16, or 32
 					"regprefix":0x20, #Value to be ORed with the register lower nibble to get the registers of this axis
 			},
 			"A":{
 					"target":0,       #target and max are in (full, non-microstepped) steps away from the limit.
-					"max":400,
-					"scale":.0025,    #Multiplier to convert steps to meters (scale = meters/steps)
-					"dirpol":1,       #Value of DIR line when traveling away from limit
-					"frequency":100,  #Full step frequency, in Hz
+					"max":800,
+					"scale":.001428,    #Multiplier to convert steps to meters (scale = meters/steps)
+					"dirpol":0,       #Value of DIR line when traveling away from limit
+					"frequency":150,  #Full step frequency, in Hz
 					"steppol":1,      #Value of STEPPOL bit
 					"enpol":0,        #State of EN line when driver is enabled
 					"faultpol":0,     #State of fault line that indicated a problem
@@ -307,6 +307,43 @@ class Uniboard(object):
 		self._write_reg(4, self._arm_reg(axis, 3), int(new_steps_ms))
 		self.arm_go(axis, prev_go)
 		
+	def arm_set(self, axis, new_current_pos):
+		"""Set the current position of the arm, in meters. Calling this function stops all motion
+		   in the selected axis.
+		   This function is used during homing."""
+		prev_go = self.arm_go(axis)
+		self.arm_go(axis, False)
+		self._arm_data[self._arm_key(axis)]["target"] = new_current_pos / self._arm_data[self._arm_key(axis)]["scale"]
+		self.arm_go(axis, prev_go)
+		
+	def arm_raw_move(self, axis, distance):
+		"""Tell the Uniboard to move an axis a certain distance (in meters) without
+		    updating any internal arm data."""
+		"""Set/get the target (position the arm should move toward) of an arm axis, in meters.
+		   If target is None, the current target is returned. Note that in order for the
+		   arm to move, the driver must be enabled (with arm_en()), go must be set (with arm_go()),
+		   and the rover must not be paused. Additionally, arm_home() should be run before
+		   using the arm. Axis can be a string ("X", "Y", "Z", or "A") or an 
+		   integer (0, 1, 2, or 3), respectively."""
+		steps_ms = (distance / self._arm_data[self._arm_key(axis)]["scale"]) * self._arm_data[self._arm_key(axis)]["microsteps"]
+		print steps_ms
+		if distance < 0:
+			new_dir = self._arm_data[self._arm_key(axis)]["dirpol"] ^ 1
+		else: 
+			new_dir = self._arm_data[self._arm_key(axis)]["dirpol"]
+		
+		conf_reg = self._read_reg(4, self._arm_reg(axis, 0))
+		if new_dir > 0:
+			conf_reg |= 0x20
+		else:
+			conf_reg &= ~0x20
+		steps_int = int(steps_ms)
+		if steps_int < 0:
+			steps_int = -steps_int
+		self._write_reg(4, self._arm_reg(axis, 0), conf_reg)
+		self._write_reg(4, self._arm_reg(axis, 3), steps_int)
+		
+		
 	def arm_current(self, axis, current):
 		"""Return the current position of the given axis, in meters.
 		   Axis can be a string ("X", "Y", "Z", or "A") or an 
@@ -383,9 +420,37 @@ class Uniboard(object):
 		   integer (0, 1, 2, or 3), respectively."""
 		return bool(self._read_reg(4, self._arm_reg(axis, 1)) & 0x01)
 	
-	def arm_home(self, axis="All"):
-		pass
-	
+	def arm_home(self):
+		"""Home all arm axises. After homing, X and Y will be in the middle of their travel
+		   (arm_max()/2), the gripper will be at its 0 position (fully closed), and Z will be
+		   fully upright (.5). After homing, all axises will be enabled and have their go bits
+		   set True. Before calling this function, the Z axis must be mostly upright."""
+		for axis in ["X", "Y", "Z", "A"]:
+			self.arm_en(axis, True)
+			self.arm_go(axis, True)
+		
+		#First, move X and Y to their limit switches
+		if not self.arm_limit("X"):
+			self.arm_raw_move("X", -self.arm_max("X"))
+		if not self.arm_limit("Y"):
+			self.arm_raw_move("Y", -self.arm_max("Y"))
+		while self.arm_moving("X") or self.arm_moving("Y"):
+			time.sleep(1)
+		for axis in ["X", "Y"]:
+			self.arm_en(axis, True)
+			self.arm_go(axis, True)
+			self.arm_set(axis, 0)
+			self.arm_raw_move(axis, 0)
+		
+		#Center X and Y
+		self.arm_target("X", self.arm_max("X")/2)
+		self.arm_target("Y", self.arm_max("Y")/2)
+		while self.arm_moving("X") or self.arm_moving("Y"):
+			time.sleep(1)
+		
+		#Move Z until it hits the limit
+		
+		
 	def _arm_key(self, axis):
 		"""Return the key used in the _arm_data dictionary based on an axis name. Axis can
 		   be a string ("X", "Y", "Z", or "A") or an integer (0, 1, 2, or 3), respectively.

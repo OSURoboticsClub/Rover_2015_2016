@@ -2,6 +2,8 @@
 #roverlib/uniboard test program
 #Written 2015-2016 by Nick Ames <nick@fetchmodus.org>
 import uniboard
+import time
+
 u = uniboard.Uniboard("/dev/ttyUSB1")
 
 #while True:
@@ -16,19 +18,10 @@ def test_axis(axis):
 	global u
 	u.arm_en(axis, True)
 	u.arm_go(axis, True)
-	while True:
-		u.arm_target(axis, 1)
-		while u.arm_moving(axis):
-			pass
-		time.sleep(1)
-		u.arm_go(axis, True)
-		u.arm_target(axis, 0)
-		while u.arm_moving(axis):
-			pass
-		time.sleep(.5)
+	
+	u.arm_home()
 
-
-#test_axis("Z")
+test_axis("X")
 
 #u.arm_en("Y", True)
 #u.arm_go("Y", True)
@@ -58,24 +51,24 @@ def test_axis(axis):
 		#print u.rc_value(ch),
 	#print "\r"
 
-from Tkinter import *
-class App:
-	def __init__(self, master):
-		frame = Frame(master)
-		frame.pack()
-		self.left = Scale(frame, from_=-1000, to=1000, command = self.left_update)
-		self.left.pack(side=LEFT)
-		self.right = Scale(frame, from_=-1000, to=1000, command = self.right_update)
-		self.right.pack(side=LEFT)
+#from Tkinter import *
+#class App:
+	#def __init__(self, master):
+		#frame = Frame(master)
+		#frame.pack()
+		#self.left = Scale(frame, from_=-1000, to=1000, command = self.left_update)
+		#self.left.pack(side=LEFT)
+		#self.right = Scale(frame, from_=-1000, to=1000, command = self.right_update)
+		#self.right.pack(side=LEFT)
 		
-	def left_update(self, blah):
-		global u
-		u.motor_left(float(self.left.get())/1000.0)
+	#def left_update(self, blah):
+		#global u
+		#u.motor_left(float(self.left.get())/1000.0)
 		
-	def right_update(self, blah):
-		global u
-		u.motor_right(float(self.right.get())/1000.0)
+	#def right_update(self, blah):
+		#global u
+		#u.motor_right(float(self.right.get())/1000.0)
     
-root = Tk()
-app = App(root)
-root.mainloop()
+#root = Tk()
+#app = App(root)
+#root.mainloop()
