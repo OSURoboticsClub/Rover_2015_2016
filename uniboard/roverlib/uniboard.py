@@ -445,12 +445,36 @@ class Uniboard(object):
 		#Center X and Y
 		self.arm_target("X", self.arm_max("X")/2)
 		self.arm_target("Y", self.arm_max("Y")/2)
-		while self.arm_moving("X") or self.arm_moving("Y"):
-			time.sleep(1)
+		while self.arm_should_be_moving("X") or self.arm_should_be_moving("Y"):
+			#Due to contact bounce, spurious limit switch presses can occur,
+			#setting go to False.
+			self.arm_go("X", True)
+			self.arm_go("Y", True)
+			time.sleep(.2)
+		
+		#Home gripper
 		
 		#Move Z until it hits the limit
-		
-		
+		if not self.arm_limit("Z"):
+			self.arm_raw_move("Z", -.3)
+		while self.arm_moving("Z"):
+			time.sleep(1)
+		self.arm_en("Z", True)
+		self.arm_go("Z", True)
+		self.arm_set("Z", .25 * self.arm_max("Z"))
+		self.arm_raw_move("Z", 0)
+		#Make Z upright
+		self.arm_target("Z", .5)
+		while self.arm_should_be_moving("Z"):
+			#Due to contact bounce, spurious limit switch presses can occur,
+			#setting go to False.
+			self.arm_go("Z", True)
+			time.sleep(.2)
+			
+	def arm_should_be_moving(self, axis):
+		"""Returns True if an axis's uniboard steps register is not 0."""
+		return self._read_reg(4, self._arm_reg(axis, 3)) != 0
+	
 	def _arm_key(self, axis):
 		"""Return the key used in the _arm_data dictionary based on an axis name. Axis can
 		   be a string ("X", "Y", "Z", or "A") or an integer (0, 1, 2, or 3), respectively.

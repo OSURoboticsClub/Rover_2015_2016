@@ -6,22 +6,7 @@ import time
 
 u = uniboard.Uniboard("/dev/ttyUSB1")
 
-#while True:
-	#left = u.rc_value(2)
-	#right = u.rc_value(3)
-	#print "%02f"%left + " " "%02f"%right
-	#u.motor_left(left)
-	#u.motor_right(right)
-
-
-def test_axis(axis):
-	global u
-	u.arm_en(axis, True)
-	u.arm_go(axis, True)
-	
-	u.arm_home()
-
-test_axis("X")
+u.arm_home()
 
 #u.arm_en("Y", True)
 #u.arm_go("Y", True)
