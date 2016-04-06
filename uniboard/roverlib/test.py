@@ -6,7 +6,53 @@ import time
 
 u = uniboard.Uniboard("/dev/ttyUSB1")
 
-u.arm_home()
+u.arm_home() # set elements to center, test all elements
+u.arm_target("Y", u.arm_max("Y")) # move all the way back
+u.arm_target("X", u.arm_max("X")) # move all the way back
+
+# make sure that you wait until arm_moving is false
+while u.arm_should_be_moving("X") or u.arm_should_be_moving("Y"): pass
+
+u.arm_target("Y", u.arm_max("Y")/2) # move to center
+u.arm_target("X", u.arm_max("X")/2) # move to center
+
+while u.arm_should_be_moving("X") or u.arm_should_be_moving("Y"): pass
+
+u.arm_target("Z", 0)
+
+#while u.arm_should_be_moving("Z"): pass
+u.arm_z_wait_until_done()
+
+#u.arm_target("A", 0)
+
+#while u.arm_should_be_moving("A"): pass
+
+u.arm_target("Z", 0.5)
+u.arm_z_wait_until_done()
+
+u.arm_target("X", 0.05) # move all the way back
+# return which direction to turn
+test_loc = u.arm_current("X", None)
+if test_loc > u.arm_max("X") / 2: print "greater"
+elif test_loc < u.arm_max("X") / 2: print "lesser"
+else print "center bitch"
+
+u.arm_target("X", u.arm_max("X")) # move all the way back
+# return which direction to turn
+test_loc = u.arm_current("X", None)
+if test_loc > u.arm_max("X") / 2: print "greater"
+elif test_loc < u.arm_max("X") / 2: print "lesser"
+else print "center bitch"
+
+u.arm_target("X", u.arm_max("X")/2) # move all the way back
+# return which direction to turn
+test_loc = u.arm_current("X", None)
+if test_loc > u.arm_max("X") / 2: print "greater"
+elif test_loc < u.arm_max("X") / 2: print "lesser"
+else print "center bitch"
+
+
+print "finished moving"
 
 #u.arm_en("Y", True)
 #u.arm_go("Y", True)
