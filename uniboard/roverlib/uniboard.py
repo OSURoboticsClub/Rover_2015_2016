@@ -326,7 +326,6 @@ class Uniboard(object):
 		   using the arm. Axis can be a string ("X", "Y", "Z", or "A") or an 
 		   integer (0, 1, 2, or 3), respectively."""
 		steps_ms = (distance / self._arm_data[self._arm_key(axis)]["scale"]) * self._arm_data[self._arm_key(axis)]["microsteps"]
-		print steps_ms
 		if distance < 0:
 			new_dir = self._arm_data[self._arm_key(axis)]["dirpol"] ^ 1
 		else: 
@@ -475,6 +474,15 @@ class Uniboard(object):
 		"""Returns True if an axis's uniboard steps register is not 0."""
 		return self._read_reg(4, self._arm_reg(axis, 3)) != 0
 	
+	def arm_z_wait_until_done(self):
+		"""Return when the Z axis is finished moving. This function also shepards the
+		   Z through the limit switch press that occurs at z=.25."""
+		while self.arm_should_be_moving("Z"):
+			#Due to contact bounce, spurious limit switch presses can occur,
+			#setting go to False.
+			self.arm_go("Z", True)
+			time.sleep(.2)
+			
 	def _arm_key(self, axis):
 		"""Return the key used in the _arm_data dictionary based on an axis name. Axis can
 		   be a string ("X", "Y", "Z", or "A") or an integer (0, 1, 2, or 3), respectively.
