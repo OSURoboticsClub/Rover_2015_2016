@@ -1,0 +1,5 @@
+To run the vid node:
+
+source ws/devel/setup.bash
+(in another terminal) roscore
+rosrun pkg vid.py
