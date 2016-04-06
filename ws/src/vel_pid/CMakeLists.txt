@@ -51,6 +51,7 @@ endif()
 add_message_files(
    FILES
    vel_pid_status.msg
+   pid_status.msg
  )
 
 ## Generate services in the 'srv' folder

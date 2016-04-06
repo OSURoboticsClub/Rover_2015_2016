@@ -1,101 +1,49 @@
 #!/usr/bin/env python
 import rospy
 import time
-import imp
-from scipy.integrate import quad
 
 from uniboard_communication.srv import *
-from nav_msgs.msg import Odometry
-from vel_pid.msg import vel_pid_status
-from vel_pid.srv import set_target
-
+from vel_pid.msg import pid_status
 STEP_LIMIT = 0.01
 
-
-
 class PID(object):
-    def __init__(self):
-        rospy.wait_for_service('uniboard_service')
-        self.uniboard_service = rospy.ServiceProxy('uniboard_service', communication)
-        self.pub = rospy.Publisher('pid_status', vel_pid_status, queue_size=10)
-        self.sub = rospy.Subscriber('/odom', Odometry, self.update)
-        self.s = rospy.Service('set_vel_pid_target', 
-                            set_target, 
-                            self.set_target)
+    def __init__(self, outFun, kP, kI, kD, inRange, outRange, name):
+        self.pub = rospy.Publisher(name+'_status', pid_status, queue_size=10)
+        self.outFun = outFun
+        self.kP = kP
+        self.kI = kI
+        self.kD = kD
+        self.inRange = inRange
+        self.outRange = outRange
+        # Assuming we are being updated at a constant or near constant rate
+        self.err = []
         self.target = 0
-        self.err = ([], [])
-        self.MAXVEL = 2
-        self.MINVEL = -2
-        self.MAXOUT = 1
-        self.MINOUT = -1
-        self.kP = 0.5 # propotional constant
-        self.kD = 0.1 # derivitive
-        self.kI = 0.7 # integral
         self.out = 0
 
 
-    def update(self, odom):
-        time = odom.header.stamp
-        vel = odom.twist.twist.linear.x
-        err = float(self.target) - vel
-        self.err[0].append(float(err))
-        self.err[1].append(float(time.to_time()))
+    def update(self, current):
+        err = self.target - current
+        self.err.append(float(err))
         P = err*self.kP
-        x = len(self.err[0])
+        x = len(self.err)
         if x > 1:
-            i = self.integrate(*self.err)
-            d = ((self.err[0][x-1]-self.err[0][x-2])/
-                (self.err[1][x-1]-self.err[1][x-2]))
+            i = sum(self.err)
+            d = self.err[x-1]-self.err[x-2]
         else:
             i = 0
             d = 0
         I = self.kI*i
         D = self.kD*d
-        u = P+I+D
-        out = u*(float(self.MAXOUT)/self.MAXVEL)
-        if out > self.MAXOUT:
-            out = self.MAXOUT
-        elif out < self.MINOUT:
-            out = self.MINOUT
-   
-        if out-self.out > STEP_LIMIT:
-            self.out += STEP_LIMIT
-        elif out-self.out < -STEP_LIMIT:
-            self.out -= STEP_LIMIT
-        else:
-            self.out = out  
-        # if out < 0 and self.out <= 0:
-        #     if out < self.out-STEP_LIMIT:
-        #         self.out -= STEP_LIMIT
-        #     else:
-        #         self.out = out
-        # elif out > 0 and self.out >= 0:
-        #     if out > self.out+STEP_LIMIT:
-        #         self.out += STEP_LIMIT
-        #     else:
-        #         self.out = out
-        # elif out < 0 and self.out >= 0:
-        #     if out < self.out-STEP_LIMIT:
-        #         self.out = -STEP_LIMIT
-        #     else:
-        #         self.out = out
-        # elif out > 0 and self.out <= 0:
-        #     if out > self.out + STEP_LIMIT:
-        #         self.out = STEP_LIMIT
-        #     else:
-        #         self.out = out
-        # elif out == 0:
-        #     self.out = out
-
-
-        left = self.uniboard_service('motor_left', 3, str(self.out), rospy.Time.now())
-        left = self.uniboard_service('motor_right', 3, str(self.out), rospy.Time.now())
-        status = vel_pid_status()
-        status.status = "Running"
-        status.out = self.out
-        status.target = self.target
-        status.vel = vel
-        self.pub.publish(status)
+        out = P+I+D
+        # Scaling output to out range
+        # out = u*(float(self.outRange[1])/self.inRange[1])
+        if out > self.outRange[1]:
+            out = self.outRange[1]
+        elif out < self.outRange[0]:
+            out = self.self.outRange[0]
+        self.out = out
+        self.outFun(out)
+        self.publish_status(current, [P, I, D])
 
 
     def integrate(self, f, x):
@@ -105,23 +53,23 @@ class PID(object):
         return i
 
 
+    def publish_status(self, curr, pid_terms):
+        status = pid_status()
+        status.status = "Running"
+        status.out = self.out
+        status.target = self.target
+        status.current = curr
+        self.pid_terms = pid_terms
+        self.pub.publish(status)
 
 
     def set_target(self, target):
-        if target.target <= self.MAXVEL and target.target >= self.MINVEL:
-            self.target = target.target
-            self.err = ([],[])
-            return True
+        if target.target <= self.outRange[1] and target.target >= self.outRange[0]:
+            if self.target == target.target:
+                return True
+            else:
+                self.err = []
+                return True
         else:
             return False
-
-
-    def tune(self):
-        pass
-
-if __name__ == '__main__':
-    rospy.init_node('vel_pid')
-    pid = PID()
-    rospy.spin()
-
-    
+            rospy.logwarn('Target set is out of input range')

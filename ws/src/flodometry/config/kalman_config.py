@@ -11,7 +11,7 @@ from filterpy.common import Q_discrete_white_noise
 # Variance = 3.32305568475
 # Median Value = 34.0
 
-dt = 1/100
+dt = float(1.0)/float(100)
 # Length of state array
 dim_x = 2
 # Initial state [pos, vel]
