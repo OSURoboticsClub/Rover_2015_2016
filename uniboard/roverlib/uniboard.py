@@ -428,22 +428,34 @@ class Uniboard(object):
 			self.arm_en(axis, True)
 			self.arm_go(axis, True)
 		
-		#First, move X and Y to their limit switches
+		#Move A to limit switch
+		if not self.arm_limit("A"):
+			self.arm_raw_move("A", -self.arm_max("A"))
+		while self.arm_moving("A"):
+			time.sleep(.5)
+		for axis in ["A"]:
+			self.arm_en(axis, True)
+			self.arm_go(axis, True)
+			self.arm_set(axis, 0)
+			self.arm_raw_move(axis, 0)
+		
+		#Move X and Y to their limit switches
 		if not self.arm_limit("X"):
 			self.arm_raw_move("X", -self.arm_max("X"))
 		if not self.arm_limit("Y"):
 			self.arm_raw_move("Y", -self.arm_max("Y"))
 		while self.arm_moving("X") or self.arm_moving("Y"):
 			time.sleep(1)
-		for axis in ["X", "Y"]:
+		for axis in ["X", "Y", "A"]:
 			self.arm_en(axis, True)
 			self.arm_go(axis, True)
 			self.arm_set(axis, 0)
 			self.arm_raw_move(axis, 0)
 		
-		#Center X and Y
+		#Center X and Y, move gripper away from 0.
 		self.arm_target("X", self.arm_max("X")/2)
 		self.arm_target("Y", self.arm_max("Y")/2)
+		self.arm_target("A", .05)
 		while self.arm_should_be_moving("X") or self.arm_should_be_moving("Y"):
 			#Due to contact bounce, spurious limit switch presses can occur,
 			#setting go to False.
@@ -451,7 +463,10 @@ class Uniboard(object):
 			self.arm_go("Y", True)
 			time.sleep(.2)
 		
-		#Home gripper
+		#Reset 0 a bit away from limit switches
+		self.arm_set("X", self.arm_max("X")/2 - .01)
+		self.arm_set("Y", self.arm_max("Y")/2 - .01)
+		self.arm_set("A", 0)
 		
 		#Move Z until it hits the limit
 		if not self.arm_limit("Z"):
