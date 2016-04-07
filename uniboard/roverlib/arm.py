@@ -66,6 +66,15 @@ def move_arm_down(uniboard=None):
         uniboard.arm_target("Z", .99)
     uniboard.arm_z_wait_until_done()
     return True
+def move_arm_half_way(uniboard=None):
+    if get_side(uniboard=uniboard) == 1: # Left Side
+        uniboard.arm_target("Z", 0.75)
+    elif get_side(uniboard=uniboard) == -1: # Right Side
+        uniboard.arm_target("Z", 0.25)
+    else:
+        uniboard.arm_target("Z", .75)
+    uniboard.arm_z_wait_until_done()
+    return True
 
 def move_arm_up(uniboard=None):
     uniboard.arm_target("Z", 0.5)
