@@ -147,10 +147,10 @@ class Uniboard(object):
 		self._arm_data = {
 			"X":{
 					"target":0,       #target and max are in (full, non-microstepped) steps away from the limit.
-					"max":1050, #12.5 in/
+					"max":1000, 
 					"scale":0.00030238095,    #Multiplier to convert steps to meters (scale = meters/steps)
 					"dirpol":0,       #Value of DIR line when traveling away from limit
-					"frequency":100,  #Full step frequency, in Hz
+					"frequency":300,  #Full step frequency, in Hz
 					"steppol":1,      #Value of STEPPOL bit
 					"enpol":0,        #State of EN line when driver is enabled
 					"faultpol":0,     #State of fault line that indicated a problem
@@ -162,7 +162,7 @@ class Uniboard(object):
 					"max":900,
 					"scale":0.0003095625,	 #Multiplier to convert steps to meters (scale = meters/steps)
 					"dirpol":0,       #Value of DIR line when traveling away from limit
-					"frequency":100,  #Full step frequency, in Hz
+					"frequency":300,  #Full step frequency, in Hz
 					"steppol":1,      #Value of STEPPOL bit
 					"enpol":0,        #State of EN line when driver is enabled
 					"faultpol":0,     #State of fault line that indicated a problem
@@ -186,7 +186,7 @@ class Uniboard(object):
 					"max":800,
 					"scale":.001428,    #Multiplier to convert steps to meters (scale = meters/steps)
 					"dirpol":0,       #Value of DIR line when traveling away from limit
-					"frequency":150,  #Full step frequency, in Hz
+					"frequency":300,  #Full step frequency, in Hz
 					"steppol":1,      #Value of STEPPOL bit
 					"enpol":0,        #State of EN line when driver is enabled
 					"faultpol":0,     #State of fault line that indicated a problem
@@ -274,10 +274,17 @@ class Uniboard(object):
 		if target == None:
 			return self._arm_data[self._arm_key(axis)]["scale"] * self._arm_data[self._arm_key(axis)]["target"]
 		
+		#if target > self.arm_max(axis):
+			#raise ValueError("Requested axis %s target %fm larger than maximum of %fm."%(str(axis), target, self.arm_max(axis)))
+		#if target< 0:
+			#raise ValueError("Requested axis %s target %fm is less than 0."%(str(axis), target))
+		
 		if target > self.arm_max(axis):
-			raise ValueError("Requested axis %s target %fm larger than maximum of %fm."%(str(axis), target, self.arm_max(axis)))
+			sys.stderr.write("Requested axis %s target %fm larger than maximum of %fm."%(str(axis), target, self.arm_max(axis)))
+			target = self.arm_max(axis)
 		if target< 0:
-			raise ValueError("Requested axis %s target %fm is less than 0."%(str(axis), target))
+			sys.stderr.write("Requested axis %s target %fm is less than 0."%(str(axis), target))
+			target = 0
 		
 		prev_go = self.arm_go(axis)
 		self.arm_go(axis, False) #Stop the arm, so that we can get a valid number if it's moving

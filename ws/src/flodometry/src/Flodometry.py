@@ -18,6 +18,8 @@ from nav_msgs.msg import Odometry
 from filterpy.kalman import KalmanFilter
 
 # Import config file
+import sys, os
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 import config.kalman_config as cfg
 
 
@@ -99,4 +101,5 @@ class Flodometry(object):
 
 if __name__ == '__main__':
     f = Flodometry()
+    rospy.spin()
 
