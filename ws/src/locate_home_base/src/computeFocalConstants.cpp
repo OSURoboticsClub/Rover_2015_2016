@@ -5,13 +5,18 @@
 #include <opencv2/imgproc/imgproc.hpp>
 #include <opencv2/highgui/highgui.hpp>
 
+/* run this file once with 'rosrun locate_home_base compute' to generate 
+ * constants for the location code. Add new pictures and find constants if not
+ * using the ZED camera, otherwise this file does not need to run
+ */
+
 //header file contains a series of constants that could probably be cleaned up
 #include "HomeBase.h"
 
 /* there is a mix of namespaces used/omitted since this is a combination of ROS 
 opencv tutorial code and code written for the 2015 rover */
 using namespace cv;
-//using namespace std;
+
 
 // gets the distance between two points
 float dist(Point2f p1, Point2f p2)
