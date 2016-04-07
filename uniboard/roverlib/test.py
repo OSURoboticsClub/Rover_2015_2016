@@ -6,53 +6,21 @@ import time
 
 u = uniboard.Uniboard("/dev/ttyUSB1")
 
-u.arm_home() # set elements to center, test all elements
-u.arm_target("Y", u.arm_max("Y")) # move all the way back
-u.arm_target("X", u.arm_max("X")) # move all the way back
+#def try_speed(speed):
+	#print speed
+	#u._write_reg(2, 0, speed)
+	#time.sleep(2);
+	#u._write_reg(2, 0, 127)
+	#time.sleep(1);
+	
+#for i in range(0, 256):
+	#u._write_reg(2, 0, i)
+	#time.sleep(.3);
 
-# make sure that you wait until arm_moving is false
-while u.arm_should_be_moving("X") or u.arm_should_be_moving("Y"): pass
+#u.arm_home()
 
-u.arm_target("Y", u.arm_max("Y")/2) # move to center
-u.arm_target("X", u.arm_max("X")/2) # move to center
-
-while u.arm_should_be_moving("X") or u.arm_should_be_moving("Y"): pass
-
-u.arm_target("Z", 0)
-
-#while u.arm_should_be_moving("Z"): pass
-u.arm_z_wait_until_done()
-
-#u.arm_target("A", 0)
-
-#while u.arm_should_be_moving("A"): pass
-
-u.arm_target("Z", 0.5)
-u.arm_z_wait_until_done()
-
-u.arm_target("X", 0.05) # move all the way back
-# return which direction to turn
-test_loc = u.arm_current("X", None)
-if test_loc > u.arm_max("X") / 2: print "greater"
-elif test_loc < u.arm_max("X") / 2: print "lesser"
-else print "center bitch"
-
-u.arm_target("X", u.arm_max("X")) # move all the way back
-# return which direction to turn
-test_loc = u.arm_current("X", None)
-if test_loc > u.arm_max("X") / 2: print "greater"
-elif test_loc < u.arm_max("X") / 2: print "lesser"
-else print "center bitch"
-
-u.arm_target("X", u.arm_max("X")/2) # move all the way back
-# return which direction to turn
-test_loc = u.arm_current("X", None)
-if test_loc > u.arm_max("X") / 2: print "greater"
-elif test_loc < u.arm_max("X") / 2: print "lesser"
-else print "center bitch"
-
-
-print "finished moving"
+#u.arm_target("Z", 0)
+#u.arm_z_wait_until_done()
 
 #u.arm_en("Y", True)
 #u.arm_go("Y", True)
@@ -82,24 +50,34 @@ print "finished moving"
 		#print u.rc_value(ch),
 	#print "\r"
 
-#from Tkinter import *
-#class App:
-	#def __init__(self, master):
-		#frame = Frame(master)
-		#frame.pack()
-		#self.left = Scale(frame, from_=-1000, to=1000, command = self.left_update)
-		#self.left.pack(side=LEFT)
-		#self.right = Scale(frame, from_=-1000, to=1000, command = self.right_update)
-		#self.right.pack(side=LEFT)
+from Tkinter import *
+
+def print_speed(u, tkmain):
+	print u.encoder_left_speed(),
+	print "  ",
+	print u.encoder_right_speed()
+	tkmain.after(100, print_speed, u, tkmain)
+	
+class App:
+	def __init__(self, master):
+		frame = Frame(master)
+		frame.pack()
+		self.left = Scale(frame, from_=-1000, to=1000, command = self.left_update)
+		self.left.pack(side=LEFT)
+		self.right = Scale(frame, from_=-1000, to=1000, command = self.right_update)
+		self.right.pack(side=LEFT)
 		
-	#def left_update(self, blah):
-		#global u
-		#u.motor_left(float(self.left.get())/1000.0)
+	def left_update(self, blah):
+		global u
+		u.motor_left(float(self.left.get())/1000.0)
 		
-	#def right_update(self, blah):
-		#global u
-		#u.motor_right(float(self.right.get())/1000.0)
-    
-#root = Tk()
-#app = App(root)
-#root.mainloop()
+	def right_update(self, blah):
+		global u
+		u.motor_right(float(self.right.get())/1000.0)
+
+root = Tk()
+app = App(root)
+
+print_speed(u, root)
+
+root.mainloop()

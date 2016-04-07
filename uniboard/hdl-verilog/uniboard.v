@@ -441,7 +441,7 @@ module UniboardTop(
 	/* Debug and status LED assignments */
 	wire [4:0] state;
 	wire drdy;
-	assign debug[0] = uart_rx;
+	//assign debug[0] = uart_rx;
 	assign debug[1] = uart_tx;
 	assign debug[2] = state[0];
 	assign debug[3] = state[1];
@@ -615,14 +615,17 @@ module UniboardTop(
 	                             .limitn(limit[3]),
 	                             .reset(reset));
 	//TODO: Arm analog peripheral.
-	//TODO: Don't forget to disconnect arm_select[4] from Dummy!
 	
 	/* Encoders */
-	wire clk_10Hz;
-	ClockDividerP_SP #(12000000) encoder_speed_reseter(.clk_i(clk_12MHz),
-	                                                   .clk_o(clk_10Hz),
-	                                                   .reset(reset));
-	reg [1:0] encoder_select; /* 0 = X ... 3 = A, 4 = analog. */
+	wire clk_100Hz;
+	ClockDividerP_SP #(120000) clk_100Hz_divider(.clk_i(clk_12MHz),
+	                                             .clk_o(clk_100Hz),
+	                                             .reset(reset));
+	assign debug[0] = clk_100Hz;                          
+	                                                   
+	reg [1:0] encoder_select;
+	wire [7:0] encoder_right_regaddr;
+	assign encoder_right_regaddr = {4'b0, register_addr[3:0]};
 	always @*
 		begin
 			casex(register_addr)
@@ -644,7 +647,7 @@ module UniboardTop(
 			endcase
 		end
 	EncoderPeripheral left_encoder(.clk_12MHz(clk_12MHz),
-	                               .clk_10Hz(clk_10Hz),
+	                               .clk_100Hz(clk_100Hz),
 	                               .databus(databus),
 	                               .reg_size(reg_size),
 	                               .register_addr(register_addr),
@@ -655,10 +658,10 @@ module UniboardTop(
 	                               .I(encoder_li),
 	                               .reset(reset));
 	EncoderPeripheral right_encoder(.clk_12MHz(clk_12MHz),
-	                               .clk_10Hz(clk_10Hz),
+	                               .clk_100Hz(clk_100Hz),
 	                               .databus(databus),
 	                               .reg_size(reg_size),
-	                               .register_addr(register_addr),
+	                               .register_addr(encoder_right_regaddr),
 	                               .rw(rw),
 	                               .select(encoder_select[1]),
 	                               .A(encoder_ra),

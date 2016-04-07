@@ -5,33 +5,33 @@
             <Task name="IBIS" build_result="0" update_result="3" update_time="0"/>
             <Task name="TimingSimFileVlg" build_result="0" update_result="3" update_time="0"/>
             <Task name="TimingSimFileVHD" build_result="0" update_result="3" update_time="0"/>
-            <Task name="Jedecgen" build_result="2" update_result="0" update_time="1460018066"/>
+            <Task name="Jedecgen" build_result="2" update_result="0" update_time="1460037060"/>
             <Task name="Bitgen" build_result="0" update_result="3" update_time="0"/>
         </Milestone>
-        <Milestone name="Map" build_result="2" build_time="1460018016">
-            <Task name="Map" build_result="2" update_result="0" update_time="1460018016"/>
+        <Milestone name="Map" build_result="2" build_time="1460037004">
+            <Task name="Map" build_result="2" update_result="0" update_time="1460037004"/>
             <Task name="MapTrace" build_result="0" update_result="3" update_time="0"/>
             <Task name="MapVerilogSimFile" build_result="0" update_result="3" update_time="0"/>
             <Task name="MapVHDLSimFile" build_result="0" update_result="3" update_time="0"/>
         </Milestone>
-        <Milestone name="PAR" build_result="2" build_time="1460018061">
-            <Task name="PAR" build_result="2" update_result="0" update_time="1460018061"/>
+        <Milestone name="PAR" build_result="2" build_time="1460037055">
+            <Task name="PAR" build_result="2" update_result="0" update_time="1460037055"/>
             <Task name="PARTrace" build_result="0" update_result="3" update_time="0"/>
             <Task name="IOTiming" build_result="0" update_result="3" update_time="0"/>
         </Milestone>
-        <Milestone name="Synthesis" build_result="2" build_time="1460017721">
-            <Task name="Lattice_Synthesis" build_result="2" update_result="0" update_time="1460017721"/>
-            <Task name="LSE_Compile" build_result="2" update_result="0" update_time="1460017721"/>
+        <Milestone name="Synthesis" build_result="2" build_time="1460036978">
+            <Task name="Lattice_Synthesis" build_result="2" update_result="0" update_time="1460036978"/>
+            <Task name="LSE_Compile" build_result="2" update_result="0" update_time="1460036978"/>
         </Milestone>
         <Milestone name="TOOL_Report" build_result="0" build_time="0">
             <Task name="HDLE" build_result="0" update_result="3" update_time="0"/>
         </Milestone>
-        <Report name=".vdbs/Uniboard_verilog_impl1_map.vdb" last_build_time="1460018016" last_build_size="1210035"/>
-        <Report name="Uniboard_verilog_impl1.bgn" last_build_time="1460018066" last_build_size="4118"/>
-        <Report name="Uniboard_verilog_impl1.jed" last_build_time="1460018066" last_build_size="1455410"/>
-        <Report name="Uniboard_verilog_impl1.lsedata" last_build_time="1460017706" last_build_size="4474412"/>
-        <Report name="Uniboard_verilog_impl1.ncd" last_build_time="1460018061" last_build_size="3159202"/>
-        <Report name="Uniboard_verilog_impl1.ngd" last_build_time="1460017721" last_build_size="2547055"/>
-        <Report name="Uniboard_verilog_impl1_map.ncd" last_build_time="1460018016" last_build_size="2225472"/>
+        <Report name=".vdbs/Uniboard_verilog_impl1_map.vdb" last_build_time="1460037004" last_build_size="1283179"/>
+        <Report name="Uniboard_verilog_impl1.bgn" last_build_time="1460037060" last_build_size="4118"/>
+        <Report name="Uniboard_verilog_impl1.jed" last_build_time="1460037060" last_build_size="1455410"/>
+        <Report name="Uniboard_verilog_impl1.lsedata" last_build_time="1460036966" last_build_size="4547685"/>
+        <Report name="Uniboard_verilog_impl1.ncd" last_build_time="1460037055" last_build_size="3300188"/>
+        <Report name="Uniboard_verilog_impl1.ngd" last_build_time="1460036978" last_build_size="2621337"/>
+        <Report name="Uniboard_verilog_impl1_map.ncd" last_build_time="1460037003" last_build_size="2317359"/>
     </Strategy>
 </BuildStatus>

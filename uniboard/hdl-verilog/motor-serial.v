@@ -34,7 +34,7 @@ module SabertoothSerial (
 					case(state)
 						2'd0:
 							begin
-								tx_data <= (m1 == 8'd255) ? 8'd127 : m1[7:1] + 1; /* Transmit M1. */
+								tx_data <= (m1 == 8'd255 || m1 == 8'd254) ? 8'd127 : m1[7:1] + 1; /* Transmit M1. */
 								send <= 1;
 								state <= 2'd1;
 							end
@@ -45,7 +45,7 @@ module SabertoothSerial (
 							end
 						2'd2:
 							begin
-								tx_data <= (m2 == 8'd255) ? 8'd255 : m2[7:1] + 129; /* Transmit M1. */
+								tx_data <= (m2 == 8'd255 || m2 == 8'd254) ? 8'd255 : m2[7:1] + 129; /* Transmit M1. */
 								send <= 1;
 								state <= 2'd3;
 							end
