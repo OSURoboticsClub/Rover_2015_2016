@@ -485,7 +485,7 @@ module UniboardTop(
 	                                           .drdy(drdy));
 	/* Dummy peripheral */
 	wire dummy_select;
-	assign dummy_select = | select[127:8] | select[0] | select[3] | select[5] | select[6];
+	assign dummy_select = | select[127:8] | select[0] | select[5] | select[6];
 	DummyPeripheral dummy(.databus(databus),
 	                      .reg_size(reg_size),
 	                      .rw(rw),
@@ -616,6 +616,55 @@ module UniboardTop(
 	                             .reset(reset));
 	//TODO: Arm analog peripheral.
 	//TODO: Don't forget to disconnect arm_select[4] from Dummy!
+	
+	/* Encoders */
+	wire clk_10Hz;
+	ClockDividerP_SP #(12000000) encoder_speed_reseter(.clk_i(clk_12MHz),
+	                                                   .clk_o(clk_10Hz),
+	                                                   .reset(reset));
+	reg [1:0] encoder_select; /* 0 = X ... 3 = A, 4 = analog. */
+	always @*
+		begin
+			casex(register_addr)
+				8'b0000xxxx:
+					begin
+						encoder_select[0] = select[3];
+						encoder_select[1] = 'b0;
+					end
+				8'b0001xxxx:
+					begin
+						encoder_select[1] = select[3];
+						encoder_select[0] = 'b0;
+					end
+				default:
+					begin
+						encoder_select[0] = select[3];
+						encoder_select[1] = 'b0;
+					end
+			endcase
+		end
+	EncoderPeripheral left_encoder(.clk_12MHz(clk_12MHz),
+	                               .clk_10Hz(clk_10Hz),
+	                               .databus(databus),
+	                               .reg_size(reg_size),
+	                               .register_addr(register_addr),
+	                               .rw(rw),
+	                               .select(encoder_select[0]),
+	                               .A(encoder_la),
+	                               .B(encoder_lb),
+	                               .I(encoder_li),
+	                               .reset(reset));
+	EncoderPeripheral right_encoder(.clk_12MHz(clk_12MHz),
+	                               .clk_10Hz(clk_10Hz),
+	                               .databus(databus),
+	                               .reg_size(reg_size),
+	                               .register_addr(register_addr),
+	                               .rw(rw),
+	                               .select(encoder_select[1]),
+	                               .A(encoder_ra),
+	                               .B(encoder_rb),
+	                               .I(encoder_ri),
+	                               .reset(reset));
 	
 	/* RC Receiver */
 	RCPeripheral rc_receiver(.clk_255kHz(clk_255kHz),

@@ -1,6 +1,6 @@
 --------------------------------------------------------------------------------
 Lattice Synthesis Timing Report, Version  
-Thu Apr  7 00:09:07 2016
+Thu Apr  7 01:28:39 2016
 
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
 Copyright (c) 1995 AT&T Corp.   All rights reserved.
@@ -19,184 +19,184 @@ Report level:    verbose report, limited to 3 items per constraint
 
 ================================================================================
 Constraint: create_clock -period 83.000000 -waveform { 0.000000 41.500000 } -name clk_12MHz [ get_ports { clk_12MHz } ]
-            137 items scored, 0 timing errors detected.
+            283 items scored, 0 timing errors detected.
 --------------------------------------------------------------------------------
 
 
-Passed:  The following path meets requirements by 76.040ns
+Passed:  The following path meets requirements by 75.132ns
 
  Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
 
-   Source:         FD1S3IX    CK             \arm_a/step_clk_gen/count_2375__i0  (from clk_12MHz +)
-   Destination:    FD1S3IX    D              \arm_a/step_clk_gen/count_2375__i31  (to clk_12MHz +)
+   Source:         IFS1P3DX   SCLK           \right_encoder/q/quadB_delayed_17  (from clk_12MHz +)
+   Destination:    FD1P3IX    D              \right_encoder/q/count__i31  (to clk_12MHz +)
 
-   Delay:                   6.800ns  (62.1% logic, 37.9% route), 18 logic levels.
+   Delay:                   7.708ns  (56.4% logic, 43.6% route), 18 logic levels.
 
  Constraint Details:
 
-      6.800ns data_path \arm_a/step_clk_gen/count_2375__i0 to \arm_a/step_clk_gen/count_2375__i31 meets
+      7.708ns data_path \right_encoder/q/quadB_delayed_17 to \right_encoder/q/count__i31 meets
      83.000ns delay constraint less
-      0.160ns L_S requirement (totaling 82.840ns) by 76.040ns
+      0.160ns L_S requirement (totaling 82.840ns) by 75.132ns
 
- Path Details: \arm_a/step_clk_gen/count_2375__i0 to \arm_a/step_clk_gen/count_2375__i31
+ Path Details: \right_encoder/q/quadB_delayed_17 to \right_encoder/q/count__i31
 
    Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
-L_CO        ---     0.444             CK to Q              \arm_a/step_clk_gen/count_2375__i0 (from clk_12MHz)
-Route         3   e 1.315                                  \arm_a/step_clk_gen/count[0]
-A1_TO_FCO   ---     0.827           A[2] to COUT           \arm_a/step_clk_gen/count_2375_add_4_1
-Route         1   e 0.020                                  \arm_a/step_clk_gen/n24265
-FCI_TO_FCO  ---     0.157            CIN to COUT           \arm_a/step_clk_gen/count_2375_add_4_3
-Route         1   e 0.020                                  \arm_a/step_clk_gen/n24266
-FCI_TO_FCO  ---     0.157            CIN to COUT           \arm_a/step_clk_gen/count_2375_add_4_5
-Route         1   e 0.020                                  \arm_a/step_clk_gen/n24267
-FCI_TO_FCO  ---     0.157            CIN to COUT           \arm_a/step_clk_gen/count_2375_add_4_7
-Route         1   e 0.020                                  \arm_a/step_clk_gen/n24268
-FCI_TO_FCO  ---     0.157            CIN to COUT           \arm_a/step_clk_gen/count_2375_add_4_9
-Route         1   e 0.020                                  \arm_a/step_clk_gen/n24269
-FCI_TO_FCO  ---     0.157            CIN to COUT           \arm_a/step_clk_gen/count_2375_add_4_11
-Route         1   e 0.020                                  \arm_a/step_clk_gen/n24270
-FCI_TO_FCO  ---     0.157            CIN to COUT           \arm_a/step_clk_gen/count_2375_add_4_13
-Route         1   e 0.020                                  \arm_a/step_clk_gen/n24271
-FCI_TO_FCO  ---     0.157            CIN to COUT           \arm_a/step_clk_gen/count_2375_add_4_15
-Route         1   e 0.020                                  \arm_a/step_clk_gen/n24272
-FCI_TO_FCO  ---     0.157            CIN to COUT           \arm_a/step_clk_gen/count_2375_add_4_17
-Route         1   e 0.020                                  \arm_a/step_clk_gen/n24273
-FCI_TO_FCO  ---     0.157            CIN to COUT           \arm_a/step_clk_gen/count_2375_add_4_19
-Route         1   e 0.020                                  \arm_a/step_clk_gen/n24274
-FCI_TO_FCO  ---     0.157            CIN to COUT           \arm_a/step_clk_gen/count_2375_add_4_21
-Route         1   e 0.020                                  \arm_a/step_clk_gen/n24275
-FCI_TO_FCO  ---     0.157            CIN to COUT           \arm_a/step_clk_gen/count_2375_add_4_23
-Route         1   e 0.020                                  \arm_a/step_clk_gen/n24276
-FCI_TO_FCO  ---     0.157            CIN to COUT           \arm_a/step_clk_gen/count_2375_add_4_25
-Route         1   e 0.020                                  \arm_a/step_clk_gen/n24277
-FCI_TO_FCO  ---     0.157            CIN to COUT           \arm_a/step_clk_gen/count_2375_add_4_27
-Route         1   e 0.020                                  \arm_a/step_clk_gen/n24278
-FCI_TO_FCO  ---     0.157            CIN to COUT           \arm_a/step_clk_gen/count_2375_add_4_29
-Route         1   e 0.020                                  \arm_a/step_clk_gen/n24279
-FCI_TO_FCO  ---     0.157            CIN to COUT           \arm_a/step_clk_gen/count_2375_add_4_31
-Route         1   e 0.020                                  \arm_a/step_clk_gen/n24280
-FCI_TO_F    ---     0.598            CIN to S[2]           \arm_a/step_clk_gen/count_2375_add_4_33
-Route         1   e 0.941                                  \arm_a/step_clk_gen/n135
+I_CO        ---     0.567           SCLK to Q              \right_encoder/q/quadB_delayed_17 (from clk_12MHz)
+Route        33   e 2.100                                  \right_encoder/q/quadB_delayed
+A1_TO_FCO   ---     0.827           B[2] to COUT           \right_encoder/q/add_1629_1
+Route         1   e 0.020                                  \right_encoder/q/n27669
+FCI_TO_FCO  ---     0.157            CIN to COUT           \right_encoder/q/add_1629_3
+Route         1   e 0.020                                  \right_encoder/q/n27670
+FCI_TO_FCO  ---     0.157            CIN to COUT           \right_encoder/q/add_1629_5
+Route         1   e 0.020                                  \right_encoder/q/n27671
+FCI_TO_FCO  ---     0.157            CIN to COUT           \right_encoder/q/add_1629_7
+Route         1   e 0.020                                  \right_encoder/q/n27672
+FCI_TO_FCO  ---     0.157            CIN to COUT           \right_encoder/q/add_1629_9
+Route         1   e 0.020                                  \right_encoder/q/n27673
+FCI_TO_FCO  ---     0.157            CIN to COUT           \right_encoder/q/add_1629_11
+Route         1   e 0.020                                  \right_encoder/q/n27674
+FCI_TO_FCO  ---     0.157            CIN to COUT           \right_encoder/q/add_1629_13
+Route         1   e 0.020                                  \right_encoder/q/n27675
+FCI_TO_FCO  ---     0.157            CIN to COUT           \right_encoder/q/add_1629_15
+Route         1   e 0.020                                  \right_encoder/q/n27676
+FCI_TO_FCO  ---     0.157            CIN to COUT           \right_encoder/q/add_1629_17
+Route         1   e 0.020                                  \right_encoder/q/n27677
+FCI_TO_FCO  ---     0.157            CIN to COUT           \right_encoder/q/add_1629_19
+Route         1   e 0.020                                  \right_encoder/q/n27678
+FCI_TO_FCO  ---     0.157            CIN to COUT           \right_encoder/q/add_1629_21
+Route         1   e 0.020                                  \right_encoder/q/n27679
+FCI_TO_FCO  ---     0.157            CIN to COUT           \right_encoder/q/add_1629_23
+Route         1   e 0.020                                  \right_encoder/q/n27680
+FCI_TO_FCO  ---     0.157            CIN to COUT           \right_encoder/q/add_1629_25
+Route         1   e 0.020                                  \right_encoder/q/n27681
+FCI_TO_FCO  ---     0.157            CIN to COUT           \right_encoder/q/add_1629_27
+Route         1   e 0.020                                  \right_encoder/q/n27682
+FCI_TO_FCO  ---     0.157            CIN to COUT           \right_encoder/q/add_1629_29
+Route         1   e 0.020                                  \right_encoder/q/n27683
+FCI_TO_FCO  ---     0.157            CIN to COUT           \right_encoder/q/add_1629_31
+Route         1   e 0.020                                  \right_encoder/q/n27684
+FCI_TO_F    ---     0.598            CIN to S[2]           \right_encoder/q/add_1629_33
+Route         1   e 0.941                                  \right_encoder/q/n34
                   --------
-                    6.800  (62.1% logic, 37.9% route), 18 logic levels.
+                    7.708  (56.4% logic, 43.6% route), 18 logic levels.
 
 
-Passed:  The following path meets requirements by 76.040ns
+Passed:  The following path meets requirements by 75.132ns
 
  Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
 
-   Source:         FD1S3IX    CK             \arm_a/step_clk_gen/count_2375__i0  (from clk_12MHz +)
-   Destination:    FD1S3IX    D              \arm_a/step_clk_gen/clk_o_22  (to clk_12MHz +)
+   Source:         IFS1P3DX   SCLK           \right_encoder/q/quadB_delayed_17  (from clk_12MHz +)
+   Destination:    FD1P3IX    D              \right_encoder/q/count__i30  (to clk_12MHz +)
 
-   Delay:                   6.800ns  (62.1% logic, 37.9% route), 18 logic levels.
+   Delay:                   7.708ns  (56.4% logic, 43.6% route), 18 logic levels.
 
  Constraint Details:
 
-      6.800ns data_path \arm_a/step_clk_gen/count_2375__i0 to \arm_a/step_clk_gen/clk_o_22 meets
+      7.708ns data_path \right_encoder/q/quadB_delayed_17 to \right_encoder/q/count__i30 meets
      83.000ns delay constraint less
-      0.160ns L_S requirement (totaling 82.840ns) by 76.040ns
+      0.160ns L_S requirement (totaling 82.840ns) by 75.132ns
 
- Path Details: \arm_a/step_clk_gen/count_2375__i0 to \arm_a/step_clk_gen/clk_o_22
+ Path Details: \right_encoder/q/quadB_delayed_17 to \right_encoder/q/count__i30
 
    Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
-L_CO        ---     0.444             CK to Q              \arm_a/step_clk_gen/count_2375__i0 (from clk_12MHz)
-Route         3   e 1.315                                  \arm_a/step_clk_gen/count[0]
-A1_TO_FCO   ---     0.827           A[2] to COUT           \arm_a/step_clk_gen/sub_1881_add_2_1
-Route         1   e 0.020                                  \arm_a/step_clk_gen/n23829
-FCI_TO_FCO  ---     0.157            CIN to COUT           \arm_a/step_clk_gen/sub_1881_add_2_3
-Route         1   e 0.020                                  \arm_a/step_clk_gen/n23830
-FCI_TO_FCO  ---     0.157            CIN to COUT           \arm_a/step_clk_gen/sub_1881_add_2_5
-Route         1   e 0.020                                  \arm_a/step_clk_gen/n23831
-FCI_TO_FCO  ---     0.157            CIN to COUT           \arm_a/step_clk_gen/sub_1881_add_2_7
-Route         1   e 0.020                                  \arm_a/step_clk_gen/n23832
-FCI_TO_FCO  ---     0.157            CIN to COUT           \arm_a/step_clk_gen/sub_1881_add_2_9
-Route         1   e 0.020                                  \arm_a/step_clk_gen/n23833
-FCI_TO_FCO  ---     0.157            CIN to COUT           \arm_a/step_clk_gen/sub_1881_add_2_11
-Route         1   e 0.020                                  \arm_a/step_clk_gen/n23834
-FCI_TO_FCO  ---     0.157            CIN to COUT           \arm_a/step_clk_gen/sub_1881_add_2_13
-Route         1   e 0.020                                  \arm_a/step_clk_gen/n23835
-FCI_TO_FCO  ---     0.157            CIN to COUT           \arm_a/step_clk_gen/sub_1881_add_2_15
-Route         1   e 0.020                                  \arm_a/step_clk_gen/n23836
-FCI_TO_FCO  ---     0.157            CIN to COUT           \arm_a/step_clk_gen/sub_1881_add_2_17
-Route         1   e 0.020                                  \arm_a/step_clk_gen/n23837
-FCI_TO_FCO  ---     0.157            CIN to COUT           \arm_a/step_clk_gen/sub_1881_add_2_19
-Route         1   e 0.020                                  \arm_a/step_clk_gen/n23838
-FCI_TO_FCO  ---     0.157            CIN to COUT           \arm_a/step_clk_gen/sub_1881_add_2_21
-Route         1   e 0.020                                  \arm_a/step_clk_gen/n23839
-FCI_TO_FCO  ---     0.157            CIN to COUT           \arm_a/step_clk_gen/sub_1881_add_2_23
-Route         1   e 0.020                                  \arm_a/step_clk_gen/n23840
-FCI_TO_FCO  ---     0.157            CIN to COUT           \arm_a/step_clk_gen/sub_1881_add_2_25
-Route         1   e 0.020                                  \arm_a/step_clk_gen/n23841
-FCI_TO_FCO  ---     0.157            CIN to COUT           \arm_a/step_clk_gen/sub_1881_add_2_27
-Route         1   e 0.020                                  \arm_a/step_clk_gen/n23842
-FCI_TO_FCO  ---     0.157            CIN to COUT           \arm_a/step_clk_gen/sub_1881_add_2_29
-Route         1   e 0.020                                  \arm_a/step_clk_gen/n23843
-FCI_TO_FCO  ---     0.157            CIN to COUT           \arm_a/step_clk_gen/sub_1881_add_2_31
-Route         1   e 0.020                                  \arm_a/step_clk_gen/n23844
-FCI_TO_F    ---     0.598            CIN to S[2]           \arm_a/step_clk_gen/sub_1881_add_2_33
-Route         1   e 0.941                                  \arm_a/step_clk_gen/n7417
+I_CO        ---     0.567           SCLK to Q              \right_encoder/q/quadB_delayed_17 (from clk_12MHz)
+Route        33   e 2.100                                  \right_encoder/q/quadB_delayed
+A1_TO_FCO   ---     0.827           B[2] to COUT           \right_encoder/q/add_1629_1
+Route         1   e 0.020                                  \right_encoder/q/n27669
+FCI_TO_FCO  ---     0.157            CIN to COUT           \right_encoder/q/add_1629_3
+Route         1   e 0.020                                  \right_encoder/q/n27670
+FCI_TO_FCO  ---     0.157            CIN to COUT           \right_encoder/q/add_1629_5
+Route         1   e 0.020                                  \right_encoder/q/n27671
+FCI_TO_FCO  ---     0.157            CIN to COUT           \right_encoder/q/add_1629_7
+Route         1   e 0.020                                  \right_encoder/q/n27672
+FCI_TO_FCO  ---     0.157            CIN to COUT           \right_encoder/q/add_1629_9
+Route         1   e 0.020                                  \right_encoder/q/n27673
+FCI_TO_FCO  ---     0.157            CIN to COUT           \right_encoder/q/add_1629_11
+Route         1   e 0.020                                  \right_encoder/q/n27674
+FCI_TO_FCO  ---     0.157            CIN to COUT           \right_encoder/q/add_1629_13
+Route         1   e 0.020                                  \right_encoder/q/n27675
+FCI_TO_FCO  ---     0.157            CIN to COUT           \right_encoder/q/add_1629_15
+Route         1   e 0.020                                  \right_encoder/q/n27676
+FCI_TO_FCO  ---     0.157            CIN to COUT           \right_encoder/q/add_1629_17
+Route         1   e 0.020                                  \right_encoder/q/n27677
+FCI_TO_FCO  ---     0.157            CIN to COUT           \right_encoder/q/add_1629_19
+Route         1   e 0.020                                  \right_encoder/q/n27678
+FCI_TO_FCO  ---     0.157            CIN to COUT           \right_encoder/q/add_1629_21
+Route         1   e 0.020                                  \right_encoder/q/n27679
+FCI_TO_FCO  ---     0.157            CIN to COUT           \right_encoder/q/add_1629_23
+Route         1   e 0.020                                  \right_encoder/q/n27680
+FCI_TO_FCO  ---     0.157            CIN to COUT           \right_encoder/q/add_1629_25
+Route         1   e 0.020                                  \right_encoder/q/n27681
+FCI_TO_FCO  ---     0.157            CIN to COUT           \right_encoder/q/add_1629_27
+Route         1   e 0.020                                  \right_encoder/q/n27682
+FCI_TO_FCO  ---     0.157            CIN to COUT           \right_encoder/q/add_1629_29
+Route         1   e 0.020                                  \right_encoder/q/n27683
+FCI_TO_FCO  ---     0.157            CIN to COUT           \right_encoder/q/add_1629_31
+Route         1   e 0.020                                  \right_encoder/q/n27684
+FCI_TO_F    ---     0.598            CIN to S[2]           \right_encoder/q/add_1629_33
+Route         1   e 0.941                                  \right_encoder/q/n36
                   --------
-                    6.800  (62.1% logic, 37.9% route), 18 logic levels.
+                    7.708  (56.4% logic, 43.6% route), 18 logic levels.
 
 
-Passed:  The following path meets requirements by 76.040ns
+Passed:  The following path meets requirements by 75.132ns
 
  Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
 
-   Source:         FD1S3IX    CK             \motor_serial/sserial/sender/baud_gen/count_2379__i0  (from clk_12MHz +)
-   Destination:    FD1S3IX    D              \motor_serial/sserial/sender/baud_gen/count_2379__i31  (to clk_12MHz +)
+   Source:         IFS1P3DX   SCLK           \left_encoder/q/quadB_delayed_17  (from clk_12MHz +)
+   Destination:    FD1P3IX    D              \left_encoder/q/count__i31  (to clk_12MHz +)
 
-   Delay:                   6.800ns  (62.1% logic, 37.9% route), 18 logic levels.
+   Delay:                   7.708ns  (56.4% logic, 43.6% route), 18 logic levels.
 
  Constraint Details:
 
-      6.800ns data_path \motor_serial/sserial/sender/baud_gen/count_2379__i0 to \motor_serial/sserial/sender/baud_gen/count_2379__i31 meets
+      7.708ns data_path \left_encoder/q/quadB_delayed_17 to \left_encoder/q/count__i31 meets
      83.000ns delay constraint less
-      0.160ns L_S requirement (totaling 82.840ns) by 76.040ns
+      0.160ns L_S requirement (totaling 82.840ns) by 75.132ns
 
- Path Details: \motor_serial/sserial/sender/baud_gen/count_2379__i0 to \motor_serial/sserial/sender/baud_gen/count_2379__i31
+ Path Details: \left_encoder/q/quadB_delayed_17 to \left_encoder/q/count__i31
 
    Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
-L_CO        ---     0.444             CK to Q              \motor_serial/sserial/sender/baud_gen/count_2379__i0 (from clk_12MHz)
-Route         2   e 1.315                                  \motor_serial/sserial/sender/baud_gen/count[0]
-A1_TO_FCO   ---     0.827           A[2] to COUT           \motor_serial/sserial/sender/baud_gen/count_2379_add_4_1
-Route         1   e 0.020                                  \motor_serial/sserial/sender/baud_gen/n24377
-FCI_TO_FCO  ---     0.157            CIN to COUT           \motor_serial/sserial/sender/baud_gen/count_2379_add_4_3
-Route         1   e 0.020                                  \motor_serial/sserial/sender/baud_gen/n24378
-FCI_TO_FCO  ---     0.157            CIN to COUT           \motor_serial/sserial/sender/baud_gen/count_2379_add_4_5
-Route         1   e 0.020                                  \motor_serial/sserial/sender/baud_gen/n24379
-FCI_TO_FCO  ---     0.157            CIN to COUT           \motor_serial/sserial/sender/baud_gen/count_2379_add_4_7
-Route         1   e 0.020                                  \motor_serial/sserial/sender/baud_gen/n24380
-FCI_TO_FCO  ---     0.157            CIN to COUT           \motor_serial/sserial/sender/baud_gen/count_2379_add_4_9
-Route         1   e 0.020                                  \motor_serial/sserial/sender/baud_gen/n24381
-FCI_TO_FCO  ---     0.157            CIN to COUT           \motor_serial/sserial/sender/baud_gen/count_2379_add_4_11
-Route         1   e 0.020                                  \motor_serial/sserial/sender/baud_gen/n24382
-FCI_TO_FCO  ---     0.157            CIN to COUT           \motor_serial/sserial/sender/baud_gen/count_2379_add_4_13
-Route         1   e 0.020                                  \motor_serial/sserial/sender/baud_gen/n24383
-FCI_TO_FCO  ---     0.157            CIN to COUT           \motor_serial/sserial/sender/baud_gen/count_2379_add_4_15
-Route         1   e 0.020                                  \motor_serial/sserial/sender/baud_gen/n24384
-FCI_TO_FCO  ---     0.157            CIN to COUT           \motor_serial/sserial/sender/baud_gen/count_2379_add_4_17
-Route         1   e 0.020                                  \motor_serial/sserial/sender/baud_gen/n24385
-FCI_TO_FCO  ---     0.157            CIN to COUT           \motor_serial/sserial/sender/baud_gen/count_2379_add_4_19
-Route         1   e 0.020                                  \motor_serial/sserial/sender/baud_gen/n24386
-FCI_TO_FCO  ---     0.157            CIN to COUT           \motor_serial/sserial/sender/baud_gen/count_2379_add_4_21
-Route         1   e 0.020                                  \motor_serial/sserial/sender/baud_gen/n24387
-FCI_TO_FCO  ---     0.157            CIN to COUT           \motor_serial/sserial/sender/baud_gen/count_2379_add_4_23
-Route         1   e 0.020                                  \motor_serial/sserial/sender/baud_gen/n24388
-FCI_TO_FCO  ---     0.157            CIN to COUT           \motor_serial/sserial/sender/baud_gen/count_2379_add_4_25
-Route         1   e 0.020                                  \motor_serial/sserial/sender/baud_gen/n24389
-FCI_TO_FCO  ---     0.157            CIN to COUT           \motor_serial/sserial/sender/baud_gen/count_2379_add_4_27
-Route         1   e 0.020                                  \motor_serial/sserial/sender/baud_gen/n24390
-FCI_TO_FCO  ---     0.157            CIN to COUT           \motor_serial/sserial/sender/baud_gen/count_2379_add_4_29
-Route         1   e 0.020                                  \motor_serial/sserial/sender/baud_gen/n24391
-FCI_TO_FCO  ---     0.157            CIN to COUT           \motor_serial/sserial/sender/baud_gen/count_2379_add_4_31
-Route         1   e 0.020                                  \motor_serial/sserial/sender/baud_gen/n24392
-FCI_TO_F    ---     0.598            CIN to S[2]           \motor_serial/sserial/sender/baud_gen/count_2379_add_4_33
-Route         1   e 0.941                                  \motor_serial/sserial/sender/baud_gen/n103
+I_CO        ---     0.567           SCLK to Q              \left_encoder/q/quadB_delayed_17 (from clk_12MHz)
+Route        33   e 2.100                                  \left_encoder/q/quadB_delayed
+A1_TO_FCO   ---     0.827           B[2] to COUT           \left_encoder/q/add_1663_1
+Route         1   e 0.020                                  \left_encoder/q/n27002
+FCI_TO_FCO  ---     0.157            CIN to COUT           \left_encoder/q/add_1663_3
+Route         1   e 0.020                                  \left_encoder/q/n27003
+FCI_TO_FCO  ---     0.157            CIN to COUT           \left_encoder/q/add_1663_5
+Route         1   e 0.020                                  \left_encoder/q/n27004
+FCI_TO_FCO  ---     0.157            CIN to COUT           \left_encoder/q/add_1663_7
+Route         1   e 0.020                                  \left_encoder/q/n27005
+FCI_TO_FCO  ---     0.157            CIN to COUT           \left_encoder/q/add_1663_9
+Route         1   e 0.020                                  \left_encoder/q/n27006
+FCI_TO_FCO  ---     0.157            CIN to COUT           \left_encoder/q/add_1663_11
+Route         1   e 0.020                                  \left_encoder/q/n27007
+FCI_TO_FCO  ---     0.157            CIN to COUT           \left_encoder/q/add_1663_13
+Route         1   e 0.020                                  \left_encoder/q/n27008
+FCI_TO_FCO  ---     0.157            CIN to COUT           \left_encoder/q/add_1663_15
+Route         1   e 0.020                                  \left_encoder/q/n27009
+FCI_TO_FCO  ---     0.157            CIN to COUT           \left_encoder/q/add_1663_17
+Route         1   e 0.020                                  \left_encoder/q/n27010
+FCI_TO_FCO  ---     0.157            CIN to COUT           \left_encoder/q/add_1663_19
+Route         1   e 0.020                                  \left_encoder/q/n27011
+FCI_TO_FCO  ---     0.157            CIN to COUT           \left_encoder/q/add_1663_21
+Route         1   e 0.020                                  \left_encoder/q/n27012
+FCI_TO_FCO  ---     0.157            CIN to COUT           \left_encoder/q/add_1663_23
+Route         1   e 0.020                                  \left_encoder/q/n27013
+FCI_TO_FCO  ---     0.157            CIN to COUT           \left_encoder/q/add_1663_25
+Route         1   e 0.020                                  \left_encoder/q/n27014
+FCI_TO_FCO  ---     0.157            CIN to COUT           \left_encoder/q/add_1663_27
+Route         1   e 0.020                                  \left_encoder/q/n27015
+FCI_TO_FCO  ---     0.157            CIN to COUT           \left_encoder/q/add_1663_29
+Route         1   e 0.020                                  \left_encoder/q/n27016
+FCI_TO_FCO  ---     0.157            CIN to COUT           \left_encoder/q/add_1663_31
+Route         1   e 0.020                                  \left_encoder/q/n27017
+FCI_TO_F    ---     0.598            CIN to S[2]           \left_encoder/q/add_1663_33
+Route         1   e 0.941                                  \left_encoder/q/n34
                   --------
-                    6.800  (62.1% logic, 37.9% route), 18 logic levels.
+                    7.708  (56.4% logic, 43.6% route), 18 logic levels.
 
-Report: 6.960 ns is the maximum delay for this constraint.
+Report: 7.868 ns is the maximum delay for this constraint.
 
 
 Timing Report Summary
@@ -207,7 +207,7 @@ Constraint                              |   Constraint|       Actual|Levels
                                         |             |             |
 create_clock -period 83.000000          |             |             |
 -waveform { 0.000000 41.500000 } -name  |             |             |
-clk_12MHz [ get_ports { clk_12MHz } ]   |    83.000 ns|     6.960 ns|    18  
+clk_12MHz [ get_ports { clk_12MHz } ]   |    83.000 ns|     7.868 ns|    18  
                                         |             |             |
 --------------------------------------------------------------------------------
 
@@ -221,8 +221,8 @@ Timing summary:
 
 Timing errors: 0  Score: 0
 
-Constraints cover  7801 paths, 1710 nets, and 3410 connections (74.3% coverage)
+Constraints cover  10532 paths, 1951 nets, and 3819 connections (74.6% coverage)
 
 
-Peak memory: 236527616 bytes, TRCE: 8192 bytes, DLYMAN: 0 bytes
+Peak memory: 238567424 bytes, TRCE: 8192 bytes, DLYMAN: 0 bytes
 CPU_TIME_REPORT: 0 secs 

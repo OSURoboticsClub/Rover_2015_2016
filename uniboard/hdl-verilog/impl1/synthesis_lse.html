@@ -14,7 +14,7 @@ Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2014 Lattice Semiconductor Corporation,  All rights reserved.
-Thu Apr  7 00:08:57 2016
+Thu Apr  7 01:28:26 2016
 
 
 Command Line:  synthesis -f Uniboard_verilog_impl1_lattice.synproj -gui -msgset /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/promote.xml 
@@ -79,6 +79,7 @@ Verilog design file = /home/nick/Desktop/nickfolder/documents/projects/in-progre
 Verilog design file = /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/global.v
 Verilog design file = /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v
 Verilog design file = /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/motor-serial.v
+Verilog design file = /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/encoder.v
 NGD file = Uniboard_verilog_impl1.ngd
 -sdc option: SDC file input is /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/constraints.ldc.
 -lpf option: Output file option is ON.
@@ -90,6 +91,8 @@ Analyzing Verilog file /usr/local/diamond/3.4_x64/ispfpga/userware/unix/SYNTHESI
 Compile design.
 Compile Design Begin
 WARNING - synthesis: /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(450): identifier reset is used before its declaration. VERI-1875
+WARNING - synthesis: /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/encoder.v(20): redeclaration of ansi port count is not allowed. VERI-1372
+WARNING - synthesis: /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/encoder.v(62): redeclaration of ansi port clk_10Hz is not allowed. VERI-1372
 Top module name (Verilog): UniboardTop
 INFO - synthesis: /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(363): compiling module UniboardTop. VERI-1018
 WARNING - synthesis: /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/uniboard.v(432): expression size 32 truncated to fit in target size 1. VERI-1209
@@ -149,6 +152,11 @@ INFO - synthesis: /home/nick/Desktop/nickfolder/documents/projects/in-progress/p
 WARNING - synthesis: /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(54): expression size 32 truncated to fit in target size 3. VERI-1209
 INFO - synthesis: /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(8): compiling module ArmPeripheral(axis_haddr=8'b0110000). VERI-1018
 WARNING - synthesis: /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/arm.v(54): expression size 32 truncated to fit in target size 3. VERI-1209
+INFO - synthesis: /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/clk.v(80): compiling module ClockDividerP_SP(factor=12000000). VERI-1018
+INFO - synthesis: /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/encoder.v(42): compiling module EncoderPeripheral. VERI-1018
+WARNING - synthesis: /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/encoder.v(68): expression size 32 truncated to fit in target size 3. VERI-1209
+INFO - synthesis: /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/encoder.v(8): compiling module QuadratureDecoder. VERI-1018
+WARNING - synthesis: /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/encoder.v(12): count was previously declared with a different range. VERI-1136
 INFO - synthesis: /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/pwm.v(190): compiling module RCPeripheral. VERI-1018
 WARNING - synthesis: /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/pwm.v(213): expression size 32 truncated to fit in target size 3. VERI-1209
 INFO - synthesis: /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/pwm.v(124): compiling module PWMReceiver. VERI-1018
@@ -325,6 +333,8 @@ WARNING - synthesis: Bit 24 of Register \pwm_clk_div/int_factor is stuck at Zero
 WARNING - synthesis: Bit 25 of Register \pwm_clk_div/int_factor is stuck at Zero
 WARNING - synthesis: Bit 27 of Register \pwm_clk_div/int_factor is stuck at Zero
 WARNING - synthesis: Bit 30 of Register \pwm_clk_div/int_factor is stuck at One
+WARNING - synthesis: Bit 1 of Register \left_encoder/read_size is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \right_encoder/read_size is stuck at Zero
 WARNING - synthesis: Bit 0 of Register \pwm_clk_div/int_factor is stuck at One
 WARNING - synthesis: Bit 1 of Register \pwm_clk_div/int_factor is stuck at One
 WARNING - synthesis: Bit 2 of Register \pwm_clk_div/int_factor is stuck at One
@@ -335,7 +345,7 @@ WARNING - synthesis: Bit 1 of Register \arm_x/read_size is stuck at Zero
 WARNING - synthesis: Bit 1 of Register \arm_y/read_size is stuck at Zero
 WARNING - synthesis: Bit 1 of Register \arm_z/read_size is stuck at Zero
 WARNING - synthesis: Bit 1 of Register \arm_a/read_size is stuck at Zero
-WARNING - synthesis: /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/motor-serial.v(61): Register \motor_serial/sserial/state__i2 is stuck at Zero. VDB-5013
+WARNING - synthesis: /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/motor-serial.v(61): Register \motor_serial/sserial/state__i3 is stuck at Zero. VDB-5013
 GSR instance connected to net motor_pwm_r_c.
 GSR will not be inferred because no asynchronous signal was found in the netlist.
 INFO - synthesis: Register \arm_y/fault_latched_178 of type IFS1P3DX will not be replicated.
@@ -343,9 +353,13 @@ INFO - synthesis: Register \arm_z/fault_latched_178 of type IFS1P3DX will not be
 INFO - synthesis: Register \arm_a/fault_latched_178 of type IFS1P3DX will not be replicated.
 INFO - synthesis: Register \rc_receiver/recv_ch8/latched_in_45 of type IFS1P3DX will not be replicated.
 INFO - synthesis: Register \rc_receiver/recv_ch7/latched_in_45 of type IFS1P3DX will not be replicated.
-INFO - synthesis: Register \rc_receiver/recv_ch4/latched_in_45 of type IFS1P3DX will not be replicated.
-INFO - synthesis: Register \rc_receiver/recv_ch2/latched_in_45 of type IFS1P3DX will not be replicated.
 INFO - synthesis: Register \rc_receiver/recv_ch3/latched_in_45 of type IFS1P3DX will not be replicated.
+INFO - synthesis: Register \rc_receiver/recv_ch2/latched_in_45 of type IFS1P3DX will not be replicated.
+INFO - synthesis: Register \rc_receiver/recv_ch4/latched_in_45 of type IFS1P3DX will not be replicated.
+INFO - synthesis: Register \left_encoder/q/quadB_delayed_17 of type IFS1P3DX will not be replicated.
+INFO - synthesis: Register \left_encoder/q/quadA_delayed_16 of type IFS1P3DX will not be replicated.
+INFO - synthesis: Register \right_encoder/q/quadB_delayed_17 of type IFS1P3DX will not be replicated.
+INFO - synthesis: Register \right_encoder/q/quadA_delayed_16 of type IFS1P3DX will not be replicated.
 INFO - synthesis: Register \rc_receiver/recv_ch1/latched_in_45 of type IFS1P3DX will not be replicated.
 INFO - synthesis: Register \arm_x/fault_latched_178 of type IFS1P3DX will not be replicated.
 Writing LPF file Uniboard_verilog_impl1.lpf.
@@ -354,61 +368,50 @@ Loading NGL library '/usr/local/diamond/3.4_x64/ispfpga/xo2c00a/data/xo2alib.ngl
 Loading NGL library '/usr/local/diamond/3.4_x64/ispfpga/xo2c00/data/xo2clib.ngl'...
 Loading NGL library '/usr/local/diamond/3.4_x64/ispfpga/mg5g00/data/mg5glib.ngl'...
 Loading NGL library '/usr/local/diamond/3.4_x64/ispfpga/or5g00/data/orc5glib.ngl'...
-WARNING - synthesis: logical net 'encoder_ra' has no load.
-WARNING - synthesis: input pad net 'encoder_ra' has no legal load.
-WARNING - synthesis: logical net 'encoder_rb' has no load.
-WARNING - synthesis: input pad net 'encoder_rb' has no legal load.
-WARNING - synthesis: logical net 'encoder_ri' has no load.
-WARNING - synthesis: input pad net 'encoder_ri' has no legal load.
-WARNING - synthesis: logical net 'encoder_la' has no load.
-WARNING - synthesis: input pad net 'encoder_la' has no legal load.
-WARNING - synthesis: logical net 'encoder_lb' has no load.
-WARNING - synthesis: input pad net 'encoder_lb' has no legal load.
-WARNING - synthesis: logical net 'encoder_li' has no load.
-WARNING - synthesis: input pad net 'encoder_li' has no legal load.
-WARNING - synthesis: DRC complete with 12 warnings.
 All blocks are expanded and NGD expansion is successful.
 Writing NGD file Uniboard_verilog_impl1.ngd.
 
 ################### Begin Area Report (UniboardTop)######################
-Number of register bits => 1393 of 7209 (19 % )
-CCU2D => 729
-FD1P3AX => 221
-FD1P3IX => 474
+Number of register bits => 1563 of 7209 (21 % )
+CCU2D => 780
+FD1P3AX => 226
+FD1P3IX => 533
 FD1P3JX => 160
-FD1S3AX => 26
-FD1S3IX => 500
+FD1S3AX => 30
+FD1S3IX => 598
 FD1S3JX => 2
 GSR => 1
-IB => 17
-IFS1P3DX => 10
+IB => 23
+IFS1P3DX => 14
 L6MUX21 => 8
-LUT4 => 1556
+LUT4 => 1666
 OB => 45
-PFUMX => 87
+PFUMX => 84
 ################### End Area Report ##################
 
 ################### Begin Clock Report ######################
 Clock Nets
-Number of Clocks: 4
-  Net : debug_c_c, loads : 1353
-  Net : select_7, loads : 18
+Number of Clocks: 6
+  Net : debug_c_c, loads : 1455
+  Net : n31780, loads : 65
+  Net : n31762, loads : 34
   Net : bclk, loads : 14
   Net : bclk, loads : 13
+  Net : select_7, loads : 11
 Clock Enable Nets
-Number of Clock Enables: 71
+Number of Clock Enables: 72
 Highest fanout non-clock nets
 Top 10 highest fanout non-clock nets:
-  Net : n28477, loads : 349
-  Net : register_addr_0, loads : 214
-  Net : register_addr_1, loads : 181
-  Net : rw, loads : 82
-  Net : n28400, loads : 64
-  Net : n28399, loads : 64
-  Net : n28402, loads : 64
-  Net : n28401, loads : 64
-  Net : register_addr_2, loads : 63
-  Net : n1306, loads : 60
+  Net : register_addr_0, loads : 251
+  Net : register_addr_1, loads : 189
+  Net : n31694, loads : 112
+  Net : rw, loads : 87
+  Net : n33447, loads : 70
+  Net : n31759, loads : 64
+  Net : n31691, loads : 64
+  Net : n31692, loads : 64
+  Net : n31690, loads : 64
+  Net : n31693, loads : 64
 ################### End Clock Report ##################
 
 <A name="lse_trs"></A><B><U><big>Timing Report Summary</big></U></B>
@@ -419,7 +422,7 @@ Constraint                              |   Constraint|       Actual|Levels
                                         |             |             |
 create_clock -period 83.000000          |             |             |
 -waveform { 0.000000 41.500000 } -name  |             |             |
-clk_12MHz [ get_ports { clk_12MHz } ]   |   12.048 MHz|  143.678 MHz|    18  
+clk_12MHz [ get_ports { clk_12MHz } ]   |   12.048 MHz|  127.097 MHz|    18  
                                         |             |             |
 --------------------------------------------------------------------------------
 
@@ -427,10 +430,10 @@ clk_12MHz [ get_ports { clk_12MHz } ]   |   12.048 MHz|  143.678 MHz|    18
 All constraints were met.
 
 
-Peak Memory Usage: 227.570  MB
+Peak Memory Usage: 229.516  MB
 
 --------------------------------------------------------------
-Elapsed CPU time for LSE flow : 11.596  secs
+Elapsed CPU time for LSE flow : 15.060  secs
 --------------------------------------------------------------
 
 

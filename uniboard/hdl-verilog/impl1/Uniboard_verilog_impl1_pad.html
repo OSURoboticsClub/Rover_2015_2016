@@ -14,7 +14,7 @@ Performance Grade:      4
 PACKAGE:          TQFP144
 Package Status:                     Final          Version 1.39
 
-Thu Apr  7 00:09:41 2016
+Thu Apr  7 01:34:02 2016
 
 Pinout by Port Name:
 +------------------+----------+--------------+-------+-----------+-----------+--------------------------------------+
@@ -58,6 +58,12 @@ Pinout by Port Name:
 | debug[6]         | 119/0    | LVCMOS25_OUT | PT27D |           |           | DRIVE:8mA PULL:DOWN SLEW:SLOW        |
 | debug[7]         | 121/0    | LVCMOS25_OUT | PT25B |           |           | DRIVE:8mA PULL:DOWN SLEW:SLOW        |
 | debug[8]         | 122/0    | LVCMOS25_OUT | PT25A |           |           | DRIVE:8mA PULL:DOWN SLEW:SLOW        |
+| encoder_la       | 50/2     | LVCMOS25_IN  | PB16B |           |           | PULL:DOWN CLAMP:ON HYSTERESIS:SMALL  |
+| encoder_lb       | 49/2     | LVCMOS25_IN  | PB16A |           |           | PULL:DOWN CLAMP:ON HYSTERESIS:SMALL  |
+| encoder_li       | 48/2     | LVCMOS25_IN  | PB13B |           |           | PULL:DOWN CLAMP:ON HYSTERESIS:SMALL  |
+| encoder_ra       | 56/2     | LVCMOS25_IN  | PB23B |           |           | PULL:DOWN CLAMP:ON HYSTERESIS:SMALL  |
+| encoder_rb       | 55/2     | LVCMOS25_IN  | PB23A |           |           | PULL:DOWN CLAMP:ON HYSTERESIS:SMALL  |
+| encoder_ri       | 54/2     | LVCMOS25_IN  | PB18B |           |           | PULL:DOWN CLAMP:ON HYSTERESIS:SMALL  |
 | expansion1       | 58/2     | LVCMOS25_OUT | PB26B |           |           | DRIVE:8mA PULL:DOWN SLEW:SLOW        |
 | expansion2       | 59/2     | LVCMOS25_OUT | PB29A |           |           | DRIVE:8mA PULL:DOWN SLEW:SLOW        |
 | expansion3       | 60/2     | LVCMOS25_OUT | PB29B |           |           | DRIVE:8mA PULL:DOWN SLEW:SLOW        |
@@ -143,13 +149,13 @@ Vccio by Bank:
 | 44/2     | rc_ch3                | LOCATED    | LVCMOS25_IN  | PB12A | MCLK/CCLK      |           |           |
 | 45/2     | rc_ch2                | LOCATED    | LVCMOS25_IN  | PB12B | SO/SPISO       |           |           |
 | 47/2     | rc_ch1                | LOCATED    | LVCMOS25_IN  | PB13A |                |           |           |
-| 48/2     |     unused, PULL:DOWN |            |              | PB13B |                |           |           |
-| 49/2     |     unused, PULL:DOWN |            |              | PB16A | PCLKT2_0       |           |           |
-| 50/2     |     unused, PULL:DOWN |            |              | PB16B | PCLKC2_0       |           |           |
+| 48/2     | encoder_li            | LOCATED    | LVCMOS25_IN  | PB13B |                |           |           |
+| 49/2     | encoder_lb            | LOCATED    | LVCMOS25_IN  | PB16A | PCLKT2_0       |           |           |
+| 50/2     | encoder_la            | LOCATED    | LVCMOS25_IN  | PB16B | PCLKC2_0       |           |           |
 | 52/2     |     unused, PULL:DOWN |            |              | PB18A |                |           |           |
-| 54/2     |     unused, PULL:DOWN |            |              | PB18B |                |           |           |
-| 55/2     |     unused, PULL:DOWN |            |              | PB23A | PCLKT2_1       |           |           |
-| 56/2     |     unused, PULL:DOWN |            |              | PB23B | PCLKC2_1       |           |           |
+| 54/2     | encoder_ri            | LOCATED    | LVCMOS25_IN  | PB18B |                |           |           |
+| 55/2     | encoder_rb            | LOCATED    | LVCMOS25_IN  | PB23A | PCLKT2_1       |           |           |
+| 56/2     | encoder_ra            | LOCATED    | LVCMOS25_IN  | PB23B | PCLKC2_1       |           |           |
 | 57/2     | signal_light          | LOCATED    | LVCMOS25_OUT | PB26A |                |           |           |
 | 58/2     | expansion1            | LOCATED    | LVCMOS25_OUT | PB26B |                |           |           |
 | 59/2     | expansion2            | LOCATED    | LVCMOS25_OUT | PB29A |                |           |           |
@@ -494,6 +500,12 @@ LOCATE  COMP  "debug[5]"  SITE  "117";
 LOCATE  COMP  "debug[6]"  SITE  "119";
 LOCATE  COMP  "debug[7]"  SITE  "121";
 LOCATE  COMP  "debug[8]"  SITE  "122";
+LOCATE  COMP  "encoder_la"  SITE  "50";
+LOCATE  COMP  "encoder_lb"  SITE  "49";
+LOCATE  COMP  "encoder_li"  SITE  "48";
+LOCATE  COMP  "encoder_ra"  SITE  "56";
+LOCATE  COMP  "encoder_rb"  SITE  "55";
+LOCATE  COMP  "encoder_ri"  SITE  "54";
 LOCATE  COMP  "expansion1"  SITE  "58";
 LOCATE  COMP  "expansion2"  SITE  "59";
 LOCATE  COMP  "expansion3"  SITE  "60";
@@ -529,7 +541,7 @@ Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2014 Lattice Semiconductor Corporation,  All rights reserved.
-Thu Apr  7 00:09:41 2016
+Thu Apr  7 01:34:02 2016
 
 
 

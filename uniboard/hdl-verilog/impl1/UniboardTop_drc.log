@@ -7,22 +7,10 @@ Loading NGL library '/usr/local/diamond/3.4_x64/ispfpga/or5g00/data/orc5glib.ngl
 
 Running DRC...
 
-WARNING - synthesis: logical net 'encoder_ra' has no load.
-WARNING - synthesis: input pad net 'encoder_ra' has no legal load.
-WARNING - synthesis: logical net 'encoder_rb' has no load.
-WARNING - synthesis: input pad net 'encoder_rb' has no legal load.
-WARNING - synthesis: logical net 'encoder_ri' has no load.
-WARNING - synthesis: input pad net 'encoder_ri' has no legal load.
-WARNING - synthesis: logical net 'encoder_la' has no load.
-WARNING - synthesis: input pad net 'encoder_la' has no legal load.
-WARNING - synthesis: logical net 'encoder_lb' has no load.
-WARNING - synthesis: input pad net 'encoder_lb' has no legal load.
-WARNING - synthesis: logical net 'encoder_li' has no load.
-WARNING - synthesis: input pad net 'encoder_li' has no legal load.
-WARNING - synthesis: DRC complete with 12 warnings.
+DRC complete with no errors or warnings
 
 Design Results:
-   3839 blocks expanded
+   4173 blocks expanded
 completed the first expansion
 All blocks are expanded and NGD expansion is successful.
 Writing NGD file Uniboard_verilog_impl1.ngd.
