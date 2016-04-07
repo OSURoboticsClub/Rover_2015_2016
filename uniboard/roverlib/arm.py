@@ -57,6 +57,26 @@ def move_arm_Y(uniboard=None, y=None, ignore_boundry=False):
         return True
     return False
 
+def move_arm_Z_relative_safe(uniboard=None, z=None, ignore_boundry=False):
+    '''
+    z:  the arm default is 0.5 (all the way up.)
+        if z = 0.5, then it will move the arm al the way down, safely,
+        choosing the correct side so that it doesn't hit the side of the arm mount.
+    '''
+
+    boundry = 0.04
+    fully_up = 0.5
+    if z is not None:
+        if get_side(uniboard=uniboard) == 1: # Left Side
+            uniboard.arm_target("Z", fully_up+z)
+        elif get_side(uniboard=uniboard) == -1: # Right Side
+            uniboard.arm_target("Z", fully_up-z)
+        else:
+            uniboard.arm_target("Z", fully_up+z)
+        uniboard.arm_z_wait_until_done()
+        return True
+    return False
+
 def move_arm_down(uniboard=None):
     if get_side(uniboard=uniboard) == 1: # Left Side
         uniboard.arm_target("Z", 0.99)
@@ -64,6 +84,15 @@ def move_arm_down(uniboard=None):
         uniboard.arm_target("Z", 0)
     else:
         uniboard.arm_target("Z", .99)
+    uniboard.arm_z_wait_until_done()
+    return True
+def move_arm_half_way(uniboard=None):
+    if get_side(uniboard=uniboard) == 1: # Left Side
+        uniboard.arm_target("Z", 0.75)
+    elif get_side(uniboard=uniboard) == -1: # Right Side
+        uniboard.arm_target("Z", 0.25)
+    else:
+        uniboard.arm_target("Z", .75)
     uniboard.arm_z_wait_until_done()
     return True
 
@@ -83,9 +112,10 @@ def move_arm_A(uniboard=None, a=None):
 
 def get_side(uniboard=None):
     test_loc = uniboard.arm_current("X", None)
-    if test_loc > uniboard.arm_max("X") / 2.0: # Left Side
+    offest_from_center = 0.03
+    if test_loc > (uniboard.arm_max("X") / 2.0) - offest_from_center: # Left Side
         return 1
-    elif test_loc < uniboard.arm_max("X") / 2.0: # Right Side
+    elif test_loc < (uniboard.arm_max("X") / 2.0) - offest_from_center: # Right Side
         return -1
     else:                                           # Center
         return 0
@@ -117,4 +147,4 @@ def move_arm_XY(uniboard=None, x=None, y=None):
 #   ===================================
 #   ===================================
 #   ===================================
-arm_test()
+#arm_test()
