@@ -174,7 +174,7 @@ class Uniboard(object):
 					"max":4100,
 					"scale":0.000243,    #Multiplier to convert steps to meters (scale = meters/steps)
 					"dirpol":1,       #Value of DIR line when traveling away from limit
-					"frequency":400,  #Full step frequency, in Hz
+					"frequency":150,  #Full step frequency, in Hz
 					"steppol":1,      #Value of STEPPOL bit
 					"enpol":1,        #State of EN line when driver is enabled
 					"faultpol":0,     #State of fault line that indicated a problem
