@@ -503,23 +503,22 @@ module UniboardTop(
 	                                                          .xbee_pause_n(xbee_pause),
 	                                                          .battery_voltage(16'd6),
 	                                                          .reset(reset));
-	/* Motor PWM */
+	/* Motor Sabertooth Serial */
+	assign motor_pwm_r = 0;
+	SabertoothSerialPeripheral motor_serial(.clk_12MHz(clk_12MHz),
+	                                        .databus(databus),
+	                                        .reg_size(reg_size), 
+	                                        .register_addr(register_addr),
+	                                        .rw(rw),
+	                                        .select(select[2]),
+	                                        .sabertooth_s1(motor_pwm_l),
+	                                        .pause(global_pause),
+	                                        .reset(reset));
 	wire clk_255kHz;
 	ClockDivider pwm_clk_div(.factor(32'd47),
 						     .clk_i(clk_12MHz),
 	                         .clk_o(clk_255kHz),
 	                         .reset(reset));
-	PWMPeripheral motor_pwm(.clk_12MHz(clk_12MHz),
-                            .clk_255kHz(clk_255kHz),
-	                        .databus(databus),
-	                        .reg_size(reg_size),
-	                        .register_addr(register_addr),
-	                        .rw(rw),
-	                        .select(select[2]),
-	                        .pwm_left(motor_pwm_l),
-	                        .pwm_right(motor_pwm_r),
-	                        .pause(global_pause),
-	                        .reset(reset));
 	/* Arm */
 	reg [4:0] arm_select; /* 0 = X ... 3 = A, 4 = analog. */
 	always @*

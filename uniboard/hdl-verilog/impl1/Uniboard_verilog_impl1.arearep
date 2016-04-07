@@ -1,24 +1,23 @@
 ----------------------------------------------------------------------
 Report for cell UniboardTop.TECH
-Register bits:  1347 of 7209 (18.685%)
+Register bits:  1393 of 7209 (19.323%)
 I/O cells:      62
                                   Cell usage:
                                cell     count   Res Usage(%)
-                              CCU2D       689          100.0
-                            FD1P3AX       236          100.0
-                            FD1P3IX       471          100.0
-                            FD1P3JX       173          100.0
-                            FD1S3AX        24          100.0
-                            FD1S3IX       430          100.0
+                              CCU2D       729          100.0
+                            FD1P3AX       221          100.0
+                            FD1P3IX       474          100.0
+                            FD1P3JX       160          100.0
+                            FD1S3AX        26          100.0
+                            FD1S3IX       500          100.0
                             FD1S3JX         2          100.0
                                 GSR         1          100.0
                                  IB        17          100.0
                            IFS1P3DX        10          100.0
                             L6MUX21         8          100.0
-                               LUT4      1527          100.0
+                               LUT4      1556          100.0
                                  OB        45          100.0
-                           OFS1P3DX         1          100.0
-                              PFUMX        77          100.0
+                              PFUMX        87          100.0
 SUB MODULES
      ArmPeripheral(axis_haddr=8'b0)         1
 ArmPeripheral(axis_haddr=8'b010000)         1
@@ -27,15 +26,14 @@ ArmPeripheral(axis_haddr=8'b0110000)         1
                        ClockDivider         1
            ClockDividerP(factor=12)         1
         ClockDividerP(factor=12)_U0         1
+        ClockDividerP(factor=12000)         1
      ClockDividerP(factor=12000000)         1
-                   ClockDivider_U10         1
+         ClockDividerP(factor=1250)         1
+                    ClockDivider_U6         1
                     ClockDivider_U7         1
                     ClockDivider_U8         1
                     ClockDivider_U9         1
             GlobalControlPeripheral         1
-                       PWMGenerator         1
-                    PWMGenerator_U6         1
-                      PWMPeripheral         1
                         PWMReceiver         1
                      PWMReceiver_U1         1
                      PWMReceiver_U2         1
@@ -44,296 +42,178 @@ ArmPeripheral(axis_haddr=8'b0110000)         1
                      PWMReceiver_U5         1
      ProtocolInterface(baud_div=12)         1
                        RCPeripheral         1
+                   SabertoothSerial         1
+         SabertoothSerialPeripheral         1
           UARTReceiver(baud_div=12)         1
        UARTTransmitter(baud_div=12)         1
-                              TOTAL      3737
-----------------------------------------------------------------------
-Report for cell PWMPeripheral.v1
-Instance Path : motor_pwm
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                              CCU2D        24            3.5
-                            FD1P3AX         4            1.7
-                            FD1P3IX        36            7.6
-                            FD1P3JX        28           16.2
-                            FD1S3AX         1            4.2
-                               LUT4        48            3.1
-                           OFS1P3DX         1          100.0
-SUB MODULES
-                       PWMGenerator         1
-                    PWMGenerator_U6         1
-                              TOTAL       144
-----------------------------------------------------------------------
-Report for cell PWMGenerator.v1
-Instance Path : motor_pwm.right
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                              CCU2D        12            1.7
-                            FD1P3IX        14            3.0
-                            FD1P3JX         7            4.0
-                               LUT4        13            0.9
-                           OFS1P3DX         1          100.0
-                              TOTAL        47
-----------------------------------------------------------------------
-Report for cell PWMGenerator_U6.v1
-Instance Path : motor_pwm.left
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                              CCU2D        12            1.7
-                            FD1P3AX         1            0.4
-                            FD1P3IX        14            3.0
-                            FD1P3JX         7            4.0
-                               LUT4        18            1.2
-                              TOTAL        52
-----------------------------------------------------------------------
-Report for cell GlobalControlPeripheral.v1
-Instance Path : global_control
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                              CCU2D        47            6.8
-                            FD1P3AX         2            0.8
-                            FD1P3IX        66           14.0
-                            FD1S3AX         3           12.5
-                            FD1S3IX        33            7.7
-                               LUT4        74            4.8
-                              PFUMX         1            1.3
-SUB MODULES
-     ClockDividerP(factor=12000000)         1
-                              TOTAL       227
-----------------------------------------------------------------------
-Report for cell ClockDividerP(factor=12000000).v1
-Instance Path : global_control.uptime_div
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                              CCU2D        30            4.4
-                            FD1S3IX        33            7.7
-                               LUT4        13            0.9
-                              TOTAL        76
+     UARTTransmitter(baud_div=1250)         1
+                              TOTAL      3864
 ----------------------------------------------------------------------
 Report for cell ArmPeripheral(axis_haddr=8'b0100000).v1
 Instance Path : arm_z
                                   Cell usage:
                                cell     count   Res Usage(%)
-                              CCU2D       102           14.8
-                            FD1P3AX        33           14.0
-                            FD1P3IX        62           13.2
-                            FD1P3JX        12            6.9
-                            FD1S3AX         4           16.7
-                            FD1S3IX        65           15.1
+                              CCU2D       102           14.0
+                            FD1P3AX        32           14.5
+                            FD1P3IX        63           13.3
+                            FD1P3JX        12            7.5
+                            FD1S3AX         4           15.4
+                            FD1S3IX        65           13.0
                            IFS1P3DX         1           10.0
-                               LUT4        95            6.2
-                              PFUMX         8           10.4
+                               LUT4        78            5.0
+                              PFUMX         5            5.7
 SUB MODULES
                        ClockDivider         1
-                              TOTAL       383
+                              TOTAL       363
 ----------------------------------------------------------------------
 Report for cell ClockDivider.v1
 Instance Path : arm_z.step_clk_gen
                                   Cell usage:
                                cell     count   Res Usage(%)
-                              CCU2D        85           12.3
-                            FD1P3IX        31            6.6
+                              CCU2D        85           11.7
+                            FD1P3IX        31            6.5
                             FD1P3JX         1            0.6
-                            FD1S3IX        33            7.7
-                               LUT4         2            0.1
-                              TOTAL       152
+                            FD1S3IX        33            6.6
+                              TOTAL       150
 ----------------------------------------------------------------------
-Report for cell ArmPeripheral(axis_haddr=8'b0110000).v1
-Instance Path : arm_a
+Report for cell GlobalControlPeripheral.v1
+Instance Path : global_control
                                   Cell usage:
                                cell     count   Res Usage(%)
-                              CCU2D       102           14.8
-                            FD1P3AX        27           11.4
-                            FD1P3IX        68           14.4
-                            FD1P3JX        12            6.9
-                            FD1S3AX         4           16.7
-                            FD1S3IX        65           15.1
-                           IFS1P3DX         1           10.0
-                               LUT4        69            4.5
-                              PFUMX         8           10.4
+                              CCU2D        47            6.4
+                            FD1P3AX        31           14.0
+                            FD1P3IX        37            7.8
+                            FD1S3AX         3           11.5
+                            FD1S3IX        33            6.6
+                               LUT4        35            2.2
 SUB MODULES
-                    ClockDivider_U9         1
-                              TOTAL       357
+     ClockDividerP(factor=12000000)         1
+                              TOTAL       187
 ----------------------------------------------------------------------
-Report for cell ClockDivider_U9.v1
-Instance Path : arm_a.step_clk_gen
+Report for cell ClockDividerP(factor=12000000).v1
+Instance Path : global_control.uptime_div
                                   Cell usage:
                                cell     count   Res Usage(%)
-                              CCU2D        85           12.3
-                            FD1P3IX        31            6.6
+                              CCU2D        30            4.1
+                            FD1S3IX        33            6.6
+                               LUT4        12            0.8
+                              TOTAL        75
+----------------------------------------------------------------------
+Report for cell SabertoothSerialPeripheral.v1
+Instance Path : motor_serial
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D        64            8.8
+                            FD1P3AX        23           10.4
+                            FD1P3IX         9            1.9
+                            FD1P3JX        15            9.4
+                            FD1S3AX         3           11.5
+                            FD1S3IX        66           13.2
+                               LUT4        95            6.1
+                              PFUMX         5            5.7
+SUB MODULES
+        ClockDividerP(factor=12000)         1
+         ClockDividerP(factor=1250)         1
+                   SabertoothSerial         1
+     UARTTransmitter(baud_div=1250)         1
+                              TOTAL       284
+----------------------------------------------------------------------
+Report for cell SabertoothSerial.v1
+Instance Path : motor_serial.sserial
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D        64            8.8
+                            FD1P3AX        20            9.0
+                            FD1P3IX         1            0.2
                             FD1P3JX         1            0.6
-                            FD1S3IX        33            7.7
-                               LUT4         2            0.1
-                              TOTAL       152
-----------------------------------------------------------------------
-Report for cell ArmPeripheral(axis_haddr=8'b010000).v1
-Instance Path : arm_y
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                              CCU2D       102           14.8
-                            FD1P3AX        29           12.3
-                            FD1P3IX        66           14.0
-                            FD1P3JX        12            6.9
-                            FD1S3AX         4           16.7
-                            FD1S3IX        65           15.1
-                           IFS1P3DX         1           10.0
-                               LUT4       101            6.6
-                              PFUMX         8           10.4
+                            FD1S3AX         2            7.7
+                            FD1S3IX        66           13.2
+                               LUT4        65            4.2
+                              PFUMX         5            5.7
 SUB MODULES
-                    ClockDivider_U7         1
-                              TOTAL       389
+        ClockDividerP(factor=12000)         1
+         ClockDividerP(factor=1250)         1
+     UARTTransmitter(baud_div=1250)         1
+                              TOTAL       227
 ----------------------------------------------------------------------
-Report for cell ClockDivider_U7.v1
-Instance Path : arm_y.step_clk_gen
+Report for cell UARTTransmitter(baud_div=1250).v1
+Instance Path : motor_serial.sserial.sender
                                   Cell usage:
                                cell     count   Res Usage(%)
-                              CCU2D        85           12.3
-                            FD1P3IX        31            6.6
+                              CCU2D        33            4.5
+                            FD1P3AX        11            5.0
                             FD1P3JX         1            0.6
-                            FD1S3IX        33            7.7
-                               LUT4         2            0.1
-                              TOTAL       152
-----------------------------------------------------------------------
-Report for cell RCPeripheral.v1
-Instance Path : rc_receiver
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                              CCU2D        84           12.2
-                            FD1P3AX         8            3.4
-                            FD1P3IX        52           11.0
-                            FD1P3JX        96           55.5
-                            FD1S3AX         1            4.2
-                            FD1S3IX         8            1.9
-                           IFS1P3DX         6           60.0
-                            L6MUX21         8          100.0
-                               LUT4       440           28.8
-                              PFUMX        20           26.0
+                            FD1S3AX         1            3.8
+                            FD1S3IX        33            6.6
+                               LUT4        25            1.6
+                              PFUMX         2            2.3
 SUB MODULES
-                        PWMReceiver         1
-                     PWMReceiver_U1         1
-                     PWMReceiver_U2         1
-                     PWMReceiver_U3         1
-                     PWMReceiver_U4         1
-                     PWMReceiver_U5         1
-                              TOTAL       729
+         ClockDividerP(factor=1250)         1
+                              TOTAL       107
 ----------------------------------------------------------------------
-Report for cell PWMReceiver.v1
-Instance Path : rc_receiver.recv_ch8
+Report for cell ClockDividerP(factor=1250).v1
+Instance Path : motor_serial.sserial.sender.baud_gen
                                   Cell usage:
                                cell     count   Res Usage(%)
-                              CCU2D        14            2.0
-                            FD1P3AX         1            0.4
-                            FD1P3IX         9            1.9
-                            FD1P3JX        16            9.2
-                           IFS1P3DX         1           10.0
-                               LUT4        49            3.2
-                              TOTAL        90
+                              CCU2D        33            4.5
+                            FD1S3AX         1            3.8
+                            FD1S3IX        32            6.4
+                               LUT4        12            0.8
+                              TOTAL        78
 ----------------------------------------------------------------------
-Report for cell PWMReceiver_U1.v1
-Instance Path : rc_receiver.recv_ch7
+Report for cell ClockDividerP(factor=12000).v1
+Instance Path : motor_serial.sserial.baud_gen
                                   Cell usage:
                                cell     count   Res Usage(%)
-                              CCU2D        14            2.0
-                            FD1P3AX         1            0.4
-                            FD1P3IX         9            1.9
-                            FD1P3JX        16            9.2
-                           IFS1P3DX         1           10.0
-                               LUT4        46            3.0
-                              TOTAL        87
-----------------------------------------------------------------------
-Report for cell PWMReceiver_U2.v1
-Instance Path : rc_receiver.recv_ch4
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                              CCU2D        14            2.0
-                            FD1P3AX         1            0.4
-                            FD1P3IX         9            1.9
-                            FD1P3JX        16            9.2
-                           IFS1P3DX         1           10.0
-                               LUT4        44            2.9
-                              TOTAL        85
-----------------------------------------------------------------------
-Report for cell PWMReceiver_U3.v1
-Instance Path : rc_receiver.recv_ch3
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                              CCU2D        14            2.0
-                            FD1P3AX         1            0.4
-                            FD1P3IX         9            1.9
-                            FD1P3JX        16            9.2
-                           IFS1P3DX         1           10.0
-                               LUT4        48            3.1
-                              PFUMX         1            1.3
-                              TOTAL        90
-----------------------------------------------------------------------
-Report for cell PWMReceiver_U4.v1
-Instance Path : rc_receiver.recv_ch2
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                              CCU2D        14            2.0
-                            FD1P3AX         2            0.8
-                            FD1P3IX         8            1.7
-                            FD1P3JX        16            9.2
-                           IFS1P3DX         1           10.0
-                               LUT4        44            2.9
-                              PFUMX         1            1.3
-                              TOTAL        86
-----------------------------------------------------------------------
-Report for cell PWMReceiver_U5.v1
-Instance Path : rc_receiver.recv_ch1
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                              CCU2D        14            2.0
-                            FD1P3AX         2            0.8
-                            FD1P3IX         8            1.7
-                            FD1P3JX        16            9.2
-                           IFS1P3DX         1           10.0
-                               LUT4        38            2.5
-                              TOTAL        79
+                              CCU2D        31            4.3
+                            FD1S3AX         1            3.8
+                            FD1S3IX        32            6.4
+                               LUT4        16            1.0
+                              TOTAL        80
 ----------------------------------------------------------------------
 Report for cell ProtocolInterface(baud_div=12).v1
 Instance Path : protocol_interface
                                   Cell usage:
                                cell     count   Res Usage(%)
-                              CCU2D        68            9.9
-                            FD1P3AX        85           36.0
-                            FD1P3IX        59           12.5
+                              CCU2D        68            9.3
+                            FD1P3AX        76           34.4
+                            FD1P3IX        64           13.5
                             FD1P3JX         1            0.6
-                            FD1S3AX         2            8.3
-                            FD1S3IX        97           22.6
+                            FD1S3AX         2            7.7
+                            FD1S3IX       101           20.2
                             FD1S3JX         2          100.0
-                               LUT4       464           30.4
-                              PFUMX        21           27.3
+                               LUT4       561           36.1
+                              PFUMX        25           28.7
 SUB MODULES
            ClockDividerP(factor=12)         1
         ClockDividerP(factor=12)_U0         1
           UARTReceiver(baud_div=12)         1
        UARTTransmitter(baud_div=12)         1
-                              TOTAL       803
+                              TOTAL       904
 ----------------------------------------------------------------------
 Report for cell UARTTransmitter(baud_div=12).v1
 Instance Path : protocol_interface.uart_output
                                   Cell usage:
                                cell     count   Res Usage(%)
-                              CCU2D        34            4.9
-                            FD1P3AX        11            4.7
-                            FD1P3IX         1            0.2
+                              CCU2D        34            4.7
+                            FD1P3AX         9            4.1
+                            FD1P3IX         3            0.6
                             FD1P3JX         1            0.6
-                            FD1S3AX         1            4.2
-                            FD1S3IX        33            7.7
-                               LUT4        39            2.6
-                              PFUMX         3            3.9
+                            FD1S3AX         1            3.8
+                            FD1S3IX        33            6.6
+                               LUT4        37            2.4
+                              PFUMX         3            3.4
 SUB MODULES
            ClockDividerP(factor=12)         1
-                              TOTAL       124
+                              TOTAL       122
 ----------------------------------------------------------------------
 Report for cell ClockDividerP(factor=12).v1
 Instance Path : protocol_interface.uart_output.baud_gen
                                   Cell usage:
                                cell     count   Res Usage(%)
-                              CCU2D        34            4.9
-                            FD1S3AX         1            4.2
-                            FD1S3IX        32            7.4
+                              CCU2D        34            4.7
+                            FD1S3AX         1            3.8
+                            FD1S3IX        32            6.4
                                LUT4        14            0.9
                               TOTAL        81
 ----------------------------------------------------------------------
@@ -341,59 +221,210 @@ Report for cell UARTReceiver(baud_div=12).v1
 Instance Path : protocol_interface.uart_input
                                   Cell usage:
                                cell     count   Res Usage(%)
-                              CCU2D        34            4.9
-                            FD1P3AX        16            6.8
-                            FD1S3IX        40            9.3
+                              CCU2D        34            4.7
+                            FD1P3AX        16            7.2
+                            FD1S3IX        40            8.0
                             FD1S3JX         1           50.0
-                               LUT4        62            4.1
-                              PFUMX         4            5.2
+                               LUT4        82            5.3
+                              PFUMX         5            5.7
 SUB MODULES
         ClockDividerP(factor=12)_U0         1
-                              TOTAL       158
+                              TOTAL       179
 ----------------------------------------------------------------------
 Report for cell ClockDividerP(factor=12)_U0.v1
 Instance Path : protocol_interface.uart_input.baud_gen
                                   Cell usage:
                                cell     count   Res Usage(%)
-                              CCU2D        34            4.9
-                            FD1S3IX        33            7.7
-                               LUT4        13            0.9
-                              TOTAL        80
+                              CCU2D        34            4.7
+                            FD1S3IX        33            6.6
+                               LUT4        14            0.9
+                              TOTAL        81
+----------------------------------------------------------------------
+Report for cell RCPeripheral.v1
+Instance Path : rc_receiver
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D        84           11.5
+                            FD1P3AX         9            4.1
+                            FD1P3IX        51           10.8
+                            FD1P3JX        96           60.0
+                            FD1S3AX         1            3.8
+                            FD1S3IX         8            1.6
+                           IFS1P3DX         6           60.0
+                            L6MUX21         8          100.0
+                               LUT4       442           28.4
+                              PFUMX        19           21.8
+SUB MODULES
+                        PWMReceiver         1
+                     PWMReceiver_U1         1
+                     PWMReceiver_U2         1
+                     PWMReceiver_U3         1
+                     PWMReceiver_U4         1
+                     PWMReceiver_U5         1
+                              TOTAL       730
+----------------------------------------------------------------------
+Report for cell PWMReceiver.v1
+Instance Path : rc_receiver.recv_ch8
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D        14            1.9
+                            FD1P3AX         2            0.9
+                            FD1P3IX         8            1.7
+                            FD1P3JX        16           10.0
+                           IFS1P3DX         1           10.0
+                               LUT4        46            3.0
+                              TOTAL        87
+----------------------------------------------------------------------
+Report for cell PWMReceiver_U1.v1
+Instance Path : rc_receiver.recv_ch7
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D        14            1.9
+                            FD1P3AX         1            0.5
+                            FD1P3IX         9            1.9
+                            FD1P3JX        16           10.0
+                           IFS1P3DX         1           10.0
+                               LUT4        48            3.1
+                              PFUMX         1            1.1
+                              TOTAL        90
+----------------------------------------------------------------------
+Report for cell PWMReceiver_U2.v1
+Instance Path : rc_receiver.recv_ch4
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D        14            1.9
+                            FD1P3AX         2            0.9
+                            FD1P3IX         8            1.7
+                            FD1P3JX        16           10.0
+                           IFS1P3DX         1           10.0
+                               LUT4        46            3.0
+                              TOTAL        87
+----------------------------------------------------------------------
+Report for cell PWMReceiver_U3.v1
+Instance Path : rc_receiver.recv_ch3
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D        14            1.9
+                            FD1P3AX         1            0.5
+                            FD1P3IX         9            1.9
+                            FD1P3JX        16           10.0
+                           IFS1P3DX         1           10.0
+                               LUT4        46            3.0
+                              PFUMX         1            1.1
+                              TOTAL        88
+----------------------------------------------------------------------
+Report for cell PWMReceiver_U4.v1
+Instance Path : rc_receiver.recv_ch2
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D        14            1.9
+                            FD1P3AX         1            0.5
+                            FD1P3IX         9            1.9
+                            FD1P3JX        16           10.0
+                           IFS1P3DX         1           10.0
+                               LUT4        49            3.1
+                              PFUMX         1            1.1
+                              TOTAL        91
+----------------------------------------------------------------------
+Report for cell PWMReceiver_U5.v1
+Instance Path : rc_receiver.recv_ch1
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D        14            1.9
+                            FD1P3AX         2            0.9
+                            FD1P3IX         8            1.7
+                            FD1P3JX        16           10.0
+                           IFS1P3DX         1           10.0
+                               LUT4        47            3.0
+                              TOTAL        88
+----------------------------------------------------------------------
+Report for cell ArmPeripheral(axis_haddr=8'b010000).v1
+Instance Path : arm_y
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D       102           14.0
+                            FD1P3AX         6            2.7
+                            FD1P3IX        89           18.8
+                            FD1P3JX        12            7.5
+                            FD1S3AX         4           15.4
+                            FD1S3IX        65           13.0
+                           IFS1P3DX         1           10.0
+                               LUT4        86            5.5
+                              PFUMX         8            9.2
+SUB MODULES
+                    ClockDivider_U6         1
+                              TOTAL       374
+----------------------------------------------------------------------
+Report for cell ClockDivider_U6.v1
+Instance Path : arm_y.step_clk_gen
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D        85           11.7
+                            FD1P3IX        31            6.5
+                            FD1P3JX         1            0.6
+                            FD1S3IX        33            6.6
+                              TOTAL       150
+----------------------------------------------------------------------
+Report for cell ArmPeripheral(axis_haddr=8'b0110000).v1
+Instance Path : arm_a
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D       102           14.0
+                            FD1P3AX        19            8.6
+                            FD1P3IX        76           16.0
+                            FD1P3JX        12            7.5
+                            FD1S3AX         4           15.4
+                            FD1S3IX        65           13.0
+                           IFS1P3DX         1           10.0
+                               LUT4        92            5.9
+                              PFUMX         8            9.2
+SUB MODULES
+                    ClockDivider_U8         1
+                              TOTAL       380
+----------------------------------------------------------------------
+Report for cell ClockDivider_U8.v1
+Instance Path : arm_a.step_clk_gen
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D        85           11.7
+                            FD1P3IX        31            6.5
+                            FD1P3JX         1            0.6
+                            FD1S3IX        33            6.6
+                              TOTAL       150
+----------------------------------------------------------------------
+Report for cell ClockDivider_U9.v1
+Instance Path : pwm_clk_div
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D        50            6.9
+                            FD1S3AX         1            3.8
+                            FD1S3IX        32            6.4
+                               LUT4        12            0.8
+                              TOTAL        95
 ----------------------------------------------------------------------
 Report for cell ArmPeripheral(axis_haddr=8'b0).v1
 Instance Path : arm_x
                                   Cell usage:
                                cell     count   Res Usage(%)
-                              CCU2D       102           14.8
-                            FD1P3AX        33           14.0
-                            FD1P3IX        62           13.2
-                            FD1P3JX        12            6.9
-                            FD1S3AX         4           16.7
-                            FD1S3IX        65           15.1
+                              CCU2D       102           14.0
+                            FD1P3AX        10            4.5
+                            FD1P3IX        85           17.9
+                            FD1P3JX        12            7.5
+                            FD1S3AX         4           15.4
+                            FD1S3IX        65           13.0
                            IFS1P3DX         1           10.0
-                               LUT4        77            5.0
-                              PFUMX         8           10.4
+                               LUT4        88            5.7
+                              PFUMX         8            9.2
 SUB MODULES
-                    ClockDivider_U8         1
-                              TOTAL       365
+                    ClockDivider_U7         1
+                              TOTAL       376
 ----------------------------------------------------------------------
-Report for cell ClockDivider_U8.v1
+Report for cell ClockDivider_U7.v1
 Instance Path : arm_x.step_clk_gen
                                   Cell usage:
                                cell     count   Res Usage(%)
-                              CCU2D        85           12.3
-                            FD1P3IX        31            6.6
+                              CCU2D        85           11.7
+                            FD1P3IX        31            6.5
                             FD1P3JX         1            0.6
-                            FD1S3IX        33            7.7
-                               LUT4         4            0.3
-                              TOTAL       154
-----------------------------------------------------------------------
-Report for cell ClockDivider_U10.v1
-Instance Path : pwm_clk_div
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                              CCU2D        50            7.3
-                            FD1S3AX         1            4.2
-                            FD1S3IX        32            7.4
-                               LUT4        13            0.9
-                              TOTAL        96
+                            FD1S3IX        33            6.6
+                              TOTAL       150

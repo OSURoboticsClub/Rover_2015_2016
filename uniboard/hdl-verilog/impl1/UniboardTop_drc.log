@@ -22,7 +22,7 @@ WARNING - synthesis: input pad net 'encoder_li' has no legal load.
 WARNING - synthesis: DRC complete with 12 warnings.
 
 Design Results:
-   3714 blocks expanded
+   3839 blocks expanded
 completed the first expansion
 All blocks are expanded and NGD expansion is successful.
 Writing NGD file Uniboard_verilog_impl1.ngd.
