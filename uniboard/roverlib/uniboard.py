@@ -595,7 +595,7 @@ class Uniboard(object):
 		I = (reg & 0x02) >> 1;
 		return (A, B, I)
 	
-	def encoder_left_speed(self):
+	def encoder_left_rpm(self):
 		"""Returns the current speed of the encoder in RPM as a float.
 		   Positive values indicate forward rotation."""
 		reg = self._read_reg(3, 0x01)
@@ -606,7 +606,7 @@ class Uniboard(object):
 		#and the quadrature encoding multiples the resolution by four.
 		return -(float(reg) * 60)/(.01*2048*4*27) #Negated to make directions consistent.
 	
-	def encoder_right_speed(self):
+	def encoder_right_rpm(self):
 		"""Returns the current speed of the encoder in RPM as a float.
 		   Positive values indicate forward rotation."""
 		reg = self._read_reg(3, 0x11)

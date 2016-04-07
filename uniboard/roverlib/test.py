@@ -53,9 +53,9 @@ u = uniboard.Uniboard("/dev/ttyUSB1")
 from Tkinter import *
 
 def print_speed(u, tkmain):
-	print u.encoder_left_speed(),
+	print u.encoder_left_rpm(),
 	print "  ",
-	print u.encoder_right_speed()
+	print u.encoder_right_rpm()
 	tkmain.after(100, print_speed, u, tkmain)
 	
 class App:
