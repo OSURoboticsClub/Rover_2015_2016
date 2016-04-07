@@ -29,9 +29,9 @@ def home(uniboard=None):
     '''
     uniboard.arm_home()                               # set elements to center, test all elements
     # move all the way back (Where we want it)
-    move_arm_Y(uniboard=uniboard, y=uniboard.arm_max("Y"))
+    move_arm_XY(uniboard=u, x=0, y=u.arm_max("Y"))
     # Arm is upright at Home
-    move_arm_A(uniboard=u, a=0.5)
+    move_arm_A(uniboard=uniboard, a=0.5)
 
     return True
 
@@ -59,11 +59,11 @@ def move_arm_Y(uniboard=None, y=None, ignore_boundry=False):
 
 def move_arm_down(uniboard=None):
     if get_side(uniboard=uniboard) == 1: # Left Side
-        uniboard.arm_target("Z", 1.0)
+        uniboard.arm_target("Z", 0.99)
     elif get_side(uniboard=uniboard) == -1: # Right Side
-        uniboard.arm_target("Z", 0.0)
+        uniboard.arm_target("Z", 0)
     else:
-        uniboard.arm_target("Z", 1.0)
+        uniboard.arm_target("Z", .99)
     uniboard.arm_z_wait_until_done()
     return True
 
@@ -91,9 +91,9 @@ def get_side(uniboard=None):
         return 0
 
 def where_we_at(uniboard=None):
-    if get_side(uniboard=uniboard) == 1
+    if get_side(uniboard=uniboard) == 1:
         return "Left Side"
-    elif get_side(uniboard=uniboard) == -1
+    elif get_side(uniboard=uniboard) == -1:
         return "Right Side"
     else:
         return "Centered Bitch!"
