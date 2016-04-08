@@ -42,10 +42,10 @@ class TestPID(unittest.TestCase):
             diff = self.testOut - out
             self.assertEquals(abs(diff) < TOLERANCE, True)
         pid = PID(pidOut, 0.5, 0.5, 0.5, [-2,2], [-1,1], 'test_pid')
-        target.target = 3
+        target = 3
         self.assertEquals(False, pid.set_target(target))
         pid.update(0)
-        target.target = 1
+        target = 1
         self.assertEquals(True, pid.set_target(target))
         self.testOut = 0.5
         pid.update(0)

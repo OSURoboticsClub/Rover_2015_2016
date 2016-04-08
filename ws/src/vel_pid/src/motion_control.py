@@ -22,11 +22,16 @@ class MotionControl(object):
         rospy.wait_for_service('uniboard_service')
         self.uniboard_service = rospy.ServiceProxy('uniboard_service', communication)
         self.sub = rospy.Subscriber('/odom', Odometry, self.update)
+        
+        self.vel_pid = PID(self.drive, 0.5, 0.01, 0.0,[-2, 2], [-1, 1], 'vel_pid')
+
+        self.pos_pid = PID(self.set_vel, 3.0, 0, 0,[-5.0, 5.0], [-1.0, 1.0], 'pos_pid')
+
+
+    def advertise_service(self):
         self.s = rospy.Service('set_motion_goal', 
                             set_target, 
                             self.motion_goal)
-        self.vel_pid = PID(self.drive, 0.5, 0.01, 0.0,[-2, 2], [-1, 1], 'vel_pid')
-        self.pos_pid = PID(self.set_vel, 0.5, 0, 0,[-5.5, 5.5], [-0.5, 0.5], 'pos_pid')
         
 
     def drive(self, power):
@@ -34,14 +39,12 @@ class MotionControl(object):
         self.uniboard_service('motor_right', 3, str(power), rospy.Time.now())
 
     def set_vel(self, vel):
-        self.vel_pid.set_target(vel)
+        return self.vel_pid.set_target(vel)
 
     def motion_goal(self, target):
-        self.pos_pid.set_target(target.target)
+        return self.pos_pid.set_target(target.target)
 
     def stop(self):
-        self.uniboard_service('motor_left', 3, str(0.0), rospy.Time.now())
-        self.uniboard_service('motor_right', 3, str(0.0), rospy.Time.now())
         self.vel_pid.stop()
         self.pos_pid.stop()
 
@@ -55,6 +58,7 @@ class MotionControl(object):
 if __name__ == '__main__':
     rospy.init_node('vel_pid')
     controller = MotionControl()
+    controller.advertise_service()
     rospy.spin()
 
     

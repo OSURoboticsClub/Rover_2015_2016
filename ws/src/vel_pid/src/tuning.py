@@ -15,7 +15,7 @@ class TunePID(object):
         self.out = []
         self.target = []
         self.pid = []
-        for topic, msg, t in bag.read_messages(topics=['/vel_pid_status']):
+        for topic, msg, t in bag.read_messages(topics=['/pos_pid_status']):
             self.time.append(t.to_time())
             self.vel.append(msg.current)
             self.out.append(msg.out)
@@ -24,10 +24,7 @@ class TunePID(object):
         bag.close()
 
     def plotVelocity(self):
-        #import IPython; IPython.embed()
         plt.figure()
-        # self.vel = self.applyVariableMeanFilter(self.vel, 10)
-        # self.time = self.applyVariableMeanFilter(self.time, 10)
         plt.plot(self.time, self.vel, label='Velocity')
         plt.plot(self.time, self.out, label='PID Output')
         plt.plot(self.time, self.target, label='PID Target')
@@ -39,20 +36,11 @@ class TunePID(object):
         plt.legend()
         plt.show()
 
-    def applyVariableMeanFilter(self, data, width):
-        filtered = []
-        if width/2 != 0:
-            for i in range(width/2,len(data)-width/2):
-                filtered.append(numpy.mean(data[i-width/2:i+width/2]))
-            return filtered
-        else:
-            return data
 
 
 
 if __name__ == '__main__':
-    #bag_name = '2016-03-30-18-44-30.bag'
-    bag_name = '../bags/2016-04-06-14-39-59.bag'
+    bag_name = '../pos_bags/2016-04-07-12-28-20.bag'
     t = TunePID()
     t.loadData(bag_name)
     t.plotVelocity()
