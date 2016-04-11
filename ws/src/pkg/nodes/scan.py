@@ -55,22 +55,22 @@ def calculate_distance(left_centx, right_centx, left_centy, right_centy):
     # This will have to be changed once the cameras are calibrated for the rover
     # Assumes distance between cameras is 119mm and resolution 640x480
     diff = abs(left_centx-right_centx)
-    dist = ((119*1280)/(2*math.tan(math.radians(60)/2)*diff))# * 1.75
+    dist = ((119*1920)/(2*math.tan(math.radians(60)/2)*diff))# * 1.75
 
     # calculate x-value in mm using basic trigonometry and ratios
     # dx0 -> distance from center of field of view (left camera) to horizontal edge of FOV in mm
     # dx1 -> distance from center of FOV (left camera) to centroid of purple
     # x -> distance from center of stereo cameras to purple centroid in mm
     dx0 = dist * math.tan(math.radians(30))
-    dx1 = (dx0 * (left_centx - 640)) / (640)
+    dx1 = (dx0 * (left_centx - 960)) / (960)
     #x = dx1 + 59.5
     x = (dx1 - 100) #/ 1.75
 
     # calculate y-value in mm
     # dy0 -> distance from center of FOV (left camera) to vertical edge of FOV in mm
     # y -> distance from center of stereo cameras to purple centroid in mm
-    dy0 = (dx0 * 360) / (640)
-    y = (((dy0 * (left_centy - 360)) / (360)) * -1)# / 1.75
+    dy0 = (dx0 * 540) / (960)
+    y = (((dy0 * (left_centy - 540)) / (540)) * -1)# / 1.75
 
     # calculate distance from base of rover
     # h -> height of cameras from ground in mm
