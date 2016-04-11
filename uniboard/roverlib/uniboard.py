@@ -604,7 +604,7 @@ class Uniboard(object):
 		#The encoder is 2048 PPR, and the speed counter measures the number of pulses that occurred
 		#in the last 10ms. Furthermore, there's a 27:1 gear reduction from the motor to the wheel,
 		#and the quadrature encoding multiples the resolution by four.
-		return -(float(reg) * 60)/(.01*2048*4*27) #Negated to make directions consistent.
+		return -(float(reg) * 60)/(.01*2048*4*26) #Negated to make directions consistent.
 	
 	def encoder_right_rpm(self):
 		"""Returns the current speed of the encoder in RPM as a float.
@@ -615,7 +615,7 @@ class Uniboard(object):
 		#The encoder is 2048 PPR, and the speed counter measures the number of pulses that occurred
 		#in the last 10ms. Furthermore, there's a 27:1 gear reduction from the motor to the wheel,
 		#and the quadrature encoding multiples the resolution by four.
-		return (float(reg) * 60)/(.01*2048*4*27)
+		return (float(reg) * 60)/(.01*2048*4*26)
 	
 	#RC Receiver
 	def rc_valid(self):
