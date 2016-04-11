@@ -1,8 +1,10 @@
 /*
- * HomeBase.hpp
+ * HomeBase.h
  *
  *  Created on: May 1, 2015
  *      Author: scott
+ *
+ *	Modified April 2016
  */
 
 #ifndef HOMEBASE_HPP_
@@ -24,17 +26,6 @@
 #include <time.h>
 #include <stdlib.h>
 
-#define RES_WIDTH  808
-#define RES_HEIGHT 608
-
-#define ALIGN_THRESH 10
-#define FWD 1
-#define TURN_RIGHT 2
-#define TURN_LEFT 3
-#define FARAWAY 5000
-#define CLOSE 2000
-#define NEAR_DIST 1000
-
 #define FRONT 1
 #define BACK 2
 #define CANT_FIND -12345
@@ -47,13 +38,5 @@
 #define TRAIN_DIST5 5000.0
 #define TRAIN_DIST10 10000.0
 #define TILT_THRESH 35
-
-/* These are hardcoded in the training function since the #defines are not working right
-
-#define FRONT_TRAIN5 = "./src/locate_home_base/src/Front_5m.png"; 
-#define FRONT_TRAIN10 = "./src/locate_home_base/src/Front_10m.png";
-#define BACK_TRAIN5 = "./src/locate_home_base/src/Back_5m.png";
-#define BACK_TRAIN10 = "./src/locate_home_base/src/Back_10m.png";
-*/
 
 #endif /* HOMEBASE_HPP_ */

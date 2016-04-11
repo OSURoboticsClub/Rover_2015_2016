@@ -190,5 +190,8 @@ include_directories(
 # catkin_add_nosetests(test)
 
 add_executable(locator src/locator.cpp)
+add_executable(compute src/computeFocalConstants.cpp)
 target_link_libraries(locator ${catkin_LIBRARIES})
+target_link_libraries(compute ${catkin_LIBRARIES})
 add_dependencies(locator locate_home_base)
+add_dependencies(compute computeFocalConstants)
