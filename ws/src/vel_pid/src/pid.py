@@ -80,17 +80,16 @@ class PID(object):
 
     def set_target(self, target):
         self.start()
-        rospy.logwarn(target)
-        if target <= self.outRange[1] and target >= self.outRange[0]:
+        if target <= self.inRange[1] and target >= self.inRange[0]:
             if self.target == target:
                 return True
             else:
                 self.target = target
-                self.err = []
+                # self.err = []
                 return True
         else:
             return False
-            rospy.logwarn('Target set is out of input range')
+            rospy.logerr('Target set is out of input range')
 
     def record(self):
         self.bag = rosbag.Bag(self.name+'_'+str(rospy.Time.now())+'_recording.bag', 'w')

@@ -20,47 +20,32 @@ Copyright (c) 2002-2014 Lattice Semiconductor Corporation,  All rights reserved.
 
 Part used: LCMXO2-7000HCTQFP144, Performance used: 4.
 
-Your license expires in 5 days.
-
-A new map free license can be generated from the Lattice website. A map subscription license can be purchased from your local Lattice sales representative or from the Lattice website. For more information on map software refer to http://www.latticesemi.com/latticediamond .
 Loading device for application map from file 'xo2c7000.nph' in environment: /usr/local/diamond/3.4_x64/ispfpga.
 Package Status:                     Final          Version 1.39.
 
 Running general design DRC...
 
-    <postMsg mid="1166064" type="Warning" dynamic="2" navigation="0" arg0="input" arg1="encoder_ra"  />
-    <postMsg mid="1166064" type="Warning" dynamic="2" navigation="0" arg0="input" arg1="encoder_rb"  />
-    <postMsg mid="1166064" type="Warning" dynamic="2" navigation="0" arg0="input" arg1="encoder_ri"  />
-    <postMsg mid="1166064" type="Warning" dynamic="2" navigation="0" arg0="input" arg1="encoder_la"  />
-    <postMsg mid="1166064" type="Warning" dynamic="2" navigation="0" arg0="input" arg1="encoder_lb"  />
-    <postMsg mid="1166064" type="Warning" dynamic="2" navigation="0" arg0="input" arg1="encoder_li"  />
 Removing unused logic...
 
 Optimizing...
 
-    <postMsg mid="51001046" type="Warning" dynamic="1" navigation="0" arg0="encoder_ra"  />
-    <postMsg mid="51001046" type="Warning" dynamic="1" navigation="0" arg0="encoder_rb"  />
-    <postMsg mid="51001046" type="Warning" dynamic="1" navigation="0" arg0="encoder_ri"  />
-    <postMsg mid="51001046" type="Warning" dynamic="1" navigation="0" arg0="encoder_la"  />
-    <postMsg mid="51001046" type="Warning" dynamic="1" navigation="0" arg0="encoder_lb"  />
-    <postMsg mid="51001046" type="Warning" dynamic="1" navigation="0" arg0="encoder_li"  />
 
 
 
 Design Summary:
-   Number of registers:   1347 out of  7209 (19%)
-      PFU registers:         1336 out of  6864 (19%)
-      PIO registers:           11 out of   345 (3%)
-   Number of SLICEs:      1495 out of  3432 (44%)
-      SLICEs as Logic/ROM:   1495 out of  3432 (44%)
+   Number of registers:   1638 out of  7209 (23%)
+      PFU registers:         1624 out of  6864 (24%)
+      PIO registers:           14 out of   345 (4%)
+   Number of SLICEs:      1736 out of  3432 (51%)
+      SLICEs as Logic/ROM:   1736 out of  3432 (51%)
       SLICEs as RAM:            0 out of  2574 (0%)
-      SLICEs as Carry:        689 out of  3432 (20%)
-   Number of LUT4s:        2907 out of  6864 (42%)
-      Number of logic LUTs:      1529
+      SLICEs as Carry:        780 out of  3432 (23%)
+   Number of LUT4s:        3307 out of  6864 (48%)
+      Number of logic LUTs:      1747
       Number of distributed RAM:   0 (0 LUT4s)
-      Number of ripple logic:    689 (1378 LUT4s)
+      Number of ripple logic:    780 (1560 LUT4s)
       Number of shift registers:   0
-   Number of PIO sites used: 62 + 4(JTAG) out of 115 (57%)
+   Number of PIO sites used: 68 + 4(JTAG) out of 115 (63%)
    Number of block RAMs:  0 out of 26 (0%)
    Number of GSRs:  0 out of 1 (0%)
    EFB used :       No
@@ -83,147 +68,157 @@ Design Summary:
    Notes:-
       1. Total number of LUT4s = (Number of logic LUT4s) + 2*(Number of distributed RAMs) + 2*(Number of ripple logic)
       2. Number of logic LUT4s does not include count of distributed RAM and ripple logic.
-   Number of clocks:  3
-     Net debug_c_c: 818 loads, 818 rising, 0 falling (Driver: PIO clk_12MHz )
+   Number of clocks:  4
+     Net debug_c_c: 992 loads, 992 rising, 0 falling (Driver: PIO clk_12MHz )
+     Net \motor_serial/sserial/sender/bclk: 8 loads, 8 rising, 0 falling (Driver: motor_serial/sserial/sender/baud_gen/clk_o_14 )
      Net select[7]: 9 loads, 9 rising, 0 falling (Driver: protocol_interface/select__i7 )
      Net \protocol_interface/uart_output/bclk: 9 loads, 9 rising, 0 falling (Driver: protocol_interface/uart_output/baud_gen/clk_o_14 )
-   Number of Clock Enables:  67
-     Net motor_pwm/n12099: 9 loads, 9 LSLICEs
-     Net motor_pwm/n32423: 4 loads, 4 LSLICEs
-     Net motor_pwm/n12566: 1 loads, 1 LSLICEs
-     Net motor_pwm/n32424: 4 loads, 4 LSLICEs
-     Net motor_pwm/n20512: 1 loads, 1 LSLICEs
-     Net n32375: 82 loads, 75 LSLICEs
-     Net n9633: 4 loads, 4 LSLICEs
-     Net n10513: 4 loads, 4 LSLICEs
-     Net n11981: 34 loads, 34 LSLICEs
-     Net n11966: 33 loads, 33 LSLICEs
-     Net n32472: 8 loads, 8 LSLICEs
-     Net n12098: 6 loads, 6 LSLICEs
-     Net n12788: 3 loads, 3 LSLICEs
+   Number of Clock Enables:  72
+     Net global_control/n26278: 1 loads, 1 LSLICEs
+     Net global_control/n13814: 16 loads, 16 LSLICEs
+     Net n30307: 20 loads, 20 LSLICEs
+     Net global_control/n30433: 1 loads, 1 LSLICEs
+     Net n13594: 1 loads, 1 LSLICEs
+     Net n8890: 4 loads, 4 LSLICEs
+     Net n14121: 34 loads, 34 LSLICEs
+     Net n14291: 32 loads, 32 LSLICEs
+     Net n13589: 34 loads, 34 LSLICEs
+     Net n30305: 2 loads, 2 LSLICEs
+     Net n13918: 34 loads, 34 LSLICEs
+     Net n2644: 33 loads, 33 LSLICEs
      Net n30: 8 loads, 8 LSLICEs
-     Net n32369: 4 loads, 4 LSLICEs
-     Net n12224: 12 loads, 12 LSLICEs
-     Net n32413: 20 loads, 20 LSLICEs
-     Net global_control/n7999: 19 loads, 19 LSLICEs
-     Net global_control/n32538: 1 loads, 1 LSLICEs
-     Net global_control/n28027: 1 loads, 1 LSLICEs
-     Net arm_z/n12372: 2 loads, 2 LSLICEs
-     Net arm_z/n12358: 13 loads, 13 LSLICEs
-     Net arm_z/n32381: 3 loads, 3 LSLICEs
-     Net n7852: 4 loads, 4 LSLICEs
-     Net arm_z/n20522: 1 loads, 1 LSLICEs
-     Net n20528: 2 loads, 2 LSLICEs
-     Net arm_z/step_clk_gen/n32372: 16 loads, 16 LSLICEs
-     Net n12620: 34 loads, 34 LSLICEs
-     Net n32379: 6 loads, 6 LSLICEs
-     Net arm_a/n32380: 5 loads, 5 LSLICEs
-     Net arm_a/n20536: 1 loads, 1 LSLICEs
-     Net arm_a/step_clk_gen/n32373: 16 loads, 16 LSLICEs
-     Net arm_y/n12954: 34 loads, 34 LSLICEs
-     Net arm_y/n20514: 1 loads, 1 LSLICEs
-     Net n12434: 11 loads, 11 LSLICEs
-     Net arm_y/n32397: 7 loads, 7 LSLICEs
-     Net arm_y/n32398: 5 loads, 5 LSLICEs
-     Net arm_y/n20526: 1 loads, 1 LSLICEs
-     Net arm_y/step_clk_gen/n32371: 16 loads, 16 LSLICEs
-     Net n28352: 1 loads, 1 LSLICEs
-     Net n12030: 4 loads, 4 LSLICEs
-     Net n28337: 1 loads, 1 LSLICEs
-     Net n12031: 4 loads, 4 LSLICEs
-     Net n11987: 4 loads, 4 LSLICEs
-     Net n28331: 1 loads, 1 LSLICEs
-     Net n12138: 4 loads, 4 LSLICEs
-     Net n28345: 1 loads, 1 LSLICEs
-     Net rc_receiver/recv_ch2/n28223: 1 loads, 1 LSLICEs
-     Net n32374: 4 loads, 4 LSLICEs
-     Net n28339: 1 loads, 1 LSLICEs
-     Net protocol_interface/n32450: 4 loads, 4 LSLICEs
-     Net protocol_interface/n2539: 6 loads, 6 LSLICEs
-     Net protocol_interface/n32440: 4 loads, 4 LSLICEs
-     Net protocol_interface/n12022: 12 loads, 12 LSLICEs
-     Net protocol_interface/n2541: 16 loads, 16 LSLICEs
-     Net protocol_interface/n28397: 1 loads, 1 LSLICEs
-     Net protocol_interface/n7986: 14 loads, 14 LSLICEs
-     Net protocol_interface/uart_output/n7984: 4 loads, 4 LSLICEs
-     Net protocol_interface/uart_output/n12208: 2 loads, 2 LSLICEs
+     Net n8894: 4 loads, 4 LSLICEs
+     Net n30383: 8 loads, 8 LSLICEs
+     Net n13574: 6 loads, 6 LSLICEs
+     Net qreset: 32 loads, 32 LSLICEs
+     Net n14013: 16 loads, 16 LSLICEs
+     Net left_encoder/n14536: 16 loads, 16 LSLICEs
+     Net arm_z/n21775: 1 loads, 1 LSLICEs
+     Net arm_z/n13591: 4 loads, 4 LSLICEs
+     Net n22_adj_523: 1 loads, 1 LSLICEs
+     Net n30317: 16 loads, 16 LSLICEs
+     Net arm_z/step_clk_gen/n30301: 16 loads, 16 LSLICEs
+     Net motor_serial/n2635: 6 loads, 6 LSLICEs
+     Net motor_serial/n13546: 1 loads, 1 LSLICEs
+     Net motor_serial/n30323: 4 loads, 4 LSLICEs
+     Net motor_serial/n21773: 1 loads, 1 LSLICEs
+     Net motor_serial/n30322: 5 loads, 5 LSLICEs
+     Net n30314: 3 loads, 3 LSLICEs
+     Net n13534: 3 loads, 3 LSLICEs
+     Net motor_serial/sserial/n30304: 4 loads, 4 LSLICEs
+     Net motor_serial/sserial/sender/n29690: 1 loads, 1 LSLICEs
+     Net motor_serial/sserial/sender/n9039: 4 loads, 4 LSLICEs
+     Net motor_serial/sserial/sender/n14316: 2 loads, 2 LSLICEs
+     Net protocol_interface/n2621: 6 loads, 6 LSLICEs
+     Net protocol_interface/n30359: 3 loads, 3 LSLICEs
+     Net protocol_interface/n13571: 4 loads, 4 LSLICEs
+     Net protocol_interface/n2623: 16 loads, 16 LSLICEs
+     Net protocol_interface/n14398: 11 loads, 11 LSLICEs
+     Net n2673: 34 loads, 34 LSLICEs
+     Net protocol_interface/n2046: 1 loads, 1 LSLICEs
+     Net protocol_interface/n9055: 16 loads, 16 LSLICEs
+     Net protocol_interface/uart_output/n13441: 2 loads, 2 LSLICEs
+     Net protocol_interface/uart_output/n9037: 4 loads, 4 LSLICEs
+     Net protocol_interface/uart_output/n29554: 1 loads, 1 LSLICEs
      Net protocol_interface/uart_output/n17: 1 loads, 1 LSLICEs
-     Net protocol_interface/uart_output/n31990: 1 loads, 1 LSLICEs
-     Net arm_x/n12540: 2 loads, 2 LSLICEs
-     Net arm_x/n32382: 3 loads, 3 LSLICEs
-     Net arm_x/n12480: 12 loads, 12 LSLICEs
-     Net arm_x/n32376: 6 loads, 6 LSLICEs
-     Net arm_x/n11: 1 loads, 1 LSLICEs
-     Net arm_x/step_clk_gen/n32370: 16 loads, 16 LSLICEs
-   Number of LSRs:  46
-     Net motor_pwm/n8052: 8 loads, 8 LSLICEs
-     Net n34349: 30 loads, 30 LSLICEs
-     Net n34353: 26 loads, 26 LSLICEs
-     Net motor_pwm/right/n8031: 7 loads, 7 LSLICEs
-     Net n14322: 4 loads, 4 LSLICEs
-     Net n14473: 4 loads, 4 LSLICEs
-     Net motor_pwm/left/n8027: 6 loads, 6 LSLICEs
-     Net n32400: 8 loads, 8 LSLICEs
-     Net n34348: 31 loads, 31 LSLICEs
-     Net n34350: 29 loads, 29 LSLICEs
-     Net n32463: 12 loads, 12 LSLICEs
-     Net n34351: 29 loads, 29 LSLICEs
-     Net n34352: 27 loads, 27 LSLICEs
-     Net n14446: 4 loads, 4 LSLICEs
-     Net n32388: 8 loads, 8 LSLICEs
-     Net n8048: 16 loads, 16 LSLICEs
-     Net global_control/n14414: 1 loads, 1 LSLICEs
-     Net global_control/n14413: 1 loads, 1 LSLICEs
-     Net global_control/uptime_div/n2595: 17 loads, 17 LSLICEs
-     Net arm_z/n9610: 1 loads, 1 LSLICEs
-     Net arm_z/step_clk_gen/n32372: 17 loads, 17 LSLICEs
-     Net arm_z/step_clk_gen/n14407: 16 loads, 16 LSLICEs
-     Net arm_a/n9608: 1 loads, 1 LSLICEs
-     Net arm_a/step_clk_gen/n32373: 17 loads, 17 LSLICEs
-     Net arm_a/step_clk_gen/n14422: 16 loads, 16 LSLICEs
-     Net arm_y/n9612: 1 loads, 1 LSLICEs
-     Net arm_y/step_clk_gen/n14396: 16 loads, 16 LSLICEs
-     Net arm_y/step_clk_gen/n32371: 17 loads, 17 LSLICEs
-     Net rc_receiver/n32460: 8 loads, 8 LSLICEs
-     Net rc_receiver/recv_ch8/n14198: 4 loads, 4 LSLICEs
-     Net rc_receiver/recv_ch7/n14177: 4 loads, 4 LSLICEs
-     Net rc_receiver/recv_ch4/n14143: 4 loads, 4 LSLICEs
-     Net rc_receiver/recv_ch3/n14451: 4 loads, 4 LSLICEs
-     Net rc_receiver/recv_ch1/n14448: 4 loads, 4 LSLICEs
-     Net protocol_interface/n32452: 24 loads, 24 LSLICEs
-     Net protocol_interface/n32415: 2 loads, 2 LSLICEs
-     Net protocol_interface/n34346: 28 loads, 28 LSLICEs
-     Net protocol_interface/n14425: 3 loads, 3 LSLICEs
-     Net protocol_interface/n14122: 2 loads, 2 LSLICEs
-     Net protocol_interface/uart_output/baud_gen/n14394: 17 loads, 17 LSLICEs
+     Net arm_y/n13318: 14 loads, 14 LSLICEs
+     Net arm_y/n30309: 3 loads, 3 LSLICEs
+     Net arm_y/n13335: 2 loads, 2 LSLICEs
+     Net n22: 1 loads, 1 LSLICEs
+     Net arm_y/step_clk_gen/n30302: 16 loads, 16 LSLICEs
+     Net n30303: 66 loads, 60 LSLICEs
+     Net n26601: 1 loads, 1 LSLICEs
+     Net n26592: 1 loads, 1 LSLICEs
+     Net n26596: 1 loads, 1 LSLICEs
+     Net n13624: 4 loads, 4 LSLICEs
+     Net n14284: 4 loads, 4 LSLICEs
+     Net n14306: 4 loads, 4 LSLICEs
+     Net n14307: 4 loads, 4 LSLICEs
+     Net n14308: 4 loads, 4 LSLICEs
+     Net n14309: 4 loads, 4 LSLICEs
+     Net n26618: 1 loads, 1 LSLICEs
+     Net n26607: 1 loads, 1 LSLICEs
+     Net n26604: 1 loads, 1 LSLICEs
+     Net arm_x/n13511: 14 loads, 14 LSLICEs
+     Net n24: 1 loads, 1 LSLICEs
+     Net arm_x/step_clk_gen/n30299: 16 loads, 16 LSLICEs
+     Net arm_a/n13605: 7 loads, 7 LSLICEs
+     Net arm_a/n8919: 17 loads, 17 LSLICEs
+     Net arm_a/n13: 1 loads, 1 LSLICEs
+     Net arm_a/step_clk_gen/n30300: 16 loads, 16 LSLICEs
+   Number of LSRs:  50
+     Net n32384: 29 loads, 29 LSLICEs
+     Net n32381: 30 loads, 30 LSLICEs
+     Net n32385: 30 loads, 30 LSLICEs
+     Net n9118: 15 loads, 15 LSLICEs
+     Net n30395: 8 loads, 8 LSLICEs
+     Net global_control/n16115: 1 loads, 1 LSLICEs
+     Net global_control/n16116: 1 loads, 1 LSLICEs
+     Net global_control/uptime_div/n2686: 17 loads, 17 LSLICEs
+     Net n32382: 32 loads, 32 LSLICEs
+     Net n32383: 28 loads, 28 LSLICEs
+     Net n32386: 26 loads, 26 LSLICEs
+     Net n9136: 29 loads, 29 LSLICEs
+     Net n9128: 23 loads, 23 LSLICEs
+     Net n30342: 15 loads, 15 LSLICEs
+     Net n9125: 32 loads, 32 LSLICEs
+     Net n26671: 1 loads, 1 LSLICEs
+     Net n30340: 3 loads, 3 LSLICEs
+     Net n30321: 29 loads, 29 LSLICEs
+     Net n9122: 4 loads, 4 LSLICEs
+     Net qreset: 32 loads, 32 LSLICEs
+     Net clk_100Hz_divider/n2676: 17 loads, 17 LSLICEs
+     Net arm_z/n11679: 1 loads, 1 LSLICEs
+     Net arm_z/step_clk_gen/n30301: 17 loads, 17 LSLICEs
+     Net arm_z/step_clk_gen/n16222: 16 loads, 16 LSLICEs
+     Net motor_serial/sserial/sender/baud_gen/n16173: 17 loads, 17 LSLICEs
+     Net motor_serial/sserial/baud_gen/n2777: 17 loads, 17 LSLICEs
+     Net protocol_interface/n9116: 3 loads, 3 LSLICEs
+     Net protocol_interface/n30357: 23 loads, 23 LSLICEs
+     Net protocol_interface/n32388: 34 loads, 34 LSLICEs
+     Net protocol_interface/n16120: 3 loads, 3 LSLICEs
+     Net protocol_interface/n18556: 2 loads, 2 LSLICEs
+     Net protocol_interface/uart_output/baud_gen/n16172: 17 loads, 17 LSLICEs
      Net protocol_interface/uart_input/baud_reset: 1 loads, 1 LSLICEs
-     Net protocol_interface/uart_input/n2687: 17 loads, 17 LSLICEs
-     Net arm_x/n9614: 1 loads, 1 LSLICEs
-     Net arm_x/step_clk_gen/n32370: 17 loads, 17 LSLICEs
-     Net arm_x/step_clk_gen/n14150: 16 loads, 16 LSLICEs
-     Net pwm_clk_div/n2550: 17 loads, 17 LSLICEs
+     Net protocol_interface/uart_input/baud_gen/n2773: 17 loads, 17 LSLICEs
+     Net arm_y/n10718: 1 loads, 1 LSLICEs
+     Net arm_y/step_clk_gen/n30302: 17 loads, 17 LSLICEs
+     Net arm_y/step_clk_gen/n16213: 16 loads, 16 LSLICEs
+     Net pwm_clk_div/n2639: 17 loads, 17 LSLICEs
+     Net rc_receiver/recv_ch8/n16316: 4 loads, 4 LSLICEs
+     Net rc_receiver/recv_ch7/n16259: 4 loads, 4 LSLICEs
+     Net rc_receiver/recv_ch4/n16272: 4 loads, 4 LSLICEs
+     Net rc_receiver/recv_ch3/n16274: 4 loads, 4 LSLICEs
+     Net rc_receiver/recv_ch2/n16276: 4 loads, 4 LSLICEs
+     Net rc_receiver/recv_ch1/n16278: 4 loads, 4 LSLICEs
+     Net arm_x/n10750: 1 loads, 1 LSLICEs
+     Net arm_x/step_clk_gen/n30299: 17 loads, 17 LSLICEs
+     Net arm_x/step_clk_gen/n16283: 16 loads, 16 LSLICEs
+     Net arm_a/n11663: 1 loads, 1 LSLICEs
+     Net arm_a/step_clk_gen/n30300: 17 loads, 17 LSLICEs
+     Net arm_a/step_clk_gen/n16223: 16 loads, 16 LSLICEs
    Number of nets driven by tri-state buffers:  0
    Top 10 highest fanout non-clock nets:
-     Net register_addr_0: 210 loads
-     Net register_addr_1: 130 loads
-     Net rw: 94 loads
-     Net n32375: 92 loads
-     Net n34347: 65 loads
-     Net n32469: 64 loads
-     Net protocol_interface/n1314: 60 loads
-     Net n32527: 48 loads
-     Net protocol_interface/n1315: 45 loads
-     Net protocol_interface/n1305: 41 loads
+     Net register_addr_0: 273 loads
+     Net register_addr_1: 168 loads
+     Net rw: 90 loads
+     Net n32380: 73 loads
+     Net n30303: 72 loads
+     Net qreset: 66 loads
+     Net protocol_interface/n1323: 60 loads
+     Net protocol_interface/n1324: 45 loads
+     Net select_3: 40 loads
+     Net protocol_interface/n1314: 39 loads
  
 
-   Number of warnings:  12
+   Number of warnings:  0
    Number of errors:    0
 
 
 
 Total CPU Time: 2 secs  
 Total REAL Time: 2 secs  
-Peak Memory Usage: 202 MB
+Peak Memory Usage: 204 MB
 
 Dumping design to file Uniboard_verilog_impl1_map.ncd.
 
@@ -238,10 +233,10 @@ Removing old design directory at request of -rem command line option to this pro
 Running par. Please wait . . .
 
 Lattice Place and Route Report for Design "Uniboard_verilog_impl1_map.ncd"
-Thu Mar 24 13:09:26 2016
+Thu Apr  7 06:50:04 2016
 
 PAR: Place And Route Diamond (64-bit) 3.4.1.213.
-Command Line: par -w -l 5 -i 6 -t 1 -c 0 -e 0 -gui -exp parUseNBR=1:parCDP=0:parCDR=0:parPathBased=OFF Uniboard_verilog_impl1_map.ncd Uniboard_verilog_impl1.dir/5_1.ncd Uniboard_verilog_impl1.prf
+Command Line: par -w -l 5 -i 6 -t 1 -c 0 -e 0 -gui -msgset /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/promote.xml -exp parUseNBR=1:parCDP=0:parCDR=0:parPathBased=OFF Uniboard_verilog_impl1_map.ncd Uniboard_verilog_impl1.dir/5_1.ncd Uniboard_verilog_impl1.prf
 Preference file: Uniboard_verilog_impl1.prf.
 Placement level-cost: 5-1.
 Routing Iterations: 6
@@ -256,57 +251,54 @@ Performance: 4
 Loading device for application par from file 'xo2c7000.nph' in environment: /usr/local/diamond/3.4_x64/ispfpga.
 Package Status:                     Final          Version 1.39.
 Performance Hardware Data Status:   Final          Version 30.4.
-Your license expires in 5 days.
-
-A new par free license can be generated from the Lattice website. A par subscription license can be purchased from your local Lattice sales representative or from the Lattice website. For more information on par software refer to http://www.latticesemi.com/latticediamond .
 License checked out.
 
 
 Ignore Preference Error(s):  True
 Device utilization summary:
 
-   PIO (prelim)   62+4(JTAG)/336     20% used
-                  62+4(JTAG)/115     57% bonded
-   IOLOGIC           11/336           3% used
+   PIO (prelim)   68+4(JTAG)/336     21% used
+                  68+4(JTAG)/115     63% bonded
+   IOLOGIC           14/336           4% used
 
-   SLICE           1495/3432         43% used
+   SLICE           1736/3432         50% used
 
 
 
-Number of Signals: 4226
-Number of Connections: 10975
+Number of Signals: 4934
+Number of Connections: 12758
 
 Pin Constraint Summary:
-   62 out of 62 pins locked (100% locked).
+   68 out of 68 pins locked (100% locked).
 
 The following 1 signal is selected to use the primary clock routing resources:
-    debug_c_c (driver: clk_12MHz, clk load #: 818)
+    debug_c_c (driver: clk_12MHz, clk load #: 992)
 
 
 The following 8 signals are selected to use the secondary clock routing resources:
-    n32375 (driver: SLICE_1335, clk load #: 0, sr load #: 0, ce load #: 82)
-    n11981 (driver: SLICE_1607, clk load #: 0, sr load #: 0, ce load #: 34)
-    n12620 (driver: SLICE_1607, clk load #: 0, sr load #: 0, ce load #: 34)
-    arm_y/n12954 (driver: SLICE_1684, clk load #: 0, sr load #: 0, ce load #: 34)
-    n11966 (driver: SLICE_1383, clk load #: 0, sr load #: 0, ce load #: 33)
-    arm_z/step_clk_gen/n32372 (driver: arm_z/SLICE_1613, clk load #: 0, sr load #: 17, ce load #: 16)
-    arm_a/step_clk_gen/n32373 (driver: arm_a/SLICE_1614, clk load #: 0, sr load #: 17, ce load #: 16)
-    arm_y/step_clk_gen/n32371 (driver: arm_y/SLICE_1615, clk load #: 0, sr load #: 17, ce load #: 16)
+    n30303 (driver: SLICE_1717, clk load #: 0, sr load #: 0, ce load #: 66)
+    qreset (driver: left_encoder/SLICE_1611, clk load #: 0, sr load #: 32, ce load #: 32)
+    n14121 (driver: SLICE_1573, clk load #: 0, sr load #: 0, ce load #: 34)
+    n13589 (driver: SLICE_1263, clk load #: 0, sr load #: 0, ce load #: 34)
+    n13918 (driver: SLICE_1258, clk load #: 0, sr load #: 0, ce load #: 34)
+    protocol_interface/n32388 (driver: protocol_interface/uart_output/SLICE_1818, clk load #: 0, sr load #: 34, ce load #: 0)
+    n2673 (driver: SLICE_789, clk load #: 0, sr load #: 0, ce load #: 34)
+    n2644 (driver: SLICE_1583, clk load #: 0, sr load #: 0, ce load #: 33)
 
 No signal is selected as Global Set/Reset.
 Starting Placer Phase 0.
-...........
-Finished Placer Phase 0.  REAL time: 5 secs 
+..........
+Finished Placer Phase 0.  REAL time: 6 secs 
 
 Starting Placer Phase 1.
 .......................
-Placer score = 785282.
-Finished Placer Phase 1.  REAL time: 22 secs 
+Placer score = 889375.
+Finished Placer Phase 1.  REAL time: 24 secs 
 
 Starting Placer Phase 2.
 .
-Placer score =  767873
-Finished Placer Phase 2.  REAL time: 23 secs 
+Placer score =  870655
+Finished Placer Phase 2.  REAL time: 25 secs 
 
 
 ------------------ Clock Report ------------------
@@ -318,15 +310,15 @@ Global Clock Resources:
   DCC        : 0 out of 8 (0%)
 
 Quadrants All (TL, TR, BL, BR) - Global Clocks:
-  PRIMARY "debug_c_c" from comp "clk_12MHz" on CLK_PIN site "128 (PT18A)", clk load = 818
-  SECONDARY "n32375" from F1 on comp "SLICE_1335" on site "R14C20C", clk load = 0, ce load = 82, sr load = 0
-  SECONDARY "n11981" from F0 on comp "SLICE_1607" on site "R21C18D", clk load = 0, ce load = 34, sr load = 0
-  SECONDARY "n12620" from F1 on comp "SLICE_1607" on site "R21C18D", clk load = 0, ce load = 34, sr load = 0
-  SECONDARY "arm_y/n12954" from F0 on comp "SLICE_1684" on site "R14C18C", clk load = 0, ce load = 34, sr load = 0
-  SECONDARY "n11966" from F0 on comp "SLICE_1383" on site "R21C18B", clk load = 0, ce load = 33, sr load = 0
-  SECONDARY "arm_z/step_clk_gen/n32372" from F0 on comp "arm_z/SLICE_1613" on site "R21C18A", clk load = 0, ce load = 16, sr load = 17
-  SECONDARY "arm_a/step_clk_gen/n32373" from F0 on comp "arm_a/SLICE_1614" on site "R14C20A", clk load = 0, ce load = 16, sr load = 17
-  SECONDARY "arm_y/step_clk_gen/n32371" from F1 on comp "arm_y/SLICE_1615" on site "R21C20A", clk load = 0, ce load = 16, sr load = 17
+  PRIMARY "debug_c_c" from comp "clk_12MHz" on CLK_PIN site "128 (PT18A)", clk load = 992
+  SECONDARY "n30303" from F0 on comp "SLICE_1717" on site "R14C18D", clk load = 0, ce load = 66, sr load = 0
+  SECONDARY "qreset" from F0 on comp "left_encoder/SLICE_1611" on site "R21C20B", clk load = 0, ce load = 32, sr load = 32
+  SECONDARY "n14121" from F0 on comp "SLICE_1573" on site "R14C20A", clk load = 0, ce load = 34, sr load = 0
+  SECONDARY "n13589" from F1 on comp "SLICE_1263" on site "R14C20C", clk load = 0, ce load = 34, sr load = 0
+  SECONDARY "n13918" from F1 on comp "SLICE_1258" on site "R14C18B", clk load = 0, ce load = 34, sr load = 0
+  SECONDARY "protocol_interface/n32388" from F1 on comp "protocol_interface/uart_output/SLICE_1818" on site "R14C18A", clk load = 0, ce load = 0, sr load = 34
+  SECONDARY "n2673" from F1 on comp "SLICE_789" on site "R14C20D", clk load = 0, ce load = 34, sr load = 0
+  SECONDARY "n2644" from F0 on comp "SLICE_1583" on site "R14C20B", clk load = 0, ce load = 33, sr load = 0
 
   PRIMARY  : 1 out of 8 (12%)
   SECONDARY: 8 out of 8 (100%)
@@ -338,9 +330,9 @@ Edge Clocks:
 
 
 I/O Usage Summary (final):
-   62 + 4(JTAG) out of 336 (19.6%) PIO sites used.
-   62 + 4(JTAG) out of 115 (57.4%) bonded PIO sites used.
-   Number of PIO comps: 62; differential: 0.
+   68 + 4(JTAG) out of 336 (21.4%) PIO sites used.
+   68 + 4(JTAG) out of 115 (62.6%) bonded PIO sites used.
+   Number of PIO comps: 68; differential: 0.
    Number of Vref pins used: 0.
 
 I/O Bank Usage Summary:
@@ -349,24 +341,24 @@ I/O Bank Usage Summary:
 +----------+----------------+------------+-----------+
 | 0        | 14 / 28 ( 50%) | 2.5V       | -         |
 | 1        | 26 / 29 ( 89%) | 2.5V       | -         |
-| 2        | 19 / 29 ( 65%) | 2.5V       | -         |
+| 2        | 25 / 29 ( 86%) | 2.5V       | -         |
 | 3        | 0 / 9 (  0%)   | -          | -         |
 | 4        | 0 / 10 (  0%)  | -          | -         |
 | 5        | 3 / 10 ( 30%)  | 2.5V       | -         |
 +----------+----------------+------------+-----------+
 
-Total placer CPU time: 23 secs 
+Total placer CPU time: 24 secs 
 
 Dumping design to file Uniboard_verilog_impl1.dir/5_1.ncd.
 
-0 connections routed; 10975 unrouted.
+0 connections routed; 12758 unrouted.
 Starting router resource preassignment
 
-    <postMsg mid="66011008" type="Warning" dynamic="1" navigation="0" arg0="&#xA;   Signal=select[7] loads=18 clock_loads=9&#xA;   Signal=\protocol_interface/uart_output/bclk loads=9 clock_loads=9"  />
+    <postMsg mid="66011008" type="Warning" dynamic="1" navigation="0" arg0="&#xA;   Signal=\motor_serial/sserial/sender/bclk loads=8 clock_loads=8&#xA;   Signal=select[7] loads=12 clock_loads=9&#xA;   Signal=\protocol_interface/uart_output/bclk loads=9 clock_loads=9"  />
 
-Completed router resource preassignment. Real time: 28 secs 
+Completed router resource preassignment. Real time: 29 secs 
 
-Start NBR router at Thu Mar 24 13:09:54 PDT 2016
+Start NBR router at Thu Apr 07 06:50:33 PDT 2016
 
 *****************************************************************
 Info: NBR allows conflicts(one node used by more than one signal)
@@ -381,121 +373,86 @@ Note: NBR uses a different method to calculate timing slacks. The
       your design. Thanks.                                       
 *****************************************************************
 
-Start NBR special constraint process at Thu Mar 24 13:09:54 PDT 2016
+Start NBR special constraint process at Thu Apr 07 06:50:33 PDT 2016
 
-Start NBR section for initial routing at Thu Mar 24 13:09:55 PDT 2016
+Start NBR section for initial routing at Thu Apr 07 06:50:34 PDT 2016
 Level 4, iteration 1
-442(0.12%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: 61.532ns/0.000ns; real time: 31 secs 
+427(0.11%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 61.201ns/0.000ns; real time: 32 secs 
 
 Info: Initial congestion level at 75% usage is 0
 Info: Initial congestion area  at 75% usage is 0 (0.00%)
 
-Start NBR section for normal routing at Thu Mar 24 13:09:57 PDT 2016
+Start NBR section for normal routing at Thu Apr 07 06:50:36 PDT 2016
 Level 4, iteration 1
-203(0.05%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: 61.513ns/0.000ns; real time: 32 secs 
+179(0.05%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 59.539ns/0.000ns; real time: 33 secs 
 Level 4, iteration 2
-67(0.02%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: 61.555ns/0.000ns; real time: 32 secs 
+73(0.02%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 59.142ns/0.000ns; real time: 34 secs 
 Level 4, iteration 3
-25(0.01%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: 61.555ns/0.000ns; real time: 32 secs 
+19(0.01%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 59.142ns/0.000ns; real time: 34 secs 
 Level 4, iteration 4
-6(0.00%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: 61.555ns/0.000ns; real time: 32 secs 
+5(0.00%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 59.142ns/0.000ns; real time: 34 secs 
 Level 4, iteration 5
-3(0.00%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: 61.555ns/0.000ns; real time: 33 secs 
+2(0.00%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 59.142ns/0.000ns; real time: 34 secs 
 Level 4, iteration 6
-3(0.00%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: 61.555ns/0.000ns; real time: 33 secs 
-Level 4, iteration 7
 0(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: 61.555ns/0.000ns; real time: 33 secs 
+Estimated worst slack/total negative slack<setup>: 59.142ns/0.000ns; real time: 34 secs 
 
-Start NBR section for setup/hold timing optimization with effort level 3 at Thu Mar 24 13:09:59 PDT 2016
-    <postMsg mid="62001131" type="Warning" dynamic="9" navigation="0" arg0="-0.789" arg1="0" arg2="1" arg3="1" arg4="rc_receiver/i25054/SLICE_1313" arg5="OFX0" arg6="rc_receiver/SLICE_1095" arg7="FXA" arg8="rc_receiver/n31807"  />
-    <postMsg mid="62001131" type="Warning" dynamic="9" navigation="0" arg0="-0.762" arg1="0" arg2="1" arg3="1" arg4="rc_receiver/SLICE_1095" arg5="OFX0" arg6="rc_receiver/SLICE_1095" arg7="FXB" arg8="rc_receiver/n31804"  />
-    <postMsg mid="62001131" type="Warning" dynamic="9" navigation="0" arg0="-0.789" arg1="0" arg2="1" arg3="1" arg4="rc_receiver/SLICE_1095" arg5="OFX1" arg6="rc_receiver/SLICE_1095" arg7="DI1" arg8="rc_receiver/n31808"  />
-    <postMsg mid="62001131" type="Warning" dynamic="9" navigation="0" arg0="-0.483" arg1="0" arg2="1" arg3="1" arg4="SLICE_1087" arg5="F0" arg6="SLICE_1087" arg7="DI0" arg8="rc_receiver/n176"  />
-    <postMsg mid="62001131" type="Warning" dynamic="9" navigation="0" arg0="-0.333" arg1="0" arg2="1" arg3="1" arg4="rc_receiver/SLICE_1088" arg5="OFX0" arg6="rc_receiver/SLICE_1088" arg7="FXB" arg8="rc_receiver/n31527"  />
-    <postMsg mid="62001131" type="Warning" dynamic="9" navigation="0" arg0="-0.322" arg1="0" arg2="1" arg3="1" arg4="rc_receiver/i25029/SLICE_1315" arg5="OFX0" arg6="rc_receiver/SLICE_1091" arg7="FXA" arg8="rc_receiver/n31774"  />
-    <postMsg mid="62001131" type="Warning" dynamic="9" navigation="0" arg0="-0.322" arg1="0" arg2="1" arg3="1" arg4="rc_receiver/SLICE_1091" arg5="OFX0" arg6="rc_receiver/SLICE_1091" arg7="FXB" arg8="rc_receiver/n31771"  />
-    <postMsg mid="62001131" type="Warning" dynamic="9" navigation="0" arg0="-0.474" arg1="0" arg2="1" arg3="1" arg4="rc_receiver/SLICE_1091" arg5="OFX1" arg6="rc_receiver/SLICE_1091" arg7="DI1" arg8="rc_receiver/n31775"  />
-    <postMsg mid="62001131" type="Warning" dynamic="9" navigation="0" arg0="-0.333" arg1="0" arg2="1" arg3="1" arg4="rc_receiver/SLICE_1088" arg5="OFX1" arg6="rc_receiver/SLICE_1088" arg7="DI1" arg8="rc_receiver/n31531"  />
-    <postMsg mid="62001131" type="Warning" dynamic="9" navigation="0" arg0="-0.578" arg1="0" arg2="1" arg3="1" arg4="rc_receiver/SLICE_1094" arg5="OFX1" arg6="rc_receiver/SLICE_1094" arg7="DI1" arg8="rc_receiver/n32233"  />
-    <postMsg mid="62001131" type="Warning" dynamic="9" navigation="0" arg0="-0.246" arg1="0" arg2="1" arg3="1" arg4="rc_receiver/SLICE_1093" arg5="OFX1" arg6="rc_receiver/SLICE_1093" arg7="DI1" arg8="rc_receiver/n32319"  />
-    <postMsg mid="62001131" type="Warning" dynamic="9" navigation="0" arg0="-0.375" arg1="0" arg2="1" arg3="1" arg4="rc_receiver/SLICE_1092" arg5="OFX1" arg6="rc_receiver/SLICE_1092" arg7="DI1" arg8="rc_receiver/n32289"  />
-    <postMsg mid="62001131" type="Warning" dynamic="9" navigation="0" arg0="-0.664" arg1="0" arg2="1" arg3="1" arg4="rc_receiver/SLICE_1090" arg5="OFX1" arg6="rc_receiver/SLICE_1090" arg7="DI1" arg8="rc_receiver/n32272"  />
-    <postMsg mid="62001131" type="Warning" dynamic="9" navigation="0" arg0="-0.357" arg1="0" arg2="1" arg3="1" arg4="rc_receiver/SLICE_1089" arg5="OFX1" arg6="rc_receiver/SLICE_1089" arg7="DI1" arg8="rc_receiver/n32359"  />
-    <postMsg mid="62001131" type="Warning" dynamic="9" navigation="0" arg0="-0.165" arg1="0" arg2="1" arg3="1" arg4="rc_receiver/i25273/SLICE_1317" arg5="OFX0" arg6="rc_receiver/SLICE_1089" arg7="FXA" arg8="rc_receiver/n32358"  />
-    <postMsg mid="62001131" type="Warning" dynamic="9" navigation="0" arg0="-0.221" arg1="0" arg2="1" arg3="1" arg4="rc_receiver/SLICE_1089" arg5="OFX0" arg6="rc_receiver/SLICE_1089" arg7="FXB" arg8="rc_receiver/n32355"  />
-    <postMsg mid="62001131" type="Warning" dynamic="9" navigation="0" arg0="-0.165" arg1="0" arg2="1" arg3="1" arg4="rc_receiver/i25240/SLICE_1318" arg5="OFX0" arg6="rc_receiver/SLICE_1093" arg7="FXA" arg8="rc_receiver/n32318"  />
-    <postMsg mid="62001131" type="Warning" dynamic="9" navigation="0" arg0="-0.115" arg1="0" arg2="1" arg3="1" arg4="rc_receiver/SLICE_1093" arg5="OFX0" arg6="rc_receiver/SLICE_1093" arg7="FXB" arg8="rc_receiver/n32315"  />
-    <postMsg mid="62001131" type="Warning" dynamic="9" navigation="0" arg0="-0.375" arg1="0" arg2="1" arg3="1" arg4="rc_receiver/i25219/SLICE_1319" arg5="OFX0" arg6="rc_receiver/SLICE_1092" arg7="FXA" arg8="rc_receiver/n32288"  />
-    <postMsg mid="62001131" type="Warning" dynamic="9" navigation="0" arg0="-0.322" arg1="0" arg2="1" arg3="1" arg4="rc_receiver/SLICE_1092" arg5="OFX0" arg6="rc_receiver/SLICE_1092" arg7="FXB" arg8="rc_receiver/n32285"  />
-    <postMsg mid="62001131" type="Warning" dynamic="9" navigation="0" arg0="-0.421" arg1="0" arg2="1" arg3="1" arg4="rc_receiver/i25209/SLICE_1320" arg5="OFX0" arg6="rc_receiver/SLICE_1090" arg7="FXA" arg8="rc_receiver/n32271"  />
+Start NBR section for setup/hold timing optimization with effort level 3 at Thu Apr 07 06:50:38 PDT 2016
+    <postMsg mid="62001131" type="Warning" dynamic="9" navigation="0" arg0="-0.110" arg1="0" arg2="1" arg3="1" arg4="SLICE_1213" arg5="F0" arg6="SLICE_1213" arg7="DI0" arg8="n176"  />
+    <postMsg mid="62001131" type="Warning" dynamic="9" navigation="0" arg0="-0.751" arg1="0" arg2="1" arg3="1" arg4="motor_serial/sserial/sender/SLICE_1102" arg5="OFX0" arg6="motor_serial/sserial/sender/SLICE_1102" arg7="DI0" arg8="motor_serial/sserial/sender/n30201"  />
+    <postMsg mid="62001131" type="Warning" dynamic="9" navigation="0" arg0="-0.019" arg1="0" arg2="1" arg3="1" arg4="motor_serial/sserial/sender/SLICE_1103" arg5="F1" arg6="motor_serial/sserial/sender/SLICE_1103" arg7="DI1" arg8="motor_serial/sserial/sender/n28246"  />
+    <postMsg mid="62001131" type="Warning" dynamic="9" navigation="0" arg0="-0.441" arg1="0" arg2="1" arg3="1" arg4="protocol_interface/uart_output/SLICE_1197" arg5="OFX0" arg6="protocol_interface/uart_output/SLICE_1197" arg7="DI0" arg8="protocol_interface/uart_output/n30204"  />
+    <postMsg mid="62001131" type="Warning" dynamic="9" navigation="0" arg0="-0.623" arg1="0" arg2="1" arg3="1" arg4="rc_receiver/SLICE_1221" arg5="OFX0" arg6="rc_receiver/SLICE_1221" arg7="FXB" arg8="rc_receiver/n29685"  />
+    <postMsg mid="62001131" type="Warning" dynamic="9" navigation="0" arg0="-0.380" arg1="0" arg2="1" arg3="1" arg4="rc_receiver/SLICE_1219" arg5="OFX1" arg6="rc_receiver/SLICE_1219" arg7="DI1" arg8="rc_receiver/n29807"  />
+    <postMsg mid="62001131" type="Warning" dynamic="9" navigation="0" arg0="-0.461" arg1="0" arg2="1" arg3="1" arg4="rc_receiver/SLICE_1220" arg5="OFX1" arg6="rc_receiver/SLICE_1220" arg7="DI1" arg8="rc_receiver/n29314"  />
+    <postMsg mid="62001131" type="Warning" dynamic="9" navigation="0" arg0="-0.313" arg1="0" arg2="1" arg3="1" arg4="rc_receiver/SLICE_1218" arg5="OFX1" arg6="rc_receiver/SLICE_1218" arg7="DI1" arg8="rc_receiver/n30235"  />
+    <postMsg mid="62001131" type="Warning" dynamic="9" navigation="0" arg0="-0.396" arg1="0" arg2="1" arg3="1" arg4="rc_receiver/SLICE_1214" arg5="OFX1" arg6="rc_receiver/SLICE_1214" arg7="DI1" arg8="rc_receiver/n30274"  />
+    <postMsg mid="62001131" type="Warning" dynamic="9" navigation="0" arg0="-0.548" arg1="0" arg2="1" arg3="1" arg4="rc_receiver/SLICE_1217" arg5="OFX1" arg6="rc_receiver/SLICE_1217" arg7="DI1" arg8="rc_receiver/n30198"  />
+    <postMsg mid="62001131" type="Warning" dynamic="9" navigation="0" arg0="-0.319" arg1="0" arg2="1" arg3="1" arg4="rc_receiver/SLICE_1216" arg5="OFX1" arg6="rc_receiver/SLICE_1216" arg7="DI1" arg8="rc_receiver/n29418"  />
+    <postMsg mid="62001131" type="Warning" dynamic="9" navigation="0" arg0="-0.469" arg1="0" arg2="1" arg3="1" arg4="rc_receiver/SLICE_1215" arg5="OFX1" arg6="rc_receiver/SLICE_1215" arg7="DI1" arg8="rc_receiver/n29780"  />
+    <postMsg mid="62001131" type="Warning" dynamic="9" navigation="0" arg0="-0.285" arg1="0" arg2="1" arg3="1" arg4="rc_receiver/i21984/SLICE_1536" arg5="OFX0" arg6="rc_receiver/SLICE_1216" arg7="FXA" arg8="rc_receiver/n29417"  />
+    <postMsg mid="62001131" type="Warning" dynamic="9" navigation="0" arg0="-0.388" arg1="0" arg2="1" arg3="1" arg4="rc_receiver/i21954/SLICE_1540" arg5="OFX0" arg6="rc_receiver/SLICE_1220" arg7="FXA" arg8="rc_receiver/n29313"  />
+    <postMsg mid="62001131" type="Warning" dynamic="9" navigation="0" arg0="-0.461" arg1="0" arg2="1" arg3="1" arg4="rc_receiver/SLICE_1220" arg5="OFX0" arg6="rc_receiver/SLICE_1220" arg7="FXB" arg8="rc_receiver/n29310"  />
+    <postMsg mid="62001131" type="Warning" dynamic="9" navigation="0" arg0="-0.396" arg1="0" arg2="1" arg3="1" arg4="rc_receiver/i22312/SLICE_1537" arg5="OFX0" arg6="rc_receiver/SLICE_1214" arg7="FXA" arg8="rc_receiver/n30273"  />
+    <postMsg mid="62001131" type="Warning" dynamic="9" navigation="0" arg0="-0.313" arg1="0" arg2="1" arg3="1" arg4="rc_receiver/SLICE_1214" arg5="OFX0" arg6="rc_receiver/SLICE_1214" arg7="FXB" arg8="rc_receiver/n30270"  />
+    <postMsg mid="62001131" type="Warning" dynamic="9" navigation="0" arg0="-0.313" arg1="0" arg2="1" arg3="1" arg4="rc_receiver/i22283/SLICE_1538" arg5="OFX0" arg6="rc_receiver/SLICE_1218" arg7="FXA" arg8="rc_receiver/n30234"  />
+    <postMsg mid="62001131" type="Warning" dynamic="9" navigation="0" arg0="-0.313" arg1="0" arg2="1" arg3="1" arg4="rc_receiver/SLICE_1218" arg5="OFX0" arg6="rc_receiver/SLICE_1218" arg7="FXB" arg8="rc_receiver/n30231"  />
+    <postMsg mid="62001131" type="Warning" dynamic="9" navigation="0" arg0="-0.470" arg1="0" arg2="1" arg3="1" arg4="rc_receiver/i22266/SLICE_1539" arg5="OFX0" arg6="rc_receiver/SLICE_1217" arg7="FXA" arg8="rc_receiver/n30197"  />
+    <postMsg mid="62001131" type="Warning" dynamic="9" navigation="0" arg0="-0.548" arg1="0" arg2="1" arg3="1" arg4="rc_receiver/SLICE_1217" arg5="OFX0" arg6="rc_receiver/SLICE_1217" arg7="FXB" arg8="rc_receiver/n30194"  />
+    <postMsg mid="62001131" type="Warning" dynamic="9" navigation="0" arg0="-0.623" arg1="0" arg2="1" arg3="1" arg4="rc_receiver/SLICE_1221" arg5="OFX1" arg6="rc_receiver/SLICE_1221" arg7="DI1" arg8="rc_receiver/n29689"  />
 . . .
 ----------------------------------
 Info: Total 28 connections where the hold timing errors associated cannot be fixed.
 
 Level 4, iteration 0
 Level 4, iteration 1
-5(0.00%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
-Estimated worst slack/total negative slack<hold >: 0.033ns/0.000ns; real time: 43 secs 
+5(0.00%) conflicts; 8(0.06%) untouched conns; 0 (nbr) score; 
+Estimated worst slack/total negative slack<hold >: 0.000ns/0.000ns; real time: 43 secs 
 Level 4, iteration 2
-0(0.00%) conflict; 8(0.07%) untouched conns; 0 (nbr) score; 
-Estimated worst slack/total negative slack<hold >: 0.117ns/0.000ns; real time: 43 secs 
+0(0.00%) conflict; 10(0.08%) untouched conns; 0 (nbr) score; 
+Estimated worst slack/total negative slack<hold >: 0.000ns/0.000ns; real time: 43 secs 
 Level 4, iteration 0
-0(0.00%) conflict; 8(0.07%) untouched conns; 0 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: 61.535ns/0.000ns; real time: 44 secs 
+0(0.00%) conflict; 10(0.08%) untouched conns; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 59.108ns/0.000ns; real time: 44 secs 
 Level 4, iteration 1
+2(0.00%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 59.108ns/0.000ns; real time: 44 secs 
+Level 4, iteration 2
 0(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: 61.535ns/0.000ns; real time: 44 secs 
-    <postMsg mid="62001131" type="Warning" dynamic="9" navigation="0" arg0="-0.421" arg1="0" arg2="1" arg3="1" arg4="rc_receiver/SLICE_1088" arg5="OFX0" arg6="rc_receiver/SLICE_1088" arg7="FXB" arg8="rc_receiver/n31527"  />
-    <postMsg mid="62001131" type="Warning" dynamic="9" navigation="0" arg0="-0.449" arg1="0" arg2="1" arg3="1" arg4="rc_receiver/SLICE_1088" arg5="OFX1" arg6="rc_receiver/SLICE_1088" arg7="DI1" arg8="rc_receiver/n31531"  />
-    <postMsg mid="62001131" type="Warning" dynamic="9" navigation="0" arg0="-0.449" arg1="0" arg2="1" arg3="1" arg4="rc_receiver/i24943/SLICE_1322" arg5="OFX0" arg6="rc_receiver/SLICE_1088" arg7="FXA" arg8="rc_receiver/n31530"  />
-----------------------------------
-Info: Total 3 connections where the hold timing errors associated cannot be fixed.
+Estimated worst slack/total negative slack<setup>: 59.108ns/0.000ns; real time: 44 secs 
 
-Level 4, iteration 0
-0(0.00%) conflict; 0(0.00%) untouched conn; 6780 (nbr) score; 
-Estimated worst slack/total negative slack<hold >: -0.449ns/-6.781ns; real time: 44 secs 
-Level 4, iteration 1
-0(0.00%) conflict; 0(0.00%) untouched conn; 6780 (nbr) score; 
-Estimated worst slack/total negative slack<hold >: -0.449ns/-6.781ns; real time: 44 secs 
-Level 4, iteration 0
-0(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: 61.535ns/0.000ns; real time: 45 secs 
+Start NBR section for re-routing at Thu Apr 07 06:50:49 PDT 2016
 Level 4, iteration 1
 0(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: 61.535ns/0.000ns; real time: 45 secs 
-    <postMsg mid="62001131" type="Warning" dynamic="9" navigation="0" arg0="-0.421" arg1="0" arg2="1" arg3="1" arg4="rc_receiver/SLICE_1088" arg5="OFX0" arg6="rc_receiver/SLICE_1088" arg7="FXB" arg8="rc_receiver/n31527"  />
-    <postMsg mid="62001131" type="Warning" dynamic="9" navigation="0" arg0="-0.449" arg1="0" arg2="1" arg3="1" arg4="rc_receiver/SLICE_1088" arg5="OFX1" arg6="rc_receiver/SLICE_1088" arg7="DI1" arg8="rc_receiver/n31531"  />
-    <postMsg mid="62001131" type="Warning" dynamic="9" navigation="0" arg0="-0.449" arg1="0" arg2="1" arg3="1" arg4="rc_receiver/i24943/SLICE_1322" arg5="OFX0" arg6="rc_receiver/SLICE_1088" arg7="FXA" arg8="rc_receiver/n31530"  />
-----------------------------------
-Info: Total 3 connections where the hold timing errors associated cannot be fixed.
+Estimated worst slack/total negative slack<setup>: 59.128ns/0.000ns; real time: 45 secs 
 
-Level 4, iteration 0
-0(0.00%) conflict; 0(0.00%) untouched conn; 6780 (nbr) score; 
-Estimated worst slack/total negative slack<hold >: -0.449ns/-6.781ns; real time: 45 secs 
-Level 4, iteration 1
-0(0.00%) conflict; 0(0.00%) untouched conn; 6780 (nbr) score; 
-Estimated worst slack/total negative slack<hold >: -0.449ns/-6.781ns; real time: 45 secs 
-Level 4, iteration 0
-0(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: 61.535ns/0.000ns; real time: 46 secs 
-Level 4, iteration 1
-0(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: 61.535ns/0.000ns; real time: 46 secs 
-
-Start NBR section for re-routing at Thu Mar 24 13:10:13 PDT 2016
-Level 4, iteration 1
-0(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: 61.555ns/0.000ns; real time: 47 secs 
-
-Start NBR section for post-routing at Thu Mar 24 13:10:13 PDT 2016
+Start NBR section for post-routing at Thu Apr 07 06:50:49 PDT 2016
 
 End NBR router with 0 unrouted connection
 
@@ -503,23 +460,23 @@ NBR Summary
 -----------
   Number of unrouted connections : 0 (0.00%)
   Number of connections with timing violations : 0 (0.00%)
-  Estimated worst slack<setup> : 61.555ns
+  Estimated worst slack<setup> : 59.128ns
   Timing score<setup> : 0
 -----------
 Notes: The timing info is calculated for SETUP only and all PAR_ADJs are ignored.
 
 
 
-    <postMsg mid="66011008" type="Warning" dynamic="1" navigation="0" arg0="&#xA;   Signal=select[7] loads=18 clock_loads=9&#xA;   Signal=\protocol_interface/uart_output/bclk loads=9 clock_loads=9"  />
+    <postMsg mid="66011008" type="Warning" dynamic="1" navigation="0" arg0="&#xA;   Signal=\motor_serial/sserial/sender/bclk loads=8 clock_loads=8&#xA;   Signal=select[7] loads=12 clock_loads=9&#xA;   Signal=\protocol_interface/uart_output/bclk loads=9 clock_loads=9"  />
 
-Total CPU time 49 secs 
-Total REAL time: 50 secs 
+Total CPU time 47 secs 
+Total REAL time: 48 secs 
 Completely routed.
-End of route.  10975 routed (100.00%); 0 unrouted.
+End of route.  12758 routed (100.00%); 0 unrouted.
 Checking DRC ... 
 No errors found.
 
-Hold time timing score: 5, hold timing errors: 14
+Hold time timing score: 0, hold timing errors: 0
 
 Timing score: 0 
 
@@ -528,14 +485,14 @@ Dumping design to file Uniboard_verilog_impl1.dir/5_1.ncd.
 
 PAR_SUMMARY::Run status = completed
 PAR_SUMMARY::Number of unrouted conns = 0
-PAR_SUMMARY::Worst  slack<setup/<ns>> = 61.555
+PAR_SUMMARY::Worst  slack<setup/<ns>> = 59.128
 PAR_SUMMARY::Timing score<setup/<ns>> = 0.000
-PAR_SUMMARY::Worst  slack<hold /<ns>> = -0.444
-PAR_SUMMARY::Timing score<hold /<ns>> = 5.392
+PAR_SUMMARY::Worst  slack<hold /<ns>> = 0.005
+PAR_SUMMARY::Timing score<hold /<ns>> = 0.000
 PAR_SUMMARY::Number of errors = 0
 
-Total CPU  time to completion: 50 secs 
-Total REAL time to completion: 51 secs 
+Total CPU  time to completion: 48 secs 
+Total REAL time to completion: 49 secs 
 
 par done!
 
@@ -548,9 +505,6 @@ Exiting par with exit code 0
 Exiting mpartrce with exit code 0
 
 bitgen -f "Uniboard_verilog_impl1.t2b" -w "Uniboard_verilog_impl1.ncd" -jedec "Uniboard_verilog_impl1.prf"
-Your license expires in 5 days.
-
-A new bitgen free license can be generated from the Lattice website. A bitgen subscription license can be purchased from your local Lattice sales representative or from the Lattice website. For more information on bitgen software refer to http://www.latticesemi.com/latticediamond .
 
 
 BITGEN: Bitstream Generator Diamond (64-bit) 3.4.1.213

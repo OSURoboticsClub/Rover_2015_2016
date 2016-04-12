@@ -67,8 +67,6 @@ module PWMPeripheral(
 	assign reg_size = select ? read_size : 'bz;
 	assign databus = (select & rw) ? {24'd0, read_value} : 'bz;
 	
-	//TODO: Go to 127 on pause
-	
 	/* Bus handling */
 	always @ (posedge clk_12MHz)			
 		begin

@@ -5,7 +5,7 @@ Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2014 Lattice Semiconductor Corporation,  All rights reserved.
 
-Command: bitgen -g RamCfg:Reset -path /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog -w -jedec -gui Uniboard_verilog_impl1.ncd Uniboard_verilog_impl1.prf 
+Command: bitgen -g RamCfg:Reset -path /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog -w -jedec -gui -msgset /home/nick/Desktop/nickfolder/documents/projects/in-progress/project 5l - OSURC Rover 2016/electrical/uniboard/software/hdl-verilog/promote.xml Uniboard_verilog_impl1.ncd Uniboard_verilog_impl1.prf 
 
 Loading design for application Bitgen from file Uniboard_verilog_impl1.ncd.
 Design name: UniboardTop

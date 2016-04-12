@@ -61,6 +61,9 @@ class Uniboard(object):
 			0x0430:0x6A,
 			0x0432:12000,
 			0x0433:0
+			
+			#Encoders
+			#No writeable bits in this peripheral.
 		}
 		
 		#Dictionary of peripheral masks. For each peripheral register, 1s in the value in this dictionary
@@ -95,6 +98,9 @@ class Uniboard(object):
 			0x0432:0xFFFFFFFF,
 			#0x0433:0xFFFFFFFF #The steps register is completely writeable, but it's modified
 			                   #by the Uniboard, so we pretend it's read-only to prevent mismatches.
+			                
+			#Encoders
+			#No writeable bits in this peripheral.
 		}
 		
 		#Dictionary of register sizes, in bytes.
@@ -142,6 +148,13 @@ class Uniboard(object):
 			0x040B:2,
 			0x040C:2,
 			0x040D:2,
+			
+			#Encoder
+			0x0300:1,
+			0x0301:4,
+			0x0310:1,
+			0x0311:4,
+			
 		}
 		
 		self._arm_data = {
@@ -562,6 +575,47 @@ class Uniboard(object):
 		else:
 			prev_rvalue &= ~0x08
 		self._write_reg(0x04, reg, prev_rvalue)
+	
+	#Encoders
+	def encoder_left_signals(self):
+		"""Returns a tuple (A, B, I) giving the current state of the encoder input lines.
+		   If a line is high, the value in the tuple is 1; if it is low, the value is 0."""
+		reg = self._read_reg(3, 0x00)
+		A = (reg & 0x08) >> 3;
+		B = (reg & 0x04) >> 2;
+		I = (reg & 0x02) >> 1;
+		return (A, B, I)
+	
+	def encoder_right_signals(self):
+		"""Returns a tuple (A, B, I) giving the current state of the encoder input lines.
+		   If a line is high, the value in the tuple is 1; if it is low, the value is 0."""
+		reg = self._read_reg(3, 0x10)
+		A = (reg & 0x08) >> 3;
+		B = (reg & 0x04) >> 2;
+		I = (reg & 0x02) >> 1;
+		return (A, B, I)
+	
+	def encoder_left_rpm(self):
+		"""Returns the current speed of the encoder in RPM as a float.
+		   Positive values indicate forward rotation."""
+		reg = self._read_reg(3, 0x01)
+		if reg >= 2**31:
+			reg = -(2**32 - reg)
+		#The encoder is 2048 PPR, and the speed counter measures the number of pulses that occurred
+		#in the last 10ms. Furthermore, there's a 27:1 gear reduction from the motor to the wheel,
+		#and the quadrature encoding multiples the resolution by four.
+		return -(float(reg) * 60)/(.01*2048*4*27) #Negated to make directions consistent.
+	
+	def encoder_right_rpm(self):
+		"""Returns the current speed of the encoder in RPM as a float.
+		   Positive values indicate forward rotation."""
+		reg = self._read_reg(3, 0x11)
+		if reg >= 2**31:
+			reg = -(2**32 - reg)
+		#The encoder is 2048 PPR, and the speed counter measures the number of pulses that occurred
+		#in the last 10ms. Furthermore, there's a 27:1 gear reduction from the motor to the wheel,
+		#and the quadrature encoding multiples the resolution by four.
+		return (float(reg) * 60)/(.01*2048*4*27)
 	
 	#RC Receiver
 	def rc_valid(self):

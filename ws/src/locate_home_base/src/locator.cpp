@@ -6,16 +6,23 @@
 #include <opencv2/highgui/highgui.hpp>
 
 //header file contains a series of constants that could probably be cleaned up
-#include "HomeBase.hpp"
+#include "HomeBase.h"
 
-/* there is a mix of namespaces used/omitted since this is a combination of ROS opencv tutorial code and code written for the 2015 rover */
+/* there is a mix of namespaces used/omitted since this is a combination of ROS 
+opencv tutorial code and code written for the 2015 rover */
 using namespace cv;
 using namespace std;
+
+vector<float> focalf(2);
+vector<float> focalb(2);
 
 static const std::string OPENCV_WINDOW = "Image window";
 
 /* 
-This class is from a ROS sample, will translate the ROS message to opencv type, processes the video feed, and publish it. Publishing the opencv video can probably be removed in the future, we just want to publish angle and maybe distance for the navigation code to subscribe to.
+This class is from a ROS sample, will translate the ROS message to opencv type, 
+process the video feed, and publish it. Publishing the opencv video can probably 
+be removed in the future, we just want to publish angle and maybe distance for the 
+navigation code to subscribe to.
 */
 class ImageConverter
 {
@@ -23,56 +30,6 @@ class ImageConverter
 	image_transport::ImageTransport it_;
 	image_transport::Subscriber image_sub_;
 	image_transport::Publisher image_pub_;
-	
-/******** BEGIN checkboard detection code (Modified code from 2015) *********
- * These functions are all called within locateChessboard, which is
- * called after the subscribed video from ZED is translated into an opencv
- * compatible type. All are added as private functions just to get 
- * things working but this could use a serious refactor
- */
-
-	/* train the distance to help with estimations
-
-	this calls the focal function to help figure out distances. It is called to generate a set of constants used when checkerboard is found, could be removed from the node altogether it seems
-
-	*/
-	vector<float> trainDistance(int side, Size boardSize){
-		Mat image5, image10;
-		if(side == FRONT){
-			image5 = imread("./src/locate_home_base/src/Front_5m.png"); //read in trained image file
-			image10 = imread("./src/locate_home_base/src/Front_10m.png"); //read in trained image file
-			if (image5.empty() || image10.empty()) {
-				ROS_ERROR_STREAM("Could not find a front training image\n");
-				exit(0);
-			}
-		} else {
-			image5 = imread("./src/locate_home_base/src/Back_5m.png"); //read in trained image file
-			image10 = imread("./src/locate_home_base/src/Back_10m.png"); //read in trained image file
-			if (image5.empty() || image10.empty()) {
-				ROS_ERROR_STREAM("Could not find a back training image\n");
-				exit(0);
-			}
-		}
-
-		vector<vector<Point2f> > imagePoints5(1), imagePoints10(1);
-		bool found5 = findChessboardCorners(image5, boardSize, imagePoints5[0]);
-		bool found10 = findChessboardCorners(image10, boardSize, imagePoints10[0]);
-		if(!(found5 && found10))
-		{
-			ROS_ERROR_STREAM("No boards detected in training\n");
-			return vector<float>();
-		}
-		vector<Point2f> corners5 = getCorners(imagePoints5, boardSize);
-		vector<Point2f> corners10 = getCorners(imagePoints10, boardSize);
-		vector<float> pix_dist5 = getPixDist(corners5);
-		vector<float> pix_dist10 = getPixDist(corners10);
-		vector<float> focal5 = computeFocal(side, pix_dist5, TRAIN_DIST5);
-		vector<float> focal10 = computeFocal(side, pix_dist10, TRAIN_DIST10);
-		vector<float> focal(2);
-		focal[0] = (focal5[0] + focal10[0])/2;
-		focal[1] = (focal5[1] + focal10[1])/2;
-		return focal;
-	}
 
 	// gets the distance between two points
 	float dist(Point2f p1, Point2f p2){
@@ -111,31 +68,6 @@ class ImageConverter
 		return dists;
 	}
 
-	// compute the focal for the board (see training function)
-	vector<float> computeFocal(int side, vector<float> pixDist, float D){
-		//F = (P x  D) / W
-		//float D = TRAIN_DIST; //train distance 22 inches or 558.8mm
-		float Wh, Wv;
-		if(side == FRONT){
-			Wh = FRONT_SZIE * (FRONT_COLS-1); //width of 4 squares (50.8mm) each
-			Wv = FRONT_SZIE * (FRONT_ROWS-1); //width of 3 squares (50.8mm) each
-		} else {
-			Wh = BACK_SZIE * (BACK_COLS-1); //width of 4 squares (50.8mm) each
-			Wv = BACK_SZIE * (BACK_ROWS-1); //width of 3 squares (50.8mm) each
-		}
-		float Fh1 = (pixDist[0] * D) / Wh;
-		float Fh2 = (pixDist[1] * D) / Wh;
-		float Fv1 = (pixDist[2] * D) / Wv;
-		float Fv2 = (pixDist[3] * D) / Wv;
-		float Fh  = (Fh1 + Fh2) / 2;
-		float Fv  = (Fv1 + Fv2) / 2;
-
-		vector<float> focal(2);
-		focal[0] = Fh;
-		focal[1] = Fv;
-		return focal;
-	}
-
 	// compute the distance to the detected side (I believe)
 	float computeDistance(int side, vector<float> pixDist, vector<float> focal){
 		//D = (W x F) / P
@@ -148,6 +80,8 @@ class ImageConverter
 			Wh = BACK_SZIE * (BACK_COLS-1);
 			Wv = BACK_SZIE * (BACK_ROWS-1);
 		}
+
+		//ROS_INFO_STREAM("Wh = " << Wh << "focal[0] = " << focal[0] << "pixD[0] = " << pixDist[0]);
 		float Dh1 = (Wh * focal[0]) / pixDist[0];
 		float Dh2 = (Wh * focal[0]) / pixDist[1];
 		float Dv1 = (Wv * focal[1]) / pixDist[2];
@@ -155,8 +89,6 @@ class ImageConverter
 		float D = (Dh1 + Dh2 + Dv1 + Dv2) / 4;
 		return D;
 	}
-
-	
 
 	/*
 	 *  Given two vertices, finds the vertical angle of the
@@ -170,17 +102,23 @@ class ImageConverter
 	 *        |
 	 *        *
 	 */
-	float
-	findTilt(Point2f p1, Point2f p2)
+	// p1: bottom right p2: top right
+	float findTilt(Point2f p1, Point2f p2)
 	{
 		Point2f top, bot;
-		if (p1.y > p2.y) {
+		//y pixel increases downwards
+		if (p1.y > p2.y) 
+		{
 			top = p2;
 			bot = p1;
-		} else if (p1.y < p2.y) {
+		} 
+		else if (p1.y < p2.y) 
+		{
 			top = p1;
 			bot = p2;
-		} else {
+		} 
+		else 
+		{
 			if (p1.x > p2.x) {
 				return -90;
 			} else if (p1.x < p2.x) {
@@ -193,7 +131,7 @@ class ImageConverter
 		int delta_x, delta_y;
 		float theta;
 		delta_x = top.x - bot.x;
-		delta_y = bot.y - top.y; //y pixel increases downwards
+		delta_y = bot.y - top.y; 
 		theta = atan(delta_x / delta_y);
 		return theta;
 	}
@@ -208,9 +146,7 @@ class ImageConverter
 	{
 		bool ERROR = false;
 		int tilt;
-	//	if (corners.size() != (rows*cols)) {
-	//		cerr << "Incompatible rows and cols for passed in corners" << endl;
-	//	}
+
 		Point2f top_left = corners[0];
 		Point2f top_right = corners[1];
 		Point2f bot_left = corners[2];
@@ -223,7 +159,8 @@ class ImageConverter
 			tilt = theta; //set global
 			return 0;
 		} 
-		else {
+		else 
+		{
 			ERROR = false;
 		}
 
@@ -236,7 +173,6 @@ class ImageConverter
 
 		float ratio = l_len / r_len;  //ratio (left : right)
 		float orientation = (1 - ratio) * 264; //264 based on my testing
-		//cout << "left: " << l_len << ", right: " << r_len << ", ratio: " << ratio << ", angle: " << orientation << endl;
 		return orientation;
 	}
 
@@ -245,9 +181,10 @@ class ImageConverter
 
 		if(image.empty())
 			 exit (EXIT_FAILURE); // NEED TO HANDLE THIS, replace break that doesn't build
+
 		// Find the chessboard corners
 		vector<vector<Point2f> > imagePoints(1);
-		bool found = findChessboardCorners(image, boardSize, imagePoints[0]);
+		bool found = findChessboardCorners(image, boardSize, imagePoints[0]); //,CALIB_CB_FAST_CHECK);
 
 		if(!found)
 		{
@@ -261,9 +198,12 @@ class ImageConverter
 			vector<float> pix_dist = getPixDist(corners);
 			float D = computeDistance(side, pix_dist, focal);
 			float angle;
-			if(side = FRONT){
+			if(side = FRONT)
+			{
 				angle = findOrientation(corners, FRONT_ROWS, FRONT_COLS);
-			} else {
+			} 
+			else 
+			{
 				angle = findOrientation(corners, BACK_ROWS, BACK_COLS);
 			}
 			board[0] = D;
@@ -286,8 +226,11 @@ class ImageConverter
 		Size frontSize = Size(FRONT_COLS,FRONT_ROWS);
 		Size backSize = Size(BACK_COLS,BACK_ROWS);
 
-		vector<float> focalf = trainDistance(FRONT, frontSize);
-		vector<float> focalb = trainDistance(BACK, backSize);
+		focalf[0] = 685.623;
+		focalf[1] = 698.095;
+
+		focalb[0] = 673.716;
+		focalb[1] = 674.715;
 
 		float distance, angle;
 		int side = 0;
@@ -314,7 +257,6 @@ public:
 	{
 		// Subscribe to input video feed and publish output video feed
 		image_sub_ = it_.subscribe("/camera/rgb/image_rect_color", 1, &ImageConverter::imageCb, this);
-//		image_pub_ = it_.advertise("/image_converter/output_video", 1);
 
 		cv::namedWindow(OPENCV_WINDOW);
 	}
@@ -338,7 +280,7 @@ public:
 			return;
 		}
 	
-		// where we can do work
+		// where we can do openCV work
 		locateChessboard(cv_ptr->image);
 	
 	// Update GUI Window
@@ -346,7 +288,7 @@ public:
 	cv::waitKey(3);
     
 	// Output modified video stream
-	image_pub_.publish(cv_ptr->toImageMsg());
+	image_pub_.publish(cv_ptr->toImageMsg()); 
 	}
 };
 

@@ -45,22 +45,26 @@ def identify_easy_sample(img):
         centx = int(moments['m10']/moments['m00'])
         centy = int(moments['m01']/moments['m00'])
 
+        '''
         # coordinates in pixels where the center is (0,0)
-        # assumes 640x480 resolution
-        xy = (centx-320,(centy * -1)+240)
+        # assumes 1280x720 resolution
+        xy = (centx-640,(centy * -1)+360)
 
         # convert pixels to mm
         # adjust these parameters as necessary
         h = 500 # height of camera from ground
         a = 60  # angle of view
         dx0 = h * math.tan(math.radians(a/2))
-        x = (xy[0] * dx0) / (320)
+        x = (xy[0] * dx0) / (640)
 
-        dy0 = (dx0 * 240) / (320)
-        y = (dy0 * xy[1]) / (240)
+        dy0 = (dx0 * 360) / (640)
+        y = (dy0 * xy[1]) / (360)
 
-        cv2.imshow('image', blurred) 
-        return (x,y)
+        cv2.imshow('image', blurred)
+        '''
+
+        # absolute coordinates where (0,0) is bottom left
+        return (centx,(centy))
 
     else:
         return None

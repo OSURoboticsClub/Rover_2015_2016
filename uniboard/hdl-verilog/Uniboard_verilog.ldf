@@ -21,6 +21,12 @@
         <Source name="arm.v" type="Verilog" type_short="Verilog">
             <Options/>
         </Source>
+        <Source name="motor-serial.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="encoder.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
         <Source name="Uniboard_verilog.lpf" type="Logic Preference" type_short="LPF">
             <Options/>
         </Source>
