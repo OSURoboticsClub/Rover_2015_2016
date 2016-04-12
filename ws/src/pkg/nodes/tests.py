@@ -108,28 +108,17 @@ def pick_up_at(u,xy):
         z_safe_move(u, 0.5)
         u.arm_z_wait_until_done()
 
-def drop(u):
-
-   z_safe_move(u, 0)
-   u.arm_z_wait_until_done()
-
-   u.arm_target("A", 1)
-   time.sleep(5)
-
-   z_safe_move(u, 0.2)
-   u.arm_z_wait_until_done()
-
-   u.arm_target("A", 0)
-   time.sleep(5)
-
-   z_safe_move(u, 0.5)
-   u.arm_z_wait_until_done()
-
 def test_scan_and_grab(u):
+    
+    coords = None
+    rate = rospy.Rate(10)
+
     # MOVE FORWARD until sample is seen
     u.motor_right(0.1)
     u.motor_left(0.1)
-    while coords=scan_for_samples() is None: pass
+    while coords is None: 
+       coords = scan_for_easy_samples(scan_img_left, scan_img_right)
+       rate.sleep()
     # record current speed of wheels
     lrpm = u.encoder_left_rpm()
     rrpm = u.encoder_right_rpm()
@@ -138,11 +127,14 @@ def test_scan_and_grab(u):
     rospy.loginfo("coords: " + str(coords))
 
     # 98.6 cm circumfrence for wheels assumed
-    rpm = (lrpm + rrpm) / 2
+    rpm = (lrpm + rrpm) / 2.0
+    rospy.loginfo("rpm: " + str(rpm))
     circum = 986
     mmpers = rpm * circum / 60
+    rospy.loginfo("m/s: " + str(mmpers))
     
     time_forward = coords[2] / mmpers
+    rospy.loginfo("time forward: " + str(time_forward))
 
     # go forward that much
     u.motor_left(0.1)
