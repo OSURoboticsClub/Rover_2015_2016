@@ -46,8 +46,8 @@ def show_orders():
 def press_enter_to_continue():
     raw_input("Press Enter to continue")
 def arm_test(u=None):
-    # if u is None:
-    #     u = uniboard.Uniboard("/dev/ttyUSB1")
+    if u is None:
+        u = uniboard.Uniboard("/dev/ttyUSB1")
     try:
         while True:
             opt = run_arm_test(uniboard=u)
