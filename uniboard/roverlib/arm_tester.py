@@ -3,8 +3,8 @@
 #Written 2015-2016 by Nick Ames <nick@fetchmodus.org>
 
 # Author of test and software team API:   
-# Collaborators: Stefan Reindel, Nikita Rozanov, Christopher Tucker, Timothy Rice, and Nick Ames
-# Date: 4-6-2016
+# Collaborators: Stefan Reindel
+# Date: 4-11-2016
 
 # python 
 import uniboard
@@ -23,7 +23,8 @@ def clear():
     # except Exception:
     #     pass
 def show_help():
-    print "This is Help."
+    print "Type the number of the routine you want and press Enter.  ."
+    print "Example:\"0 <Enter>\" Homes the arm.  "
 def show_orders():
     text = "Type a number or command and press enter to run a routine.  \n"
     text += "Routine Numbers:\n"
@@ -73,8 +74,9 @@ def run_arm_test(uniboard=None):
         return "Help"
     elif cmd.lower() == "c" or cmd.lower() == "center":
         print "Centering"
+        move_arm_XY(uniboard=uniboard, x=uniboard.arm_max("Y"), y=uniboard.arm_max("Y"))
         press_enter_to_continue()
-        #move_arm_XY(uniboard=uniboard, x=uniboard.arm_max("Y"), y=uniboard.arm_max("Y"))
+        return "Centering"
     elif cmd.lower() == "home" or cmd.lower() == "0":
         #uniboard.arm_home()
         print "Homing"
@@ -82,32 +84,34 @@ def run_arm_test(uniboard=None):
         return "Home"
     elif cmd == "1": # Grabs object
         print "Grabbing Object"
+        move_arm_half_way(uniboard=uniboard)
+        move_arm_A(uniboard=uniboard, a=1)
+        move_arm_down(uniboard=uniboard)
+        move_arm_A(uniboard=uniboard, a=0)
+        move_arm_up(uniboard=uniboard)
         press_enter_to_continue()
-        # move_arm_half_way(uniboard=uniboard)
-        # move_arm_A(uniboard=uniboard, a=1)
-        # move_arm_down(uniboard=uniboard)
-        # move_arm_A(uniboard=uniboard, a=0)
-        # move_arm_up(uniboard=uniboard)
     elif cmd == "2": # moves half way
         print "Moving 1/2 Way"
+        move_arm_half_way(uniboard=uniboard)
         press_enter_to_continue()
-        # move_arm_half_way(uniboard=uniboard)
     elif cmd == "3": # Full Down
         print "Moving Down"
+        move_arm_down(uniboard=uniboard)
         press_enter_to_continue()
-        # move_arm_down(uniboard=uniboard)
     elif cmd == "4": # Full Up
         print "Moving Up"
+        move_arm_up(uniboard=uniboard)
         press_enter_to_continue()
-        # move_arm_up(uniboard=uniboard)
     elif cmd == "5": # Open Hand
         print "Open End Effector"
+        
+        move_arm_A(uniboard=uniboard, a=1)
         press_enter_to_continue()
-        # move_arm_A(uniboard=uniboard, a=1)
     elif cmd == "6": # Close Hand
         print "Closing End Effector"
+        
+        move_arm_A(uniboard=uniboard, a=0)
         press_enter_to_continue()
-        # move_arm_A(uniboard=uniboard, a=0)
     elif cmd == "7": # <Empty>
         print "<Empty>"
         press_enter_to_continue()
@@ -120,6 +124,7 @@ def run_arm_test(uniboard=None):
     else:
         print "Command not recognized.  "
         press_enter_to_continue()
+    return "Action"
 
 def home(uniboard=None):
     if uniboard is None: return False
