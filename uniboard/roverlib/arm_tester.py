@@ -31,8 +31,8 @@ def show_orders():
     text += "1.  Arm moves down about half way, fully opens end effector, moves the rest of the way down,\n"
     text += "      closes the end effector, and raises the arm to fully height.\n"
     text += "2.  Moves arm half way down.\n"
-    text += "3.  Moves arm all the way down.\n"
-    text += "4.  Moves arm all the way up.\n"
+    text += "3.  Moves arm all the way up.\n"
+    text += "4.  Moves arm all the way down.\n"
     text += "5.  Opens arm end effector.\n"
     text += "6.  Closes arm end effector.\n"
     text += "7.  <Empty>\n"
@@ -46,24 +46,58 @@ def show_orders():
 def press_enter_to_continue():
     raw_input("Press Enter to continue")
 def arm_test(u=None):
-    if u is None:
-        u = uniboard.Uniboard("/dev/ttyUSB1")
+    clear()
+    #
+    try:
+        if u is None:
+            u = uniboard.Uniboard("/dev/ttyUSB1")
+    except Exception as e:
+        print "[FATAL ERROR] cannot access uniboard."
+        print str(e)
+        exit(1)
+    #
+    print "Arm Enabled: {}".format(arm_enable_all(uniboard=u) )
+    print "Homing..."
+    home(uniboard=u)
+    print "Homing Complete"
     try:
         while True:
             opt = run_arm_test(uniboard=u)
             if opt == "Quit":
                 break
+            clear()
     except KeyboardInterrupt:
         print "\nExiting..."
         exit(0)
     except Exception as e:
+        print "[FATAL ERROR]"
         print str(e)
         print "\nExiting..."
-        exit(0)
-
+        exit(2)
+def arm_enable_all(uniboard=None):
+    try:
+        uniboard.arm_en(axis="X", state=True)
+        uniboard.arm_en(axis="Y", state=True)
+        uniboard.arm_en(axis="Z", state=True)
+        uniboard.arm_en(axis="A", state=True)
+        uniboard.arm_go(axis="X", state=True)
+        uniboard.arm_go(axis="Y", state=True)
+        uniboard.arm_go(axis="Z", state=True)
+        uniboard.arm_go(axis="A", state=True)
+        return True
+    except Exception as e:
+        print str(e)
+        return False
+# def arm_stop(uniboard=None):
+#     uniboard.arm_en(axis="X", state=True)
+#     uniboard.arm_en(axis="Y", state=True)
+#     uniboard.arm_en(axis="Z", state=True)
+#     uniboard.arm_en(axis="A", state=True)
+#     uniboard.arm_en(axis="X", state=True)
+#     uniboard.arm_en(axis="Y", state=True)
+#     uniboard.arm_en(axis="Z", state=True)
+#     uniboard.arm_en(axis="A", state=True)
 def run_arm_test(uniboard=None):
-    
-    clear()
     show_orders()
     cmd = raw_input("Enter a rountine number: >> ")
     if cmd.lower() == "q" or cmd.lower() == "quit" or cmd.lower() == "exit" or cmd.lower() == "stop":
@@ -78,16 +112,21 @@ def run_arm_test(uniboard=None):
         press_enter_to_continue()
         return "Centering"
     elif cmd.lower() == "home" or cmd.lower() == "0":
-        #uniboard.arm_home()
+        uniboard.arm_home()
         print "Homing"
         press_enter_to_continue()
         return "Home"
     elif cmd == "1": # Grabs object
         print "Grabbing Object"
         move_arm_half_way(uniboard=uniboard)
+
         move_arm_A(uniboard=uniboard, a=1)
+        #wait_for_competion(uniboard=uniboard)
+
         move_arm_down(uniboard=uniboard)
-        move_arm_A(uniboard=uniboard, a=0)
+        move_arm_A(uniboard=uniboard, a=0.2)
+        #wait_for_competion(uniboard=uniboard)
+
         move_arm_up(uniboard=uniboard)
         press_enter_to_continue()
     elif cmd == "2": # moves half way
@@ -104,13 +143,12 @@ def run_arm_test(uniboard=None):
         press_enter_to_continue()
     elif cmd == "5": # Open Hand
         print "Open End Effector"
-        
         move_arm_A(uniboard=uniboard, a=1)
         press_enter_to_continue()
     elif cmd == "6": # Close Hand
         print "Closing End Effector"
         
-        move_arm_A(uniboard=uniboard, a=0)
+        move_arm_A(uniboard=uniboard, a=0.2)
         press_enter_to_continue()
     elif cmd == "7": # <Empty>
         print "<Empty>"
@@ -135,8 +173,7 @@ def home(uniboard=None):
     # move all the way back (Where we want it)
     move_arm_XY(uniboard=uniboard, x=uniboard.arm_max("X")/2.0, y=uniboard.arm_max("Y")/2.0)
     # Arm is upright at Home
-    move_arm_A(uniboard=uniboard, a=0.5)
-
+    move_arm_A(uniboard=uniboard, a=0.2)
     return True
 
 def move_arm_X(uniboard=None, x=None, ignore_boundry=False):
@@ -148,6 +185,7 @@ def move_arm_X(uniboard=None, x=None, ignore_boundry=False):
         if x > uniboard.arm_max("X") - boundry and not ignore_boundry:
             x = uniboard.arm_max("X") - boundry
         uniboard.arm_target("X", x) # Move arm
+        #wait_for_competion(uniboard=uniboard)
         return True 
     return False
 
@@ -160,6 +198,7 @@ def move_arm_Y(uniboard=None, y=None, ignore_boundry=False):
         elif y > uniboard.arm_max("Y") - boundry and not ignore_boundry:
             y = uniboard.arm_max("Y") - boundry
         uniboard.arm_target("Y", y) # Move arm 
+        #wait_for_competion(uniboard=uniboard)
         return True
     return False
 
@@ -181,6 +220,7 @@ def move_arm_Z_relative_safe(uniboard=None, z=None, ignore_boundry=False):
         else:
             uniboard.arm_target("Z", 0.99)
         uniboard.arm_z_wait_until_done()
+        #wait_for_competion(uniboard=uniboard)
         return True
     return False
 
@@ -193,6 +233,7 @@ def move_arm_down(uniboard=None):
     else:
         uniboard.arm_target("Z", .99)
     uniboard.arm_z_wait_until_done()
+    #wait_for_competion(uniboard=uniboard)
     return True
 def move_arm_half_way(uniboard=None):
     if uniboard is None: return False
@@ -203,21 +244,27 @@ def move_arm_half_way(uniboard=None):
     else:
         uniboard.arm_target("Z", .75)
     uniboard.arm_z_wait_until_done()
+    #wait_for_competion(uniboard=uniboard)
     return True
 
 def move_arm_up(uniboard=None):
     if uniboard is None: return False
     uniboard.arm_target("Z", 0.5)
     uniboard.arm_z_wait_until_done()
+    #wait_for_competion(uniboard=uniboard)
     return True
 
 def move_arm_A(uniboard=None, a=None):
     if uniboard is None: return False
     difference = 0.1
+    # print "Current A: {}".format(uniboard.arm_current("A", None))
+    # print "a= {}".format(a)
     if a is not None:
-        if a - 1.0 > difference:
-            a = uniboard.arm_max("A")
+    #     if a - 1.0 > difference:
+    #         a = uniboard.arm_max("A")
+    #         print "a= {}".format(a)
         uniboard.arm_target("A", a) # Move arm 
+        wait_for_completion(uniboard=uniboard, axis="A")
         return True
     return False
 
@@ -244,6 +291,31 @@ def where_we_at(uniboard=None):
 def is_XY_moving(uniboard=None):
     if uniboard is None: return False
     return uniboard.arm_should_be_moving("X") or uniboard.arm_should_be_moving("Y")
+
+def is_axis_moving(uniboard=None, axis="S"):
+    if uniboard is None: return False
+    return uniboard.arm_should_be_moving(axis)
+
+def is_axes_moving(uniboard=None):
+    axes = ["X", "Y", "Z", "A"]
+    moving = False
+    for a in axes:
+        moving = uniboard.arm_should_be_moving(a) or moving
+    return moving
+
+def wait_for_completion(uniboard=None, axis="A"):
+    max_wait_time = 3
+    wait_time = 0
+    time_step = 0.1
+    while is_axis_moving(uniboard=uniboard, axis=axis):
+        time.sleep(time_step)
+        wait_time += time_step
+        # print "Current {}: {}".format(axis, uniboard.arm_current(axis, None))
+        # print "Time Step: {} / {}".format(wait_time, max_wait_time)
+        if wait_time > max_wait_time:
+            print "Timed Out"
+            break
+
 
 def move_arm_XY(uniboard=None, x=None, y=None):
     if uniboard is None: return False
