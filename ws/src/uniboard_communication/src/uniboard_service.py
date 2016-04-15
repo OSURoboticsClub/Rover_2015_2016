@@ -43,8 +43,9 @@ class UniboardCommunication(Queue.PriorityQueue):
         Queue.PriorityQueue.__init__(self)
         self.functions = dict(
                         motor_left = self.motor_left,
-                        motor_right = self.motor_right)
-    
+                        motor_right = self.motor_right,
+                        encoder_left_rpm = self.encoder_left_rpm,
+                        encoder_right_rpm = self.encoder_right_rpm)
 
     def setup_board(self, board):
         """Set up uniboard for api for use
@@ -62,10 +63,9 @@ class UniboardCommunication(Queue.PriorityQueue):
             self.board = fake_uniboard.Uniboard(board)
             rospy.logwarn('Using Fake Uniboard')
 
-
     def setup_ros(self):
         """Initializes node and sets up service. 
-        
+      
         Returns:
             None
         """
@@ -100,7 +100,27 @@ class UniboardCommunication(Queue.PriorityQueue):
         p = float(power)
         self.board.motor_right(p)
         return [True, 'Success', '']
+    
+    def encoder_left_rpm(self, *args):
+        """Wrapper for uniboard function encoder_left_rpm
 
+       Returns:
+            Current speed of the encoder in RPM as a float.
+	    Positive values indicate forward rotation
+        """
+	#RPM = self.functions["encoder_left_rpm"]()
+        RPM = self.board.encoder_left_rpm()
+        return [True, 'Success', str(RPM)]
+
+    def encoder_right_rpm(self, *args):
+        """Wrapper for uniboard function encoder_right_rpm
+
+       Returns:
+            Current speed of the encoder in RPM as a float.
+	    Positive values indicate forward rotation
+        """
+        RPM = self.board.encoder_right_rpm()
+        return [True, 'Success', str(RPM)]
 
     def addToQueue(self, req):
         """Callback for service call

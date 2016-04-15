@@ -1,0 +1,5 @@
+<launch>
+  <node pkg="uniboard_communication" type="uniboard_service.py" name="uniboard_comm"/>
+  <node pkg="wheel_encoders" type="publish_rpm.py" name="test"/>
+  <node pkg="wheel_encoders" type="move_wheels.py" name="move"/>
+</launch>
