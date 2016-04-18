@@ -41,3 +41,9 @@ class Uniboard(object):
 
     def motor_right(self, power):
         self.power_right = power
+
+    def encoder_left_rpm(self):
+	return str(0.0)
+
+    def encoder_right_rpm(self):
+	return str(0.0)

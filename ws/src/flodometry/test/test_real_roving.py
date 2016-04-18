@@ -50,6 +50,7 @@ class TestRealRoving(unittest.TestCase):
         self.uniboard_service = rospy.ServiceProxy('uniboard_service', communication)
         rospy.Subscriber('/odom', Odometry, self.updateOdom)
         rospy.Subscriber("/optical_flow", motion_read, self.updateFlow)
+        rospy.Subscriber("/encoders", motion_read, self.updateFlow)
         self.uniboard_service('motor_left', 3, str(0.1), rospy.Time.now())
         self.uniboard_service('motor_right', 3, str(0.1), rospy.Time.now())
         time.sleep(RUNTIME)
