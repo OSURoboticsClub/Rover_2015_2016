@@ -14,6 +14,7 @@ module GlobalControlPeripheral(
 	output wire global_pause,
 	output wire signal_light,
 	input wire xbee_pause_n,
+	input wire timeout_pause,
 	input wire [15:0] battery_voltage,
 	input wire reset);
 	parameter hdl_build = 32'd0;
@@ -35,7 +36,7 @@ module GlobalControlPeripheral(
 	assign databus = (select & rw) ? read_value : 'bz;
 	
 	/* Register assignments */
-	assign global_pause = xbee_pause_latched | force_pause;
+	assign global_pause = xbee_pause_latched | force_pause | timeout_pause;
 	assign signal_light = global_pause ? 1'b1 : clk_1Hz;
 	assign register[0] = {29'b0, xbee_pause_latched, force_pause, global_pause};
 	assign register[1] = {16'b0, battery_voltage};

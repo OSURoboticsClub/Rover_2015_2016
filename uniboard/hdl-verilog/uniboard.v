@@ -358,8 +358,7 @@ module DummyPeripheral(
 	assign reg_size = select ? 'b0 : 'bz;
 	assign databus = (select & ~rw) ? 'b0 : 'bz;
 endmodule
-	                             
-	                                    
+
 module UniboardTop(
 	input wire uart_rx, /* UART input from control computer. */
 	output wire uart_tx, /* UART output to control computer. */
@@ -471,6 +470,31 @@ module UniboardTop(
 	assign interface_reset = (reset_count < 16'd12000); /* 1 ms */
 	assign reset = (reset_count < 16'd18000); /* 1.5 ms */
 	
+	/* Timeout generator. */
+	reg timeout_pause;
+	reg [31:0] timeout_count;
+	reg prev_uart_rx;
+	parameter PAUSE_COUNT = 32'd60000000;
+	always @ (posedge clk_12MHz)			
+		begin
+			prev_uart_rx <= uart_rx;
+			if(uart_rx ^ prev_uart_rx)
+				begin
+					timeout_count <= 32'd0;
+				end
+			else
+				begin
+					if(timeout_count < PAUSE_COUNT) /* 5s */
+						timeout_count <= timeout_count + 1;
+				end
+				
+			if(timeout_count == PAUSE_COUNT)
+				timeout_pause <= 1;
+			else
+				timeout_pause <= 0;
+			
+		end
+		
 	/* Protocol interface and peripherals. */
 	ProtocolInterface #(12) protocol_interface(.tx(uart_tx),
 	                                           .rx(uart_rx),
@@ -490,6 +514,7 @@ module UniboardTop(
 	                      .reg_size(reg_size),
 	                      .rw(rw),
 	                      .select(dummy_select));
+	
 	/* Global Control */
 	wire global_pause;
 	GlobalControlPeripheral #(32'd0, 32'h0009) global_control(.clk_12MHz(clk_12MHz),
@@ -501,6 +526,7 @@ module UniboardTop(
 	                                                          .global_pause(global_pause),
 	                                                          .signal_light(signal_light),
 	                                                          .xbee_pause_n(xbee_pause),
+	                                                          .timeout_pause(timeout_pause),
 	                                                          .battery_voltage(16'd6),
 	                                                          .reset(reset));
 	/* Motor Sabertooth Serial */
