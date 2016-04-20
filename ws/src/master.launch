@@ -5,10 +5,10 @@
 	Launch namespaces should be cleaned up 
 
 	Currently launches: 
-		Left/Right scan cams
-		Pit cam 
-		ZED wrapper
-		Uniboard communication
+		Left/Right scan cams		(plug into main comp)
+		Pit cam 			(plug into USB hub)
+		ZED wrapper			(plug into main comp)
+		Uniboard communication		(plug into USB hub)
 -->
 
 <launch>
