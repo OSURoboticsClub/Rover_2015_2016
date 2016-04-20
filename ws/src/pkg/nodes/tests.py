@@ -127,22 +127,37 @@ def test_scan_and_grab(u):
     time.sleep(1)
     rospy.loginfo("coords: " + str(coords))
 
+    u.arm_target("X", 0)
+    u.arm_target("Y", u.arm_max("Y"))
+    while u.arm_should_be_moving("X") or u.arm_should_be_moving("Y"): pass
+
     # 98.6 cm circumfrence for wheels assumed
-    rpm = (lrpm + rrpm) / 2.0
-    rospy.loginfo("rpm: " + str(rpm))
-    circum = 986
-    mmpers = rpm * circum / 60
-    rospy.loginfo("m/s: " + str(mmpers))
+    #rpm = (lrpm + rrpm) / 2.0
+    #rospy.loginfo("rpm: " + str(rpm))
+    #circum = 986
+    #mmpers = rpm * circum / 60
+    #rospy.loginfo("m/s: " + str(mmpers))
     
-    time_forward = coords[2] / mmpers
-    rospy.loginfo("time forward: " + str(time_forward))
+    #time_forward = coords[2] / mmpers
+    #rospy.loginfo("time forward: " + str(time_forward))
 
     # go forward that much
-    u.motor_left(0.1)
+    #u.motor_left(0.1)
+    #u.motor_right(0.1)
+    #time.sleep(time_forward)
+    #u.motor_left(0.0)
+    #u.motor_right(0.0)
+
     u.motor_right(0.1)
-    time.sleep(time_forward)
-    u.motor_left(0.0)
-    u.motor_right(0.0)
+    u.motor_left(0.1)
+    while not rospy.is_shutdown():
+       curr_crotch_img = new_crotch_img2
+       xy = grab.identify_easy_sample(curr_crotch_img) 
+       while xy is None:
+          xy = grab.identify_easy_sample(curr_crotch_img)
+       u.motor_right(0.0)
+       u.motor_left(0.0)
+       break
 
     # PICK UP SAMPLE
     # only used for pit camera tests
