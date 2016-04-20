@@ -10,211 +10,221 @@
 import uniboard
 import time
 
-
-def arm_test(u = None):
-    if u is None:
-        u = uniboard.Uniboard("/dev/ttyUSB1")
-    print "Homing: {}".format(home(uniboard=u))
-    print "XY to Center: {}".format(move_arm_XY(uniboard=u, x=u.arm_max("X")/2, y=u.arm_max("Y")/2))
-    print "Arm Down: {}".format(move_arm_down(uniboard=u))
-    print "Arm up: {}".format(move_arm_up(uniboard=u))
-    print "Effector Open: {}".format(move_arm_A(uniboard=u, a=1.0))
-    print "Effector Closed: {}".format(move_arm_A(uniboard=u, a=0.0))
-    print "Homing: {}".format(home(uniboard=u))
-    return True
-
-def arm_enable_all(uniboard=None):
-    try:
-        uniboard.arm_en(axis="X", state=True)
-        uniboard.arm_en(axis="Y", state=True)
-        uniboard.arm_en(axis="Z", state=True)
-        uniboard.arm_en(axis="A", state=True)
-        uniboard.arm_go(axis="X", state=True)
-        uniboard.arm_go(axis="Y", state=True)
-        uniboard.arm_go(axis="Z", state=True)
-        uniboard.arm_go(axis="A", state=True)
+class Arm():
+    """
+    This class is intended as an API for ROS for arm manipulation.
+    """
+    def __init__(self, ub=None, uniboard_location="/dev/ttyUSB1"):
+        if ub is None:
+            ub = uniboard.Uniboard(uniboard_location)
+        self.uniboard_location = uniboard_location
+        self.ub = ub                                # Uniboard
+        self.axes = ["X", "Y", "Z", "A"]    # Axes
+        self.x_boundry = 0.03               # X axis boundry
+        self.x_offest = 0.02                   # X axis offset from center
+        self.y_boundry = 0.04               # y axis boundry
+        self.y_offest = 0.0                      # y axis offest from center
+        self.x_center = (ub.arm_max("X") / 2.0) + self.x_offest   # Center after offset
+        self.y_center = (ub.arm_max("Y") / 2.0) + self.y_offest   # Center after offset
+        self.max_wait_time = 3              # Max wait time for axis movement
+        self.time_step = 0.1                    # Time step for wait functions
+        self.activate_arm()
+        #
+    def is_usable(self):
+        """
+        This functions returns True if the uniboard initialized correctly, False otherwise.
+        """
+        if self.ub is None:
+            return False
         return True
-    except Exception as e:
-        print str(e)
-        return False
-# def arm_stop(uniboard=None):
-#     uniboard.arm_en(axis="X", state=True)
-#     uniboard.arm_en(axis="Y", state=True)
-#     uniboard.arm_en(axis="Z", state=True)
-#     uniboard.arm_en(axis="A", state=True)
-#     uniboard.arm_en(axis="X", state=True)
-#     uniboard.arm_en(axis="Y", state=True)
-#     uniboard.arm_en(axis="Z", state=True)
-#     uniboard.arm_en(axis="A", state=True)
-
-def home(uniboard=None):
-    if uniboard is None: return False
-    ''' home is not ideal
-        So we move the arm back as far as it can after home
-    '''
-    uniboard.arm_home()                               # set elements to center, test all elements
-    # move all the way back (Where we want it)
-    move_arm_XY(uniboard=uniboard, x=uniboard.arm_max("X")/2.0, y=uniboard.arm_max("Y")/2.0)
-    # Arm is upright at Home
-    move_arm_A(uniboard=uniboard, a=0.2)
-    return True
-
-def move_arm_X(uniboard=None, x=None, ignore_boundry=False):
-    if uniboard is None: return False
-    boundry = 0.03
-    if x is not None:
-        if x < boundry and not ignore_boundry:
-            x = boundry
-        if x > uniboard.arm_max("X") - boundry and not ignore_boundry:
-            x = uniboard.arm_max("X") - boundry
-        uniboard.arm_target("X", x) # Move arm
-        #wait_for_competion(uniboard=uniboard)
-        return True 
-    return False
-
-def move_arm_Y(uniboard=None, y=None, ignore_boundry=False):
-    if uniboard is None: return False
-    boundry = 0.04
-    if y is not None:
-        if y < boundry and not ignore_boundry:
-            y = boundry
-        elif y > uniboard.arm_max("Y") - boundry and not ignore_boundry:
-            y = uniboard.arm_max("Y") - boundry
-        uniboard.arm_target("Y", y) # Move arm 
-        #wait_for_competion(uniboard=uniboard)
+    #
+    def activate_arm(self):
+        """
+        This function activates the arm for use.
+        """
+        try:
+            self.ub.arm_en(axis="X", state=True)
+            self.ub.arm_en(axis="Y", state=True)
+            self.ub.arm_en(axis="Z", state=True)
+            self.ub.arm_en(axis="A", state=True)
+            self.ub.arm_go(axis="X", state=True)
+            self.ub.arm_go(axis="Y", state=True)
+            self.ub.arm_go(axis="Z", state=True)
+            self.ub.arm_go(axis="A", state=True)
+            return True
+        except Exception as e:
+            print str(e)
+            return False
+    def deactivate_arm(self):
+        """
+        This function pauses the arm.
+        '"""
+        pass
+    # 
+    def home(self):
+        """
+        This function homes the arm.
+        """
+        self.ub.arm_home()
         return True
-    return False
+    #
+    def default(self):
+        """
+        This function moves the arm into a travelling position.
+        """
+        self.move_XY(x=self.x_center, y=self.y_center)
+        self.move_A(a=0)
+        return True
+    # 
+    def get_side(self):
+        """
+        This function get the current side of the arm.
+        Left of center, Right of center, or centered
+        """
+        test_loc = self.ub.arm_current("X", None)
+        if test_loc > self.x_center: # Left Side
+            return "Left"
+        elif test_loc < self.x_center: # Right Side
+            return "Right"
+        else:                                           # Center
+            return "Center"
 
-def move_arm_Z_relative_safe(uniboard=None, z=None, ignore_boundry=False):
-    if uniboard is None: return False
-    '''
-    z:  the arm default is 0.5 (all the way up.)
-        if z = 0.5, then it will move the arm al the way down, safely,
-        choosing the correct side so that it doesn't hit the side of the arm mount.
-    '''
+    # ARM MOVEMENT
+    def move_X(self, value=0.0, ignore_boundry=False):
+        """
+        This function moves the arm along the X axis.
+        Setting ignore_boundry to True will cause the arm to ignore the slight offset
+        from the sides of the arm housing*.  
+        *This may result in a crash of the arm onto the housing.
+        """
+        if value < self.x_boundry and not ignore_boundry:
+            value = self.x_boundry
+        if value > self.ub.arm_max("X") - self.x_boundry and not ignore_boundry:
+            value = self.ub.arm_max("X") - self.x_boundry
+        self.ub.arm_target("X", value)
+        self.wait_for_X()
+        return True
+    def move_Y(self, value=0.0, ignore_boundry=False):
+        """
+        This function moves the arm along the Y axis.
+        Setting ignore_boundry to True will cause the arm to ignore the slight offset
+        from the sides of the arm housing*.  
+        *This may result in a crash of the arm onto the housing.
+        """
+        if value < self.y_boundry and not ignore_boundry:
+            value = self.y_boundry
+        if value > self.ub.arm_max("Y") - self.y_boundry and not ignore_boundry:
+            value = self.ub.arm_max("Y") - self.y_boundry
+        self.ub.arm_target("Y", value)
+        self.wait_for_Y()
+        return True
+    def move_Z(self, value=0.00):#, ignore_boundry=False):
+        """
+        This function moves the arm along the Z axis.
+        """
+        self.ub.arm_target("Z", value)
+        self.wait_for_Z()
+        return True
+    def move_A(self, value=0.0):#, ignore_boundry=False):
+        """
+        This function moves the arm along the Z axis.
+        """
+        self.ub.arm_target("A", value)
+        self.wait_for_A()
+        return True
+    def move_XY(self, x_value=0.0, y_value=0.0):
+        """
+        This function moves both the arm along both the X and Y axes at the same time.
+        """
+        return self.move_X(value=x_value) and self.move_Y(value=y_value) 
+        # self.ub.arm_target("X", x_value)
+        # self.ub.arm_target("Y", y_value)
+        # self.wait_for_X()
+        # self.wait_for_Y()
+        return True
 
-    boundry = 0.04
-    fully_up = 0.5
-    if z is not None:
-        if get_side(uniboard=uniboard) == 1: # Left Side
-            uniboard.arm_target("Z", 0.99)
-        elif get_side(uniboard=uniboard) == -1: # Right Side
-            uniboard.arm_target("Z", 0.0)
+    # PRESET ARM OPERATIONS
+    def center(self):
+        # This function moves the arm to the center X and Y coords.
+        return self.move_XY(x_value=self.x_center, y_value=self.y_center)
+    def grab(self):
+        # This function is a preset grab function
+        # The arm goes halfway down, opens the end effector, goes down to the ground, 
+        # closes the end effector, and brings the up at the end
+        self.half_down()
+        self.open()
+        self.down()
+        self.close()
+        self.up()
+        return True
+    def open(self):
+        # This function opens the end effector.
+        return self.move_A(value=1)
+    def close(self):
+        # This function closes the end effector.
+        return self.move_A(value=0)
+    def up(self):
+        # This function moves the arm all the way up.
+        return self.move_Z(value=0.5)
+    def down(self):
+        # This function moves the arm al the way down.
+        if self.get_side() == "Left":
+            return self.move_Z(value=1.0)
         else:
-            uniboard.arm_target("Z", 0.99)
-        uniboard.arm_z_wait_until_done()
-        #wait_for_competion(uniboard=uniboard)
+            return self.move_Z(value=0.0)
+    def half_down(self):
+        # This function moves the arm have way down.
+        if self.get_side() == "Left":
+            return self.move_Z(value=0.75)
+        else:
+            return self.move_Z(value=0.25)
+    def left(self):
+        # This function moves the arm to the far left
+        return self.move_X(value=self.ub.arm_max("X"))
+    def right(self):
+        # This funciton moves the arm to the far right
+        return self.move_X(value=0.0)
+    def forward(self):
+        # This function moves the arm forward all the way.
+        # Warning: End Effector may hit camera boom.
+        return self.move_Y(value=0.0)
+    def back(self):
+        return self.move_Y(value=self.ub.arm_max("Y"))
+    #
+    def wait_for_X(self, time_out=False):
+        # This function loops while the X axis is moving
+        wait_time = 0
+        while self.ub.arm_should_be_moving("X"):
+            time.sleep(self.time_step)
+            wait_time += self.time_step
+            if wait_time > self.max_wait_time and time_out:
+                return False
         return True
-    return False
-
-def move_arm_down(uniboard=None):
-    if uniboard is None: return False
-    if get_side(uniboard=uniboard) == 1: # Left Side
-        uniboard.arm_target("Z", 0.99)
-    elif get_side(uniboard=uniboard) == -1: # Right Side
-        uniboard.arm_target("Z", 0)
-    else:
-        uniboard.arm_target("Z", .99)
-    uniboard.arm_z_wait_until_done()
-    #wait_for_competion(uniboard=uniboard)
-    return True
-def move_arm_half_way(uniboard=None):
-    if uniboard is None: return False
-    if get_side(uniboard=uniboard) == 1: # Left Side
-        uniboard.arm_target("Z", 0.75)
-    elif get_side(uniboard=uniboard) == -1: # Right Side
-        uniboard.arm_target("Z", 0.25)
-    else:
-        uniboard.arm_target("Z", .75)
-    uniboard.arm_z_wait_until_done()
-    #wait_for_competion(uniboard=uniboard)
-    return True
-
-def move_arm_up(uniboard=None):
-    if uniboard is None: return False
-    uniboard.arm_target("Z", 0.5)
-    uniboard.arm_z_wait_until_done()
-    #wait_for_competion(uniboard=uniboard)
-    return True
-
-def move_arm_A(uniboard=None, a=None):
-    if uniboard is None: return False
-    difference = 0.1
-    # print "Current A: {}".format(uniboard.arm_current("A", None))
-    # print "a= {}".format(a)
-    if a is not None:
-    #     if a - 1.0 > difference:
-    #         a = uniboard.arm_max("A")
-    #         print "a= {}".format(a)
-        uniboard.arm_target("A", a) # Move arm 
-        wait_for_completion(uniboard=uniboard, axis="A")
+    def wait_for_Y(self, time_out=False):
+        # This function loops while the Y axis is moving
+        wait_time = 0
+        while self.ub.arm_should_be_moving("Y"):
+            time.sleep(self.time_step)
+            wait_time += self.time_step
+            if wait_time > self.max_wait_time and time_out:
+                return False
         return True
-    return False
-
-def get_side(uniboard=None):
-    if uniboard is None: return False
-    test_loc = uniboard.arm_current("X", None)
-    offest_from_center = 0.03
-    if test_loc > (uniboard.arm_max("X") / 2.0) - offest_from_center: # Left Side
-        return 1
-    elif test_loc < (uniboard.arm_max("X") / 2.0) - offest_from_center: # Right Side
-        return -1
-    else:                                           # Center
-        return 0
-
-def where_we_at(uniboard=None):
-    if uniboard is None: return False
-    if get_side(uniboard=uniboard) == 1:
-        return "Left Side"
-    elif get_side(uniboard=uniboard) == -1:
-        return "Right Side"
-    else:
-        return "Centered Bitch!"
-
-def is_XY_moving(uniboard=None):
-    if uniboard is None: return False
-    return uniboard.arm_should_be_moving("X") or uniboard.arm_should_be_moving("Y")
-
-def is_axis_moving(uniboard=None, axis="S"):
-    if uniboard is None: return False
-    return uniboard.arm_should_be_moving(axis)
-
-def is_axes_moving(uniboard=None):
-    axes = ["X", "Y", "Z", "A"]
-    moving = False
-    for a in axes:
-        moving = uniboard.arm_should_be_moving(a) or moving
-    return moving
-
-def wait_for_completion(uniboard=None, axis="A"):
-    max_wait_time = 3
-    wait_time = 0
-    time_step = 0.1
-    while is_axis_moving(uniboard=uniboard, axis=axis):
-        time.sleep(time_step)
-        wait_time += time_step
-        # print "Current {}: {}".format(axis, uniboard.arm_current(axis, None))
-        # print "Time Step: {} / {}".format(wait_time, max_wait_time)
-        if wait_time > max_wait_time:
-            print "Timed Out"
-            break
-
-
-def move_arm_XY(uniboard=None, x=None, y=None):
-    if uniboard is None: return False
-    wait_time = 0.1
-    try:
-        move_arm_X(uniboard=uniboard, x=x)
-        while is_XY_moving(uniboard=uniboard): 
-            time.sleep(wait_time)
-        move_arm_Y(uniboard=uniboard, y=y)
-        while is_XY_moving(uniboard=uniboard): 
-            time.sleep(wait_time)
-    except Exception as e:
-        return str(e)
-    return True
-
-#   ===================================
-#   ===================================
-#   ===================================
-#arm_test()
+    def wait_for_Z(self, time_out=False):
+        # This function loops while the Z axis is moving
+        wait_time = 0
+        while self.ub.arm_should_be_moving("Z"):
+            time.sleep(self.time_step)
+            wait_time += self.time_step
+            if wait_time > self.max_wait_time and time_out:
+                return False
+        return True
+    def wait_for_A(self, time_out=False):
+        # This function loops while the A axis is moving
+        wait_time = 0
+        while self.ub.arm_should_be_moving("A"):
+            time.sleep(self.time_step)
+            wait_time += self.time_step
+            if wait_time > self.max_wait_time and time_out:
+                return False
+        return True
+#End of Class
