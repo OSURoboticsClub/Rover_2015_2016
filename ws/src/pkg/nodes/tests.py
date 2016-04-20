@@ -84,7 +84,7 @@ def pick_up_at(u,xy):
         rospy.loginfo("calculated y: " + str(y_pick))
 
         #x_pick -= 0.2
-        y_pick -= 0.03
+        #y_pick -= 0.03
 
         while u.arm_should_be_moving("X") or u.arm_should_be_moving("Y"): pass
 
@@ -93,14 +93,14 @@ def pick_up_at(u,xy):
 
         u.arm_target("A", 0.99)
         time.sleep(5) 
-	z_safe_move(u, 0)
+	z_safe_move(u, 0.047)
         u.arm_z_wait_until_done()
 
-        u.arm_target("A", 0.5)
-        time.sleep(5)
+        #u.arm_target("A", 0.5)
+        #time.sleep(5)
 
-        u.arm_target("A", 1)
-        time.sleep(2)
+        #u.arm_target("A", 1)
+        #time.sleep(2)
 
         u.arm_target("A", 0)
         time.sleep(3)
@@ -117,13 +117,14 @@ def test_scan_and_grab(u):
     u.motor_right(0.1)
     u.motor_left(0.1)
     while coords is None: 
-       coords = scan_for_easy_samples(scan_img_left, scan_img_right)
+       coords = scan.check_easy_sample(scan_img_left, scan_img_right)
        rate.sleep()
     # record current speed of wheels
     lrpm = u.encoder_left_rpm()
     rrpm = u.encoder_right_rpm()
     u.motor_left(0.0)
     u.motor_right(0.0)
+    time.sleep(1)
     rospy.loginfo("coords: " + str(coords))
 
     # 98.6 cm circumfrence for wheels assumed
