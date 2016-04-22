@@ -19,8 +19,10 @@ bridge = CvBridge()
 
 # temporary, for testing
 cv2.startWindowThread()
-cv2.namedWindow('LEFT')
-cv2.namedWindow('RIGHT')
+#cv2.namedWindow('LEFT')
+#cv2.namedWindow('RIGHT')
+cv2.namedWindow('LEFT_RAW')
+cv2.namedWindow('RIGHT_RAW')
 
 def grab_handle(grab_succ):
     rospy.loginfo(rospy.get_caller_id() + 
@@ -55,13 +57,13 @@ def calculate_distance(left_centx, right_centx, left_centy, right_centy):
     # This will have to be changed once the cameras are calibrated for the rover
     # Assumes distance between cameras is 119mm and resolution 640x480
     diff = abs(left_centx-right_centx)
-    dist = ((119*1920)/(2*math.tan(math.radians(60)/2)*diff))# * 1.75
+    dist = ((95.25*1920)/(2*math.tan(math.radians(78)/2)*diff))# * 1.75
 
     # calculate x-value in mm using basic trigonometry and ratios
     # dx0 -> distance from center of field of view (left camera) to horizontal edge of FOV in mm
     # dx1 -> distance from center of FOV (left camera) to centroid of purple
     # x -> distance from center of stereo cameras to purple centroid in mm
-    dx0 = dist * math.tan(math.radians(30))
+    dx0 = dist * math.tan(math.radians(39))
     dx1 = (dx0 * (left_centx - 960)) / (960)
     #x = dx1 + 59.5
     x = (dx1 - 100) #/ 1.75
@@ -75,7 +77,7 @@ def calculate_distance(left_centx, right_centx, left_centy, right_centy):
     # calculate distance from base of rover
     # h -> height of cameras from ground in mm
     # assumes sample is detected at same level as the rover...
-    h = 228.6
+    h = 1009.65
     try:
         z = math.sqrt(math.pow(dist, 2) - math.pow(h, 2))
         return (x,y,z)
@@ -133,8 +135,8 @@ def check_easy_sample(left, right):
            return None
 
        # print for testing only
-       cv2.imshow('LEFT', blurred_left)
-       cv2.imshow('RIGHT', blurred_right)
+       #cv2.imshow('LEFT', blurred_left)
+       #cv2.imshow('RIGHT', blurred_right)
 
        # returns a tuple (x,y,z), or None if no sample is detected
        return xyz
@@ -152,7 +154,10 @@ def scan_for_samples():
     curr_right_img = new_right_img
     if curr_left_img is not None and curr_right_img is not None:
        
-       coords = check_precached(curr_left_img, curr_right_img)
+       cv2.imshow('LEFT_RAW', curr_left_img)
+       cv2.imshow('RIGHT_RAW', curr_right_img)
+
+       #coords = check_precached(curr_left_img, curr_right_img)
        if coords is None:
            coords = check_easy_sample(curr_left_img, curr_right_img)
 
