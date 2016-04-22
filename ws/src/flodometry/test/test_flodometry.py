@@ -16,7 +16,7 @@ from src.Flodometry import Flodometry
 class TestFlodometry(unittest.TestCase):
     """TestFlodometry"""
 
-    def test_real_roving_data(self):
+    def real_roving_data(self):
         path = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
         data = np.loadtxt(os.path.join(path, 'data/motion_concrete.txt'), delimiter=',')
         f = Flodometry()
@@ -43,9 +43,41 @@ class TestFlodometry(unittest.TestCase):
         self.plot(x_time, vel, 'Velocity')
         self.plot(x_time, pos, 'Position')
 
+    def test_real_roving_bags(self):
+        path = os.path.dirname(os.path.abspath(__file__))
+        path = os.path.join(path, 'bags/run_four.bag')
+        bag = rosbag.Bag(path)
+        optical_flow = bag.read_messages(topics=['/optical_flow'])
+        encoder_values= bag.read_messages(topics=['/encoder_values'])
+        enc_time = []
+        enc_left = []
+        enc_right = []
+        for topic, msg, t in encoder_values:
+            enc_time.append(t.to_time())
+            enc_left.append(msg.left_rpm)
+            enc_right.append(msg.right_rpm)
+
+        squal = []
+        dx = []
+        dy = []
+        flow_time = []
+        for topic, msg, t in optical_flow:
+            squal.append(msg.squal)
+            dx.append(msg.dx)
+            dy.append(msg.dy)
+            flow_time.append(t.to_time())
+        enc_running = [e for e in enc_right if e > 40]
+        import IPython; IPython.embed()
+        self.plot(enc_time, enc_left, 'enc_left')
+        self.plot(enc_time, enc_right, 'enc_right')
+        self.plot(flow_time, squal, 'squal')
+        self.plot(flow_time, dx, 'dx')
+        self.plot(flow_time, dy, 'dy')
+        
+
+
     def plot(self, x, y, title):
         """Plots and saves data compiled in test
-        
         Args:
             x (List): X-value to plot
             y (List): Y-value to plot

@@ -16,11 +16,11 @@ from flodometry.msg import motion_read
 from nav_msgs.msg import Odometry
 import matplotlib.pyplot as plt
 
-RUNTIME = 30
+RUNTIME = 10
 
 PKG = 'test_real_roving'
 
-class TestRealRoving(unittest.TestCase):
+class TestRealRoving(object):
     """Test class for node flodometry
     
     Attributes:
@@ -51,15 +51,15 @@ class TestRealRoving(unittest.TestCase):
         rospy.Subscriber('/odom', Odometry, self.updateOdom)
         rospy.Subscriber("/optical_flow", motion_read, self.updateFlow)
         rospy.Subscriber("/encoders", motion_read, self.updateFlow)
-        self.uniboard_service('motor_left', 3, str(0.1), rospy.Time.now())
-        self.uniboard_service('motor_right', 3, str(0.1), rospy.Time.now())
+        self.uniboard_service('motor_left', 3, str(0.5), rospy.Time.now())
+        self.uniboard_service('motor_right', 3, str(0.5), rospy.Time.now())
         time.sleep(RUNTIME)
         self.uniboard_service('motor_left', 3, str(0.0), rospy.Time.now())
         self.uniboard_service('motor_right', 3, str(0.0), rospy.Time.now())
-        self.plot(self.flow_time, self.motion_x, 'Motion x')
-        self.plot(self.flow_time, self.shutter, 'Shutter')
-        self.plot(self.odom_time, self.vel, 'Velocity')
-        self.plot(self.odom_time, self.pos, 'Position')
+        # self.plot(self.flow_time, self.motion_x, 'Motion x')
+        # self.plot(self.flow_time, self.shutter, 'Shutter')
+        # self.plot(self.odom_time, self.vel, 'Velocity')
+        # self.plot(self.odom_time, self.pos, 'Position')
        
 
     def plot(self, x, y, title):
@@ -117,4 +117,5 @@ class TestRealRoving(unittest.TestCase):
 
 
 if __name__ == '__main__':
-    rostest.rosrun(PKG, 'test_real_roving', TestRealRoving)
+    t = TestRealRoving()
+    t.test_constant_speed()
