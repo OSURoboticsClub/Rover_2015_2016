@@ -39,6 +39,7 @@ class Arm():
         return True
     #
     def activate_arm(self):
+        if not self.is_usable(): return False
         """
         This function activates the arm for use.
         """
@@ -56,6 +57,7 @@ class Arm():
             print str(e)
             return False
     def deactivate_arm(self):
+        if not self.is_usable(): return False
         """
         This function pauses the arm.
         '"""
@@ -69,6 +71,7 @@ class Arm():
         return True
     #
     def default(self):
+        if not self.is_usable(): return False
         """
         This function moves the arm into a travelling position.
         """
@@ -77,6 +80,7 @@ class Arm():
         return True
     # 
     def get_side(self):
+        if not self.is_usable(): return "Unable to Detect Uniboard"
         """
         This function get the current side of the arm.
         Left of center, Right of center, or centered
@@ -91,6 +95,7 @@ class Arm():
 
     # ARM MOVEMENT
     def move_X(self, value=0.0, ignore_boundry=False):
+        if not self.is_usable(): return False
         """
         This function moves the arm along the X axis.
         Setting ignore_boundry to True will cause the arm to ignore the slight offset
@@ -105,6 +110,7 @@ class Arm():
         self.wait_for_X()
         return True
     def move_Y(self, value=0.0, ignore_boundry=False):
+        if not self.is_usable(): return False
         """
         This function moves the arm along the Y axis.
         Setting ignore_boundry to True will cause the arm to ignore the slight offset
@@ -119,6 +125,7 @@ class Arm():
         self.wait_for_Y()
         return True
     def move_Z(self, value=0.00):#, ignore_boundry=False):
+        if not self.is_usable(): return False
         """
         This function moves the arm along the Z axis.
         """
@@ -133,6 +140,7 @@ class Arm():
         self.wait_for_A()
         return True
     def move_XY(self, x_value=0.0, y_value=0.0):
+        if not self.is_usable(): return False
         """
         This function moves both the arm along both the X and Y axes at the same time.
         """
@@ -145,9 +153,11 @@ class Arm():
 
     # PRESET ARM OPERATIONS
     def center(self):
+        if not self.is_usable(): return False
         # This function moves the arm to the center X and Y coords.
         return self.move_XY(x_value=self.x_center, y_value=self.y_center)
     def grab(self):
+        if not self.is_usable(): return False
         # This function is a preset grab function
         # The arm goes halfway down, opens the end effector, goes down to the ground, 
         # closes the end effector, and brings the up at the end
@@ -158,40 +168,50 @@ class Arm():
         self.up()
         return True
     def open(self):
+        if not self.is_usable(): return False
         # This function opens the end effector.
         return self.move_A(value=1)
     def close(self):
+        if not self.is_usable(): return False
         # This function closes the end effector.
         return self.move_A(value=0)
     def up(self):
+        if not self.is_usable(): return False
         # This function moves the arm all the way up.
         return self.move_Z(value=0.5)
     def down(self):
+        if not self.is_usable(): return False
         # This function moves the arm al the way down.
         if self.get_side() == "Left":
             return self.move_Z(value=1.0)
         else:
             return self.move_Z(value=0.0)
     def half_down(self):
+        if not self.is_usable(): return False
         # This function moves the arm have way down.
         if self.get_side() == "Left":
             return self.move_Z(value=0.75)
         else:
             return self.move_Z(value=0.25)
     def left(self):
+        if not self.is_usable(): return False
         # This function moves the arm to the far left
         return self.move_X(value=self.ub.arm_max("X"))
     def right(self):
+        if not self.is_usable(): return False
         # This funciton moves the arm to the far right
         return self.move_X(value=0.0)
     def forward(self):
+        if not self.is_usable(): return False
         # This function moves the arm forward all the way.
         # Warning: End Effector may hit camera boom.
         return self.move_Y(value=0.0)
     def back(self):
+        if not self.is_usable(): return False
         return self.move_Y(value=self.ub.arm_max("Y"))
     #
     def wait_for_X(self, time_out=False):
+        if not self.is_usable(): return False
         # This function loops while the X axis is moving
         wait_time = 0
         while self.ub.arm_should_be_moving("X"):
@@ -201,6 +221,7 @@ class Arm():
                 return False
         return True
     def wait_for_Y(self, time_out=False):
+        if not self.is_usable(): return False
         # This function loops while the Y axis is moving
         wait_time = 0
         while self.ub.arm_should_be_moving("Y"):
@@ -210,6 +231,7 @@ class Arm():
                 return False
         return True
     def wait_for_Z(self, time_out=False):
+        if not self.is_usable(): return False
         # This function loops while the Z axis is moving
         wait_time = 0
         while self.ub.arm_should_be_moving("Z"):
@@ -219,6 +241,7 @@ class Arm():
                 return False
         return True
     def wait_for_A(self, time_out=False):
+        if not self.is_usable(): return False
         # This function loops while the A axis is moving
         wait_time = 0
         while self.ub.arm_should_be_moving("A"):
