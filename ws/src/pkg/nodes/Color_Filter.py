@@ -27,8 +27,8 @@ def filters():
     blue_upper = [120,255,255] 
 
     purple = 'purple'
-    purple_lower = [120, 100, 0]
-    purple_upper = [160, 255, 255] 
+    purple_lower = [115, 70, 0]
+    purple_upper = [180, 255, 255] 
     color_filters = [purple]#[red, orange, yellow, green, blue, purple]
 
     lowers = {}
@@ -134,7 +134,7 @@ def contour_color(frame=None, show_images=False):
     return edges
 
 def main():
-    camera = 2
+    camera = 1
     cap =cv2.VideoCapture(camera)
     finished = False
 
@@ -155,7 +155,7 @@ def main():
 
 
 
-#main()
+# main()
 
 
 

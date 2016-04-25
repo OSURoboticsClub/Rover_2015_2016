@@ -9,9 +9,11 @@ sys.path.insert(0, "../../../../uniboard/roverlib")
 import uniboard
 import math
 import arm
+import cv2
 
 new_crotch_img2 = None
 bridge = CvBridge()
+cv2.namedWindow('DICKBUTT')
 
 TEST_PIT = True
 
@@ -91,8 +93,9 @@ def pick_up_at(u,xy):
         rospy.loginfo("calculated x: " + str(x_pick))
         rospy.loginfo("calculated y: " + str(y_pick))
 
-        #x_pick -= 0.2
-        y_pick -= 0.03
+        #x_pick += 0.07
+        x_pick += 0.00
+        y_pick -= 0.00
 
         while u.arm_should_be_moving("X") or u.arm_should_be_moving("Y"): pass
 
@@ -101,14 +104,14 @@ def pick_up_at(u,xy):
 
         u.arm_target("A", 0.99)
         time.sleep(5) 
-	z_safe_move(u, 0)
+	z_safe_move(u, 0.047)
         u.arm_z_wait_until_done()
 
-        u.arm_target("A", 0.5)
-        time.sleep(5)
+        #u.arm_target("A", 0.5)
+        #time.sleep(5)
 
-        u.arm_target("A", 1)
-        time.sleep(2)
+        #u.arm_target("A", 1)
+        #time.sleep(2)
 
         u.arm_target("A", 0)
         time.sleep(3)
@@ -142,11 +145,11 @@ def vid():
     u.arm_home()
 
     # MOVE FORWARD X meters
-    u.motor_left(0.1)
-    u.motor_right(0.1)
-    time.sleep(9)
-    u.motor_left(0)
-    u.motor_right(0)
+    #u.motor_left(0.1)
+    #u.motor_right(0.1)
+    #time.sleep(9)
+    #u.motor_left(0)
+    #u.motor_right(0)
 
     # PICK UP SAMPLE
     if TEST_PIT:
@@ -159,6 +162,7 @@ def vid():
        if new_crotch_img2 is not None:
           curr_crotch_img = new_crotch_img2
           rospy.loginfo("image success")
+          cv2.imshow('DICKBUTT', curr_crotch_img)
           xy = grab.identify_easy_sample(curr_crotch_img)
           rospy.loginfo("coordinates: " + str(xy))
           if xy:
@@ -170,11 +174,11 @@ def vid():
        pick_up_center(u)
         
     # MOVE BACKWARD X meters
-    u.motor_left(-0.1)
-    u.motor_right(-0.1)
-    time.sleep(8.9)
-    u.motor_left(0)
-    u.motor_right(0)    
+    #u.motor_left(-0.1)
+    #u.motor_right(-0.1)
+    #time.sleep(8.9)
+    #u.motor_left(0)
+    #u.motor_right(0)    
 
     # DROP SAMPLE
     # drop(u)
