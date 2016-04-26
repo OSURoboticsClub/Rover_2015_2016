@@ -108,6 +108,24 @@ def pick_up_at(u,xy):
         z_safe_move(u, 0.5)
         u.arm_z_wait_until_done()
 
+def turn_to_sample(coords):
+    
+    while coords[0] < 50 and coords[0] > -50:
+       if coords[0] > 0:
+          u.motor_left(0.1)
+          u.motor_right(-0.1)
+          time.sleep(1)
+          u.motor_left(0.0)
+          u.motor_right(0.0)
+          coords = scan.check_easy_sample(scan_img_left, scan_img_right)
+       elif coords[0] <= 0:
+          u.motor_left(-0.1)
+          u.motor_right(0.1)
+          time.sleep(1)
+          u.motor_right(0.0)
+          u.motor_left(0.0)
+          coords = scan.check_for_easy_sample(scan_img_left, scan_img_right)
+
 def test_scan_and_grab(u):
     
     coords = None
@@ -120,8 +138,8 @@ def test_scan_and_grab(u):
        coords = scan.check_easy_sample(scan_img_left, scan_img_right)
        rate.sleep()
     # record current speed of wheels
-    lrpm = u.encoder_left_rpm()
-    rrpm = u.encoder_right_rpm()
+    #lrpm = u.encoder_left_rpm()
+    #rpm = u.encoder_right_rpm()
     u.motor_left(0.0)
     u.motor_right(0.0)
     time.sleep(1)
@@ -130,6 +148,8 @@ def test_scan_and_grab(u):
     u.arm_target("X", 0)
     u.arm_target("Y", u.arm_max("Y"))
     while u.arm_should_be_moving("X") or u.arm_should_be_moving("Y"): pass
+
+    turn_to_sample(coords)
 
     # 98.6 cm circumfrence for wheels assumed
     #rpm = (lrpm + rrpm) / 2.0
@@ -155,6 +175,7 @@ def test_scan_and_grab(u):
        xy = grab.identify_easy_sample(curr_crotch_img) 
        while xy is None:
           xy = grab.identify_easy_sample(curr_crotch_img)
+          time.sleep(1.5)
        u.motor_right(0.0)
        u.motor_left(0.0)
        break
