@@ -13,7 +13,6 @@ import cv2
 
 new_crotch_img2 = None
 bridge = CvBridge()
-#cv2.namedWindow('DICKBUTT')
 
 TEST_PIT = True
 
@@ -33,46 +32,14 @@ def z_safe_move(u, z):
 	else:
 		u.arm_target("Z", .5-z)
 
-def up_down_test(u):
-    
-    u.arm_target("X", 0.25)
-    while u.arm_should_be_moving("X"): pass
-
-    for i in range(5):
-       z_safe_move(u, 0.03)
-       u.arm_z_wait_until_done()
-       z_safe_move(u, 0.5)
-       u.arm_z_wait_until_done()
-    
-    '''
-    u.arm_target("X", 0.1)
-    while u.arm_should_be_moving("X"): pass
-
-    for i in range(5):
-       z_safe_move(u, 0.03)
-       u.arm_z_wait_until_done()
-       z_safe_move(u, 0.5)
-       u.arm_z_wait_until_done()
- 
-    u.arm_target("X", 0.15)
-    while u.arm_should_be_moving("X"): pass
-
-    for i in range(5):
-       z_safe_move(u, 0.03)
-       u.arm_z_wait_until_done()
-       z_safe_move(u, 0.5)
-       u.arm_z_wait_until_done()
-    '''
-
 def pick_up_at(u,xy):
 
     # constants that define the range of the arm
     # from the pit cam's perspective
-    # TODO: measure these
     X_CAM_MAX = 870.0
     X_CAM_MIN = 435.0
-    Y_CAM_MAX = 383.0#128.0
-    Y_CAM_MIN = 119.0#354.0
+    Y_CAM_MAX = 383.0
+    Y_CAM_MIN = 119.0
 
     REAL_X = 0.29
     REAL_Y = 0.24
@@ -116,14 +83,8 @@ def pick_up_at(u,xy):
 
         u.arm_target("A", 0.99)
         time.sleep(3) 
-	z_safe_move(u, 0.035)
+	z_safe_move(u, 0.04)
         u.arm_z_wait_until_done()
-
-        #u.arm_target("A", 0.5)
-        #time.sleep(5)
-
-        #u.arm_target("A", 1)
-        #time.sleep(2)
 
         u.arm_target("A", 0)
         time.sleep(3)
@@ -140,15 +101,14 @@ def vid():
     u.arm_home()
 
     # MOVE FORWARD X meters
-    #u.motor_left(0.1)
-    #u.motor_right(0.1)
-    #time.sleep(9)
-    #u.motor_left(0)
-    #u.motor_right(0)
+    u.motor_left(0.1)
+    u.motor_right(0.1)
+    time.sleep(9)
+    u.motor_left(0)
+    u.motor_right(0)
     
     # PICK UP SAMPLE
     if TEST_PIT:
-       # only used for pit camera tests
        # move arm out of the way of the camera
        u.arm_target("X", 0)
        u.arm_target("Y", u.arm_max("Y"))
@@ -157,7 +117,6 @@ def vid():
        if new_crotch_img2 is not None:
           curr_crotch_img = new_crotch_img2
           rospy.loginfo("image success")
-          #cv2.imshow('DICKBUTT', curr_crotch_img)
           xy = grab.identify_easy_sample(curr_crotch_img)
           rospy.loginfo("coordinates: " + str(xy))
           if xy:
@@ -169,16 +128,11 @@ def vid():
        pick_up_center(u)
         
     # MOVE BACKWARD X meters
-    #u.motor_left(-0.1)
-    #u.motor_right(-0.1)
-    #time.sleep(8.9)
-    #u.motor_left(0)
-    #u.motor_right(0)    
-
-    # DROP SAMPLE
-    # drop(u)
-
-    #up_down_test(u)
+    u.motor_left(-0.1)
+    u.motor_right(-0.1)
+    time.sleep(8.9)
+    u.motor_left(0)
+    u.motor_right(0)    
 
 if __name__ == '__main__':
     try:
