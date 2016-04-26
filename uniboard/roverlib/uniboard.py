@@ -439,6 +439,10 @@ class Uniboard(object):
 		   integer (0, 1, 2, or 3), respectively."""
 		return bool(self._read_reg(4, self._arm_reg(axis, 1)) & 0x01)
 	
+	def arm_home_gripper(self):
+		"""Home just the A axis. Call this after picking something up, in case
+		   the pick jammed the gripper."""
+	
 	def arm_home(self):
 		"""Home all arm axises. After homing, X and Y will be in the middle of their travel
 		   (arm_max()/2), the gripper will be at its 0 position (fully closed), and Z will be
@@ -461,7 +465,7 @@ class Uniboard(object):
 		self.arm_target("A", .05)
 		while self.arm_should_be_moving("A"):
 			time.sleep(.1)
-			self.arm_go(axis, True)
+			self.arm_go("A", True)
 		self.arm_set("A", 0)
 			
 		#Move X and Y to their limit switches
