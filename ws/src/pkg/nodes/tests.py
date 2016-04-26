@@ -129,17 +129,14 @@ def turn_to_sample(coords):
 def test_scan_and_grab(u):
     
     coords = None
-    rate = rospy.Rate(10)
 
-    # MOVE FORWARD until sample is seen
+    # MOVE FORWARD until sample is seen by scan cam
     u.motor_right(0.1)
     u.motor_left(0.1)
     while coords is None: 
        coords = scan.check_easy_sample(scan_img_left, scan_img_right)
-       rate.sleep()
-    # record current speed of wheels
-    #lrpm = u.encoder_left_rpm()
-    #rpm = u.encoder_right_rpm()
+    
+    # once sample is seen, stop and move arm back
     u.motor_left(0.0)
     u.motor_right(0.0)
     time.sleep(1)
@@ -149,25 +146,10 @@ def test_scan_and_grab(u):
     u.arm_target("Y", u.arm_max("Y"))
     while u.arm_should_be_moving("X") or u.arm_should_be_moving("Y"): pass
 
+    # turn so that the sample is right in front of the rover
     turn_to_sample(coords)
 
-    # 98.6 cm circumfrence for wheels assumed
-    #rpm = (lrpm + rrpm) / 2.0
-    #rospy.loginfo("rpm: " + str(rpm))
-    #circum = 986
-    #mmpers = rpm * circum / 60
-    #rospy.loginfo("m/s: " + str(mmpers))
-    
-    #time_forward = coords[2] / mmpers
-    #rospy.loginfo("time forward: " + str(time_forward))
-
-    # go forward that much
-    #u.motor_left(0.1)
-    #u.motor_right(0.1)
-    #time.sleep(time_forward)
-    #u.motor_left(0.0)
-    #u.motor_right(0.0)
-
+    # move forward until the sample is seen by the pit cam, and park over it
     u.motor_right(0.1)
     u.motor_left(0.1)
     while not rospy.is_shutdown():
@@ -181,7 +163,6 @@ def test_scan_and_grab(u):
        break
 
     # PICK UP SAMPLE
-    # only used for pit camera tests
     # move arm out of the way of the camera
     u.arm_target("X", 0)
     u.arm_target("Y", u.arm_max("Y"))
