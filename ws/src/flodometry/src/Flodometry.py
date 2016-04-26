@@ -9,11 +9,8 @@ and publishes filtered values to /odm
 import math
 import numpy as np
 from bunch import Bunch
-from test_real_roving import TestRealRoving
 import rospy
-from flodometry.msg import motion_read
-from nav_msgs.msg import Odometry
-from encoders.msg import encoders
+
 
 from filterpy.kalman import KalmanFilter
 from tf.transformations import quaternion_from_euler
@@ -36,12 +33,19 @@ class Flodometry(object):
         """Initialize the node set up the Kalman filter and set up subscriber 
         and publisher.
         """
-        rospy.init_node('flodometry')
         self.setup_kalman()
+        if __name__ == '__main__':
+            self.setup_ros()
+        
+    def setup_ros(self):
+        from flodometry.msg import motion_read
+        from nav_msgs.msg import Odometry
+        from wheel_encoders.msg import rpm
+        rospy.init_node('flodometry')
         # Subscribe to the adns topic 
         rospy.Subscriber("/optical_flow", motion_read, self.update)
         # Subscribe to the encoder topic
-        rospy.Subscriber("/encoders", encoders, self.rupdate)
+        rospy.Subscriber("/encoder_values", rpm, self.rupdate)
         # Initialize the publisher
         self.pub = rospy.Publisher("/odom", Odometry, queue_size=10)
 
@@ -80,14 +84,15 @@ class Flodometry(object):
         vel_y = motion.dy
         self.kf.predict()
         H = cfg.H(self.kf.x[4])
-        self.kf.update([vel_x, vel_y, self.enc_avg, self.enc_r], H=H)
+        z = np.array([vel_x, vel_y, self.enc_avg, self.enc_r])
+        self.kf.update(z, H=H)
         self.publish_updates()
 
     def rupdate(self, enc):
         # Wheel radius
         r = 0.13
-        l_speed = enc.left*r
-        r_speed = enc.right*r
+        l_speed = enc.left_rpm*r
+        r_speed = enc.right_rpm*r
         avg = float((l_speed+r_speed))/2
         # this will update our x position odometry with encoder data
         # self.kf.update(avg)
@@ -121,10 +126,10 @@ class Flodometry(object):
             # odom.twist.covariance[0] = p[1][1]
             odom.pose.pose.orientation.x
             quaternion = quaternion_from_euler(0.0, 0.0, x[4])
-            odom.pose.pose.orientation.x = quaternion.x
-            odom.pose.pose.orientation.y = quaternion.y
-            odom.pose.pose.orientation.z = quaternion.z
-            odom.pose.pose.orientation.w = quaternion.w
+            odom.pose.pose.orientation.x = quaternion[0]
+            odom.pose.pose.orientation.y = quaternion[1]
+            odom.pose.pose.orientation.z = quaternion[2]
+            odom.pose.pose.orientation.w = quaternion[3]
             self.pub.publish(odom)
         else:
             pass
