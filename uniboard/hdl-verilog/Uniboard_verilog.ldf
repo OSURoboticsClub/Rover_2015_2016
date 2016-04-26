@@ -2,7 +2,7 @@
 <BaliProject version="3.2" title="Uniboard_verilog" device="LCMXO2-7000HC-4TG144C" default_implementation="impl1">
     <Options/>
     <Implementation title="impl1" dir="impl1" description="impl1" synthesis="lse" default_strategy="Strategy1">
-        <Options def_top="UniboardTop" top="UniboardTop"/>
+        <Options def_top="ExpansionGPIO" top="UniboardTop"/>
         <Source name="uart.v" type="Verilog" type_short="Verilog">
             <Options/>
         </Source>
@@ -25,6 +25,9 @@
             <Options/>
         </Source>
         <Source name="encoder.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="expansion.v" type="Verilog" type_short="Verilog">
             <Options/>
         </Source>
         <Source name="Uniboard_verilog.lpf" type="Logic Preference" type_short="LPF">

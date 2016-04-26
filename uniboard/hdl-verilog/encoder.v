@@ -59,7 +59,6 @@ module EncoderPeripheral(
 	
 	assign register[0] = {28'b0, A, B, I, 1'b0};
 	wire qreset;
-	wire clk_100Hz;
 	assign qreset = reset | clk_100Hz;
 	
 	/* Bus read handling */

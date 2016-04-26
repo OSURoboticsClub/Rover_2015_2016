@@ -430,12 +430,6 @@ module UniboardTop(
 	
 	assign status_led[0] = 1 | ((& limit)& xbee_pause  & encoder_ra & encoder_rb& encoder_ri& encoder_la& encoder_lb & encoder_li&rc_ch1&rc_ch2&rc_ch3&rc_ch4&rc_ch7&rc_ch8&Stepper_X_nFault&Stepper_Y_nFault&Stepper_Z_nFault&Stepper_A_nFault);
 	
-	assign expansion1 = 0;
-	assign expansion2 = 0;
-	assign expansion3 = 0;
-	assign expansion4 = 0;
-	assign expansion5 = 0;
-	
 	
 	/* Debug and status LED assignments */
 	wire [4:0] state;
@@ -509,7 +503,7 @@ module UniboardTop(
 	                                           .drdy(drdy));
 	/* Dummy peripheral */
 	wire dummy_select;
-	assign dummy_select = | select[127:8] | select[0] | select[5] | select[6];
+	assign dummy_select = | select[127:8] | select[0] | select[6];
 	DummyPeripheral dummy(.databus(databus),
 	                      .reg_size(reg_size),
 	                      .rw(rw),
@@ -694,6 +688,19 @@ module UniboardTop(
 	                               .B(encoder_rb),
 	                               .I(encoder_ri),
 	                               .reset(reset));
+	
+	ExpansionGPIO   gpio(.clk_12MHz(clk_12MHz),
+	                      .databus(databus),
+	                      .reg_size(reg_size),
+	                      .register_addr(register_addr),
+	                      .rw(rw),
+	                      .select(select[5]),
+	                      .expansion1(expansion1),
+	                      .expansion2(expansion2),
+	                      .expansion3(expansion3),
+	                      .expansion4(expansion4),
+	                      .expansion5(expansion5),
+	                      .reset(reset));
 	
 	/* RC Receiver */
 	RCPeripheral rc_receiver(.clk_255kHz(clk_255kHz),

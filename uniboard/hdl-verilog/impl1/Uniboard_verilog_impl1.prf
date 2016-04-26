@@ -1,5 +1,5 @@
 SCHEMATIC START ;
-# map:  version Diamond (64-bit) 3.4.1.213 -- WARNING: Map write only section -- Mon Apr 18 02:11:06 2016
+# map:  version Diamond (64-bit) 3.4.1.213 -- WARNING: Map write only section -- Mon Apr 25 18:00:13 2016
 
 SYSCONFIG SDM_PORT=DISABLE SLAVE_SPI_PORT=DISABLE I2C_PORT=DISABLE MASTER_SPI_PORT=DISABLE COMPRESS_CONFIG=ON CONFIGURATION=CFG MY_ASSP=OFF ONE_TIME_PROGRAM=OFF CONFIG_SECURE=OFF MCCLK_FREQ=2.08 JTAG_PORT=ENABLE ENABLE_TRANSFR=DISABLE SHAREDEBRINIT=DISABLE MUX_CONFIGURATION_PORTS=DISABLE ;
 LOCATE COMP "xbee_pause" SITE "4" ;
@@ -15,6 +15,7 @@ LOCATE COMP "encoder_la" SITE "50" ;
 LOCATE COMP "encoder_ri" SITE "54" ;
 LOCATE COMP "encoder_rb" SITE "55" ;
 LOCATE COMP "encoder_ra" SITE "56" ;
+LOCATE COMP "expansion5" SITE "62" ;
 LOCATE COMP "limit[0]" SITE "68" ;
 LOCATE COMP "limit[1]" SITE "65" ;
 LOCATE COMP "limit[2]" SITE "67" ;
@@ -37,8 +38,6 @@ LOCATE COMP "debug[8]" SITE "122" ;
 LOCATE COMP "motor_pwm_r" SITE "6" ;
 LOCATE COMP "motor_pwm_l" SITE "5" ;
 LOCATE COMP "signal_light" SITE "57" ;
-LOCATE COMP "expansion5" SITE "62" ;
-LOCATE COMP "expansion4" SITE "61" ;
 LOCATE COMP "expansion3" SITE "60" ;
 LOCATE COMP "expansion2" SITE "59" ;
 LOCATE COMP "expansion1" SITE "58" ;
@@ -70,6 +69,7 @@ LOCATE COMP "status_led[0]" SITE "110" ;
 LOCATE COMP "status_led[1]" SITE "109" ;
 LOCATE COMP "status_led[2]" SITE "107" ;
 LOCATE COMP "uart_tx" SITE "132" ;
+LOCATE COMP "expansion4" SITE "61" ;
 SCHEMATIC END ;
 PERIOD PORT "clk_12MHz" 83.000000 nS HIGH 41.500000 nS ;
 RVL_ALIAS "clk_12MHz" "clk_12MHz"; 
