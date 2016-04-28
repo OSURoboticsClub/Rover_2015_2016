@@ -5,7 +5,6 @@ from sensor_msgs.msg import Image
 from cv_bridge import CvBridge, CvBridgeError
 import sys
 sys.path.insert(0,'scripts')
-
 import Color_Filter
 import detector
 import math
@@ -13,6 +12,7 @@ import cv2
 from mechanical_arm.srv import *
 sys.path.insert(0, "../../../../uniboard/roverlib")
 from arm import Arm
+import uniboard
 
 MAX_TRIES = 10
 ready = False
@@ -48,24 +48,6 @@ def identify_easy_sample(img):
         centx = int(moments['m10']/moments['m00'])
         centy = int(moments['m01']/moments['m00'])
 
-        '''
-        # coordinates in pixels where the center is (0,0)
-        # assumes 1280x720 resolution
-        xy = (centx-640,(centy * -1)+360)
-
-        # convert pixels to mm
-        # adjust these parameters as necessary
-        h = 500 # height of camera from ground
-        a = 60  # angle of view
-        dx0 = h * math.tan(math.radians(a/2))
-        x = (xy[0] * dx0) / (640)
-
-        dy0 = (dx0 * 360) / (640)
-        y = (dy0 * xy[1]) / (360)
-
-        cv2.imshow('image', blurred)
-        '''
-
         # absolute coordinates where (0,0) is bottom left
         return (centx,(centy))
 
@@ -90,16 +72,121 @@ def identify_sample():
     # returns a tuple (x,y), or None if sample cannot be confirmed
     return coords
 
-def pick_up(xy):
+def z_safe_move(u, z):
+	"""Z values from .5 to 0, with .5 being upright."""
+	z = .5 - z
+	if u.arm_current("X", 0) > u.arm_max("X")/2:
+        	u.arm_target("Z", .5+z)
+	else:
+		u.arm_target("Z", .5-z)
+
+def pick_up_at(u,xy):
+
+    # constants that define the range of the arm
+    # from the pit cam's perspective
+    X_CAM_MAX = 870.0
+    X_CAM_MIN = 435.0
+    Y_CAM_MAX = 383.0
+    Y_CAM_MIN = 119.0
+
+    REAL_X = 0.29
+    REAL_Y = 0.24
+
+    ACTUAL_CAM_LENGTH_X = X_CAM_MAX-X_CAM_MIN
+    ACTUAL_CAM_LENGTH_Y = Y_CAM_MAX-Y_CAM_MIN
+    
+    # assumes camera is oriented so that (0,0)
+    # of the camera corresponds to (0,0) of the arm
+    if xy[0] > X_CAM_MAX: rospy.loginfo("the sample is too far left to pick up")
+    elif xy[0] < X_CAM_MIN: rospy.loginfo("the sample is too far right to pick up")
+    elif xy[1] > Y_CAM_MAX: rospy.loginfo("the sample is too far forward to pick up")
+    elif xy[1] < Y_CAM_MIN: rospy.loginfo("the sample is too far backward to pick up")
+    else:
+        x_sample = xy[0]-X_CAM_MIN
+        y_sample = Y_CAM_MAX-(xy[1]-Y_CAM_MIN)
+
+        # convert to meters
+        # x_pick/x_arm_max = x_sample/x_cam_max
+        x_pick = (x_sample/ACTUAL_CAM_LENGTH_X) * u.arm_max("X")
+        y_pick = (y_sample/ACTUAL_CAM_LENGTH_Y) * u.arm_max("Y")
+
+        x_pick += 0.0
+        y_pick -= 0.125
+
+        u.arm_target("X", x_pick)
+        u.arm_target("Y", y_pick)
+
+        rospy.loginfo("calculated x: " + str(x_pick))
+        rospy.loginfo("calculated y: " + str(y_pick))
+
+        while u.arm_should_be_moving("X") or u.arm_should_be_moving("Y"): pass
+
+        z_safe_move(u, 0.2)
+        u.arm_z_wait_until_done()
+
+        u.arm_target("A", .05)
+	while u.arm_should_be_moving("A"):
+	    time.sleep(.1)
+	    u.arm_go("A", True)
+
+        u.arm_target("A", 0.99)
+        time.sleep(3) 
+	z_safe_move(u, 0.04)
+        u.arm_z_wait_until_done()
+
+        u.arm_target("A", 0)
+        time.sleep(3)
+
+        z_safe_move(u, 0.5)
+        u.arm_z_wait_until_done()
+
+def place_sample(u, trayNum):
+    # puts the sample in the holding area once it is picked up.
+
+    # TODO: test these paramaters
+    X_1 = 544
+    X_2 = 761
+    Y = 100
+
+    u.arm_target('Y', Y)
+    if trayNum == 1:
+        u.arm_target('X', X_1)
+    elif trayNum == 2:
+        u.arm_target('X', X_2)
+    else:
+        rospy.logerr('invalid tray number')
+
+    while u.arm_should_be_moving("X") or u.arm_should_be_moving("Y"): pass
+
+    z_safe_move(u, 0.2)
+    u.arm_z_wait_until_done()
+
+    u.arm_target("A", .05)
+    while u.arm_should_be_moving("A"):
+        time.sleep(.1)
+        u.arm_go("A", True)
+
+    u.arm_target('A', 0.99)
+    time.sleep(3)
+
+    u.arm_target('A', 0)
+    time.sleep(3)
+
+    # move arm out of the way of the camera
+    u.arm_target("X", 0)
+    u.arm_target("Y", u.arm_max("Y"))
+    while u.arm_should_be_moving("X") or u.arm_should_be_moving("Y"): pass
+    time.sleep(1)
+
+def pick_up(u,xy):
     
     # this function uses the (x,y) coordinates from the crotch cam to 
     # adjust the arm's position if necessary, and then 
     # pick up the sample
 
-    rospy.wait_for_service('move_arm')
-    move_arm = rospy.ServiceProxy('move_arm', arm_position)
-    #TODO: test and determine max arm params and account for them
-    resp = move_arm(x,y,1)
+    pick_up_at(u,xy)
+    # TODO: use both trays
+    place_sample(u, 1)
 
     # determine if grab was successful
     curr_crotch_img = new_crotch_img
@@ -140,8 +227,12 @@ def grab():
     rate = rospy.Rate(10) # 10hz
     global ready
 
+    # TODO: we may need to use the uniboard_communication node instead
+    u = uniboard.Uniboard("/dev/ttyUSB1")
+    u.arm_home()
+
     while not rospy.is_shutdown():
-        '''
+        
         if ready: # will become true when nav sends the grab_signal
             grab_finished = False
             grab_succ = False
@@ -151,11 +242,12 @@ def grab():
         
                 rospy.loginfo("identifying sample")
                 xy = identify_sample()
+                rospy.loginfo("coords: {0}".format(xy))
                 if xy is None:
                     rospy.loginfo("sample could not be identified")
                     break
                 rospy.loginfo("pick up attempt #{0}".format(num_tries))
-                grab_succ = pick_up(xy)
+                grab_succ = pick_up(u,xy)
                 if (grab_succ) or (num_tries == MAX_TRIES):
                     grab_finished = True
 
@@ -163,93 +255,8 @@ def grab():
             rospy.loginfo("grab success" if grab_succ else "grab failure")
             ready = False
             pub.publish(grab_succ)
-        '''
-        xy=identify_sample()
-    	if xy is None:
-            rospy.loginfo("sample could not be identified")
-        else:
-	    rospy.loginfo("coords: {0}".format(xy))
-        rate.sleep()
-
-def pick_up_at(xy, roverarm=None):
-    if roverarm is None:
-        roverarm = Arm()
-    roverarm.home()
-    roverarm.default()
-    # constants that define the range of the arm
-    # from the pit cam's perspective
-    # TODO: measure these
-    X_CAM_MAX = 800.0
-    X_CAM_MIN = 439.0
-    Y_CAM_MAX = 425.0
-    Y_CAM_MIN = 61.0
-
-    REAL_X = 0.29
-    REAL_Y = 0.24
-
-    ACTUAL_CAM_LENGTH_X = X_CAM_MAX-X_CAM_MIN
-    ACTUAL_CAM_LENGTH_Y = Y_CAM_MAX-Y_CAM_MIN
-    
-    # assumes camera is oriented so that (0,0)
-    # of the camera corresponds to (0,0) of the arm
-    if xy[0] > X_CAM_MAX: 
-        rospy.loginfo("the sample is too far right to pick up")
-    elif xy[0] < X_CAM_MIN: 
-        rospy.loginfo("the sample is too far left to pick up")
-    elif xy[1] > Y_CAM_MAX: 
-        rospy.loginfo("the sample is too far forward to pick up")
-    elif xy[1] < Y_CAM_MIN: 
-        rospy.loginfo("the sample is too far backward to pick up")
-    else:
-        x_sample = xy[0]-X_CAM_MIN
-        y_sample = Y_CAM_MAX-(xy[1]-Y_CAM_MIN)
-
-        # convert to meters
-        # x_pick/x_arm_max = x_sample/x_cam_max
-        x_pick = (x_sample/ACTUAL_CAM_LENGTH_X) * roverarm.ub.arm_max("X")
-        y_pick = (y_sample/ACTUAL_CAM_LENGTH_Y) * roverarm.ub.arm_max("Y")
-        # x_pick = (x_sample/ACTUAL_CAM_LENGTH_X) * u.arm_max("X")
-        # y_pick = (y_sample/ACTUAL_CAM_LENGTH_Y) * u.arm_max("Y")
-
-
-        # u.arm_target("X", x_pick) # HERE
-        # u.arm_target("Y", y_pick) # HERE
-        roverarm.move_XY(x_value=x_pick, y_value=y_pick)
-
-        rospy.loginfo("calculated x: " + str(x_pick))
-        rospy.loginfo("calculated y: " + str(y_pick))
-
-        #x_pick += 0.07
-        x_pick += 0.00
-        y_pick -= 0.00
-
-        # while u.arm_should_be_moving("X") or u.arm_should_be_moving("Y"): pass# HERE
-
-        # z_safe_move(u, 0.2)# HERE
-        # u.arm_z_wait_until_done()
-        roverarm.move_Z_safe(value=0.2)
-        # u.arm_target("A", 0.99)# HERE
-        roverlib.open()
-
         
-        # time.sleep(5) 
-        # z_safe_move(u, 0.047)
-        # u.arm_z_wait_until_done()# HERE
-        roverarm.move_Z_safe(value=0.047)
-
-        #u.arm_target("A", 0.5)
-        #time.sleep(5)
-
-        #u.arm_target("A", 1)
-        #time.sleep(2)
-
-        # u.arm_target("A", 0)# HERE
-        # time.sleep(3)# HERE
-        roverarm.close()
-
-        # z_safe_move(u, 0.5)# HERE
-        # u.arm_z_wait_until_done()# HERE
-        roverarm.up()
+        rate.sleep()
 
 if __name__ == '__main__':
     try:

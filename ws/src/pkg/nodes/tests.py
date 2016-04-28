@@ -38,90 +38,40 @@ def handle_img(img):
     except CvBridgeError as e:
         rospy.logerror(e)
 
-def z_safe_move(u, z):
-	"""Z values from .5 to 0, with .5 being upright."""
-	z = .5 - z
-	if u.arm_current("X", 0) > u.arm_max("X")/2:
-        	u.arm_target("Z", .5+z)
-	else:
-		u.arm_target("Z", .5-z)
-
-def pick_up_at(u,xy):
-
-    # constants that define the range of the arm
-    # from the pit cam's perspective
-    # TODO: measure these
-    X_CAM_MAX = 800.0
-    X_CAM_MIN = 439.0
-    Y_CAM_MAX = 425.0
-    Y_CAM_MIN = 61.0
-
-    REAL_X = 0.29
-    REAL_Y = 0.24
-
-    ACTUAL_CAM_LENGTH_X = X_CAM_MAX-X_CAM_MIN
-    ACTUAL_CAM_LENGTH_Y = Y_CAM_MAX-Y_CAM_MIN
+def turn_to_sample(u, coords):
     
-    # assumes camera is oriented so that (0,0)
-    # of the camera corresponds to (0,0) of the arm
-    if xy[0] > X_CAM_MAX: rospy.loginfo("the sample is too far right to pick up")
-    elif xy[0] < X_CAM_MIN: rospy.loginfo("the sample is too far left to pick up")
-    elif xy[1] > Y_CAM_MAX: rospy.loginfo("the sample is too far forward to pick up")
-    elif xy[1] < Y_CAM_MIN: rospy.loginfo("the sample is too far backward to pick up")
-    else:
-        x_sample = xy[0]-X_CAM_MIN
-        y_sample = Y_CAM_MAX-(xy[1]-Y_CAM_MIN)
+    while coords[0] < 50 and coords[0] > -50:
+       if coords[0] > 0:
+          u.motor_left(0.1)
+          u.motor_right(-0.1)
+          time.sleep(1)
+          u.motor_left(0.0)
+          u.motor_right(0.0)
+          coords = scan.check_easy_sample(scan_img_left, scan_img_right)
+       elif coords[0] <= 0:
+          u.motor_left(-0.1)
+          u.motor_right(0.1)
+          time.sleep(1)
+          u.motor_right(0.0)
+          u.motor_left(0.0)
+          coords = scan.check_for_easy_sample(scan_img_left, scan_img_right)
 
-        # convert to meters
-        # x_pick/x_arm_max = x_sample/x_cam_max
-        x_pick = (x_sample/ACTUAL_CAM_LENGTH_X) * u.arm_max("X")
-        y_pick = (y_sample/ACTUAL_CAM_LENGTH_Y) * u.arm_max("Y")
-
-        u.arm_target("X", x_pick)
-        u.arm_target("Y", y_pick)
-
-        rospy.loginfo("calculated x: " + str(x_pick))
-        rospy.loginfo("calculated y: " + str(y_pick))
-
-        #x_pick -= 0.2
-        #y_pick -= 0.03
-
-        while u.arm_should_be_moving("X") or u.arm_should_be_moving("Y"): pass
-
-        z_safe_move(u, 0.2)
-        u.arm_z_wait_until_done()
-
-        u.arm_target("A", 0.99)
-        time.sleep(5) 
-	z_safe_move(u, 0.047)
-        u.arm_z_wait_until_done()
-
-        #u.arm_target("A", 0.5)
-        #time.sleep(5)
-
-        #u.arm_target("A", 1)
-        #time.sleep(2)
-
-        u.arm_target("A", 0)
-        time.sleep(3)
-
-        z_safe_move(u, 0.5)
-        u.arm_z_wait_until_done()
-
-def test_scan_and_grab(u):
-    
+# moves forward until scan cam sees sample,
+# then stops and returns coordinates
+# also moves the arm out of the way afterwards
+def test_forward_until_scanned(u, precached):
     coords = None
-    rate = rospy.Rate(10)
 
-    # MOVE FORWARD until sample is seen
+    # MOVE FORWARD until sample is seen by scan cam
     u.motor_right(0.1)
     u.motor_left(0.1)
-    while coords is None: 
-       coords = scan.check_easy_sample(scan_img_left, scan_img_right)
-       rate.sleep()
-    # record current speed of wheels
-    lrpm = u.encoder_left_rpm()
-    rrpm = u.encoder_right_rpm()
+    while coords is None:
+       if precached:
+           coords = scan.check_precached(scan_img_left, scan_img_right)
+       else:
+           coords = scan.check_easy_sample(scan_img_left, scan_img_right)
+    
+    # once sample is seen, stop and move arm back
     u.motor_left(0.0)
     u.motor_right(0.0)
     time.sleep(1)
@@ -129,38 +79,30 @@ def test_scan_and_grab(u):
 
     u.arm_target("X", 0)
     u.arm_target("Y", u.arm_max("Y"))
-    while u.arm_should_be_moving("X") or u.arm_should_be_moving("Y"): pass
-
-    # 98.6 cm circumfrence for wheels assumed
-    #rpm = (lrpm + rrpm) / 2.0
-    #rospy.loginfo("rpm: " + str(rpm))
-    #circum = 986
-    #mmpers = rpm * circum / 60
-    #rospy.loginfo("m/s: " + str(mmpers))
+    while u.arm_should_be_moving("X") or u.arm_should_be_moving("Y"): pass   
     
-    #time_forward = coords[2] / mmpers
-    #rospy.loginfo("time forward: " + str(time_forward))
+    return coords
 
-    # go forward that much
-    #u.motor_left(0.1)
-    #u.motor_right(0.1)
-    #time.sleep(time_forward)
-    #u.motor_left(0.0)
-    #u.motor_right(0.0)
-
+# moves forward until the pit cam sees the sample,
+# then parks over it
+def test_move_til_sample(u, precached):
     u.motor_right(0.1)
     u.motor_left(0.1)
     while not rospy.is_shutdown():
        curr_crotch_img = new_crotch_img2
-       xy = grab.identify_easy_sample(curr_crotch_img) 
+       xy = None
        while xy is None:
-          xy = grab.identify_easy_sample(curr_crotch_img)
+           if precached:
+               xy = grab.identify_precached(curr_crotch_img)
+           else:
+               xy = grab.identify_easy_sample(curr_crotch_img)
+       time.sleep(1.5)
        u.motor_right(0.0)
        u.motor_left(0.0)
        break
 
-    # PICK UP SAMPLE
-    # only used for pit camera tests
+# tests a basic arm pickup for easy sample
+def test_pickup_easy(u):
     # move arm out of the way of the camera
     u.arm_target("X", 0)
     u.arm_target("Y", u.arm_max("Y"))
@@ -173,9 +115,23 @@ def test_scan_and_grab(u):
        rospy.loginfo("coordinates: " + str(xy))
        if xy:
           rospy.loginfo("a sample has been detected")
-          pick_up_at(u,xy)
+          grab.pick_up_at(u,xy)
        else:
           rospy.loginfo("no sample detected")
+
+def test_scan_and_grab_easy(u):
+   
+    # move forward until scan cam sees sample 
+    coords = test_forward_until_scanned(u, False)
+
+    # turn so that the sample is in front of the rover
+    turn_to_sample(u, coords)
+
+    # move forward until the sample is seen by the pit cam, and park over it
+    test_move_til_sample(u, False)
+
+    # pick up sample
+    test_pickup_easy(u)
 
 def tests():
     rospy.init_node('tests', anonymous=False)
@@ -187,7 +143,16 @@ def tests():
     u = uniboard.Uniboard("/dev/ttyUSB1")
     u.arm_home()
     
-    test_scan_and_grab(u)
+    # comment out all but one test
+
+    # test_forward_until_scanned_easy(u, False)
+    # test_move_til_sample(u, False)
+    # test_pickup_easy(u)
+    test_scan_and_grab_easy(u)
+
+    # TODO: 
+    # test_pickup_precached?
+    # test_scan_and_grab_precached
 
 if __name__ == '__main__':
     try:

@@ -177,7 +177,6 @@ def scan_for_samples():
        cv2.imshow('LEFT_RAW', curr_left_img)
        cv2.imshow('RIGHT_RAW', curr_right_img)
 
-       #coords = check_precached(curr_left_img, curr_right_img)
        if coords is None:
           coords = check_easy_sample(curr_left_img, curr_right_img)
        
