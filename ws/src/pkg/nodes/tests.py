@@ -16,6 +16,8 @@ scan_img_left = None
 scan_img_right = None
 bridge = CvBridge()
 
+print "Chris the king"
+
 def handle_scan_left(img):
     global scan_img_left
     try:
@@ -39,22 +41,27 @@ def handle_img(img):
         rospy.logerror(e)
 
 def turn_to_sample(u, coords):
-    
-    while coords[0] < 50 and coords[0] > -50:
+    print "turning" 
+    rospy.loginfo("COORDS[0]: " + str(coords[0]))
+    while coords[0] > 40 or coords[0] < -40:
        if coords[0] > 0:
-          u.motor_left(0.1)
-          u.motor_right(-0.1)
+          rospy.loginfo("turn right")
+          u.motor_left(0.22)
+          u.motor_right(-0.22)
           time.sleep(1)
           u.motor_left(0.0)
           u.motor_right(0.0)
           coords = scan.check_easy_sample(scan_img_left, scan_img_right)
        elif coords[0] <= 0:
-          u.motor_left(-0.1)
-          u.motor_right(0.1)
+          rospy.loginfo("turn left")
+          u.motor_left(-0.22)
+          u.motor_right(0.22)
           time.sleep(1)
           u.motor_right(0.0)
           u.motor_left(0.0)
-          coords = scan.check_for_easy_sample(scan_img_left, scan_img_right)
+          coords = scan.check_easy_sample(scan_img_left, scan_img_right)
+       while coords is None:
+          coords = scan.check_easy_sample(scan_img_left, scan_img_right)
 
 # moves forward until scan cam sees sample,
 # then stops and returns coordinates
@@ -70,7 +77,8 @@ def test_forward_until_scanned(u, precached):
            coords = scan.check_precached(scan_img_left, scan_img_right)
        else:
            coords = scan.check_easy_sample(scan_img_left, scan_img_right)
-    
+   
+    print "saw at thing" 
     # once sample is seen, stop and move arm back
     u.motor_left(0.0)
     u.motor_right(0.0)
@@ -86,17 +94,23 @@ def test_forward_until_scanned(u, precached):
 # moves forward until the pit cam sees the sample,
 # then parks over it
 def test_move_til_sample(u, precached):
+    u.arm_target("X", 0)
+    u.arm_target("Y", u.arm_max("Y"))
+    while u.arm_should_be_moving("X") or u.arm_should_be_moving("Y"): pass   
     u.motor_right(0.1)
     u.motor_left(0.1)
     while not rospy.is_shutdown():
        curr_crotch_img = new_crotch_img2
        xy = None
        while xy is None:
+           curr_crotch_img = new_crotch_img2
            if precached:
                xy = grab.identify_precached(curr_crotch_img)
            else:
                xy = grab.identify_easy_sample(curr_crotch_img)
-       time.sleep(1.5)
+           print "currently " + str(xy) 
+       print "Im gunna grab now"
+       time.sleep(0.5)
        u.motor_right(0.0)
        u.motor_left(0.0)
        break
@@ -126,6 +140,7 @@ def test_scan_and_grab_easy(u):
 
     # turn so that the sample is in front of the rover
     turn_to_sample(u, coords)
+    #print "not turning"
 
     # move forward until the sample is seen by the pit cam, and park over it
     test_move_til_sample(u, False)
@@ -146,8 +161,8 @@ def tests():
     # comment out all but one test
 
     # test_forward_until_scanned_easy(u, False)
-    # test_move_til_sample(u, False)
-    # test_pickup_easy(u)
+    #test_move_til_sample(u, False)
+    #test_pickup_easy(u)
     test_scan_and_grab_easy(u)
 
     # TODO: 
