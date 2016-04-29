@@ -10,6 +10,7 @@ import math
 import numpy as np
 from bunch import Bunch
 import rospy
+import tf
 
 
 from filterpy.kalman import KalmanFilter
@@ -19,7 +20,7 @@ from tf.transformations import quaternion_from_euler
 import sys, os
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 import config.kalman_config as cfg
-
+from nav_msgs.msg import Odometry
 
 class Flodometry(object):
     """Main class of Node flodometry
@@ -29,6 +30,8 @@ class Flodometry(object):
         odometry
         pub (rospy.Publisher): Publisher to push to odom
     """
+    tf_odom = tf.TransformBroadcaster()
+    
     def __init__(self):
         """Initialize the node set up the Kalman filter and set up subscriber 
         and publisher.
@@ -131,6 +134,7 @@ class Flodometry(object):
             odom.pose.pose.orientation.z = quaternion[2]
             odom.pose.pose.orientation.w = quaternion[3]
             self.pub.publish(odom)
+            self.tf_odom.sendTransform( (x[0], x[2], 0.0), (quaternion[0], quaternion[1], quaternion[2], quaternion[3]), odom.header.stamp, "base_link", "odom")
         else:
             pass
 
