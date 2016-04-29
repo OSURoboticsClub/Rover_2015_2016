@@ -16,8 +16,6 @@ scan_img_left = None
 scan_img_right = None
 bridge = CvBridge()
 
-print "Chris the king"
-
 def handle_scan_left(img):
     global scan_img_left
     try:
@@ -172,6 +170,48 @@ def test_scan_and_grab_precached(u):
 
     test_pickup_precached(u)
 
+def test_forward_until_scanned_both(u):
+    coords = None
+    precached = False # is the scanned sample precached or easy?
+
+    # MOVE FORWARD until sample is seen by scan cam
+    u.motor_right(0.1)
+    u.motor_left(0.1)
+
+    while coords is None:
+       coords = scan.check_precached(scan_img_left, scan_img_right)
+       if coords is None:
+           coords = scan.check_easy_sample(scan_img_left, scan_img_right)
+       else:
+           precached = True
+   
+    print "saw at thing" 
+    # once sample is seen, stop and move arm back
+    u.motor_left(0.0)
+    u.motor_right(0.0)
+    time.sleep(1)
+    rospy.loginfo("coords: " + str(coords))
+
+    u.arm_target("X", 0)
+    u.arm_target("Y", u.arm_max("Y"))
+    while u.arm_should_be_moving("X") or u.arm_should_be_moving("Y"): pass   
+    
+    return (coords, precached)
+
+
+def full_obj_rec_test(u):
+    coords = test_forward_until_scanned_both(u)
+    if coords[1]:
+        rospy.loginfo("precached sample detected")
+        turn_to_sample(u, coords, True)
+        test_move_til_sample(u, True)
+        test_pickup_precached(u)
+    else:
+        rospy.loginfo("easy sample detected")
+        turn_to_sample(u, coords, False)
+        test_move_til_sample(u, False)
+        test_pickup_easy(u)
+
 def tests():
     rospy.init_node('tests', anonymous=False)
     rospy.loginfo('node initialized')    
@@ -184,13 +224,14 @@ def tests():
     
     # comment out all but one test
 
-    # test_forward_until_scanned_easy(u, False)
+    #test_forward_until_scanned_easy(u, False)
     #test_move_til_sample(u, False)
     #test_pickup_easy(u)
-    test_scan_and_grab_easy(u)
-
+    #test_scan_and_grab_easy(u)
     #test_pickup_precached(u)
     #test_scan_and_grab_precached(u)
+    #test_forward_until_scanned_both(u)
+    full_obj_rec_test(u)
 
 if __name__ == '__main__':
     try:
