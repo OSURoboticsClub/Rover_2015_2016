@@ -61,8 +61,7 @@ def calculate_distance(left_centx, right_centx, left_centy, right_centy):
     # x0 -> number of horizontal pixels in image (640 right now)
     # a0 -> field of view (60 degrees for webcams)
     # (xl-xd) -> horizontal difference between the same object on both images (diff)
-    # This will have to be changed once the cameras are calibrated for the rover
-    # Assumes distance between cameras is 119mm and resolution 640x480
+    # This will change each time the rover is calibrated
     diff = abs(left_centx-right_centx)
     if diff != 0:
        dist = ((distance_between_cameras*resolution_width)/(2*math.tan(math.radians(view_angle)/2)*diff))# * 1.75
@@ -82,11 +81,11 @@ def calculate_distance(left_centx, right_centx, left_centy, right_centy):
     # dy0 -> distance from center of FOV (left camera) to vertical edge of FOV in mm
     # y -> distance from center of stereo cameras to purple centroid in mm
     dy0 = (dx0 * (resolution_height/2)) / (resolution_width/2)
-    y = (((dy0 * (left_centy - (resolution_height/2))) / (resolution_height/2)) * -1)# / 1.75
+    y = (((dy0 * (left_centy - (resolution_height/2))) / (resolution_height/2)) * -1)
 
     # calculate distance from base of rover
     # h -> height of cameras from ground in mm
-    # assumes sample is detected at same level as the rover...
+    # assumes flat surface
     try:
         z = math.sqrt(math.pow(dist, 2) - math.pow(height_of_cameras, 2)) * y_offset
         return (x,y,z)
@@ -133,8 +132,6 @@ def check_easy_sample(left, right):
            
            # take the biggest contour from each image and calculate their centroids
 
-           #left_cont = edges_left
-           #right_cont = edges_right
            left_cont = max(cnts_left, key = cv2.contourArea)
            right_cont = max(cnts_right, key = cv2.contourArea)
            left_moments = cv2.moments(left_cont)
@@ -150,7 +147,7 @@ def check_easy_sample(left, right):
               rospy.loginfo("Easy_Sample:(x,y,z): {0}".format(xyz))
 	      
            else:
-              rospy.loginfo("DIVIDE BY ZERO crck")
+              rospy.loginfo("DIVIDE BY ZERO")
           
        else:
            rospy.loginfo("NO PURPLE")
@@ -166,13 +163,13 @@ def check_easy_sample(left, right):
 
 def scan_for_samples():
 
-    # TODO: 
     # this function uses the sample cam to process images and determine 
     # whether or not there is a sample in the rover's view
     # if there is a sample, it will calculate the distance from the 
     # base of the rover in the form (x,y,z) [meters?]
 
     coords = None
+    precached = False
     curr_left_img = new_left_img
     curr_right_img = new_right_img
     if curr_left_img is not None and curr_right_img is not None:
@@ -180,19 +177,19 @@ def scan_for_samples():
        #cv2.imshow('LEFT_RAW', curr_left_img)
        #cv2.imshow('RIGHT_RAW', curr_right_img)
 
-       #coords = check_precached(curr_left_img, curr_right_img)
+       coords = check_precached(curr_left_img, curr_right_img)
        if coords is None:
           coords = check_easy_sample(curr_left_img, curr_right_img)
+       else:
+          precached = True
        
-       #if coords is None:
-       #   coords = check_precached(curr_left_img, curr_right_img)
-
        if coords is None: 
           rospy.loginfo("No Samples found")
 
-    # returns a tuple (x,y,z), or None if no sample is detected
+    # coords: (x,y,z), or None if no sample is detected
+    # precached: True if sample is precached
     if coords is not None:
-        return coords
+        return (coords, precached)
     else:
         return None
 
@@ -215,23 +212,25 @@ def scan():
 
     while not rospy.is_shutdown():
         
-        coords = scan_for_samples()
-        '''
+        (coords, precached) = scan_for_samples()
         if coords is not None:
             rospy.loginfo("sample detected by sample cam at " +
                           "({0},{1},{2})".format(
                           coords[0], coords[1], coords[2]))
-            pub.publish(coords[0], coords[1], coords[2])
+            if precached:
+               rospy.loginfo('sample type: precached')
+            else:
+               rospy.loginfo('sample type: easy')
+            pub.publish(coords[0], coords[1], coords[2], precached)
             global halt_scan
             halt_scan = True
             rospy.loginfo("scan has been halted")
             while(halt_scan):
                 # do nothing until grab finishes
-                rospy.loginfo
                 rate.sleep()
                         
             rospy.loginfo("returning to scan state")
-        '''
+
         #rate.sleep()
 
 if __name__ == '__main__':

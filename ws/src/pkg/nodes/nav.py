@@ -2,29 +2,94 @@
 import rospy
 from pkg.msg import Coords3D
 from std_msgs.msg import Bool
+sys.path.insert(0, "../../../../uniboard/roverlib")
+import uniboard
+import time
 
 halt_nav = False
 ready_to_grab = False
 
-def move_to_sample(sample_coords):
+#TODO: use the uniboard ROS service instead of this global
+u = uniboard.Uniboard("/dev/ttyUSB1")
 
-    # TODO: 
+def turn_to_sample(u, coords, precached):
+    print "turning"
+    rospy.loginfo("COORDS[0]: " + str(coords[0]))
+    while coords[0] > 40 or coords[0] < -40:
+       if coords[0] > 0:
+          rospy.loginfo("turn right")
+          u.motor_left(0.22)
+          u.motor_right(-0.22)
+          time.sleep(1)
+          u.motor_left(0.0)
+          u.motor_right(0.0)
+          if precached:
+              coords = scan.check_precached(scan_img_left, scan_img_right)
+          else:
+              coords = scan.check_easy_sample(scan_img_left, scan_img_right)
+       elif coords[0] <= 0:
+          rospy.loginfo("turn left")
+          u.motor_left(-0.22)
+          u.motor_right(0.22)
+          time.sleep(1)
+          u.motor_right(0.0)
+          u.motor_left(0.0)
+          if precached:
+              coords = scan.check_precached(scan_img_left, scan_img_right)
+          else:
+              coords = scan.check_easy_sample(scan_img_left, scan_img_right)
+       while coords is None:
+          if precached:
+              coords = scan.check_precached(scan_img_left, scan_img_right)
+          else:
+              coords = scan.check_easy_sample(scan_img_left, scan_img_right)
+
+def move_til_sample(u, precached):
+    u.arm_target("X", 0)
+    u.arm_target("Y", u.arm_max("Y"))
+    while u.arm_should_be_moving("X") or u.arm_should_be_moving("Y"): pass
+    u.motor_right(0.1)
+    u.motor_left(0.1)
+    while not rospy.is_shutdown():
+       curr_crotch_img = new_crotch_img2
+       xy = None
+       while xy is None:
+           curr_crotch_img = new_crotch_img2
+           if precached:
+               xy = grab.identify_precached(curr_crotch_img)
+           else:
+               xy = grab.identify_easy_sample(curr_crotch_img)
+       time.sleep(0.5)
+       u.motor_right(0.0)
+       u.motor_left(0.0)
+       break
+
+def move_to_sample(sample_coords, precached):
+
     # this function takes the sample coordinates from the sample cam
     # and moves the rover over the sample so that the arm is able to 
     # pick it up
 
     # returns True once the rover is in position, False if it's unable to
 
-    return True # temporary value, for testing
+    global u
+    turn_to_sample(u, sample_coords, precached)
+    move_til_sample(u, precached)
+
+    return True
 
 
 def handle_sample_coords(coords):
     rospy.loginfo(rospy.get_caller_id() + 
                   " sample detected at ({0},{1},{2})".format(
                   coords.x,coords.y,coords.z))
+    precached = coords.precached
+    if precached: rospy.loginfo('sample type: precached')
+    else: rospy.loginfo('sample type: easy')
+
     global halt_nav
     halt_nav = True # stop navigation routine until sample is acquired
-    in_position = move_to_sample(coords)
+    in_position = move_to_sample(coords, precached)
     if in_position:
         global ready_to_grab
         ready_to_grab = True

@@ -186,7 +186,7 @@ def pick_up(u,xy):
     # pick up the sample
 
     pick_up_at(u,xy)
-    # TODO: use both trays
+    # TODO: use both trays?
     place_sample(u, 1)
 
     # determine if grab was successful
