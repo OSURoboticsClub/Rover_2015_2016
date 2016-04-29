@@ -358,8 +358,7 @@ module DummyPeripheral(
 	assign reg_size = select ? 'b0 : 'bz;
 	assign databus = (select & ~rw) ? 'b0 : 'bz;
 endmodule
-	                             
-	                                    
+
 module UniboardTop(
 	input wire uart_rx, /* UART input from control computer. */
 	output wire uart_tx, /* UART output to control computer. */
@@ -431,12 +430,6 @@ module UniboardTop(
 	
 	assign status_led[0] = 1 | ((& limit)& xbee_pause  & encoder_ra & encoder_rb& encoder_ri& encoder_la& encoder_lb & encoder_li&rc_ch1&rc_ch2&rc_ch3&rc_ch4&rc_ch7&rc_ch8&Stepper_X_nFault&Stepper_Y_nFault&Stepper_Z_nFault&Stepper_A_nFault);
 	
-	assign expansion1 = 0;
-	assign expansion2 = 0;
-	assign expansion3 = 0;
-	assign expansion4 = 0;
-	assign expansion5 = 0;
-	
 	
 	/* Debug and status LED assignments */
 	wire [4:0] state;
@@ -471,6 +464,31 @@ module UniboardTop(
 	assign interface_reset = (reset_count < 16'd12000); /* 1 ms */
 	assign reset = (reset_count < 16'd18000); /* 1.5 ms */
 	
+	/* Timeout generator. */
+	reg timeout_pause;
+	reg [31:0] timeout_count;
+	reg prev_uart_rx;
+	parameter PAUSE_COUNT = 32'd60000000;
+	always @ (posedge clk_12MHz)			
+		begin
+			prev_uart_rx <= uart_rx;
+			if(uart_rx ^ prev_uart_rx)
+				begin
+					timeout_count <= 32'd0;
+				end
+			else
+				begin
+					if(timeout_count < PAUSE_COUNT) /* 5s */
+						timeout_count <= timeout_count + 1;
+				end
+				
+			if(timeout_count == PAUSE_COUNT)
+				timeout_pause <= 1;
+			else
+				timeout_pause <= 0;
+			
+		end
+		
 	/* Protocol interface and peripherals. */
 	ProtocolInterface #(12) protocol_interface(.tx(uart_tx),
 	                                           .rx(uart_rx),
@@ -485,11 +503,12 @@ module UniboardTop(
 	                                           .drdy(drdy));
 	/* Dummy peripheral */
 	wire dummy_select;
-	assign dummy_select = | select[127:8] | select[0] | select[5] | select[6];
+	assign dummy_select = | select[127:8] | select[0] | select[6];
 	DummyPeripheral dummy(.databus(databus),
 	                      .reg_size(reg_size),
 	                      .rw(rw),
 	                      .select(dummy_select));
+	
 	/* Global Control */
 	wire global_pause;
 	GlobalControlPeripheral #(32'd0, 32'h0009) global_control(.clk_12MHz(clk_12MHz),
@@ -501,6 +520,7 @@ module UniboardTop(
 	                                                          .global_pause(global_pause),
 	                                                          .signal_light(signal_light),
 	                                                          .xbee_pause_n(xbee_pause),
+	                                                          .timeout_pause(timeout_pause),
 	                                                          .battery_voltage(16'd6),
 	                                                          .reset(reset));
 	/* Motor Sabertooth Serial */
@@ -668,6 +688,19 @@ module UniboardTop(
 	                               .B(encoder_rb),
 	                               .I(encoder_ri),
 	                               .reset(reset));
+	
+	ExpansionGPIO   gpio(.clk_12MHz(clk_12MHz),
+	                      .databus(databus),
+	                      .reg_size(reg_size),
+	                      .register_addr(register_addr),
+	                      .rw(rw),
+	                      .select(select[5]),
+	                      .expansion1(expansion1),
+	                      .expansion2(expansion2),
+	                      .expansion3(expansion3),
+	                      .expansion4(expansion4),
+	                      .expansion5(expansion5),
+	                      .reset(reset));
 	
 	/* RC Receiver */
 	RCPeripheral rc_receiver(.clk_255kHz(clk_255kHz),
