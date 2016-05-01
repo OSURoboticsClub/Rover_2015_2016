@@ -17,6 +17,10 @@ scan_img_left = None
 scan_img_right = None
 bridge = CvBridge()
 
+cv2.startWindowThread()
+cv2.namedWindow('LEFT')
+cv2.namedWindow('RIGHT')
+
 def handle_scan_left(img):
     global scan_img_left
     try:
@@ -38,6 +42,14 @@ def handle_img(img):
         new_crotch_img2 = bridge.imgmsg_to_cv2(img, "bgr8")
     except CvBridgeError as e:
         rospy.logerror(e)
+
+def test_scan_easy():
+
+    while not rospy.is_shutdown():
+        coords = scan.check_easy_sample(scan_img_left, scan_img_right)
+        rospy.loginfo("coords: " + str(coords))
+        cv2.imshow('LEFT', scan_img_left)
+        cv2.imshow('RIGHT', scan_img_right)
 
 # moves forward until scan cam sees sample,
 # then stops and returns coordinates
@@ -176,6 +188,7 @@ def tests():
     #test_pickup_precached(u)
     #test_scan_and_grab_precached(u)
     #test_forward_until_scanned_both(u)
+    #test_scan_easy()
     full_obj_rec_test(u)
 
 if __name__ == '__main__':
