@@ -13,6 +13,7 @@ from mechanical_arm.srv import *
 sys.path.insert(0, "../../../../uniboard/roverlib")
 from arm import Arm
 import uniboard
+import time
 
 MAX_TRIES = 10
 ready = False
@@ -131,7 +132,7 @@ def pick_up_at(u,xy):
 
         u.arm_target("A", 0.99)
         time.sleep(3) 
-	z_safe_move(u, 0.04)
+	z_safe_move(u, 0.03)
         u.arm_z_wait_until_done()
 
         u.arm_target("A", 0)
@@ -185,7 +186,7 @@ def pick_up(u,xy):
     # pick up the sample
 
     pick_up_at(u,xy)
-    # TODO: use both trays
+    # TODO: use both trays?
     place_sample(u, 1)
 
     # determine if grab was successful
