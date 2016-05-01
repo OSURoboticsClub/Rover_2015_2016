@@ -51,6 +51,14 @@ def test_scan_easy():
         cv2.imshow('LEFT', scan_img_left)
         cv2.imshow('RIGHT', scan_img_right)
 
+def test_scan_precached():
+
+    while not rospy.is_shutdown():
+        coords = scan.check_precached(scan_img_left, scan_img_right)
+        rospy.loginfo("coords: " + str(coords))
+        cv2.imshow('LEFT', scan_img_left)
+        cv2.imshow('RIGHT', scan_img_right)
+
 # moves forward until scan cam sees sample,
 # then stops and returns coordinates
 # also moves the arm out of the way afterwards
@@ -189,6 +197,7 @@ def tests():
     #test_scan_and_grab_precached(u)
     #test_forward_until_scanned_both(u)
     #test_scan_easy()
+    #test_scan_precached()
     full_obj_rec_test(u)
 
 if __name__ == '__main__':
