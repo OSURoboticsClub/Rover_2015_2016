@@ -132,9 +132,6 @@ def test_scan_and_grab_precached(u):
     nav.move_til_sample(u, True)
     test_pickup_precached(u)
 
-def check_periferals(u):
-
-
 
 def test_forward_until_scanned_both(u):
     coords = None
