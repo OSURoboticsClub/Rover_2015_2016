@@ -40,6 +40,31 @@ class TestFlodometry(unittest.TestCase):
         self.plot(flow_time, flow_x, 'filtered_velocity')
 
 
+    def test_flow_y(self):
+        path = os.path.dirname(os.path.abspath(__file__))
+        path = os.path.join(path, 'bags/run_four.bag')
+        bag = rosbag.Bag(path)
+        optical_flow = bag.read_messages(topics=['/optical_flow'])
+        f = Flodometry()
+        squal = []
+        dy = []
+        flow_time = []
+        flow_y = []
+        for topic, msg, t in optical_flow:
+            f.update_flow(msg)
+            flow_y.append(f.flow_y.x[0])
+            squal.append(msg.squal)
+            dy.append(msg.dy)
+            flow_time.append(t.to_time())
+        filtered_dy = dy[10:110]
+        filtered_time = flow_time[10:110]
+        print 'Raw data analysis mean:{1} std:{0}'.format(
+                                    np.std(filtered_dy),
+                                    np.mean(filtered_dy))
+        self.plot(filtered_time, filtered_dy, 'dy')
+        self.plot(flow_time, flow_y, 'filtered_velocity')
+
+
     def test_enc_left(self):
         path = os.path.dirname(os.path.abspath(__file__))
         path = os.path.join(path, 'bags/run_four.bag')

@@ -4,5 +4,5 @@
   <node pkg="wheel_encoders" type="publish_rpm.py" name="rpm_publisher"/>
   <node pkg="rosbag" type="record" name="record" args="-o $(find flodometry)/test/bags/test_rotation /optical_flow /encoder_values"/>
   
-  <node name="test_rotation" pkg="flodometry" type="rotate.py" />
-</launch>h
+  <node name="test_rotation" pkg="flodometry" type="rotate.py" required="true"/>
+</launch>

@@ -9,8 +9,8 @@ Attributes:
 
 import math
 import numpy as np
-from bunch import Bunch
-from test_real_roving import TestRealRoving
+
+
 import rospy
 from flodometry.msg import motion_read
 from nav_msgs.msg import Odometry
@@ -43,6 +43,7 @@ class Flodometry(object):
         
 
     def setup_ros(self):
+        self.tf_odom = tf.TransformBroadcaster()
         rospy.init_node('flodometry')
         rospy.Subscriber("/optical_flow", motion_read, self.update_flow)
         rospy.Subscriber("/encoder_values", rpm, self.update_encoders)
@@ -53,6 +54,8 @@ class Flodometry(object):
     def setup_kalman(self):
         self.flow_x = KalmanFilter(dim_x=cfg.flow_x.dim_x, dim_z=cfg.flow_x.dim_z)
         self._setup_kalman(self.flow_x, cfg.flow_x)
+        self.flow_y = KalmanFilter(dim_x=cfg.flow_y.dim_x, dim_z=cfg.flow_y.dim_z)
+        self._setup_kalman(self.flow_y, cfg.flow_y)
         self.vel_left = KalmanFilter(dim_x=cfg.vel_left.dim_x, dim_z=cfg.vel_left.dim_z)
         self._setup_kalman(self.vel_left, cfg.vel_left)
         self.vel_right = KalmanFilter(dim_x=cfg.vel_right.dim_x, dim_z=cfg.vel_right.dim_z)
@@ -83,11 +86,10 @@ class Flodometry(object):
         Returns:
             None
         """
-        # Sensor was mounted so it only moved in the x direction during testing. 
-        vel = motion.dx
         self.flow_x.predict()
-        self.flow_x.update(vel)
-        self.update()
+        self.flow_x.update(motion.dx)
+        self.flow_y.update(motion.dy)
+        
 
     def update_encoders(self, enc):
         l_speed = enc.left_rpm
