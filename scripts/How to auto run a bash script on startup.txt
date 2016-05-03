@@ -1,0 +1,18 @@
+Here is how you call bash scripts once boot is complete.
+
+Go to the etc directory:
+cd /etc/
+Here, there is a file called "rc.local".  this file will run commands after startup.
+Edit the file and append this command to run startup.sh.  
+bash ~/<Script directory in repo>/startup.sh
+
+Now startup.sh will be auto run after start up is complete.
+
+Add the following commands to the startup.sh file:
+
+
+cd to working directory on rover machine
+source ../../../devel/setup.bash
+
+change to directory
+roslaunch tests.launch
