@@ -2,6 +2,7 @@
 import rospy
 from pkg.msg import Coords3D
 from std_msgs.msg import Bool
+import sys
 sys.path.insert(0, "../../../../uniboard/roverlib")
 import uniboard
 import time
@@ -10,7 +11,7 @@ halt_nav = False
 ready_to_grab = False
 
 #TODO: use the uniboard ROS service instead of this global
-u = uniboard.Uniboard("/dev/ttyUSB1")
+#u = uniboard.Uniboard("/dev/ttyUSB1")
 
 def turn_to_sample(u, coords, precached):
     print "turning"

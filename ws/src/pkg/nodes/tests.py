@@ -11,6 +11,7 @@ import math
 import arm
 import scan
 import nav
+import cv2
 
 new_crotch_img2 = None
 scan_img_left = None
@@ -163,6 +164,12 @@ def test_forward_until_scanned_both(u):
     
     return (coords, precached)
 
+def test_identify_easy():
+    while not rospy.is_shutdown():
+       if new_crotch_img2 is not None:
+          curr_crotch_img = new_crotch_img2
+          xy = grab.identify_easy_sample(curr_crotch_img)
+          rospy.loginfo("coordinates: " + str(xy))
 
 def full_obj_rec_test(u):
     coords = test_forward_until_scanned_both(u)
@@ -184,8 +191,8 @@ def tests():
     rospy.Subscriber('stereo/left/image_rect_color', Image, handle_scan_left)
     rospy.Subscriber('stereo/right/image_rect_color', Image, handle_scan_right)
     #rate = rospy.Rate(10)
-    u = uniboard.Uniboard("/dev/ttyUSB1")
-    u.arm_home()
+    #u = uniboard.Uniboard("/dev/ttyUSB1")
+    #u.arm_home()
     
     # comment out all but one test
 
@@ -198,7 +205,8 @@ def tests():
     #test_forward_until_scanned_both(u)
     #test_scan_easy()
     #test_scan_precached()
-    full_obj_rec_test(u)
+    test_identify_easy()
+    #full_obj_rec_test(u)
 
 if __name__ == '__main__':
     try:
