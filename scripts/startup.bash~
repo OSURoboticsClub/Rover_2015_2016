@@ -1,0 +1,24 @@
+#!/bin/bash
+# to test run this in terminal
+# sudo service rc.local start
+# 
+#
+#
+#
+
+
+echo "In Startup2.bash."
+DESKTOP=/home/rover/Desktop
+touch $DESKTOP/test.txt
+
+# REPO=/home/rover/Desktop/repo/Rover2016
+# WS=/home/rover/Desktop/repo/Rover2016/ws
+
+# echo "Sourcing..."
+# source $REPO/ws/devel/setup.bash
+
+# echo "Launching..."
+# roslaunch $WS/src/master.launch
+
+echo "Script Complete..."
+exit 0
