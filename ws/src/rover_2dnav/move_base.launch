@@ -1,25 +1,9 @@
 <launch>
 
-  <node pkg="octomap_server" type="map_server" name="map_server">
-		<param name="resolution" value="0.1" />
-		<param name="latch" value="false" />
-		
-		<!-- fixed map frame (set to 'map' if SLAM or localization running!) -->
-		<param name="frame_id" type="string" value="/zed_frame" />
-		
-		<!-- maximum range to integrate (speedup!) -->
-		<param name="sensor_model/max_range" value="7.5" />
-		
-		<!-- data source to integrate (PointCloud2) -->
-		<remap from="cloud_in" to="/camera/points2" />
-		<remap from="/occupied_cells_vis_array" to="/occupied_cells_vis"/>
-		<remap from="/free_cells_vis_array" to="/free_cells_vis"/>
+<!-- Run the map server -->
+  <node name="map_server" pkg="map_server" type="map_server" args="$(find rover_2dnav)/Level_1_0.250000.pgm 0.25"/>
 
-	</node>
-
-  <!--- Run AMCL -->
-  <include file="$(find amcl)/examples/amcl_diff.launch" />
-
+<!-- Run move base -->
   <node pkg="move_base" type="move_base" respawn="false" name="move_base" output="screen">
     <rosparam file="$(find rover_2dnav)/costmap_common_params.yaml" command="load" ns="global_costmap" />
     <rosparam file="$(find rover_2dnav)/costmap_common_params.yaml" command="load" ns="local_costmap" />
