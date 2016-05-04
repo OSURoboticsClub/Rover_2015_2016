@@ -11,4 +11,8 @@
     <rosparam file="$(find rover_2dnav)/global_costmap_params.yaml" command="load" />
     <rosparam file="$(find rover_2dnav)/base_local_planner_params.yaml" command="load" />
   </node>
+
+<!-- run with odom commented out in rover_config, sans flodometry.py to achieve the goal set in simple goals -->
+<!--  <node pkg="rosbag" type="play" name="rosbag" args="$(find flodometry)/test/bags/run_four.bag" /> -->
+  
 </launch>
