@@ -1,0 +1,5 @@
+<launch>
+  <node pkg="uniboard_communication" type="uniboard_service.py" name="uniboard_communication"/>
+    
+  <node name="test_align" pkg="flodometry" type="drive_straight.py" required="true"/>
+</launch>
