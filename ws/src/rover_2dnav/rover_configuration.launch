@@ -38,9 +38,8 @@
 <!-- Start camera and base link tf-->
  <node pkg="transforms" type="base_broadcaster" name="base_broadcaster"/>
 
-
 <!-- Odometry and tf -->
- <node pkg="rosserial_python" type="serial_node.py" name="rosserial_python" args="/dev/ttyUSB0 _baud:=14400"/>
+  <node pkg="rosserial_python" type="serial_node.py" name="rosserial_python" args="/dev/ttyUSB0 _baud:=14400"/>
   <node pkg="uniboard_communication" type="uniboard_service.py" name="uniboard_comm"/>
   <node pkg="wheel_encoders" type="publish_rpm.py" name="encoders"/>
   <node pkg="flodometry" type="Flodometry.py" name="flodometry"/>
