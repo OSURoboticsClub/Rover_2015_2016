@@ -12,11 +12,13 @@ import numpy as np
 
 
 import rospy
+import tf
 from flodometry.msg import motion_read
 from nav_msgs.msg import Odometry
 from wheel_encoders.msg import rpm
 
 from filterpy.kalman import KalmanFilter
+from tf.transformations import quaternion_from_euler
 
 # Import config file
 import sys, os
@@ -49,6 +51,7 @@ class Flodometry(object):
         rospy.Subscriber("/encoder_values", rpm, self.update_encoders)
         # Initialize the publisher
         self.pub = rospy.Publisher("/odom", Odometry, queue_size=10)
+        self.rate = rospy.Rate(60) # 60hz
 
 
     def setup_kalman(self):
@@ -60,6 +63,8 @@ class Flodometry(object):
         self._setup_kalman(self.vel_left, cfg.vel_left)
         self.vel_right = KalmanFilter(dim_x=cfg.vel_right.dim_x, dim_z=cfg.vel_right.dim_z)
         self._setup_kalman(self.vel_right, cfg.vel_right)
+        self.odometry = KalmanFilter(dim_x=cfg.odometry.dim_x, dim_z=cfg.odometry.dim_z)
+        self._setup_kalman(self.odometry, cfg.odometry)
 
     def _setup_kalman(self, kf, config):
         """Sets all of the kalman filter constants see config.kalman_config for 
@@ -87,8 +92,9 @@ class Flodometry(object):
             None
         """
         self.flow_x.predict()
-        self.flow_x.update(motion.dx)
+        self.flow_x.update(-motion.dx)
         self.flow_y.update(motion.dy)
+        self.update()
         
 
     def update_encoders(self, enc):
@@ -98,9 +104,23 @@ class Flodometry(object):
         r_speed = enc.right_rpm
         self.vel_right.predict()
         self.vel_right.update(r_speed)
+        self.update()
 
 
     def update(self):
+        flow_x = self.flow_x.x[0]
+        flow_y = self.flow_y.x[0]
+        l_speed = self.vel_left.x[0]
+        r_speed = self.vel_right.x[0]
+        avg = float(l_speed+r_speed)/2
+        diff = r_speed-avg
+        H = cfg.odometry.get_h(self.odometry.x[4])
+        z = np.array([flow_x, flow_y, avg, diff])
+        self.odometry.predict()
+        self.odometry.update(z, H=H)
+
+
+    def publish_updates(self):
         """Publishes kalman filter data to odometry
         
         Args:
@@ -111,21 +131,36 @@ class Flodometry(object):
             None
         """
         if __name__ == '__main__':
-            x = self.flow_x.x
-            p = self.flow_x.P
-            odom = Odometry()
-            odom.header.stamp = rospy.Time.now()
-            odom.header.frame_id = '/odom'
-            odom.pose.pose.position.x = x[0]
-            odom.pose.covariance[0] = p[0][0]
-            odom.twist.twist.linear.x = x[1]
-            odom.twist.covariance[0] = p[1][1]
-            self.pub.publish(odom)
+            while not rospy.is_shutdown():
+                odom = Odometry()
+                odom.header.stamp = rospy.Time.now()
+                odom.header.frame_id = '/odom'
+                x = self.odometry.x
+                odom.pose.pose.position.x = x[0]
+                odom.pose.pose.position.y = x[2]
+                # odom.pose.covariance[0] = p[0][0]
+                odom.twist.twist.linear.x = x[1]
+                odom.twist.twist.linear.y = x[3]
+                odom.twist.twist.angular.z = x[5]
+                # odom.twist.covariance[0] = p[1][1]
+                odom.pose.pose.orientation.x
+                quaternion = quaternion_from_euler(0.0, 0.0, x[4])
+                odom.pose.pose.orientation.x = quaternion[0]
+                odom.pose.pose.orientation.y = quaternion[1]
+                odom.pose.pose.orientation.z = quaternion[2]
+                odom.pose.pose.orientation.w = quaternion[3]
+                self.pub.publish(odom)
+                self.tf_odom.sendTransform( 
+                            (x[0], x[2], 0.0), 
+                            (quaternion[0], quaternion[1], quaternion[2], quaternion[3]), 
+                            odom.header.stamp, "base_link", "odom")
+                self.rate.sleep()
         else:
             pass
 
 
 if __name__ == '__main__':
     f = Flodometry()
-    rospy.spin()
+    f.publish_updates()
+    
 

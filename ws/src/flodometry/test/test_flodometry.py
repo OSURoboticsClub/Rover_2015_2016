@@ -35,7 +35,7 @@ class TestFlodometry(unittest.TestCase):
             flow_time.append(t.to_time())
         filtered_dx = dx[10:110]
         filtered_time = flow_time[10:110]
-        print np.std(filtered_dx)
+        print np.mean(filtered_dx)
         self.plot(flow_time, dx, 'dx')
         self.plot(flow_time, flow_x, 'filtered_velocity')
 
