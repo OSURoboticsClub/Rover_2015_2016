@@ -163,8 +163,8 @@ def check_easy_sample(left, right):
            return None
 
        # print for testing only
-       cv2.imshow('LEFT', blurred_left)
-       cv2.imshow('RIGHT', blurred_right)
+       #cv2.imshow('LEFT', blurred_left)
+       #cv2.imshow('RIGHT', blurred_right)
 
        # returns a tuple (x,y,z), or None if no sample is detected
        print "see thing at "+str(xyz)

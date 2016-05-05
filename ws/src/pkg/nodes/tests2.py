@@ -11,6 +11,7 @@ import math
 import arm
 import scan2
 import nav
+import cv2
 
 new_crotch_img2 = None
 scan_img_left = None
@@ -44,9 +45,9 @@ def handle_img(img):
         rospy.logerror(e)
 
 def test_scan_easy():
-
+    time.sleep(3)
     while not rospy.is_shutdown():
-        coords = scan.check_easy_sample(scan_img_left, scan_img_right)
+        coords = scan2.check_easy_sample(scan_img_left, scan_img_right)
         rospy.loginfo("coords: " + str(coords))
         cv2.imshow('LEFT', scan_img_left)
         cv2.imshow('RIGHT', scan_img_right)
@@ -54,7 +55,7 @@ def test_scan_easy():
 def test_scan_precached():
 
     while not rospy.is_shutdown():
-        coords = scan.check_precached(scan_img_left, scan_img_right)
+        coords = scan2.check_precached(scan_img_left, scan_img_right)
         rospy.loginfo("coords: " + str(coords))
         cv2.imshow('LEFT', scan_img_left)
         cv2.imshow('RIGHT', scan_img_right)
@@ -70,9 +71,9 @@ def test_forward_until_scanned(u, precached):
     u.motor_left(0.1)
     while coords is None:
        if precached:
-           coords = scan.check_precached(scan_img_left, scan_img_right)
+           coords = scan2.check_precached(scan_img_left, scan_img_right)
        else:
-           coords = scan.check_easy_sample(scan_img_left, scan_img_right)
+           coords = scan2.check_easy_sample(scan_img_left, scan_img_right)
    
     print "saw at thing" 
     # once sample is seen, stop and move arm back
@@ -142,12 +143,12 @@ def test_forward_until_scanned_both(u):
     u.motor_left(0.1)
 
     while coords is None:
-       coords = scan.check_easy_sample(scan_img_left, scan_img_right)
+       coords = scan2.check_easy_sample(scan_img_left, scan_img_right)
        if coords[0] is "Left": print "Turn Left"
        elif coords[0] is "Right": print "Turn Right"
        
        if coords is None:
-          coords = scan.check_precached(scan_img_left, scan_img_right)
+          coords = scan2.check_precached(scan_img_left, scan_img_right)
        
        if coords is not None:
           precached = True
@@ -185,8 +186,8 @@ def tests():
     rospy.Subscriber('stereo/left/image_rect_color', Image, handle_scan_left)
     rospy.Subscriber('stereo/right/image_rect_color', Image, handle_scan_right)
     #rate = rospy.Rate(10)
-    u = uniboard.Uniboard("/dev/ttyUSB1")
-    u.arm_home()
+    #u = uniboard.Uniboard("/dev/ttyUSB1")
+    #u.arm_home()
     
     # comment out all but one test
 
@@ -197,9 +198,9 @@ def tests():
     #test_pickup_precached(u)
     #test_scan_and_grab_precached(u)
     #test_forward_until_scanned_both(u)
-    #test_scan_easy()
+    test_scan_easy()
     #test_scan_precached()
-    full_obj_rec_test(u)
+    #full_obj_rec_test(u)
 
 if __name__ == '__main__':
     try:
