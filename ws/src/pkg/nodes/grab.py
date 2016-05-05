@@ -207,7 +207,7 @@ def handle_img(img):
     try:
         new_crotch_img = bridge.imgmsg_to_cv2(img, "bgr8")
     except CvBridgeError as e:
-        rospy.logerror(e)
+        rospy.logerr(e)
 
 def grab():
 
@@ -224,14 +224,14 @@ def grab():
 
     # crotch cam
     rospy.Subscriber('crotch/image/image_raw', Image, handle_img)
-
+    while new_crotch_img is None:
+        pass
+    Color_Filter.init(new_crotch_img)
     rate = rospy.Rate(10) # 10hz
     global ready
-
     # TODO: we may need to use the uniboard_communication node instead
     u = uniboard.Uniboard("/dev/ttyUSB1")
     u.arm_home()
-
     while not rospy.is_shutdown():
         
         if ready: # will become true when nav sends the grab_signal
@@ -247,10 +247,10 @@ def grab():
                 if xy is None:
                     rospy.loginfo("sample could not be identified")
                     break
-                rospy.loginfo("pick up attempt #{0}".format(num_tries))
-                grab_succ = pick_up(u,xy)
-                if (grab_succ) or (num_tries == MAX_TRIES):
-                    grab_finished = True
+#                rospy.loginfo("pick up attempt #{0}".format(num_tries))
+#                grab_succ = pick_up(u,xy)
+#                if (grab_succ) or (num_tries == MAX_TRIES):
+#                    grab_finished = True
 
             # logs result and publishes grab_succ on topic grab_success
             rospy.loginfo("grab success" if grab_succ else "grab failure")

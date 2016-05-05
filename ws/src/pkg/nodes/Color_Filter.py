@@ -26,12 +26,6 @@ def filters():
     blue_lower = [100,150,0]
     blue_upper = [120,255,255] 
 
-    ''' 
-    Color filter options:
-    original: [115, 70, 0]   - [180, 255, 255]
-    sunny:    [120, 38, 127] - [135, 166, 255]
-    '''
-
     purple = 'purple'
     purple_lower = [115, 70, 0]
     purple_upper = [180, 255, 255] 
@@ -61,7 +55,7 @@ def filters():
 
 def filter_colors(frame=None, show_images=False, verbose=False):
     if frame is None:
-        return None
+        return False
     hsv = cv2.cvtColor(frame, cv2.COLOR_BGR2HSV)
     # gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
 
@@ -131,7 +125,7 @@ def display_images(frame=None, masks = None, edge=None, results = None, medians 
 
 def contour_color(frame=None, show_images=False):
     if frame is None:
-        return None
+        return False
     gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
     edges = cv2.Canny(gray, 80, 200)
     if show_images:
@@ -139,6 +133,11 @@ def contour_color(frame=None, show_images=False):
         cv2.imshow('Edge Frame', edges)
     return edges
 
+def init(img):
+    global mask_img
+    mask_img = cv2.imread("mask.pbm")
+    mask_img = cv2.resize(mask_img, (img.shape[1], img.shape[0]))
+    
 def main():
     camera = 1
     cap =cv2.VideoCapture(camera)
