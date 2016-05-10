@@ -10,7 +10,7 @@ import detector
 import math
 import cv2
 from mechanical_arm.srv import *
-sys.path.insert(0, "../../../../uniboard/roverlib")
+#sys.path.insert(0, "../../../../uniboard/roverlib")
 from arm import Arm
 import uniboard
 import time
@@ -96,6 +96,8 @@ def pick_up_at(u,xy):
     ACTUAL_CAM_LENGTH_X = X_CAM_MAX-X_CAM_MIN
     ACTUAL_CAM_LENGTH_Y = Y_CAM_MAX-Y_CAM_MIN
     
+    rospy.loginfo('coords: ' + str(xy))
+
     # assumes camera is oriented so that (0,0)
     # of the camera corresponds to (0,0) of the arm
     if xy[0] > X_CAM_MAX: rospy.loginfo("the sample is too far left to pick up")
@@ -112,7 +114,7 @@ def pick_up_at(u,xy):
         y_pick = (y_sample/ACTUAL_CAM_LENGTH_Y) * u.arm_max("Y")
 
         x_pick += 0.0
-        y_pick -= 0.125
+        y_pick -= 0.05
 
         u.arm_target("X", x_pick)
         u.arm_target("Y", y_pick)
@@ -147,7 +149,7 @@ def place_sample(u, trayNum):
     # TODO: test these paramaters
     X_1 = 544
     X_2 = 761
-    Y = 100
+    Y = u.arm_max('Y')
 
     u.arm_target('Y', Y)
     if trayNum == 1:
@@ -159,7 +161,7 @@ def place_sample(u, trayNum):
 
     while u.arm_should_be_moving("X") or u.arm_should_be_moving("Y"): pass
 
-    z_safe_move(u, 0.2)
+    z_safe_move(u, 0.25)
     u.arm_z_wait_until_done()
 
     u.arm_target("A", .05)
@@ -167,11 +169,14 @@ def place_sample(u, trayNum):
         time.sleep(.1)
         u.arm_go("A", True)
 
-    u.arm_target('A', 0.99)
+    u.arm_target('A', 0.5)
     time.sleep(3)
 
     u.arm_target('A', 0)
     time.sleep(3)
+
+    z_safe_move(u, 0.5)
+    u.arm_z_wait_until_done()
 
     # move arm out of the way of the camera
     u.arm_target("X", 0)

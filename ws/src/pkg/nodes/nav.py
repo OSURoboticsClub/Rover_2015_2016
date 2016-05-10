@@ -6,6 +6,7 @@ import sys
 sys.path.insert(0, "../../../../uniboard/roverlib")
 import uniboard
 import time
+import scan
 
 halt_nav = False
 ready_to_grab = False

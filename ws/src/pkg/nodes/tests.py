@@ -5,7 +5,7 @@ from sensor_msgs.msg import Image
 from cv_bridge import CvBridge, CvBridgeError
 import time
 import sys
-sys.path.insert(0, "../../../../uniboard/roverlib")
+#sys.path.insert(0, "../../../../uniboard/roverlib")
 import uniboard
 import math
 import arm
@@ -44,8 +44,69 @@ def handle_img(img):
     except CvBridgeError as e:
         rospy.logerror(e)
 
-def test_scan_easy():
+def turn_to_sample(u, coords, precached):
+    print "turning"
+    rospy.loginfo("COORDS[0]: " + str(coords[0]))
+    time_turn = 1.2
+    while coords[0] > 40 or coords[0] < -40:
+       if coords[0] > 0:
+          rospy.loginfo("turn right")
+          u.motor_left(0.22)
+          u.motor_right(-0.22)
+          time.sleep(time_turn)
+          u.motor_left(0.0)
+          u.motor_right(0.0)
+          if precached:
+              coords = scan.check_precached(scan_img_left, scan_img_right)
+          else:
+              coords = scan.check_easy_sample(scan_img_left, scan_img_right)
+       elif coords[0] <= 0:
+          rospy.loginfo("turn left")
+          u.motor_left(-0.22)
+          u.motor_right(0.22)
+          time.sleep(time_turn)
+          u.motor_right(0.0)
+          u.motor_left(0.0)
+          if precached:
+              coords = scan.check_precached(scan_img_left, scan_img_right)
+          else:
+              coords = scan.check_easy_sample(scan_img_left, scan_img_right)
+       # go forward a bit after each turn
+       u.motor_right(0.1)
+       u.motor_left(0.1)
+       time.sleep(2)
+       u.motor_right(0.0)
+       u.motor_left(0.0)
+       while coords is None:
+          if precached:
+              coords = scan.check_precached(scan_img_left, scan_img_right)
+          else:
+              coords = scan.check_easy_sample(scan_img_left, scan_img_right)
+       if time_turn > 0.4:
+          time_turn -= 0.1
 
+def move_til_sample(u, precached):
+    u.arm_target("X", 0)
+    u.arm_target("Y", u.arm_max("Y"))
+    while u.arm_should_be_moving("X") or u.arm_should_be_moving("Y"): pass
+    u.motor_right(0.1)
+    u.motor_left(0.1)
+    while not rospy.is_shutdown():
+       curr_crotch_img = new_crotch_img2
+       xy = None
+       while xy is None:
+           curr_crotch_img = new_crotch_img2
+           if precached:
+               xy = grab.identify_precached(curr_crotch_img)
+           else:
+               xy = grab.identify_easy_sample(curr_crotch_img)
+       time.sleep(1)
+       u.motor_right(0.0)
+       u.motor_left(0.0)
+       break
+
+def test_scan_easy():
+    time.sleep(1)
     while not rospy.is_shutdown():
         coords = scan.check_easy_sample(scan_img_left, scan_img_right)
         rospy.loginfo("coords: " + str(coords))
@@ -102,10 +163,15 @@ def test_pickup_easy(u):
        rospy.loginfo("coordinates: " + str(xy))
        if xy:
           rospy.loginfo("a sample has been detected")
-          grab.pick_up_at(u,xy)
-          grab.place_sample(u,1)
+          while xy is not None:
+             grab.pick_up_at(u,xy)
+             u.arm_target("X", 0)
+             u.arm_target("Y", u.arm_max("Y"))
+             while u.arm_should_be_moving("X") or u.arm_should_be_moving("Y"): pass
+             xy = grab.identify_easy_sample(new_crotch_img2)
        else:
           rospy.loginfo("no sample detected")
+    grab.place_sample(u,1)
 
 def test_pickup_precached(u):
     
@@ -119,10 +185,10 @@ def test_scan_and_grab_easy(u):
     coords = test_forward_until_scanned(u, False)
 
     # turn so that the sample is in front of the rover
-    nav.turn_to_sample(u, coords, False)
+    turn_to_sample(u, coords, False)
 
     # move forward until the sample is seen by the pit cam, and park over it
-    nav.move_til_sample(u, False)
+    move_til_sample(u, False)
 
     # pick up sample
     test_pickup_easy(u)
@@ -130,9 +196,9 @@ def test_scan_and_grab_easy(u):
 def test_scan_and_grab_precached(u):
     coords = test_forward_until_scanned(u, True)
 
-    nav.turn_to_sample(u, coords, True)
+    turn_to_sample(u, coords, True)
 
-    nav.move_til_sample(u, True)
+    move_til_sample(u, True)
 
     test_pickup_precached(u)
 
@@ -175,13 +241,13 @@ def full_obj_rec_test(u):
     coords = test_forward_until_scanned_both(u)
     if coords[1]:
         rospy.loginfo("precached sample detected")
-        nav.turn_to_sample(u, coords, True)
-        nav.move_til_sample(u, True)
+        turn_to_sample(u, coords, True)
+        move_til_sample(u, True)
         test_pickup_precached(u)
     else:
         rospy.loginfo("easy sample detected")
-        nav.turn_to_sample(u, coords, False)
-        nav.move_til_sample(u, False)
+        turn_to_sample(u, coords, False)
+        move_til_sample(u, False)
         test_pickup_easy(u)
 
 def tests():
@@ -191,21 +257,21 @@ def tests():
     rospy.Subscriber('stereo/left/image_rect_color', Image, handle_scan_left)
     rospy.Subscriber('stereo/right/image_rect_color', Image, handle_scan_right)
     #rate = rospy.Rate(10)
-    #u = uniboard.Uniboard("/dev/ttyUSB1")
-    #u.arm_home()
+    u = uniboard.Uniboard("/dev/ttyUSB1")
+    u.arm_home()
     
     # comment out all but one test
 
     #test_forward_until_scanned_easy(u, False)
     #nav.move_til_sample(u, False)
     #test_pickup_easy(u)
-    #test_scan_and_grab_easy(u)
+    test_scan_and_grab_easy(u)
     #test_pickup_precached(u)
     #test_scan_and_grab_precached(u)
     #test_forward_until_scanned_both(u)
     #test_scan_easy()
     #test_scan_precached()
-    test_identify_easy()
+    #test_identify_easy()
     #full_obj_rec_test(u)
 
 if __name__ == '__main__':
