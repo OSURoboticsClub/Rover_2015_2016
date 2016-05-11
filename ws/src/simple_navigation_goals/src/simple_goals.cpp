@@ -42,7 +42,7 @@ struct pos2d getCurrentPos(void)
     	try
     	{
         	ROS_INFO("Looking up 2D POS");
-		ros::Time current = ros::time(0);
+		ros::Time current = ros::Time(0);
 		listener.waitForTransform("/map", "/base_link", current, ros::Duration(3.0));
         	listener.lookupTransform("/map","/base_link", current, transform);
 
