@@ -27,8 +27,8 @@ def filters():
     blue_upper = [120,255,255] 
 
     purple = 'purple'
-    purple_lower = [120, 100, 0]
-    purple_upper = [160, 255, 255] 
+    purple_lower = [115, 70, 0]
+    purple_upper = [180, 255, 255] 
     color_filters = [purple]#[red, orange, yellow, green, blue, purple]
 
     lowers = {}
@@ -57,7 +57,7 @@ def filter_colors(frame=None, show_images=False, verbose=False):
     if frame is None:
         return False
     hsv = cv2.cvtColor(frame, cv2.COLOR_BGR2HSV)
-    gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
+    # gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
 
     fd = filters()
     lowers = fd["Lower"]
@@ -74,7 +74,10 @@ def filter_colors(frame=None, show_images=False, verbose=False):
         lower_color = np.array(lowers[color])
         upper_color = np.array(uppers[color])
         masks[color] = cv2.inRange(hsv, lower_color, upper_color)
-        results[color] = cv2.bitwise_and(frame, frame, mask=masks[color])
+        try:
+            results[color] = cv2.bitwise_and(frame, mask_img, mask=masks[color])
+        except NameError:
+            results[color] = cv2.bitwise_and(frame, frame, mask=masks[color])
         medians[color] = cv2.medianBlur(results[color], 15)
         smoothed[color] = cv2.filter2D(results[color], -1, kernel)
 
@@ -133,14 +136,28 @@ def contour_color(frame=None, show_images=False):
         cv2.imshow('Edge Frame', edges)
     return edges
 
+# so that the mask_image does not have to be read every time
+# the color detector is called
+def init(img):
+    '''Creates a global mask_img variable, and resizes it to
+    match the size of the specified image.'''
+    global mask_img
+    mask_img = cv2.imread("mask.pbm")
+    mask_img = cv2.resize(mask_img, (img.shape[1], img.shape[0]))
+    
 def main():
-    camera = 2
-    cap =cv2.VideoCapture(camera)
+    camera = 1
+    cap = cv2.VideoCapture(camera)
     finished = False
-
+    # reads the image mask, stored as mask.pbm
+    global mask_img
+    mask_img = cv2.imread("mask.pbm")
+    # reads a frame... for resizing the image mask to the right size
+    _, frame = cap.read()
+    mask_img = cv2.resize(mask_img, (frame.shape[1], frame.shape[0]))
     while not finished:
         _, frame = cap.read()
-        print type(frame)
+        print(type(frame))
         images = filter_colors(frame=frame, show_images=False, verbose=False)
         #all_images = {"Frame": frame, "Masks": masks, "Results": results, "Colors": color_filters, "Edges": edges, "Median Blur": medians, "Smooth Blur": smoothed }
         #contour_color(frame=images["Smooth Blur"][images["Colors"][0]], show_images=True)
@@ -154,17 +171,6 @@ def main():
     cap.release()
 
 
-
-#main()
-
-
-
-
-
-
-
-
-
-
-
+if __name__ == "__main__":
+    main()
 
