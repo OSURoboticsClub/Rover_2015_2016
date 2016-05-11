@@ -1,12 +1,18 @@
 #!/usr/bin/env python
+
+import os
+import sys
+import time
+
 import rospy
 from pkg.msg import Coords3D
 from std_msgs.msg import Bool
-import sys
-sys.path.insert(0, "../../../../uniboard/roverlib")
-import uniboard
-import time
 import scan
+
+sys.path.insert(0, os.path.join(
+                   os.path.dirname(__file__), 
+                   "../../../../uniboard/roverlib"))
+import uniboard
 
 halt_nav = False
 ready_to_grab = False

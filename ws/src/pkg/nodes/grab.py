@@ -1,19 +1,29 @@
 #!/usr/bin/env python
+
+import os
+import sys
+import math
+import time
+
+import cv2
 import rospy
 from std_msgs.msg import Bool
 from sensor_msgs.msg import Image
 from cv_bridge import CvBridge, CvBridgeError
-import sys
-sys.path.insert(0,'scripts')
+
+sys.path.insert(0, os.path.join(
+                   os.path.dirname(__file__), 
+                   'scripts'))
 import Color_Filter
-import detector
-import math
-import cv2
+from detector import HaarDetector
+
+sys.path.insert(0, os.path.join(
+                   os.path.dirname(__file__), 
+                   "../../../../uniboard/roverlib"))
 from mechanical_arm.srv import *
-#sys.path.insert(0, "../../../../uniboard/roverlib")
 from arm import Arm
 import uniboard
-import time
+
 
 MAX_TRIES = 10
 ready = False
@@ -21,17 +31,16 @@ new_crotch_img = None
 bridge = CvBridge()
 
 # temporary, for testing
-cv2.startWindowThread()
-cv2.namedWindow('image')
+#cv2.startWindowThread()
+#cv2.namedWindow('image')
 
 def identify_precached(img):
-    
-    return detector.detect_precached(img)
+    return HaarDetector.detect_precached(img)
 
 def identify_easy_sample(img):
     
     # filter out purple object
-    filtered = Color_Filter.filter_colors(frame=img, show_images=False, verbose = False)
+    filtered = Color_Filter.filter_colors(frame=img, show_images=False, verbose=False)
  
     # detect edges of purple object
     edges = Color_Filter.contour_color(frame=filtered["Median Blur"][filtered["Colors"][0]], show_images=False)
@@ -207,15 +216,14 @@ def handle_grab_signal(grab_signal):
     ready = True
 
 def handle_img(img):
-    global new_crotch_img
+    global new_crotch_img    
     # convert ROS image message to numpy array for OpenCV
     try:
         new_crotch_img = bridge.imgmsg_to_cv2(img, "bgr8")
     except CvBridgeError as e:
         rospy.logerr(e)
-
+    
 def grab():
-
     # create publisher that pusblishes Bools to the grab_success topic
     # consumed by scan and nav
     pub = rospy.Publisher('grab_success', Bool, queue_size=10)
@@ -229,23 +237,27 @@ def grab():
 
     # crotch cam
     rospy.Subscriber('crotch/image/image_raw', Image, handle_img)
+    
     while new_crotch_img is None:
         pass
+    # once an image is received, starts a HaarDetector and
+    # Color_Filter for sample detection
     Color_Filter.init(new_crotch_img)
+    rospy.loginfo("Color Filter started")
+    HaarDetector.initialize_precached()
+    rospy.loginfo("Haar Detector started")
     rate = rospy.Rate(10) # 10hz
     global ready
     # TODO: we may need to use the uniboard_communication node instead
     u = uniboard.Uniboard("/dev/ttyUSB1")
     u.arm_home()
     while not rospy.is_shutdown():
-        
         if ready: # will become true when nav sends the grab_signal
             grab_finished = False
             grab_succ = False
             num_tries = 0
     
             while grab_finished == False:
-        
                 rospy.loginfo("identifying sample")
                 xy = identify_sample()
                 rospy.loginfo("coords: {0}".format(xy))

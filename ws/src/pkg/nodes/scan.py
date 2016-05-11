@@ -1,16 +1,21 @@
 #!/usr/bin/env python
+import os
+import sys
+import math
+
+import numpy
+import cv2
 import rospy
 from std_msgs.msg import Bool
 from pkg.msg import Coords3D
 from sensor_msgs.msg import Image
 from cv_bridge import CvBridge, CvBridgeError
-import cv2
-import sys
-sys.path.insert(0, 'scripts')
+
+sys.path.insert(0, os.path.join(
+                   os.path.dirname(__file__), 
+                   'scripts'))
 import Color_Filter
-import detector
-import numpy
-import math
+from detector import HaarDetector
 
 halt_scan = False
 new_left_img = None
@@ -18,9 +23,9 @@ new_right_img = None
 bridge = CvBridge()
 
 # temporary, for testing
-cv2.startWindowThread()
-cv2.namedWindow('LEFT')
-cv2.namedWindow('RIGHT')
+#cv2.startWindowThread()
+#cv2.namedWindow('LEFT')
+#cv2.namedWindow('RIGHT')
 #cv2.namedWindow('LEFT_RAW')
 #cv2.namedWindow('RIGHT_RAW')
 
@@ -36,7 +41,7 @@ def left_scan(img):
     try:
         new_left_img = bridge.imgmsg_to_cv2(img, "bgr8")
     except CvBridgeError as e:
-        rospy.logerror(e)
+        rospy.logerr(e)
 
 def right_scan(img):
     global new_right_img
@@ -44,7 +49,7 @@ def right_scan(img):
     try:
         new_right_img = bridge.imgmsg_to_cv2(img, desired_encoding="bgr8")
     except CvBridgeError as e:
-        rospy.logerror(e)
+        rospy.logerr(e)
 
 def calculate_distance(left_centx, right_centx, left_centy, right_centy):
     distance_between_cameras = 95.25
@@ -99,12 +104,14 @@ def check_precached(left, right):
     # and return its coordinates if it is
     
     xyz = None
-    left_detect = detector.detect_precached(left)
-    right_detect = detector.detect_precached(right)
-
+    left_detect = HaarDetector.detect_precached(left)
+    right_detect = HaarDetector.detect_precached(right)
     if left_detect is not None and right_detect is not None:
         xyz = calculate_distance(left_detect[0], right_detect[0], left_detect[1], right_detect[1])
         rospy.loginfo("Precached:(x,y,z): {0}".format(xyz))
+    # Debug functionality
+    #cv2.imshow('LEFT', HaarDetector.get_image())
+    #cv2.imshow('RIGHT', HaarDetector.get_image())    
     return xyz
 
 def check_easy_sample(left, right):
@@ -144,6 +151,7 @@ def check_easy_sample(left, right):
 
               # calulcate distance from camera (in mm):
 	      xyz = calculate_distance(left_centx, right_centx, left_centy, right_centy)
+	            
               rospy.loginfo("Easy_Sample:(x,y,z): {0}".format(xyz))
 	      
            else:
@@ -191,7 +199,7 @@ def scan_for_samples():
     if coords is not None:
         return (coords, precached)
     else:
-        return None
+        return (None, None)
 
 def scan():
 
@@ -207,7 +215,8 @@ def scan():
     # scan cam images
     rospy.Subscriber('stereo/left/image_rect_color', Image, left_scan)
     rospy.Subscriber('stereo/right/image_rect_color', Image, right_scan)
-
+    #Initialize a HaarDetector precached instance
+    HaarDetector.initialize_precached()
     #rate = rospy.Rate(10) # 10hz, loop will run 10 times/second maximum
 
     while not rospy.is_shutdown():
