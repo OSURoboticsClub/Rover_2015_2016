@@ -115,7 +115,7 @@ class Flodometry(object):
         diff = r_speed-avg
         # rospy.loginfo('left:{} right:{} avg:{} diff:{}'.format(l_speed, r_speed, avg, diff))
         H = cfg.odometry.get_h(theta=self.odometry.x[4])
-        z = np.array([flow_x, flow_y, avg, diff])
+        z = np.array([flow_x, flow_y, flow_x, 0.0])
         x1 = self.odometry.x
         # rospy.loginfo('Theta: {}, theta_dot: {}'.format(x1[4], x1[5]))
         self.odometry.predict()

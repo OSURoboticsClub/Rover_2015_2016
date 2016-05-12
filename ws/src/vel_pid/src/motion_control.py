@@ -2,6 +2,7 @@
 import rospy
 import time
 import imp
+import numpy as np
 
 from bunch import Bunch
 
@@ -25,12 +26,6 @@ class MotionControl(object):
         self.rotation_offset = 0.0
 
 
-    def advertise_service(self):
-        self.s = rospy.Service('set_motion_goal', 
-                            set_target, 
-                            self.motion_goal)
-        
-
     def drive(self, power):
         self.uniboard_service('motor_left', 3, str(power), rospy.Time.now())
         self.uniboard_service('motor_right', 3, str(power+self.rotation_offset), rospy.Time.now())
@@ -52,7 +47,7 @@ class MotionControl(object):
         pos = odom.pose.pose.position.x
         vel_x = odom.twist.twist.linear.x
         vel_y = odom.twist.twist.linear.y
-        vel = np.sqrt(vel_x**2+vel_y**2)
+        vel = vel_x
         rot = odom.twist.twist.angular.z
         self.vel_pid.update(vel)
         self.rot_pid.update(rot)
@@ -61,7 +56,6 @@ class MotionControl(object):
 if __name__ == '__main__':
     rospy.init_node('vel_pid')
     controller = MotionControl()
-    controller.advertise_service()
     rospy.spin()
 
     

@@ -78,8 +78,8 @@ int main(int argc, char** argv){
 	}
 
 // GOAL (still set for bag 4 from old tests)
-	posSet.x = 13;
-	posSet.y = 3;
+	posSet.x = 7;
+	posSet.y = 0;
 
 	goal = createGoal(posSet, 1);
 
