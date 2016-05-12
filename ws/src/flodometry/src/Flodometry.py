@@ -9,6 +9,7 @@ Attributes:
 
 import math
 import numpy as np
+import copy
 
 
 import rospy
@@ -55,10 +56,10 @@ class Flodometry(object):
 
 
     def setup_kalman(self):
-        self.flow_x = KalmanFilter(dim_x=cfg.flow_x.dim_x, dim_z=cfg.flow_x.dim_z)
-        self._setup_kalman(self.flow_x, cfg.flow_x)
-        self.flow_y = KalmanFilter(dim_x=cfg.flow_y.dim_x, dim_z=cfg.flow_y.dim_z)
-        self._setup_kalman(self.flow_y, cfg.flow_y)
+        self.flow_x = KalmanFilter(dim_x=cfg.flow.dim_x, dim_z=cfg.flow.dim_z)
+        self._setup_kalman(self.flow_x, cfg.flow)
+        self.flow_y = KalmanFilter(dim_x=cfg.flow.dim_x, dim_z=cfg.flow.dim_z)
+        self._setup_kalman(self.flow_y, cfg.flow)
         self.vel_left = KalmanFilter(dim_x=cfg.vel_left.dim_x, dim_z=cfg.vel_left.dim_z)
         self._setup_kalman(self.vel_left, cfg.vel_left)
         self.vel_right = KalmanFilter(dim_x=cfg.vel_right.dim_x, dim_z=cfg.vel_right.dim_z)
@@ -92,9 +93,8 @@ class Flodometry(object):
             None
         """
         self.flow_x.predict()
-        self.flow_x.update(-motion.dx)
+        self.flow_x.update(motion.dx)
         self.flow_y.update(motion.dy)
-        self.update()
         
 
     def update_encoders(self, enc):
@@ -104,7 +104,6 @@ class Flodometry(object):
         r_speed = enc.right_rpm
         self.vel_right.predict()
         self.vel_right.update(r_speed)
-        self.update()
 
 
     def update(self):
@@ -114,10 +113,17 @@ class Flodometry(object):
         r_speed = self.vel_right.x[0]
         avg = float(l_speed+r_speed)/2
         diff = r_speed-avg
-        H = cfg.odometry.get_h(self.odometry.x[4])
+        # rospy.loginfo('left:{} right:{} avg:{} diff:{}'.format(l_speed, r_speed, avg, diff))
+        H = cfg.odometry.get_h(theta=self.odometry.x[4])
         z = np.array([flow_x, flow_y, avg, diff])
+        x1 = self.odometry.x
+        # rospy.loginfo('Theta: {}, theta_dot: {}'.format(x1[4], x1[5]))
         self.odometry.predict()
+        x2 = self.odometry.x
+        # rospy.loginfo('Predicted Theta: {}, theta_dot: {}'.format(x2[4], x2[5]))
         self.odometry.update(z, H=H)
+        x3 = self.odometry.x
+        # rospy.loginfo('Updated Theta: {}, theta_dot: {}'.format(x3[4], x3[5]))
 
 
     def publish_updates(self):
@@ -135,6 +141,7 @@ class Flodometry(object):
                 odom = Odometry()
                 odom.header.stamp = rospy.Time.now()
                 odom.header.frame_id = '/odom'
+                self.update()
                 x = self.odometry.x
                 odom.pose.pose.position.x = x[0]
                 odom.pose.pose.position.y = x[2]
@@ -144,7 +151,11 @@ class Flodometry(object):
                 odom.twist.twist.angular.z = x[5]
                 # odom.twist.covariance[0] = p[1][1]
                 odom.pose.pose.orientation.x
-                quaternion = quaternion_from_euler(0.0, 0.0, x[4])
+                # rospy.loginfo('[pos_x: {}, vel_x: {}, pos_y: {}, vel_y: {}, theta: {}, vel_theta: {}]'.format(*x))
+                # quaternion_from_euler will operate on whatever object is passed 
+                # to it, that is why I am passing a copy of x[4] because it was
+                # changing it's value!
+                quaternion = quaternion_from_euler(0.0, 0.0, copy.copy(x[4]))
                 odom.pose.pose.orientation.x = quaternion[0]
                 odom.pose.pose.orientation.y = quaternion[1]
                 odom.pose.pose.orientation.z = quaternion[2]

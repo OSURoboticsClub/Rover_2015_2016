@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 import unittest
+from unittest import skip
 import rostest
 from bunch import Bunch
 
@@ -26,6 +27,7 @@ class TestPID(unittest.TestCase):
             err[1].append(i*2)
         ans = pid.integrate(*err)
 
+    @skip("Math needs to be done to confirm test values")
     def test_pid(self):
         # math for test:
         #  target:  1    1      1    
