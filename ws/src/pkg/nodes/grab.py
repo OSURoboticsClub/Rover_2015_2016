@@ -4,7 +4,6 @@ import os
 import sys
 import math
 import time
-
 import cv2
 import rospy
 from std_msgs.msg import Bool
@@ -31,13 +30,15 @@ new_crotch_img = None
 bridge = CvBridge()
 
 # temporary, for testing
-#cv2.startWindowThread()
-#cv2.namedWindow('image')
+cv2.startWindowThread()
+cv2.namedWindow('image')
 
 def identify_precached(img):
     return HaarDetector.detect_precached(img)
 
 def identify_easy_sample(img):
+    #mask_img = cv2.resize(mask_img, (img_start.shape[1], img.shape[0]))
+    #img = np.concatenate((img_start, mask_img), axis=1)
     
     # filter out purple object
     filtered = Color_Filter.filter_colors(frame=img, show_images=False, verbose=False)
@@ -50,7 +51,8 @@ def identify_easy_sample(img):
     
     # get image contours (hopefully only one, the purple sample)
     (cnts, _) = cv2.findContours(blurred.copy(), cv2.RETR_LIST, cv2.CHAIN_APPROX_SIMPLE)
-
+    
+    cv2.imshow('image', blurred)
     if cnts:
         # take the biggest contour and calculate its centroid
         cont = max(cnts, key = cv2.contourArea)
@@ -123,7 +125,7 @@ def pick_up_at(u,xy):
         y_pick = (y_sample/ACTUAL_CAM_LENGTH_Y) * u.arm_max("Y")
 
         x_pick += 0.0
-        y_pick -= 0.05
+        y_pick -= 0.11  #0.05
 
         u.arm_target("X", x_pick)
         u.arm_target("Y", y_pick)
@@ -238,14 +240,13 @@ def grab():
     # crotch cam
     rospy.Subscriber('crotch/image/image_raw', Image, handle_img)
     
-    while new_crotch_img is None:
-        pass
+    while new_crotch_img is None: pass
     # once an image is received, starts a HaarDetector and
     # Color_Filter for sample detection
-    Color_Filter.init(new_crotch_img)
-    rospy.loginfo("Color Filter started")
-    HaarDetector.initialize_precached()
-    rospy.loginfo("Haar Detector started")
+    #Color_Filter.init(new_crotch_img)
+    #rospy.loginfo("Color Filter started")
+    #HaarDetector.initialize_precached()
+    #rospy.loginfo("Haar Detector started")
     rate = rospy.Rate(10) # 10hz
     global ready
     # TODO: we may need to use the uniboard_communication node instead

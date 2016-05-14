@@ -3,6 +3,7 @@ import rospy
 import grab
 from sensor_msgs.msg import Image
 from cv_bridge import CvBridge, CvBridgeError
+import numpy as np
 import time
 import sys
 #sys.path.insert(0, "../../../../uniboard/roverlib")
@@ -21,6 +22,7 @@ bridge = CvBridge()
 cv2.startWindowThread()
 cv2.namedWindow('LEFT')
 cv2.namedWindow('RIGHT')
+cv2.namedWindow('nipple')
 
 def handle_scan_left(img):
     global scan_img_left
@@ -151,6 +153,7 @@ def test_forward_until_scanned(u, precached):
 
 # tests a basic arm pickup for easy sample
 def test_pickup_easy(u):
+    mask_img = cv2.imread('mask.pbm')
     # move arm out of the way of the camera
     u.arm_target("X", 0)
     u.arm_target("Y", u.arm_max("Y"))
@@ -158,6 +161,17 @@ def test_pickup_easy(u):
     time.sleep(1)
     if new_crotch_img2 is not None:
        curr_crotch_img = new_crotch_img2
+     
+       # Do the nasty, should apply mask to image.
+       mask_img = cv2.resize(mask_img, (curr_crotch_img.shape[1], curr_crotch_img.shape[0]))
+       #curr_crotch_img = np.concatenate((curr_crotch_img, mask_img), axis=1)
+       #curr_crotch_img = Image.blend(curr_crotch_img, mask_img, 0.5)
+       #curr_crotch_img = cv2.addWeighted(curr_crotch_img, 0.5, mask_img, 0.5, 0)
+       curr_crotch_img = np.bitwise_and(curr_crotch_img, mask_img)
+#---------------------------
+       cv2.imshow('nipple', curr_crotch_img)
+
+
        rospy.loginfo("image success")
        xy = grab.identify_easy_sample(curr_crotch_img)
        rospy.loginfo("coordinates: " + str(xy))
@@ -264,8 +278,8 @@ def tests():
 
     #test_forward_until_scanned_easy(u, False)
     #nav.move_til_sample(u, False)
-    #test_pickup_easy(u)
-    test_scan_and_grab_easy(u)
+    test_pickup_easy(u)
+    #test_scan_and_grab_easy(u)
     #test_pickup_precached(u)
     #test_scan_and_grab_precached(u)
     #test_forward_until_scanned_both(u)
