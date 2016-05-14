@@ -10,26 +10,18 @@ PKG="test_motion_control"
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from src.motion_control import MotionControl
 from vel_pid.srv import set_target
+from geometry_msgs.msg import Twist
 
 class TestMotionControl(unittest.TestCase):
-    def test_vel_pid(self):
+    def test_set_vel(self):
         mc = MotionControl()
-        mc.set_vel(3)
-        self.assertEquals(0, mc.vel_pid.target)
-        mc.set_vel(0.5)
-        self.assertEquals(0.5, mc.vel_pid.target)
+        t = Twist()
+        t.linear.x = 0.6
+        t.angular.z = 0.12
+        mc.set_vel(t)
+        self.assertEquals(mc.vel_pid.target, 0.6)
+        self.assertEquals(mc.rot_pid.target, 0.12)
 
-
-    def test_pos_pid(self):
-        mc = MotionControl()
-        target = Bunch()
-        target.target = 10
-        resp = mc.motion_goal(target)
-        self.assertEquals(False, resp)
-        target.target = 4.3
-        self.assertEqual(mc.pos_pid.inRange, [-5.0, 5.0])
-        resp = mc.motion_goal(target)
-        self.assertEquals(True, resp)
 
 if __name__ == '__main__':
     rostest.rosrun(PKG, 'test_motion_control', TestMotionControl)

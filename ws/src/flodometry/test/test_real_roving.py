@@ -12,7 +12,7 @@ import os
 from uniboard_communication.srv import *
 
 # The right wheel is powered at left_wheel+OFFSET
-OFFSET = 0.01
+OFFSET = 0.02
 
 
 class RealRovingTest(object):

@@ -13,11 +13,11 @@ class Rotate(RealRovingTest):
 
 def main():
     t = Rotate()
-    t.rotate(0.1, 30)
+    t.rotate(0.3, 30)
     for i in range(10):
         rospy.logwarn('Waiting for {} more seconds'.format(10-i))
         time.sleep(1) 
-    t.rotate(-0.1, 30)   
+    t.rotate(-0.27, 30)   
 
 if __name__ == '__main__':
     main()
