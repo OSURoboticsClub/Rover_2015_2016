@@ -10,6 +10,7 @@ find_package(catkin REQUIRED COMPONENTS
   std_msgs
   image_transport
   cv_bridge
+  message_generation
 )
 
 ## System dependencies are found with CMake's conventions
@@ -53,11 +54,10 @@ find_package(catkin REQUIRED COMPONENTS
 # )
 
 ## Generate services in the 'srv' folder
-# add_service_files(
-#   FILES
-#   Service1.srv
-#   Service2.srv
-# )
+ add_service_files(
+   FILES
+   locate_base.srv
+ )
 
 ## Generate actions in the 'action' folder
 # add_action_files(
@@ -67,10 +67,10 @@ find_package(catkin REQUIRED COMPONENTS
 # )
 
 ## Generate added messages and services with any dependencies listed here
-# generate_messages(
-#   DEPENDENCIES
-#   std_msgs
-# )
+ generate_messages(
+   DEPENDENCIES
+   std_msgs
+ )
 
 ################################################
 ## Declare ROS dynamic reconfigure parameters ##
@@ -104,7 +104,7 @@ find_package(catkin REQUIRED COMPONENTS
 catkin_package(
 #  INCLUDE_DIRS include
 #  LIBRARIES locate_home_base
-#  CATKIN_DEPENDS roscpp rospy std_msgs
+  CATKIN_DEPENDS roscpp rospy std_msgs
 #  DEPENDS system_lib
 )
 
@@ -190,8 +190,13 @@ include_directories(
 # catkin_add_nosetests(test)
 
 add_executable(locator src/locator.cpp)
-add_executable(compute src/computeFocalConstants.cpp)
 target_link_libraries(locator ${catkin_LIBRARIES})
+add_dependencies(locator ${PROJECT_NAME}_generate_messages_cpp)
+
+add_executable(compute src/computeFocalConstants.cpp)
 target_link_libraries(compute ${catkin_LIBRARIES})
-add_dependencies(locator locate_home_base)
 add_dependencies(compute computeFocalConstants)
+
+add_executable(testClient src/testClient.cpp)
+target_link_libraries(testClient ${catkin_LIBRARIES})
+add_dependencies(testClient ${PROJECT_NAME}_generate_messages_cpp)
