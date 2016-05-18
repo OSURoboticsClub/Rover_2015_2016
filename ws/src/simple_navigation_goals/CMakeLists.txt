@@ -11,6 +11,7 @@ find_package(catkin REQUIRED COMPONENTS
   roscpp
   std_msgs
   tf
+  locate_home_base
 )
 
 ## System dependencies are found with CMake's conventions
@@ -191,3 +192,4 @@ include_directories(
 
 add_executable(simple_navigation_goals src/simple_goals.cpp)
 target_link_libraries(simple_navigation_goals ${catkin_LIBRARIES})
+add_dependencies(simple_navigation_goals ${catkin_EXPORTED_TARGETS})

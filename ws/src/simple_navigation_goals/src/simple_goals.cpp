@@ -56,20 +56,20 @@ bool executeGoal(move_base_msgs::MoveBaseGoal goal, MoveBaseClient *client, int 
   	{
 		if(client->getState() == actionlib::SimpleClientGoalState::SUCCEEDED)
 		{
-			ROS_INFO("MOVE BASE: goal met");
+			ROS_INFO("executeGoal: goal met");
 			//ros::param::set("/base_goal_param", true);
 			return(true);
 		}
   		else
 		{
-			ROS_INFO("MOVE BASE: missed goal");
+			ROS_INFO("executeGoal: missed goal");
 			//ros::param::set("/base_goal_param", false);
 			return(false);
 		}
   	}
   	else
 	{
-		ROS_INFO("MOVE BASE: time out");
+		ROS_INFO("executeGoal: time out");
 		//ros::param::set("/base_goal_param", false);
 		return(false);
 	}
@@ -85,7 +85,7 @@ struct pos2d getCurrentPos(void)
 	pos2d pos;
     	try
     	{
-        	ROS_INFO("Looking up 2D POS");
+        	ROS_INFO("getCur2d: Looking up 2D POS");
 		ros::Time current = ros::Time(0);
 		listener.waitForTransform("/map", "/base_link", current, ros::Duration(3.0));
         	listener.lookupTransform("/map","/base_link", current, transform);
@@ -99,17 +99,22 @@ struct pos2d getCurrentPos(void)
     	{
 		pos.x = -1;
 		pos.y = -1;
-		ROS_INFO("tf lookup failed");
+		ROS_INFO("getCur2d: tf lookup failed");
 		return (pos);
     	} 
 }
 
+/* getCurrentPosFrom.. returns current x,y position of the robot with respect to the home beacon
+ie, if home beacon set to (3,3) as it has been for testing, a return value of (10,5) means the 
+rover is really at (13,8), similaraly (10,-1) would be (13,2)
+*/ 
 struct pos2d getCurrentPosFromCheckboard(ros::ServiceClient client)
 {
 	float base_distance, base_angle;
 	locate_home_base::locate_base srv;
 	struct pos2d coord;
-
+	
+	// service is set to have a request data and return data field, our request just has the time it was sent
 	srv.request.header.stamp = ros::Time::now();
 
 	if (client.call(srv))
@@ -119,25 +124,25 @@ struct pos2d getCurrentPosFromCheckboard(ros::ServiceClient client)
 
 		if (base_distance == CANT_FIND)
 		{ 
-			ROS_ERROR("Couldn't see checkerboard");
+			ROS_ERROR("getCur2dCheck: Couldn't see checkerboard");
 			coord.x = -1;
 			coord.y = -1;
 		}
 		else
 		{	
 			// convert angle and distance to x,y from base station
-			ROS_INFO("Checkerboard detected");	
+			ROS_INFO("getCur2dCheck: Checkerboard detected");	
 			coord.x =  base_distance*cos(abs(base_angle) * PI / 180.0)/1000;		
 			if (base_angle < 0)
 				coord.y =  -base_distance*sin(abs(base_angle) * PI / 180.0)/1000;
 			else 
 				coord.y =  base_distance*sin(abs(base_angle) * PI / 180.0)/1000;
-			ROS_INFO_STREAM("X: "<<posEnd.x<<" Y: "<<posEnd.y);	
+			ROS_INFO_STREAM("X: "<<coord.x<<" Y: "<<coord.y);	
 		}
   	}
   	else
   	{
-    		ROS_ERROR("Failed to call service locate_base");
+    		ROS_ERROR("getCur2dCheck: Failed to call service locate_base");
 		coord.x = -1;
 		coord.y = -1;
   	}
@@ -145,16 +150,50 @@ struct pos2d getCurrentPosFromCheckboard(ros::ServiceClient client)
 	return coord;
 }
 
+/* base_goal value will be grab node trigger 
+When false, moving to goal
+When true, goal has been met and grab can take over
+*/
+void toggleParam(bool setting)
+{
+	ros::param::set("/base_goal_param", setting);
+}
+
+bool waitForToggle(void)
+{
+	bool control;
+	ros::param::get("/base_goal_param", control);
+	
+	while (control == true)
+	{
+		ROS_INFO("waitingForToggle: Waiting for param to become false again");
+		ros::Duration(5.0).sleep();
+		ros::param::get("/base_goal_param", control);
+		if (control == false)
+		{
+			break;
+		}	
+	}
+	return false;
+}
+
 int main(int argc, char** argv){
 	ros::init(argc, argv, "simple_navigation_goals");
-
+	
 	// node handle to communication with service from locate base
 	ros::NodeHandle nsrv; 
 	ros::ServiceClient client = nsrv.serviceClient<locate_home_base::locate_base>("locate_base");
 
-	// base goal param can be queried by nodes to pass control
-	// false is set until a goal is met
-	ros::param::set("/base_goal_param", false);
+	// set ros param for grab node communication
+/*	ROS_INFO("Main: Setting to false");
+	toggleParam(false);
+	ROS_INFO("Main: Waiting 20 secs to toggle to true");
+	ros::Duration(20.0).sleep();
+	ROS_INFO("Main: Setting to true");
+	toggleParam(true);
+	ROS_INFO("Main: Waiting for the toggle back to false");
+	waitForToggle();
+	ROS_INFO("Main: False!"); */
 
 	//tell the action client that we want to spin a thread
 	MoveBaseClient ac("move_base", true);
@@ -165,7 +204,7 @@ int main(int argc, char** argv){
 	
 	//wait for the action server to come up
  	while(!ac.waitForServer(ros::Duration(5.0))){
-		ROS_INFO("Waiting for the move_base action server to come up");
+		ROS_INFO("Main: Waiting for the move_base action server to come up");
 	}
 	
 	for (int i = 0; i < sizeof(level1Stops)/sizeof(struct pos2d); i++)
