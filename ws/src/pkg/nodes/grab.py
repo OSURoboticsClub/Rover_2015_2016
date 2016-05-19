@@ -84,6 +84,131 @@ def identify_sample():
     # returns a tuple (x,y), or None if sample cannot be confirmed
     return coords
 
+def z_safe_move_us(u, z):
+	"""Z values from .5 to 0, with .5 being upright."""
+	z = .5 - z
+        curr = u('arm_current', 2, 'X 0', rospy.Time.now())
+        x_max = u('arm_max', 2, 'X 0', rospy.Time.now())
+	if curr > x_max/2:
+                params = 'Z ' + str(.5+z)
+                u('arm_target', 2, params, rospy.Time.now())
+	else:
+		params = 'Z ' + str(.5-z)
+		u('arm_target', 2, params, rospy.Time.now())
+
+def pick_up_at_us(u,xy):
+
+    # constants that define the range of the arm
+    # from the pit cam's perspective
+    X_CAM_MAX = 870.0
+    X_CAM_MIN = 435.0
+    Y_CAM_MAX = 383.0
+    Y_CAM_MIN = 119.0
+
+    REAL_X = 0.29
+    REAL_Y = 0.24
+
+    ACTUAL_CAM_LENGTH_X = X_CAM_MAX-X_CAM_MIN
+    ACTUAL_CAM_LENGTH_Y = Y_CAM_MAX-Y_CAM_MIN
+    
+    rospy.loginfo('coords: ' + str(xy))
+
+    # assumes camera is oriented so that (0,0)
+    # of the camera corresponds to (0,0) of the arm
+    if xy[0] > X_CAM_MAX: rospy.loginfo("the sample is too far left to pick up")
+    elif xy[0] < X_CAM_MIN: rospy.loginfo("the sample is too far right to pick up")
+    elif xy[1] > Y_CAM_MAX: rospy.loginfo("the sample is too far forward to pick up")
+    elif xy[1] < Y_CAM_MIN: rospy.loginfo("the sample is too far backward to pick up")
+    else:
+        x_sample = xy[0]-X_CAM_MIN
+        y_sample = Y_CAM_MAX-(xy[1]-Y_CAM_MIN)
+
+        # convert to meters
+        # x_pick/x_arm_max = x_sample/x_cam_max
+        x_pick = (x_sample/ACTUAL_CAM_LENGTH_X) * u.arm_max("X")
+        y_pick = (y_sample/ACTUAL_CAM_LENGTH_Y) * u.arm_max("Y")
+
+        x_pick += 0.0
+        y_pick -= 0.11  #0.05
+
+        params = 'X ' + str(x_pick)
+        u('arm_target', 2, params, rospy.Time.now())
+        params = 'Y ' + str(y_pick)
+        u('arm_target', 2, params, rospy.Time.now())
+
+        rospy.loginfo("calculated x: " + str(x_pick))
+        rospy.loginfo("calculated y: " + str(y_pick))
+        
+        while u('arm_should_be_moving', 2, 'X', rospy.Time.now()) or u('arm_should_be_moving', 2, 'Y', rospy.Time.now()): pass
+
+        z_safe_move_us(u, 0.2)
+        u('arm_z_wait_until_done', 2, '', rospy.Time.now())
+
+        u('arm_target', 2, 'A .05', rospy.Time.now())
+	while u('arm_should_be_moving', 2, 'A', rospy.Time.now()):
+	    time.sleep(.1)
+            u('arm_go', 2, 'A True', rospy.Time.now())
+
+        u('arm_target', 2, 'A 0.99', rospy.Time.now())
+        time.sleep(3) 
+	z_safe_move_us(u, 0.03)
+        u('arm_z_wait_until_done', 2, '', rospy.Time.now())
+
+        u('arm_target', 2, 'A 0', rospy.Time.now())
+        time.sleep(3)
+
+        z_safe_move_us(u, 0.5)
+        u('arm_z_wait_until_done', 2, '', rospy.Time.now())
+
+def place_sample_us(u, trayNum):
+    # puts the sample in the holding area once it is picked up.
+
+    X_1 = 544
+    X_2 = 761
+    Y = u('arm_max', 2, 'Y', rospy.Time.now())
+
+    params = 'Y ' + Y
+    u('arm_target', 2, params, rospy.Time.now())
+    if trayNum == 1:
+        params = 'X ' + X_1
+        u('arm_target', 2, params, rospy.Time.now())
+    elif trayNum == 2:
+        params = 'X ' + X_2
+        u('arm_target', 2, params, rospy.Time.now())
+    else:
+        rospy.logerr('invalid tray number')
+    
+    while u('arm_should_be_moving', 2, 'X', rospy.Time.now()) or u('arm_should_be_moving', 2, 'Y', rospy.Time.now()): pass
+
+    z_safe_move_us(u, 0.25)
+    u('arm_z_wait_until_done', 2, '', rospy.Time.now())
+
+    
+    u('arm_target', 2, 'A .05', rospy.Time.now())
+    while u('arm_should_be_moving', 2, 'A', rospy.Time.now()):
+        time.sleep(.1)
+        u('arm_go', 2, 'A True', rospy.Time.now())
+
+    u('arm_target', 2, 'A 0.5', rospy.Time.now())
+    time.sleep(3)
+
+    u('arm_target', 2, 'A 0', rospy.Time.now())
+    time.sleep(3)
+
+    z_safe_move_us(u, 0.5)
+    u('arm_z_wait_until_done', 2, '', rospy.Time.now())
+
+    
+    # move arm out of the way of the camera
+    u('arm_target', 2, 'X 0', rospy.Time.now())
+    y_max = str(u('arm_max', 2, 'Y', rospy.Time.now()))
+    params = 'Y ' + y_max
+    u('arm_target', 2, params, rospy.Time.now())
+    while u('arm_should_be_moving', 2, 'X', rospy.Time.now()) or u('arm_should_be_moving', 2, 'Y', rospy.Time.now()): pass 
+
+    time.sleep(1)
+
+
 def z_safe_move(u, z):
 	"""Z values from .5 to 0, with .5 being upright."""
 	z = .5 - z

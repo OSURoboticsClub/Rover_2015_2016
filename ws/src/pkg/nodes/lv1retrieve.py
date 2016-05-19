@@ -6,13 +6,12 @@ from cv_bridge import CvBridge, CvBridgeError
 import numpy as np
 import time
 import sys
-#sys.path.insert(0, "../../../../uniboard/roverlib")
-import uniboard
 import math
 import arm
 import scan
 import nav
 import cv2
+from uniboard_communication.srv import *
 
 new_crotch_img2 = None
 scan_img_left = None
@@ -146,20 +145,17 @@ def test_forward_until_scanned(u, precached):
 def test_pickup_easy(u):
     mask_img = cv2.imread('mask.pbm')
     # move arm out of the way of the camera
-    u.arm_target("X", 0)
-    u.arm_target("Y", u.arm_max("Y"))
-    while u.arm_should_be_moving("X") or u.arm_should_be_moving("Y"): pass
+    u('arm_target', 2, 'X 0', rospy.Time.now())
+    y_max = str(u('arm_max', 2, 'Y', rospy.Time.now())) 
+    params = 'Y ' + y_max
+    u('arm_target', 2, params, rospy.Time.now())
+    while u('arm_should_be_moving', 2, 'X', rospy.Time.now()) or u('arm_should_be_moving', 2, 'Y', rospy.Time.now()): pass
     time.sleep(1)
     if new_crotch_img2 is not None:
        curr_crotch_img = new_crotch_img2
      
-       # Do the nasty, should apply mask to image.
        mask_img = cv2.resize(mask_img, (curr_crotch_img.shape[1], curr_crotch_img.shape[0]))
-       #curr_crotch_img = np.concatenate((curr_crotch_img, mask_img), axis=1)
-       #curr_crotch_img = Image.blend(curr_crotch_img, mask_img, 0.5)
-       #curr_crotch_img = cv2.addWeighted(curr_crotch_img, 0.5, mask_img, 0.5, 0)
        curr_crotch_img = np.bitwise_and(curr_crotch_img, mask_img)
-#---------------------------
 
        rospy.loginfo("image success")
        xy = grab.identify_easy_sample(curr_crotch_img)
@@ -167,14 +163,18 @@ def test_pickup_easy(u):
        if xy:
           rospy.loginfo("a sample has been detected")
           while xy is not None:
-             grab.pick_up_at(u,xy)
-             u.arm_target("X", 0)
-             u.arm_target("Y", u.arm_max("Y"))
-             while u.arm_should_be_moving("X") or u.arm_should_be_moving("Y"): pass
+             grab.pick_up_at_us(u,xy)
+             # move arm out of the way of the camera
+    	     u('arm_target', 2, 'X 0', rospy.Time.now())
+             y_max = str(u('arm_max', 2, 'Y', rospy.Time.now())) 
+             params = 'Y ' + y_max
+             u('arm_target', 2, params, rospy.Time.now())
+             while u('arm_should_be_moving', 2, 'X', rospy.Time.now()) or u('arm_should_be_moving', 2, 'Y', rospy.Time.now()): pass
+
              xy = grab.identify_easy_sample(new_crotch_img2)
        else:
           rospy.loginfo("no sample detected")
-    grab.place_sample(u,1)
+    grab.place_sample_us(u,1)
 
 def test_pickup_precached(u):
     
@@ -277,15 +277,16 @@ def lv1retrieve():
     rospy.Subscriber('crotch/image/image_raw', Image, handle_img)
     rospy.Subscriber('stereo/left/image_rect_color', Image, handle_scan_left)
     rospy.Subscriber('stereo/right/image_rect_color', Image, handle_scan_right)
-    
-    u = uniboard.Uniboard("/dev/ttyUSB1")
-    u.arm_home()
+
+    rospy.wait_for_service('uniboard_service')
+    u = rospy.ServiceProxy('uniboard_service', communication)
+    u('arm_home', 2, '', rospy.Time.now())
     
     # comment out all but one test
 
     #test_forward_until_scanned_easy(u, False)
     #nav.move_til_sample(u, False)
-    #test_pickup_easy(u)
+    test_pickup_easy(u)
     #test_scan_and_grab_easy(u)
     #test_pickup_precached(u)
     #test_scan_and_grab_precached(u)
@@ -294,7 +295,7 @@ def lv1retrieve():
     #test_scan_precached()
     #test_identify_easy()
     #full_obj_rec_test(u)
-
+    '''
     rospy.loginfo("Waiting to pick up easy sample")
     waitForToggle()
     rospy.loginfo("Picking up easy sample")
@@ -307,7 +308,7 @@ def lv1retrieve():
     test_scan_and_grab_precached(u)
     rospy.loginfo("Precached sample retrieved")
     toggleParam(False)    
-
+    '''
 
 if __name__ == '__main__':
     try:

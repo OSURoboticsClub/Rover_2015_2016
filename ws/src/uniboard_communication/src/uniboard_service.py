@@ -44,6 +44,13 @@ class UniboardCommunication(Queue.PriorityQueue):
         self.functions = dict(
                         motor_left = self.motor_left,
                         motor_right = self.motor_right,
+			arm_home = self.arm_home,
+			arm_target = self.arm_target,
+			arm_max = self.arm_max,
+			arm_should_be_moving = self.arm_should_be_moving,
+			arm_current = self.arm_current,
+			arm_z_wait_until_done = self.arm_z_wait_until_done,
+			arm_go = self.arm_go,
                         encoder_left_rpm = self.encoder_left_rpm,
                         encoder_right_rpm = self.encoder_right_rpm)
 
@@ -127,14 +134,15 @@ class UniboardCommunication(Queue.PriorityQueue):
         self.board.arm_home()
         return [True, 'Success', '']
 
-    def arm_target(self, axis, pos):
+    def arm_target(self, args):
         """Wrapper for uniboard function arm_target
 
         Args:
 	     axis: "X", "Y", "Z" or "A"
              pos: position arm should move in meters
         """
-        self.board.arm_target(axis, pos)
+        arglist = args.split()
+        self.board.arm_target(arglist[0], float(arglist[1]))
         return [True, 'Success', '']
 
     def arm_max(self, axis):
@@ -158,7 +166,7 @@ class UniboardCommunication(Queue.PriorityQueue):
         moving = self.board.arm_should_be_moving(axis)
         return [True, 'Success', str(moving)]
 
-    def arm_current(self, axis, i):
+    def arm_current(self, args):
         """Wrapper for uniboard function arm_current
 
         Args:
@@ -167,7 +175,8 @@ class UniboardCommunication(Queue.PriorityQueue):
         
         Returns current position of arm in meters
         """
-        pos = self.board.arm_current(axis, i)
+        arglist = args.split()
+        pos = self.board.arm_current(arglist[0], int(arglist[1]))
         return [True, 'Success', str(pos)]
 
     def arm_z_wait_until_done(self):
@@ -175,14 +184,20 @@ class UniboardCommunication(Queue.PriorityQueue):
         self.board.arm_z_wait_until_done()
         return [True, 'Success', '']
 
-    def arm_go(self, axis, state):
+    def arm_go(self, args):
         """Wrapper for uniboard function arm_go
 
         Args:
 	     axis: "X", "Y", "Z" or "A"
              state: True means arm can move
         """
-        self.board.arm_go(axis, state)
+        arglist = args.split()
+        if arglist[1] == 'True':
+             self.board.arm_go(arglist[0], True)
+        elif arglist[1] == 'False':
+             self.board.arm_go(arglist[0], False)
+        else:
+             rospy.logerror('invalid parameter')
         return [True, 'Success', '']
 
     def addToQueue(self, req):
