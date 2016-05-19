@@ -122,6 +122,69 @@ class UniboardCommunication(Queue.PriorityQueue):
         RPM = self.board.encoder_right_rpm()
         return [True, 'Success', str(RPM)]
 
+    def arm_home(self):
+        """Wrapper for uniboard function arm_home"""
+        self.board.arm_home()
+        return [True, 'Success', '']
+
+    def arm_target(self, axis, pos):
+        """Wrapper for uniboard function arm_target
+
+        Args:
+	     axis: "X", "Y", "Z" or "A"
+             pos: position arm should move in meters
+        """
+        self.board.arm_target(axis, pos)
+        return [True, 'Success', '']
+
+    def arm_max(self, axis):
+        """Wrapper for uniboard function arm_max
+
+        Args:
+	     axis: "X", "Y", "Z" or "A"
+        """
+        self.board.arm_max(axis)
+        return [True, 'Success', '']
+
+    def arm_should_be_moving(self, axis):
+        """Wrapper for uniboard function arm_max
+
+        Args:
+	     axis: "X", "Y", "Z" or "A"
+        
+        Returns:
+             True if arm should be moving, False otherwise
+        """
+        moving = self.board.arm_should_be_moving(axis)
+        return [True, 'Success', str(moving)]
+
+    def arm_current(self, axis, i):
+        """Wrapper for uniboard function arm_current
+
+        Args:
+	     axis: "X", "Y", "Z" or "A"
+             i: not sure what this does
+        
+        Returns current position of arm in meters
+        """
+        pos = self.board.arm_current(axis, i)
+        return [True, 'Success', str(pos)]
+
+    def arm_z_wait_until_done(self):
+        """Wrapper function for uniboard function arm_z_wait_until_done"""
+        self.board.arm_z_wait_until_done()
+        return [True, 'Success', '']
+
+    def arm_go(self, axis, state):
+        """Wrapper for uniboard function arm_go
+
+        Args:
+	     axis: "X", "Y", "Z" or "A"
+             state: True means arm can move
+        """
+        self.board.arm_go(axis, state)
+        return [True, 'Success', '']
+
     def addToQueue(self, req):
         """Callback for service call
         
