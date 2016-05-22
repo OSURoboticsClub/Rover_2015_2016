@@ -17,6 +17,7 @@ import tf
 from flodometry.msg import motion_read
 from nav_msgs.msg import Odometry
 from wheel_encoders.msg import rpm
+from imu.msg import gyro
 
 from filterpy.kalman import KalmanFilter
 from tf.transformations import quaternion_from_euler
@@ -50,6 +51,7 @@ class Flodometry(object):
         rospy.init_node('flodometry')
         rospy.Subscriber("/optical_flow", motion_read, self.update_flow)
         rospy.Subscriber("/encoder_values", rpm, self.update_encoders)
+        rospy.Subscriber("/gryo", gyro, self.update_gyro)
         # Initialize the publisher
         self.pub = rospy.Publisher("/odom", Odometry, queue_size=10)
         self.rate = rospy.Rate(60) # 60hz
@@ -64,6 +66,8 @@ class Flodometry(object):
         self._setup_kalman(self.vel_left, cfg.vel_left)
         self.vel_right = KalmanFilter(dim_x=cfg.vel_right.dim_x, dim_z=cfg.vel_right.dim_z)
         self._setup_kalman(self.vel_right, cfg.vel_right)
+        self.rotation = KalmanFilter(dim_x=cfg.rotation.dim_x, dim_z=cfg.rotation.dim_z)
+        self._setup_kalman(self.rotation, cfg.rotation)
         self.odometry = KalmanFilter(dim_x=cfg.odometry.dim_x, dim_z=cfg.odometry.dim_z)
         self._setup_kalman(self.odometry, cfg.odometry)
 
@@ -95,7 +99,10 @@ class Flodometry(object):
         self.flow_x.predict()
         self.flow_x.update(motion.dx)
         self.flow_y.update(motion.dy)
-        
+
+
+    def update_gyro(self, data):
+        self.rotation.update(data.omega)
 
     def update_encoders(self, enc):
         l_speed = enc.left_rpm
@@ -111,11 +118,12 @@ class Flodometry(object):
         flow_y = self.flow_y.x[0]
         l_speed = self.vel_left.x[0]
         r_speed = self.vel_right.x[0]
+        rotation = self.rotation[0]
         avg = float(l_speed+r_speed)/2
         diff = r_speed-avg
         # rospy.loginfo('left:{} right:{} avg:{} diff:{}'.format(l_speed, r_speed, avg, diff))
         H = cfg.odometry.get_h(theta=self.odometry.x[4])
-        z = np.array([flow_x, flow_y, flow_x, 0.0])
+        z = np.array([flow_x, flow_y, flow_x, rotation])
         x1 = self.odometry.x
         # rospy.loginfo('Theta: {}, theta_dot: {}'.format(x1[4], x1[5]))
         self.odometry.predict()

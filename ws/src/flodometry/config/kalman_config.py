@@ -29,6 +29,26 @@ class Flow(object):
     H = np.array([[72.28]]) 
     # Measurment variance
     R = np.array([[0.66]])
+
+class Rotation(object):
+    dt = float(1.0)/float(100)
+    # Length of state array
+    dim_x = 1
+    # Initial state [pos, vel]
+    x = np.array([[0.0]])
+    # State transfrom matrix such that x(t) = F*x(t-1)
+    F = np.array([[1]]) 
+    # State transfrom noise the variance needs to be tuned when we know how fast we 
+    # can accelerate or decelerate.
+    Q = np.array([[1E-5]])
+    # Initial variance for position set at 0 since we know our starting location
+    P = np.array([[0]])
+    # Size of measurement array
+    dim_z = 1
+    # Measurement transform such that z = H*x, [0, mean_motion/actual_vel]
+    H = np.array([[1]]) 
+    # Measurment variance
+    R = np.array([[0.66]])
     
 class VelLeft(object):
     dt = float(1.0)/float(60)
@@ -128,3 +148,4 @@ flow = Flow()
 vel_left = VelLeft()
 vel_right = VelRight()
 odometry = Odometry()
+rotation = Rotation()
