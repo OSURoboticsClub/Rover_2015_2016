@@ -47,32 +47,33 @@ def turn_to_sample(u, coords, precached):
     while coords[0] > 40 or coords[0] < -40:
        if coords[0] > 0:
           rospy.loginfo("turn right")
-          u.motor_left(0.22)
-          u.motor_right(-0.22)
+          u('motor_left', 2, '0.22', rospy.Time.now())
+          u('motor_right', 2, '-0.22', rospy.Time.now())
           time.sleep(time_turn)
-          u.motor_left(0.0)
-          u.motor_right(0.0)
+          u('motor_left', 2, '0.0', rospy.Time.now())
+          u('motor_right', 2, '0.0', rospy.Time.now())
           if precached:
               coords = scan.check_precached(scan_img_left, scan_img_right)
           else:
               coords = scan.check_easy_sample(scan_img_left, scan_img_right)
        elif coords[0] <= 0:
           rospy.loginfo("turn left")
-          u.motor_left(-0.22)
-          u.motor_right(0.22)
+          u('motor_left', 2, '-0.22', rospy.Time.now())
+          u('motor_right', 2, '0.22', rospy.Time.now())
           time.sleep(time_turn)
-          u.motor_right(0.0)
-          u.motor_left(0.0)
+          u('motor_left', 2, '0.0', rospy.Time.now())
+          u('motor_right', 2, '0.0', rospy.Time.now())
           if precached:
               coords = scan.check_precached(scan_img_left, scan_img_right)
           else:
               coords = scan.check_easy_sample(scan_img_left, scan_img_right)
        # go forward a bit after each turn
-       u.motor_right(0.1)
-       u.motor_left(0.1)
+       u('motor_left', 2, '0.1', rospy.Time.now())
+       u('motor_right', 2, '0.1', rospy.Time.now())
        time.sleep(2)
-       u.motor_right(0.0)
-       u.motor_left(0.0)
+       u('motor_left', 2, '0.0', rospy.Time.now())
+       u('motor_right', 2, '0.0', rospy.Time.now())
+
        while coords is None:
           if precached:
               coords = scan.check_precached(scan_img_left, scan_img_right)
@@ -82,11 +83,12 @@ def turn_to_sample(u, coords, precached):
           time_turn -= 0.1
 
 def move_til_sample(u, precached):
-    u.arm_target("X", 0)
-    u.arm_target("Y", u.arm_max("Y"))
-    while u.arm_should_be_moving("X") or u.arm_should_be_moving("Y"): pass
-    u.motor_right(0.1)
-    u.motor_left(0.1)
+    u('arm_target', 2, 'X 0', rospy.Time.now())
+    params = 'Y ' + str(u('arm_max', 2, 'Y', rospy.Time.now()))
+    u('arm_target', 2, params, rospy.Time.now())
+    while u('arm_should_be_moving', 2, 'X', rospy.Time.now()) or u('arm_should_be_moving', 2, 'Y', rospy.Time.now()): pass
+    u('motor_left', 2, '0.1', rospy.Time.now())
+    u('motor_right', 2, '0.1', rospy.Time.now())
     while not rospy.is_shutdown():
        curr_crotch_img = new_crotch_img2
        xy = None
@@ -97,8 +99,8 @@ def move_til_sample(u, precached):
            else:
                xy = grab.identify_easy_sample(curr_crotch_img)
        time.sleep(1)
-       u.motor_right(0.0)
-       u.motor_left(0.0)
+       u('motor_left', 2, '0.0', rospy.Time.now())
+       u('motor_right', 2, '0.0', rospy.Time.now())
        break
 
 def test_scan_easy():
@@ -120,8 +122,8 @@ def test_forward_until_scanned(u, precached):
     coords = None
 
     # MOVE FORWARD until sample is seen by scan cam
-    u.motor_right(0.1)
-    u.motor_left(0.1)
+    u('motor_left', 2, '0.1', rospy.Time.now())
+    u('motor_right', 2, '0.1', rospy.Time.now())
     while coords is None:
        if precached:
            coords = scan.check_precached(scan_img_left, scan_img_right)
@@ -130,14 +132,15 @@ def test_forward_until_scanned(u, precached):
    
     print "saw at thing" 
     # once sample is seen, stop and move arm back
-    u.motor_left(0.0)
-    u.motor_right(0.0)
+    u('motor_left', 2, '0.0', rospy.Time.now())
+    u('motor_right', 2, '0.0', rospy.Time.now())
     time.sleep(1)
     rospy.loginfo("coords: " + str(coords))
 
-    u.arm_target("X", 0)
-    u.arm_target("Y", u.arm_max("Y"))
-    while u.arm_should_be_moving("X") or u.arm_should_be_moving("Y"): pass   
+    u('arm_target', 2, 'X 0', rospy.Time.now())
+    params = 'Y ' + str(u('arm_max', 2, 'Y', rospy.Time.now()))
+    u('arm_target', 2, params, rospy.Time.now())
+    while u('arm_should_be_moving', 2, 'X', rospy.Time.now()) or u('arm_should_be_moving', 2, 'Y', rospy.Time.now()): pass
     
     return coords
 
@@ -177,9 +180,9 @@ def test_pickup_easy(u):
     grab.place_sample_us(u,1)
 
 def test_pickup_precached(u):
-    
-    u.motor_left(0.1)
-    u.motor_right(0.1)
+   
+    u('motor_left', 2, '0.1', rospy.Time.now())
+    u('motor_right', 2, '0.1', rospy.Time.now())
     time.sleep(3)
 
 def test_scan_and_grab_easy(u):
@@ -210,9 +213,10 @@ def test_forward_until_scanned_both(u):
     precached = False # is the scanned sample precached or easy?
 
     # MOVE FORWARD until sample is seen by scan cam
-    u.motor_right(0.1)
-    u.motor_left(0.1)
-
+   
+    u('motor_left', 2, '0.1', rospy.Time.now())
+    u('motor_right', 2, '0.1', rospy.Time.now())
+ 
     while coords is None:
        coords = scan.check_precached(scan_img_left, scan_img_right)
        if coords is None:
@@ -222,14 +226,15 @@ def test_forward_until_scanned_both(u):
    
     print "saw at thing" 
     # once sample is seen, stop and move arm back
-    u.motor_left(0.0)
-    u.motor_right(0.0)
+    u('motor_left', 2, '0.0', rospy.Time.now())
+    u('motor_right', 2, '0.0', rospy.Time.now())
     time.sleep(1)
     rospy.loginfo("coords: " + str(coords))
 
-    u.arm_target("X", 0)
-    u.arm_target("Y", u.arm_max("Y"))
-    while u.arm_should_be_moving("X") or u.arm_should_be_moving("Y"): pass   
+    u('arm_target', 2, 'X 0', rospy.Time.now())
+    params = 'Y ' + str(u('arm_max', 2, 'Y', rospy.Time.now()))
+    u('arm_target', 2, params, rospy.Time.now())
+    while u('arm_should_be_moving', 2, 'X', rospy.Time.now()) or u('arm_should_be_moving', 2, 'Y', rospy.Time.now()): pass
     
     return (coords, precached)
 
