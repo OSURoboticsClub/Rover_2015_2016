@@ -21,7 +21,7 @@ class MotionControl(object):
         self.odom_sub = rospy.Subscriber('/odom', Odometry, self.update)
         rospy.Subscriber("/cmd_vel", Twist, self.set_vel)
         self.vel_pid = PID(self.drive, 0.5, 0.01, 0.0,[-2, 2], [-1, 1], 'vel_pid')
-        self.rot_pid = PID(self.rotation, 0, 0, 0, [-2.0, 2.0], [-0.5, 0.5], 'rot_pid')
+        self.rot_pid = PID(self.rotation, 0.5, 0.01, 0.0, [-2.0, 2.0], [-0.5, 0.5], 'rot_pid')
         # The offset value between wheel power to drive rotation
         self.rotation_offset = 0.0
 

@@ -40,7 +40,7 @@ class Rotation(object):
     F = np.array([[1]]) 
     # State transfrom noise the variance needs to be tuned when we know how fast we 
     # can accelerate or decelerate.
-    Q = np.array([[1E-5]])
+    Q = np.array([[1E-6]])
     # Initial variance for position set at 0 since we know our starting location
     P = np.array([[0]])
     # Size of measurement array
@@ -48,7 +48,7 @@ class Rotation(object):
     # Measurement transform such that z = H*x, [0, mean_motion/actual_vel]
     H = np.array([[1]]) 
     # Measurment variance
-    R = np.array([[0.66]])
+    R = np.array([[0.06]])
     
 class VelLeft(object):
     dt = float(1.0)/float(60)
