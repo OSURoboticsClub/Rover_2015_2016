@@ -5,7 +5,7 @@
 #include "locate_home_base/locate_base.h"
 #include "../../locate_home_base/src/HomeBase.h"
 #include <cmath>
-#include <python2.7/Python.h>
+#include <Python.h>
 
 #define PI 3.14159265
 
@@ -232,7 +232,7 @@ int main(int argc, char** argv){
 	struct boardPos home;
 	bool goalOutcome;
 	goal = createGoal(plannedStops[0]);
-        goto test;
+    //    goto test;
 	//wait for the action server to come up
  	while(!ac.waitForServer(ros::Duration(5.0))){
 		ROS_INFO("Main: Waiting for the move_base action server to come up");
@@ -266,10 +266,10 @@ int main(int argc, char** argv){
 		if (executeGoal(goal, &ac, 60) == true)	
 		{
 			// end program NOT WORING, CMAKE ERROR
-  	/*		Py_Initialize();
+  	        Py_Initialize();
   			PyRun_SimpleString("import sys");
 			PyRun_SimpleString("sys.path.append('~/home/Desktop/repo/Rover2016/ws/src/simple_navigation_goals/src/stopRover.py')");
-  			Py_Finalize();*/
+  			Py_Finalize();
                         
      /*                   // ALSO WORKS TO END
                         std::string filename = "~/Desktop/Rover2016/ws/src/simple_navigation_goals/src/stopRover.py";

@@ -14,9 +14,11 @@ find_package(catkin REQUIRED COMPONENTS
   locate_home_base
 )
 
+
 ## System dependencies are found with CMake's conventions
 find_package(catkin REQUIRED COMPONENTS roscpp rospy std_msgs message_generation tf)
 
+find_package(PythonLibs REQUIRED)
 
 ## Uncomment this if the package has a setup.py. This macro ensures
 ## modules and global scripts declared therein get installed
@@ -118,6 +120,7 @@ catkin_package(
 # include_directories(include)
 include_directories(
   ${catkin_INCLUDE_DIRS}
+  ${PYTHON_INCLUDE_DIRS}
 )
 
 ## Declare a C++ library
@@ -192,4 +195,5 @@ include_directories(
 
 add_executable(simple_navigation_goals src/simple_goals.cpp)
 target_link_libraries(simple_navigation_goals ${catkin_LIBRARIES})
+target_link_libraries(simple_navigation_goals ${PYTHON_LIBRARIES})
 add_dependencies(simple_navigation_goals ${catkin_EXPORTED_TARGETS})
