@@ -78,6 +78,9 @@ class Flodometry(object):
         # Overall motion with all sensors included
         self.odometry = KalmanFilter(dim_x=cfg.odometry.dim_x, dim_z=cfg.odometry.dim_z)
         self._setup_kalman(self.odometry, cfg.odometry)
+        # Rotational Velocity
+        self.rot_vel = KalmanFilter(dim_x=cfg.rotation.dim_x, dim_z=cfg.rotation.dim_z)
+        self._setup_kalman(self.rot_vel, cfg.rotation)
 
     def _setup_kalman(self, kf, config):
         """Sets all of the kalman filter constants see config.kalman_config for 
@@ -111,7 +114,9 @@ class Flodometry(object):
 
     def update_gyro(self, data):
         self.rotation.predict()
-        self.rotation.update(data.omega)
+        self.rotation.update(data.theta)
+        self.rot_vel.predict()
+        self.rot_vel.update(data.omega)
 
     def update_encoders(self, enc):
         l_speed = enc.left_rpm
@@ -128,7 +133,7 @@ class Flodometry(object):
         l_speed = self.vel_left.x[0]
         r_speed = self.vel_right.x[0]
         rotation = self.rotation.x[0]
-        rospy.loginfo('Rotation: {}'.format(rotation))
+        # rospy.loginfo('Rotation: {}'.format(rotation))
 
         avg = float(l_speed+r_speed)/2
         diff = r_speed-avg
@@ -161,7 +166,7 @@ class Flodometry(object):
                 update.header.stamp = rospy.Time.now()
                 update.header.frame_id = '/base_link'
                 update.linear_x = self.flow_x.x[0]
-                update.angular_z = self.rotation.x[0]
+                update.angular_z = self.rot_vel.x[0]
                 self.vel_pub.publish(update)
                 odom = Odometry()
                 odom.header.stamp = rospy.Time.now()

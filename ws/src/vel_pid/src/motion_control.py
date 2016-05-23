@@ -9,6 +9,7 @@ from bunch import Bunch
 from uniboard_communication.srv import *
 from nav_msgs.msg import Odometry
 from geometry_msgs.msg import Twist
+from flodometry.msg import vel_update
 
 from pid import PID
 
@@ -18,12 +19,13 @@ class MotionControl(object):
         rospy.on_shutdown(self.stop)
         rospy.wait_for_service('uniboard_service')
         self.uniboard_service = rospy.ServiceProxy('uniboard_service', communication)
-        self.odom_sub = rospy.Subscriber('/odom', Odometry, self.update)
         rospy.Subscriber("/cmd_vel", Twist, self.set_vel)
+        rospy.Subscriber("/vel", vel_update, self.update)
         self.vel_pid = PID(self.drive, 0.5, 0.01, 0.0,[-2, 2], [-1, 1], 'vel_pid')
         self.rot_pid = PID(self.rotation, 0.5, 0.01, 0.0, [-2.0, 2.0], [-0.5, 0.5], 'rot_pid')
         # The offset value between wheel power to drive rotation
         self.rotation_offset = 0.0
+
 
 
     def drive(self, power):
@@ -43,12 +45,9 @@ class MotionControl(object):
         self.rot_pid.stop()
 
 
-    def update(self, odom):
-        pos = odom.pose.pose.position.x
-        vel_x = odom.twist.twist.linear.x
-        vel_y = odom.twist.twist.linear.y
-        vel = vel_x
-        rot = odom.twist.twist.angular.z
+    def update(self, vel):
+        vel = vel.linear_x
+        rot = vel.angular_z
         self.vel_pid.update(vel)
         self.rot_pid.update(rot)
 
