@@ -91,7 +91,7 @@ move_base_msgs::MoveBaseGoal createGoal(struct pos2d pos)
 
 /* executeGoal takes a goal, pointer to a client, and a timeout value and runs the goal
 timeout value should be longer than the time to achieve the goal
-goal can be created with a goal to createGoal
+goal can be created with a call to createGoal
 */
 bool executeGoal(move_base_msgs::MoveBaseGoal goal, MoveBaseClient *client, int timeout)
 {
@@ -231,8 +231,7 @@ int main(int argc, char** argv){
 	struct pos2d pos;
 	struct boardPos home;
 	bool goalOutcome;
-	goal = createGoal(plannedStops[0]);
-    //    goto test;
+    
 	//wait for the action server to come up
  	while(!ac.waitForServer(ros::Duration(5.0))){
 		ROS_INFO("Main: Waiting for the move_base action server to come up");
@@ -257,7 +256,7 @@ int main(int argc, char** argv){
 	
 	if (home.x != -1 && home.y != -1)
 	{
-		// we got valid coordinates, now we create the final goal
+		// we got valid coordinates, now we create the final goal to return home
 		pos.x = -home.x;
 		pos.y = -home.y;
 		pos.w = PI; // facing checkerboard
@@ -265,13 +264,13 @@ int main(int argc, char** argv){
 		goal = createGoal(pos);
 		if (executeGoal(goal, &ac, 60) == true)	
 		{
-			// end program NOT WORING, CMAKE ERROR
-  	        Py_Initialize();
+			// end program 
+  	      /*          Py_Initialize();
   			PyRun_SimpleString("import sys");
 			PyRun_SimpleString("sys.path.append('~/home/Desktop/repo/Rover2016/ws/src/simple_navigation_goals/src/stopRover.py')");
-  			Py_Finalize();
-                        
-     /*                   // ALSO WORKS TO END
+  			Py_Finalize(); */
+                       
+     /*                 // another way to end
                         std::string filename = "~/Desktop/Rover2016/ws/src/simple_navigation_goals/src/stopRover.py";
                         std::string command = "python ";
                         command += filename;
@@ -280,7 +279,8 @@ int main(int argc, char** argv){
 	}
 	else
 	{
-		// home base recovery
+		// home base recovery when checkboard was not detected
+                
 	}	
 	return 0;
 }
