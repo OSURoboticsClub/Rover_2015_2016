@@ -46,10 +46,10 @@ class MotionControl(object):
 
 
     def update(self, vel):
-        vel = vel.linear_x
-        rot = vel.angular_z
-        self.vel_pid.update(vel)
-        self.rot_pid.update(rot)
+        linear = vel.linear_x
+        angular = vel.angular_z
+        self.vel_pid.update(linear)
+        self.rot_pid.update(angular)
 
 
 if __name__ == '__main__':
