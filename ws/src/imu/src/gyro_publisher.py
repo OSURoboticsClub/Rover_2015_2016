@@ -26,6 +26,7 @@ class Gyro(object):
 
     def zero(self):
         self.imu.zero()
+        return True
 
     def get_data(self):
         return self.imu.data()
@@ -36,10 +37,12 @@ class Gyro(object):
             data = self.get_data()
             if len(data) > 0:
                 current = data.pop()
-                omega_degrees = current['angle'][1]
+                omega_degrees = current['gyro'][1]
+                theta_degrees = current['angle'][1]
                 msg = gyro()
                 msg.header.stamp = rospy.Time.now()
                 msg.header.frame_id = '/imu'
+                msg.theta = float(theta_degrees) * (-np.pi/180.0)
                 msg.omega = float(omega_degrees) * (-np.pi/180.0)
                 self.pub.publish(msg)
             rate.sleep()
