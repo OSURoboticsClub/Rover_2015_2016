@@ -5,7 +5,7 @@
 #include "locate_home_base/locate_base.h"
 #include "../../locate_home_base/src/HomeBase.h"
 #include <cmath>
-#include <Python.h>
+#include <python2.7/Python.h>
 
 #define PI 3.14159265
 
@@ -223,7 +223,7 @@ int main(int argc, char** argv){
 	// set ros param for grab node communication
 	ROS_INFO("Main: Setting to false");
 	toggleParam(false);
-
+        
 	//tell the action client that we want to spin a thread
 	MoveBaseClient ac("move_base", true);
 
@@ -232,6 +232,7 @@ int main(int argc, char** argv){
 	struct boardPos home;
 	bool goalOutcome;
 	goal = createGoal(plannedStops[0]);
+        goto test;
 	//wait for the action server to come up
  	while(!ac.waitForServer(ros::Duration(5.0))){
 		ROS_INFO("Main: Waiting for the move_base action server to come up");
@@ -264,11 +265,17 @@ int main(int argc, char** argv){
 		goal = createGoal(pos);
 		if (executeGoal(goal, &ac, 60) == true)	
 		{
-			// end program
-  		/*	Py_Initialize();
+			// end program NOT WORING, CMAKE ERROR
+  	/*		Py_Initialize();
   			PyRun_SimpleString("import sys");
-			PyRun_SimpleString('sys.path.append("~/home/Desktop/repo/Rover2016/ws/src/simple_navigation_goals/src/stopRover")');
+			PyRun_SimpleString("sys.path.append('~/home/Desktop/repo/Rover2016/ws/src/simple_navigation_goals/src/stopRover.py')");
   			Py_Finalize();*/
+                        
+     /*                   // ALSO WORKS TO END
+                        std::string filename = "~/Desktop/Rover2016/ws/src/simple_navigation_goals/src/stopRover.py";
+                        std::string command = "python ";
+                        command += filename;
+                        system(command.c_str()); */
 		}
 	}
 	else
