@@ -15,16 +15,29 @@ import numpy as np
 SERIAL = "/dev/ttyACM0"
 SAMPLE_RATE = 100
 
+class fake(object):
+    """docstring for fake"""
+    def __init__(self):
+        pass
+    def zero(self):
+        pass
+    def data(self):
+        return [dict(gyro=[0,0,0], angle=[0,0,0])]
+
+
 class Gyro(object):
     def __init__(self):
-        self.imu = libimu.IMU(SERIAL)
+        try:
+            self.imu = libimu.IMU(SERIAL)
+        except:
+            self.imu = fake()
         self.pub = rospy.Publisher("/gyro", gyro, queue_size=10)
         self.s = rospy.Service('zero_gyro', 
                             zero, 
                             self.zero)
 
 
-    def zero(self):
+    def zero(self, msg):
         self.imu.zero()
         return True
 
