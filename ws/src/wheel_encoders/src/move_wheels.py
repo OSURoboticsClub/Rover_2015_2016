@@ -9,8 +9,7 @@ import os
 
 from uniboard_communication.srv import *
 
-RUNTIME = 3
-
+RUNTIME = 2
 class TestEncoders(object):
   
     def test_constant_speed(self):
@@ -23,10 +22,13 @@ class TestEncoders(object):
 	
         time.sleep(RUNTIME)
        
-        self.uniboard_service('motor_left', 3, str(0.0), rospy.Time.now())
-        self.uniboard_service('motor_right', 3, str(0.0), rospy.Time.now())
+        self.uniboard_service('motor_left', 3, str(-0.3), rospy.Time.now())
+        self.uniboard_service('motor_right', 3, str(-0.3), rospy.Time.now())
 
- 	time.sleep(1)
+ 	time.sleep(RUNTIME)
+
+        self.uniboard_service('motor_left', 3, str(0.0), rospy.Time.now())
+        self.uniboard_service('motor_right', 3, str(0.0), rospy.Time.now())        
       
 if __name__ == '__main__':
     t = TestEncoders()
