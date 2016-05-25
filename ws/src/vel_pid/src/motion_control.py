@@ -13,20 +13,6 @@ from flodometry.msg import vel_update
 
 from pid import PID
 
-# waifForToggle watches the node transition parameter (base_goal_param)
-# False: Starting state, a goal has not yet been met and PID should be running
-# True: A goal has been met, the navigaiton and PID code should halt
-def waitForToggle():
-        control = rospy.get_param("/base_goal_param")
-        while (control is True):
-                time.sleep(5.0)
-                try:
-                        control = rospy.get_param("/base_goal_param")
-                        if (control is False):
-                                break
-                except KeyError:
-                        print 'waitForToggle: param was not set correctly'
-
 class MotionControl(object):
     def __init__(self):
         rospy.on_shutdown(self.stop)
@@ -38,8 +24,6 @@ class MotionControl(object):
         self.rot_pid = PID(self.rotation, 0.5, 0.01, 0.0, [-2.0, 2.0], [-0.5, 0.5], 'rot_pid')
         # The offset value between wheel power to drive rotation
         self.rotation_offset = 0.0
-
-
 
     def drive(self, power):
         self.uniboard_service('motor_left', 3, str(power), rospy.Time.now())
@@ -64,10 +48,60 @@ class MotionControl(object):
         self.vel_pid.update(linear)
         self.rot_pid.update(angular)
 
+# waifForToggle watches the node transition parameter (base_goal_param)
+# False: Starting state, a goal has not yet been met and PID should be running
+# True: A goal has been met, the navigaiton and PID code should halt
+def runPID():
+        param = rospy.get_param("/base_goal_param")
+        i = 0
+        while (param is False):
+                # init and run controller
+                if (i == 0):
+                    print 'init controller'
+                    controller = MotionControl();
+       
+                # parameter is false, we are still running
+                print 'running'
+
+                # check often, this may actually need to be sped up to not interfere with other teams code 
+                time.sleep(0.5)
+                
+                i += 1
+                # wait for toggle
+                try:
+                        param = rospy.get_param("/base_goal_param")
+                        if (param is True):
+                                # parameter is true, time to stop movement and wait again
+                                print 'stopping'
+                                controller.stop()
+                                break
+                except KeyError:
+                        print 'waitForToggle: param was not set correctly'
+
+def waitToRun():
+    param = rospy.get_param("/base_goal_param")
+    while (param is True):
+         # check often, this may actually need to be sped up to not interfere with other teams code 
+         time.sleep(0.5)
+         print 'halted'
+         # wait for toggle
+         try:
+             param = rospy.get_param("/base_goal_param")
+             if (param is False):
+                 # parameter is false, time to continue
+                 print 'resuming'
+                 break
+         except KeyError:
+             print 'waitForToggle: param was not set correctly'
 
 if __name__ == '__main__':
     rospy.init_node('vel_pid')
-    controller = MotionControl()
+    # 2 stops means we toggle twice, need to init PID stops+1 times
+    runPID()
+    waitToRun()
+    runPID()
+    waiToRun()
+    runPID()
     rospy.spin()
 
     
