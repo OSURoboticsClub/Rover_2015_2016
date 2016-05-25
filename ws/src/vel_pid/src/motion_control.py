@@ -13,6 +13,19 @@ from flodometry.msg import vel_update
 
 from pid import PID
 
+# waifForToggle watches the node transition parameter (base_goal_param)
+# False: Starting state, a goal has not yet been met and PID should be running
+# True: A goal has been met, the navigaiton and PID code should halt
+def waitForToggle():
+        control = rospy.get_param("/base_goal_param")
+        while (control is True):
+                time.sleep(5.0)
+                try:
+                        control = rospy.get_param("/base_goal_param")
+                        if (control is False):
+                                break
+                except KeyError:
+                        print 'waitForToggle: param was not set correctly'
 
 class MotionControl(object):
     def __init__(self):
