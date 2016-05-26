@@ -28,6 +28,11 @@ class PID(object):
     def stop(self):
         self.stopped = True
 
+    def reset(self):
+        self.err = []
+        self.target= 0.0
+        self.out = 0.0
+
 
     def update(self, current):
         if not self.stopped:
@@ -79,7 +84,7 @@ class PID(object):
 
 
     def set_target(self, target):
-        self.start()
+        # self.start()
         if target <= self.inRange[1] and target >= self.inRange[0]:
             if self.target == target:
                 return True
