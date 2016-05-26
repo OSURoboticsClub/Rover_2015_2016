@@ -21,7 +21,9 @@ class MotionControl(object):
         rospy.Subscriber("/cmd_vel", Twist, self.set_vel)
         rospy.Subscriber("/vel", vel_update, self.update)
         self.vel_pid = PID(self.drive, 0.5, 0.01, 0.0,[-2, 2], [-1, 1], 'vel_pid')
+        self.vel_pid.start()
         self.rot_pid = PID(self.rotation, 0.5, 0.01, 0.0, [-2.0, 2.0], [-0.5, 0.5], 'rot_pid')
+        self.rot_pid.start()
         # The offset value between wheel power to drive rotation
         self.rotation_offset = 0.0
 
@@ -41,6 +43,11 @@ class MotionControl(object):
         self.vel_pid.stop()
         self.rot_pid.stop()
 
+    def start(self):
+        self.vel_pid.start()
+        self.vel_pid.reset()
+        self.rot_pid.start()
+        self.rot_pid.reset()
 
     def update(self, vel):
         linear = vel.linear_x
