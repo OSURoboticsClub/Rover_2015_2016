@@ -61,26 +61,30 @@ struct pos2d getCurrentPos(void)
     	} 
 }
 
-/* create goal takes pos2d position 
+/* create goal takes pos2d position and a global flag
+global flag should be set if the coordinates are with respect to the rover already, ie from the checkerboard 
 sets and returns MoveBaseGoal
 */
-move_base_msgs::MoveBaseGoal createGoal(struct pos2d pos)
+move_base_msgs::MoveBaseGoal createGoal(struct pos2d pos, bool global)
 {
 	move_base_msgs::MoveBaseGoal goal;
 	pos2d curPos = getCurrentPos();
-	struct pos2d target = pos;
+	struct pos2d target;
 
 	// goal header
   	goal.target_pose.header.frame_id = "map";
   	goal.target_pose.header.stamp = ros::Time::now();
 	
 	// convert global position to relitive position for sending goals
-	target.x = pos.x - curPos.x;
-	target.y = pos.y - curPos.y;
+        if (global == false)
+        {
+	        target.x = pos.x - curPos.x;
+	        target.y = pos.y - curPos.y;
+        }
 
 	// set goal
-  	goal.target_pose.pose.position.x = pos.x;
-	goal.target_pose.pose.position.y = pos.y;
+  	goal.target_pose.pose.position.x = target.x;
+	goal.target_pose.pose.position.y = target.y;
   	goal.target_pose.pose.orientation.w = tf::createQuaternionMsgFromYaw(pos.w).w; // pos.w is in radians;
 
 	// print target goal
@@ -107,20 +111,17 @@ bool executeGoal(move_base_msgs::MoveBaseGoal goal, MoveBaseClient *client, int 
 		if(client->getState() == actionlib::SimpleClientGoalState::SUCCEEDED)
 		{
 			ROS_INFO("executeGoal: goal met");
-			//ros::param::set("/base_goal_param", true);
 			return(true);
 		}
   		else
 		{
 			ROS_INFO("executeGoal: missed goal");
-			//ros::param::set("/base_goal_param", false);
 			return(false);
 		}
   	}
   	else
 	{
 		ROS_INFO("executeGoal: time out");
-		//ros::param::set("/base_goal_param", false);
 		return(false);
 	}
 }
@@ -220,9 +221,18 @@ int main(int argc, char** argv){
 	ros::NodeHandle nsrv; 
 	ros::ServiceClient client = nsrv.serviceClient<locate_home_base::locate_base>("locate_base");
 	
-	// set ros param for grab node communication
-	ROS_INFO("Main: Setting to false");
-	toggleParam(false);
+	// verfiy param false for node communication
+        bool control;
+        ros::param::get("/base_goal_param",control);
+        if (control == false)
+        {
+                ROS_INFO("False");
+        }
+        else 
+        {
+                ROS_WARN("True, param not set right");
+                toggleParam(true);
+        }
         
 	//tell the action client that we want to spin a thread
 	MoveBaseClient ac("move_base", true);
@@ -239,12 +249,19 @@ int main(int argc, char** argv){
 	
 	for (int i = 0; i < sizeof(plannedStops)/sizeof(struct pos2d); i++)
 	{
-		goal = createGoal(plannedStops[i]);
+		goal = createGoal(plannedStops[i],false);
 		if (executeGoal(goal, &ac, 60) == true)	
 		{
 			// transfer control
-			toggleParam(true);
-			waitForToggle();
+                        toggleParam(true);
+
+                        // if not are on the last goal, the pickup code will need to run
+                        // we skip the wait for toggle on goal 3 since we only want to stop the PID, find home, and restart PID
+                        if (i != sizeof(plannedStops)/sizeof(struct pos2d) - 1)
+                        {
+                                // let pickup code finish and trigger the transfer of control back to us
+                                waitForToggle();
+                        }
 		}
 		else
 		{
@@ -255,13 +272,14 @@ int main(int argc, char** argv){
 	home = getCurrentPosFromCheckboard(client); 
 	
 	if (home.x != -1 && home.y != -1)
-	{
+	{       
 		// we got valid coordinates, now we create the final goal to return home
 		pos.x = -home.x;
 		pos.y = -home.y;
 		pos.w = PI; // facing checkerboard
 
-		goal = createGoal(pos);
+		goal = createGoal(pos,true);
+                toggleParam(false);
 		if (executeGoal(goal, &ac, 60) == true)	
 		{
 			// end program 
@@ -280,7 +298,6 @@ int main(int argc, char** argv){
 	else
 	{
 		// home base recovery when checkboard was not detected
-                
 	}	
 	return 0;
 }
